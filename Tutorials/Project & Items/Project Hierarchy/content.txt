@@ -1,0 +1,226 @@
+<title>Project Hierachy</title>
+The structure of a Paper.js project is based on the same stacking order principle that graphic design applications such as Adobe Illustrator and Adobe Photoshop use.
+
+In exactly the same way that these applications have a layer palette, Paper.js has a list of layers: <api Project#layers />. Whenever the view is redrawn, Paper.js runs through the items in these layers and draws them in order of appearance.
+
+<title>Active Layer</title>
+Each Paper.js <api Project /> starts out with one <api Layer /> which can be accessed through <api Project#activeLayer />.  All newly created items are automatically added as a child of the layer which is currently active.
+
+<title>Children</title>
+In programming we refer to items that are contained within other items as being their children. The children contained within a layer can be accessed through its <api Item#children /> array.
+
+To show how this works, in the following example we create two circle shaped paths and style them by accessing them through the <api Layer#children /> array of the <api Project#activeLayer />
+
+<paperscript split=true height=100>
+// Create a circle shaped path, which is automatically
+// placed within the active layer of the project:
+var path = new Path.Circle(new Point(80, 50), 35);
+var secondPath = new Path.Circle(new Point(120, 50), 35);
+
+// Set the fill color of the first child
+// of the active layer to red:
+project.activeLayer.children[0].fillColor = 'red';
+
+// Set the stroke color of the second child of
+// the active layer to black:
+project.activeLayer.children[1].fillColor = 'blue';
+</paperscript>
+
+<title>First Child and Last Child</title>
+
+Paper.js offers shortcuts to the first and last child of any item that contains children: <api Item#firstChild /> and <api Item#lastChild />. Using these, we could rewrite the example above in the following way:
+
+<paperscript split=true height=100 highlight="8,12">
+// Create a circle shaped path, which is automatically
+// placed within the active layer of the project:
+var path = new Path.Circle(new Point(80, 50), 35);
+var secondPath = new Path.Circle(new Point(120, 50), 35);
+
+// Set the fill color of the first child
+// of the active layer to red:
+project.activeLayer.firstChild.fillColor = 'red';
+
+// Set the stroke color of the last child of
+// the active layer to black:
+project.activeLayer.lastChild.fillColor = 'blue';
+</paperscript>
+
+<title>Accessing Children By Name</title>
+
+If an item has a name, it can be accessed by name through its parent's children list:
+
+<paperscript height=100 split=true>
+var path = new Path.Circle(new Point(80, 50), 35);
+// Set the name of the path:
+path.name = 'example';
+
+// Save a reference to the children array in a variable,
+// so we don't end up with very long lines of code:
+var children = project.activeLayer.children;
+
+// The path can be accessed by name:
+children['example'].fillColor = 'red';
+</paperscript>
+
+<title>Iterating Over Children</title>
+
+Since the children list of an item is an array, we can find out how many children it contains by querying its <code>layer.children.length</code> property and iterate over it using a <code>for </code> loop:
+
+<paperscript height=100 split=true>
+// Create 20 circle shaped paths spread in horizontal direction:
+for (var i = 0; i < 20; i++) {
+    var center = new Point(70 + i * 20, 50);
+    var path = new Path.Circle(center, 20);
+    path.fillColor = 'red';
+    path.strokeColor = 'black';
+}
+
+// Save a reference to the children array in a variable,
+// so we don't end up with very long lines of code:
+var children = project.activeLayer.children;
+
+// Iterate through the items contained within the array:
+for (var i = 0; i < children.length; i++) {
+    var child = children[i];
+
+    // Change the fill color of the child to a random
+    // value between 0 and 360:
+    child.fillColor.hue = Math.random() * 360;
+}
+</paperscript>
+
+<title>Parents</title>
+You can find out which item an item is contained within by accessing its <api Item#parent /> property. The parent of a newly created item is always the currently active layer of the project, but is changed when the item is added as a child of another layer or group.
+
+<title>Layers and Groups</title>
+You can think of <api Layer /> and <api Group /> items as the folders in your hard drive. They group items together and any actions performed on them directly change the items that are are contained within them.
+
+For example, changing a style property like <api Item#fillColor /> on a layer or group will change that property on all of its children:
+
+<paperscript split=true height=100>
+var path = new Path.Circle(new Point(80, 50), 35);
+var secondPath = new Path.Circle(new Point(180, 50), 35);
+
+// Change the fill color of both paths to red:
+project.activeLayer.fillColor = 'red';
+</paperscript>
+
+In the same way that a folder can be contained within another folder, groups can be contained within other groups.
+
+<title short="The Difference Between Them">Difference Between Layers & Groups</title>
+<api Layer /> and <api Group /> items are almost the same. The main difference being that a layer item can be activated, meaning that any new items created are automatically placed within it. Whenever you create a new <api Layer />, it becomes the <api Project#activeLayer /> of the project:
+
+<paperscript split=true height=100>
+// Create a circle shaped path, which is automatically
+// placed within the active layer of the project:
+var path = new Path.Circle(new Point(80, 50), 35);
+path.fillColor = 'red';
+
+// Create a new layer:
+var secondLayer = new Layer();
+
+// The second path is added as a child of the second layer:
+var secondPath = new Path.Circle(new Point(150, 50), 35);
+secondPath.fillColor = 'green';
+</paperscript>
+
+<image "Layers.gif"> The image on the left is an illustration of the structure of the project, if you would be looking at it in an application like Adobe Illustrator. There are two layers, the red path was created in the first layer and the green path was created in the second.</image>
+
+<title>Adding Children to Groups</title>
+
+When you create a group, it doesn't have any children yet. You can add children to groups in a few different ways.
+
+The first way we will look at, is by passing an array of items to the <api Group(children) /> constructor. The items passed to the constructor are placed in the group's <api Item#children /> array:
+
+<paperscript split=true height=100>
+// Create two circle shaped paths:
+var path = new Path.Circle(new Point(80, 50), 35);
+var secondPath = new Path.Circle(new Point(120, 50), 35);
+
+var group = new Group([path, secondPath]);
+
+// Change the fill color of the items contained within the group:
+group.style = {
+	fillColor: 'red',
+	strokeColor: 'black'
+};
+</paperscript>
+
+You can also add children to a group after it is created, using the <api Item#addChild(item) /> function:
+<paperscript split=true height=100>
+// Create two circle shaped paths:
+var path = new Path.Circle(new Point(80, 50), 35);
+var secondPath = new Path.Circle(new Point(180, 50), 35);
+
+// Create an empty group:
+var group = new Group();
+
+// Add the paths to the group:
+group.addChild(path);
+group.addChild(secondPath);
+
+// Change the fill color of the items contained within the group:
+group.fillColor = 'green';
+</paperscript>
+
+To insert in a child into a group or layer at a specific index, you can use the <api Item#insertChild(index,item) /> function.
+
+In the following example we create a red and a green circle. Since the green path was created after the red path, it covers the red circle. We move it to the start of the active layer's children array using <api Item#insertChild(index,item) />:
+
+<paperscript height=100 split=true>
+var redPath = new Path.Circle(new Point(80, 50), 30);
+redPath.fillColor = 'red';
+
+var greenPath = new Path.Circle(new Point(100, 50), 30);
+greenPath.fillColor = 'green';
+
+// Insert the green path at index 0 of the children
+// array of the active layer:
+project.activeLayer.insertChild(0, greenPath);
+</paperscript>
+
+<title short="Inserting Children">Inserting Children Relative to Other Items</title>
+
+We can also insert items above or below other items using <api Item#insertAbove(item) /> and <api Item#insertBelow(item) />. We could rewrite the example above using <api Item#insertBelow(item) />:
+
+<paperscript height=100 split=true>
+var redPath = new Path.Circle(new Point(80, 50), 30);
+redPath.fillColor = 'red';
+
+var greenPath = new Path.Circle(new Point(100, 50), 30);
+greenPath.fillColor = 'green';
+
+// Move the green path below the red path:
+greenPath.insertBelow(redPath);
+</paperscript>
+
+<title>Removing Items and Children</title>
+To remove an item from your Paper.js document, you call its <api Item#remove() /> function. This doesn't destroy the item, it is only removed from the structure of the project and won't be drawn. You can add the item back to your project at any time.
+
+If the item has children (i.e. it is a layer, group or other type of item that has children), all its children are also removed from the project.
+
+As an example let's create a path and remove it straight away. When you execute the following code, nothing will appear in your document, since we remove the path right after creating it. When you click in the view, the item will be added back to the active layer of the document.
+
+<paperscript height=100 split=true>
+var circlePath = new Path.Circle(new Point(50, 50), 25);
+circlePath.fillColor = 'black';
+circlePath.remove();
+
+function onMouseDown(event) {
+	project.activeLayer.addChild(circlePath);
+}
+</paperscript>
+
+To remove all children contained within an item, you can call <api Item#removeChildren() />. In the following example we create a path, and then add it to a group. Then we remove the children of the group. When you execute the following code, nothing will appear in your document, since the path has been removed.
+
+<paperscript height=170 source=true>
+var circlePath = new Path.Circle(new Point(50, 50), 25);
+circlePath.fillColor = 'black';
+
+// Create a group and add the path to it:
+var group = new Group();
+group.addChild(circlePath);
+
+// Remove the children of the group:
+group.removeChildren();
+</paperscript>

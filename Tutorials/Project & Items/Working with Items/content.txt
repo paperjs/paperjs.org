@@ -1,0 +1,109 @@
+Before we start, let's define what we mean when we talk about items. An item is anything that can appear within in your Paper.js project: <api Layer>layers</api>, <api Path>paths</api>, <api CompoundPath>compound-paths</api>, <api Group>groups</api>, <api PointText>text items</api>, <api Raster>rasters</api> etc.
+
+Every kind of item has specific behaviours: a path contains points, a layer can be active, groups and compound paths have children.
+
+But since they are all items, they also share a number of behaviours. All these shared behaviours can be found in the <api Item /> reference.
+
+<title>Creating New Items</title>
+
+When you create new items, they are automatically added to the end of the <api Item#children /> list of the <api Project#activeLayer />.
+
+In the next example, we create a path and then set its fill color by accessing it through the <api Item#lastChild /> property of the <api Project#activeLayer />: 
+
+<paperscript height=100 split=true>
+// Create a circle shaped path at {x: 80, y: 50}
+// with a radius of 35:
+var path = new Path.Circle(new Point(80, 50), 35);
+
+project.activeLayer.lastChild.fillColor = 'red';
+</paperscript>
+
+<title>Hiding Items</title>
+
+When you set <api Item#visible /> to <code false />, the item will be hidden and won't be drawn.
+
+For example let's create a path and hide it. When you execute the following code, you won't see the item:
+
+<paperscript height=100 source=true>
+var circlePath = new Path.Circle(new Point(50, 50), 25);
+circlePath.fillColor = 'black';
+circlePath.visible = false;
+</paperscript>
+
+<title>Duplicating Items</title>
+To make a copy of an item, you call its <api Item#clone() />  function. The <api Item#clone() /> function returns the cloned item, so we need to store it in a variable if we want to do something with the copy.
+
+The following example create a circle shaped path, clones it and then changes a couple of properties of the clone.
+
+<paperscript height=100 split=true">
+var circlePath = new Path.Circle(new Point(80, 50), 35);
+circlePath.strokeColor = 'black';
+
+// clone the path and store it in a variable
+var clonedPath = circlePath.clone();
+
+// move the cloned path 75pt to the right:
+clonedPath.position += new Point(75, 0);
+
+// Change the stroke color of the cloned path:
+clonedPath.strokeColor = 'red';
+</paperscript>
+
+<title>Selecting Items</title>
+When you select items or path segment points & handles in your code, Paper.js draws the visual outlines of them on top of your project. This is very useful for debugging, as it allows you to see the construction of paths, position of path curves, individual segment points and bounding boxes of symbol and raster items:
+
+<paperscript split=true width=540 height=160>
+var center = new Point(160, 80);
+var circle = new Path.Circle(center, 50);
+
+// Select the second segment point of the path
+circle.segments[1].selected = true;
+
+// Select the third segment point of the path
+circle.segments[2].selected = true;
+
+// Create a circle path 140pt to the right:
+var circle2 = new Path.Circle(center + [140, 0], 50);
+circle2.fillColor = 'red';
+
+// Select it:
+circle2.selected = true;
+</paperscript>
+
+<title>Blend Mode & Opacity</title>
+
+To make an item transparent, set its <api Item#opacity /> property to a value between <code 0 /> and <code 1 />:
+
+<paperscript height=100 split=true highlight="12-13">
+var circle = new Path.Circle(new Point(80, 50), 35);
+circle.fillColor = 'red';
+
+var circle2 = new Path.Circle(new Point(120, 50), 35);
+circle2.style = {
+    fillColor: 'blue',
+    strokeColor: 'green',
+    strokeWidth: 10
+};
+
+// Make circle2 50% transparent:
+circle2.opacity = 0.5;
+</paperscript>
+
+To change the blend mode of an item we pass a string to its <api Item#blendMode /> property:
+<paperscript height=100 split=true highlight="12-13">
+// Create a white rectangle in the background
+// with the same dimensions as the view:
+var background = new Path.Rectangle(view.bounds);
+background.fillColor = 'white';
+
+var circle = new Path.Circle(new Point(80, 50), 35);
+circle.fillColor = 'red';
+
+var circle2 = new Path.Circle(new Point(120, 50), 35);
+circle2.fillColor = 'blue';
+
+// Set the blend mode of circle2:
+circle2.blendMode = 'multiply';
+</paperscript>
+
+Visit the <api Item#blendMode /> reference to see the different supported blend modes.

@@ -1,0 +1,132 @@
+Paper.js offers two different ways to smooth a path.
+
+<api Path#smooth() /> smooths a path by changing its segment handles without adding or removing segment points.
+
+<api Path#simplify() /> smooths a path by analyzing its <api Path#segments /> array and replacing it with a more optimal set of segments, reducing memory usage and speeding up drawing.
+
+<title>Smoothing Paths</title>
+Paper.js allows you to automatically smooth paths using the <api Path#smooth() /> function. This function calculates the optimal values for the handles of the path's segment points to create curves that flow smoothly through them. The segments are not moved and the current handle settings of the path's segments are ignored.
+
+In the following example, we create a rectangle shaped path, create a copy of it and smooth the copy. As you can see, only the handle positions are changed. The segment points remain unchanged.
+
+<paperscript height=100 split=true>
+var path = new Path();
+path.strokeColor = 'black';
+path.add(new Point(30, 75)); 
+path.add(new Point(30, 25)); 
+path.add(new Point(80, 25));
+path.add(new Point(80, 75));
+path.closed = true;
+
+// Select the path, so we can see its handles:
+path.fullySelected = true;
+
+// Create a copy of the path and move it 100pt to the right:
+var copy = path.clone();
+copy.fullySelected = true;
+copy.position.x += 100;
+
+// Smooth the segments of the copy:
+copy.smooth();
+</paperscript>
+
+Click and drag in the view below to draw a line, when you release the mouse, the path is smoothed using <api Path#smooth() />:
+
+<paperscript height=320 border=true>
+var path;
+
+// The mouse has to drag at least 10pt
+// before the next drag event is fired:
+tool.minDistance = 20;
+
+function onMouseDown(event) {
+    if (path) {
+        path.selected = false;
+    };
+    path = new Path();
+    path.strokeColor = 'black';
+    path.fullySelected = true;
+}
+
+function onMouseDrag(event) {
+    path.add(event.point);
+}
+
+function onMouseUp(event) {
+    path.selected = false;
+    path.smooth();
+}
+</paperscript>
+
+<title>Simplifying Paths</title>
+
+<api Path#simplify() /> smooths a path by simplifying it. The path.segments array is analyzed and replaced by a more optimal set of segments, reducing memory usage and speeding up drawing.
+
+<paperscript height=320 border=true>
+var path;
+
+var textItem = new PointText(new Point(20, 30));
+textItem.fillColor = 'black';
+textItem.content = 'Click and drag to draw a line.';
+
+function onMouseDown(event) {
+    // If we produced a path before, deselect it:
+    if (path) {
+        path.selected = false;
+    }
+
+    path = new Path();
+    path.strokeColor = 'black';
+    
+    // Select the path, so we can see its segment points:
+    path.fullySelected = true;
+}
+
+function onMouseDrag(event) {
+    // Every drag event, add a point to the path at the current
+    // position of the mouse:
+    path.add(event.point);
+    
+    textItem.content = 'Segment count: ' + path.segments.length;
+}
+
+function onMouseUp(event) {
+    var segmentCount = path.segments.length;
+    
+    // When the mouse is released, simplify it:
+    path.simplify();
+    
+    // Select the path, so we can see its segments:
+    path.selected = true;
+    
+	var newSegmentCount = path.segments.length;
+    var difference = segmentCount - newSegmentCount;
+    var percentage = 100 - Math.round(newSegmentCount / segmentCount * 100);
+    textItem.content = difference + ' of the ' + segmentCount + ' segments were removed. Saving ' + percentage + '%';
+
+}
+</paperscript>
+
+The <api Path#simplify() /> function has an optional <code>tolerance</code> parameter, which specifies the maximum distance the simplifying algorithm is allowed to deviate from the original path. This value is set to <code>2.5</code> by default. Setting it to a lower value, produces a more correct path but with more segment points. Setting it to a higher value leads to a smoother curve and less segment points, but the shape of the path will be more different than the original.
+
+<title>Flattening Paths</title>
+
+<api Path#flatten(maxDistance) /> converts the curves in a path to straight lines with an even distribution of points. The distance between the produced segments is as close as possible to the value specified by the <code>maxDistance</code> parameter.
+
+In the following example, we create a circle shaped path and straighten it using <api Path#flatten(maxDistance) >path.flatten(20)</api>:
+
+<paperscript height=100 split=true>
+// Create a circle shaped path at { x: 80, y: 50 }
+// with a radius of 35:
+var path = new Path.Circle(new Size(80, 50), 35);
+
+// Select the path, so we can inspect its segments:
+path.selected = true;
+
+// Create a copy of the path and move it 150 points to the right:
+var copy = path.clone();
+copy.position.x += 150;
+
+// Flatten the path, with a max distance of 20:
+copy.flatten(20);
+</paperscript>
