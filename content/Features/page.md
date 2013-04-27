@@ -13,15 +13,21 @@ If you've never heard of a Document Object Model before, you can think of it as 
 <paperscript split=true height=100>
 // Create a circle shaped path, which is automatically
 // placed within the active layer of the project:
-var path = new Path.Circle(new Point(80, 50), 35);
-path.fillColor = 'red';
+var path = new Path.Circle({
+    center: [80, 50],
+    radius: 35,
+    fillColor: 'red'
+});
 
 // Create a new layer:
 var secondLayer = new Layer();
 
 // The second path is added as a child of the second layer:
-var secondPath = new Path.Circle(new Point(120, 50), 35);
-secondPath.fillColor = '#00FF00';
+var secondPath = new Path.Circle({
+    center: [120, 50],
+    radius: 35,
+    fillColor: '#00FF00'
+});
 </paperscript>
 
 To learn more about the Document Object Model, read the <url "http://www.scriptographer.org/tutorials/document-items/document-hierarchy/">Document Hierarchy</url> tutorial. 
@@ -38,13 +44,14 @@ var vector = new Point({
 });
 var offset = width / 30;
 var handleTexts = [];
-var path = new Path();
-path.segments = [
-    [[offset, y], null, vector.rotate(-90)],
-    [[width / 2, y], vector.rotate(-180), vector],
-    [[width - offset, y], vector.rotate(90), null]
-];
-path.fullySelected = true;
+var path = new Path({
+    segments: [
+        [[offset, y], null, vector.rotate(-90)],
+        [[width / 2, y], vector.rotate(-180), vector],
+        [[width - offset, y], vector.rotate(90), null]
+    ],
+    fullySelected: true
+});
 
 function onMouseMove(event) {
     var point = event.point.clone();
@@ -69,28 +76,34 @@ function onMouseMove(event) {
 project.currentStyle.fillColor = 'black';
 for (var i = 0; i < 3; i++) {
     var segment = path.segments[i];
-    var text = new PointText(segment.point - [0, 10]);
-    text.content = i;
-    text.fontSize = 12;
-    text.justification = 'center';
+    var text = new PointText({
+        point: segment.point - [0, 10],
+        content: i,
+        fontSize: 12,
+        justification: 'center'
+    });
 }
 
 for (var i = 0; i < 2; i++) {
-    var handleInText = new PointText();
-    handleInText.content = 'handleIn';
-    handleInText.justification = 'center';
-    handleInText.fontSize = 12;
+    var handleInText = new PointText({
+        content: 'handleIn',
+        fontSize: 12,
+        justification: 'center'
+    });
     handleTexts.push(handleInText);
 
-    var handleOutText = new PointText();
-    handleOutText.content = 'handleOut';
-    handleOutText.justification = 'center';
-    handleOutText.fontSize = 12;
+    var handleOutText = new PointText({
+        content: 'handleOut',
+        fontSize: 12,
+        justification: 'center'
+    });
     handleTexts.push(handleOutText);
 }
 
 // Call onMouseMove once to correctly position the text items:
-onMouseMove({ point: view.center + vector.rotate(-90) });
+onMouseMove({
+    point: view.center + vector.rotate(-90)
+});
 </paperscript>
 In Paper.js, paths are represented by a sequence of segments that are connected by curves. A segment consists of a point and two handles, defining the location and direction of the curves.
 
@@ -130,12 +143,18 @@ function onMouseMove(event) {
     // Create a circle shaped path at the point in the middle between
     // the current position of the mouse and the last position of
     // the mouse:
-    var path = new Path.Circle(event.middlePoint, radius);
+    var path = new Path.Circle({
+        center: event.middlePoint,
+        radius: radius
+    });
 
     // The hue is defined by the amount of times the onMouseMove
     // event has been fired, multiplied by 10:
-    var hue = event.count * 3;
-    path.fillColor = new HsbColor(hue, 1, 1);
+    path.fillColor = {
+        hue: event.count * 3,
+        saturation: 1,
+        brightness: 1
+    };
 
     // If we created at least 8 paths, remove the first
     // path in the layer.
@@ -202,9 +221,12 @@ var sperm = new function() {
     }
     path.strokeColor = 'white';
 
-    var headPath = new Path.Oval([0, 0], [13, 8]);
-    headPath.fillColor = 'white';
-    headPath.strokeColor = null;
+    var headPath = new Path.Oval({
+        from: [0, 0],
+        to: [13, 8],
+        fillColor: 'white',
+        strokeColor: null
+    });
     headPath.scale(1.3);
     var headSymbol = new Symbol(headPath);
     var head = new PlacedSymbol(headSymbol);
@@ -314,11 +336,12 @@ Symbols allow you to place multiple instances of an item in your project. This c
 var count = 50;
 
 // Create a symbol, which we will use to place instances of later:
-var path = new Path.Circle(new Point(0, 0), 5);
-path.style = {
+var path = new Path.Circle({
+    center: [0, 0],
+    radius: 5,
     fillColor: 'white',
     strokeColor: 'black'
-};
+});
 
 var symbol = new Symbol(path);
 
@@ -328,7 +351,6 @@ for (var i = 0; i < count; i++) {
     var center = Point.random() * view.size;
     var placed = symbol.place(center);
     placed.scale(i / count + 0.001);
-    placed.data = {};
     placed.data.vector = new Point({
         angle: Math.random() * 360,
         length : (i / count) * Math.random() / 5
@@ -395,8 +417,10 @@ Check out the following tutorials to learn more about working with images: <node
 When you select items or path segment points & handles in your code, Paper.js draws the visual outlines of them on top of your project. This is very useful for debugging, as it allows you to see the construction of paths, position of path curves, individual segment points and bounding boxes of symbol and raster items:
 
 <paperscript split=true width=540 height=160>
-var center = new Point(160, 80);
-var circle = new Path.Circle(center, 50);
+var circle = new Path.Circle({
+    center: [160, 80],
+    radius: 50
+});
 
 // Select the second segment point of the path
 circle.segments[1].selected = true;
@@ -405,8 +429,11 @@ circle.segments[1].selected = true;
 circle.segments[2].selected = true;
 
 // Create a circle path 140pt to the right:
-var circle2 = new Path.Circle(center + [140, 0], 50);
-circle2.fillColor = 'red';
+var circle2 = new Path.Circle({
+    center: circle.position + [140, 0],
+    radius: 50,
+    fillColor: 'red'
+});
 
 // Select it:
 circle2.selected = true;
@@ -473,7 +500,10 @@ function drawVector(drag) {
     dashedItems = [];
     // Draw Circle
     if (values.showCircle) {
-        dashedItems.push(new Path.Circle(vectorStart, vector.length));
+        dashedItems.push(new Path.Circle({
+            center: vectorStart,
+            radius: vector.length
+        }));
     }
     // Draw Labels
     if (values.showAngleLength) {

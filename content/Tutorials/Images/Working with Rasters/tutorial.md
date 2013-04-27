@@ -29,8 +29,11 @@ raster.rotate(45);
 You can rasterize any <api Item /> in your document to a <api Raster /> item, by calling <api Item#rasterize() />. The item itself is not removed automatically after rasterizing, so if you don't want the item around anymore, you have to call <api Item#remove() /> on it yourself.
 
 <paperscript height="100" split=true>
-var circle = new Path.Circle(new Point(80, 50), 5);
-circle.fillColor = 'red';
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 5,
+	fillColor: 'red'
+});
 
 // Create a rasterized version of the path:
 var raster = circle.rasterize();

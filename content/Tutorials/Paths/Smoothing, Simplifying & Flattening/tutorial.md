@@ -10,13 +10,11 @@ Paper.js allows you to automatically smooth paths using the <api Path#smooth() /
 In the following example, we create a rectangle shaped path, create a copy of it and smooth the copy. As you can see, only the handle positions are changed. The segment points remain unchanged.
 
 <paperscript height=100 split=true>
-var path = new Path();
-path.strokeColor = 'black';
-path.add(new Point(30, 75)); 
-path.add(new Point(30, 25)); 
-path.add(new Point(80, 25));
-path.add(new Point(80, 75));
-path.closed = true;
+var path = new Path({
+    segments: [[30, 75], [30, 25], [80, 25], [80, 75]],
+    strokeColor: 'black',
+    closed: true
+});
 
 // Select the path, so we can see its handles:
 path.fullySelected = true;
@@ -118,7 +116,10 @@ In the following example, we create a circle shaped path and straighten it using
 <paperscript height=100 split=true>
 // Create a circle shaped path at { x: 80, y: 50 }
 // with a radius of 35:
-var path = new Path.Circle(new Size(80, 50), 35);
+var path = new Path.Circle({
+    center: [80, 50],
+    radius: 35
+});
 
 // Select the path, so we can inspect its segments:
 path.selected = true;

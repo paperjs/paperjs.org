@@ -47,7 +47,7 @@ var moveStars = new function() {
 
 	// Create a symbol, which we will use to place instances of later:
 	var path = new Path.Circle({
-		center: new Point(0, 0),
+		center: [0, 0],
 		radius: 5,
 		fillColor: 'white',
 		strokeColor: 'black'

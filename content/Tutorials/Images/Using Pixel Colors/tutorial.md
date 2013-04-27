@@ -15,7 +15,7 @@ raster.position = view.center;
 </paperscript>
 
 <title>Colors of Pixels</title>
-To find the color of a specific pixel in a raster, we use <api Raster#getPixel(x,y) /> and pass it the x and y offset of the pixel we want to look at. The <api Raster#getPixel(x,y) /> function returns the color of the pixel as an <api RgbColor />.
+To find the color of a specific pixel in a raster, we use <api Raster#getPixel(x,y) /> and pass it the x and y offset of the pixel we want to look at. The <api Raster#getPixel(x,y) /> function returns the color of the pixel as an <api Color />.
 
 The following script loops through the pixels of the selected raster and creates a circle shaped path for each of them and fills them with the color of the pixels.
 
@@ -43,9 +43,10 @@ for (var y = 0; y < raster.height; y++) {
         var color = raster.getPixel(x, y);
 
         // Create a circle shaped path:
-        var position = new Point(x, y) * gridSize;
-        var radius = gridSize / 2 / spacing;
-        var path = new Path.Circle(position, radius);
+        var path = new Path.Circle({
+            center: new Point(x, y) * gridSize,
+            radius: gridSize / 2 / spacing
+        });
 
         // Set the fill color of the path to the color
         // of the pixel:
@@ -87,13 +88,14 @@ for (var y = 0; y < raster.height; y++) {
         var color = raster.getPixel(x, y);
 
         // Create a circle shaped path:
-        var position = new Point(x, y) * gridSize;
-        var radius = gridSize / 2 / spacing;
-        var path = new Path.Circle(position, radius);
-        path.fillColor = 'black';
+        var path = new Path.Circle({
+            center: new Point(x, y) * gridSize,
+            radius: gridSize / 2 / spacing,
+            fillColor: 'black'
+        });
 
         // Scale the path by the amount of gray in the pixel color:
-        path.scale(color.gray);
+        path.scale(1 - color.gray);
     }
 }
 

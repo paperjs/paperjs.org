@@ -4,15 +4,18 @@ The following example fills a circle shaped path with the average color of the r
 
 <paperscript height="400" split=true>
 // Create a raster item using the image tag with id='mona'
-var raster = new Raster('mona');
+var raster = new Raster('resources/mona.gif');
 
 // Move the raster to the center of the view
 raster.position = view.center;
 
 // Create a circle shaped path at {x: 50, y: 50}
 // with a radius of 30:
-var path = new Path.Circle(new Point(50, 50), 30);
-path.strokeColor = 'white';
+var path = new Path.Circle({
+	center: [50, 50],
+	radius: 30,
+	strokeColor: 'white'
+});
 
 function onMouseMove(event) {
 	// Set the fill color of the path to the average color
@@ -42,13 +45,15 @@ function onMouseMove(event) {
 	// at the point in the middle between the current mouse
 	// position and the position when the last onMouseDrag
 	// event was fired:
-	var path = new Path.Circle(event.middlePoint, 12.5);
-	path.strokeColor = 'white';
+	var path = new Path.Circle({
+		center: event.middlePoint,
+		radius: 12.5,
+		strokeColor: 'white'
+	});
 	
 	// Get the average color of the pixels that fall within
 	// the shape of the path:
-	var color = raster.getAverageColor(path);
-	path.fillColor = color;
+	path.fillColor = raster.getAverageColor(path);
 }
 </paperscript>
 

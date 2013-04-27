@@ -37,10 +37,11 @@ In the following example, a rectangle shaped path is created on execution and ea
 <paperscript split=true height=200>
 // Create a rectangle shaped path with its top left point at
 // {x: 75, y: 75} and a size of {width: 75, height: 75}
-var topLeft = new Point(75, 75);
-var size = new Size(75, 75);
-var path = new Path.Rectangle(topLeft, size);
-path.strokeColor = 'black';
+var path = new Path.Rectangle({
+	point: [75, 75],
+	size: [75, 75],
+	strokeColor: 'black'
+});
 
 function onFrame(event) {
 	// Each frame, rotate the path by 3 degrees:
@@ -55,10 +56,11 @@ The following script creates a circle shaped path item with a red fill color. Th
 <paperscript split=true height=200>
 // Create a circle shaped path at the center of the view,
 // with a radius of 70:
-var path = new Path.Circle(view.center, 70);
-
-// Fill the path with red:
-path.fillColor = 'red';
+var path = new Path.Circle({
+	center: view.center,
+	radius: 70,
+	fillColor: 'red'
+});
 
 function onFrame(event) {
 	// Each frame, change the fill color of the path slightly by
@@ -73,10 +75,12 @@ The following script creates a text item and moves it smoothly to a random desti
 
 <paperscript split=true height=200 background="black">
 // Create a centered text item at the center of the view:
-var text = new PointText(view.center);
-text.paragraphStyle.justification = 'center';
-text.characterStyle.fontSize = 20;
-text.fillColor = 'white';
+var text = new PointText({
+	point: view.center,
+	justification: 'center',
+	fontSize: 30,
+	fillColor: 'white'
+});
 
 // Define a random point in the view, which we will be moving
 // the text item towards.
@@ -117,11 +121,12 @@ The following example shows a star field like animation. The speed that the circ
 var count = 150;
 
 // Create a symbol, which we will use to place instances of later:
-var path = new Path.Circle(new Point(0, 0), 10);
-path.style = {
+var path = new Path.Circle({
+	center: [0, 0],
+	radius: 10,
 	fillColor: 'white',
 	strokeColor: 'black'
-};
+});
 
 var symbol = new Symbol(path);
 
@@ -165,12 +170,12 @@ var amount = 5;
 var height = 60;
 
 // Create a new path and style it:
-var path = new Path();
-path.style = {
-	strokeColor: new GrayColor(0.2),
+var path = new Path({
+	// 80% black:
+	strokeColor: [0.8],
 	strokeWidth: 30,
 	strokeCap: 'square'
-};
+});
 
 // Add 5 segment points to the path spread out
 // over the width of the view:

@@ -360,7 +360,10 @@ function drawVector(drag) {
 	dashedItems = [];
 	// Draw Circle
 	if (values.showCircle) {
-		dashedItems.push(new Path.Circle(vectorStart, vector.length));
+		dashedItems.push(new Path.Circle({
+			center: vectorStart,
+			radius: vector.length
+		}));
 	}
 	// Draw Labels
 	if (values.showAngleLength) {

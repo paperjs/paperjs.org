@@ -133,7 +133,10 @@ function onMouseDrag(event) {
 }
 
 function onMouseUp(event) {
-	var myCircle = new Path.Circle(event.point, 10);
+	var myCircle = new Path.Circle({
+		center: event.point,
+		radius: 10
+	});
 	myCircle.strokeColor = 'black';
 	myCircle.fillColor = 'white';
 }
@@ -164,7 +167,10 @@ function onMouseDrag(event) {
 In the <api Tool#onMouseUp>onMouseUp</api> handler we create a circle shaped path with its center point at the position of the mouse when it was released and a radius of 10.
 <code start=12>
 function onMouseUp(event) {
-	var myCircle = new Path.Circle(event.point, 10);
+	var myCircle = new Path.Circle({
+		center: event.point,
+		radius: 10
+	});
 	myCircle.strokeColor = 'black';
 	myCircle.fillColor = 'white';
 }
@@ -178,8 +184,10 @@ For example, if we would want to make a tool that creates circles through mouse 
 
 <paperscript height=320 width=540 style='background:#e4e1e1' split=true>
 function onMouseUp(event) {
-	var radius = event.delta.length / 2;
-	var circle = new Path.Circle(event.middlePoint, radius);
+	var circle = new Path.Circle({
+		center: event.middlePoint,
+		radius: event.delta.length / 2
+	});
 	circle.strokeColor = 'black';
 	circle.fillColor = 'white';
 }
@@ -199,8 +207,10 @@ So when you click and drag in the following example, you will see that the radiu
 tool.minDistance = 20;
 
 function onMouseDrag(event) {
-	var radius = event.delta.length / 2;
-	var circle = new Path.Circle(event.middlePoint, radius);
+	var circle = new Path.Circle({
+		center: event.middlePoint,
+		radius: event.delta.length / 2
+	});
 	circle.fillColor = 'black';
 }
 </paperscript>
@@ -217,8 +227,10 @@ When you click and drag in the following example, you will see that when you dra
 tool.maxDistance = 10;
 
 function onMouseDrag(event) {
-	var radius = event.delta.length / 2;
-	var circle = new Path.Circle(event.middlePoint, radius);
+	var circle = new Path.Circle({
+		center: event.middlePoint,
+		radius: event.delta.length / 2
+	});
 	circle.fillColor = 'black';
 }
 </paperscript>
@@ -236,8 +248,10 @@ project.currentStyle.fillColor = 'black';
 tool.fixedDistance = 30;
 
 function onMouseDrag(event) {
-	var radius = event.delta.length / 2;
-	var circle = new Path.Circle(event.middlePoint, radius);
+	var circle = new Path.Circle({
+		center: event.middlePoint,
+		radius: event.delta.length / 2
+	});
 	circle.fillColor = 'black';
 }
 </paperscript>

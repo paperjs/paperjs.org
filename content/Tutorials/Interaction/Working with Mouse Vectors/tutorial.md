@@ -10,7 +10,11 @@ var path;
 
 function onMouseDown(event) {
 	path = new Path();
-	path.fillColor = new HsbColor(Math.random() * 360, 1, 1);
+	path.fillColor = {
+		hue: Math.random() * 360,
+		saturation: 1,
+		brightness: 1
+	};
 
 	path.add(event.point);
 }
@@ -310,7 +314,11 @@ var path;
 
 function onMouseDown(event) {
 	path = new Path();
-	path.fillColor = new HsbColor(Math.random() * 360, 1, 1);
+	path.fillColor = {
+		hue: Math.random() * 360,
+		saturation: 1,
+		brightness: 1
+	};
 
 	path.add(event.point);
 }
@@ -344,7 +352,11 @@ var path;
 
 function onMouseDown(event) {
 	path = new Path();
-	path.fillColor = new HsbColor(Math.random() * 360, 1, 1);
+	path.fillColor = {
+		hue: Math.random() * 360,
+		saturation: 1,
+		brightness: 1
+	};
 
 	path.add(event.point);
 }
@@ -370,7 +382,11 @@ function onMouseUp(event) {
 
 After creating the path in the <code onMouseDown /> event handler function, we fill it with a color by changing it's <api Path#fillColor /> property. To have a different color each time, we create an HSB (Hue, Saturation, Brightness) color with a hue varying between 0 and 360:
 <code start=8>
-path.fillColor = new HsbColor(Math.random() * 360, 1, 1);
+path.fillColor = {
+	hue: Math.random() * 360,
+	saturation: 1,
+	brightness: 1
+};
 </code>
 
 To smooth the path, we call <api Path#smooth() /> every time we add one or more points to the path.
@@ -399,7 +415,11 @@ var strokeEnds = 6;
 
 function onMouseDown(event) {
 	path = new Path();
-	path.fillColor = new HsbColor(Math.random() * 360, 1, 1);
+	path.fillColor = {
+		hue: Math.random() * 360,
+		saturation: 1,
+		brightness: 1
+	};
 }
 
 var lastPoint;
@@ -456,7 +476,11 @@ var strokeEnds = 6;
 
 function onMouseDown(event) {
 	path = new Path();
-	path.fillColor = new HsbColor(Math.random() * 360, 1, 1);
+	path.fillColor = {
+		hue: Math.random() * 360,
+		saturation: 1,
+		brightness: 1
+	};
 }
 
 var lastPoint;

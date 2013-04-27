@@ -5,11 +5,10 @@ In the following tutorial we will be looking at the different ways to go about s
 For the examples in this tutorial we will be using a checkmark shaped path which we create using the following code:
 
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
-myPath.selected = true;
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]],
+	selected: true
+});
 </paperscript>
 
 <note>To find out how to create paths with Paper.js, please read the <node TutorialPage-24 /> tutorial.</note>
@@ -20,24 +19,22 @@ To add a stroke to our path, we need to set its <api Item#strokeColor>strokeColo
 
 The following example shows how to set the stroke color of the path we created earlier to the color red, using a hexidecimal string (Also known from HTML CSS Styles):
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]]
+});
 
 myPath.strokeColor = '#ff0000'; // red
 </paperscript>
 
-The hexadecimal color code is automatically converted to an <api RgbColor /> object.
+The hexadecimal color code is automatically converted to a <api Color /> object.
 
-The color can also be set using an <api RgbColor /> object directly. In the following code we set an RGB color with 50% red, 0% green and 50% blue:
+The color can also be set using an <api Color /> object directly. In the following code we set an RGB color with 50% red, 0% green and 50% blue:
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]]
+});
 
-myPath.strokeColor = new RgbColor(0.5, 0, 0.5);
+myPath.strokeColor = new Color(0.5, 0, 0.5);
 </paperscript>
 
 <note>
@@ -48,13 +45,12 @@ In Paper.js color component values range from 0 to 1.
 Fill color works exactly the same way as stroke color. In the following example we will create a path with a red fill color:
 
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]],
+	selected: true
+});
 
 myPath.fillColor = '#ff0000';
-myPath.selected = true;
 </paperscript>
 
 <title>Stroke Width</title>
@@ -62,10 +58,9 @@ To change the stroke width of an item, you can change its <api item#strokeWidth>
 
 In the following example we give the path a red stroke of 10 pt:
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]]
+});
 
 myPath.strokeColor = '#ff0000';
 
@@ -76,10 +71,10 @@ myPath.strokeWidth = 10;
 To change the shape of the start and the end of a path, you can change its <api item#strokeCap>strokeCap</api> property to either <code>'round'</code>, <code>'square'</code> or <code>'butt'</code>:
 
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]],
+	selected: true
+});
 
 myPath.strokeColor = '#ff0000';
 myPath.strokeWidth = 10;
@@ -91,10 +86,10 @@ myPath.strokeCap = 'round';
 To change the shape of the corners in a path, you can change its <api item#strokeJoin>strokeJoin</api> property to either <code>'miter'</code>, <code>'round'</code> or <code>'bevel'</code>:
 
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]],
+	selected: true
+});
 
 myPath.strokeColor = '#ff0000';
 myPath.strokeWidth = 10;
@@ -106,10 +101,10 @@ myPath.strokeJoin = 'round';
 To create a dashed stroke, you can change the <api item#dashArray>dashArray</api> property of an item. The following code produces a dashed stroke with a 10pt dash and a 12pt gap:
 
 <paperscript width=540 height=200 split=true>
-var myPath = new Path();
-myPath.add(new Point(40, 115));
-myPath.add(new Point(80, 180));
-myPath.add(new Point(200, 20));
+var myPath = new Path({
+	segments: [[40, 115], [80, 180], [200, 20]],
+	selected: true
+});
 
 myPath.strokeColor = '#ff0000';
 myPath.strokeWidth = 5;
@@ -124,12 +119,19 @@ Every item also has an <api item#style /> property which is an object containing
 We can use this to copy the style properties of one item to another. The following example first creates a circle shaped path and assigns it a stroke color. Then another circle shaped path is created and we assign it the style of the first path:
 
 <paperscript width=540 height=100 split=true>
-var firstPath = new Path.Circle(new Point(80, 50), 35);
+var firstPath = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+
 firstPath.strokeColor = '#ff0000';
 firstPath.fillColor = 'blue';
 
 // secondPath doesn't have a strokeColor yet:
-var secondPath = new Path.Circle(new Point(160, 50), 35);
+var secondPath = new Path.Circle({
+	center: [160, 50],
+	radius: 35
+});
 
 // Apply the style of firstPath to that of secondPath:
 secondPath.style = firstPath.style;
@@ -146,7 +148,10 @@ var myStyle = {
 	strokeWidth: 50
 };
 
-var myCircle = new Path.Circle(new Point(100, 100), 50);
+var myCircle = new Path.Circle({
+	center: [100, 100],
+	radius: 50
+});
 myCircle.style = myStyle;
 </paperscript>
 
@@ -155,7 +160,10 @@ myCircle.style = myStyle;
 To remove any kind of path style, just pass <code null /> to the property:
 
 <code>
-var path = new Path.Circle(new Point(50, 50), 50);
+var path = new Path.Circle({
+	center: new Point(50, 50),
+	radius: 50
+});
 path.fillColor = 'red';
 
 // Set the fillColor to null to remove it:
@@ -165,7 +173,10 @@ path.fillColor = null;
 To remove all style settings from a path, pass <code null /> to its style property:
 
 <code>
-var path = new Path.Circle(new Point(50, 50), 50);
+var path = new Path.Circle({
+	center: [50, 50],
+	radius: 50
+});
 path.style = null;
 </code>
 
@@ -188,12 +199,18 @@ project.currentStyle = {
 };
 
 // This path will inherit the styles we just set:
-var firstPath = new Path.Circle(new Point(100, 100), 50);
+var firstPath = new Path.Circle({
+	center: [100, 100],
+	radius: 50
+});
 
 // Change the current stroke width and fill color of the project:
 project.currentStyle.strokeWidth = 8;
 project.currentStyle.fillColor = 'green';
 
 // This path will have a green fill and have a strokeWidth of 8pt:
-var secondPath = new Path.Circle(new Point(250, 100), 50);
+var secondPath = new Path.Circle({
+	center: [250, 100],
+	radius: 50
+});
 </paperscript>
