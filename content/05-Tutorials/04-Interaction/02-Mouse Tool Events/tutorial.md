@@ -1,0 +1,156 @@
+The mouse handler functions receive an event object which contains information about the mouse event. In this tutorial we will go through the different properties that it contains.
+
+<note>
+We advise you to read the <node href="/tutorials/interaction/creating-mouse-tools/" /> first, if you haven't done so yet.
+</note>
+
+<title>Mouse Position</title>
+The <api ToolEvent/>event</api> object contains several properties that describe the position of the mouse and how it has moved:
+
+<api ToolEvent#point>event.point</api> describes the position of the mouse when the event was fired.
+
+For example, if we would want to create a tool that draws a line between the position when the mouse was pressed and the position when it was released:
+
+<code>
+var path;
+function onMouseDown(event) {
+	// Create a path:
+	path = new Path();
+	path.strokeColor = 'black';
+	// Add the mouse down position:
+	path.add(event.point);
+}
+
+function onMouseUp(event) {
+	// Add the mouse up position:
+	path.add(event.point);
+}
+</code>
+
+Try it out by clicking, dragging and releasing in the following example:
+
+<paperscript height=320 width=540 style='background:#e4e1e1'>
+var path;
+function onMouseDown(event) {
+	// Create a path:
+	path = new Path();
+	path.strokeColor = 'black';
+	// Add the mouse down position:
+	path.add(event.point);
+}
+
+function onMouseUp(event) {
+	// Add the mouse up position:
+	path.add(event.point);
+}
+</paperscript>
+
+<api ToolEvent#point>event.downPoint</api> describes the position of the mouse when the mouse button was last clicked. We could use it to simplify the example above:
+
+<code>
+function onMouseUp(event) {
+	// Create a path:
+	var path = new Path();
+
+	// Add the mouse down position:
+	path.add(event.downPoint);
+
+	// Add the mouse up position:
+	path.add(event.point);
+}
+</code>
+
+<api ToolEvent#lastPoint>event.lastPoint</api> describes the position of the mouse when the previous mouse event was fired.
+
+<api ToolEvent#lastPoint>event.middlePoint</api> describes the point in the middle between <code>event.lastPoint</code> and <code>event.point</code>. This is a useful position to use when creating artwork based on the moving direction of the mouse, as returned by <code>event.delta</code>.
+
+<api ToolEvent#delta>event.delta</api> describes the vector between the current position and the last position of the mouse when the event was fired. In case of the mouse-up event, the vector to the mouse-down position is returned.
+
+<note>
+You can read more about vectors in the <node href="/tutorials/geometry/vector-geometry/" /> tutorial.
+</note>
+
+<code>
+// The mouse has to be moved at least 10 pt
+// before the next onMouseDrag event is called:
+tool.minDistance = 10;
+
+function onMouseDrag(event) {
+	var path = new Path();
+	path.fillColor = 'black';
+	var vector = event.delta;
+
+	// rotate the vector by 90 degrees:
+	vector.angle += 90;
+
+	// change its length to 5 pt:
+	vector.length = 5;
+	
+	path.add(event.middlePoint + vector);
+	path.add(event.middlePoint - vector);
+}
+</code>
+
+Try it out by clicking, dragging and releasing in the following example:
+
+<paperscript height=320 width=540 style='background:#e4e1e1'>
+// The mouse has to be moved at least 10 pt
+// before the next onMouseDrag event is called:
+tool.minDistance = 10;
+
+function onMouseDrag(event) {
+	var path = new Path();
+	path.strokeColor = 'black';
+	var vector = event.delta;
+
+	// rotate the vector by 90 degrees:
+	vector.angle += 90;
+
+	// change its length to 5 pt:
+	vector.length = 5;
+	
+	path.add(event.middlePoint + vector);
+	path.add(event.middlePoint - vector);
+}
+</paperscript>
+
+The following example creates circles while you drag the mouse. Their size depends on the <api Point#length /> of <api ToolEvent#delta>event.delta</api> and therefore they all connect:
+
+<code>
+function onMouseDrag(event) {
+	var radius = event.delta.length / 2;
+	var circle = new Path.Circle(event.middlePoint, radius);
+	circle.fillColor = 'black';
+}
+</code>
+
+<paperscript height=320 width=540 style='background:#e4e1e1'>
+function onMouseDrag(event) {
+	var radius = event.delta.length / 2;
+	var circle = new Path.Circle(event.middlePoint, radius);
+	circle.fillColor = 'black';
+}
+</paperscript>
+
+<image src="delta.gif" />
+
+<title>Counting Mouse Events</title>
+
+<api ToolEvent#count>event.count</api> describes the amount of times the related mouse handler was fired.
+
+<code>
+function onMouseDown(event) {
+	// The amount of times the mouse has been pressed:
+	console.log(event.count);
+}
+
+function onMouseDrag(event) {
+	// The amount of drag events fired since the mouse was pressed:
+	console.log(event.count);
+}
+
+function onMouseUp(event) {
+	// The amount of times the mouse has been released:
+	console.log(event.count);
+}
+</code>

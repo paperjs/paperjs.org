@@ -1,0 +1,5 @@
+If you use Paper.js regularly or for commercial purposes, please consider making a donation via PayPal, to support this open source effort.
+
+<template name='donate' />
+
+Thank you!

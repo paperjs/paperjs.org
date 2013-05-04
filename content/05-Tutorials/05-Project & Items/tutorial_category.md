@@ -1,0 +1,1 @@
+content: Working with the structure of Paper.js projects and manipulating the graphic items inside it.

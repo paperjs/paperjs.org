@@ -1,0 +1,14 @@
+module.exports = {
+	column: function(content, param, encoder) {
+		if (this.previous && this.previous.name == 'column') {
+			this.index = this.previous.index + 1;
+			if (this.index >= 2)
+				this.index = 0;
+		} else {
+			this.index = 0;
+		}
+		return (this.index == 0 ? '<div class="clear">' : '')
+		 		+ '<div class="column">' + content + '</div>'
+				+ (this.index == 1 ? '</div>' : '');
+	}
+};

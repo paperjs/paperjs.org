@@ -1,0 +1,689 @@
+<title>Features</title>
+
+Standing on the shoulders of Scriptographer and making use of HTML5 standards, Paper.js is a comprehensive open source vector graphics scripting framework.
+
+<title>Document Object Model</title>
+
+Paper.js provides a Document Object Model (also called a Scene Graph) that is very easy to work with. Create a project and populate it with layers, groups, paths, rasters etc. Groups and layers can contain other items and even other groups.
+
+If you've never heard of a Document Object Model before, you can think of it as the layers palette of applications such as Adobe Illustrator & Adobe Photoshop.
+
+<image src="Layers.gif"> The image on the left is an illustration of the structure of the project after executing the code below, if you would be looking at it in an application like Adobe Illustrator. There are two layers, the red path was created in the first layer and the green path was created in the second.</image>
+
+<paperscript split=true height=100>
+// Create a circle shaped path, which is automatically
+// placed within the active layer of the project:
+var path = new Path.Circle({
+    center: [80, 50],
+    radius: 35,
+    fillColor: 'red'
+});
+
+// Create a new layer:
+var secondLayer = new Layer();
+
+// The second path is added as a child of the second layer:
+var secondPath = new Path.Circle({
+    center: [120, 50],
+    radius: 35,
+    fillColor: '#00FF00'
+});
+</paperscript>
+
+To learn more about the Document Object Model, read the <url href="http://www.scriptographer.org/tutorials/document-items/document-hierarchy/">Document Hierarchy</url> tutorial. 
+
+<title>Paths & Segments</title>
+
+Paper.js makes is very easy to create paths and add segments to them. After adding, the segments can be easily inspected, manipulated, moved around, removed etc.
+<paperscript width=540 height=250>
+var y = view.size.height / 2;
+var width = view.size.width;
+var vector = new Point({
+    angle: 45,
+    length: width / 5
+});
+var offset = width / 30;
+var handleTexts = [];
+var path = new Path({
+    segments: [
+        [[offset, y], null, vector.rotate(-90)],
+        [[width / 2, y], vector.rotate(-180), vector],
+        [[width - offset, y], vector.rotate(90), null]
+    ],
+    fullySelected: true
+});
+
+function onMouseMove(event) {
+    var point = event.point.clone();
+    // Constrain the event point, to not cut off the text:
+    if (point.y < 22)
+        point.y = 22;
+    if (point.y > view.size.height - 24)
+        point.y = view.size.height - 24;
+    var delta = point - view.center;
+    for (var i = 0; i < 2; i++) {
+        var curve = path.curves[i];
+        curve.handle1.y = curve.handle2.y = delta.y * (i % 2 ? 1 : -1);
+        var firstPoint = curve.point1 + curve.handle1;
+        var secondPoint = curve.point2 + curve.handle2;
+        handleTexts[i * 2].point = secondPoint -
+                (firstPoint.y < y ? [0, 10] : [0, -18]);
+        handleTexts[i * 2 + 1].point = firstPoint -
+                (firstPoint.y < y ? [0, 10] : [0, -18]);
+    }
+}
+
+project.currentStyle.fillColor = 'black';
+for (var i = 0; i < 3; i++) {
+    var segment = path.segments[i];
+    var text = new PointText({
+        point: segment.point - [0, 10],
+        content: i,
+        fontSize: 12,
+        justification: 'center'
+    });
+}
+
+for (var i = 0; i < 2; i++) {
+    var handleInText = new PointText({
+        content: 'handleIn',
+        fontSize: 12,
+        justification: 'center'
+    });
+    handleTexts.push(handleInText);
+
+    var handleOutText = new PointText({
+        content: 'handleOut',
+        fontSize: 12,
+        justification: 'center'
+    });
+    handleTexts.push(handleOutText);
+}
+
+// Call onMouseMove once to correctly position the text items:
+onMouseMove({
+    point: view.center + vector.rotate(-90)
+});
+</paperscript>
+In Paper.js, paths are represented by a sequence of segments that are connected by curves. A segment consists of a point and two handles, defining the location and direction of the curves.
+
+To learn more about paths and segments, read the <url href="http://www.scriptographer.org/tutorials/paths/working-with-path-items/">Working with Path Items</url> tutorial.
+
+<title>Mouse Interaction</title>
+
+Paper.js offers mouse handlers for the different actions you can perform with a mouse (or touch screen). You can use these handlers to produce different types of tools that have different ways of reacting to mouse interaction and movement. Just define the handler functions in your Paperscript code and they will be called by Paper.js whenever the user interacts with the canvas.
+
+Read more about mouse handlers in the <url href="http://scriptographer.org/tutorials/interaction/creating-mouse-tools/">Creating Mouse Tools</url> tutorial.
+
+<code>
+function onMouseDown(event) {
+    // Code executed when the user presses the mouse
+}
+
+function onMouseDrag(event) {
+    // Code executed when the user drags the mouse
+}
+
+function onMouseUp(event) {
+    // Code executed when the user releases the mouse
+}
+</code>
+
+The event object that is passed to the event handler includes many handy properties that describe the movement and position of the mouse. Learn more about mouse events in the <url href="http://scriptographer.org/tutorials/interaction/mouse-tool-events/">Mouse Events</url> tutorial.
+
+<paperscript width=540 height=320 style='background-color:#000'>
+tool.fixedDistance = 20;
+
+var layer = project.activeLayer;
+function onMouseMove(event) {
+    // The radius of the circle is the distance we moved
+    // divided by 2:
+    var radius = event.delta.length / 2;
+
+    // Create a circle shaped path at the point in the middle between
+    // the current position of the mouse and the last position of
+    // the mouse:
+    var path = new Path.Circle({
+        center: event.middlePoint,
+        radius: radius
+    });
+
+    // The hue is defined by the amount of times the onMouseMove
+    // event has been fired, multiplied by 10:
+    path.fillColor = {
+        hue: event.count * 3,
+        saturation: 1,
+        brightness: 1
+    };
+
+    // If we created at least 8 paths, remove the first
+    // path in the layer.
+    if (layer.children.length > 8)
+        layer.firstChild.remove();
+}
+</paperscript>
+
+<title>Keyboard Interaction</title>
+
+Paper.js allows you to interact with the keyboard in two ways: You can either intercept key events and respond to these, or you can check the state of a given key at any moment, to see if it is pressed or not.
+
+Read the <node href="/tutorials/interaction/keyboard-interaction/" /> tutorial to learn more about keyboard interaction.
+
+<code>
+function onKeyDown(event) {
+    // Code executed when the user presses a key
+}
+
+function onMouseDrag(event) {
+    if (Key.isDown('space')) {
+        // Do something if the space bar is pressed
+        // while dragging:
+    }
+}
+</code>
+
+The following example shows some keyboard interaction. Click on the canvas to get keyboard focus and steer with your arrow keys:
+
+<paperscript width=540 height=320 style='background-color:#000'>
+function onFrame() {
+    if (Key.isDown('left'))
+        sperm.left();
+
+    if (Key.isDown('right'))
+        sperm.right();
+
+    if (Key.isDown('up'))
+        sperm.forward();
+
+    if (Key.isDown('down'))
+        sperm.reverse();
+    sperm.draw();
+}
+
+function onKeyDown(event) {
+    // Prevent the arrow keys from scrolling the window:
+    return !(/left|right|up|down/.test(event.key));
+}
+
+project.currentStyle = {
+    strokeColor: 'black',
+    strokeWidth: 4,
+    strokeCap: 'round'
+};
+
+var sperm = new function() {
+    var center = view.center;
+    var size = 20;
+    var partLength = 5;
+    var path = new Path();
+    for (var i = 0; i < size; i++) {
+        path.add(center - [i * partLength, 0]);
+    }
+    path.strokeColor = 'white';
+
+    var headPath = new Path.Oval({
+        from: [0, 0],
+        to: [13, 8],
+        fillColor: 'white',
+        strokeColor: null
+    });
+    headPath.scale(1.3);
+    var headSymbol = new Symbol(headPath);
+    var head = new PlacedSymbol(headSymbol);
+    var vector = new Point({
+        angle: 0,
+        length: 20
+    });
+    var speed = 1;
+    var maxSteer = 4.5;
+    var friction = 0.98;
+    var steering = 1.5;
+    var maxSpeed = 10;
+    var minSpeed = 1;
+    var position = center;
+    var lastRotation = 0;
+    var count = 0;
+    return {
+        left: function() {
+            if (speed >= 0.01) {
+                if (speed < 3 && speed >= 0) {
+                    vector.angle -= (speed * 2);
+                } else if (speed < 0) {
+                    vector.angle -= (speed / 2);
+                } else {
+                    vector.angle -= maxSteer * steering;
+                }
+                speed *= friction;
+            }
+        },
+
+        right: function() {
+            if (speed >= 0.01) {
+                if (speed < 3 && speed >= 0) {
+                    vector.angle += (speed * 2);
+                } else if (speed < 0) {
+                    vector.angle += (speed / 2);
+                } else {
+                    vector.angle += maxSteer * steering;
+                }
+                speed *= friction;
+            }
+        },
+
+        forward: function() {
+            speed += 0.3;
+            speed = Math.min(maxSpeed, speed);
+        },
+
+        reverse: function() {
+            speed -= 0.3;
+            if (speed < minSpeed)
+                speed = minSpeed;
+        },
+
+        draw: function() {
+            var vec = vector.normalize(Math.abs(speed));
+            speed = speed * friction;
+            position += vec;
+            var lastPoint = path.firstSegment.point = position;
+            var lastVector = vec;
+            var segments = path.segments;
+            for (var i = 1, l = segments.length; i < l; i++) {
+                var segment = segments[i];
+                var vector2 = lastPoint - segment.point;
+                count += vec.length * 10;
+                var rotLength = Math.sin((count + i * 3) / 600);
+                var rotated = lastVector.rotate(90).normalize(rotLength);
+                lastPoint = segment.point = lastPoint + lastVector.normalize(-partLength - vec.length / 10);
+                segment.point += rotated;
+
+                if (i == 1) {
+                    head.position = position;
+                    var rotation = vector2.angle;
+                    head.rotate(rotation - lastRotation);
+                    lastRotation = rotation;
+                }
+                lastVector = vector2;
+            }
+            path.smooth();
+            this.constrain();
+        },
+
+        constrain: function() {
+            var bounds = path.bounds;
+            var size = view.size;
+            if (!bounds.intersects(view.bounds)) {
+                if (position.x < -bounds.width)
+                    position.x = size.width + bounds.width;
+                if (position.y < -bounds.height)
+                    position.y = size.height + bounds.height;
+                if (position.x > size.width + bounds.width)
+                    position.x = -bounds.width;
+                if (position.y > size.height + bounds.height)
+                    position.y = -bounds.height;
+                path.position = position;
+            }
+        }
+    }
+};
+</paperscript>
+
+<title>Symbols</title>
+Symbols allow you to place multiple instances of an item in your project. This can save memory, since all instances of a symbol simply refer to the original item and it can speed up moving around complex objects, since internal properties such as segment lists and gradient positions don't need to be updated with every transformation.
+
+<paperscript width=540 height=320 style="background:black">
+// The amount of symbol we want to place;
+var count = 50;
+
+// Create a symbol, which we will use to place instances of later:
+var path = new Path.Circle({
+    center: [0, 0],
+    radius: 5,
+    fillColor: 'white',
+    strokeColor: 'black'
+});
+
+var symbol = new Symbol(path);
+
+// Place the instances of the symbol:
+for (var i = 0; i < count; i++) {
+    // The center position is a random point in the view:
+    var center = Point.random() * view.size;
+    var placed = symbol.place(center);
+    placed.scale(i / count + 0.001);
+    placed.data.vector = new Point({
+        angle: Math.random() * 360,
+        length : (i / count) * Math.random() / 5
+    });
+}
+
+var vector = new Point({
+    angle: 45,
+    length: 0
+});
+
+var mouseVector = vector.clone();
+
+function onMouseMove(event) {
+    mouseVector = view.center - event.point;
+}
+
+// The onFrame function is called up to 60 times a second:
+function onFrame(event) {
+    vector = vector + (mouseVector - vector) / 30;
+    
+    // Run through the active layer's children list and change
+    // the position of the placed symbols:
+    for (var i = 0; i < count; i++) {
+        var item = project.activeLayer.children[i];
+        var size = item.bounds.size;
+        var length = vector.length / 10 * size.width / 10;
+        item.position += vector.normalize(length) + item.data.vector;
+        keepInView(item);
+    }
+}
+
+function keepInView(item) {
+    var position = item.position;
+    var viewBounds = view.bounds;
+    if (position.isInside(viewBounds))
+        return;
+    var itemBounds = item.bounds;
+    if (position.x > viewBounds.width + 5) {
+        position.x = -item.bounds.width;
+    }
+
+    if (position.x < -itemBounds.width - 5) {
+        position.x = viewBounds.width;
+    }
+
+    if (position.y > viewBounds.height + 5) {
+        position.y = -itemBounds.height;
+    }
+
+    if (position.y < -itemBounds.height - 5) {
+        position.y = viewBounds.height
+    }
+}
+</paperscript>
+
+<title>Images and Color Averaging</title>
+
+Place images in your project, work with the colors of their pixels or look at average colors of the pixels that fall within paths placed on top of them.
+
+Check out the following tutorials to learn more about working with images: <node href="/tutorials/images/" />
+
+<title>Selection Outlines</title>
+When you select items or path segment points & handles in your code, Paper.js draws the visual outlines of them on top of your project. This is very useful for debugging, as it allows you to see the construction of paths, position of path curves, individual segment points and bounding boxes of symbol and raster items:
+
+<paperscript split=true width=540 height=160>
+var circle = new Path.Circle({
+    center: [160, 80],
+    radius: 50
+});
+
+// Select the second segment point of the path
+circle.segments[1].selected = true;
+
+// Select the third segment point of the path
+circle.segments[2].selected = true;
+
+// Create a circle path 140pt to the right:
+var circle2 = new Path.Circle({
+    center: circle.position + [140, 0],
+    radius: 50,
+    fillColor: 'red'
+});
+
+// Select it:
+circle2.selected = true;
+</paperscript>
+
+<title>Vector Geometry</title>
+<block>
+<paperscript width=220 height=350 source=false>
+project.currentStyle.fillColor = 'black';
+
+var values = {
+    fixLength: false,
+    fixAngle: false,
+    showCircle: false,
+    showAngleLength: true,
+    showCoordinates: false
+};
+
+var vector, vectorPrevious;
+var vectorItem, items, dashedItems;
+
+var vectorStart = view.center;
+
+function processVector(event, drag) {
+    vector = event.point - vectorStart;
+    if (vectorPrevious) {
+        if (values.fixLength && values.fixAngle) {
+            vector = vectorPrevious;
+        } else if (values.fixLength) {
+            vector.length = vectorPrevious.length;
+        } else if (values.fixAngle) {
+            vector = vector.project(vectorPrevious);
+        }
+    }
+    drawVector(drag);
+}
+
+function drawVector(drag) {
+    if (items) {
+        for (var i = 0, l = items.length; i < l; i++) {
+            items[i].remove();
+        }
+    }
+    if (vectorItem)
+        vectorItem.remove();
+    items = [];
+    var arrowVector = vector.normalize(10);
+    var end = vectorStart + vector;
+    vectorItem = new Group([
+        new Path([vectorStart, end]),
+        new Path([
+            end + arrowVector.rotate(135),
+            end,
+            end + arrowVector.rotate(-135)
+        ])
+    ]);
+    vectorItem.style = {
+        strokeWidth: 0.75,
+        strokeColor: '#e4141b',
+        dashArray: [],
+        fillColor: null
+    };
+    // Display:
+    dashedItems = [];
+    // Draw Circle
+    if (values.showCircle) {
+        dashedItems.push(new Path.Circle({
+            center: vectorStart,
+            radius: vector.length
+        }));
+    }
+    // Draw Labels
+    if (values.showAngleLength) {
+        if (drawAngle(vectorStart, vector, !drag) && !drag) {
+            drawLength(vectorStart, end, vector.angle < 0 ? -1 : 1, true);
+        }
+    }
+    var quadrant = vector.quadrant;
+    if (values.showCoordinates && !drag) {
+        drawLength(vectorStart, vectorStart + [vector.x, 0],
+                [1, 3].indexOf(quadrant) != -1 ? -1 : 1, true, vector.x, 'x: ');
+        drawLength(vectorStart, vectorStart + [0, vector.y], 
+                [1, 3].indexOf(quadrant) != -1 ? 1 : -1, true, vector.y, 'y: ');
+    }
+    for (var i = 0, l = dashedItems.length; i < l; i++) {
+        var item = dashedItems[i];
+        item.style = {
+            strokeColor: '#8b8b8b',
+            fillColor: null,
+            dashArray: [1, 2]
+        };
+        items.push(item);
+    }
+    // Update palette
+    values.x = vector.x;
+    values.y = vector.y;
+    values.length = vector.length;
+    values.angle = vector.angle;
+}
+
+function drawAngle(center, vector, label) {
+    var radius = 25, threshold = 10;
+    if (vector.length > radius + threshold) {
+        var from = new Point(radius, 0);
+        var through = from.rotate(vector.angle / 2);
+        var to = from.rotate(vector.angle);
+        var end = center + to;
+        dashedItems.push(new Path.Line(center,
+                center + new Point(radius + threshold, 0)));
+        dashedItems.push(new Path.Arc(center + from, center + through, end));
+        if (Math.abs(vector.angle) > 15) {
+            var arrowVector = to.normalize(7.5).rotate(vector.angle < 0 ? -90 : 90);
+            dashedItems.push(new Path([
+                    end + arrowVector.rotate(135),
+                    end,
+                    end + arrowVector.rotate(-135)
+            ]));
+        }
+        if (label) {
+            // Angle Label
+            var text = new PointText(center
+                    + through.normalize(radius + 10) + new Point(0, 3));
+            text.content = 'angle: ' + Math.floor(vector.angle * 100) / 100 + '°';
+            text.fontSize = 12;
+            items.push(text);
+        }
+        return true;
+    }
+    return false;
+}
+
+function drawLength(from, to, sign, label, value, prefix) {
+    var lengthSize = 5;
+    var vector = to - from;
+    var awayVector = vector.normalize(lengthSize).rotate(90 * sign);
+    var upVector = vector.normalize(lengthSize).rotate(45 * sign);
+    var downVector = upVector.rotate(-90 * sign);
+    var lengthVector = vector.normalize(
+            vector.length / 2 - lengthSize * Math.sqrt(2));
+    var line = new Path();
+    line.add(from + awayVector);
+    line.lineBy(upVector);
+    line.lineBy(lengthVector);
+    line.lineBy(upVector);
+    var middle = line.lastSegment.point;
+    line.lineBy(downVector);
+    line.lineBy(lengthVector);
+    line.lineBy(downVector);
+    dashedItems.push(line);
+    if (label) {
+        // Length Label
+        var textAngle = Math.abs(vector.angle) > 90
+                ? textAngle = 180 + vector.angle : vector.angle;
+        // Label needs to move away by different amounts based on the
+        // vector's quadrant:
+        var away = (sign >= 0 ? [1, 4] : [2, 3]).indexOf(vector.quadrant) != -1
+                ? 8 : 0;
+        var text = new PointText(middle + awayVector.normalize(away + lengthSize));
+        text.fontSize = 12;
+        text.rotate(textAngle);
+        text.paragraphStyle.justification = 'center';
+        value = value || vector.length;
+        text.content = 'length: ' + (prefix || '') + Math.floor(value * 1000) / 1000;
+        items.push(text);
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Mouse Handling
+
+var dashItem;
+
+function onMouseDown(event) {
+    var end = vectorStart + vector;
+    var create = false;
+    if (event.modifiers.shift && vectorItem) {
+        vectorStart = end;
+        create = true;
+    } else {
+        vectorStart = event.point;
+    }
+    if (create) {
+        dashItem = vectorItem;
+        vectorItem = null;
+    }
+    processVector(event, true);
+}
+
+function onMouseMove(event) {
+    if (!event.modifiers.shift && values.fixLength && values.fixAngle)
+        vectorStart = event.point;
+    processVector(event, event.modifiers.shift);
+}
+
+processVector({ point: new Point(view.size * 0.75) }, false);
+</paperscript>
+Vector geometry is a first class citizen in Paper.js. It is a great advantage to understand its basic principles when learning to write scripts for it. After all, there is a reason for the word <i>Vector</i> in <i>Vector Graphics</i>. 
+
+While building <url href="http://scriptographer.org">Scriptographer</url> we found vector geometry to be a powerful way of working with positions, movement and paths. Once understood, it proves to be a lot more intuitive and flexible than working with the x- and y- values of the coordinate system directly, as most other visually oriented programming environments do.
+
+Read more about Vector Geometry in the <url href="http://www.scriptographer.org/tutorials/geometry/vector-geometry/">Vector Geometry</url> tutorial.
+</block>
+
+<title>Object Conversion</title>
+
+An important feature in Paper.js is its flexibility in parameter conversion when passing values to functions. In these situations, all basic types can alternatively be described as arrays or as plain JavaScript objects. Arrays are simply a listing of the default properties in their standard sequence. Some examples:
+
+<code>
+// Create a rectangle from a JS object description:
+var rect = new Rectangle({ x: 10, y: 20, width: 100, height: 200 });
+console.log(rect); // { x: 10, y: 20, width: 100, height: 200 }
+
+// Define the size as an array containing [width, height]:
+rect.size = [200, 300];
+console.log(rect); // { x: 10, y: 20, width: 200, height: 300 }
+
+// Change its point to a new one described by a JS object:
+rect.point = { x: 20, y: 40 };
+console.log(rect); // { x: 20, y: 40, width: 200, height: 300 }
+</code>
+
+Note that points are converted to sizes on the fly when required, and vice versa:
+
+<code>
+var rect = new Rectangle();
+rect.point = { width: 100, height: 200 };
+console.log(rect); // { x: 100, y: 200, width: 0, height: 0 }
+
+rect.size = { x: 200, y: 400 };
+console.log(rect); // { x: 100, y: 200, width: 200, height: 400 }
+</code>
+
+<title>Mathematical Operations</title>
+
+PaperScript allows you to write normal algebraic operators in connection with basic type objects. Points and Sizes can be added to, subtracted from, multiplied with or divided by numeric values or other points and sizes:
+
+<code>
+// Define a point to start with
+var point1 = new Point(10, 20);
+
+// Create a second point that is 4 times the first one.
+// This is the same as creating a new point with x and y
+// of point1 multiplied by 4:
+var point2 = point1 * 4;
+console.log(point2); // { x: 40, y: 80 }
+
+// Now we calculate the difference between the two.
+var point3 = point2 - point1;
+console.log(point3); // { x: 30, y: 60 }
+</code>
+
+Read more about this in the <url href="http://www.scriptographer.org/tutorials/geometry/mathematical-operations/">Mathematical Operations</url> tutorial.
+</image>

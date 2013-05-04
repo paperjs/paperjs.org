@@ -1,0 +1,13 @@
+main = template('main')
+#main
+  #content(class=page.type)
+    if !param.titles || !(param.titles && param.titles.length) || !(param.titles && param.titles[0].isFirst)
+      h1 !{page.title}
+    .block.block-none
+      .content
+        .text
+          !{main}
+          .text-end
+  .content-end
+#right
+  !{template('right', page)}

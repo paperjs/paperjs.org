@@ -1,0 +1,15 @@
+for file in page.files
+  name = file.name.split('-')[1]
+  name = name.charAt(0).toUpperCase() + name.slice(1)
+  .download
+    .image
+        a.nohover(href=file.url)
+          img(src=site.getUrl('assets/zip.jpg'), width='64', height='64', alt='')
+      .float-left
+        | Paper.js #{name}
+        br
+        | Release Date: #{formatDate(file.created)}
+        br
+        a(href=file.url) #{file.filename}
+        |  (#{file.humanSize})
+      .clear

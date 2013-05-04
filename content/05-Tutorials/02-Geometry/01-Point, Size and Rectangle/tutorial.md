@@ -1,0 +1,176 @@
+In Paper.js, basic types such as <api Point />, <api Size /> and <api Rectangle /> are objects that describe geometric attributes of graphical items. They are an abstract representation of geometric values such as location and dimension, but do not directly represent a graphical item within a project.
+<note>
+Graphical items in a Paper.js project are items that appear in the layer list and visually in the project. An analogy can be drawn to 'physical' items in the real world. To describe their location and dimension, Paper.js deploys different basic types, which are merely containers for numeric values that describe their geometric qualities.
+</note>
+This means that when we create a <api Point /> object in code, we are in fact only creating a description of a location in the view, but we are not creating a path item that contains this point as a segment:
+<code>
+var myPoint = new Point(10, 20); 
+console.log(myPoint); // { x: 10, y: 20 }
+</code>
+In order to create a path item that contains this point as a segment, we would need to explicitly use the <api Path() /> constructor to create a path and add the point as a first segment to it. The <node href="/tutorials/paths/working-with-path-items/" /> tutorial describes paths and segments in more detail.
+<code start=3>
+var myPath = new Path();
+myPath.add(myPoint);
+</code>
+Running this script would produce a 'physical' path item in the Paper.js project with one segment at the location of <code>myPoint</code>.
+
+<note>
+Again, the 'physically' appearing segment of <code>myPath</code> and the point called <code>myPoint</code> are not the same. <code>myPoint</code> is simply describing the coordinates that were used to produce the first segment of <code>myPath</code>. Modifying <code>myPoint</code> would not change that segment after it was created.
+</note>
+
+<title>Point</title>
+
+The <api Point /> object describes a two dimensional location. It has two properties <api Point#x>x</api> and <api Point#y>y</api>, representing the <code x /> and <code y /> coordinate of the location.
+
+Point objects can be created either by directly providing the coordinates for <code x /> and <code y /> or by omitting them, in which case they are initialized with 0. The x and y coordinate properties can be accessed and changed separately too.
+
+Here we are creating a new point without providing values for <code x /> and <code y />, and then change the values after. <code>The console.log()</code> function is used to log the resulting values to the console.
+<code>
+var myPoint = new Point();
+console.log(myPoint); // { x: 0, y: 0 }
+
+// Now let's change the x coordinate to 10...
+myPoint.x = 10;
+
+// ...and the y coordinate to x + 10
+myPoint.y = myPoint.x + 10;
+console.log(myPoint); // { x: 10, y: 20 }
+</code>
+
+<tip>
+The <code console.log() /> function sends text to the console of the browser and is very useful to debug scripts.
+</tip>
+
+Here we are creating a new point with defined coordinates, which are then modified.
+
+<code>
+var myPoint = new Point(20, 40);
+console.log(myPoint); // { x: 20, y: 40 }
+
+// Now we are doubling the x coordinate by multiplying it with 2.
+myPoint.x = myPoint.x * 2;
+console.log(myPoint); // { x: 40, y: 40 }
+</code>
+
+Another way of creating a point object is by passing its constructor an existing point, of which the new point the becomes a copy. Changing the new point will not modify the original point:
+
+<code>
+var firstPoint = new Point(20, 40);
+var secondPoint = new Point(firstPoint);
+console.log(secondPoint); // { x: 20, y: 40 }
+
+secondPoint.y = 20;
+console.log(secondPoint); // { x: 20, y: 20 }
+
+// Note that firstPoint has not changed:
+console.log(firstPoint); // { x: 20, y: 40 }
+
+</code>
+This is not the same as a simple variable reference, which does not make a copy:
+<code>
+var firstPoint = new Point(20, 40);
+var secondPoint = firstPoint;
+secondPoint.y = 20;
+console.log(secondPoint); // { x: 20, y: 20 }
+
+// Note that firstPoint has changed as well:
+console.log(firstPoint); // { x: 20, y: 20 }
+</code>
+
+<note>
+All basic types in Paper.js offer such a copying constructor. An easier way of making copies of objects in order to avoid modifying variables references is by calling the <api Point#clone()>clone()</api> function on any object:
+
+<code>
+var firstPoint = new Point(20, 40);
+var secondPoint = firstPoint.clone();
+</code>
+</note>
+
+The Point object offers an alternative numeric way of describing the location, in opposition to the cartesian coordinate <code x />, <code y />: The properties <api Point#angle>angle</api> and <api Point#length>length</api>, which describe the location in the polar coordinate system, defined by the distance (length) and angle to the coordinate sytstem's origin.
+
+<title>Size</title>
+
+The <api Size /> object describes abstract dimensions in two dimensional space. It has two properties <api Size#width>width</api> and <api Size#height>height</api>, representing the width and height values of the size.
+
+Just like with Point objects, Size objects can be created either by directly providing the values for width and height or by omitting them, in which case they are initialized with 0. The width and height properties can be accessed and changed separately too. As an example, the same steps from the Point object are executed with a Size object here.  Anything that was said about the Point object applies to the Size object too, the only difference being the different property names.
+<code>
+var mySize = new Size();
+console.log(mySize); // { width: 0, height: 0 }
+
+mySize.width = 10;
+mySize.height = mySize.width + 10;
+console.log(mySize); // { width: 10, height: 20 }
+</code>
+<code>
+var mySize = new Size(20, 40);
+console.log(mySize); // { width: 20, height: 40 }
+
+mySize.width = mySize.width * 2;
+console.log(mySize); // { width: 40, height: 40 }
+</code>
+
+<title>Rectangle</title>
+
+The <api Rectangle /> object can be described as the combination of a Point object and a Size object, describing both a two dimensional location and a size. Therefore it posseses the four properties <api Rectangle#x>x</api>, <api Rectangle#y>y</api>, <api Rectangle#width>width</api> and <api Rectangle#height>height</api>. The properties <code x /> and <code y /> describe the coordinates of the top left point of the rectangle, width and height describe its dimensions. Additionally, it also defines the <api Rectangle#point>point</api> and <api Rectangle#size>size</api> properties, giving access to these values in form of Point and Size objects.
+
+Rectangle objects can be created in a multitude of ways. One possibility is to pass a Point and a Size object to the <api Rectangle(point,size) /> constructor:
+<code>
+var topLeft = new Point(10, 20);
+var rectSize = new Size(200, 100);
+var rect = new Rectangle(topLeft, rectSize);
+console.log(rect); // { x: 10, y: 20, width: 200, height: 100 }
+console.log(rect.point); // { x: 10, y: 20 }
+console.log(rect.size); // { width: 200, height: 100 }
+</code>
+
+The same Rectangle object can be created using the <api Rectangle(x,y,width,height) /> constructor:
+<code>
+var rect = new Rectangle(10, 20, 200, 100);
+console.log(rect); // { x: 10, y: 20, width: 200, height: 100 }
+</code>
+
+A third possibility is to use the <api Rectangle(point1,point2) />  constructor, which receives two corner points of the Rectangle object. These do not necessarily need to be the top left and bottom right corners, the constructor figures out how to fit a rectangle between them:
+<code>
+var bottomLeft = new Point(10, 120);
+var topRight = new Point(210, 20);
+var rect = new Rectangle(bottomLeft, topRight);
+console.log(rect); // { x: 10, y: 20, width: 200, height: 100 }
+</code>
+
+<note>
+Newly created basic types do not necessarily need to be put into named variables every time. We could also nest constructor calls and pass them directly to the rectangle constructor.
+<code>
+var rect = new Rectangle(new Point(10, 120),
+        new Point(210, 20));
+</code>
+</note>
+
+<title>Rectangle Properties</title>
+The Rectangle object is a bit more complex than Point and Size objects and exposes a series of additional center and corner point objects: <api Rectangle#center>center</api>, <api Rectangle#topLeft>topLeft</api>, <api Rectangle#topRight>topRight</api>, <api Rectangle#bottomLeft>bottomLeft</api>, <api Rectangle#bottomRight>bottomRight</api>, <api Rectangle#leftCenter>leftCenter</api>, <api Rectangle#topCenter>topCenter</api>, <api Rectangle#rightCenter>rightCenter</api> and <api Rectangle#bottomCenter>bottomCenter</api>.
+
+All these values can be changed after a rectangle is created, offering an easy ways to specify the geometric qualities of rectangles:
+
+<code>
+// We start by creating a rectangle of dimension and
+// location set to 0
+var rect = new Rectangle();
+console.log(rect); // { x: 0, y: 0, width: 0, height: 0 }
+
+// Now we can for example define its size...
+rect.size = new Size(100, 200);
+
+// and its center
+rect.center = new Point(100, 100);
+console.log(rect); // { x: 50, y: 0, width: 100, height: 200 }
+</code>
+
+As an alternative numeric way to define the rectangle's dimensions, the Rectangle object also exposes the following properties, in opposition to <code x />, <code y />, <code width /> and <code height />: <api Rectangle#left>left</api>, <api Rectangle#top>top</api>, <api Rectangle#right>right</api> and <api Rectangle#bottom>bottom</api>:
+
+<code>
+var rect = new Rectangle();
+rect.left = 100;
+rect.right = 200;
+rect.bottom = 400;
+rect.top = 200;
+console.log(rect); // { x: 100, y: 200, width: 100, height: 200 }
+</code>
