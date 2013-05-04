@@ -1,0 +1,189 @@
+In this tutorial we are going to look at paths and the different ways to create and modify them in Paper.js projects.
+
+<title>The Anatomy of Path Items</title>
+
+In Paper.js, paths are represented by a sequence of segments that are connected by curves. A segment consists of a <api Segment#point>point</api> and two handles, defining the location and direction of the curves.
+
+<paperscript width=540 height=250>
+var y = view.size.height / 2;
+var width = view.size.width;
+var vector = new Point({
+    angle: 45,
+    length: width / 5
+});
+var offset = width / 30;
+var handleTexts = [];
+var path = new Path();
+path.segments = [
+	[[offset, y], null, vector.rotate(-90)],
+	[[width / 2, y], vector.rotate(-180), vector],
+	[[width - offset, y], vector.rotate(90), null]
+];
+path.fullySelected = true;
+
+function onMouseMove(event) {
+	var point = event.point.clone();
+	// Constrain the event point, to not cut off the text:
+	if (point.y < 22)
+		point.y = 22;
+	if (point.y > view.size.height - 24)
+		point.y = view.size.height - 24;
+    var delta = point - view.center;
+	for (var i = 0; i < 2; i++) {
+		var curve = path.curves[i];
+		curve.handle1.y = curve.handle2.y = delta.y * (i % 2 ? 1 : -1);
+		var firstPoint = curve.point1 + curve.handle1;
+		var secondPoint = curve.point2 + curve.handle2;
+		handleTexts[i * 2].point = secondPoint -
+				(firstPoint.y < y ? [0, 10] : [0, -18]);
+		handleTexts[i * 2 + 1].point = firstPoint -
+				(firstPoint.y < y ? [0, 10] : [0, -18]);
+	}
+}
+
+project.currentStyle.fillColor = 'black';
+for (var i = 0; i < 3; i++) {
+	var segment = path.segments[i];
+	var text = new PointText(segment.point - [0, 10]);
+	text.content = i;
+	text.paragraphStyle.justification = 'center';
+}
+
+for (var i = 0; i < 2; i++) {
+	var handleInText = new PointText();
+	handleInText.content = 'handleIn';
+	handleInText.paragraphStyle.justification = 'center';
+	handleInText.characterStyle.fontSize = 9;
+	handleTexts.push(handleInText);
+
+	var handleOutText = new PointText();
+	handleOutText.content = 'handleOut';
+	handleOutText.paragraphStyle.justification = 'center';
+	handleOutText.characterStyle.fontSize = 9;
+	handleTexts.push(handleOutText);
+}
+
+// Call onMouseMove once to correctly position the text items:
+onMouseMove({ point: view.center - vector.rotate(-90) });
+</paperscript>
+
+<hide>The tutorial <node DocumentationPage-839 /> explains how to work with segments and curves in more detail.</hide>
+
+<title>Adding and Inserting Segments</title>
+
+In order to start with paths here, we will use segments that do not define handles for now and therefore are connected by lines instead of curves.
+
+Lets create a new path item by using the <api Path() /> constructor and added segments to it using the <api Path#add(segment) /> function:
+<paperscript split=true height=100>
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.add(new Point(0, 0));
+myPath.add(new Point(100, 50));
+</paperscript>
+
+The <code>add</code> function also supports multiple arguments, which allows you to insert multiple segments in one go:
+<paperscript source=true height=100>
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.add(new Point(0, 0), new Point(100, 50));
+</paperscript>
+
+To insert segments in relation to already existing segments, you can use the <api Path#insert(index,segment) /> function:
+<paperscript source=true height=140 highlight="5-7">
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.add(new Point(0, 0), new Point(100, 50));
+
+// insert a segment between the two existing
+// segments in the path:
+myPath.insert(1, new Point(30, 40));
+</paperscript>
+
+<note>
+The <api Point /> object represents a point in the two dimensional space of the Paper.js project. It does not refer to an anchor point in a path. When a <api Point /> is passed to a function like <code>add</code> or <code>insert</code> it is converted to a <api Segment /> on the fly. To find out more about the <api Point /> object, please read the <node href="/tutorials/geometry/point-size-and-rectangle/" /> tutorial.
+</note>
+
+<title>Smoothing Paths</title>
+Paper.js allows you to automatically smooth paths using the <api Path#smooth() /> function. This function calculates the optimal values for the handles of the path's segment points to create curves that flow smoothly through them. The segments are not moved and the current handle settings of the path's segments are ignored.
+
+In the following example, we create a rectangle shaped path, create a copy of it and smooth the copy:
+
+<paperscript height=100 split=true>
+var path = new Path();
+path.strokeColor = 'black';
+path.add(new Point(30, 75)); 
+path.add(new Point(30, 25)); 
+path.add(new Point(80, 25));
+path.add(new Point(80, 75));
+path.closed = true;
+
+// Select the path, so we can see its handles:
+path.fullySelected = true;
+
+// Create a copy of the path and move it 100pt to the right:
+var copy = path.clone();
+copy.fullySelected = true;
+copy.position.x += 100;
+
+// Smooth the segments of the copy:
+copy.smooth();
+</paperscript>
+
+<title>Closing Paths</title>
+By default paths created through the <api Path() /> constructor are open:
+
+<paperscript width=540 height=140 split=true>
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.add(new Point(40, 90));
+myPath.add(new Point(90, 40));
+myPath.add(new Point(140, 90));
+</paperscript>
+
+To close the path we set its <api Path#closed /> property to <code>true</code>. Paper.js will then connect the first and last segments of the path:
+<paperscript width=540 height=140 highlight="7" split=true>
+var myPath = new Path();
+myPath.strokeColor = 'black';
+myPath.add(new Point(40, 90));
+myPath.add(new Point(90, 40));
+myPath.add(new Point(140, 90));
+
+myPath.closed = true;
+</paperscript>
+
+<title>Removing Segments and Paths</title>
+To remove a segment from a path, we use the <api Path#removeSegment(index) /> function and pass it the index of the segment we want to remove.
+
+<note>If you don't know yet how to create paths of predefined shapes, please read the the <node href="/tutorials/paths/creating-predefined-shapes/" /> tutorial.</note>
+
+First, lets create a circle shaped path and inspect its segments:
+<paperscript width=540 height=140 split=true>
+var myCircle = new Path.Circle(new Point(100, 70), 50);
+myCircle.strokeColor = 'black';
+myCircle.selected = true;
+</paperscript>
+
+As you can see, the path has 4 segments.
+
+Now, lets remove the first segment of the path after creating it:
+
+<paperscript width=540 height=140 split=true>
+var myCircle = new Path.Circle(new Point(100, 70), 50);
+myCircle.strokeColor = 'black';
+myCircle.selected = true;
+
+myCircle.removeSegment(0);
+</paperscript>
+
+<tip>
+In Javascript and most other programming languages we always start counting at zero when we refer to the index of an item in a list. Number zero is the first item, number one is the second item etc.
+</tip>
+
+To remove an item completely from the project, we use <api Item#remove() />:
+
+<code highlight="4">
+var myCircle = new Path.Circle(new Point(100, 100), 50);
+myCircle.fillColor = 'black';
+
+myCircle.remove();
+</code>

@@ -1,0 +1,797 @@
+@font-face {
+	font-family: "SuperstudioBold";
+	src: url("http://paperjs.org/static/css/assets/superstudio.eot");
+	src: url("http://paperjs.org/static/css/assets/superstudio.eot?#iefix") format("embedded-opentype"),
+		url("http://paperjs.org/static/css/assets/superstudio.woff") format("woff"),
+		url("http://paperjs.org/static/css/assets/superstudio.ttf") format("truetype"),
+		url("http://paperjs.org/static/css/assets/superstudio.svg#SuperstudioBold") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: #fff;
+	margin: 0;
+	font-size: 13px;
+	min-width: 964px;
+}
+
+select, input, textarea {
+	font-size: 11px;
+	margin: 0;
+	color: #000;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none
+}
+
+form {
+	margin: 0;
+}
+
+img {
+	border: 0;
+}
+
+div {
+	line-height: 20px;
+}
+
+p {
+	margin: 0 0 20px 0;
+}
+
+ol {
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+/* Fonts */
+
+h1, h2 {
+	font-family: "SuperstudioBold";
+	font-weight: normal;
+	font-size: 27px;
+	line-height: 32px;
+	padding-top: 32px; /* Padding instead of margin, so anchor trick works here too */
+	padding-bottom: 8px;
+	border-bottom: 1px solid;
+	margin: 0 0 20px 0;
+}
+
+body, select, input, textarea,
+.tutorial h2,
+.reference h2 {
+	font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+}
+
+.tutorial h2,
+.reference h2 {
+	font-size: 13px;
+	line-height: 20px;
+	padding: 0;
+}
+
+.tutorial h2 {
+	font-weight: bold;
+	border: 0;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+tt, pre {
+	font-family: Menlo, Consolas, "Vera Mono", monospace;
+	font-size: 12px;
+}
+
+/* Lists */
+
+ul.list {
+	padding: 0;
+	list-style: none;
+	margin: 0 0 20px 0;
+}
+
+ul.list li {
+	background: url(assets/bullet.gif) no-repeat 0 10px;
+	padding: 0 0 0 13px;
+	margin: 0 0 10px 0;
+}
+
+/* Tables */
+
+table {
+	border-spacing: 0;
+	margin: 0;
+	border: 0;
+}
+
+td {
+	padding: 0;
+	vertical-align: top;
+}
+
+/* Checkboxes */
+
+label {
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+
+input[type=checkbox] {
+	vertical-align: middle;
+}
+
+label span {
+	padding-left: 4px;
+	vertical-align: middle;
+}
+
+/* Column Layout */
+
+#menu {
+	position: fixed;
+	overflow-x: hidden;
+	overflow-y: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 160px;
+	/* 16px = room for scrollbar */
+	padding: 0  16px 0 32px;
+	background: #fff;
+	z-index: 1;
+}
+
+#menu h1 {
+	/* Required as we give space to scrollbar */
+	width: 160px;
+}
+
+#main {
+	/* We need relative position so scrollbars on document work */
+	position: relative;
+	float: left;
+	overflow: hidden;
+	padding-left: 224px; /* 160 + 2 * 32 */
+}
+
+#main,
+#main h1, #content {
+	width: 540px;
+}
+
+#content {
+	padding: 0 0 32px 0;
+}
+
+.simple-content {
+	padding-top: 92px;
+}
+
+#right,
+#right .right,
+#right .fixed {
+	float: left;
+	width: 200px;
+}
+
+#right .right {
+	float: left;
+	padding: 0 0 0 32px;
+}
+
+#right .fixed {
+	top: 0;
+	position: fixed;
+	overflow: hidden;
+}
+
+/* Fullscreen */
+
+body.fullscreen {
+	overflow: hidden;
+}
+
+body.fullscreen #main {
+	/* Clear relative position for fullscreen examples */
+	position: absolute;
+	width: auto;
+	overflow: hidden;
+}
+
+body.fullscreen #main #content {
+	width: auto;
+	padding: 0;
+}
+
+/* Menu */
+
+ul.menu {
+	padding: 0;
+	list-style: none;
+	margin: 0 0 0 0;
+}
+
+ul.menu li.entry {
+	padding: 0 0 0 0; /* 2 * 13px */
+	margin: 0 0 0 13px;
+	text-indent: -13px;
+}
+
+ul.menu li.entry.spacer {
+	margin-bottom: 10px;
+}
+
+#menu > ul.menu > li.entry {
+	/* Don't indent the first level of entries */
+	padding: 0;
+}
+
+/* Colours and Links */
+
+#menu, #menu a {
+	color: #009dec;
+	border-bottom-color: #009dec;
+}
+
+#menu ul.menu a:hover,
+#menu ul.menu .active > a {
+	background: #e3f4fc;
+}
+
+#main, .content a {
+	color: #333;
+	border-bottom-color: #000;
+}
+
+.content a:hover {
+	background: #e5e5e5;
+}
+
+.right, .right a, .error {
+	color: #e4141b;
+	border-bottom-color: #e4141b;
+}
+
+.right a:hover,
+.right li.entry.active > a,
+.right .tutorial-index .active {
+	background: #fce6e6;
+}
+
+/* Content Styles */
+
+.content a {
+	border-bottom: 1px solid;
+}
+
+.content .section {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+/* Fix IE8 issue with empty named anchors having a huteight of 15px instead of 0 */
+.content a.anchor {
+	display: block;
+	height: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Helpers */
+
+.clear {
+	clear: both;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.popup-body {
+	margin: 0px;
+	/* Remove scrollbars on chrome */
+	overflow: hidden;
+}
+
+.small-inline {
+	font-size: 11px;
+}
+
+.small {
+	font-size: 11px;
+	line-height: 16px;
+}
+
+.line {
+	height: 10px;
+	background: url(assets/dotted.gif) repeat bottom;
+	margin-bottom: 20px;
+}
+
+.donation {
+	padding-bottom: 20px;
+}
+
+/* Text Content */
+
+.text em {
+	font-style: normal;
+	padding: 0 1px 0 3px;
+	background: #ebebeb;
+}
+
+.text .note {
+	padding: 8px;
+	margin: 0 40px 20px 10px;
+	background: #f4f4f4;
+	clear: both;
+}
+
+.text .note .resource {
+	margin: 0;
+}
+
+.text p, .text ul, .text .resource-block p {
+	margin-right: 30px;
+	clear: both;
+}
+
+.block .text .resource-block {
+	/* Compensate -10px for ligher scripts, -1px for dotted line */
+	margin-right: 11px;
+}
+
+.text ol {
+	/* Compensate -10px for ligher scripts */
+	margin: 0 10px 20px 0;
+	clear: both;
+}
+
+.text .column {
+	width: 50%;
+	float: left;
+}
+
+/* Blocks */
+
+.block-interact {
+	margin-bottom: 16px;
+	border: 1px solid #999;
+	border-left: 0;
+	border-right: 0;
+	background-image: url(assets/pattern.gif);
+}
+
+.block-padded {
+	padding: 10px;
+	vertical-align: top;
+}
+
+.block-white {
+	border: 1px solid #999;
+	background: #fff;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.block-gray {
+	border: 1px solid #999;
+	border-left-width: 0;
+	border-right-width: 0;
+	background: #f4f4f4;
+	margin-bottom: 16px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.block .header {
+	padding: 10px;
+}
+
+.block .title {
+	float: left;
+}
+
+.block .content {
+	clear: left;
+	border-top: 1px dashed #999;
+	padding: 10px;
+	overflow: auto;
+	max-height: 2000px;
+}
+
+.block .text {
+	/* Compensate <p> margin and resource (right) */
+	margin: 0 -10px 0 0;
+}
+
+.block .text .line,
+.block .text .paperscript,
+.block .text .CodeMirror {
+	clear: left;
+	/* Compensate line margin for -10px above */
+	margin-right: 10px;
+	margin-bottom: 20px;
+	/* margin-top: -10px; /* Move half way up close to previous paragraph */
+}
+
+.block .text-end {
+	/* In case the text does not end with a 20px margin objet, this will
+	compensate the -20px */
+	margin: -20px 0 20px 0;
+	/* Clear in case there are resources */
+	clear: left;
+}
+
+.block-white .content,
+.block-none .content {
+	overflow: inherit;
+	max-height: none;
+}
+
+.block .post-count {
+	font-size: 11px;
+	border-top: 1px dashed #999;
+	background-image: url(assets/pattern.gif);
+	padding: 3px 10px 4px 10px;
+}
+
+.block .post-count a {
+	padding-bottom: 0;
+}
+
+.block .resources {
+	border-top: 1px dashed #999;
+	padding: 10px 10px 0 10px;
+}
+
+.block .header,
+.block .content,
+.block .post-count,
+.block .resources {
+	width: 518px;
+}
+
+.block-none .content,
+.block-none .header {
+	padding: 0;
+	border-top: none;
+	width: 540px;
+}
+
+.block-none .text {
+	margin-bottom: 0px;
+}
+
+.block-none .text .column {
+	/* (540 - 10px distnace) / 2 = 265 */
+	width: 265px;
+	margin-right: 10px;
+}
+
+.block .end {
+	height: 240px;
+}
+
+.block-edit {
+	padding: 10px;
+	display: none;
+}
+
+.block-gray a:hover,
+.blocks-row-gray a:hover,
+.block-interact a:hover,
+.block .post-count a:hover,
+.note a:hover {
+	background: #fff;
+}
+
+/* Pagination */
+
+.pagination {
+	font-size: 11px;
+	line-height: 15px;
+	margin-top: -7px;
+	padding: 0 10px 10px 10px;
+}
+
+.pagination-clear {
+	clear: both;
+	display: block;
+}
+
+* html .pagination-clear { /* PC IE fix, jumping :hover... */
+	display: inline;
+}
+
+.pagination a {
+	padding-bottom: 0;
+}
+
+/* Blocks Lists */
+
+.blocks {
+	width: 540px;
+	border: 1px solid #999;
+	empty-cells: show;
+}
+
+.blocks-row-white td,
+.blocks-row-gray td {
+	padding: 8px 10px 10px 10px;
+	vertical-align: top;
+}
+
+td.blocks-seperator-white,
+td.blocks-seperator-gray {
+	border-top: 1px dashed #999;
+}
+
+.blocks-row-white td,
+.blocks-seperator-white {
+	background: #fff;
+}
+
+.blocks-row-gray td,
+.blocks-seperator-gray {
+	background: #f4f4f4;
+}
+
+.blocks-end {
+	height: 16px;
+}
+
+.no-border {
+	margin-top: -6px;
+	border: 0;
+}
+
+.no-border .blocks-row-white td,
+.no-border .blocks-row-gray td {
+	padding: 8px 0 10px 0;
+}
+
+/* Edit Fields */
+
+.edit-login td {
+	padding: 0 6px 3px 0;
+}
+
+.edit-elements {
+	float: right;
+	text-align: right;
+}
+
+#menu > .edit-elements,
+#content > .edit-elements,
+body.fullscreen #main .edit-elements {
+	position: relative;
+	top: 32px;
+	margin-bottom: -20px;
+}
+
+body.fullscreen #main .edit-elements {
+	float: left;
+	left: 24px;
+	z-index: 1;
+}
+
+.edit-editor {
+	border: 1px solid #999;
+	width: 538px; /* Remove 1px border */
+	margin-top: 32px;
+}
+
+/* Edit Forms */
+
+#main #edit td,
+#main #edit input,
+#main #edit select,
+#main #edit textarea,
+#main #edit a.edit-button,
+#main #edit .tab-pane .edit-title {
+	font-size: 12px;
+}
+
+#main #edit td,
+#main #edit .tab-pane .edit-title {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+#main #edit .tab-pane .edit-content {
+	margin: 6px 10px 6px 10px; /* 10px - 4px (.edit-label & .edit-item) = 6px */
+}
+
+#main #edit .edit-label,
+#main #edit .edit-item {
+	padding-top: 4px;
+}
+
+#main #edit .edit-help div {
+	padding: 5px;
+}
+
+#main #edit .edit-help div,
+#main #edit .edit-help td {
+	font-size: 11px;
+	line-height: 16px;
+	white-space: normal;
+}
+
+#main #edit .edit-list-separator {
+	height: 4px;
+}
+
+#main #edit .edit-list-header {
+	/* Undo the 4px separator */
+	margin-bottom: -4px;
+}
+
+#main #edit .edit-list-entry .edit-list-buttons {
+	margin: 4px 0 -20px 0;
+}
+
+#main .edit-buttons-left .edit-button {
+	margin-right: 4px;
+}
+
+#main .edit-buttons-right .edit-button,
+.edit-button {
+	margin-left: 4px;
+}
+
+/* Attachments */
+
+.resource {
+	float: left;
+	margin-right: 20px;
+}
+
+.media {
+	margin-right: -20px;
+}
+
+.text .resource {
+	/* To space horizontaly and work against bottom <p> margin compensation */
+	margin: 0 10px 20px 0;
+}
+
+.resource .caption {
+	text-align: center;
+}
+
+/* Resource Blocks (Image / Text Columns) */
+
+.resource-block {
+	display: table;
+	*display: block; /* <= ie7 */
+	margin-bottom: 20px;
+}
+
+.resource-block + .resource-block {
+	border-top: 1px dotted #000;
+	padding-top: 20px;
+}
+
+.resource-text,
+.text .resource-block .resource {
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
+	/* <= ie7 */
+	*float: left;
+	*display: block;
+	*width: 50%;
+}
+
+.resource-text {
+	vertical-align: top;
+}
+
+.resource-text p {
+	margin-right: 0;
+}
+
+.text .resource-block .resource img {
+	margin-right: 20px;
+}
+
+.text .resource-text .note {
+	margin: 0 10px 0 0;
+}
+
+.text .resource-text .CodeMirror {
+	/* Having height at 100% in resource-blocks breaks table layout */
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.thumbnails {
+	margin-right: -24px;
+}
+
+.thumbnail {
+	float: left;
+	width: 258px;
+	margin: 0 24px 24px 0;
+}
+
+.thumbnail .resource {
+	margin: 0;
+}
+
+.download {
+	margin-bottom: 20px;
+}
+
+.download .image {
+	float: left;
+	margin-right: 8px;
+}
+
+.thumbnail .resource a,
+.download .image a {
+	border: 0 !important;
+	background: none !important;
+}
+
+/* Documentation */
+
+li.expandable-list ul {
+	display: none;
+}
+
+li.expandable-list.expanded ul {
+	display: block;
+}
+
+li.expandable-list a.arrow {
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	background: url(assets/arrow-close.gif) no-repeat;
+	border-bottom: 0;
+	padding-right: 4px;
+}
+
+li.expandable-list.expanded a.arrow {
+	background: url(assets/arrow-open.gif) no-repeat;
+}
+
+/* Tutorials */
+
+.tutorial-overview {
+	margin: 10px 25px 10px 0;
+}
+
+ul.tutorial-index {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+ul.tutorial-index ul {
+	padding-left: 13px;
+}
+
+#main ul.tutorial-index {
+	margin-bottom: 29px;
+}

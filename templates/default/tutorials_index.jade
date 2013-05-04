@@ -1,0 +1,13 @@
+ul.tutorial-index
+  for child in page.children
+    if child.children.length > 0
+      li.expandable-list(class=(inPath(child) ? 'expanded' : ''))
+        b
+          a(href=child.url) #{child.title}
+        !{template('tutorials_index', child)}
+     else if isActive(child)
+       li
+         span.active #{child.title}
+     else 
+       li
+         a(href=child.url) #{child.title}

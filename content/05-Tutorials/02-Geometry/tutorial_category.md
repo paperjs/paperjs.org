@@ -1,0 +1,1 @@
+Introductions into the basic geometric principles and methods Paper.js is based on.

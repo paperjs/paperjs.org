@@ -1,0 +1,5 @@
+if page.parent && !page.parent.parent && inPath(page)
+  ul.menu
+    for entry in page.children
+      li.entry(class=isActive(entry) ? 'active' : '')
+        a(href=entry.url) #{entry.title}

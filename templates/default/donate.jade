@@ -1,0 +1,12 @@
+form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_blank', class='donation')
+  select(name='currency_code')
+    option(value='USD') USD
+    option(value='EUR') EUR
+    option(value='GBP') GBP
+    option(value='CHF') CHF
+  input(type='text', size='8', name='amount', value='10.00')
+  input(name='submit', type='submit', class='button', value='Donate!')
+  input(type='hidden', name='cmd', value='_xclick')
+  input(type='hidden', name='business', value='donations@scriptographer.org')
+  input(type='hidden', name='item_name', value='Scriptographer Donation')
+  input(type='hidden', name='no_shipping', value='1')

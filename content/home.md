@@ -1,9 +1,12 @@
-----
+---
 title: Paper.js
-menu: <url "http://groups.google.com/group/paperjs">Mailing List</url>
-<url "http://twitter.com/PaperJS">Follow on Twitter</url>
-<url "http://github.com/paperjs/paper.js">Watch on Github</url>
-----
+---
+menu:
+<url href="http://groups.google.com/group/paperjs">Mailing List</url>
+<url href="http://twitter.com/PaperJS">Follow on Twitter</url>
+<url href="http://github.com/paperjs/paper.js">Watch on Github</url>
+---
+content:
 <paperscript resize=true explain=true>
 var width, height, center;
 var points = 10;
