@@ -1,0 +1,1 @@
+contentExtension: .txt
