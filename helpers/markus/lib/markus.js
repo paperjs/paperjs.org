@@ -183,8 +183,10 @@ Node.prototype = {
 			return node.rendered = node.render(content, options, encoder,
 					this.nodes[node.index - 1], this.nodes[node.index + 1]);
 		} else {
-			// A simple string. Just encode it
-			return encoder(node);
+			// TODO: node used to be encoded here. Why encode everything by default?
+
+			// A simple string.
+			return node;
 		}
 	},
 

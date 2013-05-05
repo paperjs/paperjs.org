@@ -1,7 +1,12 @@
 var path = require('path'),
-	fs = require('fs');
+	fs = require('fs'),
+	ent = require('ent');
 
 var markus = require('./lib/markus');
+
+markus.encode({
+    entities: ent.encode
+});
 
 // Register all tags contained in tags folder:
 fs.readdirSync(path.join(__dirname, 'tags'))
@@ -15,6 +20,8 @@ fs.readdirSync(path.join(__dirname, 'tags'))
 module.exports = {
 	markus: function(content, param) {
 		if (!content) return '';
+		if (!param) param = {};
+		param.encoding = 'entities';
 		return markus.parse(content).render(param);
 	}
 };
