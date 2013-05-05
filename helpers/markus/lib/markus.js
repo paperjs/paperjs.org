@@ -118,7 +118,7 @@ exports.parse = function(text, options) {
 				// If this tag does not allow nesting, search for its end
 				// immediately now, all what's inbetween to its nodes and
 				// close it straight away.
-				if (!empty && tag.nesting === false) {
+				if (!empty && tag.entry.nesting === false) {
 					// Search for closing tag
 					var close = '</' + tag.name + '>';
 					start = text.indexOf(close, end);
