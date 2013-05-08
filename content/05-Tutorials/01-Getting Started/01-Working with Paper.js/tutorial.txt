@@ -78,7 +78,7 @@ Your code can respond to any resizing of the window by creating a <api View#onRe
 // of the view and a radius of 30:
 var path = new Path.Circle({
 	center: view.center,
-	radius: 30
+	radius: 30,
 	strokeColor: 'black'
 });
 
