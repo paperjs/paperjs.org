@@ -1,7 +1,7 @@
 var Url = require('../lib/Url');
 
 var tag = function(content, param) {
-	var src = this.attributes.src;
+	var src = this.values[0];
 	if (!src) {
 		src = content;
 		content = null;

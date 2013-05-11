@@ -57,4 +57,4 @@ function onMouseMove(event) {
 }
 </paperscript>
 
-<image src="mona.jpg" id="mona" class="hidden" />
+<image "mona.jpg" id="mona" class="hidden" />

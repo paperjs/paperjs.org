@@ -132,7 +132,7 @@ function onMouseDrag(event) {
 }
 </paperscript>
 
-<image src="delta.gif" />
+<image "delta.gif" />
 
 <title>Counting Mouse Events</title>
 

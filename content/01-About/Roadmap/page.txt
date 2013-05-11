@@ -5,16 +5,16 @@ Paper.js is a young library, with plans for many more features. While a lot of t
 <title>Implemented</title>
 - SVG importing / exporting.
 - JSON data format for persistence.
-- <url href="http://scriptographer.org/tutorials/document-items/hit-tests/">Hit Test</url> graphic items and add mouse event handlers to them, for simple and powerful interactivity.
-- <url href="http://scriptographer.org/tutorials/paths/geometric-tests/#finding-path-intersections">Path intersections</url>.
+- <url "http://scriptographer.org/tutorials/document-items/hit-tests/">Hit Test</url> graphic items and add mouse event handlers to them, for simple and powerful interactivity.
+- <url "http://scriptographer.org/tutorials/paths/geometric-tests/#finding-path-intersections">Path intersections</url>.
 - Running Paper.js on the server using Node.js.
 
 <title>Nearly Finished</title>
-- <url href="http://scriptographer.org/tutorials/user-interface/interface-components/">Simple user interfaces</url> that allow your users to tweak values in your script.
+- <url "http://scriptographer.org/tutorials/user-interface/interface-components/">Simple user interfaces</url> that allow your users to tweak values in your script.
 
 <title>Planned</title>
 - Parametrizable path offsetting / stroking, to expand strokes to outlines and optionally produce all kinds of expressive strokes easily.
-- <url href="http://scriptographer.org/tutorials/paths/geometric-operations/">Boolean geometric path operations</url>, such as union, intersection, exclusion, etc.
+- <url "http://scriptographer.org/tutorials/paths/geometric-operations/">Boolean geometric path operations</url>, such as union, intersection, exclusion, etc.
 - Selectors similar to CSS for matching items in your Paper.js document.
 -  Direct importing of drawings from Adobe Illustrator through JSON and ExtendScript.
 - Typography using SVG fonts, with support for advanced typographic features such as type inside graphic shapes and along paths, with control over styles of sub-ranges of text.

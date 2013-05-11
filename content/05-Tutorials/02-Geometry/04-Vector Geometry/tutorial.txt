@@ -1,6 +1,6 @@
 Vector geometry is a first class citizen in Paper.js. It is a great advantage to understand its basic principles when learning to write scripts for it. After all, there is a reason for the word <i>Vector</i> in <i>Vector Graphics</i>.
 
-While building <url href="http://scriptographer.org">Scriptographer</url> we found vector geometry to be a powerful way of working with positions, movement and paths. Once understood, it proves to be a lot more intuitive and flexible than working with the x- and y- values of the coordinate system directly, as most other visually oriented programming environments do.
+While building <url "http://scriptographer.org">Scriptographer</url> we found vector geometry to be a powerful way of working with positions, movement and paths. Once understood, it proves to be a lot more intuitive and flexible than working with the x- and y- values of the coordinate system directly, as most other visually oriented programming environments do.
 
 As an example of the elegance of vector geometry, here is an interactive example of a brush tool. With only 24 lines of code, it produces a mouse tool that acts like a brush, with a variable thickness depending on speed and a sense of a natural expression.
 
@@ -43,7 +43,7 @@ This script is developed step by step in the <node href="/tutorials/interaction/
 
 In many ways, vectors are very similar to points. Both are represented by x and a y coordinates. But while points describe absolute positions, vectors represent a relative information; a way to get from one point to another. Here a step-by-step example that explains the relation between vectors and points.
 
-<image src="Points-And-Vectors-01.gif">
+<image "Points-And-Vectors-01.gif">
 We start by creating two <node href="/tutorials/geometry/point-size-and-rectangle/" anchor="point">Point</node> objects to describe two absolute locations in the document, defined by their coordinate values:
 <code>
 var point1 = new Point(50, 50);
@@ -51,7 +51,7 @@ var point2 = new Point(110, 200);
 </code>
 </image>
 
-<image src="Points-And-Vectors-02.gif">
+<image "Points-And-Vectors-02.gif">
 In order to get from <code point1 /> to <code point2 />, we can say we need to move <code 60 /> to the right (in x-direction), and <code 150 /> down (in y-direction). These values are the result of subtracting the x- and y-coordinates of <code point1 /> from the ones of <code point2 />:
 <code>
 var x = point2.x - point1.x;
@@ -62,7 +62,7 @@ var y = point2.y - point1.y;
 In other words, by adding these two values to the coordinates of <code point1 />, we end up at <code point2 />.
 </image>
 
-<image src="Points-And-Vectors-03.gif" >
+<image "Points-And-Vectors-03.gif" >
 Instead of using these two separate values, it is much easier to use a vector as a container for the them. To calculate this vector, we can simply subtract <code point1 /> from <code point2 /> instead of the two separate subtractions in the previous step:
 
 <code>
@@ -79,7 +79,7 @@ The result of this subtraction (<code vector />) is still a <node href="/tutoria
 
 </image>
 
-<image src="Points-And-Vectors-04.gif" >
+<image "Points-And-Vectors-04.gif" >
 Vectors can also be described as arrows. Similar to arrows, they point in a certain direction, and also indicate an amount of distance to move in that direction. An alternative and often more useful way of describing a vector is therefore by angle and length.
 
 The Point object exposes this alternative notation through the <api Point#angle /> and <api Point#length /> properties, which both can be modified too.
@@ -101,7 +101,7 @@ It is so important that we repeat it again: Vectors contain relative information
 
 The easiest use of such a vector is to add it to an absolute position of a point. The result will again be an absolute point, which will be at a position shifted from the originating point by the amount specified by the vector. In this way we can add the same vector to many points, as illustrated in the image bellow. The vectors you see are all the same, but the points resulting from adding it to a group of existing points in different locations all differ.
 
-<image src="Vectors.gif" />
+<image "Vectors.gif" />
 
 <title>Calculating with Vectors</title>
 
@@ -111,7 +111,7 @@ As shown by the simple examples above, the power of vectors really comes into pl
 
 A vector can be added to another, and the result is the same as if we superposed two descriptions of how to get from one place to another, resulting in a third vector.
 
-<image src="Vector-Addition-01.gif">
+<image "Vector-Addition-01.gif">
 We start with four points:
 <code>
 var point1 = new Point(50, 0);
@@ -132,7 +132,7 @@ var vector2 = point4 - point3;
 </code>
 </image>
 
-<image src="Vector-Addition-02.gif">
+<image "Vector-Addition-02.gif">
 To start at <code startPoint />, follow <code vector1 /> and then <code vector2 />, we could first add <code vector1 /> to the <code startPoint />, retrieve the resulting <code tempPoint /> and then add <code vector2 /> to that to get to the desired <code endPoint />.
 <code>
 var tempPoint = startPoint + vector1;
@@ -141,14 +141,14 @@ var endPoint = tempPoint + vector2;
 But if we would like to apply the same combined vector to many points, this calculation would be unnecessarily complicated, as we would have to go through the <code tempPoint /> each time.
 </image>
 
-<image src="Vector-Addition-03.gif">
+<image "Vector-Addition-03.gif">
 Instead, we can just add <code vector1 /> to <code vector2 /> and use the resulting object as a new vector that describes the combined movement.
 <code>
 var vector = vector1 + vector2;
 </code>
 </image>
 
-<image src="Vector-Addition-04.gif">
+<image "Vector-Addition-04.gif">
 But we can also do the opposite and subtract a vector from another instead of adding it. The result is the same as if we would go in the opposite direction of the vector that we are subtracting.
 <code>
 var vector = vector1 - vector2;
@@ -163,7 +163,7 @@ The results of these operations is the same as the addition or subtraction of ea
 
 It is quite easy to imagine what a multiplication or division with a numerical value would do to a vector: Instead of saying "go 10 meters into that direction", it would for example correspond to "3 times 10 meters into that direction". A multiplied vector does not change its angle. But its length is changed, by the amount of the multiplied value.
 
-<image src="Vector-Multiplication.gif">
+<image "Vector-Multiplication.gif">
 <code>
 var bigVector = smallVector * 3;
 </code>
@@ -236,7 +236,7 @@ console.log(normalizedVector.length);
 
 Rotating vectors is a powerful tool for constructing paths and shapes, as it allows us to define a relative direction at a certain angle rotated away from another direction, for example sideways. The <node href="/tutorials/interaction/working-with-mouse-vectors/" /> tutorial shows a good example of this, where rotated vectors are used to construct paths in parallel to the direction and position of the moved mouse.
 
-<image src="Angles.gif" >
+<image "Angles.gif" >
 All angles in Paper.js are measured in degrees, and are oriented clockwise. The angle values start from the horizontal axis and expand downwards. At 180° they flip to -180°, which is the same, since going halfway around a circle in the left or right direction results in the same position. This does not prevent you from setting angles to something higher than 180° though.
 </image>
 

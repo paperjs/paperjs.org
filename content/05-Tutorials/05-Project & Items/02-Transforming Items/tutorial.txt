@@ -6,7 +6,7 @@ This tutorial explains how to move, scale and rotate items in your Paper.js proj
 
 You can move an item around in the project by changing its <api Item#position /> property. This moves the item by its center point.
 
-<image src="item-position.gif" />
+<image "item-position.gif" />
 
 For example let's make a path and then move it to another position:
 <paperscript height=200 split=true>
@@ -48,7 +48,7 @@ function onMouseMove(event) {
 
 When you select an item in a vector graphics application like Illustrator and select the transform tool it draws a rectangle around the item which describes its boundaries:
 
-<image src="transform-controls.gif" />
+<image "transform-controls.gif" />
 
 In Paper.js we can find out the dimensions of this bounding rectangle by looking at the <api Item#bounds /> property of item.
 
@@ -63,7 +63,7 @@ console.log(circlePath.bounds.width); // 50
 console.log(circlePath.bounds.height); // 50
 </code>
 
-<image src="bounds-width-height.gif" />
+<image "bounds-width-height.gif" />
 
 We can also find the position of the corner points of the bounding rectangle:
 
@@ -75,7 +75,7 @@ console.log(circlePath.bounds.bottomRight); // { x: 75.0, y: 75.0 }
 console.log(circlePath.bounds.bottomLeft); // { x: 25.0, y: 75.0 }
 </code>
 
-<image src="bounds-corner-points.gif" />
+<image "bounds-corner-points.gif" />
 
 <title>Scaling Items</title>
 

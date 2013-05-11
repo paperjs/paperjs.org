@@ -104,4 +104,4 @@ DomEvent.add(document, {
 	dragleave: onDocumentDrag
 });
 </paperscript>
-<image src="mona.jpg" id="mona" class="hidden" />
+<image "mona.jpg" id="mona" class="hidden" />

@@ -188,7 +188,7 @@ As I mentioned earlier, all newly created items automatically receive the curren
 
 The following example changes the current style of the project, then creates a path which inherits that style. Then it changes only the <code>strokeWidth</code> and creates another path.
 
-<image src="currentStyle.gif" />
+<image "currentStyle.gif" />
 
 <paperscript width=540 height=200 split=true>
 // Change the current style of the project:

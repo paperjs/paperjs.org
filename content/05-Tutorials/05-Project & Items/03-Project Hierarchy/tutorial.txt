@@ -124,7 +124,7 @@ var secondPath = new Path.Circle(new Point(150, 50), 35);
 secondPath.fillColor = 'green';
 </paperscript>
 
-<image src="Layers.gif"> The image on the left is an illustration of the structure of the project, if you would be looking at it in an application like Adobe Illustrator. There are two layers, the red path was created in the first layer and the green path was created in the second.</image>
+<image "Layers.gif"> The image on the left is an illustration of the structure of the project, if you would be looking at it in an application like Adobe Illustrator. There are two layers, the red path was created in the first layer and the green path was created in the second.</image>
 
 <title>Adding Children to Groups</title>
 

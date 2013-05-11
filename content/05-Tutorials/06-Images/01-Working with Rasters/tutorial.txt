@@ -22,7 +22,7 @@ raster.scale(0.5);
 raster.rotate(45);
 </paperscript>
 
-<image src="mona.jpg" id="mona" class="hidden" />
+<image "mona.jpg" id="mona" class="hidden" />
 
 <title>Rasterizing Items</title>
 

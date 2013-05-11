@@ -1,7 +1,7 @@
 var Url = require('../lib/Url');
 module.exports = {
 	url: function(content, param) {
-		var url = this.attributes.href || content;
+		var url = this.values[0] || content;
 		var title = content || url;
 		var str = '<a href="';
 		// Allways write domain part of url for feed rendering

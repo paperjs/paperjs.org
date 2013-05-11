@@ -107,7 +107,7 @@ function onMouseDrag(event) {
 
 <title>Using the Speed of the Mouse</title>
 As you can see in when working with the first example script: When the mouse is moved fast the points are further apart than when you move the mouse slowly.
-<image src="mouse_vectors.gif">
+<image "mouse_vectors.gif">
 Thus, the difference in position between these points describe the amount that the mouse moved and therefore also its speed.
 
 In the <node href="/tutorials/geometry/vector-geometry/" anchor='points-and-vectors'>Points and Vectors</node> chapter of the Vector Geometry tutorial, we introduced the notion of a vector; an amount of distance to move in a certain direction.
@@ -115,7 +115,7 @@ In the <node href="/tutorials/geometry/vector-geometry/" anchor='points-and-vect
 You could say that all these little drag movements are vectors. The mouse handler <api ToolEvent>event</api> object includes a reference to the mouse movement vector, so we don't have to calculate it ourselves and can easily use it in our tools: <api ToolEvent#delta>event.delta</api>
 </image>
 
-<image src="Event-Properties.gif">
+<image "Event-Properties.gif">
 The image on the left is a zoom of the top of the image above.
 - <api ToolEvent#point>event.point</api> is the position of the mouse
 - <api ToolEvent#delta>event.delta</api> is the vector of the mouse drag event; the distance and direction from the last mouse drag event
@@ -157,13 +157,13 @@ function onMouseDrag(event) {
 }
 </paperscript>
 
-<image src="Middlepoint.gif">As you can see in the movie above, the skeleton lines don't start at the position of the mouse, but in the middle between the current position and the last position of the mouse.
+<image "Middlepoint.gif">As you can see in the movie above, the skeleton lines don't start at the position of the mouse, but in the middle between the current position and the last position of the mouse.
 
 The mouse handler  <api ToolEvent>event</api> object includes a reference to this middle point, to save us from calculating ourselves: <api ToolEvent#middlePoint>event.middlePoint</api></image>
 
-<image src="Rotating-Delta.gif">We take <api ToolEvent#delta>event.delta</api> (the vector in the direction of the mouse) and rotate it by 90 degrees. This means that the vector which was previously pointing in the direction of the mouse, is now pointing 90 degrees away from the direction of the mouse.</image>
+<image "Rotating-Delta.gif">We take <api ToolEvent#delta>event.delta</api> (the vector in the direction of the mouse) and rotate it by 90 degrees. This means that the vector which was previously pointing in the direction of the mouse, is now pointing 90 degrees away from the direction of the mouse.</image>
 
-<image src="Middle-Point-Plus-Step.gif">When we add the rotated delta vector to an absolute point (<api ToolEvent#middlePoint>event.middlePoint</api> in this case) we get back the position offset by the direction and length of the vector.
+<image "Middle-Point-Plus-Step.gif">When we add the rotated delta vector to an absolute point (<api ToolEvent#middlePoint>event.middlePoint</api> in this case) we get back the position offset by the direction and length of the vector.
 </image>
 
 Here is our updated tool script that now also creates the skeleton paths. The new lines of code are highlighted:

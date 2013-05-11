@@ -105,4 +105,4 @@ project.activeLayer.position = view.center;
 
 This code is very similar to the example above, but this time we don't fill the paths with the color we find when we call <api Raster.getPixel(x,y) />. Instead, we look at how dark the color is using <api Color#gray />, which is a value between <code>0</code> (white) and <code>1</code> (black) and use it to scale the paths.
 
-<image src="mona-lisa-1.jpg" id="mona" class="hidden" />
+<image "mona-lisa-1.jpg" id="mona" class="hidden" />
