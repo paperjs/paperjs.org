@@ -1,7 +1,7 @@
 The mouse handler functions receive an event object which contains information about the mouse event. In this tutorial we will go through the different properties that it contains.
 
 <note>
-We advise you to read the <node href="/tutorials/interaction/creating-mouse-tools/" /> first, if you haven't done so yet.
+We advise you to read the <node "/tutorials/interaction/creating-mouse-tools/" /> first, if you haven't done so yet.
 </note>
 
 <title>Mouse Position</title>
@@ -67,7 +67,7 @@ function onMouseUp(event) {
 <api ToolEvent#delta>event.delta</api> describes the vector between the current position and the last position of the mouse when the event was fired. In case of the mouse-up event, the vector to the mouse-down position is returned.
 
 <note>
-You can read more about vectors in the <node href="/tutorials/geometry/vector-geometry/" /> tutorial.
+You can read more about vectors in the <node "/tutorials/geometry/vector-geometry/" /> tutorial.
 </note>
 
 <code>

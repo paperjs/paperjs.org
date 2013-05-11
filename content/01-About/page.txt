@@ -8,12 +8,12 @@ Paper.js is an open source vector graphics scripting framework that runs on top 
 
 Paper.js is easy to learn for beginners and has lots to master for intermediate and advanced users.
 
-Paper.js is developed by <url "http://lehni.org">Jürg Lehni</url> & <url "http://jonathanpuckey.com">Jonathan Puckey</url>, and distributed under the permissive <node href="/license/">MIT License</node>.
+Paper.js is developed by <url "http://lehni.org">Jürg Lehni</url> & <url "http://jonathanpuckey.com">Jonathan Puckey</url>, and distributed under the permissive <node "/license/">MIT License</node>.
 <title>Getting Started</title>
 
-- First of all, take a look at some of our <node href="/examples/">examples</node>.
-- <node href="/download/">Download</node> Paper.js or check out the latest version from our <url "http://github.com/paperjs/paper.js">Github Repository</url>.
-- Want to learn Paper.js? Why not start now with one our <node href="/tutorials/">Tutorials</node>.
+- First of all, take a look at some of our <node "/examples/">examples</node>.
+- <node "/download/">Download</node> Paper.js or check out the latest version from our <url "http://github.com/paperjs/paper.js">Github Repository</url>.
+- Want to learn Paper.js? Why not start now with one our <node "/tutorials/">Tutorials</node>.
 - If you have any questions or comments, please join the <url "http://groups.google.com/group/paperjs">mailing list</url>.
 - To to stay up to date, <url "http://twitter.com/paperjs">follow us on Twitter</url>.
 
@@ -32,7 +32,7 @@ Paper.js is not simply a wrapper around the Canvas, it offers much more:
 - Simulate dashed strokes which are currently lacking from the Canvas object, at near native drawing speed.
 - Most blend modes known from Illustrator and Photoshop supported through emulation in JavaScript: multiply, screen, overlay, soft-light, hard-light, color-dodge, color-burn, darken, lighten, difference, exclusion, hue, saturation, luminosity, color, add, subtract, average & negation.
 
-Read our <node href="/tutorials/">tutorials</node> to learn more about the features of Paper.js.
+Read our <node "/tutorials/">tutorials</node> to learn more about the features of Paper.js.
 
 <title>Browser Support</title>
 Paper.js is aimed at modern browsers with support for the Canvas object and EcmaScript 5. Even though in theory it is possible to write code that works in older browsers (Yes Explorer 8 and below, we are looking at you!), we currently do not support them out of the box. Let’s go forward!

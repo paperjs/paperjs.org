@@ -110,7 +110,7 @@ As you can see in when working with the first example script: When the mouse is 
 <image "mouse_vectors.gif">
 Thus, the difference in position between these points describe the amount that the mouse moved and therefore also its speed.
 
-In the <node href="/tutorials/geometry/vector-geometry/" anchor='points-and-vectors'>Points and Vectors</node> chapter of the Vector Geometry tutorial, we introduced the notion of a vector; an amount of distance to move in a certain direction.
+In the <node "/tutorials/geometry/vector-geometry/" anchor='points-and-vectors'>Points and Vectors</node> chapter of the Vector Geometry tutorial, we introduced the notion of a vector; an amount of distance to move in a certain direction.
 
 You could say that all these little drag movements are vectors. The mouse handler <api ToolEvent>event</api> object includes a reference to the mouse movement vector, so we don't have to calculate it ourselves and can easily use it in our tools: <api ToolEvent#delta>event.delta</api>
 </image>
@@ -120,7 +120,7 @@ The image on the left is a zoom of the top of the image above.
 - <api ToolEvent#point>event.point</api> is the position of the mouse
 - <api ToolEvent#delta>event.delta</api> is the vector of the mouse drag event; the distance and direction from the last mouse drag event
 
-<note>The <node href="/tutorials/interaction/creating-mouse-tools/" /> tutorial explains the different ways to create Paper.js tools that the user can interact with by using the mouse. Mouse Tool Events are explained in detail in the <node href="/tutorials/interaction/mouse-tool-events/" /> tutorial.</note>
+<note>The <node "/tutorials/interaction/creating-mouse-tools/" /> tutorial explains the different ways to create Paper.js tools that the user can interact with by using the mouse. Mouse Tool Events are explained in detail in the <node "/tutorials/interaction/mouse-tool-events/" /> tutorial.</note>
 </image>
 
 <title>Using event.delta</title>
@@ -392,7 +392,7 @@ path.fillColor = {
 To smooth the path, we call <api Path#smooth() /> every time we add one or more points to the path.
 
 <note>
-You can found out more about the <api Path#smooth() /> function in the <node href="/tutorials/paths/smoothing-simplifying-flattening/" anchor=smoothing-paths>Smoothing Paths</node> section of the <node href="/tutorials/paths/smoothing-simplifying-flattening/" /> tutorial.
+You can found out more about the <api Path#smooth() /> function in the <node "/tutorials/paths/smoothing-simplifying-flattening/" anchor=smoothing-paths>Smoothing Paths</node> section of the <node "/tutorials/paths/smoothing-simplifying-flattening/" /> tutorial.
 </note>
 
 We smooth our <code path /> in the onMouseDrag event handler function:

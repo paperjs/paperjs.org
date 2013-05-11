@@ -20,21 +20,21 @@ var renderPageLink = function(param) {
 module.exports = {
 	node: function(content, param, encoder) {
 		var root = param.page.site.root;
-		var href = this.attributes.href;
+		var href = this.values[0];
 		if (!href) {
 			href = content;
 			content = null;
 		}
 		var node = root.get(href);
-		if (node) {
-			var linkParam = { content: content || node.title, href: node.url };
-			for (var i in this.attributes) {
-				if (i != 'href')
-					linkParam[i] = this.attributes[i];				
-			}
-			return renderPageLink(linkParam, this.attributes);
+		if (!node) {
+			console.log('Node not found: ', href);
+			return (content || '') + encoder(' [missing: ' + href + ']');
 		}
-		else
-			return (content || '') + encoder(' [missing: ' + href + ']'); 
+		var linkParam = { content: content || node.title, href: node.url };
+		for (var i in this.attributes) {
+			if (i != 'href')
+				linkParam[i] = this.attributes[i];				
+		}
+		return renderPageLink(linkParam, this.attributes);
 	}
 };

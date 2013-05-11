@@ -11,7 +11,7 @@ var myPath = new Path({
 });
 </paperscript>
 
-<note>To find out how to create paths with Paper.js, please read the <node href="/tutorials/paths/working-with-path-items/" /> tutorial.</note>
+<note>To find out how to create paths with Paper.js, please read the <node "/tutorials/paths/working-with-path-items/" /> tutorial.</note>
 
 <title>Stroke Color</title>
 

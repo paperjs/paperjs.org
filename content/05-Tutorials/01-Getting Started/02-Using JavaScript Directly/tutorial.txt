@@ -12,7 +12,7 @@ To explain the relation between scopes, projects, views and tools: Each scope ca
 
 When working with JavaScript directly, in most cases one scope will be all that is required. Within this scope, one can still work with multiple projects or views by creating them using the <api Project() /> and <api View(canvas) /> constructors.
 
-The easiest way is to use the existing <api global#paper>paper</api> object, and use its <api PaperScope#setup(canvas) /> method to initialize an empty project and a view for us. We reuse the example from <node href="/tutorials/getting-started/working-with-paper-js/" /> in order to see what is additionally required when working from JavaScript directly:
+The easiest way is to use the existing <api global#paper>paper</api> object, and use its <api PaperScope#setup(canvas) /> method to initialize an empty project and a view for us. We reuse the example from <node "/tutorials/getting-started/working-with-paper-js/" /> in order to see what is additionally required when working from JavaScript directly:
 
 <code mode="text/html">
 <!DOCTYPE html>
@@ -130,7 +130,7 @@ PaperScript recognises a couple of special event handlers when they are declared
 </code>
 
 <tip>
-You can read more about animations in the tutorial <node href="/tutorials/animation/creating-animations/" />.
+You can read more about animations in the tutorial <node "/tutorials/animation/creating-animations/" />.
 </tip>
 
 <title>Working with Tools</title>
@@ -172,7 +172,7 @@ In JavaScript we need to create the tool ourselves, and we need to manually inst
 </code>
 
 <tip>
-You can read more about mouse tools in the tutorial <node href="/tutorials/interaction/creating-mouse-tools/" />.
+You can read more about mouse tools in the tutorial <node "/tutorials/interaction/creating-mouse-tools/" />.
 </tip>
 
 <title>Multiple Tools</title>

@@ -37,14 +37,14 @@ function onMouseUp(event) {
 }
 </paperscript>
 
-This script is developed step by step in the <node href="/tutorials/interaction/working-with-mouse-vectors/" /> tutorial, along with explanations about each line of code. But before looking at such an applied example, it is crucial to understand the basic principles of vector geometry outlined here.
+This script is developed step by step in the <node "/tutorials/interaction/working-with-mouse-vectors/" /> tutorial, along with explanations about each line of code. But before looking at such an applied example, it is crucial to understand the basic principles of vector geometry outlined here.
 
 <title>Points and Vectors</title>
 
 In many ways, vectors are very similar to points. Both are represented by x and a y coordinates. But while points describe absolute positions, vectors represent a relative information; a way to get from one point to another. Here a step-by-step example that explains the relation between vectors and points.
 
 <image "Points-And-Vectors-01.gif">
-We start by creating two <node href="/tutorials/geometry/point-size-and-rectangle/" anchor="point">Point</node> objects to describe two absolute locations in the document, defined by their coordinate values:
+We start by creating two <node "/tutorials/geometry/point-size-and-rectangle/" anchor="point">Point</node> objects to describe two absolute locations in the document, defined by their coordinate values:
 <code>
 var point1 = new Point(50, 50);
 var point2 = new Point(110, 200);
@@ -72,9 +72,9 @@ var vector = point2 - point1;
 </code>
 
 <note>
-Read more about mathematical operations in the <node href="/tutorials/geometry/mathematical-operations/" anchor="mathematical-operations" /> tutorial.
+Read more about mathematical operations in the <node "/tutorials/geometry/mathematical-operations/" anchor="mathematical-operations" /> tutorial.
 
-The result of this subtraction (<code vector />) is still a <node href="/tutorials/geometry/point-size-and-rectangle/" anchor="point">Point</node> object. Technically, there is no distinction between points and vectors. It is just their meaning that changes: A point is absolute, a vector is relative.
+The result of this subtraction (<code vector />) is still a <node "/tutorials/geometry/point-size-and-rectangle/" anchor="point">Point</node> object. Technically, there is no distinction between points and vectors. It is just their meaning that changes: A point is absolute, a vector is relative.
 </note>
 
 </image>
@@ -234,7 +234,7 @@ console.log(normalizedVector.length);
 
 <title short="Rotating Vectors">Rotating Vectors and Working with Angles</title>
 
-Rotating vectors is a powerful tool for constructing paths and shapes, as it allows us to define a relative direction at a certain angle rotated away from another direction, for example sideways. The <node href="/tutorials/interaction/working-with-mouse-vectors/" /> tutorial shows a good example of this, where rotated vectors are used to construct paths in parallel to the direction and position of the moved mouse.
+Rotating vectors is a powerful tool for constructing paths and shapes, as it allows us to define a relative direction at a certain angle rotated away from another direction, for example sideways. The <node "/tutorials/interaction/working-with-mouse-vectors/" /> tutorial shows a good example of this, where rotated vectors are used to construct paths in parallel to the direction and position of the moved mouse.
 
 <image "Angles.gif" >
 All angles in Paper.js are measured in degrees, and are oriented clockwise. The angle values start from the horizontal axis and expand downwards. At 180° they flip to -180°, which is the same, since going halfway around a circle in the left or right direction results in the same position. This does not prevent you from setting angles to something higher than 180° though.

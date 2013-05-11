@@ -167,7 +167,7 @@ function onMouseMove(event) {
 
 Paper.js allows you to interact with the keyboard in two ways: You can either intercept key events and respond to these, or you can check the state of a given key at any moment, to see if it is pressed or not.
 
-Read the <node href="/tutorials/interaction/keyboard-interaction/" /> tutorial to learn more about keyboard interaction.
+Read the <node "/tutorials/interaction/keyboard-interaction/" /> tutorial to learn more about keyboard interaction.
 
 <code>
 function onKeyDown(event) {
@@ -411,7 +411,7 @@ function keepInView(item) {
 
 Place images in your project, work with the colors of their pixels or look at average colors of the pixels that fall within paths placed on top of them.
 
-Check out the following tutorials to learn more about working with images: <node href="/tutorials/images/" />
+Check out the following tutorials to learn more about working with images: <node "/tutorials/images/" />
 
 <title>Selection Outlines</title>
 When you select items or path segment points & handles in your code, Paper.js draws the visual outlines of them on top of your project. This is very useful for debugging, as it allows you to see the construction of paths, position of path curves, individual segment points and bounding boxes of symbol and raster items:
