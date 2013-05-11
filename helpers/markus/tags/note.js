@@ -1,4 +1,4 @@
-var formatParagraphs = require('../lib/paragraphs')
+var formatParagraphs = require('paragraphs')
 
 module.exports = (new function() {
 	var defaultTitles = {

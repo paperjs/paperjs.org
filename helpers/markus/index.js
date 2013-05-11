@@ -1,10 +1,9 @@
 var path = require('path'),
 	fs = require('fs'),
-	ent = require('ent');
+	ent = require('ent'),
+	marks = require('marks');
 
-var markus = require('./lib/markus');
-
-markus.encode({
+marks.encode({
     entities: ent.encode
 });
 
@@ -14,14 +13,14 @@ fs.readdirSync(path.join(__dirname, 'tags'))
 		return !(/^\./).test(file);
 	})
 	.forEach(function(file) {
-		markus.register(require('./tags/' + file));
+		marks.register(require('./tags/' + file));
 	});
 
 module.exports = {
-	markus: function(content, param) {
+	marks: function(content, param) {
 		if (!content) return '';
 		if (!param) param = {};
 		param.encoding = 'entities';
-		return markus.parse(content).render(param);
+		return marks.parse(content).render(param);
 	}
 };

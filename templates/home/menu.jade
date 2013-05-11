@@ -7,6 +7,6 @@ ul.menu
         a(href=entry.url) #{entry.title}
         !{template('menu', entry, param)}
   li.entry.spacer
-  for line in markus(root.menu).split(/\r\n|\n|\r/mg)
+  for line in marks(root.menu).split(/\r\n|\n|\r/mg)
     li.entry
       !{line}

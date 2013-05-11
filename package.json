@@ -2,6 +2,8 @@
   "name": "paperjs.org",
   "version": "0.0.1",
   "dependencies": {
-    "ent": "0.0.5"
+    "ent": "0.0.5",
+    "marks": "~1.0.0",
+    "paragraphs": "~1.0.0"
   }
 }
