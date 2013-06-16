@@ -1,6 +1,7 @@
 module.exports = {
 	paperscript: {
 		nesting: false,
+		encoder: function(content) { return content; },
 		render: function(content, param, encoder, before, after) {
 			var code = content || this['arguments'][0];
 			if (!code) return;
