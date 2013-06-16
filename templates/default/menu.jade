@@ -1,4 +1,4 @@
-if page.parent && !page.parent.parent && inPath(page)
+if page.parent && !page.parent.parent && inPath(page) && page.name != 'Reference'
   ul.menu
     for entry in page.children
       li.entry(class=isActive(entry) ? 'active' : '')
