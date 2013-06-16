@@ -1,0 +1,254 @@
+<div class="reference-class">
+
+
+<p>A HitResult object contains information about the results of a hit
+test. It is returned by <a href="/reference/item#hittest-point"><tt>item.hitTest(point)</tt></a> and
+<a href="/reference/project#hittest-point"><tt>project.hitTest(point)</tt></a>.</p>
+
+</div>
+
+
+
+
+
+	<div class="reference-members"><h2>Properties</h2>
+		
+			
+<div id="type-member" class="member">
+<div id="type-link" class="member-link">
+<a name="type" href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+</div>
+<div id="type-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('type', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Describes the type of the hit result. For example, if you hit a segment
+point, the type would be 'segment'.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String('segment', 'handle-in', 'handle-out', 'stroke', 'fill',
+'bounds', 'center', 'pixel')</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="name-member" class="member">
+<div id="name-link" class="member-link">
+<a name="name" href="#" onClick="return toggleMember('name', false);"><tt><b>name</b></tt></a>
+</div>
+<div id="name-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('name', false);"><tt><b>name</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('name', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>If the HitResult has a <a href="/reference/hitresult#type"><tt>hitResult.type</tt></a> of 'bounds', this property
+describes which corner of the bounding rectangle was hit.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String('top-left', 'top-right', 'bottom-left', 'bottom-right',
+'left-center', 'top-center', 'right-center', 'bottom-center')</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="item-member" class="member">
+<div id="item-link" class="member-link">
+<a name="item" href="#" onClick="return toggleMember('item', false);"><tt><b>item</b></tt></a>
+</div>
+<div id="item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('item', false);"><tt><b>item</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('item', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The item that was hit.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/item"><tt>Item</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="location-member" class="member">
+<div id="location-link" class="member-link">
+<a name="location" href="#" onClick="return toggleMember('location', false);"><tt><b>location</b></tt></a>
+</div>
+<div id="location-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('location', false);"><tt><b>location</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('location', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>If the HitResult has a type of 'stroke', this property gives more
+information about the exact position that was hit on the path.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="color-member" class="member">
+<div id="color-link" class="member-link">
+<a name="color" href="#" onClick="return toggleMember('color', false);"><tt><b>color</b></tt></a>
+</div>
+<div id="color-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('color', false);"><tt><b>color</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('color', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>If the HitResult has a type of 'pixel', this property refers to the color
+of the pixel on the <a href="/reference/raster"><tt>Raster</tt></a> that was hit.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/color"><tt>Color</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="segment-member" class="member">
+<div id="segment-link" class="member-link">
+<a name="segment" href="#" onClick="return toggleMember('segment', false);"><tt><b>segment</b></tt></a>
+</div>
+<div id="segment-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('segment', false);"><tt><b>segment</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('segment', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>If the HitResult has a type of 'stroke', 'segment', 'handle-in' or
+'handle-out', this property refers to the Segment that was hit or that
+is closest to the hitResult.location on the curve.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/segment"><tt>Segment</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="point-member" class="member">
+<div id="point-link" class="member-link">
+<a name="point" href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
+</div>
+<div id="point-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Describes the actual coordinates of the segment, handle or bounding box
+corner that was hit.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/point"><tt>Point</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+	</div>
+
+
+
+
+

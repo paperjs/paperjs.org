@@ -1,0 +1,219 @@
+<div class="reference-class">
+
+
+<p>The Gradient object.</p>
+<p>
+<b>Example</b> &mdash; Applying a linear gradient color containing evenly distributed color stops:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-0">
+// Define two points which we will be using to construct
+// the path and to position the gradient color:
+var topLeft = view.center - [80, 80];
+var bottomRight = view.center + [80, 80];
+
+// Create a rectangle shaped path between
+// the topLeft and bottomRight points:
+var path = new Path.Rectangle(topLeft, bottomRight);
+
+// Fill the path with a gradient of three evenly divided color stops
+// that runs between the two points we defined earlier:
+path.fillColor = {
+	gradient: {
+		stops: ['yellow', 'red', 'blue']
+	},
+	origin: topLeft,
+	destination: bottomRight
+};
+</script>
+<div class="canvas"><canvas width="516" height="300" id="canvas-0"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Create a circle shaped path at the center of the view, using 40% of the height of the view as its radius and fill it with a radial gradient color:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-1">
+var path = new Path.Circle({
+	center: view.center,
+	radius: view.bounds.height * 0.4
+});
+
+// Fill the path with a radial gradient color with three stops:
+// yellow from 0% to 5%, mix between red from 5% to 20%,
+// mix between red and black from 20% to 100%:
+path.fillColor = {
+	gradient: {
+		stops: [['yellow', 0.05], ['red', 0.2], ['black', 1]],
+		radial: true
+	},
+	origin: path.position,
+	destination: path.bounds.rightCenter
+};
+</script>
+<div class="canvas"><canvas width="516" height="300" id="canvas-1"></canvas></div>
+</div>
+
+
+</div>
+
+
+
+<!-- ============================== properties ========================= -->
+	<div class="reference-members"><h2>Operators</h2>
+		
+			<div id="equals-member" class="member">
+<div id="equals-link" class="member-link">
+<a name="equals" href="#" onClick="return toggleMember('equals', false);"><tt><tt><b>==</b> Gradient</tt></tt></a>
+</div>
+<div id="equals-description" class="member-description hidden">
+
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('equals', false);"><tt><b>==</b> Gradient</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('equals', false);"></div>
+<div class="clear"></div>
+</div>
+
+	<div class="member-text">
+		<p>Checks whether the gradient is equal to the supplied gradient.</p>
+		
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> they are equal, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+		
+		
+	</div>
+
+
+</div>
+</div>
+
+		
+	</div>
+
+
+
+	<div class="reference-members"><h2>Properties</h2>
+		
+			
+<div id="stops-member" class="member">
+<div id="stops-link" class="member-link">
+<a name="stops" href="#" onClick="return toggleMember('stops', false);"><tt><b>stops</b></tt></a>
+</div>
+<div id="stops-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('stops', false);"><tt><b>stops</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('stops', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The gradient stops on the gradient ramp.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		Array of <a href="/reference/gradientstop"><tt>GradientStop</tt></a> objects
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="radial-member" class="member">
+<div id="radial-link" class="member-link">
+<a name="radial" href="#" onClick="return toggleMember('radial', false);"><tt><b>radial</b></tt></a>
+</div>
+<div id="radial-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('radial', false);"><tt><b>radial</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('radial', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Specifies whether the gradient is radial or linear.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Boolean</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+	</div>
+
+
+
+<!-- ============================== methods ================================ -->
+	<div class="reference-members"><h2>Methods</h2>
+		
+			
+<div id="clone-member" class="member">
+<div id="clone-link" class="member-link">
+<a name="clone" href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+</div>
+<div id="clone-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clone', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/gradient"><tt>Gradient</tt></a></tt>&nbsp;&mdash;&nbsp;a copy of the gradient
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+	</div>
+
+
+

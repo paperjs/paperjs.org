@@ -1,0 +1,5043 @@
+<div class="reference-class">
+
+
+<p> Extends <b><a href="/reference/item"><tt>Item</tt></a></b></p>
+
+<p>A PlacedSymbol represents an instance of a symbol which has been
+placed in a Paper.js project.</p>
+
+</div>
+
+<!-- ============================== constructors ========================= -->
+<div class="reference-members"><h2>Constructors</h2>
+	
+		
+<div id="placedsymbol-symbol-member" class="member">
+<div id="placedsymbol-symbol-link" class="member-link">
+<a name="placedsymbol-symbol" href="#" onClick="return toggleMember('placedsymbol-symbol', false);"><tt><b>PlacedSymbol</b>(symbol[, point])</tt></a>
+</div>
+<div id="placedsymbol-symbol-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('placedsymbol-symbol', false);"><tt><b>PlacedSymbol</b>(symbol[, point])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('placedsymbol-symbol', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+<p>Creates a new PlacedSymbol Item.</p>
+
+<ul><b>Parameters:</b>
+
+<li>
+<tt>symbol:</tt> 
+<a href="/reference/symbol"><tt>Symbol</tt></a>
+&mdash;&nbsp;the symbol to place
+
+</li>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the center point of the placed symbol
+&mdash;&nbsp;optional
+</li>
+
+</ul>
+
+
+<p>
+<b>Example</b> &mdash; Placing 100 instances of a symbol: Create a star shaped path at {x: 0, y: 0}:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-0">
+var path = new Path.Star({
+	center: new Point(0, 0),
+	points: 6,
+	radius1: 5,
+	radius2: 13,
+	fillColor: 'white',
+	strokeColor: 'black'
+});
+
+// Create a symbol from the path:
+var symbol = new Symbol(path);
+
+// Remove the path:
+path.remove();
+
+// Place 100 instances of the symbol:
+for (var i = 0; i < 100; i++) {
+    // Place an instance of the symbol in the project:
+    var instance = new PlacedSymbol(symbol);
+
+    // Move the instance to a random position within the view:
+    instance.position = Point.random() * view.size;
+
+    // Rotate the instance by a random amount between
+    // 0 and 360 degrees:
+    instance.rotate(Math.random() * 360);
+
+    // Scale the instance between 0.25 and 1:
+    instance.scale(0.25 + Math.random() * 0.75);
+}
+</script>
+<div class="canvas"><canvas width="516" height="240" id="canvas-0"></canvas></div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+	
+</div>
+
+
+
+
+
+	<div class="reference-members"><h2>Properties</h2>
+		
+			
+<div id="symbol-member" class="member">
+<div id="symbol-link" class="member-link">
+<a name="symbol" href="#" onClick="return toggleMember('symbol', false);"><tt><b>symbol</b></tt></a>
+</div>
+<div id="symbol-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('symbol', false);"><tt><b>symbol</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('symbol', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The symbol that the placed symbol refers to.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/symbol"><tt>Symbol</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+	</div>
+
+
+
+
+
+
+<!-- =========================== inherited properties ====================== -->
+<div class="reference-members"><h2>Properties inherited from <a href="/reference/item"><tt>Item</tt></a></h2>
+
+	
+<div id="id-member" class="member">
+<div id="id-link" class="member-link">
+<a name="id" href="#" onClick="return toggleMember('id', false);"><tt><b>id</b></tt></a>
+</div>
+<div id="id-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('id', false);"><tt><b>id</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('id', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The unique id of the item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="type-member" class="member">
+<div id="type-link" class="member-link">
+<a name="type" href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+</div>
+<div id="type-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('type', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The type of the item as a string.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String('group', 'layer', 'path', 'compound-path', 'raster',
+'placed-symbol', 'point-text')</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="name-member" class="member">
+<div id="name-link" class="member-link">
+<a name="name" href="#" onClick="return toggleMember('name', false);"><tt><b>name</b></tt></a>
+</div>
+<div id="name-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('name', false);"><tt><b>name</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('name', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The name of the item. If the item has a name, it can be accessed by name
+through its parent's children list.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> 
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-1">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+// Set the name of the path:
+path.name = 'example';
+
+// Create a group and add path to it as a child:
+var group = new Group();
+group.addChild(path);
+
+// The path can be accessed by name:
+group.children['example'].fillColor = 'red';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="style-member" class="member">
+<div id="style-link" class="member-link">
+<a name="style" href="#" onClick="return toggleMember('style', false);"><tt><b>style</b></tt></a>
+</div>
+<div id="style-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('style', false);"><tt><b>style</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('style', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The path style of the item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/style"><tt>Style</tt></a>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Applying several styles to an item in one go, by passing an object to its style property:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-2">
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 30
+});
+circle.style = {
+	fillColor: 'blue',
+	strokeColor: 'red',
+	strokeWidth: 5
+};
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Copying the style of another item:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-3">
+var path = new Path.Circle({
+	center: [50, 50],
+	radius: 30,
+	fillColor: 'red'
+});
+
+var path2 = new Path.Circle({
+	center: new Point(180, 50),
+	radius: 20
+});
+
+// Copy the path style of path:
+path2.style = path.style;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-3"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Applying the same style object to multiple items:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-4">
+var myStyle = {
+	fillColor: 'red',
+	strokeColor: 'blue',
+	strokeWidth: 4
+};
+
+var path = new Path.Circle({
+	center: [50, 50],
+	radius: 30
+});
+path.style = myStyle;
+
+var path2 = new Path.Circle({
+	center: new Point(150, 50),
+	radius: 20
+});
+path2.style = myStyle;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="visible-member" class="member">
+<div id="visible-link" class="member-link">
+<a name="visible" href="#" onClick="return toggleMember('visible', false);"><tt><b>visible</b></tt></a>
+</div>
+<div id="visible-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('visible', false);"><tt><b>visible</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('visible', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Specifies whether the item is visible. When set to <tt>false</tt>, the
+item won't be drawn.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>true</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Boolean</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Hiding an item:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-5">
+var path = new Path.Circle({
+	center: [50, 50],
+	radius: 20,
+	fillColor: 'red'
+});
+
+// Hide the path:
+path.visible = false;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-5"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="blendmode-member" class="member">
+<div id="blendmode-link" class="member-link">
+<a name="blendmode" href="#" onClick="return toggleMember('blendmode', false);"><tt><b>blendMode</b></tt></a>
+</div>
+<div id="blendmode-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('blendmode', false);"><tt><b>blendMode</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('blendmode', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The blend mode of the item.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>'normal'</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String('normal', 'multiply', 'screen', 'overlay', 'soft-light',
+'hard-light', 'color-dodge', 'color-burn', 'darken', 'lighten',
+'difference', 'exclusion', 'hue', 'saturation', 'luminosity', 'color',
+'add', 'subtract', 'average', 'pin-light', 'negation')</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Setting an item's blend mode:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-6">
+// Create a white rectangle in the background
+// with the same dimensions as the view:
+var background = new Path.Rectangle(view.bounds);
+background.fillColor = 'white';
+
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 35,
+	fillColor: 'red'
+});
+
+var circle2 = new Path.Circle({
+	center: new Point(120, 50),
+	radius: 35,
+	fillColor: 'blue'
+});
+
+// Set the blend mode of circle2:
+circle2.blendMode = 'multiply';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-6"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="opacity-member" class="member">
+<div id="opacity-link" class="member-link">
+<a name="opacity" href="#" onClick="return toggleMember('opacity', false);"><tt><b>opacity</b></tt></a>
+</div>
+<div id="opacity-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('opacity', false);"><tt><b>opacity</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('opacity', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The opacity of the item as a value between <tt>0</tt> and <tt>1</tt>.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>1</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Making an item 50% transparent:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-7">
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 35,
+	fillColor: 'red'
+});
+
+var circle2 = new Path.Circle({
+	center: new Point(120, 50),
+	radius: 35,
+	fillColor: 'blue',
+	strokeColor: 'green',
+	strokeWidth: 10
+});
+
+// Make circle2 50% transparent:
+circle2.opacity = 0.5;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-7"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="selected-member" class="member">
+<div id="selected-link" class="member-link">
+<a name="selected" href="#" onClick="return toggleMember('selected', false);"><tt><b>selected</b></tt></a>
+</div>
+<div id="selected-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('selected', false);"><tt><b>selected</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selected', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Specifies whether an item is selected and will also return <tt>true</tt>
+if the item is partially selected (groups with some selected or partially
+selected paths).</p>
+<p>Paper.js draws the visual outlines of selected items on top of your
+project. This can be useful for debugging, as it allows you to see the
+construction of paths, position of path curves, individual segment points
+and bounding boxes of symbol and raster items.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Boolean</tt>
+	</li>
+	</ul>
+	
+	<p><b>See also:</b>
+	<tt><a href="/reference/project#selecteditems"><tt>project.selectedItems</tt></a></tt>, <tt><a href="/reference/segment#selected"><tt>segment.selected</tt></a></tt>, <tt><a href="/reference/point#selected"><tt>point.selected</tt></a></tt>
+	</p>
+
+	<p>
+<b>Example</b> &mdash; Selecting an item:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-8">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+path.selected = true; // Select the path
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-8"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="clipmask-member" class="member">
+<div id="clipmask-link" class="member-link">
+<a name="clipmask" href="#" onClick="return toggleMember('clipmask', false);"><tt><b>clipMask</b></tt></a>
+</div>
+<div id="clipmask-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('clipmask', false);"><tt><b>clipMask</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clipmask', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Specifies whether the item defines a clip mask. This can only be set on
+paths, compound paths, and text frame objects, and only if the item is
+already contained within a clipping group.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Boolean</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="data-member" class="member">
+<div id="data-link" class="member-link">
+<a name="data" href="#" onClick="return toggleMember('data', false);"><tt><b>data</b></tt></a>
+</div>
+<div id="data-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('data', false);"><tt><b>data</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('data', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>A plain javascript object which can be used to store
+arbitrary data on the item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Object</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> 
+</p>
+
+
+<pre class="code">var path = new Path();
+path.data.remember = 'milk';</pre>
+
+<p>
+<b>Example</b> 
+</p>
+
+
+<pre class="code">var path = new Path();
+path.data.malcolm = new Point(20, 30);
+console.log(path.data.malcolm.x); // 20</pre>
+
+<p>
+<b>Example</b> 
+</p>
+
+
+<pre class="code">var path = new Path();
+path.data = {
+	home: 'Omicron Theta',
+	found: 2338,
+	pets: ['Spot']
+};
+console.log(path.data.pets.length); // 1</pre>
+
+<p>
+<b>Example</b> 
+</p>
+
+
+<pre class="code">var path = new Path({
+	data: {
+		home: 'Omicron Theta',
+		found: 2338,
+		pets: ['Spot']
+	}
+});
+console.log(path.data.pets.length); // 1</pre>
+
+</div>
+
+</div>
+</div>
+
+	
+	<h3>Position and Bounding Boxes</h3>
+
+<div id="position-member" class="member">
+<div id="position-link" class="member-link">
+<a name="position" href="#" onClick="return toggleMember('position', false);"><tt><b>position</b></tt></a>
+</div>
+<div id="position-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('position', false);"><tt><b>position</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('position', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The item's position within the project. This is the
+<a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of the item's <a href="/reference/item#bounds" onclick="return toggleMember('bounds', true);"><tt>bounds</tt></a> rectangle.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/point"><tt>Point</tt></a>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Changing the position of a path:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-9">
+// Create a circle at position { x: 10, y: 10 }
+var circle = new Path.Circle({
+	center: new Point(10, 10),
+	radius: 10,
+	fillColor: 'red'
+});
+
+// Move the circle to { x: 20, y: 20 }
+circle.position = new Point(20, 20);
+
+// Move the circle 100 points to the right and 50 points down
+circle.position += new Point(100, 50);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-9"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Changing the x coordinate of an item's position:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-10">
+// Create a circle at position { x: 20, y: 20 }
+var circle = new Path.Circle({
+	center: new Point(20, 20),
+	radius: 10,
+	fillColor: 'red'
+});
+
+// Move the circle 100 points to the right
+circle.position.x += 100;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-10"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="matrix-member" class="member">
+<div id="matrix-link" class="member-link">
+<a name="matrix" href="#" onClick="return toggleMember('matrix', false);"><tt><b>matrix</b></tt></a>
+</div>
+<div id="matrix-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('matrix', false);"><tt><b>matrix</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('matrix', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The item's transformation matrix, defining position and dimensions in the
+document.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/matrix"><tt>Matrix</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="bounds-member" class="member">
+<div id="bounds-link" class="member-link">
+<a name="bounds" href="#" onClick="return toggleMember('bounds', false);"><tt><b>bounds</b></tt></a>
+</div>
+<div id="bounds-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('bounds', false);"><tt><b>bounds</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('bounds', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The bounding rectangle of the item excluding stroke width.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="strokebounds-member" class="member">
+<div id="strokebounds-link" class="member-link">
+<a name="strokebounds" href="#" onClick="return toggleMember('strokebounds', false);"><tt><b>strokeBounds</b></tt></a>
+</div>
+<div id="strokebounds-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('strokebounds', false);"><tt><b>strokeBounds</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokebounds', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The bounding rectangle of the item including stroke width.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="handlebounds-member" class="member">
+<div id="handlebounds-link" class="member-link">
+<a name="handlebounds" href="#" onClick="return toggleMember('handlebounds', false);"><tt><b>handleBounds</b></tt></a>
+</div>
+<div id="handlebounds-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('handlebounds', false);"><tt><b>handleBounds</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('handlebounds', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The bounding rectangle of the item including handles.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+	<h3>Project Hierarchy</h3>
+
+<div id="project-member" class="member">
+<div id="project-link" class="member-link">
+<a name="project" href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
+</div>
+<div id="project-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('project', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The project that this item belongs to.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/project"><tt>Project</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="layer-member" class="member">
+<div id="layer-link" class="member-link">
+<a name="layer" href="#" onClick="return toggleMember('layer', false);"><tt><b>layer</b></tt></a>
+</div>
+<div id="layer-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('layer', false);"><tt><b>layer</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('layer', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The layer that this item is contained within.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/layer"><tt>Layer</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="parent-member" class="member">
+<div id="parent-link" class="member-link">
+<a name="parent" href="#" onClick="return toggleMember('parent', false);"><tt><b>parent</b></tt></a>
+</div>
+<div id="parent-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('parent', false);"><tt><b>parent</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('parent', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The item that this item is contained within.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/item"><tt>Item</tt></a>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> 
+</p>
+
+
+<pre class="code">var path = new Path();
+
+// New items are placed in the active layer:
+console.log(path.parent == project.activeLayer); // true
+
+var group = new Group();
+group.addChild(path);
+
+// Now the parent of the path has become the group:
+console.log(path.parent == group); // true</pre>
+
+<p>
+<b>Example</b> &mdash; Setting the parent of the item to another item
+</p>
+
+
+<pre class="code">var path = new Path();
+
+// New items are placed in the active layer:
+console.log(path.parent == project.activeLayer); // true
+
+var group = new Group();
+group.parent = path;
+
+// Now the parent of the path has become the group:
+console.log(path.parent == group); // true
+
+// The path is now contained in the children list of group:
+console.log(group.children[0] == path); // true</pre>
+
+<p>
+<b>Example</b> &mdash; Setting the parent of an item in the constructor
+</p>
+
+
+<pre class="code">var group = new Group();
+
+var path = new Path({
+	parent: group
+});
+
+// The parent of the path is the group:
+console.log(path.parent == group); // true
+
+// The path is contained in the children list of group:
+console.log(group.children[0] == path); // true</pre>
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="children-member" class="member">
+<div id="children-link" class="member-link">
+<a name="children" href="#" onClick="return toggleMember('children', false);"><tt><b>children</b></tt></a>
+</div>
+<div id="children-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('children', false);"><tt><b>children</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('children', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The children items contained within this item. Items that define a
+<a href="/reference/item#name" onclick="return toggleMember('name', true);"><tt>name</tt></a> can also be accessed by name.</p>
+<p><b>Please note:</b> The children array should not be modified directly
+using array functions. To remove single items from the children list, use
+<a href="/reference/item#remove"><tt>item.remove</tt></a>(), to remove all items from the children list, use
+<a href="/reference/item#removechildren"><tt>item.removeChildren</tt></a>(). To add items to the children list, use
+<a href="/reference/item#addchild-item"><tt>item.addChild(item)</tt></a> or <a href="/reference/item#insertchild-index-item"><tt>item.insertChild(index, item)</tt></a>.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		Array of <a href="/reference/item"><tt>Item</tt></a> objects
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Accessing items in the children array:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-11">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+
+// Create a group and move the path into it:
+var group = new Group();
+group.addChild(path);
+
+// Access the path through the group's children array:
+group.children[0].fillColor = 'red';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-11"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Accessing children by name:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-12">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+// Set the name of the path:
+path.name = 'example';
+
+// Create a group and move the path into it:
+var group = new Group();
+group.addChild(path);
+
+// The path can be accessed by name:
+group.children['example'].fillColor = 'orange';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-12"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Passing an array of items to item.children:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-13">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+
+var group = new Group();
+group.children = [path];
+
+// The path is the first child of the group:
+group.firstChild.fillColor = 'green';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-13"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="firstchild-member" class="member">
+<div id="firstchild-link" class="member-link">
+<a name="firstchild" href="#" onClick="return toggleMember('firstchild', false);"><tt><b>firstChild</b></tt></a>
+</div>
+<div id="firstchild-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('firstchild', false);"><tt><b>firstChild</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('firstchild', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The first item contained within this item. This is a shortcut for
+accessing <tt>item.children[0]</tt>.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/item"><tt>Item</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="lastchild-member" class="member">
+<div id="lastchild-link" class="member-link">
+<a name="lastchild" href="#" onClick="return toggleMember('lastchild', false);"><tt><b>lastChild</b></tt></a>
+</div>
+<div id="lastchild-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('lastchild', false);"><tt><b>lastChild</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('lastchild', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The last item contained within this item.This is a shortcut for
+accessing <tt>item.children[item.children.length - 1]</tt>.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/item"><tt>Item</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="nextsibling-member" class="member">
+<div id="nextsibling-link" class="member-link">
+<a name="nextsibling" href="#" onClick="return toggleMember('nextsibling', false);"><tt><b>nextSibling</b></tt></a>
+</div>
+<div id="nextsibling-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('nextsibling', false);"><tt><b>nextSibling</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('nextsibling', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The next item on the same level as this item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/item"><tt>Item</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="previoussibling-member" class="member">
+<div id="previoussibling-link" class="member-link">
+<a name="previoussibling" href="#" onClick="return toggleMember('previoussibling', false);"><tt><b>previousSibling</b></tt></a>
+</div>
+<div id="previoussibling-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('previoussibling', false);"><tt><b>previousSibling</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('previoussibling', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The previous item on the same level as this item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/item"><tt>Item</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="index-member" class="member">
+<div id="index-link" class="member-link">
+<a name="index" href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
+</div>
+<div id="index-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('index', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The index of this item within the list of its parent's children.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="appendtop-item-member" class="member">
+<div id="appendtop-item-link" class="member-link">
+<a name="appendtop-item" href="#" onClick="return toggleMember('appendtop-item', false);"><tt><b>appendTop</b></tt></a>
+</div>
+<div id="appendtop-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('appendtop-item', false);"><tt><b>appendTop</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('appendtop-item', false);"></div>
+<div class="clear"></div>
+</div>
+
+</div>
+</div>
+
+	
+<div id="moveabove-item-member" class="member">
+<div id="moveabove-item-link" class="member-link">
+<a name="moveabove-item" href="#" onClick="return toggleMember('moveabove-item', false);"><tt><b>moveAbove</b></tt></a>
+</div>
+<div id="moveabove-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('moveabove-item', false);"><tt><b>moveAbove</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('moveabove-item', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Moves this item above the specified item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Boolean</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="movebelow-item-member" class="member">
+<div id="movebelow-item-link" class="member-link">
+<a name="movebelow-item" href="#" onClick="return toggleMember('movebelow-item', false);"><tt><b>moveBelow</b></tt></a>
+</div>
+<div id="movebelow-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('movebelow-item', false);"><tt><b>moveBelow</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('movebelow-item', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Moves the item below the specified item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Boolean</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+	<h3>Stroke Style</h3>
+
+<div id="strokecolor-member" class="member">
+<div id="strokecolor-link" class="member-link">
+<a name="strokecolor" href="#" onClick="return toggleMember('strokecolor', false);"><tt><b>strokeColor</b></tt></a>
+</div>
+<div id="strokecolor-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('strokecolor', false);"><tt><b>strokeColor</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokecolor', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The color of the stroke.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/color"><tt>Color</tt></a>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Setting the stroke color of a path:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-14">
+// Create a circle shaped path at { x: 80, y: 50 }
+// with a radius of 35:
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+
+// Set its stroke color to RGB red:
+circle.strokeColor = new Color(1, 0, 0);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-14"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="strokewidth-member" class="member">
+<div id="strokewidth-link" class="member-link">
+<a name="strokewidth" href="#" onClick="return toggleMember('strokewidth', false);"><tt><b>strokeWidth</b></tt></a>
+</div>
+<div id="strokewidth-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('strokewidth', false);"><tt><b>strokeWidth</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokewidth', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The width of the stroke.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Setting an item's stroke width:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-15">
+// Create a circle shaped path at { x: 80, y: 50 }
+// with a radius of 35:
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 35,
+	strokeColor: 'red'
+});
+
+// Set its stroke width to 10:
+circle.strokeWidth = 10;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-15"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="strokecap-member" class="member">
+<div id="strokecap-link" class="member-link">
+<a name="strokecap" href="#" onClick="return toggleMember('strokecap', false);"><tt><b>strokeCap</b></tt></a>
+</div>
+<div id="strokecap-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('strokecap', false);"><tt><b>strokeCap</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokecap', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The shape to be used at the end of open <a href="/reference/path"><tt>Path</tt></a> items, when they
+have a stroke.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>'butt'</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String('round', 'square', 'butt')</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; A look at the different stroke caps:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-16">
+var line = new Path({
+	segments: [[80, 50], [420, 50]],
+	strokeColor: 'black',
+	strokeWidth: 20,
+	selected: true
+});
+
+// Set the stroke cap of the line to be round:
+line.strokeCap = 'round';
+
+// Copy the path and set its stroke cap to be square:
+var line2 = line.clone();
+line2.position.y += 50;
+line2.strokeCap = 'square';
+
+// Make another copy and set its stroke cap to be butt:
+var line2 = line.clone();
+line2.position.y += 100;
+line2.strokeCap = 'butt';
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-16"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="strokejoin-member" class="member">
+<div id="strokejoin-link" class="member-link">
+<a name="strokejoin" href="#" onClick="return toggleMember('strokejoin', false);"><tt><b>strokeJoin</b></tt></a>
+</div>
+<div id="strokejoin-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('strokejoin', false);"><tt><b>strokeJoin</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokejoin', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The shape to be used at the corners of paths when they have a stroke.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>'miter'</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String('miter', 'round', 'bevel')</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; A look at the different stroke joins:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-17">
+var path = new Path({
+	segments: [[80, 100], [120, 40], [160, 100]],
+	strokeColor: 'black',
+	strokeWidth: 20,
+	// Select the path, in order to see where the stroke is formed:
+	selected: true
+});
+
+var path2 = path.clone();
+path2.position.x += path2.bounds.width * 1.5;
+path2.strokeJoin = 'round';
+
+var path3 = path2.clone();
+path3.position.x += path3.bounds.width * 1.5;
+path3.strokeJoin = 'bevel';
+</script>
+<div class="canvas"><canvas width="516" height="120" id="canvas-17"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="dashoffset-member" class="member">
+<div id="dashoffset-link" class="member-link">
+<a name="dashoffset" href="#" onClick="return toggleMember('dashoffset', false);"><tt><b>dashOffset</b></tt></a>
+</div>
+<div id="dashoffset-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('dashoffset', false);"><tt><b>dashOffset</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('dashoffset', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The dash offset of the stroke.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>0</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="dasharray-member" class="member">
+<div id="dasharray-link" class="member-link">
+<a name="dasharray" href="#" onClick="return toggleMember('dasharray', false);"><tt><b>dashArray</b></tt></a>
+</div>
+<div id="dasharray-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('dasharray', false);"><tt><b>dashArray</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('dasharray', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Specifies an array containing the dash and gap lengths of the stroke.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>[]</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Array</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> 
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-18">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 40,
+	strokeWidth: 2,
+	strokeColor: 'black'
+});
+
+// Set the dashed stroke to [10pt dash, 4pt gap]:
+path.dashArray = [10, 4];
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-18"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="miterlimit-member" class="member">
+<div id="miterlimit-link" class="member-link">
+<a name="miterlimit" href="#" onClick="return toggleMember('miterlimit', false);"><tt><b>miterLimit</b></tt></a>
+</div>
+<div id="miterlimit-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('miterlimit', false);"><tt><b>miterLimit</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('miterlimit', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The miter limit of the stroke.</p>
+<p>When two line segments meet at a sharp angle and miter joins have been
+specified for <a href="/reference/item#strokejoin"><tt>item.strokeJoin</tt></a>, it is possible for the miter to
+extend far beyond the <a href="/reference/item#strokewidth"><tt>item.strokeWidth</tt></a> of the path. The
+miterLimit imposes a limit on the ratio of the miter length to the
+<a href="/reference/item#strokewidth"><tt>item.strokeWidth</tt></a>.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>10</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+	<h3>Fill Style</h3>
+
+<div id="fillcolor-member" class="member">
+<div id="fillcolor-link" class="member-link">
+<a name="fillcolor" href="#" onClick="return toggleMember('fillcolor', false);"><tt><b>fillColor</b></tt></a>
+</div>
+<div id="fillcolor-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('fillcolor', false);"><tt><b>fillColor</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fillcolor', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The fill color of the item.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/color"><tt>Color</tt></a>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Setting the fill color of a path to red:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-19">
+// Create a circle shaped path at { x: 80, y: 50 }
+// with a radius of 35:
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+
+// Set the fill color of the circle to RGB red:
+circle.fillColor = new Color(1, 0, 0);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-19"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+	<h3>Selection Style</h3>
+
+<div id="selectedcolor-member" class="member">
+<div id="selectedcolor-link" class="member-link">
+<a name="selectedcolor" href="#" onClick="return toggleMember('selectedcolor', false);"><tt><b>selectedColor</b></tt></a>
+</div>
+<div id="selectedcolor-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('selectedcolor', false);"><tt><b>selectedColor</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selectedcolor', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The color the item is highlighted with when selected. If the item does
+not specify its own color, the color defined by its layer is used instead.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/color"><tt>Color</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+	<h3>Event Handlers</h3>
+
+<div id="onframe-member" class="member">
+<div id="onframe-link" class="member-link">
+<a name="onframe" href="#" onClick="return toggleMember('onframe', false);"><tt><b>onFrame</b></tt></a>
+</div>
+<div id="onframe-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('onframe', false);"><tt><b>onFrame</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onframe', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>Item level handler function to be called on each frame of an animation.</p>
+<p>The function receives an event object which contains information about
+the frame event:</p>
+<p><b><tt>event.count</tt></b>: the number of times the frame event was
+fired.</p>
+<p><b><tt>event.time</tt></b>: the total amount of time passed since the
+first frame event in seconds.</p>
+<p><b><tt>event.delta</tt></b>: the time passed in seconds since the last
+frame event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p><b>See also:</b>
+	<tt><a href="/reference/view#onframe"><tt>view.onFrame</tt></a></tt>
+	</p>
+
+	<p>
+<b>Example</b> &mdash; Creating an animation:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-20">
+// Create a rectangle shaped path with its top left point at:
+// {x: 50, y: 25} and a size of {width: 50, height: 50}
+var path = new Path.Rectangle(new Point(50, 25), new Size(50, 50));
+path.fillColor = 'black';
+
+path.onFrame = function(event) {
+	// Every frame, rotate the path by 3 degrees:
+	this.rotate(3);
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-20"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="onmousedown-member" class="member">
+<div id="onmousedown-link" class="member-link">
+<a name="onmousedown" href="#" onClick="return toggleMember('onmousedown', false);"><tt><b>onMouseDown</b></tt></a>
+</div>
+<div id="onmousedown-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('onmousedown', false);"><tt><b>onMouseDown</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmousedown', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The function to be called when the mouse button is pushed down on the
+item. The function receives a <a href="/reference/mouseevent"><tt>MouseEvent</tt></a> object which contains
+information about the mouse event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Press the mouse button down on the circle shaped path, to make it red:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-21">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+});
+
+// When the mouse is pressed on the item,
+// set its fill color to red:
+path.onMouseDown = function(event) {
+	this.fillColor = 'red';
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-21"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Press the mouse on the circle shaped paths to remove them:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-22">
+// Loop 30 times:
+for (var i = 0; i < 30; i++) {
+	// Create a circle shaped path at a random position
+	// in the view:
+	var path = new Path.Circle({
+		center: Point.random() * view.size,
+		radius: 25,
+		fillColor: 'black',
+		strokeColor: 'white'
+	});
+
+	// When the mouse is pressed on the item, remove it:
+	path.onMouseDown = function(event) {
+		this.remove();
+	}
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-22"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="onmouseup-member" class="member">
+<div id="onmouseup-link" class="member-link">
+<a name="onmouseup" href="#" onClick="return toggleMember('onmouseup', false);"><tt><b>onMouseUp</b></tt></a>
+</div>
+<div id="onmouseup-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('onmouseup', false);"><tt><b>onMouseUp</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmouseup', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The function to be called when the mouse button is released over the item.</p>
+<p>The function receives a <a href="/reference/mouseevent"><tt>MouseEvent</tt></a> object which contains
+information about the mouse event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Release the mouse button over the circle shaped path, to make it red:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-23">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+});
+
+// When the mouse is released over the item,
+// set its fill color to red:
+path.onMouseUp = function(event) {
+	this.fillColor = 'red';
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-23"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="onclick-member" class="member">
+<div id="onclick-link" class="member-link">
+<a name="onclick" href="#" onClick="return toggleMember('onclick', false);"><tt><b>onClick</b></tt></a>
+</div>
+<div id="onclick-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('onclick', false);"><tt><b>onClick</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onclick', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The function to be called when the mouse clicks on the item. The function
+receives a <a href="/reference/mouseevent"><tt>MouseEvent</tt></a> object which contains information about the
+mouse event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Click on the circle shaped path, to make it red:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-24">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+});
+
+// When the mouse is clicked on the item,
+// set its fill color to red:
+path.onClick = function(event) {
+	this.fillColor = 'red';
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-24"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Click on the circle shaped paths to remove them:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-25">
+// Loop 30 times:
+for (var i = 0; i < 30; i++) {
+	// Create a circle shaped path at a random position
+	// in the view:
+	var path = new Path.Circle({
+		center: Point.random() * view.size,
+		radius: 25,
+		fillColor: 'black',
+		strokeColor: 'white'
+	});
+
+	// When the mouse clicks on the item, remove it:
+	path.onClick = function(event) {
+		this.remove();
+	}
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-25"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="ondoubleclick-member" class="member">
+<div id="ondoubleclick-link" class="member-link">
+<a name="ondoubleclick" href="#" onClick="return toggleMember('ondoubleclick', false);"><tt><b>onDoubleClick</b></tt></a>
+</div>
+<div id="ondoubleclick-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('ondoubleclick', false);"><tt><b>onDoubleClick</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('ondoubleclick', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The function to be called when the mouse double clicks on the item. The
+function receives a <a href="/reference/mouseevent"><tt>MouseEvent</tt></a> object which contains information
+about the mouse event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Double click on the circle shaped path, to make it red:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-26">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+});
+
+// When the mouse is double clicked on the item,
+// set its fill color to red:
+path.onDoubleClick = function(event) {
+	this.fillColor = 'red';
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-26"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Double click on the circle shaped paths to remove them:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-27">
+// Loop 30 times:
+for (var i = 0; i < 30; i++) {
+	// Create a circle shaped path at a random position
+	// in the view:
+	var path = new Path.Circle({
+		center: Point.random() * view.size,
+		radius: 25,
+		fillColor: 'black',
+		strokeColor: 'white'
+	});
+
+	// When the mouse is double clicked on the item, remove it:
+	path.onDoubleClick = function(event) {
+		this.remove();
+	}
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-27"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="onmousemove-member" class="member">
+<div id="onmousemove-link" class="member-link">
+<a name="onmousemove" href="#" onClick="return toggleMember('onmousemove', false);"><tt><b>onMouseMove</b></tt></a>
+</div>
+<div id="onmousemove-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('onmousemove', false);"><tt><b>onMouseMove</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmousemove', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The function to be called repeatedly when the mouse moves on top of the
+item. The function receives a <a href="/reference/mouseevent"><tt>MouseEvent</tt></a> object which contains
+information about the mouse event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Move over the circle shaped path, to change its opacity:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-28">
+// Create a circle shaped path at the center of the view:
+	var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+	});
+
+// When the mouse moves on top of the item, set its opacity
+// to a random value between 0 and 1:
+path.onMouseMove = function(event) {
+	this.opacity = Math.random();
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-28"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="onmouseenter-member" class="member">
+<div id="onmouseenter-link" class="member-link">
+<a name="onmouseenter" href="#" onClick="return toggleMember('onmouseenter', false);"><tt><b>onMouseEnter</b></tt></a>
+</div>
+<div id="onmouseenter-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('onmouseenter', false);"><tt><b>onMouseEnter</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmouseenter', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The function to be called when the mouse moves over the item. This
+function will only be called again, once the mouse moved outside of the
+item first. The function receives a <a href="/reference/mouseevent"><tt>MouseEvent</tt></a> object which
+contains information about the mouse event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; When you move the mouse over the item, its fill color is set to red. When you move the mouse outside again, its fill color is set back to black.
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-29">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+});
+
+// When the mouse enters the item, set its fill color to red:
+path.onMouseEnter = function(event) {
+	this.fillColor = 'red';
+}
+
+// When the mouse leaves the item, set its fill color to black:
+path.onMouseLeave = function(event) {
+	this.fillColor = 'black';
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-29"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; When you click the mouse, you create new circle shaped items. When you move the mouse over the item, its fill color is set to red. When you move the mouse outside again, its fill color is set back to black.
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-30">
+function enter(event) {
+	this.fillColor = 'red';
+}
+
+function leave(event) {
+	this.fillColor = 'black';
+}
+
+// When the mouse is pressed:
+function onMouseDown(event) {
+	// Create a circle shaped path at the position of the mouse:
+	var path = new Path.Circle(event.point, 25);
+	path.fillColor = 'black';
+
+	// When the mouse enters the item, set its fill color to red:
+	path.onMouseEnter = enter;
+
+	// When the mouse leaves the item, set its fill color to black:
+	path.onMouseLeave = leave;
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-30"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+	
+<div id="onmouseleave-member" class="member">
+<div id="onmouseleave-link" class="member-link">
+<a name="onmouseleave" href="#" onClick="return toggleMember('onmouseleave', false);"><tt><b>onMouseLeave</b></tt></a>
+</div>
+<div id="onmouseleave-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('onmouseleave', false);"><tt><b>onMouseLeave</b></tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmouseleave', false);"></div>
+<div class="clear"></div>
+</div>
+
+<div class="member-text">
+	<p>The function to be called when the mouse moves out of the item.</p>
+<p>The function receives a <a href="/reference/mouseevent"><tt>MouseEvent</tt></a> object which contains
+information about the mouse event.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Function</tt>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Move the mouse over the circle shaped path and then move it out of it again to set its fill color to red:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-31">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+});
+
+// When the mouse leaves the item, set its fill color to red:
+path.onMouseLeave = function(event) {
+	this.fillColor = 'red';
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-31"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<!-- =========================== inherited methods ========================= -->
+<div class="reference-members"><h2>Methods inherited from <a href="/reference/item"><tt>Item</tt></a></h2>
+
+	
+<div id="set-props-member" class="member">
+<div id="set-props-link" class="member-link">
+<a name="set-props" href="#" onClick="return toggleMember('set-props', false);"><tt><b>set</b>(props)</tt></a>
+</div>
+<div id="set-props-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('set-props', false);"><tt><b>set</b>(props)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('set-props', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Sets those properties of the passed object literal on this item to
+the values defined in the object literal, if the item has property of the
+given name (or a setter defined for it).</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>props:</tt> 
+<tt>Object</tt>
+
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the item itself.
+</li>
+	
+	</ul>
+
+	
+	<p>
+<b>Example</b> &mdash; Setting properties through an object literal
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-32">
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 35
+});
+
+circle.set({
+	strokeColor: 'red',
+	strokeWidth: 10,
+	fillColor: 'black',
+	selected: true
+});
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-32"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="isempty-member" class="member">
+<div id="isempty-link" class="member-link">
+<a name="isempty" href="#" onClick="return toggleMember('isempty', false);"><tt><b>isEmpty</b>()</tt></a>
+</div>
+<div id="isempty-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isempty', false);"><tt><b>isEmpty</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isempty', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Specifies wether the item has any content or not. The meaning of what
+content is differs from type to type. For example, a <a href="/reference/group"><tt>Group</tt></a> with
+no children, a <a href="/reference/textitem"><tt>TextItem</tt></a> with no text content and a <a href="/reference/path"><tt>Path</tt></a>
+with no segments all are considered empty.</p>
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isinserted-member" class="member">
+<div id="isinserted-link" class="member-link">
+<a name="isinserted" href="#" onClick="return toggleMember('isinserted', false);"><tt><b>isInserted</b>()</tt></a>
+</div>
+<div id="isinserted-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isinserted', false);"><tt><b>isInserted</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isinserted', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks whether the item and all its parents are inserted into the DOM or
+not.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item is inserted into the DOM, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="clone-member" class="member">
+<div id="clone-link" class="member-link">
+<a name="clone" href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+</div>
+<div id="clone-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clone', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Clones the item within the same project and places the copy above the
+item.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the newly cloned item
+</li>
+	
+	</ul>
+
+	
+	<p>
+<b>Example</b> &mdash; Cloning items:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-33">
+var circle = new Path.Circle({
+	center: [50, 50],
+	radius: 10,
+	fillColor: 'red'
+});
+
+// Make 20 copies of the circle:
+for (var i = 0; i < 20; i++) {
+	var copy = circle.clone();
+
+	// Distribute the copies horizontally, so we can see them:
+	copy.position.x += i * copy.bounds.width;
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-33"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="copyto-item-member" class="member">
+<div id="copyto-item-link" class="member-link">
+<a name="copyto-item" href="#" onClick="return toggleMember('copyto-item', false);"><tt><b>copyTo</b>(item)</tt></a>
+</div>
+<div id="copyto-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('copyto-item', false);"><tt><b>copyTo</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('copyto-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>When passed a project, copies the item to the project,
+or duplicates it within the same project. When passed an item,
+copies the item into the specified item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/project"><tt>Project</tt></a> / <a href="/reference/layer"><tt>Layer</tt></a> / <a href="/reference/group"><tt>Group</tt></a> / <a href="/reference/compoundpath"><tt>CompoundPath</tt></a>
+&mdash;&nbsp;the item or project to
+copy the item to
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the new copy of the item
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="rasterize-member" class="member">
+<div id="rasterize-link" class="member-link">
+<a name="rasterize" href="#" onClick="return toggleMember('rasterize', false);"><tt><b>rasterize</b>([resolution])</tt></a>
+</div>
+<div id="rasterize-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('rasterize', false);"><tt><b>rasterize</b>([resolution])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('rasterize', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Rasterizes the item into a newly created Raster object. The item itself
+is not removed after rasterization.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>resolution:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the resolution of the raster in dpi
+&mdash;&nbsp;optional, default: <tt>72</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/raster"><tt>Raster</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created raster item
+</li>
+	
+	</ul>
+
+	
+	<p>
+<b>Example</b> &mdash; Rasterizing an item:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-34">
+var circle = new Path.Circle({
+	center: [50, 50],
+	radius: 5,
+	fillColor: 'red'
+});
+
+// Create a rasterized version of the path:
+var raster = circle.rasterize();
+
+// Move it 100pt to the right:
+raster.position.x += 100;
+
+// Scale the path and the raster by 300%, so we can compare them:
+circle.scale(5);
+raster.scale(5);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-34"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="contains-point-member" class="member">
+<div id="contains-point-link" class="member-link">
+<a name="contains-point" href="#" onClick="return toggleMember('contains-point', false);"><tt><b>contains</b>(point)</tt></a>
+</div>
+<div id="contains-point-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('contains-point', false);"><tt><b>contains</b>(point)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('contains-point', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks wether the item's geometry contains the given point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;The point to check for.
+
+</li>
+
+</ul>
+
+	
+	
+	<p>
+<b>Example</b> &mdash; Click within and outside the star below Create a star shaped path:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-35">
+var path = new Path.Star({
+	center: [50, 50],
+	points: 12,
+	radius1: 20,
+	radius2: 40,
+	fillColor: 'black'
+});
+
+// Whenever the user presses the mouse:
+function onMouseDown(event) {
+	// If the position of the mouse is within the path,
+	// set its fill color to red, otherwise set it to
+	// black:
+	if (path.contains(event.point)) {
+		path.fillColor = 'red';
+	} else {
+		path.fillColor = 'black';
+	}
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-35"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="hittest-point-member" class="member">
+<div id="hittest-point-link" class="member-link">
+<a name="hittest-point" href="#" onClick="return toggleMember('hittest-point', false);"><tt><b>hitTest</b>(point[, options])</tt></a>
+</div>
+<div id="hittest-point-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('hittest-point', false);"><tt><b>hitTest</b>(point[, options])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('hittest-point', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Perform a hit test on the item (and its children, if it is a
+<a href="/reference/group"><tt>Group</tt></a> or <a href="/reference/layer"><tt>Layer</tt></a>) at the location of the specified point.</p>
+<p>The optional options object allows you to control the specifics of the
+hit test and may contain a combination of the following values:</p>
+<p><b>tolerance:</b> <tt>Number</tt> - The tolerance of the hit test in
+points.</p>
+<p><b>options.type:</b> Only hit test again a certain item
+type: <a href="/reference/pathitem"><tt>PathItem</tt></a>, <a href="/reference/raster"><tt>Raster</tt></a>, <a href="/reference/textitem"><tt>TextItem</tt></a>, etc.</p>
+<p><b>options.fill:</b> <tt>Boolean</tt> - Hit test the fill of items.</p>
+<p><b>options.stroke:</b> <tt>Boolean</tt> - Hit test the curves of path
+items, taking into account stroke width.</p>
+<p><b>options.segment:</b> <tt>Boolean</tt> - Hit test for
+<a href="/reference/segment#point"><tt>segment.point</tt></a> of <a href="/reference/path"><tt>Path</tt></a> items.</p>
+<p><b>options.handles:</b> <tt>Boolean</tt> - Hit test for the handles
+(<a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a> / <a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a>) of path segments.</p>
+<p><b>options.ends:</b> <tt>Boolean</tt> - Only hit test for the first or
+last segment points of open path items.</p>
+<p><b>options.bounds:</b> <tt>Boolean</tt> - Hit test the corners and
+side-centers of the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>).</p>
+<p><b>options.center:</b> <tt>Boolean</tt> - Hit test the
+<a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of the bounding rectangle of items
+(<a href="/reference/item#bounds"><tt>item.bounds</tt></a>).</p>
+<p><b>options.guides:</b> <tt>Boolean</tt> - Hit test items that have
+<tt>Item#guide</tt> set to <tt>true</tt>.</p>
+<p><b>options.selected:</b> <tt>Boolean</tt> - Only hit selected items.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;The point where the hit test should be performed
+
+</li>
+
+<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+
+&mdash;&nbsp;optional, default: <tt>{ fill: true, stroke: true, segments: true,
+tolerance: 2 }</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/hitresult"><tt>HitResult</tt></a></tt>&nbsp;&mdash;&nbsp;A hit result object that contains more
+information about what exactly was hit or <tt>null</tt> if nothing was
+hit.
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<h3>Hierarchy Operations</h3>
+
+<div id="addchild-item-_preserve-member" class="member">
+<div id="addchild-item-_preserve-link" class="member-link">
+<a name="addchild-item-_preserve" href="#" onClick="return toggleMember('addchild-item-_preserve', false);"><tt><b>addChild</b>(item)</tt></a>
+</div>
+<div id="addchild-item-_preserve-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('addchild-item-_preserve', false);"><tt><b>addChild</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('addchild-item-_preserve', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Adds the specified item as a child of this item at the end of the
+its children list. You can use this function for groups, compound
+paths and layers.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to be added as a child
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="insertchild-index-item-_preserve-member" class="member">
+<div id="insertchild-index-item-_preserve-link" class="member-link">
+<a name="insertchild-index-item-_preserve" href="#" onClick="return toggleMember('insertchild-index-item-_preserve', false);"><tt><b>insertChild</b>(index, item)</tt></a>
+</div>
+<div id="insertchild-index-item-_preserve-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('insertchild-index-item-_preserve', false);"><tt><b>insertChild</b>(index, item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertchild-index-item-_preserve', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Inserts the specified item as a child of this item at the specified
+index in its <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> list. You can use this function for
+groups, compound paths and layers.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>index:</tt> 
+<tt>Number</tt>
+
+
+</li>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to be appended as a child
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="addchildren-items-_preserve-member" class="member">
+<div id="addchildren-items-_preserve-link" class="member-link">
+<a name="addchildren-items-_preserve" href="#" onClick="return toggleMember('addchildren-items-_preserve', false);"><tt><b>addChildren</b>(items)</tt></a>
+</div>
+<div id="addchildren-items-_preserve-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('addchildren-items-_preserve', false);"><tt><b>addChildren</b>(items)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('addchildren-items-_preserve', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Adds the specified items as children of this item at the end of the
+its children list. You can use this function for groups, compound
+paths and layers.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>items:</tt> 
+Array of <a href="/reference/item"><tt>Item</tt></a> objects
+&mdash;&nbsp;The items to be added as children
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="insertchildren-index-items-_preserve-_type-member" class="member">
+<div id="insertchildren-index-items-_preserve-_type-link" class="member-link">
+<a name="insertchildren-index-items-_preserve-_type" href="#" onClick="return toggleMember('insertchildren-index-items-_preserve-_type', false);"><tt><b>insertChildren</b>(index, items)</tt></a>
+</div>
+<div id="insertchildren-index-items-_preserve-_type-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('insertchildren-index-items-_preserve-_type', false);"><tt><b>insertChildren</b>(index, items)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertchildren-index-items-_preserve-_type', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Inserts the specified items as children of this item at the specified
+index in its <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> list. You can use this function for
+groups, compound paths and layers.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>index:</tt> 
+<tt>Number</tt>
+
+
+</li>
+
+<li>
+<tt>items:</tt> 
+Array of <a href="/reference/item"><tt>Item</tt></a> objects
+&mdash;&nbsp;The items to be appended as children
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="insertabove-item-_preserve-member" class="member">
+<div id="insertabove-item-_preserve-link" class="member-link">
+<a name="insertabove-item-_preserve" href="#" onClick="return toggleMember('insertabove-item-_preserve', false);"><tt><b>insertAbove</b>(item)</tt></a>
+</div>
+<div id="insertabove-item-_preserve-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('insertabove-item-_preserve', false);"><tt><b>insertAbove</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertabove-item-_preserve', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Inserts this item above the specified item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item above which it should be inserted
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it was inserted, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="insertbelow-item-_preserve-member" class="member">
+<div id="insertbelow-item-_preserve-link" class="member-link">
+<a name="insertbelow-item-_preserve" href="#" onClick="return toggleMember('insertbelow-item-_preserve', false);"><tt><b>insertBelow</b>(item)</tt></a>
+</div>
+<div id="insertbelow-item-_preserve-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('insertbelow-item-_preserve', false);"><tt><b>insertBelow</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertbelow-item-_preserve', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Inserts this item below the specified item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item above which it should be inserted
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it was inserted, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="sendtoback-member" class="member">
+<div id="sendtoback-link" class="member-link">
+<a name="sendtoback" href="#" onClick="return toggleMember('sendtoback', false);"><tt><b>sendToBack</b>()</tt></a>
+</div>
+<div id="sendtoback-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('sendtoback', false);"><tt><b>sendToBack</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('sendtoback', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Sends this item to the back of all other items within the same parent.</p>
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="bringtofront-member" class="member">
+<div id="bringtofront-link" class="member-link">
+<a name="bringtofront" href="#" onClick="return toggleMember('bringtofront', false);"><tt><b>bringToFront</b>()</tt></a>
+</div>
+<div id="bringtofront-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('bringtofront', false);"><tt><b>bringToFront</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('bringtofront', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Brings this item to the front of all other items within the same parent.</p>
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="appendbottom-item-member" class="member">
+<div id="appendbottom-item-link" class="member-link">
+<a name="appendbottom-item" href="#" onClick="return toggleMember('appendbottom-item', false);"><tt><b>appendBottom</b>(item)</tt></a>
+</div>
+<div id="appendbottom-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('appendbottom-item', false);"><tt><b>appendBottom</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('appendbottom-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Inserts the specified item as a child of this item by appending it to
+the list of children and moving it below all other children. You can
+use this function for groups, compound paths and layers.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to be appended as a child
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="remove-member" class="member">
+<div id="remove-link" class="member-link">
+<a name="remove" href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
+</div>
+<div id="remove-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('remove', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes the item from the project. If the item has children, they are also
+removed.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> the item was removed, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="removechildren-member" class="member">
+<div id="removechildren-link" class="member-link">
+<a name="removechildren" href="#" onClick="return toggleMember('removechildren', false);"><tt><b>removeChildren</b>()</tt></a>
+</div>
+<div id="removechildren-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('removechildren', false);"><tt><b>removeChildren</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removechildren', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes all of the item's <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> (if any).</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array containing the removed items
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="removechildren-from-member" class="member">
+<div id="removechildren-from-link" class="member-link">
+<a name="removechildren-from" href="#" onClick="return toggleMember('removechildren-from', false);"><tt><b>removeChildren</b>(from[, to])</tt></a>
+</div>
+<div id="removechildren-from-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('removechildren-from', false);"><tt><b>removeChildren</b>(from[, to])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removechildren-from', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes the children from the specified <tt>from</tt> index to the
+<tt>to</tt> index from the parent's <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> array.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>from:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the beginning index, inclusive
+
+</li>
+
+<li>
+<tt>to:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the ending index, exclusive
+&mdash;&nbsp;optional, default: <tt>children.length</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array containing the removed items
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="reversechildren-member" class="member">
+<div id="reversechildren-link" class="member-link">
+<a name="reversechildren" href="#" onClick="return toggleMember('reversechildren', false);"><tt><b>reverseChildren</b>()</tt></a>
+</div>
+<div id="reversechildren-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('reversechildren', false);"><tt><b>reverseChildren</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('reversechildren', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Reverses the order of the item's children</p>
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<h3>Hierarchy Tests</h3>
+
+<div id="haschildren-member" class="member">
+<div id="haschildren-link" class="member-link">
+<a name="haschildren" href="#" onClick="return toggleMember('haschildren', false);"><tt><b>hasChildren</b>()</tt></a>
+</div>
+<div id="haschildren-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('haschildren', false);"><tt><b>hasChildren</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('haschildren', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks if the item contains any children items.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it has one or more children, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isabove-item-member" class="member">
+<div id="isabove-item-link" class="member-link">
+<a name="isabove-item" href="#" onClick="return toggleMember('isabove-item', false);"><tt><b>isAbove</b>(item)</tt></a>
+</div>
+<div id="isabove-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isabove-item', false);"><tt><b>isAbove</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isabove-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks if this item is above the specified item in the stacking order
+of the project.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is above the specified item, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isbelow-item-member" class="member">
+<div id="isbelow-item-link" class="member-link">
+<a name="isbelow-item" href="#" onClick="return toggleMember('isbelow-item', false);"><tt><b>isBelow</b>(item)</tt></a>
+</div>
+<div id="isbelow-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isbelow-item', false);"><tt><b>isBelow</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isbelow-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks if the item is below the specified item in the stacking order of
+the project.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is below the specified item, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isparent-item-member" class="member">
+<div id="isparent-item-link" class="member-link">
+<a name="isparent-item" href="#" onClick="return toggleMember('isparent-item', false);"><tt><b>isParent</b>(item)</tt></a>
+</div>
+<div id="isparent-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isparent-item', false);"><tt><b>isParent</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isparent-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks whether the specified item is the parent of the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is the parent of the item, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="ischild-item-member" class="member">
+<div id="ischild-item-link" class="member-link">
+<a name="ischild-item" href="#" onClick="return toggleMember('ischild-item', false);"><tt><b>isChild</b>(item)</tt></a>
+</div>
+<div id="ischild-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('ischild-item', false);"><tt><b>isChild</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('ischild-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks whether the specified item is a child of the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it is a child of the item, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isdescendant-item-member" class="member">
+<div id="isdescendant-item-link" class="member-link">
+<a name="isdescendant-item" href="#" onClick="return toggleMember('isdescendant-item', false);"><tt><b>isDescendant</b>(item)</tt></a>
+</div>
+<div id="isdescendant-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isdescendant-item', false);"><tt><b>isDescendant</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isdescendant-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks if the item is contained within the specified item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;The item to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is inside the specified item, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isancestor-item-member" class="member">
+<div id="isancestor-item-link" class="member-link">
+<a name="isancestor-item" href="#" onClick="return toggleMember('isancestor-item', false);"><tt><b>isAncestor</b>(item)</tt></a>
+</div>
+<div id="isancestor-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isancestor-item', false);"><tt><b>isAncestor</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isancestor-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks if the item is an ancestor of the specified item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;the item to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item is an ancestor of the specified
+item, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isgroupedwith-item-member" class="member">
+<div id="isgroupedwith-item-link" class="member-link">
+<a name="isgroupedwith-item" href="#" onClick="return toggleMember('isgroupedwith-item', false);"><tt><b>isGroupedWith</b>(item)</tt></a>
+</div>
+<div id="isgroupedwith-item-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('isgroupedwith-item', false);"><tt><b>isGroupedWith</b>(item)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isgroupedwith-item', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Checks whether the item is grouped with the specified item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the items are grouped together, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<h3>Transform Functions</h3>
+
+<div id="scale-scale-member" class="member">
+<div id="scale-scale-link" class="member-link">
+<a name="scale-scale" href="#" onClick="return toggleMember('scale-scale', false);"><tt><b>scale</b>(scale[, center])</tt></a>
+</div>
+<div id="scale-scale-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('scale-scale', false);"><tt><b>scale</b>(scale[, center])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('scale-scale', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Scales the item by the given value from its center point, or optionally
+from a supplied point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>scale:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the scale factor
+
+</li>
+
+<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+&mdash;&nbsp;optional, default: <tt><a href="/reference/item#position"><tt>item.position</tt></a></tt>
+</li>
+
+</ul>
+
+	
+	
+	<p>
+<b>Example</b> &mdash; Scaling an item from its center point:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-36">
+// Create a circle shaped path at { x: 80, y: 50 }
+// with a radius of 20:
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 20,
+	fillColor: 'red'
+});
+
+// Scale the path by 150% from its center point
+circle.scale(1.5);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-36"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Scaling an item from a specific point:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-37">
+// Create a circle shaped path at { x: 80, y: 50 }
+// with a radius of 20:
+var circle = new Path.Circle({
+	center: [80, 50],
+	radius: 20,
+	fillColor: 'red'
+});
+
+// Scale the path 150% from its bottom left corner
+circle.scale(1.5, circle.bounds.bottomLeft);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-37"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="scale-hor-ver-member" class="member">
+<div id="scale-hor-ver-link" class="member-link">
+<a name="scale-hor-ver" href="#" onClick="return toggleMember('scale-hor-ver', false);"><tt><b>scale</b>(hor, ver[, center])</tt></a>
+</div>
+<div id="scale-hor-ver-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('scale-hor-ver', false);"><tt><b>scale</b>(hor, ver[, center])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('scale-hor-ver', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Scales the item by the given values from its center point, or optionally
+from a supplied point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>hor:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the horizontal scale factor
+
+</li>
+
+<li>
+<tt>ver:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the vertical scale factor
+
+</li>
+
+<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+&mdash;&nbsp;optional, default: <tt><a href="/reference/item#position"><tt>item.position</tt></a></tt>
+</li>
+
+</ul>
+
+	
+	
+	<p>
+<b>Example</b> &mdash; Scaling an item horizontally by 300%:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-38">
+// Create a circle shaped path at { x: 100, y: 50 }
+// with a radius of 20:
+var circle = new Path.Circle({
+	center: [100, 50],
+	radius: 20,
+	fillColor: 'red'
+});
+
+// Scale the path horizontally by 300%
+circle.scale(3, 1);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-38"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="translate-delta-member" class="member">
+<div id="translate-delta-link" class="member-link">
+<a name="translate-delta" href="#" onClick="return toggleMember('translate-delta', false);"><tt><b>translate</b>(delta)</tt></a>
+</div>
+<div id="translate-delta-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('translate-delta', false);"><tt><b>translate</b>(delta)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('translate-delta', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Translates (moves) the item by the given offset point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>delta:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the offset to translate the item by
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="rotate-angle-member" class="member">
+<div id="rotate-angle-link" class="member-link">
+<a name="rotate-angle" href="#" onClick="return toggleMember('rotate-angle', false);"><tt><b>rotate</b>(angle[, center])</tt></a>
+</div>
+<div id="rotate-angle-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('rotate-angle', false);"><tt><b>rotate</b>(angle[, center])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('rotate-angle', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Rotates the item by a given angle around the given point.</p>
+<p>Angles are oriented clockwise and measured in degrees.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>angle:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the rotation angle
+
+</li>
+
+<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+&mdash;&nbsp;optional, default: <tt><a href="/reference/item#position"><tt>item.position</tt></a></tt>
+</li>
+
+</ul>
+
+	
+	
+	<p><b>See also:</b>
+	<tt><a href="/reference/matrix#rotate"><tt>matrix.rotate</tt></a></tt>
+	</p>
+
+	<p>
+<b>Example</b> &mdash; Rotating an item:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-39">
+// Create a rectangle shaped path with its top left
+// point at {x: 80, y: 25} and a size of {width: 50, height: 50}:
+var path = new Path.Rectangle(new Point(80, 25), new Size(50, 50));
+path.fillColor = 'black';
+
+// Rotate the path by 30 degrees:
+path.rotate(30);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-39"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Rotating an item around a specific point:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-40">
+// Create a rectangle shaped path with its top left
+// point at {x: 175, y: 50} and a size of {width: 100, height: 100}:
+var topLeft = new Point(175, 50);
+var size = new Size(100, 100);
+var path = new Path.Rectangle(topLeft, size);
+path.fillColor = 'black';
+
+// Draw a circle shaped path in the center of the view,
+// to show the rotation point:
+var circle = new Path.Circle({
+	center: view.center,
+	radius: 5,
+	fillColor: 'white'
+});
+
+// Each frame rotate the path 3 degrees around the center point
+// of the view:
+function onFrame(event) {
+	path.rotate(3, view.center);
+}
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-40"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="shear-point-member" class="member">
+<div id="shear-point-link" class="member-link">
+<a name="shear-point" href="#" onClick="return toggleMember('shear-point', false);"><tt><b>shear</b>(point[, center])</tt></a>
+</div>
+<div id="shear-point-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('shear-point', false);"><tt><b>shear</b>(point[, center])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('shear-point', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Shears the item by the given value from its center point, or optionally
+by a supplied point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+
+</li>
+
+<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+&mdash;&nbsp;optional, default: <tt><a href="/reference/item#position"><tt>item.position</tt></a></tt>
+</li>
+
+</ul>
+
+	
+	
+	<p><b>See also:</b>
+	<tt><a href="/reference/matrix#shear"><tt>matrix.shear</tt></a></tt>
+	</p>
+
+	
+</div>
+</div>
+</div>
+
+	
+<div id="shear-hor-ver-member" class="member">
+<div id="shear-hor-ver-link" class="member-link">
+<a name="shear-hor-ver" href="#" onClick="return toggleMember('shear-hor-ver', false);"><tt><b>shear</b>(hor, ver[, center])</tt></a>
+</div>
+<div id="shear-hor-ver-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('shear-hor-ver', false);"><tt><b>shear</b>(hor, ver[, center])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('shear-hor-ver', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Shears the item by the given values from its center point, or optionally
+by a supplied point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>hor:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the horizontal shear factor.
+
+</li>
+
+<li>
+<tt>ver:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the vertical shear factor.
+
+</li>
+
+<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+&mdash;&nbsp;optional, default: <tt><a href="/reference/item#position"><tt>item.position</tt></a></tt>
+</li>
+
+</ul>
+
+	
+	
+	<p><b>See also:</b>
+	<tt><a href="/reference/matrix#shear"><tt>matrix.shear</tt></a></tt>
+	</p>
+
+	
+</div>
+</div>
+</div>
+
+	
+<div id="transform-matrix-member" class="member">
+<div id="transform-matrix-link" class="member-link">
+<a name="transform-matrix" href="#" onClick="return toggleMember('transform-matrix', false);"><tt><b>transform</b>(matrix)</tt></a>
+</div>
+<div id="transform-matrix-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('transform-matrix', false);"><tt><b>transform</b>(matrix)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('transform-matrix', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Transform the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>matrix:</tt> 
+<a href="/reference/matrix"><tt>Matrix</tt></a>
+&mdash;&nbsp;the matrix by which the item shall be transformed.
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="fitbounds-rectangle-member" class="member">
+<div id="fitbounds-rectangle-link" class="member-link">
+<a name="fitbounds-rectangle" href="#" onClick="return toggleMember('fitbounds-rectangle', false);"><tt><b>fitBounds</b>(rectangle[, fill])</tt></a>
+</div>
+<div id="fitbounds-rectangle-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('fitbounds-rectangle', false);"><tt><b>fitBounds</b>(rectangle[, fill])</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fitbounds-rectangle', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Transform the item so that its <a href="/reference/item#bounds" onclick="return toggleMember('bounds', true);"><tt>bounds</tt></a> fit within the specified
+rectangle, without changing its aspect ratio.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>rectangle:</tt> 
+<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+
+
+</li>
+
+<li>
+<tt>fill:</tt> 
+<tt>Boolean</tt>
+
+&mdash;&nbsp;optional, default: <tt>false</tt>
+</li>
+
+</ul>
+
+	
+	
+	<p>
+<b>Example</b> &mdash; Fitting an item to the bounding rectangle of another item's bounding rectangle:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-41">
+// Create a rectangle shaped path with its top left corner
+// at {x: 80, y: 25} and a size of {width: 75, height: 50}:
+var path = new Path.Rectangle({
+	point: [80, 25],
+	size: [75, 50],
+	fillColor: 'black'
+});
+
+// Create a circle shaped path with its center at {x: 80, y: 50}
+// and a radius of 30.
+var circlePath = new Path.Circle({
+	center: [80, 50],
+	radius: 30,
+	fillColor: 'red'
+});
+
+// Fit the circlePath to the bounding rectangle of
+// the rectangular path:
+circlePath.fitBounds(path.bounds);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-41"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fitting an item to the bounding rectangle of another item's bounding rectangle with the fill parameter set to true:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-42">
+// Create a rectangle shaped path with its top left corner
+// at {x: 80, y: 25} and a size of {width: 75, height: 50}:
+var path = new Path.Rectangle({
+	point: [80, 25],
+	size: [75, 50],
+	fillColor: 'black'
+});
+
+// Create a circle shaped path with its center at {x: 80, y: 50}
+// and a radius of 30.
+var circlePath = new Path.Circle({
+	center: [80, 50],
+	radius: 30,
+	fillColor: 'red'
+});
+
+// Fit the circlePath to the bounding rectangle of
+// the rectangular path:
+circlePath.fitBounds(path.bounds, true);
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-42"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fitting an item to the bounding rectangle of the view
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-43">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 30,
+	fillColor: 'red'
+});
+
+// Fit the path to the bounding rectangle of the view:
+path.fitBounds(view.bounds);
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-43"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<h3>Event Handling</h3>
+
+<div id="on-type-function-member" class="member">
+<div id="on-type-function-link" class="member-link">
+<a name="on-type-function" href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
+</div>
+<div id="on-type-function-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-type-function', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Attach an event handler to the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>type:</tt> 
+<tt>String('mousedown'|'mouseup'|'mousedrag'|'click'|'doubleclick'|'mousemove'|'mouseenter'|'mouseleave')</tt>
+&mdash;&nbsp;the event
+type
+
+</li>
+
+<li>
+<tt>function:</tt> 
+<tt>Function</tt>
+&mdash;&nbsp;The function to be called when the event
+occurs
+
+</li>
+
+</ul>
+
+	
+	
+	<p>
+<b>Example</b> &mdash; Change the fill color of the path to red when the mouse enters its shape and back to black again, when it leaves its shape.
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-44">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25,
+	fillColor: 'black'
+});
+
+// When the mouse enters the item, set its fill color to red:
+path.on('mouseenter', function() {
+	this.fillColor = 'red';
+});
+
+// When the mouse leaves the item, set its fill color to black:
+path.on('mouseleave', function() {
+	this.fillColor = 'black';
+});
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-44"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="on-param-member" class="member">
+<div id="on-param-link" class="member-link">
+<a name="on-param" href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
+</div>
+<div id="on-param-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-param', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Attach one or more event handlers to the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>param:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;An object literal containing one or more of the
+following properties: <tt>mousedown, mouseup, mousedrag, click,
+doubleclick, mousemove, mouseenter, mouseleave</tt>.
+
+</li>
+
+</ul>
+
+	
+	
+	<p>
+<b>Example</b> &mdash; Change the fill color of the path to red when the mouse enters its shape and back to black again, when it leaves its shape.
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-45">
+// Create a circle shaped path at the center of the view:
+var path = new Path.Circle({
+	center: view.center,
+	radius: 25
+});
+path.fillColor = 'black';
+
+// When the mouse enters the item, set its fill color to red:
+path.on({
+	mouseenter: function(event) {
+		this.fillColor = 'red';
+	},
+	mouseleave: function(event) {
+		this.fillColor = 'black';
+	}
+});
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-45"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; When you click the mouse, you create new circle shaped items. When you move the mouse over the item, its fill color is set to red. When you move the mouse outside again, its fill color is set black.
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-46">
+var pathHandlers = {
+	mouseenter: function(event) {
+		this.fillColor = 'red';
+	},
+	mouseleave: function(event) {
+		this.fillColor = 'black';
+	}
+}
+
+// When the mouse is pressed:
+function onMouseDown(event) {
+	// Create a circle shaped path at the position of the mouse:
+	var path = new Path.Circle({
+		center: event.point,
+		radius: 25,
+		fillColor: 'black'
+	});
+
+	// Attach the handers inside the object literal to the path:
+	path.on(pathHandlers);
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-46"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="detach-type-function-member" class="member">
+<div id="detach-type-function-link" class="member-link">
+<a name="detach-type-function" href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
+</div>
+<div id="detach-type-function-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-type-function', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Detach an event handler from the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>type:</tt> 
+<tt>String('mousedown'|'mouseup'|'mousedrag'|'click'|'doubleclick'|'mousemove'|'mouseenter'|'mouseleave')</tt>
+&mdash;&nbsp;the event
+type
+
+</li>
+
+<li>
+<tt>function:</tt> 
+<tt>Function</tt>
+&mdash;&nbsp;The function to be detached
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="detach-param-member" class="member">
+<div id="detach-param-link" class="member-link">
+<a name="detach-param" href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
+</div>
+<div id="detach-param-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-param', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Detach one or more event handlers to the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>param:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;An object literal containing one or more of the
+following properties: <tt>mousedown, mouseup, mousedrag, click,
+doubleclick, mousemove, mouseenter, mouseleave</tt>
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="fire-type-event-member" class="member">
+<div id="fire-type-event-link" class="member-link">
+<a name="fire-type-event" href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
+</div>
+<div id="fire-type-event-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fire-type-event', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Fire an event on the item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>type:</tt> 
+<tt>String('mousedown'|'mouseup'|'mousedrag'|'click'|'doubleclick'|'mousemove'|'mouseenter'|'mouseleave')</tt>
+&mdash;&nbsp;the event
+type
+
+</li>
+
+<li>
+<tt>event:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;An object literal containing properties describing
+the event.
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="responds-type-member" class="member">
+<div id="responds-type-link" class="member-link">
+<a name="responds-type" href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
+</div>
+<div id="responds-type-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('responds-type', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Check if the item has one or more event handlers of the specified type.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>type:</tt> 
+<tt>String('mousedown'|'mouseup'|'mousedrag'|'click'|'doubleclick'|'mousemove'|'mouseenter'|'mouseleave')</tt>
+&mdash;&nbsp;the event
+type
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item has one or more event handlers of
+the specified type, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<h3>Remove On Event</h3>
+
+<div id="removeon-object-member" class="member">
+<div id="removeon-object-link" class="member-link">
+<a name="removeon-object" href="#" onClick="return toggleMember('removeon-object', false);"><tt><b>removeOn</b>(object)</tt></a>
+</div>
+<div id="removeon-object-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('removeon-object', false);"><tt><b>removeOn</b>(object)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeon-object', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes the item when the events specified in the passed object literal
+occur.</p>
+<p>The object literal can contain the following values:</p>
+<p>Remove the item when the next <a href="/reference/tool#onmousemove"><tt>tool.onMouseMove</tt></a> event is
+fired: <tt>object.move = true</tt></p>
+<p>Remove the item when the next <a href="/reference/tool#onmousedrag"><tt>tool.onMouseDrag</tt></a> event is
+fired: <tt>object.drag = true</tt></p>
+<p>Remove the item when the next <a href="/reference/tool#onmousedown"><tt>tool.onMouseDown</tt></a> event is
+fired: <tt>object.down = true</tt></p>
+<p>Remove the item when the next <a href="/reference/tool#onmouseup"><tt>tool.onMouseUp</tt></a> event is
+fired: <tt>object.up = true</tt></p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>object:</tt> 
+<tt>Object</tt>
+
+
+</li>
+
+</ul>
+
+	
+	
+	<p>
+<b>Example</b> &mdash; Click and drag below:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-47">
+function onMouseDrag(event) {
+	// Create a circle shaped path at the mouse position,
+	// with a radius of 10:
+	var path = new Path.Circle({
+		center: event.point,
+		radius: 10,
+		fillColor: 'black'
+	});
+
+	// Remove the path on the next onMouseDrag or onMouseDown event:
+	path.removeOn({
+		drag: true,
+		down: true
+	});
+}
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-47"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="removeonmove-member" class="member">
+<div id="removeonmove-link" class="member-link">
+<a name="removeonmove" href="#" onClick="return toggleMember('removeonmove', false);"><tt><b>removeOnMove</b>()</tt></a>
+</div>
+<div id="removeonmove-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('removeonmove', false);"><tt><b>removeOnMove</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeonmove', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes the item when the next <a href="/reference/tool#onmousemove"><tt>tool.onMouseMove</tt></a> event is fired.</p>
+	
+	
+	
+	<p>
+<b>Example</b> &mdash; Move your mouse below:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-48">
+function onMouseMove(event) {
+	// Create a circle shaped path at the mouse position,
+	// with a radius of 10:
+	var path = new Path.Circle({
+		center: event.point,
+		radius: 10,
+		fillColor: 'black'
+	});
+
+	// On the next move event, automatically remove the path:
+	path.removeOnMove();
+}
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-48"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="removeondown-member" class="member">
+<div id="removeondown-link" class="member-link">
+<a name="removeondown" href="#" onClick="return toggleMember('removeondown', false);"><tt><b>removeOnDown</b>()</tt></a>
+</div>
+<div id="removeondown-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('removeondown', false);"><tt><b>removeOnDown</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeondown', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes the item when the next <a href="/reference/tool#onmousedown"><tt>tool.onMouseDown</tt></a> event is fired.</p>
+	
+	
+	
+	<p>
+<b>Example</b> &mdash; Click a few times below:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-49">
+function onMouseDown(event) {
+	// Create a circle shaped path at the mouse position,
+	// with a radius of 10:
+	var path = new Path.Circle({
+		center: event.point,
+		radius: 10,
+		fillColor: 'black'
+	});
+
+	// Remove the path, next time the mouse is pressed:
+	path.removeOnDown();
+}
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-49"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="removeondrag-member" class="member">
+<div id="removeondrag-link" class="member-link">
+<a name="removeondrag" href="#" onClick="return toggleMember('removeondrag', false);"><tt><b>removeOnDrag</b>()</tt></a>
+</div>
+<div id="removeondrag-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('removeondrag', false);"><tt><b>removeOnDrag</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeondrag', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes the item when the next <a href="/reference/tool#onmousedrag"><tt>tool.onMouseDrag</tt></a> event is fired.</p>
+	
+	
+	
+	<p>
+<b>Example</b> &mdash; Click and drag below:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-50">
+function onMouseDrag(event) {
+	// Create a circle shaped path at the mouse position,
+	// with a radius of 10:
+	var path = new Path.Circle({
+		center: event.point,
+		radius: 10,
+		fillColor: 'black'
+	});
+
+	// On the next drag event, automatically remove the path:
+	path.removeOnDrag();
+}
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-50"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<div id="removeonup-member" class="member">
+<div id="removeonup-link" class="member-link">
+<a name="removeonup" href="#" onClick="return toggleMember('removeonup', false);"><tt><b>removeOnUp</b>()</tt></a>
+</div>
+<div id="removeonup-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('removeonup', false);"><tt><b>removeOnUp</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeonup', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Removes the item when the next <a href="/reference/tool#onmouseup"><tt>tool.onMouseUp</tt></a> event is fired.</p>
+	
+	
+	
+	<p>
+<b>Example</b> &mdash; Click a few times below:
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-51">
+function onMouseDown(event) {
+	// Create a circle shaped path at the mouse position,
+	// with a radius of 10:
+	var path = new Path.Circle({
+		center: event.point,
+		radius: 10,
+		fillColor: 'black'
+	});
+
+	// Remove the path, when the mouse is released:
+	path.removeOnUp();
+}
+</script>
+<div class="canvas"><canvas width="516" height="200" id="canvas-51"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+	
+<h3>SVG Conversion</h3>
+
+<div id="exportsvg-member" class="member">
+<div id="exportsvg-link" class="member-link">
+<a name="exportsvg" href="#" onClick="return toggleMember('exportsvg', false);"><tt><b>exportSVG</b>()</tt></a>
+</div>
+<div id="exportsvg-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('exportsvg', false);"><tt><b>exportSVG</b>()</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('exportsvg', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Exports the item and all its children as an SVG DOM, all contained
+in one top level SVG node.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>SVGSVGElement</tt></tt>&nbsp;&mdash;&nbsp;the item converted to an SVG node
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="importsvg-node-member" class="member">
+<div id="importsvg-node-link" class="member-link">
+<a name="importsvg-node" href="#" onClick="return toggleMember('importsvg-node', false);"><tt><b>importSVG</b>(node)</tt></a>
+</div>
+<div id="importsvg-node-description" class="member-description hidden">
+<div class="member-header">
+<div class="member-title">
+<div class="member-link">
+<a href="#" onClick="return toggleMember('importsvg-node', false);"><tt><b>importSVG</b>(node)</tt></a>
+</div>
+</div>
+<div class="member-close"><input type="button" value="Close" onClick="toggleMember('importsvg-node', false);"></div>
+<div class="clear"></div>
+</div>
+<div class="member-text">
+	<p>Converts the passed node node into a Paper.js item and adds it to the
+children of this item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>node:</tt> 
+<tt>SVGSVGElement</tt>
+&mdash;&nbsp;the SVG DOM node to convert
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the converted Paper.js item
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+</div>
+
+
