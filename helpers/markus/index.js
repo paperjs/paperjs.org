@@ -3,10 +3,6 @@ var path = require('path'),
 	ent = require('ent'),
 	marks = require('marks');
 
-marks.encode({
-    entities: ent.encode
-});
-
 // Register all tags contained in tags folder:
 fs.readdirSync(path.join(__dirname, 'tags'))
 	.filter(function(file) {
@@ -20,7 +16,7 @@ module.exports = {
 	marks: function(content, param) {
 		if (!content) return '';
 		if (!param) param = {};
-		param.encoding = 'entities';
+		param.encode = ent.encode;
 		return marks.parse(content).render(param);
 	}
 };
