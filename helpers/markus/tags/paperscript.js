@@ -1,10 +1,12 @@
+var decode = require('ent').decode;
+
 module.exports = {
 	paperscript: {
 		nesting: false,
-		encoder: function(content) { return content; },
 		render: function(content, param, encoder, before, after) {
 			var code = content || this['arguments'][0];
 			if (!code) return;
+			code = decode(code);
 			var attrs = this.attributes;
 			var id = attrs.id;
 			if (!id) {
