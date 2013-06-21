@@ -5,5 +5,13 @@ module.exports = {
 					? '>' + content + '</' + this.name + '>' 
 					: '/>');
 		}
-	}
+	},
+
+    html: {
+        nesting: false,
+        encode: false,
+        render: function(content) {
+            return content;
+        }
+    }
 };

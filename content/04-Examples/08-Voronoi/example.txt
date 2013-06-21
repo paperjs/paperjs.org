@@ -1,6 +1,6 @@
-<macro html>
+<html>
 <script type="text/javascript" src="http://jonathanpuckey.com/static/rhill-voronoi-core.js"></script>
-</macro>
+</html>
 <paperscript resize=true explain=true>
 var voronoi =  new Voronoi();
 var sites = generateBeeHivePoints(view.size / 200, true);

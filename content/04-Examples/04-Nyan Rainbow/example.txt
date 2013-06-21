@@ -1,9 +1,11 @@
+<html>
 <div style="height:0;">
 <script type="text/javascript" src="/assets/mediaelement/mediaelement.js">
 </script>
 <audio id="nyan" src="http://dl.dropbox.com/u/31703/nyan.mp3" autoplay autobuffer preload=none loop style='display:none'>
 </audio>
 </div>
+</html>
 <paperscript resize=true background=black explain=true>
 // A tribute to Nyan Cat http://www.youtube.com/watch?v=QH2-TGUlwu4
 var mediaElement;
