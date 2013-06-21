@@ -3,7 +3,7 @@ module.exports = {
 		attributes: 'id',
 		defaultPackage: '',
 
-		render: function(content, param, encoder) {
+		render: function(content, param, encode) {
 			var id = this.attributes.id,
 				matches = id.match(/(?:([a-z]*)\.)?([\w]*)(?:([#.])(\w*))?(\([^)]*\))?/),
 				pkg = matches[1],

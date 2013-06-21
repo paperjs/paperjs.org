@@ -11,9 +11,9 @@ module.exports = (new function() {
 		'note,warning,tip': {
 			attribute: 'title',
 
-			render: function(content, param, encoder) {
+			render: function(content, param, encode) {
 				var title = this.attributes.title || defaultTitles[this.name];
-				return '<div class="note"><b>' + encoder(title) + '</b>' + formatParagraphs(content) + '<div class="text-end"></div></div>';
+				return '<div class="note"><b>' + encode(title) + '</b>' + formatParagraphs(content) + '<div class="text-end"></div></div>';
 			}
 		}
 	};

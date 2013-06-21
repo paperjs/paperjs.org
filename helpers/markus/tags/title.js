@@ -1,7 +1,7 @@
 var stringUtil = require('../lib/string.js');
 
 module.exports = {
-	title: function(content, param, encoder, before, after) {
+	title: function(content, param, encode, before, after) {
 		var title = this.attributes['short'] || content;
 		var anchor =  stringUtil.urlize(title);
 

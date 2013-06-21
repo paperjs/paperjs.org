@@ -3,7 +3,9 @@ var decode = require('ent').decode;
 module.exports = {
 	paperscript: {
 		nesting: false,
-		render: function(content, param, encoder, before, after) {
+		encode: false,
+
+		render: function(content, param, encode, before, after) {
 			var code = content || this['arguments'][0];
 			if (!code) return;
 			code = decode(code);
