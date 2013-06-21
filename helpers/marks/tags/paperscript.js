@@ -1,5 +1,3 @@
-var decode = require('ent').decode;
-
 module.exports = {
 	paperscript: {
 		nesting: false,
@@ -8,7 +6,6 @@ module.exports = {
 		render: function(content, param, encode, before, after) {
 			var code = content || this['arguments'][0];
 			if (!code) return;
-			code = decode(code);
 			var attrs = this.attributes;
 			var id = attrs.id;
 			if (!id) {
