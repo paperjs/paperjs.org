@@ -121,7 +121,6 @@ var moveRainbow = new function() {
 
 	var count = 30;
 	var group = new Group(paths);
-	group.applyMatrix = true;
 	var headGroup;
 	var eyePosition = new Point();
 	var eyeFollow = (Point.random() - 0.5);
