@@ -2,4 +2,4 @@ if page.parent && !page.parent.parent && inPath(page) && page.name != 'Reference
   ul.menu
     for entry in page.children
       li.entry(class=isActive(entry) ? 'active' : '')
-        a(href=entry.url) #{entry.title}
+        a(href=entry.link || entry.url) #{entry.title}

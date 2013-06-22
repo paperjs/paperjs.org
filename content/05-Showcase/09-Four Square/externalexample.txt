@@ -1,0 +1,3 @@
+title: foursquare.com/timemachine
+link: https://foursquare.com/timemachine
+description: Four Square uses Paper.js to allow their users to visually relive their check-in history.

@@ -1,0 +1,2 @@
+link: http://www.staggeringbeauty.com/
+description: Warning: The following Paper.js example contains flashing images.

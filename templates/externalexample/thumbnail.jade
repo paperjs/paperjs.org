@@ -1,0 +1,12 @@
+id = 'thumb-' + page.index
+div.thumbnail
+  div.resource
+    a(href=page.link, target="_blank", onmouseover='toggleThumbnail("' + id + '", true)', onmouseout='toggleThumbnail("' + id + '", false)')
+      thumb = page.files[0]
+      if thumb
+        monoThumb = thumb.exportThumb({grayscale: true})
+        img(id=id, src=monoThumb.url, width=monoThumb.width, height=monoThumb.height)
+        img(id=id + '-over', class='hidden', src=thumb.url, width=thumb.width, height=thumb.height)
+  div.caption
+    p #{page.title}
+    p #{page.description}
