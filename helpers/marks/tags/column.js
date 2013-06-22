@@ -1,5 +1,5 @@
 module.exports = {
-	column: function(content, param, encoder) {
+	column: function(content, param, encode) {
 		if (this.previous && this.previous.name == 'column') {
 			this.index = this.previous.index + 1;
 			if (this.index >= 2)

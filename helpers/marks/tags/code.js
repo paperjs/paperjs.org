@@ -1,7 +1,7 @@
 module.exports = {
 	code: {
 		nesting: false,
-		render: function(content, param, encoder, before, after) {
+		render: function(content, param, encode, before, after) {
 			var code = content || this.values[0];
 			if (!code) return;
 			// Nesting things in <code> seems to cause conflicts with Helma's
@@ -18,9 +18,9 @@ module.exports = {
 				var attributes = this.renderAttributes();
 				return '<pre class="code"'
 						+ (attributes ? ' ' + attributes + '>' : '>')
-						+ encoder(code) + '</pre>';
+						+ encode(code) + '</pre>';
 			} else {
-				return '<tt>' + encoder(code) + '</tt>';
+				return '<tt>' + encode(code) + '</tt>';
 			}
 		}
 	}

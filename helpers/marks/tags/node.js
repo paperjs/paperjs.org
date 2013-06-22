@@ -18,7 +18,7 @@ var renderPageLink = function(param) {
 };
 
 module.exports = {
-	node: function(content, param, encoder) {
+	node: function(content, param, encode) {
 		var root = param.page.site.root;
 		var href = this.values[0];
 		if (!href) {
@@ -28,7 +28,7 @@ module.exports = {
 		var node = root.get(href);
 		if (!node) {
 			console.log('Node not found: ', href);
-			return (content || '') + encoder(' [missing: ' + href + ']');
+			return (content || '') + encode(' [missing: ' + href + ']');
 		}
 		var linkParam = { content: content || node.title, href: node.url };
 		for (var i in this.attributes) {

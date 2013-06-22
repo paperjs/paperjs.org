@@ -1,20 +1,6 @@
 !!! 5
-html  
-  head
-    meta(http-equiv="content-type", content-type="text/html; charset=utf-8")
-    if root.description
-      meta(name="description", content=root.description)
-    link(rel="stylesheet", href="/assets/css/reference.css")
-    link(rel="stylesheet", href="/assets/css/style.css")
-    link(rel="stylesheet", href="/assets/css/paperscript.css")
-    link(rel="stylesheet", href="/assets/css/codemirror.css")
-    link(rel="icon", href="/assets/favicon.ico", type="image/x-icon")
-    link(rel="shortcut icon", href="/assets/favicon.ico")
-    script(src="/assets/js/bootstrap.js")
-    script(src="/assets/js/paper.js")
-    script(src="/assets/js/codemirror.js")
-    script(src="/assets/js/scripts.js")
-    title #{root.title} - #{page.title}
+html
+  !{template('head', root, param)}
   body.fullscreen
     #menu
       h1
