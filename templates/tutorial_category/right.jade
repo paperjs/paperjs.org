@@ -1,12 +1,1 @@
-tutorials = root.get('tutorials')
-if tutorials && (tutorials == page || tutorials.isAncestor(page))
-  div.right
-    h1 Index
-    !{ template('tutorials_index', tutorials) }
-if param.titles
-  div.right.index
-    h1 Content
-    ul.menu
-      for title in param.titles
-        li.entry.selector
-          a(href='#' + title.anchor) !{title.title}
+!{ template('tutorials_right') }
