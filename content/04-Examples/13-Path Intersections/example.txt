@@ -5,6 +5,8 @@ words.strokeColor = 'black';
 
 var yesGroup = words.children.yes;
 var noGroup = words.children.no;
+yesGroup.transformContent = true;
+noGroup.transformContent = true;
 
 // Resize the words to fit snugly inside the view:
 project.activeLayer.fitBounds(view.bounds);
@@ -33,6 +35,7 @@ function showIntersections(path1, path2) {
 	}
 }
 </paperscript>
+<html>
 <svg xmlns="http://www.w3.org/2000/svg"
 		 xmlns:xlink="http://www.w3.org/1999/xlink"
 		 height="600" width="600" id="svg" style="display:none">
@@ -59,3 +62,4 @@ function showIntersections(path1, path2) {
 		c0,13.001,2.846,23.025,8.537,30.073c5.689,7.048,13.312,10.572,22.867,10.572S585.246,340.849,590.859,333.801z"/>
 </g>
 </svg>
+</html>
