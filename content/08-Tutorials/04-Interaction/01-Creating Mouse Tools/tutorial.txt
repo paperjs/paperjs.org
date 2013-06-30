@@ -271,37 +271,37 @@ tool.eventInterval = 30;
 
 var path;
 function onMouseDown(event) {
-    // If we already created a path before,
-    // deselect it:
-    if (path) {
-        path.selected = false;
-    }
-    
-    // Create a new path and add the first segment where
-    // the user clicked:
-    path = new Path();
-    path.strokeColor = 'black';
-    path.add(event.point);
+	// If we already created a path before,
+	// deselect it:
+	if (path) {
+		path.selected = false;
+	}
+	
+	// Create a new path and add the first segment where
+	// the user clicked:
+	path = new Path();
+	path.strokeColor = 'black';
+	path.add(event.point);
 }
 
 function onMouseDrag(event) {
-    var lastPoint = path.lastSegment.point;
+	var lastPoint = path.lastSegment.point;
 
-    // the difference between the current position of the mouse
-    // and the last segment point of the path:
-    var vector = event.point - lastPoint;
-    
-    // the position of the new point that we will add to the path:
-    var point = lastPoint + vector / 30;
-    path.add(point);
+	// the difference between the current position of the mouse
+	// and the last segment point of the path:
+	var vector = event.point - lastPoint;
+	
+	// the position of the new point that we will add to the path:
+	var point = lastPoint + vector / 30;
+	path.add(point);
 }
 
 function onMouseUp(event) {
-    // Simplify the path:
-    path.simplify();
-    
-    // Select the path to show the segment points:
-    path.selected = true;
+	// Simplify the path:
+	path.simplify();
+	
+	// Select the path to show the segment points:
+	path.selected = true;
 }
 </paperscript>
 </hide>

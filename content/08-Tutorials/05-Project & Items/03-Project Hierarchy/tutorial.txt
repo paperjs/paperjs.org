@@ -69,10 +69,10 @@ Since the children list of an item is an array, we can find out how many childre
 <paperscript height=100 split=true>
 // Create 20 circle shaped paths spread in horizontal direction:
 for (var i = 0; i < 20; i++) {
-    var center = new Point(70 + i * 20, 50);
-    var path = new Path.Circle(center, 20);
-    path.fillColor = 'red';
-    path.strokeColor = 'black';
+	var center = new Point(70 + i * 20, 50);
+	var path = new Path.Circle(center, 20);
+	path.fillColor = 'red';
+	path.strokeColor = 'black';
 }
 
 // Save a reference to the children array in a variable,
@@ -81,11 +81,11 @@ var children = project.activeLayer.children;
 
 // Iterate through the items contained within the array:
 for (var i = 0; i < children.length; i++) {
-    var child = children[i];
+	var child = children[i];
 
-    // Change the fill color of the child to a random
-    // value between 0 and 360:
-    child.fillColor.hue = Math.random() * 360;
+	// Change the fill color of the child to a random
+	// value between 0 and 360:
+	child.fillColor.hue = Math.random() * 360;
 }
 </paperscript>
 

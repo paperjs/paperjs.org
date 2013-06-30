@@ -163,8 +163,8 @@ Now, let's create a rectangle shaped path and rotate it by 45 degrees:
 <paperscript width=540 height=150 split=true>
 var path = new Path.Rectangle(new Point(50, 50), new Size(100, 50));
 path.style = {
-    fillColor: 'white',
-    strokeColor: 'black'
+	fillColor: 'white',
+	strokeColor: 'black'
 };
 
 // Create a copy of the path and set its stroke color to red:
@@ -180,8 +180,8 @@ To rotate in a counter-clockwise direction we pass a negative angle to the <api 
 <paperscript width=540 height=150 split=true>
 var path = new Path.Rectangle(new Point(50, 50), new Size(100, 50));
 path.style = {
-    fillColor: 'white',
-    strokeColor: 'black'
+	fillColor: 'white',
+	strokeColor: 'black'
 };
 
 // Create a copy of the path and set its stroke color to red:
@@ -197,8 +197,8 @@ We can repeatedly rotate the path in an <code onFrame /> handler to make an anim
 <paperscript width=540 height=150 split=true>
 var path = new Path.Rectangle(new Point(50, 50), new Size(100, 50));
 path.style = {
-    fillColor: 'white',
-    strokeColor: 'black'
+	fillColor: 'white',
+	strokeColor: 'black'
 };
 
 // Create a copy of the path and set its stroke color to red:
@@ -232,9 +232,9 @@ copy.strokeColor = 'red';
 var point = copy.bounds.bottomLeft;
 
 function onFrame(event) {
-    // Each frame, rotate the path 3 degrees around the point
-    // we defined earlier:
-    copy.rotate(3, point);
+	// Each frame, rotate the path 3 degrees around the point
+	// we defined earlier:
+	copy.rotate(3, point);
 }
 </paperscript>
 

@@ -117,8 +117,8 @@ PaperScript recognises a couple of special event handlers when they are declared
 		path.strokeColor = 'black';
 
 		view.onFrame = function(event) {
-		    // On each frame, rotate the path by 3 degrees:
-		    path.rotate(3);
+			// On each frame, rotate the path by 3 degrees:
+			path.rotate(3);
 		}
 	}
 </paperscript>

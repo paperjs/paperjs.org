@@ -198,8 +198,10 @@ function createCodeMirror(place, options, source) {
 		lineNumbers: true,
 		matchBrackets: true,
 		indentUnit: 4,
+		tabSize: 4,
+		indentWithTabs: true,
 		tabMode: 'shift',
-		value: source.getText().replace(/\t/gi, '    ').match(
+		value: source.getText().match(
 			// Remove first & last empty line
 			/^\s*?[\n\r]?([\u0000-\uffff]*?)[\n\r]?\s*?$/)[1]
 	}, options));

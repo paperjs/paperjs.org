@@ -141,7 +141,7 @@ console.log(rect); // { x: 10, y: 20, width: 200, height: 100 }
 Newly created basic types do not necessarily need to be put into named variables every time. We could also nest constructor calls and pass them directly to the rectangle constructor.
 <code>
 var rect = new Rectangle(new Point(10, 120),
-        new Point(210, 20));
+		new Point(210, 20));
 </code>
 </note>
 

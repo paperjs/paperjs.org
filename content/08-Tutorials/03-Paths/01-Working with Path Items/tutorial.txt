@@ -8,8 +8,8 @@ In Paper.js, paths are represented by a sequence of segments that are connected 
 var y = view.size.height / 2;
 var width = view.size.width;
 var vector = new Point({
-    angle: 45,
-    length: width / 5
+	angle: 45,
+	length: width / 5
 });
 var offset = width / 30;
 var handleTexts = [];
@@ -28,7 +28,7 @@ function onMouseMove(event) {
 		point.y = 22;
 	if (point.y > view.size.height - 24)
 		point.y = view.size.height - 24;
-    var delta = point - view.center;
+	var delta = point - view.center;
 	for (var i = 0; i < 2; i++) {
 		var curve = path.curves[i];
 		curve.handle1.y = curve.handle2.y = delta.y * (i % 2 ? 1 : -1);

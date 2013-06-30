@@ -80,9 +80,9 @@ circle.fillColor = 'red';
 
 var circle2 = new Path.Circle(new Point(120, 50), 35);
 circle2.style = {
-    fillColor: 'blue',
-    strokeColor: 'green',
-    strokeWidth: 10
+	fillColor: 'blue',
+	strokeColor: 'green',
+	strokeWidth: 10
 };
 
 // Make circle2 50% transparent:

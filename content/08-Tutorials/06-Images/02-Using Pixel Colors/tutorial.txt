@@ -38,20 +38,20 @@ var gridSize = 12;
 var spacing = 1.2;
 
 for (var y = 0; y < raster.height; y++) {
-    for(var x = 0; x < raster.width; x++) {
-        // Get the color of the pixel:
-        var color = raster.getPixel(x, y);
+	for(var x = 0; x < raster.width; x++) {
+		// Get the color of the pixel:
+		var color = raster.getPixel(x, y);
 
-        // Create a circle shaped path:
-        var path = new Path.Circle({
-            center: new Point(x, y) * gridSize,
-            radius: gridSize / 2 / spacing
-        });
+		// Create a circle shaped path:
+		var path = new Path.Circle({
+			center: new Point(x, y) * gridSize,
+			radius: gridSize / 2 / spacing
+		});
 
-        // Set the fill color of the path to the color
-        // of the pixel:
-        path.fillColor = color;
-    }
+		// Set the fill color of the path to the color
+		// of the pixel:
+		path.fillColor = color;
+	}
 }
 
 // Move the active layer to the center of the view:
@@ -83,20 +83,20 @@ var gridSize = 12;
 var spacing = 1.2;
 
 for (var y = 0; y < raster.height; y++) {
-    for(var x = 0; x < raster.width; x++) {
-        // Get the color of the pixel:
-        var color = raster.getPixel(x, y);
+	for(var x = 0; x < raster.width; x++) {
+		// Get the color of the pixel:
+		var color = raster.getPixel(x, y);
 
-        // Create a circle shaped path:
-        var path = new Path.Circle({
-            center: new Point(x, y) * gridSize,
-            radius: gridSize / 2 / spacing,
-            fillColor: 'black'
-        });
+		// Create a circle shaped path:
+		var path = new Path.Circle({
+			center: new Point(x, y) * gridSize,
+			radius: gridSize / 2 / spacing,
+			fillColor: 'black'
+		});
 
-        // Scale the path by the amount of gray in the pixel color:
-        path.scale(1 - color.gray);
-    }
+		// Scale the path by the amount of gray in the pixel color:
+		path.scale(1 - color.gray);
+	}
 }
 
 // Move the active layer to the center of the view:
