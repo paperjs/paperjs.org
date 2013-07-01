@@ -1,6 +1,7 @@
 module.exports = {
 	code: {
 		nesting: false,
+
 		render: function(content, param, encode, before, after) {
 			var code = content || this.values[0];
 			if (!code) return;
@@ -18,9 +19,9 @@ module.exports = {
 				var attributes = this.renderAttributes();
 				return '<pre class="code"'
 						+ (attributes ? ' ' + attributes + '>' : '>')
-						+ encode(code) + '</pre>';
+						+ code + '</pre>';
 			} else {
-				return '<tt>' + encode(code) + '</tt>';
+				return '<tt>' + code + '</tt>';
 			}
 		}
 	}
