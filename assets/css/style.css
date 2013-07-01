@@ -173,6 +173,18 @@ td {
 #right .right {
   width: 200px; }
 
+/* Fullscreen */
+body.fullscreen {
+  overflow: hidden; }
+  body.fullscreen #main {
+    /* Clear relative position for fullscreen examples */
+    position: absolute;
+    width: auto;
+    overflow: hidden; }
+    body.fullscreen #main #content {
+      width: auto;
+      padding: 0; }
+
 /* Menu */
 .menu {
   padding: 0;

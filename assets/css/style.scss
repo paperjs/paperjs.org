@@ -216,6 +216,24 @@ td {
 	}
 }
 
+/* Fullscreen */
+
+body.fullscreen {
+	overflow: hidden;
+
+	#main {
+		/* Clear relative position for fullscreen examples */
+		position: absolute;
+		width: auto;
+		overflow: hidden;
+
+		#content {
+			width: auto;
+			padding: 0;
+		}
+	}
+}
+
 /* Menu */
 
 .menu {
