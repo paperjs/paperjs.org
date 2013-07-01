@@ -197,8 +197,8 @@ function createCodeMirror(place, options, source) {
 		mode: 'javascript',
 		lineNumbers: true,
 		matchBrackets: true,
-		indentUnit: 4,
 		tabSize: 4,
+		indentUnit: 4,
 		indentWithTabs: true,
 		tabMode: 'shift',
 		value: source.getText().match(
