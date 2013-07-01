@@ -16,7 +16,7 @@ function isVisible(el) {
 			|| top <= viewBottom && bottom >= viewBottom; 
 }
 
-function scrollTo(el, callback) {
+function smoothScrollTo(el, callback) {
 	$('html, body').animate({
 		scrollTop: el.offset().top
 	}, 250, callback);
@@ -24,94 +24,131 @@ function scrollTo(el, callback) {
 
 // DOM-Ready
 
-$(function() {
-	var toc = $('.menu.toc');
-	var checks = [];
-	var active;
+var behaviors = {
+	sections: function() {
+		var toc = $('.menu.toc');
+		var checks = [];
+		var active;
 
-	function update() {
-		$.each(checks, function() {
-			if (this())
-				return false;
-		});
-	}
-
-	$(document).scroll(update);
-	$(window).resize(update);
-	setTimeout(update, 0);
-
-	$('.section').each(function() {
-		var section = $(this);
-		var anchor = $('a', section);
-		// Move content until next section inside section
-		section.append(section.nextUntil('.section'));
-		var title = anchor.attr('title') || $('h1,h2', section).first().text();
-		var id = section.attr('id');
-		if (!id) {
-			id = hyphenate(title)
-				.replace(/\s+/g, '-')
-				.replace(/^#/, '')
-				.replace(/[!"#$%&'\()*+,.\/:;<=>?@\[\\\]\^_`{|}~]+/g, '-')
-				.replace(/-+/g, '-');
-			section.attr('id', id);
-			anchor.attr('name', id);
+		function update() {
+			$.each(checks, function() {
+				if (this())
+					return false;
+			});
 		}
 
-		function activate() {
-			if (active)
-				active.removeClass('active');
-			selector.addClass('active');
-			active = selector;
-		}
+		$(document).scroll(update);
+		$(window).resize(update);
+		setTimeout(update, 0);
 
-		// Create table of contents on the fly
-		if (toc) {
-			var selector = $('<li class="entry selector"><a href="#' + id + '">'
-					+ title + '</a></li>').appendTo(toc);
-			if (section.is('.spacer'))
-				selector.addClass('spacer');
-			$('a', selector).click(function() {
-				scrollTo(section, function() {
-					window.location.hash = id;
+		$('.section').each(function() {
+			var section = $(this);
+			var anchor = $('a', section);
+			// Move content until next section inside section
+			section.append(section.nextUntil('.section'));
+			var title = anchor.attr('title') || $('h1,h2', section).first().text();
+			var id = section.attr('id');
+			if (!id) {
+				id = hyphenate(title)
+					.replace(/\s+/g, '-')
+					.replace(/^#/, '')
+					.replace(/[!"#$%&'\()*+,.\/:;<=>?@\[\\\]\^_`{|}~]+/g, '-')
+					.replace(/-+/g, '-');
+				section.attr('id', id);
+				anchor.attr('name', id);
+			}
+
+			function activate() {
+				if (active)
+					active.removeClass('active');
+				selector.addClass('active');
+				active = selector;
+			}
+
+			// Create table of contents on the fly
+			if (toc) {
+				var selector = $('<li class="entry selector"><a href="#' + id + '">'
+						+ title + '</a></li>').appendTo(toc);
+				if (section.is('.spacer'))
+					selector.addClass('spacer');
+				$('a', selector).click(function() {
+					smoothScrollTo(section, function() {
+						window.location.hash = id;
+					});
+					return false;
 				});
-				return false;
-			});
 
-			checks.push(function() {
-				var visible = isVisible(section);
-				if (visible)
-					activate();
-				return visible;
-			});
+				checks.push(function() {
+					var visible = isVisible(section);
+					if (visible)
+						activate();
+					return visible;
+				});
+			}
+		});
+	},
+
+	contentEnd: function() {
+		// Expand height of .content-end so that the last anchor aligns
+		// perfectly with the top of the browser window.
+		var end = $('.content-end');
+		var lastAnchor = $('a[name]:last');
+
+		function resize() {
+			var bottom = $(document).height() - lastAnchor.offset().top - $(window).height();
+			end.height(end.height() - bottom);
 		}
-	});
 
-	// Expand height of .content-end so that the last anchor aligns perfectly with
-	// the top of the browser window.
-	var end = $('.content-end');
-	var lastAnchor = $('a[name]:last');
+		if (end.length && lastAnchor.length) {
+			$(window)
+				.load(resize)
+				.resize(resize);
+			resize();
+		}
+	},
 
-	function resize() {
-		var bottom = $(document).height() - lastAnchor.offset().top - $(window).height();
-		end.height(end.height() - bottom);
+	hash: function() {
+		var hash = unescape(window.location.hash);
+		if (hash) {
+			// First see if there's a class member to open
+			var target = $(hash + '-member');
+			if (target.length) {
+				if (target.hasClass('member'))
+					toggleMember(hash.substring(1));
+			} else {
+				target = $(hash);
+			}
+			if (target.length)
+				smoothScrollTo(target);
+		}
+	},
+
+	// TODO: Move this to offline reference
+	expandableLists: function() {
+		$('.expandable-list').each(function() {
+			var list = $(this);
+			$('<a href="#" class="arrow" />')
+				.prependTo(list)
+				.click(function() {
+					list.toggleClass('expanded');
+				});
+		});
+	},
+
+	referenceClass: function() {
+		var classes = $('.reference-classes');
+		if (classes.length) {
+			// Mark currently selected class as active. Do it client-sided
+			// since the menu is generated by jsdocs.
+			var path = window.location.pathname.toLowerCase();
+			$('a[href="' + path + '"]', classes).addClass('active');
+		}
 	}
+};
 
-	if (end.length && lastAnchor.length) {
-		$(window)
-			.load(resize)
-			.resize(resize);
-		resize();
-	}
-
-	// Expandable lists
-	$('.expandable-list').each(function() {
-		var list = $(this);
-		$('<a href="#" class="arrow" />')
-			.prependTo(list)
-			.click(function() {
-				list.toggleClass('expanded');
-			});
-	});
+$(function() {
+	for (var i in behaviors)
+		behaviors[i]();
 });
 
 
@@ -580,37 +617,39 @@ PaperScript = HtmlElement.extend({
 });
 
 var lastMemberId = null;
-function toggleMember(id, scrollTo, dontScroll) {
-	var link = _$('#' + id + '-link');
-	if (!link)
+function toggleMember(id, dontScroll) {
+	var link = $('#' + id + '-link');
+	if (!link.length)
 		return true;
-	var desc = _$('#' + id + '-description');
-	var v = !link.hasClass('hidden');
+	var desc = $('#' + id + '-description');
+	var visible = !link.hasClass('hidden');
 	// Retrieve y-offset before any changes, so we can correct scrolling after
-	var offset = (v ? link : desc).getOffset().y;
+	var offset = (visible ? link : desc).offset().top;
 	if (lastMemberId && lastMemberId != id) {
 		var prevId = lastMemberId;
 		lastMemberId = null;
-		toggleMember(prevId, false, true);
+		toggleMember(prevId, true);
 	}
-	lastMemberId = v && id;
-	link.modifyClass('hidden', v);
-	desc.modifyClass('hidden', !v);
+	lastMemberId = visible && id;
+	link.toggleClass('hidden', visible);
+	desc.toggleClass('hidden', !visible);
 	if (!dontScroll) {
 		// Correct scrolling relatively to where we are, by checking the amount
 		// the element has shifted due to the above toggleMember call, and
 		// correcting by 11px offset, caused by 1px border and 10px padding.
-		var scroll = $window.getScrollOffset();
-		$window.setScrollOffset(scroll.x, scroll.y
-				+ (v ? desc : link).getOffset().y - offset + 11 * (v ? 1 : -1));
+		var scroll = $(document).scrollTop();
+		$(document).scrollTop(scroll
+				+ (visible ? desc : link).offset().top - offset
+				+ 11 * (visible ? 1 : -1));
 	}
-	if (!desc.editor && v) {
-		desc.editor = _$$('pre.code, .paperscript', desc).each(function(code) {
+	if (!desc.editor && visible) {
+		/*
+		TODO:
+		desc.editor = $('pre.code, .paperscript', desc).each(function(code) {
 			code.initialize();
 		});
+		*/
 	}
-	if (scrollTo)
-		scrollToMember(id);
 	return false;
 }
 
@@ -618,30 +657,3 @@ function toggleThumbnail(id, over) {
 	_$('#' + id).modifyClass('hidden', over);
 	_$('#' + id + '-over').modifyClass('hidden', !over);
 }
-
-function scrollToElement(id) {
-	var e = _$('#' + id + '-member');
-	window.location.hash = id;
-	if (e) {
-		if (e.hasClass('member'))
-			toggleMember(id);
-		var offs = e.getOffset();
-		$window.setScrollOffset(offs);
-	}
-}
-
-$document.addEvent('domready', function() {
-	var h = unescape(window.location.hash);
-	if (h) scrollToElement(h.substring(1));
-	var classes = _$('.reference-classes');
-	if (classes) {
-		// Mark currently selected class as active. Do it client-sided
-		// since the menu is generated by jsdocs.
-		var path = window.location.pathname.toLowerCase();
-		_$$('a', classes).each(function(link) {
-			if (link.get('href') == path) {
-				link.addClass('active');
-			}
-		});
-	}
-});
