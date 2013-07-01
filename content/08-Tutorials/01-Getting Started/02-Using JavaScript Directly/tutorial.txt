@@ -19,9 +19,9 @@ The easiest way is to use the existing <api global#paper>paper</api> object, and
 <html>
 <head>
 <!-- Load the Paper.js library -->
-<paperscript type="text/javascript" src="js/paper.js"></paperscript>
+<script type="text/javascript" src="js/paper.js"></script>
 <!-- Define inlined JavaScript -->
-<paperscript type="text/javascript">
+<script type="text/javascript">
 	// Only executed our code once the DOM is ready.
 	window.onload = function() {
 		// Get a reference to the canvas object
@@ -108,8 +108,8 @@ PaperScript recognises a couple of special event handlers when they are declared
 <!DOCTYPE html>
 <html>
 <head>
-<paperscript type="text/javascript" src="js/paper.js"></paperscript>
-<paperscript type="text/javascript">
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/javascript">
 	paper.install(window);
 	window.onload = function() {
 		paper.setup('myCanvas');
@@ -143,8 +143,8 @@ In JavaScript we need to create the tool ourselves, and we need to manually inst
 <!DOCTYPE html>
 <html>
 <head>
-<paperscript type="text/javascript" src="js/paper.js"></paperscript>
-<paperscript type="text/javascript">
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/javascript">
 	paper.install(window);
 	window.onload = function() {
 		paper.setup('myCanvas');
@@ -183,8 +183,8 @@ The next example illustrates how easy it is to create multiple drawing tools and
 <!DOCTYPE html>
 <html>
 <head>
-<paperscript type="text/javascript" src="js/paper.js"></paperscript>
-<paperscript type="text/javascript">
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/javascript">
 	paper.install(window);
 	// Keep global references to both tools, so the HTML
 	// links below can access them.

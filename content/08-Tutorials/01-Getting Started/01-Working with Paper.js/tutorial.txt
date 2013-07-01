@@ -10,16 +10,16 @@ PaperScript also offers automatic creation of <api Project />, <api View /> and 
 
 <title>Script Configuration</title>
 
-PaperScript code is loaded just like any other JavaScript using the <code>\<paperscript\></code> tag, except for the type being set to <code>"text/paperscript"</code> or <code>"text/x-paperscript" </code>. The code can either be an external file (<code>src="URL"</code>), or inlined:
+PaperScript code is loaded just like any other JavaScript using the <code>\<script\></code> tag, except for the type being set to <code>"text/paperscript"</code> or <code>"text/x-paperscript" </code>. The code can either be an external file (<code>src="URL"</code>), or inlined:
 
 <code mode="text/html">
 <!DOCTYPE html>
 <html>
 <head>
 <!-- Load the Paper.js library -->
-<paperscript type="text/javascript" src="js/paper.js"></paperscript>
+<script type="text/javascript" src="js/paper.js"></script>
 <!-- Define inlined PaperScript associate it with myCanvas -->
-<paperscript type="text/paperscript" canvas="myCanvas">
+<script type="text/paperscript" canvas="myCanvas">
 	// Create a Paper.js Path to draw a line into it:
 	var path = new Path();
 	// Give the stroke a color
@@ -30,7 +30,7 @@ PaperScript code is loaded just like any other JavaScript using the <code>\<pape
 	// Note the plus operator on Point objects.
 	// PaperScript does that for us, and much more!
 	path.lineTo(start + [ 100, -50 ]);
-</paperscript>
+</script>
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
@@ -45,10 +45,10 @@ If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewr
 <html>
 <head>
 <!-- Load the Paper.js library -->
-<paperscript type="text/javascript" src="js/paper.js"></paperscript>
+<script type="text/javascript" src="js/paper.js"></script>
 <!-- Load external PaperScript and associate it with myCanvas -->
-<paperscript type="text/paperscript" src="js/myScript.js" canvas="myCanvas">
-</paperscript>
+<script type="text/paperscript" src="js/myScript.js" canvas="myCanvas">
+</script>
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
@@ -56,7 +56,7 @@ If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewr
 </html>
 </code>
 
-These attributes are supported in PaperScript <code>\<paperscript\></code> tags:
+These attributes are supported in PaperScript <code>\<script\></code> tags:
 
 <b><code>src="URL"</code></b>: The URL to load the PaperScript code from.
 
