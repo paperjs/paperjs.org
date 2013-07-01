@@ -47,8 +47,7 @@ for (var i = 0; i < 3; i++) {
 	var text = new PointText({
 		point: segment.point - [0, 10],
 		content: i,
-		justification: 'center',
-		fontSize: 9
+		justification: 'center'
 	});
 }
 
@@ -56,14 +55,12 @@ for (var i = 0; i < 2; i++) {
 	handleTexts.push(
 		new PointText({
 			content: 'handleIn',
-			justification: 'center',
-			fontSize: 9
+			justification: 'center'
 		}),
 		new PointText({
 			content: 'handleOut',
-			justification: 'center',
-			fontSize: 9
-		}),
+			justification: 'center'
+		})
 	);
 }
 
