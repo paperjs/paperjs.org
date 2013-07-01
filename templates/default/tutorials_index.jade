@@ -5,9 +5,9 @@ ul.tutorial-index
         b
           a(href=child.url) #{child.title}
         !{template('tutorials_index', child)}
-     else if isActive(child)
-       li
-         span.active #{child.title}
-     else 
-       li
-         a(href=child.url) #{child.title}
+    else if inPath(child)
+      li.active
+        span #{child.title}
+    else 
+      li
+        a(href=child.url) #{child.title}

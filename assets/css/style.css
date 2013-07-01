@@ -176,7 +176,7 @@ body.fullscreen {
   color: #e4141b;
   border-bottom-color: #e4141b; }
 .right a:hover,
-.right .active a {
+.right .active > * {
   background: #fce6e6; }
 
 /* Content Styles */

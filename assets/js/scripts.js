@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2013, Juerg Lehni
- * http://lehni.org/
- */
-
 // Little Helpers
 
 function hyphenate(str) {

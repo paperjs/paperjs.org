@@ -103,7 +103,7 @@ body.fullscreen {
     }
 
     a:hover,
-    .active a {
+    .active > * {
         background: #fce6e6;
     }
 }
