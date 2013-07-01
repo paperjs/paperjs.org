@@ -49,10 +49,10 @@ $(function() {
 		var id = section.attr('id');
 		if (!id) {
 			id = hyphenate(title)
-					.replace(/\s+/g, '-')
-					.replace(/^#/, '')
-					.replace(/[!"#$%&'\()*+,.\/:;<=>?@\[\\\]\^_`{|}~]+/g, '-')
-					.replace(/-+/g, '-');
+				.replace(/\s+/g, '-')
+				.replace(/^#/, '')
+				.replace(/[!"#$%&'\()*+,.\/:;<=>?@\[\\\]\^_`{|}~]+/g, '-')
+				.replace(/-+/g, '-');
 			section.attr('id', id);
 			anchor.attr('name', id);
 		}
@@ -88,7 +88,6 @@ $(function() {
 
 	// Expand height of .content-end so that the last anchor aligns perfectly with
 	// the top of the browser window.
-
 	var end = $('.content-end');
 	var lastAnchor = $('a[name]:last');
 
@@ -98,16 +97,28 @@ $(function() {
 	}
 
 	if (end.length && lastAnchor.length) {
-		$(window).load(resize);
-		$(window).resize(resize);
+		$(window)
+			.load(resize)
+			.resize(resize);
 		resize();
 	}
+
+	// Expandable lists
+	$('.expandable-list').each(function() {
+		var list = $(this);
+		$('<a href="#" class="arrow" />')
+			.prependTo(list)
+			.click(function() {
+				list.toggleClass('expanded');
+			});
+	});
 });
 
 
 var _$ = DomElement.get,
 	_$$ = DomElement.getAll;
 
+/*
 
 ExpandableList = HtmlElement.extend({
 	_class: 'expandable-list',
@@ -156,7 +167,6 @@ SideList = HtmlElement.extend({
 	}
 });
 
-/*
 // TODO: See if this can be merged with SideList as it repeats functionality
 AutoFit = HtmlElement.extend({
 	_class: 'auto-fit',
