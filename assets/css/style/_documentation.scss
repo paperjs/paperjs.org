@@ -1,0 +1,47 @@
+
+/* Documentation */
+
+li.expandable-list {
+    ul {
+        display: none;
+    }
+
+    &.expanded {
+        a.arrow {
+            background: url(assets/arrow-open.gif) no-repeat;
+        }
+
+        ul {
+            display: block;
+        }
+    }
+
+    a.arrow {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background: url(assets/arrow-close.gif) no-repeat;
+        border-bottom: 0;
+        padding-right: 4px;
+    }
+}
+
+/* Tutorials */
+
+ul.tutorial-index {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    > li:before {
+        display: none;
+    }
+
+    ul {
+        padding-left: 13px;
+    }
+}
+
+#main ul.tutorial-index {
+    margin-bottom: 29px;
+}

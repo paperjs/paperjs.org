@@ -1,0 +1,38 @@
+/* Helpers */
+
+.clear {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fixed {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+}
+
+.small {
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.donation {
+    padding-bottom: 20px;
+
+    input,
+    select {
+        margin-right: 0.35em;
+    }
+}

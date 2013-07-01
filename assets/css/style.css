@@ -1,11 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "SuperstudioBold";
-  font-weight: normal;
-  font-style: normal;
-  src: url("http://paperjs.org/static/css/assets/superstudio.eot");
-  src: url("http://paperjs.org/static/css/assets/superstudio.eot?#iefix") format("embedded-opentype"), url("http://paperjs.org/static/css/assets/superstudio.woff") format("woff"), url("http://paperjs.org/static/css/assets/superstudio.ttf") format("truetype"), url("http://paperjs.org/static/css/assets/superstudio.svg#SuperstudioBold") format("svg"); }
-
 body {
   background: #fff;
   margin: 0;
@@ -32,7 +25,24 @@ img {
 div {
   line-height: 20px; }
 
+/* Tables */
+table {
+  border-spacing: 0;
+  margin: 0;
+  border: 0; }
+
+td {
+  padding: 0;
+  vertical-align: top; }
+
 /* Fonts */
+@font-face {
+  font-family: "SuperstudioBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("http://paperjs.org/static/css/assets/superstudio.eot");
+  src: url("http://paperjs.org/static/css/assets/superstudio.eot?#iefix") format("embedded-opentype"), url("http://paperjs.org/static/css/assets/superstudio.woff") format("woff"), url("http://paperjs.org/static/css/assets/superstudio.ttf") format("truetype"), url("http://paperjs.org/static/css/assets/superstudio.svg#SuperstudioBold") format("svg"); }
+
 h1,
 h2 {
   font-family: "SuperstudioBold";
@@ -103,45 +113,6 @@ tt,
 pre {
   font-family: Menlo, Consolas, "Vera Mono", monospace;
   font-size: 12px; }
-
-/* Tables */
-table {
-  border-spacing: 0;
-  margin: 0;
-  border: 0; }
-
-td {
-  padding: 0;
-  vertical-align: top; }
-
-/* Helpers */
-.clear {
-  clear: both; }
-
-.float-left {
-  float: left; }
-
-.float-right {
-  float: right; }
-
-.hidden {
-  display: none; }
-
-.fixed {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  bottom: 0; }
-
-.small {
-  font-size: 11px;
-  line-height: 16px; }
-
-.donation {
-  padding-bottom: 20px; }
-  .donation input,
-  .donation select {
-    margin-right: 0.35em; }
 
 /* Column Layout */
 #menu,
@@ -246,7 +217,8 @@ body.fullscreen {
     #content ol.small {
       margin-bottom: 10px; }
   #content figure,
-  #content .CodeMirror {
+  #content .CodeMirror,
+  #content .paperscript {
     margin-bottom: 20px; }
   #content ul,
   #content ol {
@@ -307,6 +279,35 @@ body.fullscreen {
 .content-end {
   clear: left;
   min-height: 32px; }
+
+/* Helpers */
+.clear {
+  clear: both; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.hidden {
+  display: none !important; }
+
+.fixed {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0; }
+
+.small {
+  font-size: 11px;
+  line-height: 16px; }
+
+.donation {
+  padding-bottom: 20px; }
+  .donation input,
+  .donation select {
+    margin-right: 0.35em; }
 
 /* Resources */
 .resource-block {

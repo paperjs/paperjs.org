@@ -1,0 +1,147 @@
+
+/* Content Styles */
+
+#content {
+    &,
+    a {
+        color: $color-text;
+    }
+
+    a {
+        border-bottom: 1px solid;
+    }
+
+    a:hover {
+        &,
+        em {
+            background: $color-hover;
+        }
+    }
+
+    // Fix IE8 issue with empty named anchors having a huteight of 15px instead of 0
+    a.anchor {
+        display: block;
+        height: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    /* Text Content */
+
+    em {
+        font-style: normal;
+        background: $color-highlight;
+    }
+
+    p,
+    ul,
+    ol {
+        margin: 0 10px $line-height 0;
+
+        &.small {
+            margin-bottom: $line-height / 2;
+        }
+    }
+
+    figure,
+    .CodeMirror,
+    .paperscript {
+        margin-bottom: $line-height;
+    }
+
+    ul,
+    ol {
+        padding: 0;
+        list-style: none outside none;
+    }
+
+    /* No bottom margin in nested lists */
+    ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+        margin-bottom: 0;
+    }
+
+    ul > li {
+        text-indent: -1em;
+        margin-left: 1em;
+    }
+
+    ul > li:before {
+        content: "-";
+        padding-right: 0.5em;
+    }
+
+    ol {
+        counter-reset: item;
+    }
+
+    ol > li {
+        text-indent: -1.5em;
+        margin-left: 1.5em;
+    }
+
+    ol > li:before {
+            text-indent: 0;
+            display: inline-block;
+            content: counter(item, upper-latin) ") ";
+            counter-increment: item;
+            width: 1.5em;
+    }
+
+    $list-indent: 0.5em;
+    $quote-indent: 0.4em;
+    $paragraph-indent: $quote-indent + $list-indent;
+
+    blockquote {
+        margin: 0;
+
+        p {
+            padding-left: $paragraph-indent;
+
+            &:first-child {
+                text-indent: -$paragraph-indent;
+                &:before {
+                    content: "“";
+                    padding-right: $list-indent;
+                }
+            }
+
+            &:last-child:after {
+                content: "”";
+            }
+        }
+    }
+
+    cite {
+        font-style: normal;
+        &:before {
+            content: "–";
+            padding-right: $list-indent;
+        }
+    }
+}
+
+.section {
+    clear: both;
+    margin-bottom: $line-height;
+}
+
+.column {
+    width: 260px;
+    float: left;
+
+    & + & {
+        margin-left: $line-height;
+    }
+}
+
+.row {
+    clear: both;
+}
+
+.content-end {
+    clear: left;
+    min-height: $page-margin;
+}
