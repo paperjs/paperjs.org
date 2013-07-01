@@ -1,10 +1,8 @@
 #main
-  #content(class=page.type)
+  #content
     h1 !{page.title == 'global' ? 'Global Scope' : page.title}
-    .content.reference
-       .text
-         !{template('main')}
-        .text-end
-    .content-end
+    .reference
+      !{template('main')}
+  .content-end
 #right
   !{template('right', page)}

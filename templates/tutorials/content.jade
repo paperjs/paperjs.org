@@ -2,19 +2,16 @@ groups = page.children.inGroupsOf(2)
 #main
   #content.tutorial
     h1 !{page.title}
-    .block.block-none
-      .content
-        .text
-          each group in groups
-            .clear
-              each category in group
-                .column
-                  h2 #{category.name}
-                  .tutorial-overview.small #{category.content}
-                  ul.tutorial-index
-                    each tutorial in category.children
-                      li
-                        a(href=tutorial.url) #{tutorial.title}
+    each group in groups
+      .row
+        each category in group
+          .column
+            h2 #{category.name}
+            p.tutorial-overview.small #{category.content}
+            ul.tutorial-index
+              each tutorial in category.children
+                li
+                  a(href=tutorial.url) #{tutorial.title}
   .content-end
 #right
   !{template('right', page)}
