@@ -13,7 +13,7 @@ var path;
 
 function onMouseDown(event) {
 	path = new Path();
-	path.fillColor = new HsbColor(Math.random() * 360, 1, 1);
+	path.fillColor = new Color({ hue: Math.random() * 360, saturation: 1, brightness: 1 });
 
 	path.add(event.point);
 }
@@ -446,12 +446,14 @@ function drawLength(from, to, sign, label, value, prefix) {
 		// vector's quadrant:
 		var away = (sign >= 0 ? [1, 4] : [2, 3]).indexOf(vector.quadrant) != -1
 				? 8 : 0;
-		var text = new PointText(middle + awayVector.normalize(away + lengthSize));
-		text.rotate(textAngle);
-		text.paragraphStyle.justification = 'center';
 		value = value || vector.length;
-		text.content = (prefix || '') + Math.floor(value * 1000) / 1000;
-		text.fillColor = 'black';
+		var text = new PointText({
+			point: middle + awayVector.normalize(away + lengthSize),
+			content: (prefix || '') + Math.floor(value * 1000) / 1000,
+			fillColor: 'black',
+			justification: 'center'
+		});
+		text.rotate(textAngle);
 		items.push(text);
 	}
 }

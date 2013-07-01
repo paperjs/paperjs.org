@@ -591,10 +591,12 @@ function drawLength(from, to, sign, label, value, prefix) {
 		// vector's quadrant:
 		var away = (sign >= 0 ? [1, 4] : [2, 3]).indexOf(vector.quadrant) != -1
 				? 8 : 0;
-		var text = new PointText(middle + awayVector.normalize(away + lengthSize));
-		text.fontSize = 12;
+		var text = new PointText({
+			point: middle + awayVector.normalize(away + lengthSize),
+			fontSize: 12,
+			justification: 'center'
+		});
 		text.rotate(textAngle);
-		text.paragraphStyle.justification = 'center';
 		value = value || vector.length;
 		text.content = 'length: ' + (prefix || '') + Math.floor(value * 1000) / 1000;
 		items.push(text);

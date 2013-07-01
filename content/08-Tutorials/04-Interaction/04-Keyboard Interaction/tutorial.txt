@@ -7,13 +7,12 @@ In the following example, we give feedback to the user about which key was press
 
 <paperscript height=100 split=true>
 // Create a centered text item at the center of the view:
-var text = new PointText(view.center);
-text.paragraphStyle.justification = 'center';
-text.characterStyle.fontSize = 15;
-text.fillColor = 'black';
-
-// Set the initial content of the text item:
-text.content = 'Click here to focus and then press some keys.';
+var text = new PointText({
+	point: view.center,
+	content: 'Click here to focus and then press some keys.',
+	justification: 'center',
+	fontSize: 15
+});
 
 function onKeyDown(event) {
 	// When a key is pressed, set the content of the text item:

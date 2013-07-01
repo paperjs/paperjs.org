@@ -44,23 +44,27 @@ function onMouseMove(event) {
 project.currentStyle.fillColor = 'black';
 for (var i = 0; i < 3; i++) {
 	var segment = path.segments[i];
-	var text = new PointText(segment.point - [0, 10]);
-	text.content = i;
-	text.paragraphStyle.justification = 'center';
+	var text = new PointText({
+		point: segment.point - [0, 10],
+		content: i,
+		justification: 'center',
+		fontSize: 9
+	});
 }
 
 for (var i = 0; i < 2; i++) {
-	var handleInText = new PointText();
-	handleInText.content = 'handleIn';
-	handleInText.paragraphStyle.justification = 'center';
-	handleInText.characterStyle.fontSize = 9;
-	handleTexts.push(handleInText);
-
-	var handleOutText = new PointText();
-	handleOutText.content = 'handleOut';
-	handleOutText.paragraphStyle.justification = 'center';
-	handleOutText.characterStyle.fontSize = 9;
-	handleTexts.push(handleOutText);
+	handleTexts.push(
+		new PointText({
+			content: 'handleIn',
+			justification: 'center',
+			fontSize: 9
+		}),
+		new PointText({
+			content: 'handleOut',
+			justification: 'center',
+			fontSize: 9
+		}),
+	);
 }
 
 // Call onMouseMove once to correctly position the text items:
