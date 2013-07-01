@@ -1,4 +1,4 @@
-<ul class="package-classes"><li><a href="/reference/global">Global Scope</a></li>
+<ul class="reference-classes"><li><a href="/reference/global">Global Scope</a></li>
 <li>
 <h2>Basic Types</h2>
 <ul>

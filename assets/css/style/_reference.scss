@@ -1,0 +1,134 @@
+// These styles are shared with the server version of docs
+
+.reference {
+	h1,
+	h2,
+	h3 {
+		font-size: 13px;
+		font-weight: normal;
+		height: 18px; // -2px so border-bottom aligns with contained links
+		border-bottom: 1px solid;
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+
+	h2 {
+		a {
+			font-weight: bold;
+		}
+	}
+
+	h3 {
+		margin-top: 16px;
+		border-bottom-style: dotted;
+	}
+
+	a tt {
+		line-height: 18px;
+	}
+
+	p {
+		margin: 0 0 16px 0;
+	}
+
+	hr {
+		border: none;
+		border-bottom: 1px dotted;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.reference-list ul,
+	.reference-inherited ul {
+		margin-left: 16px;
+	}
+
+	.reference-inherited ul li {
+		text-indent: -30px;
+		padding-left: 30px;
+	}
+
+	.reference-classes {
+		padding-bottom: 4px;
+
+		h2,
+		h3,
+		hr {
+			margin: 10px 0 10px 0;
+		}
+
+		.first h2 {
+			margin-top: 0;
+		}
+
+		// TODO: IE hack? Still needed?
+		* html & img {
+			margin-top: 5px;
+		}
+
+		li {
+			list-style: none;
+			list-style-image: none; // Needed for IE 6
+		}
+
+		ul {
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.reference-members {
+		margin-bottom: 16px;
+	}
+
+	.member-group-text {
+		margin-bottom: 16px;
+	}
+
+	.member-description {
+		border: 1px solid #999;
+		// .member-header defines border-top for operator lists
+		border-top: 0;
+		margin: 16px 0 16px 0;
+	}
+
+	.member-header {
+		border-top: 1px solid #999;
+		padding: 10px;
+	}
+
+	.member-title {
+		float: left;
+		width: 400px;
+	}
+
+	.member-close {
+		float: right;
+	}
+
+	.member-text {
+		border-top: 1px dashed #999;
+		padding: 10px 10px 0 10px;
+		margin-bottom: -6px; // Compensate margins of p and ul to end up with 10px
+	}
+
+	.member-link {
+		text-indent: -30px;
+		padding-left: 30px;
+	}
+
+	ul,
+	.paperscript,
+	.CodeMirror {
+		margin-top: -8px; // Move half way up close to previous paragraph
+		margin-bottom: 16px;
+	}
+
+	ul {
+		margin-top: 0; // Clear the above -8px for ul again
+	}
+}
