@@ -280,35 +280,6 @@ body.fullscreen {
   clear: left;
   min-height: 32px; }
 
-/* Helpers */
-.clear {
-  clear: both; }
-
-.float-left {
-  float: left; }
-
-.float-right {
-  float: right; }
-
-.hidden {
-  display: none !important; }
-
-.fixed {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  bottom: 0; }
-
-.small {
-  font-size: 11px;
-  line-height: 16px; }
-
-.donation {
-  padding-bottom: 20px; }
-  .donation input,
-  .donation select {
-    margin-right: 0.35em; }
-
 /* Resources */
 .resource-block {
   display: table;
@@ -386,3 +357,183 @@ ul.tutorial-index {
 
 #main ul.tutorial-index {
   margin-bottom: 29px; }
+
+.paperscript .buttons {
+  position: absolute;
+  right: 0;
+  z-index: 1; }
+.paperscript .button,
+.paperscript .explain {
+  float: right;
+  display: none;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin: 8px 8px 0 0; }
+.paperscript .button {
+  background: #eee; }
+.paperscript .explain {
+  background: #e3f4fc; }
+.paperscript .explain,
+.paperscript .buttons-context:hover .button {
+  display: inline-block; }
+.paperscript .button:hover {
+  background: #ddd;
+  cursor: pointer; }
+.paperscript .tools {
+  display: inline; }
+.paperscript .source {
+  overflow: auto;
+  border: 1px solid #999; }
+.paperscript .CodeMirror {
+  margin: 0 !important;
+  /* Override any potential margins again */ }
+.paperscript .CodeMirror-gutter-text,
+.paperscript .CodeMirror-lines {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.paperscript .canvas {
+  line-height: 0;
+  /* prevent weird 5px padding under canvas elements */ }
+.paperscript .canvas.border canvas {
+  border: 1px solid #999; }
+.paperscript.split .canvas {
+  border: 1px solid #999;
+  border-top: 0; }
+
+.CodeMirror {
+  overflow: auto;
+  height: 100%; }
+  .CodeMirror,
+  .CodeMirror textarea,
+  .CodeMirror pre {
+    font-family: Menlo, Consolas, "Vera Mono", monospace;
+    font-size: 12px; }
+  .CodeMirror pre {
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+    background: transparent; }
+
+.CodeMirror-gutter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 30px;
+  height: 100%;
+  background-color: #f4f4f4;
+  border-right: 1px solid #999; }
+
+.CodeMirror-gutter-text {
+  color: #aaa;
+  text-align: right;
+  padding: 2px 8px 2px 8px;
+  /* 2px required for CodeMirror-selected */ }
+  .CodeMirror-gutter-text pre {
+    font-size: 10px; }
+
+.CodeMirror-lines {
+  background: #ffffff;
+  padding: 2px 0 2px 8px;
+  /* 2px required for CodeMirror-selected */ }
+  .CodeMirror-lines pre {
+    		/*
+    		&:hover {
+    			background-color: #edf5fc;
+    		}
+    
+    		&.highlight:hover {
+    			background-color: #ffffff;
+    		}
+    		*/ }
+    .CodeMirror-lines pre.highlight {
+      background-color: #edf5fc; }
+
+.CodeMirror-cursor {
+  z-index: 10;
+  position: absolute;
+  visibility: hidden;
+  border-left: 1px solid #7c7c7c !important;
+  height: 16px; }
+
+.CodeMirror-selected {
+  background: #ccc !important;
+  color: HighlightText !important;
+  padding: 2px 0 2px 0; }
+
+.CodeMirror-focused .CodeMirror-cursor {
+  visibility: visible; }
+.CodeMirror-focused .CodeMirror-selected {
+  background: Highlight !important; }
+
+.CodeMirror-matchingbracket {
+  background: #e3fc8d !important; }
+
+.CodeMirror-nonmatchingbracket {
+  color: #d62a28 !important; }
+
+/* JavaScript & HTML Modes */
+span.cm-keyword {
+  color: #ff7800; }
+span.cm-atom, span.cm-number {
+  color: #3b5bb5; }
+span.cm-def, span.cm-variable-2, span.cm-variable-3 {
+  color: #3a4a64; }
+span.cm-variable {
+  color: #000; }
+span.cm-property {
+  color: #000; }
+span.cm-operator {
+  color: #000; }
+span.cm-comment {
+  color: #8c868f; }
+span.cm-string {
+  color: #409b1c; }
+span.cm-meta {
+  color: #555; }
+span.cm-error {
+  color: #f30; }
+span.cm-qualifier {
+  color: #555; }
+span.cm-builtin {
+  color: #30a; }
+span.cm-bracket {
+  color: #cc7; }
+span.cm-tag {
+  font-weight: bold;
+  color: #3b5bb5; }
+span.cm-attribute {
+  font-style: italic;
+  color: #3b5bb5; }
+
+/* Helpers */
+.clear {
+  clear: both; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.hidden {
+  display: none !important; }
+
+.fixed {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0; }
+
+.small {
+  font-size: 11px;
+  line-height: 16px; }
+
+.donation {
+  padding-bottom: 20px; }
+  .donation input,
+  .donation select {
+    margin-right: 0.35em; }
