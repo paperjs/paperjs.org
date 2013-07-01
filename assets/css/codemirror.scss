@@ -1,0 +1,146 @@
+.CodeMirror {
+	overflow: auto;
+	height: 100%;
+
+	&,
+	textarea,
+	pre {
+		font-family: Menlo, Consolas, "Vera Mono", monospace;
+		font-size: 12px;
+	}
+
+	pre {
+		line-height: 16px;
+		margin: 0;
+		padding: 0;
+		background: transparent;
+	}
+}
+
+.CodeMirror-gutter {
+	position: absolute;
+	left: 0;
+	top: 0;
+	min-width: 30px;
+	height: 100%;
+	background-color: #f4f4f4;
+	border-right: 1px solid #999;
+}
+
+.CodeMirror-gutter-text {
+	color: #aaa;
+	text-align: right;
+	padding: 2px 8px 2px 8px; /* 2px required for CodeMirror-selected */
+
+	pre {
+		font-size: 10px;
+	}
+}
+
+.CodeMirror-lines {
+	background: #ffffff;
+	padding: 2px 0 2px 8px; /* 2px required for CodeMirror-selected */
+
+	pre {
+		&.highlight {
+			background-color: #edf5fc;
+		}
+
+		/*
+		&:hover {
+			background-color: #edf5fc;
+		}
+
+		&.highlight:hover {
+			background-color: #ffffff;
+		}
+		*/
+	}
+}
+
+.CodeMirror-cursor {
+	z-index: 10;
+	position: absolute;
+	visibility: hidden;
+	border-left: 1px solid #7c7c7c !important;
+	height: 16px;
+}
+
+.CodeMirror-selected {
+	background: #ccc !important;
+	color: HighlightText !important;
+	padding: 2px 0 2px 0;
+}
+
+.CodeMirror-focused {
+	.CodeMirror-cursor {
+		visibility: visible;
+	}
+
+	.CodeMirror-selected {
+		background: Highlight !important;
+	}
+}
+
+.CodeMirror-matchingbracket {
+	background: #e3fc8d !important;
+}
+
+.CodeMirror-nonmatchingbracket {
+	color: #d62a28 !important;
+}
+
+/* JavaScript & HTML Modes */
+
+span {
+	&.cm-keyword {
+		color: #ff7800;
+	}
+	&.cm-atom,
+	&.cm-number {
+		color: #3b5bb5;
+	}
+	&.cm-def,
+	&.cm-variable-2,
+	&.cm-variable-3 {
+		color: #3a4a64;
+	}
+	&.cm-variable {
+		color: #000;
+	}
+	&.cm-property {
+		color: #000;
+	}
+	&.cm-operator {
+		color: #000;
+	}
+	&.cm-comment {
+		color: #8c868f;
+	}
+	&.cm-string {
+		color: #409b1c;
+	}
+	&.cm-meta {
+		color: #555;
+	}
+	&.cm-error {
+		color: #f30;
+	}
+	&.cm-qualifier {
+		color: #555;
+	}
+	&.cm-builtin {
+		color: #30a;
+	}
+	&.cm-bracket {
+		color: #cc7;
+	}
+	&.cm-tag {
+		font-weight: bold;
+		color: #3b5bb5;
+	}
+	&.cm-attribute {
+		font-style: italic;
+		color: #3b5bb5;
+	}
+}
