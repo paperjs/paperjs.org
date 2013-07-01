@@ -8,7 +8,7 @@ h2 {
     font-weight: normal;
     font-size: 27px;
     line-height: 32px;
-    padding-top: $page-margin; /* Padding instead of margin, so anchor trick works here too */
+    padding-top: $page-margin; // Padding instead of margin, so anchor trick works here too
     padding-bottom: 8px;
 }
 

@@ -46,7 +46,7 @@
 	}
 
 	.CodeMirror {
-		margin: 0 !important; /* Override any potential margins again */
+		margin: 0 !important; // Override any potential margins again
 	}
 
 	.CodeMirror-gutter-text,
@@ -56,7 +56,7 @@
 	}
 
 	.canvas {
-		line-height: 0; /* prevent weird 5px padding under canvas elements */
+		line-height: 0; // Prevent weird 5px padding under canvas elements
 	}
 
 	.canvas.border canvas {

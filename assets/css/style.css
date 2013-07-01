@@ -50,7 +50,6 @@ h2 {
   font-size: 27px;
   line-height: 32px;
   padding-top: 32px;
-  /* Padding instead of margin, so anchor trick works here too */
   padding-bottom: 8px; }
 
 h1,
@@ -133,7 +132,6 @@ pre {
 
 #main {
   width: 540px;
-  /* We need relative position so scrollbars on document work */
   position: relative;
   margin-left: 224px; }
   #main.full {
@@ -148,7 +146,6 @@ pre {
 body.fullscreen {
   overflow: hidden; }
   body.fullscreen #main {
-    /* Clear relative position for fullscreen examples */
     position: absolute;
     width: auto;
     overflow: hidden; }
@@ -168,7 +165,6 @@ body.fullscreen {
   .menu .spacer {
     margin-top: 10px; }
   .menu > .entry {
-    /* Don't indent the first level of entries */
     padding: 0; }
 
 /* Colours and Links */
@@ -190,8 +186,7 @@ body.fullscreen {
 
 /* Content Styles */
 #content {
-  /* Text Content */
-  /* No bottom margin in nested lists */ }
+  /* Text Content */ }
   #content,
   #content a {
     color: #333333; }
@@ -306,7 +301,6 @@ body.fullscreen {
   margin: 0 10px 0 0; }
 
 .resource-text .CodeMirror {
-  /* Having height at 100% in resource-blocks breaks table layout */
   height: auto;
   margin-bottom: 20px; }
 
@@ -329,80 +323,6 @@ body.fullscreen {
 .download .image a {
   border: 0 !important;
   background: none !important; }
-
-/* Documentation */
-li.expandable-list ul {
-  display: none; }
-li.expandable-list.expanded a.arrow {
-  background: url(assets/arrow-open.gif) no-repeat; }
-li.expandable-list.expanded ul {
-  display: block; }
-li.expandable-list a.arrow {
-  width: 8px;
-  height: 8px;
-  display: inline-block;
-  background: url(assets/arrow-close.gif) no-repeat;
-  border-bottom: 0;
-  padding-right: 4px; }
-
-/* Tutorials */
-ul.tutorial-index {
-  margin: 0;
-  padding-left: 0;
-  list-style: none; }
-  ul.tutorial-index > li:before {
-    display: none; }
-  ul.tutorial-index ul {
-    padding-left: 13px; }
-
-#main ul.tutorial-index {
-  margin-bottom: 29px; }
-
-.paperscript .buttons {
-  position: absolute;
-  right: 0;
-  z-index: 1; }
-.paperscript .button,
-.paperscript .explain {
-  float: right;
-  display: none;
-  font-size: 11px;
-  line-height: 16px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 8px 8px 0 0; }
-.paperscript .button {
-  background: #eee; }
-.paperscript .explain {
-  background: #e3f4fc; }
-.paperscript .explain,
-.paperscript .buttons-context:hover .button {
-  display: inline-block; }
-.paperscript .button:hover {
-  background: #ddd;
-  cursor: pointer; }
-.paperscript .tools {
-  display: inline; }
-.paperscript .source {
-  overflow: auto;
-  border: 1px solid #999; }
-.paperscript .CodeMirror {
-  margin: 0 !important;
-  /* Override any potential margins again */ }
-.paperscript .CodeMirror-gutter-text,
-.paperscript .CodeMirror-lines {
-  padding-top: 10px;
-  padding-bottom: 10px; }
-.paperscript .canvas {
-  line-height: 0;
-  /* prevent weird 5px padding under canvas elements */ }
-.paperscript .canvas.border canvas {
-  border: 1px solid #999; }
-.paperscript.split .canvas {
-  border: 1px solid #999;
-  border-top: 0; }
 
 .CodeMirror {
   overflow: auto;
@@ -430,27 +350,15 @@ ul.tutorial-index {
 .CodeMirror-gutter-text {
   color: #aaa;
   text-align: right;
-  padding: 2px 8px 2px 8px;
-  /* 2px required for CodeMirror-selected */ }
+  padding: 2px 8px 2px 8px; }
   .CodeMirror-gutter-text pre {
     font-size: 10px; }
 
 .CodeMirror-lines {
   background: #ffffff;
-  padding: 2px 0 2px 8px;
-  /* 2px required for CodeMirror-selected */ }
-  .CodeMirror-lines pre {
-    		/*
-    		&:hover {
-    			background-color: #edf5fc;
-    		}
-    
-    		&.highlight:hover {
-    			background-color: #ffffff;
-    		}
-    		*/ }
-    .CodeMirror-lines pre.highlight {
-      background-color: #edf5fc; }
+  padding: 2px 0 2px 8px; }
+  .CodeMirror-lines pre.highlight {
+    background-color: #edf5fc; }
 
 .CodeMirror-cursor {
   z-index: 10;
@@ -508,6 +416,156 @@ span.cm-tag {
 span.cm-attribute {
   font-style: italic;
   color: #3b5bb5; }
+
+.paperscript .buttons {
+  position: absolute;
+  right: 0;
+  z-index: 1; }
+.paperscript .button,
+.paperscript .explain {
+  float: right;
+  display: none;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin: 8px 8px 0 0; }
+.paperscript .button {
+  background: #eee; }
+.paperscript .explain {
+  background: #e3f4fc; }
+.paperscript .explain,
+.paperscript .buttons-context:hover .button {
+  display: inline-block; }
+.paperscript .button:hover {
+  background: #ddd;
+  cursor: pointer; }
+.paperscript .tools {
+  display: inline; }
+.paperscript .source {
+  overflow: auto;
+  border: 1px solid #999; }
+.paperscript .CodeMirror {
+  margin: 0 !important; }
+.paperscript .CodeMirror-gutter-text,
+.paperscript .CodeMirror-lines {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.paperscript .canvas {
+  line-height: 0; }
+.paperscript .canvas.border canvas {
+  border: 1px solid #999; }
+.paperscript.split .canvas {
+  border: 1px solid #999;
+  border-top: 0; }
+
+/* Documentation */
+li.expandable-list ul {
+  display: none; }
+li.expandable-list.expanded a.arrow {
+  background: url(assets/arrow-open.gif) no-repeat; }
+li.expandable-list.expanded ul {
+  display: block; }
+li.expandable-list a.arrow {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background: url(assets/arrow-close.gif) no-repeat;
+  border-bottom: 0;
+  padding-right: 4px; }
+
+/* Tutorials */
+ul.tutorial-index {
+  margin: 0;
+  padding-left: 0;
+  list-style: none; }
+  ul.tutorial-index > li:before {
+    display: none; }
+  ul.tutorial-index ul {
+    padding-left: 13px; }
+
+#main ul.tutorial-index {
+  margin-bottom: 29px; }
+
+.reference h1,
+.reference h2,
+.reference h3 {
+  font-size: 13px;
+  font-weight: normal;
+  height: 18px;
+  border-bottom: 1px solid;
+  margin-top: 0;
+  margin-bottom: 16px; }
+.reference h2 a {
+  font-weight: bold; }
+.reference h3 {
+  margin-top: 16px;
+  border-bottom-style: dotted; }
+.reference a tt {
+  line-height: 18px; }
+.reference p {
+  margin: 0 0 16px 0; }
+.reference hr {
+  border: none;
+  border-bottom: 1px dotted; }
+.reference ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.reference .reference-list ul,
+.reference .reference-inherited ul {
+  margin-left: 16px; }
+.reference .reference-inherited ul li {
+  text-indent: -30px;
+  padding-left: 30px; }
+.reference .reference-classes {
+  padding-bottom: 4px; }
+  .reference .reference-classes h2,
+  .reference .reference-classes h3,
+  .reference .reference-classes hr {
+    margin: 10px 0 10px 0; }
+  .reference .reference-classes .first h2 {
+    margin-top: 0; }
+  * html .reference .reference-classes img {
+    margin-top: 5px; }
+  .reference .reference-classes li {
+    list-style: none;
+    list-style-image: none; }
+  .reference .reference-classes ul {
+    margin-left: 10px;
+    margin-bottom: 10px; }
+.reference .reference-members {
+  margin-bottom: 16px; }
+.reference .member-group-text {
+  margin-bottom: 16px; }
+.reference .member-description {
+  border: 1px solid #999;
+  border-top: 0;
+  margin: 16px 0 16px 0; }
+.reference .member-header {
+  border-top: 1px solid #999;
+  padding: 10px; }
+.reference .member-title {
+  float: left;
+  width: 400px; }
+.reference .member-close {
+  float: right; }
+.reference .member-text {
+  border-top: 1px dashed #999;
+  padding: 10px 10px 0 10px;
+  margin-bottom: -6px; }
+.reference .member-link {
+  text-indent: -30px;
+  padding-left: 30px; }
+.reference ul,
+.reference .paperscript,
+.reference .CodeMirror {
+  margin-top: -8px;
+  margin-bottom: 16px; }
+.reference ul {
+  margin-top: 0; }
 
 /* Helpers */
 .clear {

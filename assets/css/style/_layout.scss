@@ -20,7 +20,7 @@
 
 #main {
     width: $content-width;
-    /* We need relative position so scrollbars on document work */
+    // We need relative position so scrollbars on document work
     position: relative;
     margin-left: $menu-width + 2 * $page-margin;
 
@@ -43,7 +43,7 @@ body.fullscreen {
     overflow: hidden;
 
     #main {
-        /* Clear relative position for fullscreen examples */
+        // Clear relative position for fullscreen examples
         position: absolute;
         width: auto;
         overflow: hidden;
@@ -73,7 +73,7 @@ body.fullscreen {
     }
 
     & > .entry {
-        /* Don't indent the first level of entries */
+        // Don't indent the first level of entries
         padding: 0;
     }
 }

@@ -31,7 +31,7 @@
 }
 
 .resource-text .CodeMirror {
-    /* Having height at 100% in resource-blocks breaks table layout */
+    // Having height at 100% in resource-blocks breaks table layout
     height: auto;
     margin-bottom: 20px;
 }

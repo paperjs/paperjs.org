@@ -30,7 +30,7 @@
 .CodeMirror-gutter-text {
 	color: #aaa;
 	text-align: right;
-	padding: 2px 8px 2px 8px; /* 2px required for CodeMirror-selected */
+	padding: 2px 8px 2px 8px; // 2px required for CodeMirror-selected
 
 	pre {
 		font-size: 10px;
@@ -39,22 +39,20 @@
 
 .CodeMirror-lines {
 	background: #ffffff;
-	padding: 2px 0 2px 8px; /* 2px required for CodeMirror-selected */
+	padding: 2px 0 2px 8px; // 2px required for CodeMirror-selected
 
 	pre {
 		&.highlight {
 			background-color: #edf5fc;
 		}
 
-		/*
-		&:hover {
-			background-color: #edf5fc;
-		}
-
-		&.highlight:hover {
-			background-color: #ffffff;
-		}
-		*/
+//		&:hover {
+//			background-color: #edf5fc;
+//		}
+//
+//		&.highlight:hover {
+//			background-color: #ffffff;
+//		}
 	}
 }
 
