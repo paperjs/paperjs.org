@@ -82,7 +82,7 @@ module.exports = {
 				parts.push('</div>');
 			}
 			parts.push('</div>');
-			return parts.join('\n   ');
+			return parts.join('');
 		}
 	}
 };
