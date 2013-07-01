@@ -1,3 +1,119 @@
+/**
+ * Copyright (c) 2013, Juerg Lehni
+ * http://lehni.org/
+ */
+
+// Little Helpers
+
+function hyphenate(str) {
+	return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function isVisible(el) {
+	if (el.is(':hidden'))
+		return false;
+	var viewTop = $(window).scrollTop();
+	var viewBottom = viewTop + $(window).height();
+	var top = el.offset().top;
+	var bottom = top + el.height();
+	return top >= viewTop && bottom <= viewBottom 
+			|| top <= viewTop && bottom >= viewTop 
+			|| top <= viewBottom && bottom >= viewBottom; 
+}
+
+function scrollTo(el, callback) {
+	$('html, body').animate({
+		scrollTop: el.offset().top
+	}, 250, callback);
+}
+
+// DOM-Ready
+
+$(function() {
+	var toc = $('.menu.toc');
+	var checks = [];
+	var active;
+
+	function update() {
+		$.each(checks, function() {
+			if (this())
+				return false;
+		});
+	}
+
+	$(document).scroll(update);
+	$(window).resize(update);
+	setTimeout(update, 0);
+
+	$('.section').each(function() {
+		var section = $(this);
+		var anchor = $('a', section);
+		// Move content until next section inside section
+		section.append(section.nextUntil('.section'));
+		var title = anchor.attr('title') || $('h1,h2', section).first().text();
+		var id = section.attr('id');
+		if (!id) {
+			id = hyphenate(title)
+					.replace(/\s+/g, '-')
+					.replace(/^#/, '')
+					.replace(/[!"#$%&'\()*+,.\/:;<=>?@\[\\\]\^_`{|}~]+/g, '-')
+					.replace(/-+/g, '-');
+			section.attr('id', id);
+			anchor.attr('name', id);
+		}
+
+		function activate() {
+			if (active)
+				active.removeClass('active');
+			selector.addClass('active');
+			active = selector;
+		}
+
+		// Create table of contents on the fly
+		if (toc) {
+			var selector = $('<li class="entry selector"><a href="#' + id + '">'
+					+ title + '</a></li>').appendTo(toc);
+			if (section.is('.spacer'))
+				selector.addClass('spacer');
+			$('a', selector).click(function() {
+				scrollTo(section, function() {
+					window.location.hash = id;
+				});
+				return false;
+			});
+
+			checks.push(function() {
+				var visible = isVisible(section);
+				if (visible)
+					activate();
+				return visible;
+			});
+		}
+	});
+
+	// Expand height of .content-end so that the last anchor aligns perfectly with
+	// the top of the browser window.
+
+	var end = $('.content-end');
+	var lastAnchor = $('a[name]:last');
+
+	function resize() {
+		var bottom = $(document).height() - lastAnchor.offset().top - $(window).height();
+		end.height(end.height() - bottom);
+	}
+
+	if (end.length && lastAnchor.length) {
+		$(window).load(resize);
+		$(window).resize(resize);
+		resize();
+	}
+});
+
+
+var _$ = DomElement.get,
+	_$$ = DomElement.getAll;
+
+
 ExpandableList = HtmlElement.extend({
 	_class: 'expandable-list',
 
@@ -17,10 +133,10 @@ SideList = HtmlElement.extend({
 
 	initialize: function() {
 		// Shorten each list entry to fit the available space
-		$$('div.entry', this).each(function(entry) {
-			var title = $('div.title a', entry);
+		_$$('div.entry', this).each(function(entry) {
+			var title = _$('div.title a', entry);
 			// Span is needed for correct width, otherwise whole column is returned.
-			var date = $('div.date span', entry);
+			var date = _$('div.date span', entry);
 			if (title && date) {
 				var width = entry.getWidth() - date.getWidth();
 				var text = title.getFirstNode();
@@ -45,6 +161,7 @@ SideList = HtmlElement.extend({
 	}
 });
 
+/*
 // TODO: See if this can be merged with SideList as it repeats functionality
 AutoFit = HtmlElement.extend({
 	_class: 'auto-fit',
@@ -75,7 +192,7 @@ AutoFit = HtmlElement.extend({
 Selector = HtmlElement.extend(new function () {
 
 	function setup() {
-		var selectors = $$('.selector');
+		var selectors = _$$('.selector');
 		Selector.active = selectors[0];
 		Selector.active.addClass('active');
 		function update() {
@@ -105,9 +222,9 @@ Selector = HtmlElement.extend(new function () {
 				setup();
 			}
 
-			var link = $('a', this),
+			var link = _$('a', this),
 				that = this;
-			this.target = $(link.get('href'));
+			this.target = _$(link.get('href'));
 			// Move all elements of this section into the section div now,
 			// so the selector can easily check if the section is visible or not
 			// We're not doing this on the server because it's easier here,
@@ -173,7 +290,7 @@ ContentEnd = HtmlElement.extend({
 	_class: 'content-end',
 
 	initialize: function() {
-		var anchor = $$('a[name]').getLast(),
+		var anchor = _$$('a[name]').getLast(),
 			that = this;
 		if (anchor) {
 			function resize() {
@@ -191,6 +308,7 @@ ContentEnd = HtmlElement.extend({
 		}
 	}
 });
+*/
 
 function createCodeMirror(place, options, source) {
 	return new CodeMirror(place, Hash.create({}, {
@@ -254,12 +372,12 @@ PaperScript = HtmlElement.extend({
 		// it is made visible and then call initialize() manually.
 		if (this.initialized || this.getBounds().height == 0)
 			return;
-		var script = $('script', this),
-			runButton = $('.button.run', this);
+		var script = _$('script', this),
+			runButton = _$('.button.run', this);
 		if (!script || !runButton)
 			return;
 		var that = this,
-			canvas = $('canvas', this),
+			canvas = _$('canvas', this),
 			hasResize = canvas.getProperty('resize'),
 			showSplit = this.hasClass('split'),
 			sourceFirst = this.hasClass('source'),
@@ -268,9 +386,9 @@ PaperScript = HtmlElement.extend({
 			hasBorders = true,
 			edited = false,
 			animateExplain,
-			inspectorButton = $('.button.inspector', this),
-			explain = $('.explain', this),
-			tools = $('.tools', this),
+			inspectorButton = _$('.button.inspector', this),
+			explain = _$('.explain', this),
+			tools = _$('.tools', this),
 			source = script.injectBefore('div', {
 				className: 'source hidden'
 			});
@@ -411,7 +529,7 @@ PaperScript = HtmlElement.extend({
 				runScript();
 			// Add extra margin if there is scrolling
 			runButton.setStyle('margin-right',
-				$('.CodeMirror', source).getScrollSize().height > height
+				_$('.CodeMirror', source).getScrollSize().height > height
 					? 23 : 8);
 		}
 
@@ -458,10 +576,10 @@ PaperScript = HtmlElement.extend({
 
 var lastMemberId = null;
 function toggleMember(id, scrollTo, dontScroll) {
-	var link = $('#' + id + '-link');
+	var link = _$('#' + id + '-link');
 	if (!link)
 		return true;
-	var desc = $('#' + id + '-description');
+	var desc = _$('#' + id + '-description');
 	var v = !link.hasClass('hidden');
 	// Retrieve y-offset before any changes, so we can correct scrolling after
 	var offset = (v ? link : desc).getOffset().y;
@@ -482,7 +600,7 @@ function toggleMember(id, scrollTo, dontScroll) {
 				+ (v ? desc : link).getOffset().y - offset + 11 * (v ? 1 : -1));
 	}
 	if (!desc.editor && v) {
-		desc.editor = $$('pre.code, .paperscript', desc).each(function(code) {
+		desc.editor = _$$('pre.code, .paperscript', desc).each(function(code) {
 			code.initialize();
 		});
 	}
@@ -492,12 +610,12 @@ function toggleMember(id, scrollTo, dontScroll) {
 }
 
 function toggleThumbnail(id, over) {
-	$('#' + id).modifyClass('hidden', over);
-	$('#' + id + '-over').modifyClass('hidden', !over);
+	_$('#' + id).modifyClass('hidden', over);
+	_$('#' + id + '-over').modifyClass('hidden', !over);
 }
 
 function scrollToElement(id) {
-	var e = $('#' + id + '-member');
+	var e = _$('#' + id + '-member');
 	window.location.hash = id;
 	if (e) {
 		if (e.hasClass('member'))
@@ -510,12 +628,12 @@ function scrollToElement(id) {
 $document.addEvent('domready', function() {
 	var h = unescape(window.location.hash);
 	if (h) scrollToElement(h.substring(1));
-	var classes = $('.reference-classes');
+	var classes = _$('.reference-classes');
 	if (classes) {
 		// Mark currently selected class as active. Do it client-sided
 		// since the menu is generated by jsdocs.
 		var path = window.location.pathname.toLowerCase();
-		$$('a', classes).each(function(link) {
+		_$$('a', classes).each(function(link) {
 			if (link.get('href') == path) {
 				link.addClass('active');
 			}

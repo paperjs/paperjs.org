@@ -58,11 +58,6 @@ h3,
 h4 {
   border-bottom: 1px solid;
   margin: 0 0 20px 0; }
-  h1:last-child,
-  h2:last-child,
-  h3:last-child,
-  h4:last-child {
-    margin: 0; }
 
 h3 {
   border-bottom: 1px dotted;
@@ -195,11 +190,6 @@ body.fullscreen {
   #content a:hover,
   #content a:hover em {
     background: #e5e5e5; }
-  #content a.anchor {
-    display: block;
-    height: 0;
-    padding: 0;
-    border: 0; }
   #content em {
     font-style: normal;
     background: #efefef; }

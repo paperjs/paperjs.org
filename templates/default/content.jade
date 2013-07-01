@@ -1,7 +1,7 @@
 main = template('main')
 #main
   #content(class=page.type)
-    if !param.titles || !(param.titles && param.titles.length) || !(param.titles && param.titles[0].isFirst)
+    if !param.titles || !param.titles.length || !param.titles[0].isFirst
       h1 !{page.title}
     !{main}
   .content-end

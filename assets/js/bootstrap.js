@@ -1636,9 +1636,6 @@ DomElement.inject(new function() {
 	};
 });
 
-var $ = DomElement.get,
-	$$ = DomElement.getAll;
-
 var DomTextNode = DomNode.extend({
 	_type: 'textnode'
 });

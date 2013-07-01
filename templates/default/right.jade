@@ -1,7 +1,4 @@
 .right.fixed
   if param.titles
     h1 Index
-    ul.menu
-      for title in param.titles
-        li.entry.selector
-          a(href='#' + title.anchor) !{title.title}
+    ul.menu.toc

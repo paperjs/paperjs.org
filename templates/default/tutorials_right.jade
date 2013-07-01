@@ -6,7 +6,4 @@ if tutorials && (tutorials == page || tutorials.isAncestor(page))
 if param.titles
   div.right.index
     h1 Content
-    ul.menu
-      for title in param.titles
-        li.entry.selector
-          a(href='#' + title.anchor) !{title.title}
+    ul.menu.toc
