@@ -107,6 +107,18 @@ var behaviors = {
 		}
 	},
 
+	sticky: function() {
+		$('.sticky').each(function() {
+			me = $(this);
+			container = $('<div/>').append(me.contents()).appendTo(me);
+			// Insert a div wrapper of which the fixed class is modified depending on position
+			$(window).scroll(function() {
+				if (container.is(':visible'))
+				  container.toggleClass('fixed', me.offset().top - $(this).scrollTop() <= 0);
+			});
+		});
+	},
+
 	hash: function() {
 		var hash = unescape(window.location.hash);
 		if (hash) {
@@ -154,203 +166,6 @@ $(function() {
 
 var _$ = DomElement.get,
 	_$$ = DomElement.getAll;
-
-/*
-
-ExpandableList = HtmlElement.extend({
-	_class: 'expandable-list',
-
-	initialize: function() {
-		this.injectTop('a', { href: '#', 'class': 'arrow', events: {
-			click: function(event) {
-				var list = this.getParent();
-				list.modifyClass('expanded', !list.hasClass('expanded'));
-				event.stop();
-			}
-		}});
-	}
-});
-
-SideList = HtmlElement.extend({
-	_class: 'side-list',
-
-	initialize: function() {
-		// Shorten each list entry to fit the available space
-		_$$('div.entry', this).each(function(entry) {
-			var title = _$('div.title a', entry);
-			// Span is needed for correct width, otherwise whole column is returned.
-			var date = _$('div.date span', entry);
-			if (title && date) {
-				var width = entry.getWidth() - date.getWidth();
-				var text = title.getFirstNode();
-				var str = text.getText();
-				// Remove trailing white space, since we're matching non-white
-				// in backward loop.
-				var pos = str.length - str.match(/([\s]*)$/)[1].length;
-				// Depending on the prediction, either one or the other of
-				// the following loops is needed.
-				// Now first go backwards until the height fits.
-				while (title.getWidth() > width) {
-					str = str.substring(0, pos).trim(' .,');
-					text.setText(str + '\u2026');
-					// Find the previous word using regexp, including whitespace.
-					var word = (str.match(/([\s]*[^\s]*)$/) || [])[1];
-					if (!word)
-						break;
-					pos -= word.length;
-				}
-			}
-		});
-	}
-});
-
-// TODO: See if this can be merged with SideList as it repeats functionality
-AutoFit = HtmlElement.extend({
-	_class: 'auto-fit',
-
-	initialize: function() {
-		var height = this.getHeight();
-		var content = this.getFirst();
-		var text = content.getLastNode();
-		var str = text.getText();
-		// Remove trailing white space, since we're matching non-white
-		// in backward loop.
-		var pos = str.length - str.match(/([\s]*)$/)[1].length;
-		// Depending on the prediction, either one or the other of
-		// the following loops is needed.
-		// Now first go backwards until the height fits.
-		while (content.getHeight() > height) {
-			str = str.substring(0, pos);
-			text.setText(str + '\u2026');
-			// Find the previous word using regexp, including whitespace.
-			var word = (str.match(/([\s]*[^\s]*)$/) || [])[1];
-			if (!word)
-				break;
-			pos -= word.length;
-		}
-	}
-});
-
-Selector = HtmlElement.extend(new function () {
-
-	function setup() {
-		var selectors = _$$('.selector');
-		Selector.active = selectors[0];
-		Selector.active.addClass('active');
-		function update() {
-//			if (!Selector.active.isVisible()) {
-				selectors.each(function(selector) {
-					if (selector.checkActive())
-						throw $break;
-				});
-//			}
-		}
-		$document.addEvents({
-			scroll: update
-		});
-		$window.addEvents({
-			resize: update
-		});
-	}
-
-	var scroll = new Fx.Scroll($document, { duration: 250 });
-
-	return {
-		_class: 'selector',
-
-		initialize: function() {
-			if (!Selector.setup) {
-				Selector.setup = true;
-				setup();
-			}
-
-			var link = _$('a', this),
-				that = this;
-			this.target = _$(link.get('href'));
-			// Move all elements of this section into the section div now,
-			// so the selector can easily check if the section is visible or not
-			// We're not doing this on the server because it's easier here,
-			// mainly due to the paragraph encoder not processing nested divs.
-			var child = this.target && this.target.getNextNode();
-			while (child && (!child.hasClass || !child.hasClass('section'))) {
-				// Seems strange to call child.getNextNode() twice, but 
-				// the Code tag below requires it because the first call
-				// triggers its conversion from <pre> to CodeMirror... hmmm!
-				child.getNextNode();
-				var next = child.getNextNode();
-				this.target.appendChild(child);
-				child = next;
-			}
-			link.addEvents({
-				click: function(event) {
-					if (!that.target)
-						return;
-					scroll.toElement(that.target, { y: true }).chain(function() {
-						window.location.hash = that.target.getId();
-						that.activate();
-					});
-					event.stop();
-				}
-			});
-		},
-
-		isVisible: function() {
-			return this.target && this.target.isVisible();
-		},
-
-		activate: function() {
-			Selector.active.removeClass('active');
-			this.addClass('active');
-			Selector.active = this;
-		},
-
-		checkActive: function() {
-			if (!this.isVisible())
-				return false;
-			this.activate();
-			return true;
-		}
-	};
-});
-
-Index = HtmlElement.extend({
-	_class: 'index',
-
-	initialize: function() {
-		// Move children into nested div, so it can be changed to fixed
-		var container = this.injectTop('div', this.getChildNodes()),
-			that = this;
-		$window.addEvents({
-			scroll: function(event) {
-				container.modifyClass('fixed', that.getOffset(false, true).y <= 0);
-			}
-		});
-	}
-});
-
-ContentEnd = HtmlElement.extend({
-	_class: 'content-end',
-
-	initialize: function() {
-		var anchor = _$$('a[name]').getLast(),
-			that = this;
-		if (anchor) {
-			function resize() {
-				var bottom = $window.getScrollSize().height
-					- anchor.getOffset().y - $window.getSize().height;
-				that.setHeight(that.getHeight() - bottom);
-			}
-			$window.addEvents({
-				load: resize,
-				resize: resize
-			});
-			// Not sure why these are required twice, in addition to load()..
-			resize();
-			resize();
-		}
-	}
-});
-*/
 
 function createCodeMirror(place, options, source) {
 	return new CodeMirror(place, Hash.create({}, {

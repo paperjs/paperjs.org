@@ -4,6 +4,6 @@ if tutorials && (tutorials == page || tutorials.isAncestor(page))
     h1 Index
     !{ template('tutorials_index', tutorials) }
 if param.titles
-  div.right.index
+  div.right.index.sticky
     h1 Content
     ul.menu.toc
