@@ -118,10 +118,9 @@ pre {
 #menu {
   width: 160px;
   position: fixed;
-  overflow: hidden;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-right: 21px;
+  padding: 0 21px 32px 0;
   top: 0;
   bottom: 0; }
 

@@ -10,10 +10,9 @@
 #menu {
 	width: $menu-width;
 	position: fixed;
-	overflow: hidden;
 	overflow-x: hidden;
 	overflow-y: auto;
-	padding-right: 21px; // Position scrollbar in a good distance
+	padding: 0 21px $page-margin 0; // 21px: Position scrollbar in a good distance
 	top: 0;
 	bottom: 0;
 }
