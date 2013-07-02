@@ -1,3 +1,3 @@
 # Paper.js Tutorials
 
-The source code of the Paper.js tutorials and examples on <http://paperjs.org/>
+The source of the Paper.js website: http://paperjs.org
