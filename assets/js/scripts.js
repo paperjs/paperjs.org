@@ -379,7 +379,7 @@ function createPaperScript(element) {
 			runScript();
 		// Add extra margin if there is scrolling
 		runButton.css('margin-right',
-			$('.CodeMirror', source).height() > height ? 23 : 8);
+			$('.CodeMirror .CodeMirror-scroll', source).height() > height ? 23 : 8);
 	}
 
 	if (hasResize) {
