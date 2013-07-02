@@ -34,8 +34,6 @@ function smoothScrollTo(el, callback) {
 	}, 250, callback);
 }
 
-// DOM-Ready
-
 var behaviors = {};
 
 behaviors.sections = function() {
@@ -213,7 +211,7 @@ function createCode(element) {
 		element.replaceWith(el);
 	}, {
 		lineNumbers: !element.parent('.resource-text').length,
-		firstLineNumber: (start || 1).toInt(),
+		firstLineNumber: parseInt(start || 1, 10),
 		mode: element.attr('mode') || 'javascript',
 		readOnly: true
 	}, element);
@@ -221,9 +219,9 @@ function createCode(element) {
 		var highlights = highlight.split(',');
 		for (var i = 0, l = highlights.length; i < l; i++) {
 			var highlight = highlights[i].split('-');
-			var hlStart = highlight[0].toInt() - 1;
+			var hlStart = parseInt(highlight[0], 10) - 1;
 			var hlEnd = highlight.length == 2
-					? highlight[1].toInt() - 1 : hlStart;
+					? parseInt(highlight[1], 10) - 1 : hlStart;
 			if (start) {
 				hlStart -= start - 1;
 				hlEnd -= start - 1;
@@ -416,6 +414,8 @@ function createPaperScript(element) {
 
 	element.data('initialized', true);
 }
+
+// DOM-Ready
 
 $(function() {
 	for (var i in behaviors)
