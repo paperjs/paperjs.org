@@ -64,13 +64,13 @@
   *zoom: 1; }
   .reference .member-header .member-link {
     float: left; }
+  .reference .member-header .member-close {
+    float: right; }
   .reference .member-header:before, .reference .member-header:after {
     content: " ";
     display: table; }
   .reference .member-header:after {
     clear: both; }
-.reference .member-close {
-  float: right; }
 .reference .member-text {
   border-top: 1px dashed #999;
   padding: 10px 10px 0 10px;

@@ -114,11 +114,11 @@
 			float: left;
 		}
 
-		@include clearfix;
-	}
+		.member-close {
+			float: right;
+		}
 
-	.member-close {
-		float: right;
+		@include clearfix;
 	}
 
 	.member-text {
