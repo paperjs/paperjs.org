@@ -41,20 +41,11 @@ function onMouseDrag(event) {
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="mindistance-member" class="member">
-<div id="mindistance-link" class="member-link">
-<a name="mindistance" href="#" onClick="return toggleMember('mindistance', false);"><tt><b>minDistance</b></tt></a>
-</div>
-<div id="mindistance-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="mindistance" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('mindistance', false);"><tt><b>minDistance</b></tt></a>
+<a name="mindistance" href="#mindistance"><tt><b>minDistance</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('mindistance', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The minimum distance the mouse has to drag before firing the onMouseDrag
@@ -74,20 +65,11 @@ event, since the last onMouseDrag event.</p>
 </div>
 		
 			
-<div id="maxdistance-member" class="member">
-<div id="maxdistance-link" class="member-link">
-<a name="maxdistance" href="#" onClick="return toggleMember('maxdistance', false);"><tt><b>maxDistance</b></tt></a>
-</div>
-<div id="maxdistance-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="maxdistance" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('maxdistance', false);"><tt><b>maxDistance</b></tt></a>
+<a name="maxdistance" href="#maxdistance"><tt><b>maxDistance</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('maxdistance', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The maximum distance the mouse has to drag before firing the onMouseDrag
@@ -107,20 +89,11 @@ event, since the last onMouseDrag event.</p>
 </div>
 		
 			
-<div id="fixeddistance-member" class="member">
-<div id="fixeddistance-link" class="member-link">
-<a name="fixeddistance" href="#" onClick="return toggleMember('fixeddistance', false);"><tt><b>fixedDistance</b></tt></a>
-</div>
-<div id="fixeddistance-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fixeddistance" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fixeddistance', false);"><tt><b>fixedDistance</b></tt></a>
+<a name="fixeddistance" href="#fixeddistance"><tt><b>fixedDistance</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fixeddistance', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	
@@ -141,20 +114,11 @@ event, since the last onMouseDrag event.</p>
 			
 	<h3>Mouse Event Handlers</h3>
 
-<div id="onmousedown-member" class="member">
-<div id="onmousedown-link" class="member-link">
-<a name="onmousedown" href="#" onClick="return toggleMember('onmousedown', false);"><tt><b>onMouseDown</b></tt></a>
-</div>
-<div id="onmousedown-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmousedown" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmousedown', false);"><tt><b>onMouseDown</b></tt></a>
+<a name="onmousedown" href="#onmousedown"><tt><b>onMouseDown</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmousedown', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse button is pushed down. The
@@ -195,20 +159,11 @@ function onMouseDown(event) {
 </div>
 		
 			
-<div id="onmousedrag-member" class="member">
-<div id="onmousedrag-link" class="member-link">
-<a name="onmousedrag" href="#" onClick="return toggleMember('onmousedrag', false);"><tt><b>onMouseDrag</b></tt></a>
-</div>
-<div id="onmousedrag-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmousedrag" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmousedrag', false);"><tt><b>onMouseDrag</b></tt></a>
+<a name="onmousedrag" href="#onmousedrag"><tt><b>onMouseDrag</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmousedrag', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse position changes while the mouse
@@ -249,20 +204,11 @@ function onMouseDrag(event) {
 </div>
 		
 			
-<div id="onmousemove-member" class="member">
-<div id="onmousemove-link" class="member-link">
-<a name="onmousemove" href="#" onClick="return toggleMember('onmousemove', false);"><tt><b>onMouseMove</b></tt></a>
-</div>
-<div id="onmousemove-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmousemove" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmousemove', false);"><tt><b>onMouseMove</b></tt></a>
+<a name="onmousemove" href="#onmousemove"><tt><b>onMouseMove</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmousemove', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called the mouse moves within the project view. The
@@ -306,20 +252,11 @@ function onMouseMove(event) {
 </div>
 		
 			
-<div id="onmouseup-member" class="member">
-<div id="onmouseup-link" class="member-link">
-<a name="onmouseup" href="#" onClick="return toggleMember('onmouseup', false);"><tt><b>onMouseUp</b></tt></a>
-</div>
-<div id="onmouseup-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmouseup" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmouseup', false);"><tt><b>onMouseUp</b></tt></a>
+<a name="onmouseup" href="#onmouseup"><tt><b>onMouseUp</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmouseup', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse button is released. The function
@@ -362,20 +299,11 @@ function onMouseUp(event) {
 			
 	<h3>Keyboard Event Handlers</h3>
 
-<div id="onkeydown-member" class="member">
-<div id="onkeydown-link" class="member-link">
-<a name="onkeydown" href="#" onClick="return toggleMember('onkeydown', false);"><tt><b>onKeyDown</b></tt></a>
-</div>
-<div id="onkeydown-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onkeydown" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onkeydown', false);"><tt><b>onKeyDown</b></tt></a>
+<a name="onkeydown" href="#onkeydown"><tt><b>onKeyDown</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onkeydown', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the user presses a key on the keyboard.</p>
@@ -427,20 +355,11 @@ function onKeyDown(event) {
 </div>
 		
 			
-<div id="onkeyup-member" class="member">
-<div id="onkeyup-link" class="member-link">
-<a name="onkeyup" href="#" onClick="return toggleMember('onkeyup', false);"><tt><b>onKeyUp</b></tt></a>
-</div>
-<div id="onkeyup-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onkeyup" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onkeyup', false);"><tt><b>onKeyUp</b></tt></a>
+<a name="onkeyup" href="#onkeyup"><tt><b>onKeyUp</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onkeyup', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the user releases a key on the keyboard.</p>
@@ -482,20 +401,11 @@ keys.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="activate-member" class="member">
-<div id="activate-link" class="member-link">
-<a name="activate" href="#" onClick="return toggleMember('activate', false);"><tt><b>activate</b>()</tt></a>
-</div>
-<div id="activate-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="activate" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('activate', false);"><tt><b>activate</b>()</tt></a>
+<a name="activate" href="#activate"><tt><b>activate</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('activate', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Activates this tool, meaning <a href="/reference/paperscope#tool"><tt>paperScope.tool</tt></a> will
 point to it and it will be the one that recieves mouse events.</p>
@@ -508,20 +418,11 @@ point to it and it will be the one that recieves mouse events.</p>
 </div>
 		
 			
-<div id="remove-member" class="member">
-<div id="remove-link" class="member-link">
-<a name="remove" href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
-</div>
-<div id="remove-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="remove" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
+<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('remove', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes this tool from the <a href="/reference/paperscope#tools"><tt>paperScope.tools</tt></a> list.</p>
 	
@@ -535,20 +436,11 @@ point to it and it will be the one that recieves mouse events.</p>
 			
 <h3>Event Handling</h3>
 
-<div id="on-type-function-member" class="member">
-<div id="on-type-function-link" class="member-link">
-<a name="on-type-function" href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
-</div>
-<div id="on-type-function-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="on-type-function" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
+<a name="on-type-function" href="#on-type-function"><tt><b>on</b>(type, function)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-type-function', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Attach an event handler to the tool.</p>
 	
@@ -579,20 +471,11 @@ occurs
 </div>
 		
 			
-<div id="on-param-member" class="member">
-<div id="on-param-link" class="member-link">
-<a name="on-param" href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
-</div>
-<div id="on-param-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="on-param" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
+<a name="on-param" href="#on-param"><tt><b>on</b>(param)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-param', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Attach one or more event handlers to the tool.</p>
 	
@@ -617,20 +500,11 @@ keydown, keyup</tt>.
 </div>
 		
 			
-<div id="detach-type-function-member" class="member">
-<div id="detach-type-function-link" class="member-link">
-<a name="detach-type-function" href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
-</div>
-<div id="detach-type-function-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="detach-type-function" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
+<a name="detach-type-function" href="#detach-type-function"><tt><b>detach</b>(type, function)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-type-function', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Detach an event handler from the tool.</p>
 	
@@ -660,20 +534,11 @@ keydown, keyup</tt>.
 </div>
 		
 			
-<div id="detach-param-member" class="member">
-<div id="detach-param-link" class="member-link">
-<a name="detach-param" href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
-</div>
-<div id="detach-param-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="detach-param" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
+<a name="detach-param" href="#detach-param"><tt><b>detach</b>(param)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-param', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Detach one or more event handlers from the tool.</p>
 	
@@ -698,20 +563,11 @@ keydown, keyup</tt>
 </div>
 		
 			
-<div id="fire-type-event-member" class="member">
-<div id="fire-type-event-link" class="member-link">
-<a name="fire-type-event" href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
-</div>
-<div id="fire-type-event-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fire-type-event" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
+<a name="fire-type-event" href="#fire-type-event"><tt><b>fire</b>(type, event)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fire-type-event', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Fire an event on the tool.</p>
 	
@@ -742,20 +598,11 @@ the event.
 </div>
 		
 			
-<div id="responds-type-member" class="member">
-<div id="responds-type-link" class="member-link">
-<a name="responds-type" href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
-</div>
-<div id="responds-type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="responds-type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
+<a name="responds-type" href="#responds-type"><tt><b>responds</b>(type)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('responds-type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Check if the tool has one or more event handlers of the specified type.</p>
 	

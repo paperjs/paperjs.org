@@ -134,15 +134,12 @@ behaviors.hash = function() {
 	var hash = unescape(window.location.hash);
 	if (hash) {
 		// First see if there's a class member to open
-		var target = $(hash + '-member');
+		var target = $(hash);
 		if (target.length) {
 			if (target.hasClass('member'))
-				toggleMember(hash.substring(1));
-		} else {
-			target = $(hash);
-		}
-		if (target.length)
+				toggleMember(target);
 			smoothScrollTo(target);
+		}
 	}
 };
 
@@ -415,28 +412,23 @@ function createPaperScript(element) {
 	element.data('initialized', true);
 }
 
-// DOM-Ready
+// Referene (before behaviors)
 
-$(function() {
-	for (var i in behaviors)
-		behaviors[i]();
-});
-
-var lastMemberId = null;
-function toggleMember(id, dontScroll) {
-	var link = $('#' + id + '-link');
+var lastMember = null;
+function toggleMember(member, dontScroll) {
+	var link = $('.member-link:first', member);
 	if (!link.length)
 		return true;
-	var desc = $('#' + id + '-description');
+	var desc = $('.member-description', member);
 	var visible = !link.hasClass('hidden');
 	// Retrieve y-offset before any changes, so we can correct scrolling after
 	var offset = (visible ? link : desc).offset().top;
-	if (lastMemberId && lastMemberId != id) {
-		var prevId = lastMemberId;
-		lastMemberId = null;
-		toggleMember(prevId, true);
+	if (lastMember && !lastMember.is(member)) {
+		var prev = lastMember;
+		lastMember = null;
+		toggleMember(prev, true);
 	}
-	lastMemberId = visible && id;
+	lastMember = visible && member;
 	link.toggleClass('hidden', visible);
 	desc.toggleClass('hidden', !visible);
 	if (!dontScroll) {
@@ -444,14 +436,42 @@ function toggleMember(id, dontScroll) {
 		// the element has shifted due to the above toggleMember call, and
 		// correcting by 11px offset, caused by 1px border and 10px padding.
 		var scroll = $(document).scrollTop();
+		// Only change hash if we're not in frames, since there are redrawing
+		// issues with that on Chrome.
+		if (parent === self)
+			window.location.hash = visible ? member.attr('id') : '';
 		$(document).scrollTop(scroll
 				+ (visible ? desc : link).offset().top - offset
 				+ 11 * (visible ? 1 : -1));
 	}
-	if (!desc.data('initialized') && visible) {
+	if (!member.data('initialized') && visible) {
 		behaviors.code();
 		behaviors.paperscript();
-		desc.data('initialized', true);
+		member.data('initialized', true);
 	}
 	return false;
 }
+
+$(function() {
+	$('.reference .member').each(function() {
+		var member = $(this);
+		var link = $('.member-link', member);
+		// Add header to description, with link and closing button
+		var header = $('<div class="member-header"/>').prependTo($('.member-description', member));
+		// Clone link, but remove name, id and change href
+		link.clone().removeAttr('name').removeAttr('id').attr('href', '#').appendTo(header);
+		// Add closing button.
+		header.append('<div class="member-close"><input type="button" value="Close"></div>');
+	});
+
+	$('.reference .member-link, .reference .member-close').click(function() {
+		return toggleMember($(this).parents('.member'));
+	});
+});
+
+// DOM-Ready
+
+$(function() {
+	for (var i in behaviors)
+		behaviors[i]();
+});

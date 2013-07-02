@@ -11,20 +11,11 @@
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="path-member" class="member">
-<div id="path-link" class="member-link">
-<a name="path" href="#" onClick="return toggleMember('path', false);"><tt><b>Path</b>([segments])</tt></a>
-</div>
-<div id="path-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path', false);"><tt><b>Path</b>([segments])</tt></a>
+<a name="path" href="#path"><tt><b>Path</b>([segments])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a new Path item and places it at the top of the active layer.</p>
 
@@ -66,20 +57,11 @@ path.strokeColor = 'black';</pre>
 </div>
 	
 		
-<div id="path-object-member" class="member">
-<div id="path-object-link" class="member-link">
-<a name="path-object" href="#" onClick="return toggleMember('path-object', false);"><tt><b>Path</b>(object)</tt></a>
-</div>
-<div id="path-object-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-object" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-object', false);"><tt><b>Path</b>(object)</tt></a>
+<a name="path-object" href="#path-object"><tt><b>Path</b>(object)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-object', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a new Path item and places it at the top of the active layer.</p>
 
@@ -138,22 +120,13 @@ var path = new Path({
 </div>
 	
 		<h3>Shaped Paths</h3>
-<div id="path-line-from-to-member" class="member">
-<div id="path-line-from-to-link" class="member-link">
-<a name="path-line-from-to" href="#" onClick="return toggleMember('path-line-from-to', false);"><tt><b>Path.Line</b>(from, to)</tt></a>
-</div>
-<div id="path-line-from-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-line-from-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-line-from-to', false);"><tt><b>Path.Line</b>(from, to)</tt></a>
+<a name="path-line-from-to" href="#path-line-from-to"><tt><b>Path.Line</b>(from, to)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-line-from-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Path Item with two anchor points forming a line.</p>
+<p>Creates a Path item with two anchor points forming a line.</p>
 
 <ul><b>Parameters:</b>
 
@@ -221,22 +194,85 @@ var path = new Path.Line({
 </div>
 	
 		
-<div id="path-rectangle-point-size-member" class="member">
-<div id="path-rectangle-point-size-link" class="member-link">
-<a name="path-rectangle-point-size" href="#" onClick="return toggleMember('path-rectangle-point-size', false);"><tt><b>Path.Rectangle</b>(point, size)</tt></a>
-</div>
-<div id="path-rectangle-point-size-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-circle-center-radius" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-rectangle-point-size', false);"><tt><b>Path.Rectangle</b>(point, size)</tt></a>
+<a name="path-circle-center-radius" href="#path-circle-center-radius"><tt><b>Path.Circle</b>(center, radius)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-rectangle-point-size', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a rectangle shaped Path Item from the passed point and size.</p>
+<p>Creates a circle shaped Path item.</p>
+
+<ul><b>Parameters:</b>
+
+<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the center point of the circle
+
+</li>
+
+<li>
+<tt>radius:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the radius of the circle
+
+</li>
+
+</ul>
+
+
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
+</li>
+	
+	</ul>
+
+<p>
+<b>Example</b> 
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-4">
+var path = new Path.Circle(new Point(80, 50), 30);
+path.strokeColor = 'black';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Using object notation
+</p>
+
+<div class="paperscript split">
+<div class="button run">Run</div>
+<script type="text/paperscript" canvas="canvas-5">
+var path = new Path.Circle({
+	center: [80, 50],
+	radius: 30,
+	strokeColor: 'black'
+});
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-5"></canvas></div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+	
+		
+<div id="path-rectangle-point-size" class="member">
+<div class="member-link">
+<a name="path-rectangle-point-size" href="#path-rectangle-point-size"><tt><b>Path.Rectangle</b>(point, size)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+<p>Creates a rectangle shaped Path item from the passed point and size.</p>
 
 <ul><b>Parameters:</b>
 
@@ -271,13 +307,13 @@ var path = new Path.Line({
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-4">
+<script type="text/paperscript" canvas="canvas-6">
 var point = new Point(20, 20);
 var size = new Size(60, 60);
 var path = new Path.Rectangle(point, size);
 path.strokeColor = 'black';
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-6"></canvas></div>
 </div>
 
 
@@ -287,14 +323,14 @@ path.strokeColor = 'black';
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-5">
+<script type="text/paperscript" canvas="canvas-7">
 var path = new Path.Rectangle({
 	point: [20, 20],
 	size: [60, 60],
 	strokeColor: 'black'
 });
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-5"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-7"></canvas></div>
 </div>
 
 
@@ -304,23 +340,14 @@ var path = new Path.Rectangle({
 </div>
 	
 		
-<div id="path-rectangle-from-to-member" class="member">
-<div id="path-rectangle-from-to-link" class="member-link">
-<a name="path-rectangle-from-to" href="#" onClick="return toggleMember('path-rectangle-from-to', false);"><tt><b>Path.Rectangle</b>(from, to)</tt></a>
-</div>
-<div id="path-rectangle-from-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-rectangle-from-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-rectangle-from-to', false);"><tt><b>Path.Rectangle</b>(from, to)</tt></a>
+<a name="path-rectangle-from-to" href="#path-rectangle-from-to"><tt><b>Path.Rectangle</b>(from, to)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-rectangle-from-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a rectangle shaped Path Item from the passed points. These do not
-necessarily need to be the top left and bottom right corners, the
+<p>Creates a rectangle shaped Path item from the passed points. These do
+not necessarily need to be the top left and bottom right corners, the
 constructor figures out how to fit a rectangle between them.</p>
 
 <ul><b>Parameters:</b>
@@ -356,13 +383,13 @@ constructor figures out how to fit a rectangle between them.</p>
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-6">
+<script type="text/paperscript" canvas="canvas-8">
 var from = new Point(20, 20);
 var to = new Point(80, 80);
 var path = new Path.Rectangle(from, to);
 path.strokeColor = 'black';
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-6"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-8"></canvas></div>
 </div>
 
 
@@ -372,14 +399,14 @@ path.strokeColor = 'black';
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-7">
+<script type="text/paperscript" canvas="canvas-9">
 var path = new Path.Rectangle({
 	from: [20, 20],
 	to: [80, 80],
 	strokeColor: 'black'
 });
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-7"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-9"></canvas></div>
 </div>
 
 
@@ -389,22 +416,13 @@ var path = new Path.Rectangle({
 </div>
 	
 		
-<div id="path-rectangle-rectangle-member" class="member">
-<div id="path-rectangle-rectangle-link" class="member-link">
-<a name="path-rectangle-rectangle" href="#" onClick="return toggleMember('path-rectangle-rectangle', false);"><tt><b>Path.Rectangle</b>(rectangle)</tt></a>
-</div>
-<div id="path-rectangle-rectangle-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-rectangle-rectangle" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-rectangle-rectangle', false);"><tt><b>Path.Rectangle</b>(rectangle)</tt></a>
+<a name="path-rectangle-rectangle" href="#path-rectangle-rectangle"><tt><b>Path.Rectangle</b>(rectangle)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-rectangle-rectangle', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a rectangle shaped Path Item from the passed abstract
+<p>Creates a rectangle shaped Path item from the passed abstract
 <a href="/reference/rectangle"><tt>Rectangle</tt></a>.</p>
 
 <ul><b>Parameters:</b>
@@ -433,7 +451,7 @@ var path = new Path.Rectangle({
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-8">
+<script type="text/paperscript" canvas="canvas-10">
 var rectangle = new Rectangle({
 	point: new Point(20, 20),
 	size: new Size(60, 60)
@@ -441,7 +459,7 @@ var rectangle = new Rectangle({
 var path = new Path.Rectangle(rectangle);
 path.strokeColor = 'black';
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-8"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-10"></canvas></div>
 </div>
 
 
@@ -451,7 +469,7 @@ path.strokeColor = 'black';
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-9">
+<script type="text/paperscript" canvas="canvas-11">
 var rectangle = new Rectangle({
 	point: [20, 20],
 	size: [60, 60]
@@ -462,7 +480,7 @@ var path = new Path.Rectangle({
 	strokeColor: 'black'
 });
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-9"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-11"></canvas></div>
 </div>
 
 
@@ -472,22 +490,13 @@ var path = new Path.Rectangle({
 </div>
 	
 		
-<div id="path-rectangle-rectangle-radius-member" class="member">
-<div id="path-rectangle-rectangle-radius-link" class="member-link">
-<a name="path-rectangle-rectangle-radius" href="#" onClick="return toggleMember('path-rectangle-rectangle-radius', false);"><tt><b>Path.Rectangle</b>(rectangle, radius)</tt></a>
-</div>
-<div id="path-rectangle-rectangle-radius-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-rectangle-rectangle-radius" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-rectangle-rectangle-radius', false);"><tt><b>Path.Rectangle</b>(rectangle, radius)</tt></a>
+<a name="path-rectangle-rectangle-radius" href="#path-rectangle-rectangle-radius"><tt><b>Path.Rectangle</b>(rectangle, radius)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-rectangle-rectangle-radius', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a rectangular Path Item with rounded corners.</p>
+<p>Creates a rectangular Path item with rounded corners.</p>
 
 <ul><b>Parameters:</b>
 
@@ -522,7 +531,7 @@ var path = new Path.Rectangle({
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-10">
+<script type="text/paperscript" canvas="canvas-12">
 var rectangle = new Rectangle({
 	point: new Point(20, 20),
 	size: new Size(60, 60)
@@ -531,7 +540,7 @@ var cornerSize = new Size(10, 10);
 var path = new Path.Rectangle(rectangle, cornerSize);
 path.strokeColor = 'black';
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-10"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-12"></canvas></div>
 </div>
 
 
@@ -541,7 +550,7 @@ path.strokeColor = 'black';
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-11">
+<script type="text/paperscript" canvas="canvas-13">
 var path = new Path.Rectangle({
 	rectangle: {
 		point: [20, 20],
@@ -551,7 +560,7 @@ var path = new Path.Rectangle({
 	strokeColor: 'black'
 });
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-11"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-13"></canvas></div>
 </div>
 
 
@@ -561,22 +570,13 @@ var path = new Path.Rectangle({
 </div>
 	
 		
-<div id="path-ellipse-rectangle-member" class="member">
-<div id="path-ellipse-rectangle-link" class="member-link">
-<a name="path-ellipse-rectangle" href="#" onClick="return toggleMember('path-ellipse-rectangle', false);"><tt><b>Path.Ellipse</b>(rectangle[, circumscribed])</tt></a>
-</div>
-<div id="path-ellipse-rectangle-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-ellipse-rectangle" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-ellipse-rectangle', false);"><tt><b>Path.Ellipse</b>(rectangle[, circumscribed])</tt></a>
+<a name="path-ellipse-rectangle" href="#path-ellipse-rectangle"><tt><b>Path.Ellipse</b>(rectangle[, circumscribed])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-ellipse-rectangle', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates an ellipse shaped Path Item.</p>
+<p>Creates an ellipse shaped Path item.</p>
 
 <ul><b>Parameters:</b>
 
@@ -614,94 +614,13 @@ var path = new Path.Rectangle({
 
 <div class="paperscript split">
 <div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-12">
+<script type="text/paperscript" canvas="canvas-14">
 var rectangle = new Rectangle({
 	point: [20, 20],
 	size: [180, 60]
 });
 var path = new Path.Ellipse(rectangle);
 path.fillColor = 'black';
-</script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-12"></canvas></div>
-</div>
-
-
-<p>
-<b>Example</b> &mdash; Using object notation
-</p>
-
-<div class="paperscript split">
-<div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-13">
-var path = new Path.Ellipse({
-	point: [20, 20],
-	size: [180, 60],
-	fillColor: 'black'
-});
-</script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-13"></canvas></div>
-</div>
-
-
-
-</div>
-</div>
-</div>
-	
-		
-<div id="path-circle-center-radius-member" class="member">
-<div id="path-circle-center-radius-link" class="member-link">
-<a name="path-circle-center-radius" href="#" onClick="return toggleMember('path-circle-center-radius', false);"><tt><b>Path.Circle</b>(center, radius)</tt></a>
-</div>
-<div id="path-circle-center-radius-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('path-circle-center-radius', false);"><tt><b>Path.Circle</b>(center, radius)</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-circle-center-radius', false);"></div>
-<div class="clear"></div>
-</div>
-<div class="member-text">
-<p>Creates a circle shaped Path Item.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
-<tt>center:</tt> 
-<a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;the center point of the circle
-
-</li>
-
-<li>
-<tt>radius:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the radius of the circle
-
-</li>
-
-</ul>
-
-
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
-</li>
-	
-	</ul>
-
-<p>
-<b>Example</b> 
-</p>
-
-<div class="paperscript split">
-<div class="button run">Run</div>
-<script type="text/paperscript" canvas="canvas-14">
-var path = new Path.Circle(new Point(80, 50), 30);
-path.strokeColor = 'black';
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-14"></canvas></div>
 </div>
@@ -714,10 +633,10 @@ path.strokeColor = 'black';
 <div class="paperscript split">
 <div class="button run">Run</div>
 <script type="text/paperscript" canvas="canvas-15">
-var path = new Path.Circle({
-	center: [80, 50],
-	radius: 30,
-	strokeColor: 'black'
+var path = new Path.Ellipse({
+	point: [20, 20],
+	size: [180, 60],
+	fillColor: 'black'
 });
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-15"></canvas></div>
@@ -730,22 +649,13 @@ var path = new Path.Circle({
 </div>
 	
 		
-<div id="path-arc-from-through-to-member" class="member">
-<div id="path-arc-from-through-to-link" class="member-link">
-<a name="path-arc-from-through-to" href="#" onClick="return toggleMember('path-arc-from-through-to', false);"><tt><b>Path.Arc</b>(from, through, to)</tt></a>
-</div>
-<div id="path-arc-from-through-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-arc-from-through-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-arc-from-through-to', false);"><tt><b>Path.Arc</b>(from, through, to)</tt></a>
+<a name="path-arc-from-through-to" href="#path-arc-from-through-to"><tt><b>Path.Arc</b>(from, through, to)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-arc-from-through-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a circular arc shaped Path Item.</p>
+<p>Creates a circular arc shaped Path item.</p>
 
 <ul><b>Parameters:</b>
 
@@ -822,22 +732,13 @@ var path = new Path.Arc({
 </div>
 	
 		
-<div id="path-regularpolygon-center-sides-radius-member" class="member">
-<div id="path-regularpolygon-center-sides-radius-link" class="member-link">
-<a name="path-regularpolygon-center-sides-radius" href="#" onClick="return toggleMember('path-regularpolygon-center-sides-radius', false);"><tt><b>Path.RegularPolygon</b>(center, sides, radius)</tt></a>
-</div>
-<div id="path-regularpolygon-center-sides-radius-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-regularpolygon-center-sides-radius" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-regularpolygon-center-sides-radius', false);"><tt><b>Path.RegularPolygon</b>(center, sides, radius)</tt></a>
+<a name="path-regularpolygon-center-sides-radius" href="#path-regularpolygon-center-sides-radius"><tt><b>Path.RegularPolygon</b>(center, sides, radius)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-regularpolygon-center-sides-radius', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a regular polygon shaped Path Item.</p>
+<p>Creates a regular polygon shaped Path item.</p>
 
 <ul><b>Parameters:</b>
 
@@ -914,22 +815,13 @@ var triangle = new Path.RegularPolygon({
 </div>
 	
 		
-<div id="path-star-center-points-radius1-radius2-member" class="member">
-<div id="path-star-center-points-radius1-radius2-link" class="member-link">
-<a name="path-star-center-points-radius1-radius2" href="#" onClick="return toggleMember('path-star-center-points-radius1-radius2', false);"><tt><b>Path.Star</b>(center, points, radius1, radius2)</tt></a>
-</div>
-<div id="path-star-center-points-radius1-radius2-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path-star-center-points-radius1-radius2" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path-star-center-points-radius1-radius2', false);"><tt><b>Path.Star</b>(center, points, radius1, radius2)</tt></a>
+<a name="path-star-center-points-radius1-radius2" href="#path-star-center-points-radius1-radius2"><tt><b>Path.Star</b>(center, points, radius1, radius2)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path-star-center-points-radius1-radius2', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-<p>Creates a star shaped Path Item.</p>
+<p>Creates a star shaped Path item.</p>
 <p>The largest of <tt>radius1</tt> and <tt>radius2</tt> will be the outer
 radius of the star. The smallest of radius1 and radius2 will be the
 inner radius.</p>
@@ -1021,104 +913,16 @@ var path = new Path.Star({
 
 
 
-<!-- ============================== properties ========================= -->
-	<div class="reference-members"><h2>Operators</h2>
-		
-			<div id="subtract-member" class="member">
-<div id="subtract-link" class="member-link">
-<a name="subtract" href="#" onClick="return toggleMember('subtract', false);"><tt><tt><b>-</b> PathItem</tt></tt></a>
-</div>
-<div id="subtract-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('subtract', false);"><tt><b>-</b> PathItem</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('subtract', false);"></div>
-<div class="clear"></div>
-</div>
-
-	<div class="member-text">
-		<p>Subtracts the geometry of the specified path from this path's
-geometry and returns the result as a new path item.</p>
-		
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/pathitem"><tt>PathItem</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting path item
-</li>
-	
-	</ul>
-
-		
-		
-	</div>
-
-
-</div>
-</div>
-
-		
-			<div id="divide-member" class="member">
-<div id="divide-link" class="member-link">
-<a name="divide" href="#" onClick="return toggleMember('divide', false);"><tt><tt><b>/</b> PathItem</tt></tt></a>
-</div>
-<div id="divide-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('divide', false);"><tt><b>/</b> PathItem</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('divide', false);"></div>
-<div class="clear"></div>
-</div>
-
-	<div class="member-text">
-		<p>Splits the geometry of this path along the geometry of the specified
-path returns the result as a new group item.</p>
-		
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/group"><tt>Group</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting group item
-</li>
-	
-	</ul>
-
-		
-		
-	</div>
-
-
-</div>
-</div>
-
-		
-	</div>
-
 
 
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="segments-member" class="member">
-<div id="segments-link" class="member-link">
-<a name="segments" href="#" onClick="return toggleMember('segments', false);"><tt><b>segments</b></tt></a>
-</div>
-<div id="segments-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="segments" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('segments', false);"><tt><b>segments</b></tt></a>
+<a name="segments" href="#segments"><tt><b>segments</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('segments', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The segments contained within the path.</p>
@@ -1137,24 +941,17 @@ path returns the result as a new group item.</p>
 </div>
 		
 			
-<div id="firstsegment-member" class="member">
-<div id="firstsegment-link" class="member-link">
-<a name="firstsegment" href="#" onClick="return toggleMember('firstsegment', false);"><tt><b>firstSegment</b></tt></a>
-</div>
-<div id="firstsegment-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="firstsegment" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('firstsegment', false);"><tt><b>firstSegment</b></tt></a>
+<a name="firstsegment" href="#firstsegment"><tt><b>firstSegment</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('firstsegment', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The first Segment contained within the path.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -1169,24 +966,17 @@ path returns the result as a new group item.</p>
 </div>
 		
 			
-<div id="lastsegment-member" class="member">
-<div id="lastsegment-link" class="member-link">
-<a name="lastsegment" href="#" onClick="return toggleMember('lastsegment', false);"><tt><b>lastSegment</b></tt></a>
-</div>
-<div id="lastsegment-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="lastsegment" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('lastsegment', false);"><tt><b>lastSegment</b></tt></a>
+<a name="lastsegment" href="#lastsegment"><tt><b>lastSegment</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('lastsegment', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The last Segment contained within the path.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -1201,23 +991,16 @@ path returns the result as a new group item.</p>
 </div>
 		
 			
-<div id="curves-member" class="member">
-<div id="curves-link" class="member-link">
-<a name="curves" href="#" onClick="return toggleMember('curves', false);"><tt><b>curves</b></tt></a>
-</div>
-<div id="curves-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="curves" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('curves', false);"><tt><b>curves</b></tt></a>
+<a name="curves" href="#curves"><tt><b>curves</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('curves', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The curves contained within the path.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -1233,24 +1016,17 @@ path returns the result as a new group item.</p>
 </div>
 		
 			
-<div id="firstcurve-member" class="member">
-<div id="firstcurve-link" class="member-link">
-<a name="firstcurve" href="#" onClick="return toggleMember('firstcurve', false);"><tt><b>firstCurve</b></tt></a>
-</div>
-<div id="firstcurve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="firstcurve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('firstcurve', false);"><tt><b>firstCurve</b></tt></a>
+<a name="firstcurve" href="#firstcurve"><tt><b>firstCurve</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('firstcurve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The first Curve contained within the path.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -1265,24 +1041,17 @@ path returns the result as a new group item.</p>
 </div>
 		
 			
-<div id="lastcurve-member" class="member">
-<div id="lastcurve-link" class="member-link">
-<a name="lastcurve" href="#" onClick="return toggleMember('lastcurve', false);"><tt><b>lastCurve</b></tt></a>
-</div>
-<div id="lastcurve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="lastcurve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('lastcurve', false);"><tt><b>lastCurve</b></tt></a>
+<a name="lastcurve" href="#lastcurve"><tt><b>lastCurve</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('lastcurve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The last Curve contained within the path.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -1297,23 +1066,16 @@ path returns the result as a new group item.</p>
 </div>
 		
 			
-<div id="pathdata-member" class="member">
-<div id="pathdata-link" class="member-link">
-<a name="pathdata" href="#" onClick="return toggleMember('pathdata', false);"><tt><b>pathData</b></tt></a>
-</div>
-<div id="pathdata-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="pathdata" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('pathdata', false);"><tt><b>pathData</b></tt></a>
+<a name="pathdata" href="#pathdata"><tt><b>pathData</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('pathdata', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The segments contained within the path, described as SVG style path data.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -1329,20 +1091,11 @@ path returns the result as a new group item.</p>
 </div>
 		
 			
-<div id="closed-member" class="member">
-<div id="closed-link" class="member-link">
-<a name="closed" href="#" onClick="return toggleMember('closed', false);"><tt><b>closed</b></tt></a>
-</div>
-<div id="closed-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="closed" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('closed', false);"><tt><b>closed</b></tt></a>
+<a name="closed" href="#closed"><tt><b>closed</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('closed', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies whether the path is closed. If it is closed, Paper.js connects
@@ -1381,20 +1134,11 @@ myPath.closed = true;
 </div>
 		
 			
-<div id="fullyselected-member" class="member">
-<div id="fullyselected-link" class="member-link">
-<a name="fullyselected" href="#" onClick="return toggleMember('fullyselected', false);"><tt><b>fullySelected</b></tt></a>
-</div>
-<div id="fullyselected-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fullyselected" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fullyselected', false);"><tt><b>fullySelected</b></tt></a>
+<a name="fullyselected" href="#fullyselected"><tt><b>fullySelected</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fullyselected', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies whether the path and all its segments are selected.</p>
@@ -1450,20 +1194,11 @@ if (path2.fullySelected) {
 </div>
 		
 			
-<div id="clockwise-member" class="member">
-<div id="clockwise-link" class="member-link">
-<a name="clockwise" href="#" onClick="return toggleMember('clockwise', false);"><tt><b>clockwise</b></tt></a>
-</div>
-<div id="clockwise-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="clockwise" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('clockwise', false);"><tt><b>clockwise</b></tt></a>
+<a name="clockwise" href="#clockwise"><tt><b>clockwise</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clockwise', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies whether the path is oriented clock-wise.</p>
@@ -1482,23 +1217,16 @@ if (path2.fullySelected) {
 </div>
 		
 			
-<div id="length-member" class="member">
-<div id="length-link" class="member-link">
-<a name="length" href="#" onClick="return toggleMember('length', false);"><tt><b>length</b></tt></a>
-</div>
-<div id="length-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="length" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('length', false);"><tt><b>length</b></tt></a>
+<a name="length" href="#length"><tt><b>length</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('length', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The approximate length of the path in points.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -1514,24 +1242,17 @@ if (path2.fullySelected) {
 </div>
 		
 			
-<div id="area-member" class="member">
-<div id="area-link" class="member-link">
-<a name="area" href="#" onClick="return toggleMember('area', false);"><tt><b>area</b></tt></a>
-</div>
-<div id="area-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="area" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('area', false);"><tt><b>area</b></tt></a>
+<a name="area" href="#area"><tt><b>area</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('area', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The area of the path in square points. Self-intersecting paths can
 contain sub-areas that cancel each other out.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -1554,20 +1275,11 @@ contain sub-areas that cancel each other out.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="add-segment-member" class="member">
-<div id="add-segment-link" class="member-link">
-<a name="add-segment" href="#" onClick="return toggleMember('add-segment', false);"><tt><b>add</b>(segment)</tt></a>
-</div>
-<div id="add-segment-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="add-segment" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('add-segment', false);"><tt><b>add</b>(segment)</tt></a>
+<a name="add-segment" href="#add-segment"><tt><b>add</b>(segment)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('add-segment', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Adds one or more segments to the end of the <a href="/reference/path#segments" onclick="return toggleMember('segments', true);"><tt>segments</tt></a> array of
 this path.</p>
@@ -1693,20 +1405,11 @@ path.add(new Point(170, 75));
 </div>
 		
 			
-<div id="insert-index-segment-member" class="member">
-<div id="insert-index-segment-link" class="member-link">
-<a name="insert-index-segment" href="#" onClick="return toggleMember('insert-index-segment', false);"><tt><b>insert</b>(index, segment)</tt></a>
-</div>
-<div id="insert-index-segment-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="insert-index-segment" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('insert-index-segment', false);"><tt><b>insert</b>(index, segment)</tt></a>
+<a name="insert-index-segment" href="#insert-index-segment"><tt><b>insert</b>(index, segment)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insert-index-segment', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts one or more segments at a given index in the list of this path's
 segments.</p>
@@ -1790,20 +1493,11 @@ myPath.segments[2].selected = true;
 </div>
 		
 			
-<div id="addsegments-segments-member" class="member">
-<div id="addsegments-segments-link" class="member-link">
-<a name="addsegments-segments" href="#" onClick="return toggleMember('addsegments-segments', false);"><tt><b>addSegments</b>(segments)</tt></a>
-</div>
-<div id="addsegments-segments-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="addsegments-segments" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('addsegments-segments', false);"><tt><b>addSegments</b>(segments)</tt></a>
+<a name="addsegments-segments" href="#addsegments-segments"><tt><b>addSegments</b>(segments)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('addsegments-segments', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Adds an array of segments (or types that can be converted to segments)
 to the end of the <a href="/reference/path#segments" onclick="return toggleMember('segments', true);"><tt>segments</tt></a> array.</p>
@@ -1895,20 +1589,11 @@ path2.position.x += 30;
 </div>
 		
 			
-<div id="insertsegments-index-segments-member" class="member">
-<div id="insertsegments-index-segments-link" class="member-link">
-<a name="insertsegments-index-segments" href="#" onClick="return toggleMember('insertsegments-index-segments', false);"><tt><b>insertSegments</b>(index, segments)</tt></a>
-</div>
-<div id="insertsegments-index-segments-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="insertsegments-index-segments" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('insertsegments-index-segments', false);"><tt><b>insertSegments</b>(index, segments)</tt></a>
+<a name="insertsegments-index-segments" href="#insertsegments-index-segments"><tt><b>insertSegments</b>(index, segments)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertsegments-index-segments', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts an array of segments at a given index in the path's
 <a href="/reference/path#segments" onclick="return toggleMember('segments', true);"><tt>segments</tt></a> array.</p>
@@ -1949,20 +1634,11 @@ belongs to another path.
 </div>
 		
 			
-<div id="removesegment-index-member" class="member">
-<div id="removesegment-index-link" class="member-link">
-<a name="removesegment-index" href="#" onClick="return toggleMember('removesegment-index', false);"><tt><b>removeSegment</b>(index)</tt></a>
-</div>
-<div id="removesegment-index-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removesegment-index" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removesegment-index', false);"><tt><b>removeSegment</b>(index)</tt></a>
+<a name="removesegment-index" href="#removesegment-index"><tt><b>removeSegment</b>(index)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removesegment-index', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the segment at the specified index of the path's
 <a href="/reference/path#segments" onclick="return toggleMember('segments', true);"><tt>segments</tt></a> array.</p>
@@ -2018,20 +1694,11 @@ path.selected = true;
 </div>
 		
 			
-<div id="removesegments-member" class="member">
-<div id="removesegments-link" class="member-link">
-<a name="removesegments" href="#" onClick="return toggleMember('removesegments', false);"><tt><b>removeSegments</b>()</tt></a>
-</div>
-<div id="removesegments-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removesegments" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removesegments', false);"><tt><b>removeSegments</b>()</tt></a>
+<a name="removesegments" href="#removesegments"><tt><b>removeSegments</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removesegments', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes all segments from the path's <a href="/reference/path#segments" onclick="return toggleMember('segments', true);"><tt>segments</tt></a> array.</p>
 	
@@ -2051,20 +1718,11 @@ path.selected = true;
 </div>
 		
 			
-<div id="removesegments-from-member" class="member">
-<div id="removesegments-from-link" class="member-link">
-<a name="removesegments-from" href="#" onClick="return toggleMember('removesegments-from', false);"><tt><b>removeSegments</b>(from[, to])</tt></a>
-</div>
-<div id="removesegments-from-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removesegments-from" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removesegments-from', false);"><tt><b>removeSegments</b>(from[, to])</tt></a>
+<a name="removesegments-from" href="#removesegments-from"><tt><b>removeSegments</b>(from[, to])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removesegments-from', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the segments from the specified <tt>from</tt> index to the
 <tt>to</tt> index from the path's <a href="/reference/path#segments" onclick="return toggleMember('segments', true);"><tt>segments</tt></a> array.</p>
@@ -2127,20 +1785,11 @@ path.selected = true;
 </div>
 		
 			
-<div id="flatten-maxDistance-member" class="member">
-<div id="flatten-maxDistance-link" class="member-link">
-<a name="flatten-maxDistance" href="#" onClick="return toggleMember('flatten-maxDistance', false);"><tt><b>flatten</b>(maxDistance)</tt></a>
-</div>
-<div id="flatten-maxDistance-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="flatten-maxDistance" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('flatten-maxDistance', false);"><tt><b>flatten</b>(maxDistance)</tt></a>
+<a name="flatten-maxDistance" href="#flatten-maxDistance"><tt><b>flatten</b>(maxDistance)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('flatten-maxDistance', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Converts the curves in a path to straight lines with an even distribution
 of points. The distance between the produced segments is as close as
@@ -2192,20 +1841,11 @@ copy.flatten(20);
 </div>
 		
 			
-<div id="simplify-member" class="member">
-<div id="simplify-link" class="member-link">
-<a name="simplify" href="#" onClick="return toggleMember('simplify', false);"><tt><b>simplify</b>([tolerance])</tt></a>
-</div>
-<div id="simplify-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="simplify" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('simplify', false);"><tt><b>simplify</b>([tolerance])</tt></a>
+<a name="simplify" href="#simplify"><tt><b>simplify</b>([tolerance])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('simplify', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Smooths a path by simplifying it. The <a href="/reference/path#segments"><tt>path.segments</tt></a> array is
 analyzed and replaced by a more optimal set of segments, reducing memory
@@ -2269,20 +1909,11 @@ function onMouseUp(event) {
 </div>
 		
 			
-<div id="split-offset-member" class="member">
-<div id="split-offset-link" class="member-link">
-<a name="split-offset" href="#" onClick="return toggleMember('split-offset', false);"><tt><b>split</b>(offset)</tt></a>
-</div>
-<div id="split-offset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="split-offset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('split-offset', false);"><tt><b>split</b>(offset)</tt></a>
+<a name="split-offset" href="#split-offset"><tt><b>split</b>(offset)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('split-offset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Splits the path at the given offset. After splitting, the path will be
 open. If the path was open already, splitting will result in two paths.</p>
@@ -2303,7 +1934,7 @@ as a number between 0 and <a href="/reference/path#length"><tt>path.length</tt><
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created path, if any.
+<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created path after splitting, if any
 </li>
 	
 	</ul>
@@ -2366,20 +1997,11 @@ path.firstSegment.selected = true;
 </div>
 		
 			
-<div id="split-location-member" class="member">
-<div id="split-location-link" class="member-link">
-<a name="split-location" href="#" onClick="return toggleMember('split-location', false);"><tt><b>split</b>(location)</tt></a>
-</div>
-<div id="split-location-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="split-location" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('split-location', false);"><tt><b>split</b>(location)</tt></a>
+<a name="split-location" href="#split-location"><tt><b>split</b>(location)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('split-location', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Splits the path at the given curve location. After splitting, the path
 will be open. If the path was open already, splitting will result in two
@@ -2401,7 +2023,7 @@ the path
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created path, if any.
+<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created path after splitting, if any
 </li>
 	
 	</ul>
@@ -2439,23 +2061,15 @@ path.lastSegment.selected = true;
 </div>
 		
 			
-<div id="split-index-parameter-member" class="member">
-<div id="split-index-parameter-link" class="member-link">
-<a name="split-index-parameter" href="#" onClick="return toggleMember('split-index-parameter', false);"><tt><b>split</b>(index, parameter)</tt></a>
-</div>
-<div id="split-index-parameter-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="split-index-parameter" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('split-index-parameter', false);"><tt><b>split</b>(index, parameter)</tt></a>
+<a name="split-index-parameter" href="#split-index-parameter"><tt><b>split</b>(index, parameter)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('split-index-parameter', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-	<p>Splits the path. After splitting, the path will be open. If the path
-was open already, splitting will result in two paths.</p>
+	<p>Splits the path at the given curve index and parameter. After splitting,
+the path will be open. If the path was open already, splitting will
+result in two paths.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -2480,7 +2094,7 @@ array at which to split
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created path after splitting, if any.
+<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created path after splitting, if any
 </li>
 	
 	</ul>
@@ -2540,20 +2154,11 @@ path.firstSegment.selected = true;
 </div>
 		
 			
-<div id="reverse-member" class="member">
-<div id="reverse-link" class="member-link">
-<a name="reverse" href="#" onClick="return toggleMember('reverse', false);"><tt><b>reverse</b>()</tt></a>
-</div>
-<div id="reverse-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="reverse" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('reverse', false);"><tt><b>reverse</b>()</tt></a>
+<a name="reverse" href="#reverse"><tt><b>reverse</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('reverse', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Reverses the orientation of the path, by reversing all its segments.</p>
 	
@@ -2565,20 +2170,11 @@ path.firstSegment.selected = true;
 </div>
 		
 			
-<div id="join-path-member" class="member">
-<div id="join-path-link" class="member-link">
-<a name="join-path" href="#" onClick="return toggleMember('join-path', false);"><tt><b>join</b>(path)</tt></a>
-</div>
-<div id="join-path-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="join-path" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('join-path', false);"><tt><b>join</b>(path)</tt></a>
+<a name="join-path" href="#join-path"><tt><b>join</b>(path)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('join-path', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Joins the path with the specified path, which will be removed in the
 process.</p>
@@ -2686,20 +2282,11 @@ path.selected = true;
 </div>
 		
 			
-<div id="reduce-member" class="member">
-<div id="reduce-link" class="member-link">
-<a name="reduce" href="#" onClick="return toggleMember('reduce', false);"><tt><b>reduce</b>()</tt></a>
-</div>
-<div id="reduce-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="reduce" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('reduce', false);"><tt><b>reduce</b>()</tt></a>
+<a name="reduce" href="#reduce"><tt><b>reduce</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('reduce', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>For simple paths, reduce always returns the path itself. See
 <a href="/reference/compoundpath#reduce"><tt>compoundPath.reduce</tt></a>() for more explanations.</p>
@@ -2712,20 +2299,11 @@ path.selected = true;
 </div>
 		
 			
-<div id="getlocationof-point-member" class="member">
-<div id="getlocationof-point-link" class="member-link">
-<a name="getlocationof-point" href="#" onClick="return toggleMember('getlocationof-point', false);"><tt><b>getLocationOf</b>(point)</tt></a>
-</div>
-<div id="getlocationof-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getlocationof-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getlocationof-point', false);"><tt><b>getLocationOf</b>(point)</tt></a>
+<a name="getlocationof-point" href="#getlocationof-point"><tt><b>getLocationOf</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getlocationof-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the curve location of the specified point if it lies on the
 path, <tt>null</tt> otherwise.</p>
@@ -2759,20 +2337,11 @@ path, <tt>null</tt> otherwise.</p>
 			
 <h3>Positions on Paths and Curves</h3>
 
-<div id="getlocationat-offset-member" class="member">
-<div id="getlocationat-offset-link" class="member-link">
-<a name="getlocationat-offset" href="#" onClick="return toggleMember('getlocationat-offset', false);"><tt><b>getLocationAt</b>(offset[, isParameter])</tt></a>
-</div>
-<div id="getlocationat-offset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getlocationat-offset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getlocationat-offset', false);"><tt><b>getLocationAt</b>(offset[, isParameter])</tt></a>
+<a name="getlocationat-offset" href="#getlocationat-offset"><tt><b>getLocationAt</b>(offset[, isParameter])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getlocationat-offset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -2810,20 +2379,11 @@ path, <tt>null</tt> otherwise.</p>
 </div>
 		
 			
-<div id="getpointat-offset-member" class="member">
-<div id="getpointat-offset-link" class="member-link">
-<a name="getpointat-offset" href="#" onClick="return toggleMember('getpointat-offset', false);"><tt><b>getPointAt</b>(offset[, isParameter])</tt></a>
-</div>
-<div id="getpointat-offset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getpointat-offset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getpointat-offset', false);"><tt><b>getPointAt</b>(offset[, isParameter])</tt></a>
+<a name="getpointat-offset" href="#getpointat-offset"><tt><b>getPointAt</b>(offset[, isParameter])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getpointat-offset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Calculates the point on the path at the given offset.</p>
 	
@@ -2928,20 +2488,11 @@ for (var i = 0; i < amount + 1; i++) {
 </div>
 		
 			
-<div id="gettangentat-offset-member" class="member">
-<div id="gettangentat-offset-link" class="member-link">
-<a name="gettangentat-offset" href="#" onClick="return toggleMember('gettangentat-offset', false);"><tt><b>getTangentAt</b>(offset[, isParameter])</tt></a>
-</div>
-<div id="gettangentat-offset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="gettangentat-offset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('gettangentat-offset', false);"><tt><b>getTangentAt</b>(offset[, isParameter])</tt></a>
+<a name="gettangentat-offset" href="#gettangentat-offset"><tt><b>getTangentAt</b>(offset[, isParameter])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('gettangentat-offset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Calculates the tangent to the path at the given offset as a vector point.</p>
 	
@@ -3054,20 +2605,11 @@ for (var i = 0; i < amount + 1; i++) {
 </div>
 		
 			
-<div id="getnormalat-offset-member" class="member">
-<div id="getnormalat-offset-link" class="member-link">
-<a name="getnormalat-offset" href="#" onClick="return toggleMember('getnormalat-offset', false);"><tt><b>getNormalAt</b>(offset[, isParameter])</tt></a>
-</div>
-<div id="getnormalat-offset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getnormalat-offset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getnormalat-offset', false);"><tt><b>getNormalAt</b>(offset[, isParameter])</tt></a>
+<a name="getnormalat-offset" href="#getnormalat-offset"><tt><b>getNormalAt</b>(offset[, isParameter])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getnormalat-offset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Calculates the normal to the path at the given offset as a vector point.</p>
 	
@@ -3180,20 +2722,11 @@ for (var i = 0; i < amount + 1; i++) {
 </div>
 		
 			
-<div id="getnearestlocation-point-member" class="member">
-<div id="getnearestlocation-point-link" class="member-link">
-<a name="getnearestlocation-point" href="#" onClick="return toggleMember('getnearestlocation-point', false);"><tt><b>getNearestLocation</b>(point)</tt></a>
-</div>
-<div id="getnearestlocation-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getnearestlocation-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getnearestlocation-point', false);"><tt><b>getNearestLocation</b>(point)</tt></a>
+<a name="getnearestlocation-point" href="#getnearestlocation-point"><tt><b>getNearestLocation</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getnearestlocation-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the nearest location on the path to the specified point.</p>
 	
@@ -3225,20 +2758,11 @@ the specified point
 </div>
 		
 			
-<div id="getnearestpoint-point-member" class="member">
-<div id="getnearestpoint-point-link" class="member-link">
-<a name="getnearestpoint-point" href="#" onClick="return toggleMember('getnearestpoint-point', false);"><tt><b>getNearestPoint</b>(point)</tt></a>
-</div>
-<div id="getnearestpoint-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getnearestpoint-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getnearestpoint-point', false);"><tt><b>getNearestPoint</b>(point)</tt></a>
+<a name="getnearestpoint-point" href="#getnearestpoint-point"><tt><b>getNearestPoint</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getnearestpoint-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the nearest point on the path to the specified point.</p>
 	
@@ -3303,20 +2827,11 @@ function onMouseMove(event) {
 </div>
 		
 			
-<div id="unite-path-member" class="member">
-<div id="unite-path-link" class="member-link">
-<a name="unite-path" href="#" onClick="return toggleMember('unite-path', false);"><tt><b>unite</b>(path)</tt></a>
-</div>
-<div id="unite-path-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="unite-path" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('unite-path', false);"><tt><b>unite</b>(path)</tt></a>
+<a name="unite-path" href="#unite-path"><tt><b>unite</b>(path)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('unite-path', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Merges the geometry of the specified path from this path's
 geometry and returns the result as a new path item.</p>
@@ -3348,20 +2863,11 @@ geometry and returns the result as a new path item.</p>
 </div>
 		
 			
-<div id="intersect-path-member" class="member">
-<div id="intersect-path-link" class="member-link">
-<a name="intersect-path" href="#" onClick="return toggleMember('intersect-path', false);"><tt><b>intersect</b>(path)</tt></a>
-</div>
-<div id="intersect-path-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="intersect-path" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('intersect-path', false);"><tt><b>intersect</b>(path)</tt></a>
+<a name="intersect-path" href="#intersect-path"><tt><b>intersect</b>(path)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('intersect-path', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Intersects the geometry of the specified path with this path's
 geometry and returns the result as a new path item.</p>
@@ -3393,20 +2899,47 @@ geometry and returns the result as a new path item.</p>
 </div>
 		
 			
-<div id="exclude-path-member" class="member">
-<div id="exclude-path-link" class="member-link">
-<a name="exclude-path" href="#" onClick="return toggleMember('exclude-path', false);"><tt><b>exclude</b>(path)</tt></a>
-</div>
-<div id="exclude-path-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="subtract-path" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('exclude-path', false);"><tt><b>exclude</b>(path)</tt></a>
+<a name="subtract-path" href="#subtract-path"><tt><b>subtract</b>(path)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Subtracts the geometry of the specified path from this path's
+geometry and returns the result as a new path item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>path:</tt> 
+<a href="/reference/pathitem"><tt>PathItem</tt></a>
+&mdash;&nbsp;the path to subtract
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/pathitem"><tt>PathItem</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting path item
+</li>
+	
+	</ul>
+
+	
+	
 </div>
 </div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('exclude-path', false);"></div>
-<div class="clear"></div>
 </div>
+		
+			
+<div id="exclude-path" class="member">
+<div class="member-link">
+<a name="exclude-path" href="#exclude-path"><tt><b>exclude</b>(path)</tt></a>
+</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Excludes the intersection of the geometry of the specified path with
 this path's geometry and returns the result as a new group item.</p>
@@ -3437,6 +2970,42 @@ this path's geometry and returns the result as a new group item.</p>
 </div>
 </div>
 		
+			
+<div id="divide-path" class="member">
+<div class="member-link">
+<a name="divide-path" href="#divide-path"><tt><b>divide</b>(path)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Splits the geometry of this path along the geometry of the specified
+path returns the result as a new group item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>path:</tt> 
+<a href="/reference/pathitem"><tt>PathItem</tt></a>
+&mdash;&nbsp;the path to divide by
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/group"><tt>Group</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting group item
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
 	</div>
 
 
@@ -3447,20 +3016,11 @@ this path's geometry and returns the result as a new group item.</p>
 <div class="reference-members"><h2>Methods inherited from <a href="/reference/pathitem"><tt>PathItem</tt></a></h2>
 
 	
-<div id="getintersections-path-member" class="member">
-<div id="getintersections-path-link" class="member-link">
-<a name="getintersections-path" href="#" onClick="return toggleMember('getintersections-path', false);"><tt><b>getIntersections</b>(path)</tt></a>
-</div>
-<div id="getintersections-path-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getintersections-path" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getintersections-path', false);"><tt><b>getIntersections</b>(path)</tt></a>
+<a name="getintersections-path" href="#getintersections-path"><tt><b>getIntersections</b>(path)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getintersections-path', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns all intersections between two <a href="/reference/pathitem"><tt>PathItem</tt></a> items as an array
 of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects. <a href="/reference/compoundpath"><tt>CompoundPath</tt></a> items are also
@@ -3526,20 +3086,11 @@ function onFrame(event) {
 </div>
 
 	
-<div id="smooth-member" class="member">
-<div id="smooth-link" class="member-link">
-<a name="smooth" href="#" onClick="return toggleMember('smooth', false);"><tt><b>smooth</b>()</tt></a>
-</div>
-<div id="smooth-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="smooth" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('smooth', false);"><tt><b>smooth</b>()</tt></a>
+<a name="smooth" href="#smooth"><tt><b>smooth</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('smooth', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Smooth bezier curves without changing the amount of segments or their
 points, by only smoothing and adjusting their handle points, for both
@@ -3615,20 +3166,11 @@ copy.smooth();
 	
 <h3>Postscript Style Drawing Commands</h3>
 
-<div id="moveto-point-member" class="member">
-<div id="moveto-point-link" class="member-link">
-<a name="moveto-point" href="#" onClick="return toggleMember('moveto-point', false);"><tt><b>moveTo</b>(point)</tt></a>
-</div>
-<div id="moveto-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="moveto-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('moveto-point', false);"><tt><b>moveTo</b>(point)</tt></a>
+<a name="moveto-point" href="#moveto-point"><tt><b>moveTo</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('moveto-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>On a normal empty <a href="/reference/path"><tt>Path</tt></a>, the point is simply added as the path's
 first segment. If called on a <a href="/reference/compoundpath"><tt>CompoundPath</tt></a>, a new <a href="/reference/path"><tt>Path</tt></a> is
@@ -3653,20 +3195,11 @@ created as a child and the point is added as its first segment.</p>
 </div>
 
 	
-<div id="lineto-point-member" class="member">
-<div id="lineto-point-link" class="member-link">
-<a name="lineto-point" href="#" onClick="return toggleMember('lineto-point', false);"><tt><b>lineTo</b>(point)</tt></a>
-</div>
-<div id="lineto-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="lineto-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('lineto-point', false);"><tt><b>lineTo</b>(point)</tt></a>
+<a name="lineto-point" href="#lineto-point"><tt><b>lineTo</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('lineto-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -3689,20 +3222,11 @@ created as a child and the point is added as its first segment.</p>
 </div>
 
 	
-<div id="cubiccurveto-handle1-handle2-to-member" class="member">
-<div id="cubiccurveto-handle1-handle2-to-link" class="member-link">
-<a name="cubiccurveto-handle1-handle2-to" href="#" onClick="return toggleMember('cubiccurveto-handle1-handle2-to', false);"><tt><b>cubicCurveTo</b>(handle1, handle2, to)</tt></a>
-</div>
-<div id="cubiccurveto-handle1-handle2-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="cubiccurveto-handle1-handle2-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('cubiccurveto-handle1-handle2-to', false);"><tt><b>cubicCurveTo</b>(handle1, handle2, to)</tt></a>
+<a name="cubiccurveto-handle1-handle2-to" href="#cubiccurveto-handle1-handle2-to"><tt><b>cubicCurveTo</b>(handle1, handle2, to)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('cubiccurveto-handle1-handle2-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Adds a cubic bezier curve to the path, defined by two handles and a to
 point.</p>
@@ -3740,20 +3264,11 @@ point.</p>
 </div>
 
 	
-<div id="quadraticcurveto-handle-to-member" class="member">
-<div id="quadraticcurveto-handle-to-link" class="member-link">
-<a name="quadraticcurveto-handle-to" href="#" onClick="return toggleMember('quadraticcurveto-handle-to', false);"><tt><b>quadraticCurveTo</b>(handle, to)</tt></a>
-</div>
-<div id="quadraticcurveto-handle-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="quadraticcurveto-handle-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('quadraticcurveto-handle-to', false);"><tt><b>quadraticCurveTo</b>(handle, to)</tt></a>
+<a name="quadraticcurveto-handle-to" href="#quadraticcurveto-handle-to"><tt><b>quadraticCurveTo</b>(handle, to)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('quadraticcurveto-handle-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Adds a quadratic bezier curve to the path, defined by a handle and a to
 point.</p>
@@ -3784,20 +3299,11 @@ point.</p>
 </div>
 
 	
-<div id="curveto-through-to-member" class="member">
-<div id="curveto-through-to-link" class="member-link">
-<a name="curveto-through-to" href="#" onClick="return toggleMember('curveto-through-to', false);"><tt><b>curveTo</b>(through, to[, parameter])</tt></a>
-</div>
-<div id="curveto-through-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="curveto-through-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('curveto-through-to', false);"><tt><b>curveTo</b>(through, to[, parameter])</tt></a>
+<a name="curveto-through-to" href="#curveto-through-to"><tt><b>curveTo</b>(through, to[, parameter])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('curveto-through-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Draws a curve from the position of the last segment point in the path
 that goes through the specified <tt>through</tt> point, to the specified
@@ -3866,20 +3372,11 @@ function onMouseMove(event) {
 </div>
 
 	
-<div id="arcto-through-to-member" class="member">
-<div id="arcto-through-to-link" class="member-link">
-<a name="arcto-through-to" href="#" onClick="return toggleMember('arcto-through-to', false);"><tt><b>arcTo</b>(through, to)</tt></a>
-</div>
-<div id="arcto-through-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="arcto-through-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('arcto-through-to', false);"><tt><b>arcTo</b>(through, to)</tt></a>
+<a name="arcto-through-to" href="#arcto-through-to"><tt><b>arcTo</b>(through, to)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('arcto-through-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Draws an arc from the position of the last segment point in the path that
 goes through the specified <tt>through</tt> point, to the specified
@@ -3978,20 +3475,11 @@ function onMouseUp(event) {
 </div>
 
 	
-<div id="arcto-to-member" class="member">
-<div id="arcto-to-link" class="member-link">
-<a name="arcto-to" href="#" onClick="return toggleMember('arcto-to', false);"><tt><b>arcTo</b>(to[, clockwise])</tt></a>
-</div>
-<div id="arcto-to-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="arcto-to" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('arcto-to', false);"><tt><b>arcTo</b>(to[, clockwise])</tt></a>
+<a name="arcto-to" href="#arcto-to"><tt><b>arcTo</b>(to[, clockwise])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('arcto-to', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Draws an arc from the position of the last segment point in the path to
 the specified point by adding one or more segments to the path.</p>
@@ -4078,20 +3566,11 @@ function onMouseDrag(event) {
 </div>
 
 	
-<div id="closepath-member" class="member">
-<div id="closepath-link" class="member-link">
-<a name="closepath" href="#" onClick="return toggleMember('closepath', false);"><tt><b>closePath</b>()</tt></a>
-</div>
-<div id="closepath-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="closepath" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('closepath', false);"><tt><b>closePath</b>()</tt></a>
+<a name="closepath" href="#closepath"><tt><b>closePath</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('closepath', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Closes the path. When closed, Paper.js connects the first and last
 segments.</p>
@@ -4110,20 +3589,11 @@ segments.</p>
 	
 <h3>Relative Drawing Commands</h3>
 
-<div id="moveby-vector-member" class="member">
-<div id="moveby-vector-link" class="member-link">
-<a name="moveby-vector" href="#" onClick="return toggleMember('moveby-vector', false);"><tt><b>moveBy</b>(vector)</tt></a>
-</div>
-<div id="moveby-vector-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="moveby-vector" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('moveby-vector', false);"><tt><b>moveBy</b>(vector)</tt></a>
+<a name="moveby-vector" href="#moveby-vector"><tt><b>moveBy</b>(vector)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('moveby-vector', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>If called on a <a href="/reference/compoundpath"><tt>CompoundPath</tt></a>, a new <a href="/reference/path"><tt>Path</tt></a> is created as a
 child and a point is added as its first segment relative to the
@@ -4148,20 +3618,11 @@ position of the last segment of the current path.</p>
 </div>
 
 	
-<div id="lineby-vector-member" class="member">
-<div id="lineby-vector-link" class="member-link">
-<a name="lineby-vector" href="#" onClick="return toggleMember('lineby-vector', false);"><tt><b>lineBy</b>(vector)</tt></a>
-</div>
-<div id="lineby-vector-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="lineby-vector" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('lineby-vector', false);"><tt><b>lineBy</b>(vector)</tt></a>
+<a name="lineby-vector" href="#lineby-vector"><tt><b>lineBy</b>(vector)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('lineby-vector', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Adds a segment relative to the last segment point of the path.</p>
 	
@@ -4244,20 +3705,11 @@ path.smooth();
 </div>
 
 	
-<div id="curveby-throughVector-toVector-member" class="member">
-<div id="curveby-throughVector-toVector-link" class="member-link">
-<a name="curveby-throughVector-toVector" href="#" onClick="return toggleMember('curveby-throughVector-toVector', false);"><tt><b>curveBy</b>(throughVector, toVector[, parameter])</tt></a>
-</div>
-<div id="curveby-throughVector-toVector-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="curveby-throughVector-toVector" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('curveby-throughVector-toVector', false);"><tt><b>curveBy</b>(throughVector, toVector[, parameter])</tt></a>
+<a name="curveby-throughVector-toVector" href="#curveby-throughVector-toVector"><tt><b>curveBy</b>(throughVector, toVector[, parameter])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('curveby-throughVector-toVector', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -4294,20 +3746,11 @@ path.smooth();
 </div>
 
 	
-<div id="arcby-throughVector-toVector-member" class="member">
-<div id="arcby-throughVector-toVector-link" class="member-link">
-<a name="arcby-throughVector-toVector" href="#" onClick="return toggleMember('arcby-throughVector-toVector', false);"><tt><b>arcBy</b>(throughVector, toVector)</tt></a>
-</div>
-<div id="arcby-throughVector-toVector-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="arcby-throughVector-toVector" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('arcby-throughVector-toVector', false);"><tt><b>arcBy</b>(throughVector, toVector)</tt></a>
+<a name="arcby-throughVector-toVector" href="#arcby-throughVector-toVector"><tt><b>arcBy</b>(throughVector, toVector)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('arcby-throughVector-toVector', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -4344,23 +3787,16 @@ path.smooth();
 <div class="reference-members"><h2>Properties inherited from <a href="/reference/item"><tt>Item</tt></a></h2>
 
 	
-<div id="id-member" class="member">
-<div id="id-link" class="member-link">
-<a name="id" href="#" onClick="return toggleMember('id', false);"><tt><b>id</b></tt></a>
-</div>
-<div id="id-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="id" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('id', false);"><tt><b>id</b></tt></a>
+<a name="id" href="#id"><tt><b>id</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('id', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The unique id of the item.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -4376,23 +3812,16 @@ path.smooth();
 </div>
 
 	
-<div id="type-member" class="member">
-<div id="type-link" class="member-link">
-<a name="type" href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
-</div>
-<div id="type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+<a name="type" href="#type"><tt><b>type</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The type of the item as a string.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -4409,20 +3838,11 @@ path.smooth();
 </div>
 
 	
-<div id="name-member" class="member">
-<div id="name-link" class="member-link">
-<a name="name" href="#" onClick="return toggleMember('name', false);"><tt><b>name</b></tt></a>
-</div>
-<div id="name-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="name" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('name', false);"><tt><b>name</b></tt></a>
+<a name="name" href="#name"><tt><b>name</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('name', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The name of the item. If the item has a name, it can be accessed by name
@@ -4466,20 +3886,11 @@ group.children['example'].fillColor = 'red';
 </div>
 
 	
-<div id="style-member" class="member">
-<div id="style-link" class="member-link">
-<a name="style" href="#" onClick="return toggleMember('style', false);"><tt><b>style</b></tt></a>
-</div>
-<div id="style-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="style" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('style', false);"><tt><b>style</b></tt></a>
+<a name="style" href="#style"><tt><b>style</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('style', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The path style of the item.</p>
@@ -4572,20 +3983,11 @@ path2.style = myStyle;
 </div>
 
 	
-<div id="visible-member" class="member">
-<div id="visible-link" class="member-link">
-<a name="visible" href="#" onClick="return toggleMember('visible', false);"><tt><b>visible</b></tt></a>
-</div>
-<div id="visible-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="visible" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('visible', false);"><tt><b>visible</b></tt></a>
+<a name="visible" href="#visible"><tt><b>visible</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('visible', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies whether the item is visible. When set to <tt>false</tt>, the
@@ -4630,20 +4032,11 @@ path.visible = false;
 </div>
 
 	
-<div id="blendmode-member" class="member">
-<div id="blendmode-link" class="member-link">
-<a name="blendmode" href="#" onClick="return toggleMember('blendmode', false);"><tt><b>blendMode</b></tt></a>
-</div>
-<div id="blendmode-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="blendmode" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('blendmode', false);"><tt><b>blendMode</b></tt></a>
+<a name="blendmode" href="#blendmode"><tt><b>blendMode</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('blendmode', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The blend mode of the item.</p>
@@ -4701,20 +4094,11 @@ circle2.blendMode = 'multiply';
 </div>
 
 	
-<div id="opacity-member" class="member">
-<div id="opacity-link" class="member-link">
-<a name="opacity" href="#" onClick="return toggleMember('opacity', false);"><tt><b>opacity</b></tt></a>
-</div>
-<div id="opacity-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="opacity" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('opacity', false);"><tt><b>opacity</b></tt></a>
+<a name="opacity" href="#opacity"><tt><b>opacity</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('opacity', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The opacity of the item as a value between <tt>0</tt> and <tt>1</tt>.</p>
@@ -4766,20 +4150,11 @@ circle2.opacity = 0.5;
 </div>
 
 	
-<div id="selected-member" class="member">
-<div id="selected-link" class="member-link">
-<a name="selected" href="#" onClick="return toggleMember('selected', false);"><tt><b>selected</b></tt></a>
-</div>
-<div id="selected-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="selected" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('selected', false);"><tt><b>selected</b></tt></a>
+<a name="selected" href="#selected"><tt><b>selected</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selected', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies whether an item is selected and will also return <tt>true</tt>
@@ -4824,20 +4199,11 @@ path.selected = true; // Select the path
 </div>
 
 	
-<div id="clipmask-member" class="member">
-<div id="clipmask-link" class="member-link">
-<a name="clipmask" href="#" onClick="return toggleMember('clipmask', false);"><tt><b>clipMask</b></tt></a>
-</div>
-<div id="clipmask-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="clipmask" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('clipmask', false);"><tt><b>clipMask</b></tt></a>
+<a name="clipmask" href="#clipmask"><tt><b>clipMask</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clipmask', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies whether the item defines a clip mask. This can only be set on
@@ -4858,20 +4224,11 @@ already contained within a clipping group.</p>
 </div>
 
 	
-<div id="data-member" class="member">
-<div id="data-link" class="member-link">
-<a name="data" href="#" onClick="return toggleMember('data', false);"><tt><b>data</b></tt></a>
-</div>
-<div id="data-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="data" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('data', false);"><tt><b>data</b></tt></a>
+<a name="data" href="#data"><tt><b>data</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('data', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>A plain javascript object which can be used to store
@@ -4936,20 +4293,11 @@ console.log(path.data.pets.length); // 1</pre>
 	
 	<h3>Position and Bounding Boxes</h3>
 
-<div id="position-member" class="member">
-<div id="position-link" class="member-link">
-<a name="position" href="#" onClick="return toggleMember('position', false);"><tt><b>position</b></tt></a>
-</div>
-<div id="position-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="position" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('position', false);"><tt><b>position</b></tt></a>
+<a name="position" href="#position"><tt><b>position</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('position', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The item's position within the project. This is the
@@ -5013,20 +4361,11 @@ circle.position.x += 100;
 </div>
 
 	
-<div id="matrix-member" class="member">
-<div id="matrix-link" class="member-link">
-<a name="matrix" href="#" onClick="return toggleMember('matrix', false);"><tt><b>matrix</b></tt></a>
-</div>
-<div id="matrix-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="matrix" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('matrix', false);"><tt><b>matrix</b></tt></a>
+<a name="matrix" href="#matrix"><tt><b>matrix</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('matrix', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The item's transformation matrix, defining position and dimensions in the
@@ -5046,24 +4385,17 @@ document.</p>
 </div>
 
 	
-<div id="bounds-member" class="member">
-<div id="bounds-link" class="member-link">
-<a name="bounds" href="#" onClick="return toggleMember('bounds', false);"><tt><b>bounds</b></tt></a>
-</div>
-<div id="bounds-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="bounds" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('bounds', false);"><tt><b>bounds</b></tt></a>
+<a name="bounds" href="#bounds"><tt><b>bounds</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('bounds', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The bounding rectangle of the item excluding stroke width.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -5078,24 +4410,17 @@ document.</p>
 </div>
 
 	
-<div id="strokebounds-member" class="member">
-<div id="strokebounds-link" class="member-link">
-<a name="strokebounds" href="#" onClick="return toggleMember('strokebounds', false);"><tt><b>strokeBounds</b></tt></a>
-</div>
-<div id="strokebounds-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokebounds" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokebounds', false);"><tt><b>strokeBounds</b></tt></a>
+<a name="strokebounds" href="#strokebounds"><tt><b>strokeBounds</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokebounds', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The bounding rectangle of the item including stroke width.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -5110,23 +4435,16 @@ document.</p>
 </div>
 
 	
-<div id="handlebounds-member" class="member">
-<div id="handlebounds-link" class="member-link">
-<a name="handlebounds" href="#" onClick="return toggleMember('handlebounds', false);"><tt><b>handleBounds</b></tt></a>
-</div>
-<div id="handlebounds-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="handlebounds" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('handlebounds', false);"><tt><b>handleBounds</b></tt></a>
+<a name="handlebounds" href="#handlebounds"><tt><b>handleBounds</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('handlebounds', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The bounding rectangle of the item including handles.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -5144,23 +4462,16 @@ document.</p>
 	
 	<h3>Project Hierarchy</h3>
 
-<div id="project-member" class="member">
-<div id="project-link" class="member-link">
-<a name="project" href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
-</div>
-<div id="project-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="project" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
+<a name="project" href="#project"><tt><b>project</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('project', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The project that this item belongs to.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -5176,23 +4487,16 @@ document.</p>
 </div>
 
 	
-<div id="layer-member" class="member">
-<div id="layer-link" class="member-link">
-<a name="layer" href="#" onClick="return toggleMember('layer', false);"><tt><b>layer</b></tt></a>
-</div>
-<div id="layer-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="layer" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('layer', false);"><tt><b>layer</b></tt></a>
+<a name="layer" href="#layer"><tt><b>layer</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('layer', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The layer that this item is contained within.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -5208,20 +4512,11 @@ document.</p>
 </div>
 
 	
-<div id="parent-member" class="member">
-<div id="parent-link" class="member-link">
-<a name="parent" href="#" onClick="return toggleMember('parent', false);"><tt><b>parent</b></tt></a>
-</div>
-<div id="parent-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="parent" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('parent', false);"><tt><b>parent</b></tt></a>
+<a name="parent" href="#parent"><tt><b>parent</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('parent', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The item that this item is contained within.</p>
@@ -5291,20 +4586,11 @@ console.log(group.children[0] == path); // true</pre>
 </div>
 
 	
-<div id="children-member" class="member">
-<div id="children-link" class="member-link">
-<a name="children" href="#" onClick="return toggleMember('children', false);"><tt><b>children</b></tt></a>
-</div>
-<div id="children-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="children" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('children', false);"><tt><b>children</b></tt></a>
+<a name="children" href="#children"><tt><b>children</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('children', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The children items contained within this item. Items that define a
@@ -5398,25 +4684,18 @@ group.firstChild.fillColor = 'green';
 </div>
 
 	
-<div id="firstchild-member" class="member">
-<div id="firstchild-link" class="member-link">
-<a name="firstchild" href="#" onClick="return toggleMember('firstchild', false);"><tt><b>firstChild</b></tt></a>
-</div>
-<div id="firstchild-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="firstchild" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('firstchild', false);"><tt><b>firstChild</b></tt></a>
+<a name="firstchild" href="#firstchild"><tt><b>firstChild</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('firstchild', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The first item contained within this item. This is a shortcut for
 accessing <tt>item.children[0]</tt>.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -5431,25 +4710,18 @@ accessing <tt>item.children[0]</tt>.</p>
 </div>
 
 	
-<div id="lastchild-member" class="member">
-<div id="lastchild-link" class="member-link">
-<a name="lastchild" href="#" onClick="return toggleMember('lastchild', false);"><tt><b>lastChild</b></tt></a>
-</div>
-<div id="lastchild-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="lastchild" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('lastchild', false);"><tt><b>lastChild</b></tt></a>
+<a name="lastchild" href="#lastchild"><tt><b>lastChild</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('lastchild', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The last item contained within this item.This is a shortcut for
 accessing <tt>item.children[item.children.length - 1]</tt>.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -5464,24 +4736,17 @@ accessing <tt>item.children[item.children.length - 1]</tt>.</p>
 </div>
 
 	
-<div id="nextsibling-member" class="member">
-<div id="nextsibling-link" class="member-link">
-<a name="nextsibling" href="#" onClick="return toggleMember('nextsibling', false);"><tt><b>nextSibling</b></tt></a>
-</div>
-<div id="nextsibling-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="nextsibling" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('nextsibling', false);"><tt><b>nextSibling</b></tt></a>
+<a name="nextsibling" href="#nextsibling"><tt><b>nextSibling</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('nextsibling', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The next item on the same level as this item.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -5496,24 +4761,17 @@ accessing <tt>item.children[item.children.length - 1]</tt>.</p>
 </div>
 
 	
-<div id="previoussibling-member" class="member">
-<div id="previoussibling-link" class="member-link">
-<a name="previoussibling" href="#" onClick="return toggleMember('previoussibling', false);"><tt><b>previousSibling</b></tt></a>
-</div>
-<div id="previoussibling-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="previoussibling" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('previoussibling', false);"><tt><b>previousSibling</b></tt></a>
+<a name="previoussibling" href="#previoussibling"><tt><b>previousSibling</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('previoussibling', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The previous item on the same level as this item.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -5528,23 +4786,16 @@ accessing <tt>item.children[item.children.length - 1]</tt>.</p>
 </div>
 
 	
-<div id="index-member" class="member">
-<div id="index-link" class="member-link">
-<a name="index" href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
-</div>
-<div id="index-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="index" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
+<a name="index" href="#index"><tt><b>index</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('index', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The index of this item within the list of its parent's children.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -5560,39 +4811,21 @@ accessing <tt>item.children[item.children.length - 1]</tt>.</p>
 </div>
 
 	
-<div id="appendtop-item-member" class="member">
-<div id="appendtop-item-link" class="member-link">
-<a name="appendtop-item" href="#" onClick="return toggleMember('appendtop-item', false);"><tt><b>appendTop</b></tt></a>
-</div>
-<div id="appendtop-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="appendtop-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('appendtop-item', false);"><tt><b>appendTop</b></tt></a>
+<a name="appendtop-item" href="#appendtop-item"><tt><b>appendTop</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('appendtop-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 </div>
 </div>
 
 	
-<div id="moveabove-item-member" class="member">
-<div id="moveabove-item-link" class="member-link">
-<a name="moveabove-item" href="#" onClick="return toggleMember('moveabove-item', false);"><tt><b>moveAbove</b></tt></a>
-</div>
-<div id="moveabove-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="moveabove-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('moveabove-item', false);"><tt><b>moveAbove</b></tt></a>
+<a name="moveabove-item" href="#moveabove-item"><tt><b>moveAbove</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('moveabove-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Moves this item above the specified item.</p>
@@ -5611,20 +4844,11 @@ accessing <tt>item.children[item.children.length - 1]</tt>.</p>
 </div>
 
 	
-<div id="movebelow-item-member" class="member">
-<div id="movebelow-item-link" class="member-link">
-<a name="movebelow-item" href="#" onClick="return toggleMember('movebelow-item', false);"><tt><b>moveBelow</b></tt></a>
-</div>
-<div id="movebelow-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="movebelow-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('movebelow-item', false);"><tt><b>moveBelow</b></tt></a>
+<a name="movebelow-item" href="#movebelow-item"><tt><b>moveBelow</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('movebelow-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Moves the item below the specified item.</p>
@@ -5645,20 +4869,11 @@ accessing <tt>item.children[item.children.length - 1]</tt>.</p>
 	
 	<h3>Stroke Style</h3>
 
-<div id="strokecolor-member" class="member">
-<div id="strokecolor-link" class="member-link">
-<a name="strokecolor" href="#" onClick="return toggleMember('strokecolor', false);"><tt><b>strokeColor</b></tt></a>
-</div>
-<div id="strokecolor-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokecolor" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokecolor', false);"><tt><b>strokeColor</b></tt></a>
+<a name="strokecolor" href="#strokecolor"><tt><b>strokeColor</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokecolor', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The color of the stroke.</p>
@@ -5697,20 +4912,11 @@ circle.strokeColor = new Color(1, 0, 0);
 </div>
 
 	
-<div id="strokewidth-member" class="member">
-<div id="strokewidth-link" class="member-link">
-<a name="strokewidth" href="#" onClick="return toggleMember('strokewidth', false);"><tt><b>strokeWidth</b></tt></a>
-</div>
-<div id="strokewidth-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokewidth" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokewidth', false);"><tt><b>strokeWidth</b></tt></a>
+<a name="strokewidth" href="#strokewidth"><tt><b>strokeWidth</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokewidth', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The width of the stroke.</p>
@@ -5750,20 +4956,11 @@ circle.strokeWidth = 10;
 </div>
 
 	
-<div id="strokecap-member" class="member">
-<div id="strokecap-link" class="member-link">
-<a name="strokecap" href="#" onClick="return toggleMember('strokecap', false);"><tt><b>strokeCap</b></tt></a>
-</div>
-<div id="strokecap-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokecap" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokecap', false);"><tt><b>strokeCap</b></tt></a>
+<a name="strokecap" href="#strokecap"><tt><b>strokeCap</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokecap', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The shape to be used at the end of open <a href="/reference/path"><tt>Path</tt></a> items, when they
@@ -5819,20 +5016,11 @@ line2.strokeCap = 'butt';
 </div>
 
 	
-<div id="strokejoin-member" class="member">
-<div id="strokejoin-link" class="member-link">
-<a name="strokejoin" href="#" onClick="return toggleMember('strokejoin', false);"><tt><b>strokeJoin</b></tt></a>
-</div>
-<div id="strokejoin-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokejoin" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokejoin', false);"><tt><b>strokeJoin</b></tt></a>
+<a name="strokejoin" href="#strokejoin"><tt><b>strokeJoin</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokejoin', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The shape to be used at the corners of paths when they have a stroke.</p>
@@ -5883,20 +5071,11 @@ path3.strokeJoin = 'bevel';
 </div>
 
 	
-<div id="dashoffset-member" class="member">
-<div id="dashoffset-link" class="member-link">
-<a name="dashoffset" href="#" onClick="return toggleMember('dashoffset', false);"><tt><b>dashOffset</b></tt></a>
-</div>
-<div id="dashoffset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="dashoffset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('dashoffset', false);"><tt><b>dashOffset</b></tt></a>
+<a name="dashoffset" href="#dashoffset"><tt><b>dashOffset</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('dashoffset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The dash offset of the stroke.</p>
@@ -5921,20 +5100,11 @@ path3.strokeJoin = 'bevel';
 </div>
 
 	
-<div id="dasharray-member" class="member">
-<div id="dasharray-link" class="member-link">
-<a name="dasharray" href="#" onClick="return toggleMember('dasharray', false);"><tt><b>dashArray</b></tt></a>
-</div>
-<div id="dasharray-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="dasharray" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('dasharray', false);"><tt><b>dashArray</b></tt></a>
+<a name="dasharray" href="#dasharray"><tt><b>dashArray</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('dasharray', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies an array containing the dash and gap lengths of the stroke.</p>
@@ -5979,20 +5149,11 @@ path.dashArray = [10, 4];
 </div>
 
 	
-<div id="miterlimit-member" class="member">
-<div id="miterlimit-link" class="member-link">
-<a name="miterlimit" href="#" onClick="return toggleMember('miterlimit', false);"><tt><b>miterLimit</b></tt></a>
-</div>
-<div id="miterlimit-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="miterlimit" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('miterlimit', false);"><tt><b>miterLimit</b></tt></a>
+<a name="miterlimit" href="#miterlimit"><tt><b>miterLimit</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('miterlimit', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The miter limit of the stroke.</p>
@@ -6024,20 +5185,11 @@ miterLimit imposes a limit on the ratio of the miter length to the
 	
 	<h3>Fill Style</h3>
 
-<div id="fillcolor-member" class="member">
-<div id="fillcolor-link" class="member-link">
-<a name="fillcolor" href="#" onClick="return toggleMember('fillcolor', false);"><tt><b>fillColor</b></tt></a>
-</div>
-<div id="fillcolor-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fillcolor" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fillcolor', false);"><tt><b>fillColor</b></tt></a>
+<a name="fillcolor" href="#fillcolor"><tt><b>fillColor</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fillcolor', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The fill color of the item.</p>
@@ -6078,20 +5230,11 @@ circle.fillColor = new Color(1, 0, 0);
 	
 	<h3>Selection Style</h3>
 
-<div id="selectedcolor-member" class="member">
-<div id="selectedcolor-link" class="member-link">
-<a name="selectedcolor" href="#" onClick="return toggleMember('selectedcolor', false);"><tt><b>selectedColor</b></tt></a>
-</div>
-<div id="selectedcolor-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="selectedcolor" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('selectedcolor', false);"><tt><b>selectedColor</b></tt></a>
+<a name="selectedcolor" href="#selectedcolor"><tt><b>selectedColor</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selectedcolor', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The color the item is highlighted with when selected. If the item does
@@ -6113,20 +5256,11 @@ not specify its own color, the color defined by its layer is used instead.</p>
 	
 	<h3>Event Handlers</h3>
 
-<div id="onframe-member" class="member">
-<div id="onframe-link" class="member-link">
-<a name="onframe" href="#" onClick="return toggleMember('onframe', false);"><tt><b>onFrame</b></tt></a>
-</div>
-<div id="onframe-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onframe" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onframe', false);"><tt><b>onFrame</b></tt></a>
+<a name="onframe" href="#onframe"><tt><b>onFrame</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onframe', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Item level handler function to be called on each frame of an animation.</p>
@@ -6177,20 +5311,11 @@ path.onFrame = function(event) {
 </div>
 
 	
-<div id="onmousedown-member" class="member">
-<div id="onmousedown-link" class="member-link">
-<a name="onmousedown" href="#" onClick="return toggleMember('onmousedown', false);"><tt><b>onMouseDown</b></tt></a>
-</div>
-<div id="onmousedown-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmousedown" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmousedown', false);"><tt><b>onMouseDown</b></tt></a>
+<a name="onmousedown" href="#onmousedown"><tt><b>onMouseDown</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmousedown', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse button is pushed down on the
@@ -6262,20 +5387,11 @@ for (var i = 0; i < 30; i++) {
 </div>
 
 	
-<div id="onmouseup-member" class="member">
-<div id="onmouseup-link" class="member-link">
-<a name="onmouseup" href="#" onClick="return toggleMember('onmouseup', false);"><tt><b>onMouseUp</b></tt></a>
-</div>
-<div id="onmouseup-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmouseup" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmouseup', false);"><tt><b>onMouseUp</b></tt></a>
+<a name="onmouseup" href="#onmouseup"><tt><b>onMouseUp</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmouseup', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse button is released over the item.</p>
@@ -6319,20 +5435,11 @@ path.onMouseUp = function(event) {
 </div>
 
 	
-<div id="onclick-member" class="member">
-<div id="onclick-link" class="member-link">
-<a name="onclick" href="#" onClick="return toggleMember('onclick', false);"><tt><b>onClick</b></tt></a>
-</div>
-<div id="onclick-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onclick" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onclick', false);"><tt><b>onClick</b></tt></a>
+<a name="onclick" href="#onclick"><tt><b>onClick</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onclick', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse clicks on the item. The function
@@ -6404,20 +5511,11 @@ for (var i = 0; i < 30; i++) {
 </div>
 
 	
-<div id="ondoubleclick-member" class="member">
-<div id="ondoubleclick-link" class="member-link">
-<a name="ondoubleclick" href="#" onClick="return toggleMember('ondoubleclick', false);"><tt><b>onDoubleClick</b></tt></a>
-</div>
-<div id="ondoubleclick-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="ondoubleclick" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('ondoubleclick', false);"><tt><b>onDoubleClick</b></tt></a>
+<a name="ondoubleclick" href="#ondoubleclick"><tt><b>onDoubleClick</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('ondoubleclick', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse double clicks on the item. The
@@ -6489,20 +5587,11 @@ for (var i = 0; i < 30; i++) {
 </div>
 
 	
-<div id="onmousemove-member" class="member">
-<div id="onmousemove-link" class="member-link">
-<a name="onmousemove" href="#" onClick="return toggleMember('onmousemove', false);"><tt><b>onMouseMove</b></tt></a>
-</div>
-<div id="onmousemove-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmousemove" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmousemove', false);"><tt><b>onMouseMove</b></tt></a>
+<a name="onmousemove" href="#onmousemove"><tt><b>onMouseMove</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmousemove', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called repeatedly when the mouse moves on top of the
@@ -6546,20 +5635,11 @@ path.onMouseMove = function(event) {
 </div>
 
 	
-<div id="onmouseenter-member" class="member">
-<div id="onmouseenter-link" class="member-link">
-<a name="onmouseenter" href="#" onClick="return toggleMember('onmouseenter', false);"><tt><b>onMouseEnter</b></tt></a>
-</div>
-<div id="onmouseenter-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmouseenter" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmouseenter', false);"><tt><b>onMouseEnter</b></tt></a>
+<a name="onmouseenter" href="#onmouseenter"><tt><b>onMouseEnter</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmouseenter', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse moves over the item. This
@@ -6640,20 +5720,11 @@ function onMouseDown(event) {
 </div>
 
 	
-<div id="onmouseleave-member" class="member">
-<div id="onmouseleave-link" class="member-link">
-<a name="onmouseleave" href="#" onClick="return toggleMember('onmouseleave', false);"><tt><b>onMouseLeave</b></tt></a>
-</div>
-<div id="onmouseleave-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onmouseleave" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onmouseleave', false);"><tt><b>onMouseLeave</b></tt></a>
+<a name="onmouseleave" href="#onmouseleave"><tt><b>onMouseLeave</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onmouseleave', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The function to be called when the mouse moves out of the item.</p>
@@ -6702,20 +5773,11 @@ path.onMouseLeave = function(event) {
 <div class="reference-members"><h2>Methods inherited from <a href="/reference/item"><tt>Item</tt></a></h2>
 
 	
-<div id="set-props-member" class="member">
-<div id="set-props-link" class="member-link">
-<a name="set-props" href="#" onClick="return toggleMember('set-props', false);"><tt><b>set</b>(props)</tt></a>
-</div>
-<div id="set-props-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="set-props" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('set-props', false);"><tt><b>set</b>(props)</tt></a>
+<a name="set-props" href="#set-props"><tt><b>set</b>(props)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('set-props', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Sets those properties of the passed object literal on this item to
 the values defined in the object literal, if the item has property of the
@@ -6770,20 +5832,11 @@ circle.set({
 </div>
 
 	
-<div id="isempty-member" class="member">
-<div id="isempty-link" class="member-link">
-<a name="isempty" href="#" onClick="return toggleMember('isempty', false);"><tt><b>isEmpty</b>()</tt></a>
-</div>
-<div id="isempty-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isempty" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isempty', false);"><tt><b>isEmpty</b>()</tt></a>
+<a name="isempty" href="#isempty"><tt><b>isEmpty</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isempty', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Specifies wether the item has any content or not. The meaning of what
 content is differs from type to type. For example, a <a href="/reference/group"><tt>Group</tt></a> with
@@ -6798,20 +5851,11 @@ with no segments all are considered empty.</p>
 </div>
 
 	
-<div id="isinserted-member" class="member">
-<div id="isinserted-link" class="member-link">
-<a name="isinserted" href="#" onClick="return toggleMember('isinserted', false);"><tt><b>isInserted</b>()</tt></a>
-</div>
-<div id="isinserted-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isinserted" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isinserted', false);"><tt><b>isInserted</b>()</tt></a>
+<a name="isinserted" href="#isinserted"><tt><b>isInserted</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isinserted', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks whether the item and all its parents are inserted into the DOM or
 not.</p>
@@ -6832,20 +5876,11 @@ not.</p>
 </div>
 
 	
-<div id="clone-member" class="member">
-<div id="clone-link" class="member-link">
-<a name="clone" href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
-</div>
-<div id="clone-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="clone" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+<a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clone', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Clones the item within the same project and places the copy above the
 item.</p>
@@ -6890,20 +5925,11 @@ for (var i = 0; i < 20; i++) {
 </div>
 
 	
-<div id="copyto-item-member" class="member">
-<div id="copyto-item-link" class="member-link">
-<a name="copyto-item" href="#" onClick="return toggleMember('copyto-item', false);"><tt><b>copyTo</b>(item)</tt></a>
-</div>
-<div id="copyto-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="copyto-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('copyto-item', false);"><tt><b>copyTo</b>(item)</tt></a>
+<a name="copyto-item" href="#copyto-item"><tt><b>copyTo</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('copyto-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>When passed a project, copies the item to the project,
 or duplicates it within the same project. When passed an item,
@@ -6937,20 +5963,11 @@ copy the item to
 </div>
 
 	
-<div id="rasterize-member" class="member">
-<div id="rasterize-link" class="member-link">
-<a name="rasterize" href="#" onClick="return toggleMember('rasterize', false);"><tt><b>rasterize</b>([resolution])</tt></a>
-</div>
-<div id="rasterize-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="rasterize" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('rasterize', false);"><tt><b>rasterize</b>([resolution])</tt></a>
+<a name="rasterize" href="#rasterize"><tt><b>rasterize</b>([resolution])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('rasterize', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Rasterizes the item into a newly created Raster object. The item itself
 is not removed after rasterization.</p>
@@ -7008,20 +6025,11 @@ raster.scale(5);
 </div>
 
 	
-<div id="contains-point-member" class="member">
-<div id="contains-point-link" class="member-link">
-<a name="contains-point" href="#" onClick="return toggleMember('contains-point', false);"><tt><b>contains</b>(point)</tt></a>
-</div>
-<div id="contains-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="contains-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('contains-point', false);"><tt><b>contains</b>(point)</tt></a>
+<a name="contains-point" href="#contains-point"><tt><b>contains</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('contains-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks wether the item's geometry contains the given point.</p>
 	
@@ -7074,20 +6082,11 @@ function onMouseDown(event) {
 </div>
 
 	
-<div id="hittest-point-member" class="member">
-<div id="hittest-point-link" class="member-link">
-<a name="hittest-point" href="#" onClick="return toggleMember('hittest-point', false);"><tt><b>hitTest</b>(point[, options])</tt></a>
-</div>
-<div id="hittest-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="hittest-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('hittest-point', false);"><tt><b>hitTest</b>(point[, options])</tt></a>
+<a name="hittest-point" href="#hittest-point"><tt><b>hitTest</b>(point[, options])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('hittest-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Perform a hit test on the item (and its children, if it is a
 <a href="/reference/group"><tt>Group</tt></a> or <a href="/reference/layer"><tt>Layer</tt></a>) at the location of the specified point.</p>
@@ -7152,22 +6151,152 @@ hit.
 </div>
 
 	
+<h3>Import / Export to JSON & SVG</h3>
+
+<div id="exportjson" class="member">
+<div class="member-link">
+<a name="exportjson" href="#exportjson"><tt><b>exportJSON</b>([options])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Exports (serializes) the item with its content and child items to a JSON
+data string.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the serialization options
+&mdash;&nbsp;optional, default: <tt>{ precision: 5 }</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;the exported JSON data
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="importjson-json" class="member">
+<div class="member-link">
+<a name="importjson-json" href="#importjson-json"><tt><b>importJSON</b>(json)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Imports (deserializes) the stored JSON data into this item's
+<a href="/reference/item#children"><tt>item.children</tt></a> list. Note that the item is not cleared first.</p>
+<p>You can call <a href="/reference/item#removechildren"><tt>item.removeChildren</tt></a>() to do so.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>json:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;the JSON data to import from.
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="exportsvg" class="member">
+<div class="member-link">
+<a name="exportsvg" href="#exportsvg"><tt><b>exportSVG</b>([options])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Exports the item with its content and child items as an SVG DOM.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the export
+       options.
+&mdash;&nbsp;optional, default: <tt>{ asString: false, precision: 5 }</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>SVGSVGElement</tt></tt>&nbsp;&mdash;&nbsp;the item converted to an SVG node
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="importsvg-node" class="member">
+<div class="member-link">
+<a name="importsvg-node" href="#importsvg-node"><tt><b>importSVG</b>(node)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Converts the SVG node and all its child nodes into Paper.js items and
+adds them as children to the this item.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>node:</tt> 
+<tt>SVGSVGElement</tt>
+&mdash;&nbsp;the SVG node to import
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the imported Paper.js parent item
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
 <h3>Hierarchy Operations</h3>
 
-<div id="addchild-item-_preserve-member" class="member">
-<div id="addchild-item-_preserve-link" class="member-link">
-<a name="addchild-item-_preserve" href="#" onClick="return toggleMember('addchild-item-_preserve', false);"><tt><b>addChild</b>(item)</tt></a>
-</div>
-<div id="addchild-item-_preserve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="addchild-item-_preserve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('addchild-item-_preserve', false);"><tt><b>addChild</b>(item)</tt></a>
+<a name="addchild-item-_preserve" href="#addchild-item-_preserve"><tt><b>addChild</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('addchild-item-_preserve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Adds the specified item as a child of this item at the end of the
 its children list. You can use this function for groups, compound
@@ -7192,20 +6321,11 @@ paths and layers.</p>
 </div>
 
 	
-<div id="insertchild-index-item-_preserve-member" class="member">
-<div id="insertchild-index-item-_preserve-link" class="member-link">
-<a name="insertchild-index-item-_preserve" href="#" onClick="return toggleMember('insertchild-index-item-_preserve', false);"><tt><b>insertChild</b>(index, item)</tt></a>
-</div>
-<div id="insertchild-index-item-_preserve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="insertchild-index-item-_preserve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('insertchild-index-item-_preserve', false);"><tt><b>insertChild</b>(index, item)</tt></a>
+<a name="insertchild-index-item-_preserve" href="#insertchild-index-item-_preserve"><tt><b>insertChild</b>(index, item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertchild-index-item-_preserve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts the specified item as a child of this item at the specified
 index in its <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> list. You can use this function for
@@ -7237,20 +6357,11 @@ groups, compound paths and layers.</p>
 </div>
 
 	
-<div id="addchildren-items-_preserve-member" class="member">
-<div id="addchildren-items-_preserve-link" class="member-link">
-<a name="addchildren-items-_preserve" href="#" onClick="return toggleMember('addchildren-items-_preserve', false);"><tt><b>addChildren</b>(items)</tt></a>
-</div>
-<div id="addchildren-items-_preserve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="addchildren-items-_preserve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('addchildren-items-_preserve', false);"><tt><b>addChildren</b>(items)</tt></a>
+<a name="addchildren-items-_preserve" href="#addchildren-items-_preserve"><tt><b>addChildren</b>(items)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('addchildren-items-_preserve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Adds the specified items as children of this item at the end of the
 its children list. You can use this function for groups, compound
@@ -7275,20 +6386,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
-<div id="insertchildren-index-items-_preserve-_type-member" class="member">
-<div id="insertchildren-index-items-_preserve-_type-link" class="member-link">
-<a name="insertchildren-index-items-_preserve-_type" href="#" onClick="return toggleMember('insertchildren-index-items-_preserve-_type', false);"><tt><b>insertChildren</b>(index, items)</tt></a>
-</div>
-<div id="insertchildren-index-items-_preserve-_type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="insertchildren-index-items-_preserve-_type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('insertchildren-index-items-_preserve-_type', false);"><tt><b>insertChildren</b>(index, items)</tt></a>
+<a name="insertchildren-index-items-_preserve-_type" href="#insertchildren-index-items-_preserve-_type"><tt><b>insertChildren</b>(index, items)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertchildren-index-items-_preserve-_type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts the specified items as children of this item at the specified
 index in its <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> list. You can use this function for
@@ -7320,20 +6422,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
-<div id="insertabove-item-_preserve-member" class="member">
-<div id="insertabove-item-_preserve-link" class="member-link">
-<a name="insertabove-item-_preserve" href="#" onClick="return toggleMember('insertabove-item-_preserve', false);"><tt><b>insertAbove</b>(item)</tt></a>
-</div>
-<div id="insertabove-item-_preserve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="insertabove-item-_preserve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('insertabove-item-_preserve', false);"><tt><b>insertAbove</b>(item)</tt></a>
+<a name="insertabove-item-_preserve" href="#insertabove-item-_preserve"><tt><b>insertAbove</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertabove-item-_preserve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts this item above the specified item.</p>
 	
@@ -7364,20 +6457,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
-<div id="insertbelow-item-_preserve-member" class="member">
-<div id="insertbelow-item-_preserve-link" class="member-link">
-<a name="insertbelow-item-_preserve" href="#" onClick="return toggleMember('insertbelow-item-_preserve', false);"><tt><b>insertBelow</b>(item)</tt></a>
-</div>
-<div id="insertbelow-item-_preserve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="insertbelow-item-_preserve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('insertbelow-item-_preserve', false);"><tt><b>insertBelow</b>(item)</tt></a>
+<a name="insertbelow-item-_preserve" href="#insertbelow-item-_preserve"><tt><b>insertBelow</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('insertbelow-item-_preserve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts this item below the specified item.</p>
 	
@@ -7408,20 +6492,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
-<div id="sendtoback-member" class="member">
-<div id="sendtoback-link" class="member-link">
-<a name="sendtoback" href="#" onClick="return toggleMember('sendtoback', false);"><tt><b>sendToBack</b>()</tt></a>
-</div>
-<div id="sendtoback-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="sendtoback" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('sendtoback', false);"><tt><b>sendToBack</b>()</tt></a>
+<a name="sendtoback" href="#sendtoback"><tt><b>sendToBack</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('sendtoback', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Sends this item to the back of all other items within the same parent.</p>
 	
@@ -7433,20 +6508,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
-<div id="bringtofront-member" class="member">
-<div id="bringtofront-link" class="member-link">
-<a name="bringtofront" href="#" onClick="return toggleMember('bringtofront', false);"><tt><b>bringToFront</b>()</tt></a>
-</div>
-<div id="bringtofront-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="bringtofront" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('bringtofront', false);"><tt><b>bringToFront</b>()</tt></a>
+<a name="bringtofront" href="#bringtofront"><tt><b>bringToFront</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('bringtofront', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Brings this item to the front of all other items within the same parent.</p>
 	
@@ -7458,20 +6524,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
-<div id="appendbottom-item-member" class="member">
-<div id="appendbottom-item-link" class="member-link">
-<a name="appendbottom-item" href="#" onClick="return toggleMember('appendbottom-item', false);"><tt><b>appendBottom</b>(item)</tt></a>
-</div>
-<div id="appendbottom-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="appendbottom-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('appendbottom-item', false);"><tt><b>appendBottom</b>(item)</tt></a>
+<a name="appendbottom-item" href="#appendbottom-item"><tt><b>appendBottom</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('appendbottom-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts the specified item as a child of this item by appending it to
 the list of children and moving it below all other children. You can
@@ -7496,20 +6553,11 @@ use this function for groups, compound paths and layers.</p>
 </div>
 
 	
-<div id="remove-member" class="member">
-<div id="remove-link" class="member-link">
-<a name="remove" href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
-</div>
-<div id="remove-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="remove" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
+<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('remove', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the item from the project. If the item has children, they are also
 removed.</p>
@@ -7530,20 +6578,11 @@ removed.</p>
 </div>
 
 	
-<div id="removechildren-member" class="member">
-<div id="removechildren-link" class="member-link">
-<a name="removechildren" href="#" onClick="return toggleMember('removechildren', false);"><tt><b>removeChildren</b>()</tt></a>
-</div>
-<div id="removechildren-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removechildren" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removechildren', false);"><tt><b>removeChildren</b>()</tt></a>
+<a name="removechildren" href="#removechildren"><tt><b>removeChildren</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removechildren', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes all of the item's <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> (if any).</p>
 	
@@ -7563,20 +6602,11 @@ removed.</p>
 </div>
 
 	
-<div id="removechildren-from-member" class="member">
-<div id="removechildren-from-link" class="member-link">
-<a name="removechildren-from" href="#" onClick="return toggleMember('removechildren-from', false);"><tt><b>removeChildren</b>(from[, to])</tt></a>
-</div>
-<div id="removechildren-from-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removechildren-from" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removechildren-from', false);"><tt><b>removeChildren</b>(from[, to])</tt></a>
+<a name="removechildren-from" href="#removechildren-from"><tt><b>removeChildren</b>(from[, to])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removechildren-from', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the children from the specified <tt>from</tt> index to the
 <tt>to</tt> index from the parent's <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> array.</p>
@@ -7615,20 +6645,11 @@ removed.</p>
 </div>
 
 	
-<div id="reversechildren-member" class="member">
-<div id="reversechildren-link" class="member-link">
-<a name="reversechildren" href="#" onClick="return toggleMember('reversechildren', false);"><tt><b>reverseChildren</b>()</tt></a>
-</div>
-<div id="reversechildren-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="reversechildren" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('reversechildren', false);"><tt><b>reverseChildren</b>()</tt></a>
+<a name="reversechildren" href="#reversechildren"><tt><b>reverseChildren</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('reversechildren', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Reverses the order of the item's children</p>
 	
@@ -7642,20 +6663,11 @@ removed.</p>
 	
 <h3>Hierarchy Tests</h3>
 
-<div id="haschildren-member" class="member">
-<div id="haschildren-link" class="member-link">
-<a name="haschildren" href="#" onClick="return toggleMember('haschildren', false);"><tt><b>hasChildren</b>()</tt></a>
-</div>
-<div id="haschildren-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="haschildren" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('haschildren', false);"><tt><b>hasChildren</b>()</tt></a>
+<a name="haschildren" href="#haschildren"><tt><b>hasChildren</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('haschildren', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the item contains any children items.</p>
 	
@@ -7675,20 +6687,11 @@ removed.</p>
 </div>
 
 	
-<div id="isabove-item-member" class="member">
-<div id="isabove-item-link" class="member-link">
-<a name="isabove-item" href="#" onClick="return toggleMember('isabove-item', false);"><tt><b>isAbove</b>(item)</tt></a>
-</div>
-<div id="isabove-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isabove-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isabove-item', false);"><tt><b>isAbove</b>(item)</tt></a>
+<a name="isabove-item" href="#isabove-item"><tt><b>isAbove</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isabove-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if this item is above the specified item in the stacking order
 of the project.</p>
@@ -7720,20 +6723,11 @@ of the project.</p>
 </div>
 
 	
-<div id="isbelow-item-member" class="member">
-<div id="isbelow-item-link" class="member-link">
-<a name="isbelow-item" href="#" onClick="return toggleMember('isbelow-item', false);"><tt><b>isBelow</b>(item)</tt></a>
-</div>
-<div id="isbelow-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isbelow-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isbelow-item', false);"><tt><b>isBelow</b>(item)</tt></a>
+<a name="isbelow-item" href="#isbelow-item"><tt><b>isBelow</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isbelow-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the item is below the specified item in the stacking order of
 the project.</p>
@@ -7765,20 +6759,11 @@ the project.</p>
 </div>
 
 	
-<div id="isparent-item-member" class="member">
-<div id="isparent-item-link" class="member-link">
-<a name="isparent-item" href="#" onClick="return toggleMember('isparent-item', false);"><tt><b>isParent</b>(item)</tt></a>
-</div>
-<div id="isparent-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isparent-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isparent-item', false);"><tt><b>isParent</b>(item)</tt></a>
+<a name="isparent-item" href="#isparent-item"><tt><b>isParent</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isparent-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks whether the specified item is the parent of the item.</p>
 	
@@ -7809,20 +6794,11 @@ the project.</p>
 </div>
 
 	
-<div id="ischild-item-member" class="member">
-<div id="ischild-item-link" class="member-link">
-<a name="ischild-item" href="#" onClick="return toggleMember('ischild-item', false);"><tt><b>isChild</b>(item)</tt></a>
-</div>
-<div id="ischild-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="ischild-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('ischild-item', false);"><tt><b>isChild</b>(item)</tt></a>
+<a name="ischild-item" href="#ischild-item"><tt><b>isChild</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('ischild-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks whether the specified item is a child of the item.</p>
 	
@@ -7853,20 +6829,11 @@ the project.</p>
 </div>
 
 	
-<div id="isdescendant-item-member" class="member">
-<div id="isdescendant-item-link" class="member-link">
-<a name="isdescendant-item" href="#" onClick="return toggleMember('isdescendant-item', false);"><tt><b>isDescendant</b>(item)</tt></a>
-</div>
-<div id="isdescendant-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isdescendant-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isdescendant-item', false);"><tt><b>isDescendant</b>(item)</tt></a>
+<a name="isdescendant-item" href="#isdescendant-item"><tt><b>isDescendant</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isdescendant-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the item is contained within the specified item.</p>
 	
@@ -7897,20 +6864,11 @@ the project.</p>
 </div>
 
 	
-<div id="isancestor-item-member" class="member">
-<div id="isancestor-item-link" class="member-link">
-<a name="isancestor-item" href="#" onClick="return toggleMember('isancestor-item', false);"><tt><b>isAncestor</b>(item)</tt></a>
-</div>
-<div id="isancestor-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isancestor-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isancestor-item', false);"><tt><b>isAncestor</b>(item)</tt></a>
+<a name="isancestor-item" href="#isancestor-item"><tt><b>isAncestor</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isancestor-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the item is an ancestor of the specified item.</p>
 	
@@ -7942,20 +6900,11 @@ item, <tt>false</tt> otherwise
 </div>
 
 	
-<div id="isgroupedwith-item-member" class="member">
-<div id="isgroupedwith-item-link" class="member-link">
-<a name="isgroupedwith-item" href="#" onClick="return toggleMember('isgroupedwith-item', false);"><tt><b>isGroupedWith</b>(item)</tt></a>
-</div>
-<div id="isgroupedwith-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isgroupedwith-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isgroupedwith-item', false);"><tt><b>isGroupedWith</b>(item)</tt></a>
+<a name="isgroupedwith-item" href="#isgroupedwith-item"><tt><b>isGroupedWith</b>(item)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isgroupedwith-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks whether the item is grouped with the specified item.</p>
 	
@@ -7988,20 +6937,11 @@ item, <tt>false</tt> otherwise
 	
 <h3>Transform Functions</h3>
 
-<div id="scale-scale-member" class="member">
-<div id="scale-scale-link" class="member-link">
-<a name="scale-scale" href="#" onClick="return toggleMember('scale-scale', false);"><tt><b>scale</b>(scale[, center])</tt></a>
-</div>
-<div id="scale-scale-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="scale-scale" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('scale-scale', false);"><tt><b>scale</b>(scale[, center])</tt></a>
+<a name="scale-scale" href="#scale-scale"><tt><b>scale</b>(scale[, center])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('scale-scale', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Scales the item by the given value from its center point, or optionally
 from a supplied point.</p>
@@ -8075,20 +7015,11 @@ circle.scale(1.5, circle.bounds.bottomLeft);
 </div>
 
 	
-<div id="scale-hor-ver-member" class="member">
-<div id="scale-hor-ver-link" class="member-link">
-<a name="scale-hor-ver" href="#" onClick="return toggleMember('scale-hor-ver', false);"><tt><b>scale</b>(hor, ver[, center])</tt></a>
-</div>
-<div id="scale-hor-ver-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="scale-hor-ver" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('scale-hor-ver', false);"><tt><b>scale</b>(hor, ver[, center])</tt></a>
+<a name="scale-hor-ver" href="#scale-hor-ver"><tt><b>scale</b>(hor, ver[, center])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('scale-hor-ver', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Scales the item by the given values from its center point, or optionally
 from a supplied point.</p>
@@ -8147,20 +7078,11 @@ circle.scale(3, 1);
 </div>
 
 	
-<div id="translate-delta-member" class="member">
-<div id="translate-delta-link" class="member-link">
-<a name="translate-delta" href="#" onClick="return toggleMember('translate-delta', false);"><tt><b>translate</b>(delta)</tt></a>
-</div>
-<div id="translate-delta-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="translate-delta" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('translate-delta', false);"><tt><b>translate</b>(delta)</tt></a>
+<a name="translate-delta" href="#translate-delta"><tt><b>translate</b>(delta)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('translate-delta', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Translates (moves) the item by the given offset point.</p>
 	
@@ -8183,20 +7105,11 @@ circle.scale(3, 1);
 </div>
 
 	
-<div id="rotate-angle-member" class="member">
-<div id="rotate-angle-link" class="member-link">
-<a name="rotate-angle" href="#" onClick="return toggleMember('rotate-angle', false);"><tt><b>rotate</b>(angle[, center])</tt></a>
-</div>
-<div id="rotate-angle-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="rotate-angle" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('rotate-angle', false);"><tt><b>rotate</b>(angle[, center])</tt></a>
+<a name="rotate-angle" href="#rotate-angle"><tt><b>rotate</b>(angle[, center])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('rotate-angle', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Rotates the item by a given angle around the given point.</p>
 <p>Angles are oriented clockwise and measured in degrees.</p>
@@ -8281,20 +7194,11 @@ function onFrame(event) {
 </div>
 
 	
-<div id="shear-point-member" class="member">
-<div id="shear-point-link" class="member-link">
-<a name="shear-point" href="#" onClick="return toggleMember('shear-point', false);"><tt><b>shear</b>(point[, center])</tt></a>
-</div>
-<div id="shear-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="shear-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('shear-point', false);"><tt><b>shear</b>(point[, center])</tt></a>
+<a name="shear-point" href="#shear-point"><tt><b>shear</b>(point[, center])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('shear-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Shears the item by the given value from its center point, or optionally
 by a supplied point.</p>
@@ -8329,20 +7233,11 @@ by a supplied point.</p>
 </div>
 
 	
-<div id="shear-hor-ver-member" class="member">
-<div id="shear-hor-ver-link" class="member-link">
-<a name="shear-hor-ver" href="#" onClick="return toggleMember('shear-hor-ver', false);"><tt><b>shear</b>(hor, ver[, center])</tt></a>
-</div>
-<div id="shear-hor-ver-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="shear-hor-ver" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('shear-hor-ver', false);"><tt><b>shear</b>(hor, ver[, center])</tt></a>
+<a name="shear-hor-ver" href="#shear-hor-ver"><tt><b>shear</b>(hor, ver[, center])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('shear-hor-ver', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Shears the item by the given values from its center point, or optionally
 by a supplied point.</p>
@@ -8384,20 +7279,11 @@ by a supplied point.</p>
 </div>
 
 	
-<div id="transform-matrix-member" class="member">
-<div id="transform-matrix-link" class="member-link">
-<a name="transform-matrix" href="#" onClick="return toggleMember('transform-matrix', false);"><tt><b>transform</b>(matrix)</tt></a>
-</div>
-<div id="transform-matrix-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="transform-matrix" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('transform-matrix', false);"><tt><b>transform</b>(matrix)</tt></a>
+<a name="transform-matrix" href="#transform-matrix"><tt><b>transform</b>(matrix)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('transform-matrix', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Transform the item.</p>
 	
@@ -8420,20 +7306,11 @@ by a supplied point.</p>
 </div>
 
 	
-<div id="fitbounds-rectangle-member" class="member">
-<div id="fitbounds-rectangle-link" class="member-link">
-<a name="fitbounds-rectangle" href="#" onClick="return toggleMember('fitbounds-rectangle', false);"><tt><b>fitBounds</b>(rectangle[, fill])</tt></a>
-</div>
-<div id="fitbounds-rectangle-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fitbounds-rectangle" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fitbounds-rectangle', false);"><tt><b>fitBounds</b>(rectangle[, fill])</tt></a>
+<a name="fitbounds-rectangle" href="#fitbounds-rectangle"><tt><b>fitBounds</b>(rectangle[, fill])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fitbounds-rectangle', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Transform the item so that its <a href="/reference/item#bounds" onclick="return toggleMember('bounds', true);"><tt>bounds</tt></a> fit within the specified
 rectangle, without changing its aspect ratio.</p>
@@ -8547,20 +7424,11 @@ path.fitBounds(view.bounds);
 	
 <h3>Event Handling</h3>
 
-<div id="on-type-function-member" class="member">
-<div id="on-type-function-link" class="member-link">
-<a name="on-type-function" href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
-</div>
-<div id="on-type-function-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="on-type-function" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
+<a name="on-type-function" href="#on-type-function"><tt><b>on</b>(type, function)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-type-function', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Attach an event handler to the item.</p>
 	
@@ -8619,20 +7487,11 @@ path.on('mouseleave', function() {
 </div>
 
 	
-<div id="on-param-member" class="member">
-<div id="on-param-link" class="member-link">
-<a name="on-param" href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
-</div>
-<div id="on-param-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="on-param" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
+<a name="on-param" href="#on-param"><tt><b>on</b>(param)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-param', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Attach one or more event handlers to the item.</p>
 	
@@ -8717,20 +7576,11 @@ function onMouseDown(event) {
 </div>
 
 	
-<div id="detach-type-function-member" class="member">
-<div id="detach-type-function-link" class="member-link">
-<a name="detach-type-function" href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
-</div>
-<div id="detach-type-function-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="detach-type-function" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
+<a name="detach-type-function" href="#detach-type-function"><tt><b>detach</b>(type, function)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-type-function', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Detach an event handler from the item.</p>
 	
@@ -8761,20 +7611,11 @@ type
 </div>
 
 	
-<div id="detach-param-member" class="member">
-<div id="detach-param-link" class="member-link">
-<a name="detach-param" href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
-</div>
-<div id="detach-param-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="detach-param" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
+<a name="detach-param" href="#detach-param"><tt><b>detach</b>(param)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-param', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Detach one or more event handlers to the item.</p>
 	
@@ -8799,20 +7640,11 @@ doubleclick, mousemove, mouseenter, mouseleave</tt>
 </div>
 
 	
-<div id="fire-type-event-member" class="member">
-<div id="fire-type-event-link" class="member-link">
-<a name="fire-type-event" href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
-</div>
-<div id="fire-type-event-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fire-type-event" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
+<a name="fire-type-event" href="#fire-type-event"><tt><b>fire</b>(type, event)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fire-type-event', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Fire an event on the item.</p>
 	
@@ -8844,20 +7676,11 @@ the event.
 </div>
 
 	
-<div id="responds-type-member" class="member">
-<div id="responds-type-link" class="member-link">
-<a name="responds-type" href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
-</div>
-<div id="responds-type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="responds-type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
+<a name="responds-type" href="#responds-type"><tt><b>responds</b>(type)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('responds-type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Check if the item has one or more event handlers of the specified type.</p>
 	
@@ -8892,20 +7715,11 @@ the specified type, <tt>false</tt> otherwise
 	
 <h3>Remove On Event</h3>
 
-<div id="removeon-object-member" class="member">
-<div id="removeon-object-link" class="member-link">
-<a name="removeon-object" href="#" onClick="return toggleMember('removeon-object', false);"><tt><b>removeOn</b>(object)</tt></a>
-</div>
-<div id="removeon-object-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removeon-object" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removeon-object', false);"><tt><b>removeOn</b>(object)</tt></a>
+<a name="removeon-object" href="#removeon-object"><tt><b>removeOn</b>(object)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeon-object', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the item when the events specified in the passed object literal
 occur.</p>
@@ -8964,20 +7778,11 @@ function onMouseDrag(event) {
 </div>
 
 	
-<div id="removeonmove-member" class="member">
-<div id="removeonmove-link" class="member-link">
-<a name="removeonmove" href="#" onClick="return toggleMember('removeonmove', false);"><tt><b>removeOnMove</b>()</tt></a>
-</div>
-<div id="removeonmove-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removeonmove" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removeonmove', false);"><tt><b>removeOnMove</b>()</tt></a>
+<a name="removeonmove" href="#removeonmove"><tt><b>removeOnMove</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeonmove', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the item when the next <a href="/reference/tool#onmousemove"><tt>tool.onMouseMove</tt></a> event is fired.</p>
 	
@@ -9012,20 +7817,11 @@ function onMouseMove(event) {
 </div>
 
 	
-<div id="removeondown-member" class="member">
-<div id="removeondown-link" class="member-link">
-<a name="removeondown" href="#" onClick="return toggleMember('removeondown', false);"><tt><b>removeOnDown</b>()</tt></a>
-</div>
-<div id="removeondown-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removeondown" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removeondown', false);"><tt><b>removeOnDown</b>()</tt></a>
+<a name="removeondown" href="#removeondown"><tt><b>removeOnDown</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeondown', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the item when the next <a href="/reference/tool#onmousedown"><tt>tool.onMouseDown</tt></a> event is fired.</p>
 	
@@ -9060,20 +7856,11 @@ function onMouseDown(event) {
 </div>
 
 	
-<div id="removeondrag-member" class="member">
-<div id="removeondrag-link" class="member-link">
-<a name="removeondrag" href="#" onClick="return toggleMember('removeondrag', false);"><tt><b>removeOnDrag</b>()</tt></a>
-</div>
-<div id="removeondrag-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removeondrag" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removeondrag', false);"><tt><b>removeOnDrag</b>()</tt></a>
+<a name="removeondrag" href="#removeondrag"><tt><b>removeOnDrag</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeondrag', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the item when the next <a href="/reference/tool#onmousedrag"><tt>tool.onMouseDrag</tt></a> event is fired.</p>
 	
@@ -9108,20 +7895,11 @@ function onMouseDrag(event) {
 </div>
 
 	
-<div id="removeonup-member" class="member">
-<div id="removeonup-link" class="member-link">
-<a name="removeonup" href="#" onClick="return toggleMember('removeonup', false);"><tt><b>removeOnUp</b>()</tt></a>
-</div>
-<div id="removeonup-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="removeonup" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('removeonup', false);"><tt><b>removeOnUp</b>()</tt></a>
+<a name="removeonup" href="#removeonup"><tt><b>removeOnUp</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('removeonup', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the item when the next <a href="/reference/tool#onmouseup"><tt>tool.onMouseUp</tt></a> event is fired.</p>
 	
@@ -9151,87 +7929,6 @@ function onMouseDown(event) {
 </div>
 
 
-</div>
-</div>
-</div>
-
-	
-<h3>SVG Conversion</h3>
-
-<div id="exportsvg-member" class="member">
-<div id="exportsvg-link" class="member-link">
-<a name="exportsvg" href="#" onClick="return toggleMember('exportsvg', false);"><tt><b>exportSVG</b>()</tt></a>
-</div>
-<div id="exportsvg-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('exportsvg', false);"><tt><b>exportSVG</b>()</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('exportsvg', false);"></div>
-<div class="clear"></div>
-</div>
-<div class="member-text">
-	<p>Exports the item and all its children as an SVG DOM, all contained
-in one top level SVG node.</p>
-	
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>SVGSVGElement</tt></tt>&nbsp;&mdash;&nbsp;the item converted to an SVG node
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-
-	
-<div id="importsvg-node-member" class="member">
-<div id="importsvg-node-link" class="member-link">
-<a name="importsvg-node" href="#" onClick="return toggleMember('importsvg-node', false);"><tt><b>importSVG</b>(node)</tt></a>
-</div>
-<div id="importsvg-node-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('importsvg-node', false);"><tt><b>importSVG</b>(node)</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('importsvg-node', false);"></div>
-<div class="clear"></div>
-</div>
-<div class="member-text">
-	<p>Converts the passed node node into a Paper.js item and adds it to the
-children of this item.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>node:</tt> 
-<tt>SVGSVGElement</tt>
-&mdash;&nbsp;the SVG DOM node to convert
-
-</li>
-
-</ul>
-
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the converted Paper.js item
-</li>
-	
-	</ul>
-
-	
-	
 </div>
 </div>
 </div>

@@ -15,20 +15,11 @@
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="reset-member" class="member">
-<div id="reset-link" class="member-link">
-<a name="reset" href="#" onClick="return toggleMember('reset', false);"><tt><b>reset</b>()</tt></a>
-</div>
-<div id="reset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="reset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('reset', false);"><tt><b>reset</b>()</tt></a>
+<a name="reset" href="#reset"><tt><b>reset</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('reset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Resets the values of the components to their
 <tt>Component#defaultValue</tt>.</p>

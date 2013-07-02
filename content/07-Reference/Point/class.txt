@@ -19,20 +19,11 @@ console.log(point.y); // 5</pre>
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="point-x-y-member" class="member">
-<div id="point-x-y-link" class="member-link">
-<a name="point-x-y" href="#" onClick="return toggleMember('point-x-y', false);"><tt><b>Point</b>(x, y)</tt></a>
-</div>
-<div id="point-x-y-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point-x-y" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point-x-y', false);"><tt><b>Point</b>(x, y)</tt></a>
+<a name="point-x-y" href="#point-x-y"><tt><b>Point</b>(x, y)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point-x-y', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Point object with the given x and y coordinates.</p>
 
@@ -70,20 +61,11 @@ console.log(point.y); // 5</pre>
 </div>
 	
 		
-<div id="point-array-member" class="member">
-<div id="point-array-link" class="member-link">
-<a name="point-array" href="#" onClick="return toggleMember('point-array', false);"><tt><b>Point</b>(array)</tt></a>
-</div>
-<div id="point-array-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point-array" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point-array', false);"><tt><b>Point</b>(array)</tt></a>
+<a name="point-array" href="#point-array"><tt><b>Point</b>(array)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point-array', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Point object using the numbers in the given array as
 coordinates.</p>
@@ -130,20 +112,11 @@ path.fillColor = 'red';</pre>
 </div>
 	
 		
-<div id="point-object-member" class="member">
-<div id="point-object-link" class="member-link">
-<a name="point-object" href="#" onClick="return toggleMember('point-object', false);"><tt><b>Point</b>(object)</tt></a>
-</div>
-<div id="point-object-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point-object" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point-object', false);"><tt><b>Point</b>(object)</tt></a>
+<a name="point-object" href="#point-object"><tt><b>Point</b>(object)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point-object', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Point object using the properties in the given object.</p>
 
@@ -151,8 +124,8 @@ path.fillColor = 'red';</pre>
 
 <li>
 <tt>object:</tt> 
-<tt>object</tt>
-
+<tt>Object</tt>
+&mdash;&nbsp;the object describing the point's properties
 
 </li>
 
@@ -204,20 +177,11 @@ path.fillColor = 'red';</pre>
 </div>
 	
 		
-<div id="point-size-member" class="member">
-<div id="point-size-link" class="member-link">
-<a name="point-size" href="#" onClick="return toggleMember('point-size', false);"><tt><b>Point</b>(size)</tt></a>
-</div>
-<div id="point-size-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point-size" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point-size', false);"><tt><b>Point</b>(size)</tt></a>
+<a name="point-size" href="#point-size"><tt><b>Point</b>(size)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point-size', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Point object using the width and height values of the given
 Size object.</p>
@@ -251,20 +215,11 @@ console.log(point); // { x: 100, y: 50 }</pre>
 </div>
 	
 		
-<div id="point-point-member" class="member">
-<div id="point-point-link" class="member-link">
-<a name="point-point" href="#" onClick="return toggleMember('point-point', false);"><tt><b>Point</b>(point)</tt></a>
-</div>
-<div id="point-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point-point', false);"><tt><b>Point</b>(point)</tt></a>
+<a name="point-point" href="#point-point"><tt><b>Point</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Point object using the coordinates of the given Point object.</p>
 
@@ -293,67 +248,12 @@ console.log(point); // { x: 100, y: 50 }</pre>
 <!-- ============================== properties ========================= -->
 	<div class="reference-members"><h2>Operators</h2>
 		
-			<div id="equals-member" class="member">
-<div id="equals-link" class="member-link">
-<a name="equals" href="#" onClick="return toggleMember('equals', false);"><tt><tt><b>==</b> Point</tt></tt></a>
-</div>
-<div id="equals-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
+			<div id="add" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('equals', false);"><tt><b>==</b> Point</tt></a>
+<a name="add" href="#add"><tt><tt><b>+</b> Number</tt>, <tt><b>+</b> Point</tt></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('equals', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
-	<div class="member-text">
-		<p>Checks whether the coordinates of the point are equal to that of the
-supplied point.</p>
-		
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the points are equal, <tt>false</tt> otherwise
-</li>
-	
-	</ul>
-
-		
-		<p>
-<b>Example</b> 
-</p>
-
-
-<pre class="code">var point = new Point(5, 10);
-console.log(point == new Point(5, 10)); // true
-console.log(point == new Point(1, 1)); // false
-console.log(point != new Point(1, 1)); // true</pre>
-
-	</div>
-
-
-</div>
-</div>
-
-		
-			<div id="add-member" class="member">
-<div id="add-link" class="member-link">
-<a name="add" href="#" onClick="return toggleMember('add', false);"><tt><tt><b>+</b> Number</tt>, <tt><b>+</b> Point</tt></tt></a>
-</div>
-<div id="add-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('add', false);"><tt><b>+</b> Number</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('add', false);"></div>
-<div class="clear"></div>
-</div>
 
 	<div class="member-text">
 		<p>Returns the addition of the supplied value to both coordinates of
@@ -381,15 +281,6 @@ console.log(result); // {x: 25, y: 30}</pre>
 	</div>
 
 
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('add', false);"><tt><b>+</b> Point</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('add', false);"></div>
-<div class="clear"></div>
-</div>
 
 	<div class="member-text">
 		<p>Returns the addition of the supplied point to the point as a new
@@ -422,21 +313,12 @@ console.log(result); // {x: 15, y: 30}</pre>
 </div>
 
 		
-			<div id="subtract-member" class="member">
-<div id="subtract-link" class="member-link">
-<a name="subtract" href="#" onClick="return toggleMember('subtract', false);"><tt><tt><b>-</b> Number</tt>, <tt><b>-</b> Point</tt></tt></a>
-</div>
-<div id="subtract-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
+			<div id="subtract" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('subtract', false);"><tt><b>-</b> Number</tt></a>
+<a name="subtract" href="#subtract"><tt><tt><b>-</b> Number</tt>, <tt><b>-</b> Point</tt></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('subtract', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
+
 
 	<div class="member-text">
 		<p>Returns the subtraction of the supplied value to both coordinates of
@@ -464,15 +346,6 @@ console.log(result); // {x: 5, y: 15}</pre>
 	</div>
 
 
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('subtract', false);"><tt><b>-</b> Point</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('subtract', false);"></div>
-<div class="clear"></div>
-</div>
 
 	<div class="member-text">
 		<p>Returns the subtraction of the supplied point to the point as a new
@@ -505,21 +378,12 @@ console.log(result); // {x: 5, y: 15}</pre>
 </div>
 
 		
-			<div id="multiply-member" class="member">
-<div id="multiply-link" class="member-link">
-<a name="multiply" href="#" onClick="return toggleMember('multiply', false);"><tt><tt><b>*</b> Number</tt>, <tt><b>*</b> Point</tt></tt></a>
-</div>
-<div id="multiply-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
+			<div id="multiply" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('multiply', false);"><tt><b>*</b> Number</tt></a>
+<a name="multiply" href="#multiply"><tt><tt><b>*</b> Number</tt>, <tt><b>*</b> Point</tt></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('multiply', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
+
 
 	<div class="member-text">
 		<p>Returns the multiplication of the supplied value to both coordinates of
@@ -547,15 +411,6 @@ console.log(result); // {x: 20, y: 40}</pre>
 	</div>
 
 
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('multiply', false);"><tt><b>*</b> Point</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('multiply', false);"></div>
-<div class="clear"></div>
-</div>
 
 	<div class="member-text">
 		<p>Returns the multiplication of the supplied point to the point as a new
@@ -588,21 +443,12 @@ console.log(result); // {x: 20, y: 20}</pre>
 </div>
 
 		
-			<div id="divide-member" class="member">
-<div id="divide-link" class="member-link">
-<a name="divide" href="#" onClick="return toggleMember('divide', false);"><tt><tt><b>/</b> Number</tt>, <tt><b>/</b> Point</tt></tt></a>
-</div>
-<div id="divide-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
+			<div id="divide" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('divide', false);"><tt><b>/</b> Number</tt></a>
+<a name="divide" href="#divide"><tt><tt><b>/</b> Number</tt>, <tt><b>/</b> Point</tt></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('divide', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
+
 
 	<div class="member-text">
 		<p>Returns the division of the supplied value to both coordinates of
@@ -630,15 +476,6 @@ console.log(result); // {x: 5, y: 10}</pre>
 	</div>
 
 
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('divide', false);"><tt><b>/</b> Point</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('divide', false);"></div>
-<div class="clear"></div>
-</div>
 
 	<div class="member-text">
 		<p>Returns the division of the supplied point to the point as a new
@@ -671,21 +508,12 @@ console.log(result); // {x: 4, y: 2}</pre>
 </div>
 
 		
-			<div id="modulo-member" class="member">
-<div id="modulo-link" class="member-link">
-<a name="modulo" href="#" onClick="return toggleMember('modulo', false);"><tt><tt><b>%</b> Number</tt>, <tt><b>%</b> Point</tt></tt></a>
-</div>
-<div id="modulo-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
+			<div id="modulo" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('modulo', false);"><tt><b>%</b> Number</tt></a>
+<a name="modulo" href="#modulo"><tt><tt><b>%</b> Number</tt>, <tt><b>%</b> Point</tt></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('modulo', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
+
 
 	<div class="member-text">
 		<p>The modulo operator returns the integer remainders of dividing the point
@@ -712,15 +540,6 @@ console.log(point % 5); // {x: 2, y: 1}</pre>
 	</div>
 
 
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('modulo', false);"><tt><b>%</b> Point</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('modulo', false);"></div>
-<div class="clear"></div>
-</div>
 
 	<div class="member-text">
 		<p>The modulo operator returns the integer remainders of dividing the point
@@ -758,20 +577,11 @@ console.log(point % new Point(5, 2)); // {x: 2, y: 0}</pre>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="x-member" class="member">
-<div id="x-link" class="member-link">
-<a name="x" href="#" onClick="return toggleMember('x', false);"><tt><b>x</b></tt></a>
-</div>
-<div id="x-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="x" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('x', false);"><tt><b>x</b></tt></a>
+<a name="x" href="#x"><tt><b>x</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('x', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The x coordinate of the point</p>
@@ -790,20 +600,11 @@ console.log(point % new Point(5, 2)); // {x: 2, y: 0}</pre>
 </div>
 		
 			
-<div id="y-member" class="member">
-<div id="y-link" class="member-link">
-<a name="y" href="#" onClick="return toggleMember('y', false);"><tt><b>y</b></tt></a>
-</div>
-<div id="y-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="y" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('y', false);"><tt><b>y</b></tt></a>
+<a name="y" href="#y"><tt><b>y</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('y', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The y coordinate of the point</p>
@@ -822,20 +623,11 @@ console.log(point % new Point(5, 2)); // {x: 2, y: 0}</pre>
 </div>
 		
 			
-<div id="length-member" class="member">
-<div id="length-link" class="member-link">
-<a name="length" href="#" onClick="return toggleMember('length', false);"><tt><b>length</b></tt></a>
-</div>
-<div id="length-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="length" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('length', false);"><tt><b>length</b></tt></a>
+<a name="length" href="#length"><tt><b>length</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('length', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The length of the vector that is represented by this point's coordinates.</p>
@@ -857,20 +649,11 @@ console.log(point % new Point(5, 2)); // {x: 2, y: 0}</pre>
 </div>
 		
 			
-<div id="angle-member" class="member">
-<div id="angle-link" class="member-link">
-<a name="angle" href="#" onClick="return toggleMember('angle', false);"><tt><b>angle</b></tt></a>
-</div>
-<div id="angle-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="angle" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('angle', false);"><tt><b>angle</b></tt></a>
+<a name="angle" href="#angle"><tt><b>angle</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('angle', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The vector's angle in degrees, measured from the x-axis to the vector.</p>
@@ -891,25 +674,18 @@ given.</p>
 </div>
 		
 			
-<div id="angleinradians-member" class="member">
-<div id="angleinradians-link" class="member-link">
-<a name="angleinradians" href="#" onClick="return toggleMember('angleinradians', false);"><tt><b>angleInRadians</b></tt></a>
-</div>
-<div id="angleinradians-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="angleinradians" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('angleinradians', false);"><tt><b>angleInRadians</b></tt></a>
+<a name="angleinradians" href="#angleinradians"><tt><b>angleInRadians</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('angleinradians', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The vector's angle in radians, measured from the x-axis to the vector.</p>
 <p>The angle is unsigned, no information about rotational direction is
 given.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -925,20 +701,11 @@ given.</p>
 </div>
 		
 			
-<div id="quadrant-member" class="member">
-<div id="quadrant-link" class="member-link">
-<a name="quadrant" href="#" onClick="return toggleMember('quadrant', false);"><tt><b>quadrant</b></tt></a>
-</div>
-<div id="quadrant-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="quadrant" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('quadrant', false);"><tt><b>quadrant</b></tt></a>
+<a name="quadrant" href="#quadrant"><tt><b>quadrant</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('quadrant', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The quadrant of the <a href="/reference/point#angle" onclick="return toggleMember('angle', true);"><tt>angle</tt></a> of the point.</p>
@@ -946,6 +713,8 @@ given.</p>
 90 and 180 degrees are in quadrant <tt>2</tt>, angles between 180 and 270
 degrees are in quadrant <tt>3</tt> and angles between 270 and 360 degrees
 are in quadrant <tt>4</tt>.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -980,20 +749,11 @@ console.log(point.quadrant); // 4</pre>
 </div>
 		
 			
-<div id="selected-member" class="member">
-<div id="selected-link" class="member-link">
-<a name="selected" href="#" onClick="return toggleMember('selected', false);"><tt><b>selected</b></tt></a>
-</div>
-<div id="selected-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="selected" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('selected', false);"><tt><b>selected</b></tt></a>
+<a name="selected" href="#selected"><tt><b>selected</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selected', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>This property is only present if the point is an anchor or control point
@@ -1021,20 +781,56 @@ of a <a href="/reference/segment"><tt>Segment</tt></a> or a <a href="/reference/
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="clone-member" class="member">
-<div id="clone-link" class="member-link">
-<a name="clone" href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
-</div>
-<div id="clone-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="equals-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+<a name="equals-point" href="#equals-point"><tt><b>equals</b>(point)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks whether the coordinates of the point are equal to that of the
+supplied point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the points are equal, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	<p>
+<b>Example</b> 
+</p>
+
+
+<pre class="code">var point = new Point(5, 10);
+console.log(point == new Point(5, 10)); // true
+console.log(point == new Point(1, 1)); // false
+console.log(point != new Point(1, 1)); // true</pre>
+
 </div>
 </div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clone', false);"></div>
-<div class="clear"></div>
 </div>
+		
+			
+<div id="clone" class="member">
+<div class="member-link">
+<a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
+</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a copy of the point.</p>
 	
@@ -1065,20 +861,11 @@ point2.x = 1; // doesn't change point1.x</pre>
 </div>
 		
 			
-<div id="tostring-member" class="member">
-<div id="tostring-link" class="member-link">
-<a name="tostring" href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
-</div>
-<div id="tostring-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tostring" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
+<a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tostring', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -1098,20 +885,11 @@ point2.x = 1; // doesn't change point1.x</pre>
 </div>
 		
 			
-<div id="transform-matrix-member" class="member">
-<div id="transform-matrix-link" class="member-link">
-<a name="transform-matrix" href="#" onClick="return toggleMember('transform-matrix', false);"><tt><b>transform</b>(matrix)</tt></a>
-</div>
-<div id="transform-matrix-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="transform-matrix" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('transform-matrix', false);"><tt><b>transform</b>(matrix)</tt></a>
+<a name="transform-matrix" href="#transform-matrix"><tt><b>transform</b>(matrix)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('transform-matrix', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Transforms the point by the matrix as a new point. The object itself
 is not modified!</p>
@@ -1145,20 +923,11 @@ is not modified!</p>
 			
 <h3>Distance & Length</h3>
 
-<div id="getdistance-point-member" class="member">
-<div id="getdistance-point-link" class="member-link">
-<a name="getdistance-point" href="#" onClick="return toggleMember('getdistance-point', false);"><tt><b>getDistance</b>(point[, squared])</tt></a>
-</div>
-<div id="getdistance-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getdistance-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getdistance-point', false);"><tt><b>getDistance</b>(point[, squared])</tt></a>
+<a name="getdistance-point" href="#getdistance-point"><tt><b>getDistance</b>(point[, squared])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getdistance-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the distance between the point and another point.</p>
 	
@@ -1197,20 +966,11 @@ is not modified!</p>
 </div>
 		
 			
-<div id="normalize-member" class="member">
-<div id="normalize-link" class="member-link">
-<a name="normalize" href="#" onClick="return toggleMember('normalize', false);"><tt><b>normalize</b>([length])</tt></a>
-</div>
-<div id="normalize-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="normalize" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('normalize', false);"><tt><b>normalize</b>([length])</tt></a>
+<a name="normalize" href="#normalize"><tt><b>normalize</b>([length])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('normalize', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Normalize modifies the <a href="/reference/point#length" onclick="return toggleMember('length', true);"><tt>length</tt></a> of the vector to <tt>1</tt> without
 changing its angle and returns it as a new point. The optional
@@ -1247,20 +1007,11 @@ changing its angle and returns it as a new point. The optional
 			
 <h3>Angle & Rotation</h3>
 
-<div id="getangle-point-member" class="member">
-<div id="getangle-point-link" class="member-link">
-<a name="getangle-point" href="#" onClick="return toggleMember('getangle-point', false);"><tt><b>getAngle</b>(point)</tt></a>
-</div>
-<div id="getangle-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getangle-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getangle-point', false);"><tt><b>getAngle</b>(point)</tt></a>
+<a name="getangle-point" href="#getangle-point"><tt><b>getAngle</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getangle-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the smaller angle between two vectors. The angle is unsigned, no
 information about rotational direction is given.</p>
@@ -1292,20 +1043,11 @@ information about rotational direction is given.</p>
 </div>
 		
 			
-<div id="getangleinradians-point-member" class="member">
-<div id="getangleinradians-point-link" class="member-link">
-<a name="getangleinradians-point" href="#" onClick="return toggleMember('getangleinradians-point', false);"><tt><b>getAngleInRadians</b>(point)</tt></a>
-</div>
-<div id="getangleinradians-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getangleinradians-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getangleinradians-point', false);"><tt><b>getAngleInRadians</b>(point)</tt></a>
+<a name="getangleinradians-point" href="#getangleinradians-point"><tt><b>getAngleInRadians</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getangleinradians-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the smaller angle between two vectors in radians. The angle is
 unsigned, no information about rotational direction is given.</p>
@@ -1337,20 +1079,11 @@ unsigned, no information about rotational direction is given.</p>
 </div>
 		
 			
-<div id="getdirectedangle-point-member" class="member">
-<div id="getdirectedangle-point-link" class="member-link">
-<a name="getdirectedangle-point" href="#" onClick="return toggleMember('getdirectedangle-point', false);"><tt><b>getDirectedAngle</b>(point)</tt></a>
-</div>
-<div id="getdirectedangle-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getdirectedangle-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getdirectedangle-point', false);"><tt><b>getDirectedAngle</b>(point)</tt></a>
+<a name="getdirectedangle-point" href="#getdirectedangle-point"><tt><b>getDirectedAngle</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getdirectedangle-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the angle between two vectors. The angle is directional and
 signed, giving information about the rotational direction.</p>
@@ -1384,20 +1117,11 @@ signed, giving information about the rotational direction.</p>
 </div>
 		
 			
-<div id="rotate-angle-center-member" class="member">
-<div id="rotate-angle-center-link" class="member-link">
-<a name="rotate-angle-center" href="#" onClick="return toggleMember('rotate-angle-center', false);"><tt><b>rotate</b>(angle, center)</tt></a>
-</div>
-<div id="rotate-angle-center-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="rotate-angle-center" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('rotate-angle-center', false);"><tt><b>rotate</b>(angle, center)</tt></a>
+<a name="rotate-angle-center" href="#rotate-angle-center"><tt><b>rotate</b>(angle, center)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('rotate-angle-center', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Rotates the point by the given angle around an optional center point.</p>
 <p>The object itself is not modified.</p>
@@ -1440,20 +1164,11 @@ signed, giving information about the rotational direction.</p>
 			
 <h3>Tests</h3>
 
-<div id="isinside-rect-member" class="member">
-<div id="isinside-rect-link" class="member-link">
-<a name="isinside-rect" href="#" onClick="return toggleMember('isinside-rect', false);"><tt><b>isInside</b>(rect)</tt></a>
-</div>
-<div id="isinside-rect-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isinside-rect" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isinside-rect', false);"><tt><b>isInside</b>(rect)</tt></a>
+<a name="isinside-rect" href="#isinside-rect"><tt><b>isInside</b>(rect)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isinside-rect', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks whether the point is inside the boundaries of the rectangle.</p>
 	
@@ -1484,20 +1199,11 @@ signed, giving information about the rotational direction.</p>
 </div>
 		
 			
-<div id="isclose-point-tolerance-member" class="member">
-<div id="isclose-point-tolerance-link" class="member-link">
-<a name="isclose-point-tolerance" href="#" onClick="return toggleMember('isclose-point-tolerance', false);"><tt><b>isClose</b>(point, tolerance)</tt></a>
-</div>
-<div id="isclose-point-tolerance-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isclose-point-tolerance" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isclose-point-tolerance', false);"><tt><b>isClose</b>(point, tolerance)</tt></a>
+<a name="isclose-point-tolerance" href="#isclose-point-tolerance"><tt><b>isClose</b>(point, tolerance)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isclose-point-tolerance', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the point is within a given distance of another point.</p>
 	
@@ -1535,20 +1241,11 @@ signed, giving information about the rotational direction.</p>
 </div>
 		
 			
-<div id="iscolinear-point-member" class="member">
-<div id="iscolinear-point-link" class="member-link">
-<a name="iscolinear-point" href="#" onClick="return toggleMember('iscolinear-point', false);"><tt><b>isColinear</b>(point)</tt></a>
-</div>
-<div id="iscolinear-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="iscolinear-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('iscolinear-point', false);"><tt><b>isColinear</b>(point)</tt></a>
+<a name="iscolinear-point" href="#iscolinear-point"><tt><b>isColinear</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('iscolinear-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the vector represented by this point is colinear (parallel) to
 another vector.</p>
@@ -1580,20 +1277,11 @@ another vector.</p>
 </div>
 		
 			
-<div id="isorthogonal-point-member" class="member">
-<div id="isorthogonal-point-link" class="member-link">
-<a name="isorthogonal-point" href="#" onClick="return toggleMember('isorthogonal-point', false);"><tt><b>isOrthogonal</b>(point)</tt></a>
-</div>
-<div id="isorthogonal-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isorthogonal-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isorthogonal-point', false);"><tt><b>isOrthogonal</b>(point)</tt></a>
+<a name="isorthogonal-point" href="#isorthogonal-point"><tt><b>isOrthogonal</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isorthogonal-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the vector represented by this point is orthogonal
 (perpendicular) to another vector.</p>
@@ -1625,20 +1313,11 @@ another vector.</p>
 </div>
 		
 			
-<div id="iszero-member" class="member">
-<div id="iszero-link" class="member-link">
-<a name="iszero" href="#" onClick="return toggleMember('iszero', false);"><tt><b>isZero</b>()</tt></a>
-</div>
-<div id="iszero-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="iszero" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('iszero', false);"><tt><b>isZero</b>()</tt></a>
+<a name="iszero" href="#iszero"><tt><b>isZero</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('iszero', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if this point has both the x and y coordinate set to 0.</p>
 	
@@ -1658,20 +1337,11 @@ another vector.</p>
 </div>
 		
 			
-<div id="isnan-member" class="member">
-<div id="isnan-link" class="member-link">
-<a name="isnan" href="#" onClick="return toggleMember('isnan', false);"><tt><b>isNaN</b>()</tt></a>
-</div>
-<div id="isnan-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isnan" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isnan', false);"><tt><b>isNaN</b>()</tt></a>
+<a name="isnan" href="#isnan"><tt><b>isNaN</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isnan', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if this point has an undefined value for at least one of its
 coordinates.</p>
@@ -1694,20 +1364,11 @@ coordinates.</p>
 			
 <h3>Vector Math Functions</h3>
 
-<div id="dot-point-member" class="member">
-<div id="dot-point-link" class="member-link">
-<a name="dot-point" href="#" onClick="return toggleMember('dot-point', false);"><tt><b>dot</b>(point)</tt></a>
-</div>
-<div id="dot-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="dot-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('dot-point', false);"><tt><b>dot</b>(point)</tt></a>
+<a name="dot-point" href="#dot-point"><tt><b>dot</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('dot-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the dot product of the point and another point.</p>
 	
@@ -1738,20 +1399,11 @@ coordinates.</p>
 </div>
 		
 			
-<div id="cross-point-member" class="member">
-<div id="cross-point-link" class="member-link">
-<a name="cross-point" href="#" onClick="return toggleMember('cross-point', false);"><tt><b>cross</b>(point)</tt></a>
-</div>
-<div id="cross-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="cross-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('cross-point', false);"><tt><b>cross</b>(point)</tt></a>
+<a name="cross-point" href="#cross-point"><tt><b>cross</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('cross-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the cross product of the point and another point.</p>
 	
@@ -1782,20 +1434,11 @@ coordinates.</p>
 </div>
 		
 			
-<div id="project-point-member" class="member">
-<div id="project-point-link" class="member-link">
-<a name="project-point" href="#" onClick="return toggleMember('project-point', false);"><tt><b>project</b>(point)</tt></a>
-</div>
-<div id="project-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="project-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('project-point', false);"><tt><b>project</b>(point)</tt></a>
+<a name="project-point" href="#project-point"><tt><b>project</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('project-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns the projection of the point on another point.</p>
 <p>Both points are interpreted as vectors.</p>
@@ -1829,20 +1472,11 @@ coordinates.</p>
 			
 <h3>Math Functions</h3>
 
-<div id="round-member" class="member">
-<div id="round-link" class="member-link">
-<a name="round" href="#" onClick="return toggleMember('round', false);"><tt><b>round</b>()</tt></a>
-</div>
-<div id="round-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="round" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('round', false);"><tt><b>round</b>()</tt></a>
+<a name="round" href="#round"><tt><b>round</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('round', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point with rounded <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The
 object itself is not modified!</p>
@@ -1871,20 +1505,11 @@ console.log(roundPoint); // {x: 10, y: 11}</pre>
 </div>
 		
 			
-<div id="ceil-member" class="member">
-<div id="ceil-link" class="member-link">
-<a name="ceil" href="#" onClick="return toggleMember('ceil', false);"><tt><b>ceil</b>()</tt></a>
-</div>
-<div id="ceil-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="ceil" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('ceil', false);"><tt><b>ceil</b>()</tt></a>
+<a name="ceil" href="#ceil"><tt><b>ceil</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('ceil', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point with the nearest greater non-fractional values to the
 specified <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The object itself is not
@@ -1914,20 +1539,11 @@ console.log(ceilPoint); // {x: 11, y: 11}</pre>
 </div>
 		
 			
-<div id="floor-member" class="member">
-<div id="floor-link" class="member-link">
-<a name="floor" href="#" onClick="return toggleMember('floor', false);"><tt><b>floor</b>()</tt></a>
-</div>
-<div id="floor-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="floor" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('floor', false);"><tt><b>floor</b>()</tt></a>
+<a name="floor" href="#floor"><tt><b>floor</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('floor', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point with the nearest smaller non-fractional values to the
 specified <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The object itself is not
@@ -1957,20 +1573,11 @@ console.log(floorPoint); // {x: 10, y: 10}</pre>
 </div>
 		
 			
-<div id="abs-member" class="member">
-<div id="abs-link" class="member-link">
-<a name="abs" href="#" onClick="return toggleMember('abs', false);"><tt><b>abs</b>()</tt></a>
-</div>
-<div id="abs-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="abs" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('abs', false);"><tt><b>abs</b>()</tt></a>
+<a name="abs" href="#abs"><tt><b>abs</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('abs', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point with the absolute values of the specified <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a>
 and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The object itself is not modified!</p>
@@ -2004,20 +1611,11 @@ console.log(absPoint); // {x: 5, y: 10}</pre>
 	<div class="reference-members"><h2>Static Methods</h2>
 		
 			
-<div id="min-point1-point2-member" class="member">
-<div id="min-point1-point2-link" class="member-link">
-<a name="min-point1-point2" href="#" onClick="return toggleMember('min-point1-point2', false);"><tt><b>Point.min</b>(point1, point2)</tt></a>
-</div>
-<div id="min-point1-point2-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="min-point1-point2" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('min-point1-point2', false);"><tt><b>Point.min</b>(point1, point2)</tt></a>
+<a name="min-point1-point2" href="#min-point1-point2"><tt><b>Point.min</b>(point1, point2)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('min-point1-point2', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point object with the smallest <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and
 <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> of the supplied points.</p>
@@ -2065,20 +1663,11 @@ console.log(minPoint); // {x: 10, y: 5}</pre>
 </div>
 		
 			
-<div id="max-point1-point2-member" class="member">
-<div id="max-point1-point2-link" class="member-link">
-<a name="max-point1-point2" href="#" onClick="return toggleMember('max-point1-point2', false);"><tt><b>Point.max</b>(point1, point2)</tt></a>
-</div>
-<div id="max-point1-point2-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="max-point1-point2" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('max-point1-point2', false);"><tt><b>Point.max</b>(point1, point2)</tt></a>
+<a name="max-point1-point2" href="#max-point1-point2"><tt><b>Point.max</b>(point1, point2)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('max-point1-point2', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point object with the largest <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and
 <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> of the supplied points.</p>
@@ -2126,20 +1715,11 @@ console.log(maxPoint); // {x: 200, y: 100}</pre>
 </div>
 		
 			
-<div id="random-member" class="member">
-<div id="random-link" class="member-link">
-<a name="random" href="#" onClick="return toggleMember('random', false);"><tt><b>Point.random</b>()</tt></a>
-</div>
-<div id="random-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="random" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('random', false);"><tt><b>Point.random</b>()</tt></a>
+<a name="random" href="#random"><tt><b>Point.random</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('random', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a point object with random <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values
 between <tt>0</tt> and <tt>1</tt>.</p>

@@ -16,23 +16,16 @@ screen.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="element-member" class="member">
-<div id="element-link" class="member-link">
-<a name="element" href="#" onClick="return toggleMember('element', false);"><tt><b>element</b></tt></a>
-</div>
-<div id="element-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="element" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('element', false);"><tt><b>element</b></tt></a>
+<a name="element" href="#element"><tt><b>element</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('element', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The underlying native element.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -48,20 +41,11 @@ screen.</p>
 </div>
 		
 			
-<div id="viewsize-member" class="member">
-<div id="viewsize-link" class="member-link">
-<a name="viewsize" href="#" onClick="return toggleMember('viewsize', false);"><tt><b>viewSize</b></tt></a>
-</div>
-<div id="viewsize-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="viewsize" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('viewsize', false);"><tt><b>viewSize</b></tt></a>
+<a name="viewsize" href="#viewsize"><tt><b>viewSize</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('viewsize', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The size of the view. Changing the view's size will resize it's
@@ -81,23 +65,16 @@ underlying element.</p>
 </div>
 		
 			
-<div id="bounds-member" class="member">
-<div id="bounds-link" class="member-link">
-<a name="bounds" href="#" onClick="return toggleMember('bounds', false);"><tt><b>bounds</b></tt></a>
-</div>
-<div id="bounds-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="bounds" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('bounds', false);"><tt><b>bounds</b></tt></a>
+<a name="bounds" href="#bounds"><tt><b>bounds</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('bounds', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The bounds of the currently visible area in project coordinates.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -113,23 +90,16 @@ underlying element.</p>
 </div>
 		
 			
-<div id="size-member" class="member">
-<div id="size-link" class="member-link">
-<a name="size" href="#" onClick="return toggleMember('size', false);"><tt><b>size</b></tt></a>
-</div>
-<div id="size-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="size" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('size', false);"><tt><b>size</b></tt></a>
+<a name="size" href="#size"><tt><b>size</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('size', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The size of the visible area in project coordinates.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -145,20 +115,11 @@ underlying element.</p>
 </div>
 		
 			
-<div id="center-member" class="member">
-<div id="center-link" class="member-link">
-<a name="center" href="#" onClick="return toggleMember('center', false);"><tt><b>center</b></tt></a>
-</div>
-<div id="center-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="center" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('center', false);"><tt><b>center</b></tt></a>
+<a name="center" href="#center"><tt><b>center</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('center', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The center of the visible area in project coordinates.</p>
@@ -177,20 +138,11 @@ underlying element.</p>
 </div>
 		
 			
-<div id="zoom-member" class="member">
-<div id="zoom-link" class="member-link">
-<a name="zoom" href="#" onClick="return toggleMember('zoom', false);"><tt><b>zoom</b></tt></a>
-</div>
-<div id="zoom-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="zoom" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('zoom', false);"><tt><b>zoom</b></tt></a>
+<a name="zoom" href="#zoom"><tt><b>zoom</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('zoom', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The zoom factor by which the project coordinates are magnified.</p>
@@ -211,20 +163,11 @@ underlying element.</p>
 			
 	<h3>Event Handlers</h3>
 
-<div id="onframe-member" class="member">
-<div id="onframe-link" class="member-link">
-<a name="onframe" href="#" onClick="return toggleMember('onframe', false);"><tt><b>onFrame</b></tt></a>
-</div>
-<div id="onframe-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onframe" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onframe', false);"><tt><b>onFrame</b></tt></a>
+<a name="onframe" href="#onframe"><tt><b>onFrame</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onframe', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Handler function to be called on each frame of an animation.</p>
@@ -271,20 +214,11 @@ function onFrame(event) {
 </div>
 		
 			
-<div id="onresize-member" class="member">
-<div id="onresize-link" class="member-link">
-<a name="onresize" href="#" onClick="return toggleMember('onresize', false);"><tt><b>onResize</b></tt></a>
-</div>
-<div id="onresize-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="onresize" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('onresize', false);"><tt><b>onResize</b></tt></a>
+<a name="onresize" href="#onresize"><tt><b>onResize</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('onresize', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Handler function that is called whenever a view is resized.</p>
@@ -323,20 +257,11 @@ function onResize(event) {
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="draw-member" class="member">
-<div id="draw-link" class="member-link">
-<a name="draw" href="#" onClick="return toggleMember('draw', false);"><tt><b>draw</b>()</tt></a>
-</div>
-<div id="draw-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="draw" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('draw', false);"><tt><b>draw</b>()</tt></a>
+<a name="draw" href="#draw"><tt><b>draw</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('draw', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Draws the view.</p>
 	
@@ -348,20 +273,11 @@ function onResize(event) {
 </div>
 		
 			
-<div id="remove-member" class="member">
-<div id="remove-link" class="member-link">
-<a name="remove" href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
-</div>
-<div id="remove-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="remove" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
+<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('remove', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes this view from and frees the associated element.</p>
 	
@@ -373,20 +289,11 @@ function onResize(event) {
 </div>
 		
 			
-<div id="isvisible-member" class="member">
-<div id="isvisible-link" class="member-link">
-<a name="isvisible" href="#" onClick="return toggleMember('isvisible', false);"><tt><b>isVisible</b>()</tt></a>
-</div>
-<div id="isvisible-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isvisible" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isvisible', false);"><tt><b>isVisible</b>()</tt></a>
+<a name="isvisible" href="#isvisible"><tt><b>isVisible</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isvisible', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks whether the view is currently visible within the current browser
 viewport.</p>
@@ -407,20 +314,11 @@ viewport.</p>
 </div>
 		
 			
-<div id="scrollby-point-member" class="member">
-<div id="scrollby-point-link" class="member-link">
-<a name="scrollby-point" href="#" onClick="return toggleMember('scrollby-point', false);"><tt><b>scrollBy</b>(point)</tt></a>
-</div>
-<div id="scrollby-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="scrollby-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('scrollby-point', false);"><tt><b>scrollBy</b>(point)</tt></a>
+<a name="scrollby-point" href="#scrollby-point"><tt><b>scrollBy</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('scrollby-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Scrolls the view by the given vector.</p>
 	
@@ -443,20 +341,11 @@ viewport.</p>
 </div>
 		
 			
-<div id="draw-member" class="member">
-<div id="draw-link" class="member-link">
-<a name="draw" href="#" onClick="return toggleMember('draw', false);"><tt><b>draw</b>()</tt></a>
-</div>
-<div id="draw-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="draw" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('draw', false);"><tt><b>draw</b>()</tt></a>
+<a name="draw" href="#draw"><tt><b>draw</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('draw', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Draws the view.</p>
 	
@@ -470,20 +359,11 @@ viewport.</p>
 			
 <h3>Event Handling</h3>
 
-<div id="on-type-function-member" class="member">
-<div id="on-type-function-link" class="member-link">
-<a name="on-type-function" href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
-</div>
-<div id="on-type-function-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="on-type-function" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('on-type-function', false);"><tt><b>on</b>(type, function)</tt></a>
+<a name="on-type-function" href="#on-type-function"><tt><b>on</b>(type, function)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-type-function', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Attach an event handler to the view.</p>
 	
@@ -534,20 +414,11 @@ view.on('frame', frameHandler);
 </div>
 		
 			
-<div id="on-param-member" class="member">
-<div id="on-param-link" class="member-link">
-<a name="on-param" href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
-</div>
-<div id="on-param-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="on-param" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('on-param', false);"><tt><b>on</b>(param)</tt></a>
+<a name="on-param" href="#on-param"><tt><b>on</b>(param)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('on-param', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Attach one or more event handlers to the view.</p>
 	
@@ -584,20 +455,11 @@ view.on({
 </div>
 		
 			
-<div id="detach-type-function-member" class="member">
-<div id="detach-type-function-link" class="member-link">
-<a name="detach-type-function" href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
-</div>
-<div id="detach-type-function-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="detach-type-function" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('detach-type-function', false);"><tt><b>detach</b>(type, function)</tt></a>
+<a name="detach-type-function" href="#detach-type-function"><tt><b>detach</b>(type, function)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-type-function', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Detach an event handler from the view.</p>
 	
@@ -655,20 +517,11 @@ function onMouseDown(event) {
 </div>
 		
 			
-<div id="detach-param-member" class="member">
-<div id="detach-param-link" class="member-link">
-<a name="detach-param" href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
-</div>
-<div id="detach-param-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="detach-param" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('detach-param', false);"><tt><b>detach</b>(param)</tt></a>
+<a name="detach-param" href="#detach-param"><tt><b>detach</b>(param)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('detach-param', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Detach one or more event handlers from the view.</p>
 	
@@ -692,20 +545,11 @@ following properties: <tt>frame, resize</tt>
 </div>
 		
 			
-<div id="fire-type-event-member" class="member">
-<div id="fire-type-event-link" class="member-link">
-<a name="fire-type-event" href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
-</div>
-<div id="fire-type-event-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fire-type-event" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fire-type-event', false);"><tt><b>fire</b>(type, event)</tt></a>
+<a name="fire-type-event" href="#fire-type-event"><tt><b>fire</b>(type, event)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fire-type-event', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Fire an event on the view.</p>
 	
@@ -736,20 +580,11 @@ the event.
 </div>
 		
 			
-<div id="responds-type-member" class="member">
-<div id="responds-type-link" class="member-link">
-<a name="responds-type" href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
-</div>
-<div id="responds-type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="responds-type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('responds-type', false);"><tt><b>responds</b>(type)</tt></a>
+<a name="responds-type" href="#responds-type"><tt><b>responds</b>(type)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('responds-type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Check if the view has one or more event handlers of the specified type.</p>
 	

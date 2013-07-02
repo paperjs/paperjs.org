@@ -15,20 +15,11 @@
 	<div class="reference-members"><h2>Static Methods</h2>
 		
 			
-<div id="compile-code-member" class="member">
-<div id="compile-code-link" class="member-link">
-<a name="compile-code" href="#" onClick="return toggleMember('compile-code', false);"><tt><b>PaperScript.compile</b>(code)</tt></a>
-</div>
-<div id="compile-code-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="compile-code" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('compile-code', false);"><tt><b>PaperScript.compile</b>(code)</tt></a>
+<a name="compile-code" href="#compile-code"><tt><b>PaperScript.compile</b>(code)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('compile-code', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Compiles PaperScript code into JavaScript code.</p>
 	
@@ -59,20 +50,11 @@
 </div>
 		
 			
-<div id="evaluate-code-scope-member" class="member">
-<div id="evaluate-code-scope-link" class="member-link">
-<a name="evaluate-code-scope" href="#" onClick="return toggleMember('evaluate-code-scope', false);"><tt><b>PaperScript.evaluate</b>(code, scope)</tt></a>
-</div>
-<div id="evaluate-code-scope-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="evaluate-code-scope" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('evaluate-code-scope', false);"><tt><b>PaperScript.evaluate</b>(code, scope)</tt></a>
+<a name="evaluate-code-scope" href="#evaluate-code-scope"><tt><b>PaperScript.evaluate</b>(code, scope)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('evaluate-code-scope', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Evaluates parsed PaperScript code in the passed <a href="/reference/paperscope"><tt>PaperScope</tt></a>
 object. It also installs handlers automatically for us.</p>

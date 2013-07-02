@@ -89,20 +89,11 @@ group.style = {
 			
 	<h3>Stroke Style</h3>
 
-<div id="strokecolor-member" class="member">
-<div id="strokecolor-link" class="member-link">
-<a name="strokecolor" href="#" onClick="return toggleMember('strokecolor', false);"><tt><b>strokeColor</b></tt></a>
-</div>
-<div id="strokecolor-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokecolor" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokecolor', false);"><tt><b>strokeColor</b></tt></a>
+<a name="strokecolor" href="#strokecolor"><tt><b>strokeColor</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokecolor', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The color of the stroke.</p>
@@ -138,20 +129,11 @@ circle.strokeColor = new Color(1, 0, 0);
 </div>
 		
 			
-<div id="strokewidth-member" class="member">
-<div id="strokewidth-link" class="member-link">
-<a name="strokewidth" href="#" onClick="return toggleMember('strokewidth', false);"><tt><b>strokeWidth</b></tt></a>
-</div>
-<div id="strokewidth-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokewidth" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokewidth', false);"><tt><b>strokeWidth</b></tt></a>
+<a name="strokewidth" href="#strokewidth"><tt><b>strokeWidth</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokewidth', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The width of the stroke.</p>
@@ -196,20 +178,11 @@ circle.strokeWidth = 10;
 </div>
 		
 			
-<div id="strokecap-member" class="member">
-<div id="strokecap-link" class="member-link">
-<a name="strokecap" href="#" onClick="return toggleMember('strokecap', false);"><tt><b>strokeCap</b></tt></a>
-</div>
-<div id="strokecap-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokecap" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokecap', false);"><tt><b>strokeCap</b></tt></a>
+<a name="strokecap" href="#strokecap"><tt><b>strokeCap</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokecap', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The shape to be used at the end of open <a href="/reference/path"><tt>Path</tt></a> items, when they
@@ -265,20 +238,11 @@ line2.strokeCap = 'butt';
 </div>
 		
 			
-<div id="strokejoin-member" class="member">
-<div id="strokejoin-link" class="member-link">
-<a name="strokejoin" href="#" onClick="return toggleMember('strokejoin', false);"><tt><b>strokeJoin</b></tt></a>
-</div>
-<div id="strokejoin-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="strokejoin" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('strokejoin', false);"><tt><b>strokeJoin</b></tt></a>
+<a name="strokejoin" href="#strokejoin"><tt><b>strokeJoin</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('strokejoin', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The shape to be used at the corners of paths when they have a stroke.</p>
@@ -331,20 +295,11 @@ path3.strokeJoin = 'bevel';
 </div>
 		
 			
-<div id="dashoffset-member" class="member">
-<div id="dashoffset-link" class="member-link">
-<a name="dashoffset" href="#" onClick="return toggleMember('dashoffset', false);"><tt><b>dashOffset</b></tt></a>
-</div>
-<div id="dashoffset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="dashoffset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('dashoffset', false);"><tt><b>dashOffset</b></tt></a>
+<a name="dashoffset" href="#dashoffset"><tt><b>dashOffset</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('dashoffset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The dash offset of the stroke.</p>
@@ -369,20 +324,11 @@ path3.strokeJoin = 'bevel';
 </div>
 		
 			
-<div id="dasharray-member" class="member">
-<div id="dasharray-link" class="member-link">
-<a name="dasharray" href="#" onClick="return toggleMember('dasharray', false);"><tt><b>dashArray</b></tt></a>
-</div>
-<div id="dasharray-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="dasharray" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('dasharray', false);"><tt><b>dashArray</b></tt></a>
+<a name="dasharray" href="#dasharray"><tt><b>dashArray</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('dasharray', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies an array containing the dash and gap lengths of the stroke.</p>
@@ -424,20 +370,11 @@ path.dashArray = [10, 4];
 </div>
 		
 			
-<div id="miterlimit-member" class="member">
-<div id="miterlimit-link" class="member-link">
-<a name="miterlimit" href="#" onClick="return toggleMember('miterlimit', false);"><tt><b>miterLimit</b></tt></a>
-</div>
-<div id="miterlimit-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="miterlimit" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('miterlimit', false);"><tt><b>miterLimit</b></tt></a>
+<a name="miterlimit" href="#miterlimit"><tt><b>miterLimit</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('miterlimit', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The miter limit of the stroke. When two line segments meet at a sharp
@@ -468,20 +405,11 @@ to the <a href="/reference/style#strokewidth" onclick="return toggleMember('stro
 			
 	<h3>Fill Style</h3>
 
-<div id="fillcolor-member" class="member">
-<div id="fillcolor-link" class="member-link">
-<a name="fillcolor" href="#" onClick="return toggleMember('fillcolor', false);"><tt><b>fillColor</b></tt></a>
-</div>
-<div id="fillcolor-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fillcolor" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fillcolor', false);"><tt><b>fillColor</b></tt></a>
+<a name="fillcolor" href="#fillcolor"><tt><b>fillColor</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fillcolor', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The fill color.</p>
@@ -519,20 +447,11 @@ circle.fillColor = new Color(1, 0, 0);
 			
 	<h3>Selection Style</h3>
 
-<div id="selectedcolor-member" class="member">
-<div id="selectedcolor-link" class="member-link">
-<a name="selectedcolor" href="#" onClick="return toggleMember('selectedcolor', false);"><tt><b>selectedColor</b></tt></a>
-</div>
-<div id="selectedcolor-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="selectedcolor" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('selectedcolor', false);"><tt><b>selectedColor</b></tt></a>
+<a name="selectedcolor" href="#selectedcolor"><tt><b>selectedColor</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selectedcolor', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The color the item is highlighted with when selected. If the item does
@@ -554,20 +473,11 @@ not specify its own color, the color defined by its layer is used instead.</p>
 			
 	<h3>Character Style</h3>
 
-<div id="font-member" class="member">
-<div id="font-link" class="member-link">
-<a name="font" href="#" onClick="return toggleMember('font', false);"><tt><b>font</b></tt></a>
-</div>
-<div id="font-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="font" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('font', false);"><tt><b>font</b></tt></a>
+<a name="font" href="#font"><tt><b>font</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('font', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The font to be used in text content.</p>
@@ -592,20 +502,11 @@ not specify its own color, the color defined by its layer is used instead.</p>
 </div>
 		
 			
-<div id="fontsize-member" class="member">
-<div id="fontsize-link" class="member-link">
-<a name="fontsize" href="#" onClick="return toggleMember('fontsize', false);"><tt><b>fontSize</b></tt></a>
-</div>
-<div id="fontsize-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="fontsize" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('fontsize', false);"><tt><b>fontSize</b></tt></a>
+<a name="fontsize" href="#fontsize"><tt><b>fontSize</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('fontsize', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The font size of text content, as {@Number} in pixels, or as {@String}
@@ -631,20 +532,11 @@ with optional units <tt>'px'</tt>, <tt>'pt'</tt> and <tt>'em'</tt>.</p>
 </div>
 		
 			
-<div id="leading-member" class="member">
-<div id="leading-link" class="member-link">
-<a name="leading" href="#" onClick="return toggleMember('leading', false);"><tt><b>leading</b></tt></a>
-</div>
-<div id="leading-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="leading" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('leading', false);"><tt><b>leading</b></tt></a>
+<a name="leading" href="#leading"><tt><b>leading</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('leading', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The text leading of text content.</p>
@@ -671,20 +563,11 @@ with optional units <tt>'px'</tt>, <tt>'pt'</tt> and <tt>'em'</tt>.</p>
 			
 	<h3>Paragraph Style</h3>
 
-<div id="justification-member" class="member">
-<div id="justification-link" class="member-link">
-<a name="justification" href="#" onClick="return toggleMember('justification', false);"><tt><b>justification</b></tt></a>
-</div>
-<div id="justification-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="justification" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('justification', false);"><tt><b>justification</b></tt></a>
+<a name="justification" href="#justification"><tt><b>justification</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('justification', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The justification of text paragraphs.</p>

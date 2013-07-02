@@ -19,20 +19,11 @@ to these functions and contains information about the mouse event.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="type-member" class="member">
-<div id="type-link" class="member-link">
-<a name="type" href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
-</div>
-<div id="type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+<a name="type" href="#type"><tt><b>type</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The type of mouse event.</p>
@@ -52,20 +43,11 @@ to these functions and contains information about the mouse event.</p>
 </div>
 		
 			
-<div id="point-member" class="member">
-<div id="point-link" class="member-link">
-<a name="point" href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
-</div>
-<div id="point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
+<a name="point" href="#point"><tt><b>point</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The position of the mouse in project coordinates when the event was
@@ -85,20 +67,11 @@ fired.</p>
 </div>
 		
 			
-<div id="target-member" class="member">
-<div id="target-link" class="member-link">
-<a name="target" href="#" onClick="return toggleMember('target', false);"><tt><b>target</b></tt></a>
-</div>
-<div id="target-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="target" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('target', false);"><tt><b>target</b></tt></a>
+<a name="target" href="#target"><tt><b>target</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('target', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	
@@ -117,20 +90,11 @@ fired.</p>
 </div>
 		
 			
-<div id="delta-member" class="member">
-<div id="delta-link" class="member-link">
-<a name="delta" href="#" onClick="return toggleMember('delta', false);"><tt><b>delta</b></tt></a>
-</div>
-<div id="delta-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="delta" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('delta', false);"><tt><b>delta</b></tt></a>
+<a name="delta" href="#delta"><tt><b>delta</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('delta', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	
@@ -156,20 +120,11 @@ fired.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="tostring-member" class="member">
-<div id="tostring-link" class="member-link">
-<a name="tostring" href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
-</div>
-<div id="tostring-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tostring" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
+<a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tostring', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -197,23 +152,16 @@ fired.</p>
 <div class="reference-members"><h2>Properties inherited from <a href="/reference/event"><tt>Event</tt></a></h2>
 
 	
-<div id="modifiers-member" class="member">
-<div id="modifiers-link" class="member-link">
-<a name="modifiers" href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
-</div>
-<div id="modifiers-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="modifiers" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
+<a name="modifiers" href="#modifiers"><tt><b>modifiers</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('modifiers', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>

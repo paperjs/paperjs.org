@@ -12,23 +12,16 @@
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="modifiers-member" class="member">
-<div id="modifiers-link" class="member-link">
-<a name="modifiers" href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
-</div>
-<div id="modifiers-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="modifiers" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
+<a name="modifiers" href="#modifiers"><tt><b>modifiers</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('modifiers', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>

@@ -21,20 +21,11 @@ SVG and PDF.</p>
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="project-view-member" class="member">
-<div id="project-view-link" class="member-link">
-<a name="project-view" href="#" onClick="return toggleMember('project-view', false);"><tt><b>Project</b>(view)</tt></a>
-</div>
-<div id="project-view-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="project-view" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('project-view', false);"><tt><b>Project</b>(view)</tt></a>
+<a name="project-view" href="#project-view"><tt><b>Project</b>(view)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('project-view', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Paper.js project.</p>
 <p>When working with PaperScript, a project is automatically created for us
@@ -68,20 +59,11 @@ Canvas element that should be wrapped in a newly created view.
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="view-member" class="member">
-<div id="view-link" class="member-link">
-<a name="view" href="#" onClick="return toggleMember('view', false);"><tt><b>view</b></tt></a>
-</div>
-<div id="view-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="view" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('view', false);"><tt><b>view</b></tt></a>
+<a name="view" href="#view"><tt><b>view</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('view', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The reference to the project's view.</p>
@@ -100,20 +82,11 @@ Canvas element that should be wrapped in a newly created view.
 </div>
 		
 			
-<div id="currentstyle-member" class="member">
-<div id="currentstyle-link" class="member-link">
-<a name="currentstyle" href="#" onClick="return toggleMember('currentstyle', false);"><tt><b>currentStyle</b></tt></a>
-</div>
-<div id="currentstyle-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="currentstyle" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('currentstyle', false);"><tt><b>currentStyle</b></tt></a>
+<a name="currentstyle" href="#currentstyle"><tt><b>currentStyle</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('currentstyle', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The currently active path style. All selected items and newly
@@ -171,23 +144,16 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 </div>
 		
 			
-<div id="index-member" class="member">
-<div id="index-link" class="member-link">
-<a name="index" href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
-</div>
-<div id="index-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="index" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
+<a name="index" href="#index"><tt><b>index</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('index', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The index of the project in the <a href="/reference/paperscope#projects"><tt>paperScope.projects</tt></a> list.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -203,23 +169,16 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 </div>
 		
 			
-<div id="selecteditems-member" class="member">
-<div id="selecteditems-link" class="member-link">
-<a name="selecteditems" href="#" onClick="return toggleMember('selecteditems', false);"><tt><b>selectedItems</b></tt></a>
-</div>
-<div id="selecteditems-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="selecteditems" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('selecteditems', false);"><tt><b>selectedItems</b></tt></a>
+<a name="selecteditems" href="#selecteditems"><tt><b>selectedItems</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selecteditems', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The selected items contained within the project.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -235,20 +194,11 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 </div>
 		
 			
-<div id="options-member" class="member">
-<div id="options-link" class="member-link">
-<a name="options" href="#" onClick="return toggleMember('options', false);"><tt><b>options</b></tt></a>
-</div>
-<div id="options-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="options" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('options', false);"><tt><b>options</b></tt></a>
+<a name="options" href="#options"><tt><b>options</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('options', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p><b>options.handleSize:</b> 
@@ -270,20 +220,11 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 			
 	<h3>Project Hierarchy</h3>
 
-<div id="layers-member" class="member">
-<div id="layers-link" class="member-link">
-<a name="layers" href="#" onClick="return toggleMember('layers', false);"><tt><b>layers</b></tt></a>
-</div>
-<div id="layers-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="layers" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('layers', false);"><tt><b>layers</b></tt></a>
+<a name="layers" href="#layers"><tt><b>layers</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('layers', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The layers contained within the project.</p>
@@ -302,20 +243,11 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 </div>
 		
 			
-<div id="activelayer-member" class="member">
-<div id="activelayer-link" class="member-link">
-<a name="activelayer" href="#" onClick="return toggleMember('activelayer', false);"><tt><b>activeLayer</b></tt></a>
-</div>
-<div id="activelayer-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="activelayer" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('activelayer', false);"><tt><b>activeLayer</b></tt></a>
+<a name="activelayer" href="#activelayer"><tt><b>activeLayer</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('activelayer', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The layer which is currently active. New items will be created on this
@@ -335,20 +267,11 @@ layer by default.</p>
 </div>
 		
 			
-<div id="symbols-member" class="member">
-<div id="symbols-link" class="member-link">
-<a name="symbols" href="#" onClick="return toggleMember('symbols', false);"><tt><b>symbols</b></tt></a>
-</div>
-<div id="symbols-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="symbols" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('symbols', false);"><tt><b>symbols</b></tt></a>
+<a name="symbols" href="#symbols"><tt><b>symbols</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('symbols', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The symbols contained within the project.</p>
@@ -374,20 +297,11 @@ layer by default.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="activate-member" class="member">
-<div id="activate-link" class="member-link">
-<a name="activate" href="#" onClick="return toggleMember('activate', false);"><tt><b>activate</b>()</tt></a>
-</div>
-<div id="activate-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="activate" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('activate', false);"><tt><b>activate</b>()</tt></a>
+<a name="activate" href="#activate"><tt><b>activate</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('activate', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Activates this project, so all newly created items will be placed
 in it.</p>
@@ -400,20 +314,11 @@ in it.</p>
 </div>
 		
 			
-<div id="remove-member" class="member">
-<div id="remove-link" class="member-link">
-<a name="remove" href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
-</div>
-<div id="remove-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="remove" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('remove', false);"><tt><b>remove</b>()</tt></a>
+<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('remove', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Removes this project from the <a href="/reference/paperscope#projects"><tt>paperScope.projects</tt></a> list, and also
 removes its view, if one was defined.</p>
@@ -426,20 +331,11 @@ removes its view, if one was defined.</p>
 </div>
 		
 			
-<div id="selectall-member" class="member">
-<div id="selectall-link" class="member-link">
-<a name="selectall" href="#" onClick="return toggleMember('selectall', false);"><tt><b>selectAll</b>()</tt></a>
-</div>
-<div id="selectall-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="selectall" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('selectall', false);"><tt><b>selectAll</b>()</tt></a>
+<a name="selectall" href="#selectall"><tt><b>selectAll</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('selectall', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Selects all items in the project.</p>
 	
@@ -451,20 +347,11 @@ removes its view, if one was defined.</p>
 </div>
 		
 			
-<div id="deselectall-member" class="member">
-<div id="deselectall-link" class="member-link">
-<a name="deselectall" href="#" onClick="return toggleMember('deselectall', false);"><tt><b>deselectAll</b>()</tt></a>
-</div>
-<div id="deselectall-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="deselectall" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('deselectall', false);"><tt><b>deselectAll</b>()</tt></a>
+<a name="deselectall" href="#deselectall"><tt><b>deselectAll</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('deselectall', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Deselects all selected items in the project.</p>
 	
@@ -476,20 +363,11 @@ removes its view, if one was defined.</p>
 </div>
 		
 			
-<div id="hittest-point-member" class="member">
-<div id="hittest-point-link" class="member-link">
-<a name="hittest-point" href="#" onClick="return toggleMember('hittest-point', false);"><tt><b>hitTest</b>(point[, options])</tt></a>
-</div>
-<div id="hittest-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="hittest-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('hittest-point', false);"><tt><b>hitTest</b>(point[, options])</tt></a>
+<a name="hittest-point" href="#hittest-point"><tt><b>hitTest</b>(point[, options])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('hittest-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Perform a hit test on the items contained within the project at the
 location of the specified point.</p>
@@ -554,26 +432,94 @@ hit.
 </div>
 		
 			
-<h3>SVG Conversion</h3>
+<h3>Import / Export to JSON & SVG</h3>
 
-<div id="exportsvg-member" class="member">
-<div id="exportsvg-link" class="member-link">
-<a name="exportsvg" href="#" onClick="return toggleMember('exportsvg', false);"><tt><b>exportSVG</b>()</tt></a>
-</div>
-<div id="exportsvg-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="exportjson" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('exportsvg', false);"><tt><b>exportSVG</b>()</tt></a>
+<a name="exportjson" href="#exportjson"><tt><b>exportJSON</b>([options])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('exportsvg', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-	<p>Exports the project and all its layers and child items as an SVG DOM,
+	<p>Exports (serializes) the project with all its layers and child items to
+a JSON data string.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the serialization options
+&mdash;&nbsp;optional, default: <tt>{ precision: 5 }</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;the exported JSON data
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="importjson-json" class="member">
+<div class="member-link">
+<a name="importjson-json" href="#importjson-json"><tt><b>importJSON</b>(json)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Imports (deserializes) the stored JSON data into the project. Note that
+the project is not cleared first. You can call <tt>Project#clear</tt>() to
+do so.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>json:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;the JSON data to import from.
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="exportsvg" class="member">
+<div class="member-link">
+<a name="exportsvg" href="#exportsvg"><tt><b>exportSVG</b>([options])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Exports the project with all its layers and child items as an SVG DOM,
 all contained in one top level SVG group node.</p>
 	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the export
+       options.
+&mdash;&nbsp;optional, default: <tt>{ asString: false, precision: 5 }</tt>
+</li>
+
+</ul>
+
 	
 	<ul><b>Returns:</b>
 	
@@ -590,30 +536,21 @@ all contained in one top level SVG group node.</p>
 </div>
 		
 			
-<div id="importsvg-node-member" class="member">
-<div id="importsvg-node-link" class="member-link">
-<a name="importsvg-node" href="#" onClick="return toggleMember('importsvg-node', false);"><tt><b>importSVG</b>(node)</tt></a>
-</div>
-<div id="importsvg-node-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="importsvg-node" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('importsvg-node', false);"><tt><b>importSVG</b>(node)</tt></a>
+<a name="importsvg-node" href="#importsvg-node"><tt><b>importSVG</b>(node)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('importsvg-node', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
-	<p>Converts the passed node node into a Paper.js item and adds it to the
-active layer of this project.</p>
+	<p>Converts the SVG node and all its child nodes into Paper.js items and
+adds them to the active layer of this project.</p>
 	
 <ul><b>Parameters:</b>
 
 <li>
 <tt>node:</tt> 
 <tt>SVGSVGElement</tt>
-&mdash;&nbsp;the SVG DOM node to convert
+&mdash;&nbsp;the SVG node to import
 
 </li>
 
@@ -623,7 +560,7 @@ active layer of this project.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the converted Paper.js item
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the imported Paper.js parent item
 </li>
 	
 	</ul>

@@ -18,20 +18,11 @@ information about the mouse event.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="type-member" class="member">
-<div id="type-link" class="member-link">
-<a name="type" href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
-</div>
-<div id="type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+<a name="type" href="#type"><tt><b>type</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The type of tool event.</p>
@@ -50,20 +41,11 @@ information about the mouse event.</p>
 </div>
 		
 			
-<div id="point-member" class="member">
-<div id="point-link" class="member-link">
-<a name="point" href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
-</div>
-<div id="point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
+<a name="point" href="#point"><tt><b>point</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The position of the mouse in project coordinates when the event was
@@ -97,20 +79,11 @@ function onMouseUp(event) {
 </div>
 		
 			
-<div id="lastpoint-member" class="member">
-<div id="lastpoint-link" class="member-link">
-<a name="lastpoint" href="#" onClick="return toggleMember('lastpoint', false);"><tt><b>lastPoint</b></tt></a>
-</div>
-<div id="lastpoint-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="lastpoint" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('lastpoint', false);"><tt><b>lastPoint</b></tt></a>
+<a name="lastpoint" href="#lastpoint"><tt><b>lastPoint</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('lastpoint', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The position of the mouse in project coordinates when the previous
@@ -130,20 +103,11 @@ event was fired.</p>
 </div>
 		
 			
-<div id="downpoint-member" class="member">
-<div id="downpoint-link" class="member-link">
-<a name="downpoint" href="#" onClick="return toggleMember('downpoint', false);"><tt><b>downPoint</b></tt></a>
-</div>
-<div id="downpoint-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="downpoint" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('downpoint', false);"><tt><b>downPoint</b></tt></a>
+<a name="downpoint" href="#downpoint"><tt><b>downPoint</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('downpoint', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The position of the mouse in project coordinates when the mouse button
@@ -163,20 +127,11 @@ was last clicked.</p>
 </div>
 		
 			
-<div id="middlepoint-member" class="member">
-<div id="middlepoint-link" class="member-link">
-<a name="middlepoint" href="#" onClick="return toggleMember('middlepoint', false);"><tt><b>middlePoint</b></tt></a>
-</div>
-<div id="middlepoint-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="middlepoint" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('middlepoint', false);"><tt><b>middlePoint</b></tt></a>
+<a name="middlepoint" href="#middlepoint"><tt><b>middlePoint</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('middlepoint', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The point in the middle between <a href="/reference/toolevent#lastpoint" onclick="return toggleMember('lastpoint', true);"><tt>lastPoint</tt></a> and
@@ -198,20 +153,11 @@ artwork based on the moving direction of the mouse, as returned by
 </div>
 		
 			
-<div id="delta-member" class="member">
-<div id="delta-link" class="member-link">
-<a name="delta" href="#" onClick="return toggleMember('delta', false);"><tt><b>delta</b></tt></a>
-</div>
-<div id="delta-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="delta" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('delta', false);"><tt><b>delta</b></tt></a>
+<a name="delta" href="#delta"><tt><b>delta</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('delta', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The difference between the current position and the last position of the
@@ -232,20 +178,11 @@ difference to the mousedown position is returned.</p>
 </div>
 		
 			
-<div id="count-member" class="member">
-<div id="count-link" class="member-link">
-<a name="count" href="#" onClick="return toggleMember('count', false);"><tt><b>count</b></tt></a>
-</div>
-<div id="count-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="count" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('count', false);"><tt><b>count</b></tt></a>
+<a name="count" href="#count"><tt><b>count</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('count', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The number of times the mouse event was fired.</p>
@@ -264,20 +201,11 @@ difference to the mousedown position is returned.</p>
 </div>
 		
 			
-<div id="item-member" class="member">
-<div id="item-link" class="member-link">
-<a name="item" href="#" onClick="return toggleMember('item', false);"><tt><b>item</b></tt></a>
-</div>
-<div id="item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('item', false);"><tt><b>item</b></tt></a>
+<a name="item" href="#item"><tt><b>item</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The item at the position of the mouse (if any).</p>
@@ -306,20 +234,11 @@ that it is contained within is returned.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="tostring-member" class="member">
-<div id="tostring-link" class="member-link">
-<a name="tostring" href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
-</div>
-<div id="tostring-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tostring" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
+<a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tostring', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -347,23 +266,16 @@ that it is contained within is returned.</p>
 <div class="reference-members"><h2>Properties inherited from <a href="/reference/event"><tt>Event</tt></a></h2>
 
 	
-<div id="modifiers-member" class="member">
-<div id="modifiers-link" class="member-link">
-<a name="modifiers" href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
-</div>
-<div id="modifiers-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="modifiers" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
+<a name="modifiers" href="#modifiers"><tt><b>modifiers</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('modifiers', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>

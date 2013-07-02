@@ -13,20 +13,11 @@ to be updated with every transformation.</p>
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="symbol-item-member" class="member">
-<div id="symbol-item-link" class="member-link">
-<a name="symbol-item" href="#" onClick="return toggleMember('symbol-item', false);"><tt><b>Symbol</b>(item[, dontCenter])</tt></a>
-</div>
-<div id="symbol-item-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="symbol-item" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('symbol-item', false);"><tt><b>Symbol</b>(item[, dontCenter])</tt></a>
+<a name="symbol-item" href="#symbol-item"><tt><b>Symbol</b>(item[, dontCenter])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('symbol-item', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Symbol item.</p>
 
@@ -103,23 +94,16 @@ for (var i = 0; i < 100; i++) {
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="project-member" class="member">
-<div id="project-link" class="member-link">
-<a name="project" href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
-</div>
-<div id="project-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="project" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
+<a name="project" href="#project"><tt><b>project</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('project', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The project that this symbol belongs to.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -135,20 +119,11 @@ for (var i = 0; i < 100; i++) {
 </div>
 		
 			
-<div id="definition-member" class="member">
-<div id="definition-link" class="member-link">
-<a name="definition" href="#" onClick="return toggleMember('definition', false);"><tt><b>definition</b></tt></a>
-</div>
-<div id="definition-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="definition" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('definition', false);"><tt><b>definition</b></tt></a>
+<a name="definition" href="#definition"><tt><b>definition</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('definition', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The symbol definition.</p>
@@ -174,20 +149,11 @@ for (var i = 0; i < 100; i++) {
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="place-member" class="member">
-<div id="place-link" class="member-link">
-<a name="place" href="#" onClick="return toggleMember('place', false);"><tt><b>place</b>([position])</tt></a>
-</div>
-<div id="place-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="place" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('place', false);"><tt><b>place</b>([position])</tt></a>
+<a name="place" href="#place"><tt><b>place</b>([position])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('place', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Places in instance of the symbol in the project.</p>
 	
@@ -218,20 +184,11 @@ for (var i = 0; i < 100; i++) {
 </div>
 		
 			
-<div id="clone-member" class="member">
-<div id="clone-link" class="member-link">
-<a name="clone" href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
-</div>
-<div id="clone-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="clone" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+<a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clone', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a copy of the symbol.</p>
 	

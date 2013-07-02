@@ -15,20 +15,11 @@
 	<div class="reference-members"><h2>Static Methods</h2>
 		
 			
-<div id="isdown-key-member" class="member">
-<div id="isdown-key-link" class="member-link">
-<a name="isdown-key" href="#" onClick="return toggleMember('isdown-key', false);"><tt><b>Key.isDown</b>(key)</tt></a>
-</div>
-<div id="isdown-key-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="isdown-key" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('isdown-key', false);"><tt><b>Key.isDown</b>(key)</tt></a>
+<a name="isdown-key" href="#isdown-key"><tt><b>Key.isDown</b>(key)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('isdown-key', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Checks whether the specified key is pressed.</p>
 	

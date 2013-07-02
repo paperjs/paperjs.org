@@ -19,20 +19,11 @@ etc.</p>
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance-member" class="member">
-<div id="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance-link" class="member-link">
-<a name="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance" href="#" onClick="return toggleMember('curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance', false);"><tt><b>CurveLocation</b>(curve, parameter, point)</tt></a>
-</div>
-<div id="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance', false);"><tt><b>CurveLocation</b>(curve, parameter, point)</tt></a>
+<a name="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance" href="#curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance"><tt><b>CurveLocation</b>(curve, parameter, point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a new CurveLocation object.</p>
 
@@ -77,23 +68,16 @@ etc.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="segment-member" class="member">
-<div id="segment-link" class="member-link">
-<a name="segment" href="#" onClick="return toggleMember('segment', false);"><tt><b>segment</b></tt></a>
-</div>
-<div id="segment-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="segment" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('segment', false);"><tt><b>segment</b></tt></a>
+<a name="segment" href="#segment"><tt><b>segment</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('segment', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The segment of the curve which is closer to the described location.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -109,23 +93,16 @@ etc.</p>
 </div>
 		
 			
-<div id="curve-member" class="member">
-<div id="curve-link" class="member-link">
-<a name="curve" href="#" onClick="return toggleMember('curve', false);"><tt><b>curve</b></tt></a>
-</div>
-<div id="curve-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="curve" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('curve', false);"><tt><b>curve</b></tt></a>
+<a name="curve" href="#curve"><tt><b>curve</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('curve', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The curve by which the location is defined.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -141,25 +118,18 @@ etc.</p>
 </div>
 		
 			
-<div id="intersection-member" class="member">
-<div id="intersection-link" class="member-link">
-<a name="intersection" href="#" onClick="return toggleMember('intersection', false);"><tt><b>intersection</b></tt></a>
-</div>
-<div id="intersection-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="intersection" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('intersection', false);"><tt><b>intersection</b></tt></a>
+<a name="intersection" href="#intersection"><tt><b>intersection</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('intersection', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The curve location on the intersecting curve, if this location is the
 result of a call to <a href="/reference/pathitem#getintersections-path"><tt>pathItem.getIntersections(path)</tt></a> /
 <tt>Curve#getIntersections(curve)</tt>.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -175,23 +145,16 @@ result of a call to <a href="/reference/pathitem#getintersections-path"><tt>path
 </div>
 		
 			
-<div id="path-member" class="member">
-<div id="path-link" class="member-link">
-<a name="path" href="#" onClick="return toggleMember('path', false);"><tt><b>path</b></tt></a>
-</div>
-<div id="path-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="path" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('path', false);"><tt><b>path</b></tt></a>
+<a name="path" href="#path"><tt><b>path</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('path', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The path this curve belongs to, if any.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -207,24 +170,17 @@ result of a call to <a href="/reference/pathitem#getintersections-path"><tt>path
 </div>
 		
 			
-<div id="index-member" class="member">
-<div id="index-link" class="member-link">
-<a name="index" href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
-</div>
-<div id="index-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="index" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('index', false);"><tt><b>index</b></tt></a>
+<a name="index" href="#index"><tt><b>index</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('index', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The index of the curve within the <a href="/reference/path#curves"><tt>path.curves</tt></a> list, if the
 curve is part of a <a href="/reference/path"><tt>Path</tt></a> item.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -240,25 +196,18 @@ curve is part of a <a href="/reference/path"><tt>Path</tt></a> item.</p>
 </div>
 		
 			
-<div id="offset-member" class="member">
-<div id="offset-link" class="member-link">
-<a name="offset" href="#" onClick="return toggleMember('offset', false);"><tt><b>offset</b></tt></a>
-</div>
-<div id="offset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="offset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('offset', false);"><tt><b>offset</b></tt></a>
+<a name="offset" href="#offset"><tt><b>offset</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('offset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The length of the path from its beginning up to the location described
 by this object.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -273,25 +222,18 @@ by this object.</p>
 </div>
 		
 			
-<div id="curveoffset-member" class="member">
-<div id="curveoffset-link" class="member-link">
-<a name="curveoffset" href="#" onClick="return toggleMember('curveoffset', false);"><tt><b>curveOffset</b></tt></a>
-</div>
-<div id="curveoffset-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="curveoffset" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('curveoffset', false);"><tt><b>curveOffset</b></tt></a>
+<a name="curveoffset" href="#curveoffset"><tt><b>curveOffset</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('curveoffset', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The length of the curve from its beginning up to the location described
 by this object.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -306,26 +248,19 @@ by this object.</p>
 </div>
 		
 			
-<div id="parameter-member" class="member">
-<div id="parameter-link" class="member-link">
-<a name="parameter" href="#" onClick="return toggleMember('parameter', false);"><tt><b>parameter</b></tt></a>
-</div>
-<div id="parameter-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="parameter" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('parameter', false);"><tt><b>parameter</b></tt></a>
+<a name="parameter" href="#parameter"><tt><b>parameter</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('parameter', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The curve parameter, as used by various bezier curve calculations. It is
 value between <tt>0</tt> (beginning of the curve) and <tt>1</tt> (end of
 the curve).</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -340,25 +275,18 @@ the curve).</p>
 </div>
 		
 			
-<div id="point-member" class="member">
-<div id="point-link" class="member-link">
-<a name="point" href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
-</div>
-<div id="point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
+<a name="point" href="#point"><tt><b>point</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The point which is defined by the <a href="/reference/curvelocation#curve" onclick="return toggleMember('curve', true);"><tt>curve</tt></a> and
 <a href="/reference/curvelocation#parameter" onclick="return toggleMember('parameter', true);"><tt>parameter</tt></a>.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -373,24 +301,17 @@ the curve).</p>
 </div>
 		
 			
-<div id="tangent-member" class="member">
-<div id="tangent-link" class="member-link">
-<a name="tangent" href="#" onClick="return toggleMember('tangent', false);"><tt><b>tangent</b></tt></a>
-</div>
-<div id="tangent-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tangent" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tangent', false);"><tt><b>tangent</b></tt></a>
+<a name="tangent" href="#tangent"><tt><b>tangent</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tangent', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The tangential vector to the <a href="/reference/curvelocation#curve" onclick="return toggleMember('curve', true);"><tt>curve</tt></a> at the given location.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -405,24 +326,17 @@ the curve).</p>
 </div>
 		
 			
-<div id="normal-member" class="member">
-<div id="normal-link" class="member-link">
-<a name="normal" href="#" onClick="return toggleMember('normal', false);"><tt><b>normal</b></tt></a>
-</div>
-<div id="normal-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="normal" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('normal', false);"><tt><b>normal</b></tt></a>
+<a name="normal" href="#normal"><tt><b>normal</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('normal', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The normal vector to the <a href="/reference/curvelocation#curve" onclick="return toggleMember('curve', true);"><tt>curve</tt></a> at the given location.</p>
 	
+		<p>Read only.</p>
+	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -437,23 +351,16 @@ the curve).</p>
 </div>
 		
 			
-<div id="distance-member" class="member">
-<div id="distance-link" class="member-link">
-<a name="distance" href="#" onClick="return toggleMember('distance', false);"><tt><b>distance</b></tt></a>
-</div>
-<div id="distance-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="distance" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('distance', false);"><tt><b>distance</b></tt></a>
+<a name="distance" href="#distance"><tt><b>distance</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('distance', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The distance from the queried point to the returned location.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -476,20 +383,11 @@ the curve).</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="tostring-member" class="member">
-<div id="tostring-link" class="member-link">
-<a name="tostring" href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
-</div>
-<div id="tostring-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tostring" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
+<a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tostring', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	

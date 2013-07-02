@@ -19,6 +19,7 @@
 <li><a href="/reference/item">Item</a></li>
 <li><a href="/reference/layer">Layer</a></li>
 <li><a href="/reference/group">Group</a></li>
+<li><a href="/reference/shape">Shape</a></li>
 <li><a href="/reference/raster">Raster</a></li>
 <li><a href="/reference/placedsymbol">PlacedSymbol</a></li>
 <li><hr /></li>

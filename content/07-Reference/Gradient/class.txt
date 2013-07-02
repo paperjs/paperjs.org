@@ -16,17 +16,19 @@ var bottomRight = view.center + [80, 80];
 
 // Create a rectangle shaped path between
 // the topLeft and bottomRight points:
-var path = new Path.Rectangle(topLeft, bottomRight);
-
-// Fill the path with a gradient of three evenly divided color stops
-// that runs between the two points we defined earlier:
-path.fillColor = {
-	gradient: {
-		stops: ['yellow', 'red', 'blue']
-	},
-	origin: topLeft,
-	destination: bottomRight
-};
+var path = new Path.Rectangle({
+	topLeft: topLeft,
+	bottomRight: bottomRight,
+	// Fill the path with a gradient of three color stops
+	// that runs between the two points we defined earlier:
+	fillColor: {
+		gradient: {
+			stops: ['yellow', 'red', 'blue']
+		},
+		origin: topLeft,
+		destination: bottomRight
+	}
+});
 </script>
 <div class="canvas"><canvas width="516" height="300" id="canvas-0"></canvas></div>
 </div>
@@ -64,66 +66,16 @@ path.fillColor = {
 
 
 
-<!-- ============================== properties ========================= -->
-	<div class="reference-members"><h2>Operators</h2>
-		
-			<div id="equals-member" class="member">
-<div id="equals-link" class="member-link">
-<a name="equals" href="#" onClick="return toggleMember('equals', false);"><tt><tt><b>==</b> Gradient</tt></tt></a>
-</div>
-<div id="equals-description" class="member-description hidden">
-
-<div class="member-header">
-<div class="member-title">
-<div class="member-link">
-<a href="#" onClick="return toggleMember('equals', false);"><tt><b>==</b> Gradient</tt></a>
-</div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('equals', false);"></div>
-<div class="clear"></div>
-</div>
-
-	<div class="member-text">
-		<p>Checks whether the gradient is equal to the supplied gradient.</p>
-		
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> they are equal, <tt>false</tt> otherwise
-</li>
-	
-	</ul>
-
-		
-		
-	</div>
-
-
-</div>
-</div>
-
-		
-	</div>
-
 
 
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="stops-member" class="member">
-<div id="stops-link" class="member-link">
-<a name="stops" href="#" onClick="return toggleMember('stops', false);"><tt><b>stops</b></tt></a>
-</div>
-<div id="stops-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="stops" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('stops', false);"><tt><b>stops</b></tt></a>
+<a name="stops" href="#stops"><tt><b>stops</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('stops', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The gradient stops on the gradient ramp.</p>
@@ -142,20 +94,11 @@ path.fillColor = {
 </div>
 		
 			
-<div id="radial-member" class="member">
-<div id="radial-link" class="member-link">
-<a name="radial" href="#" onClick="return toggleMember('radial', false);"><tt><b>radial</b></tt></a>
-</div>
-<div id="radial-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="radial" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('radial', false);"><tt><b>radial</b></tt></a>
+<a name="radial" href="#radial"><tt><b>radial</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('radial', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>Specifies whether the gradient is radial or linear.</p>
@@ -181,20 +124,11 @@ path.fillColor = {
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="clone-member" class="member">
-<div id="clone-link" class="member-link">
-<a name="clone" href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
-</div>
-<div id="clone-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="clone" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+<a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clone', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -203,6 +137,41 @@ path.fillColor = {
 	
 		<li>
 <tt><a href="/reference/gradient"><tt>Gradient</tt></a></tt>&nbsp;&mdash;&nbsp;a copy of the gradient
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="equals-gradient" class="member">
+<div class="member-link">
+<a name="equals-gradient" href="#equals-gradient"><tt><b>equals</b>(gradient)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks whether the gradient is equal to the supplied gradient.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>gradient:</tt> 
+<a href="/reference/gradient"><tt>Gradient</tt></a>
+
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> they are equal, <tt>false</tt> otherwise
 </li>
 	
 	</ul>

@@ -17,20 +17,11 @@ the keyboard event.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="type-member" class="member">
-<div id="type-link" class="member-link">
-<a name="type" href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
-</div>
-<div id="type-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="type" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('type', false);"><tt><b>type</b></tt></a>
+<a name="type" href="#type"><tt><b>type</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('type', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The type of key event.</p>
@@ -49,20 +40,11 @@ the keyboard event.</p>
 </div>
 		
 			
-<div id="character-member" class="member">
-<div id="character-link" class="member-link">
-<a name="character" href="#" onClick="return toggleMember('character', false);"><tt><b>character</b></tt></a>
-</div>
-<div id="character-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="character" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('character', false);"><tt><b>character</b></tt></a>
+<a name="character" href="#character"><tt><b>character</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('character', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The string character of the key that caused this key event.</p>
@@ -81,20 +63,11 @@ the keyboard event.</p>
 </div>
 		
 			
-<div id="key-member" class="member">
-<div id="key-link" class="member-link">
-<a name="key" href="#" onClick="return toggleMember('key', false);"><tt><b>key</b></tt></a>
-</div>
-<div id="key-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="key" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('key', false);"><tt><b>key</b></tt></a>
+<a name="key" href="#key"><tt><b>key</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('key', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The key that caused this key event.</p>
@@ -120,20 +93,11 @@ the keyboard event.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="tostring-member" class="member">
-<div id="tostring-link" class="member-link">
-<a name="tostring" href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
-</div>
-<div id="tostring-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tostring" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tostring', false);"><tt><b>toString</b>()</tt></a>
+<a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tostring', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -161,23 +125,16 @@ the keyboard event.</p>
 <div class="reference-members"><h2>Properties inherited from <a href="/reference/event"><tt>Event</tt></a></h2>
 
 	
-<div id="modifiers-member" class="member">
-<div id="modifiers-link" class="member-link">
-<a name="modifiers" href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
-</div>
-<div id="modifiers-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="modifiers" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('modifiers', false);"><tt><b>modifiers</b></tt></a>
+<a name="modifiers" href="#modifiers"><tt><b>modifiers</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('modifiers', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>

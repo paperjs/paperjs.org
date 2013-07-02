@@ -23,20 +23,11 @@ since they are not updated in the injected scope if scopes are switched.</p>
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="paperscope-member" class="member">
-<div id="paperscope-link" class="member-link">
-<a name="paperscope" href="#" onClick="return toggleMember('paperscope', false);"><tt><b>PaperScope</b>()</tt></a>
-</div>
-<div id="paperscope-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="paperscope" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('paperscope', false);"><tt><b>PaperScope</b>()</tt></a>
+<a name="paperscope" href="#paperscope"><tt><b>PaperScope</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('paperscope', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a PaperScope object.</p>
 
@@ -56,20 +47,11 @@ since they are not updated in the injected scope if scopes are switched.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="version-member" class="member">
-<div id="version-link" class="member-link">
-<a name="version" href="#" onClick="return toggleMember('version', false);"><tt><b>version</b></tt></a>
-</div>
-<div id="version-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="version" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('version', false);"><tt><b>version</b></tt></a>
+<a name="version" href="#version"><tt><b>version</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('version', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The version of Paper.js, as a string.</p>
@@ -88,20 +70,11 @@ since they are not updated in the injected scope if scopes are switched.</p>
 </div>
 		
 			
-<div id="project-member" class="member">
-<div id="project-link" class="member-link">
-<a name="project" href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
-</div>
-<div id="project-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="project" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('project', false);"><tt><b>project</b></tt></a>
+<a name="project" href="#project"><tt><b>project</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('project', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The currently active project.</p>
@@ -120,20 +93,11 @@ since they are not updated in the injected scope if scopes are switched.</p>
 </div>
 		
 			
-<div id="projects-member" class="member">
-<div id="projects-link" class="member-link">
-<a name="projects" href="#" onClick="return toggleMember('projects', false);"><tt><b>projects</b></tt></a>
-</div>
-<div id="projects-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="projects" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('projects', false);"><tt><b>projects</b></tt></a>
+<a name="projects" href="#projects"><tt><b>projects</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('projects', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The list of all open projects within the current Paper.js context.</p>
@@ -152,23 +116,16 @@ since they are not updated in the injected scope if scopes are switched.</p>
 </div>
 		
 			
-<div id="view-member" class="member">
-<div id="view-link" class="member-link">
-<a name="view" href="#" onClick="return toggleMember('view', false);"><tt><b>view</b></tt></a>
-</div>
-<div id="view-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="view" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('view', false);"><tt><b>view</b></tt></a>
+<a name="view" href="#view"><tt><b>view</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('view', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The reference to the active project's view.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -184,23 +141,16 @@ since they are not updated in the injected scope if scopes are switched.</p>
 </div>
 		
 			
-<div id="tool-member" class="member">
-<div id="tool-link" class="member-link">
-<a name="tool" href="#" onClick="return toggleMember('tool', false);"><tt><b>tool</b></tt></a>
-</div>
-<div id="tool-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tool" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tool', false);"><tt><b>tool</b></tt></a>
+<a name="tool" href="#tool"><tt><b>tool</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tool', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The reference to the active tool.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -216,20 +166,11 @@ since they are not updated in the injected scope if scopes are switched.</p>
 </div>
 		
 			
-<div id="tools-member" class="member">
-<div id="tools-link" class="member-link">
-<a name="tools" href="#" onClick="return toggleMember('tools', false);"><tt><b>tools</b></tt></a>
-</div>
-<div id="tools-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="tools" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('tools', false);"><tt><b>tools</b></tt></a>
+<a name="tools" href="#tools"><tt><b>tools</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('tools', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The list of available tools.</p>
@@ -255,20 +196,11 @@ since they are not updated in the injected scope if scopes are switched.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="install-scope-member" class="member">
-<div id="install-scope-link" class="member-link">
-<a name="install-scope" href="#" onClick="return toggleMember('install-scope', false);"><tt><b>install</b>(scope)</tt></a>
-</div>
-<div id="install-scope-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="install-scope" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('install-scope', false);"><tt><b>install</b>(scope)</tt></a>
+<a name="install-scope" href="#install-scope"><tt><b>install</b>(scope)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('install-scope', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Injects the paper scope into any other given scope. Can be used for
 examle to inject the currently active PaperScope into the window's global
@@ -300,20 +232,11 @@ objects:</p>
 </div>
 		
 			
-<div id="setup-canvas-member" class="member">
-<div id="setup-canvas-link" class="member-link">
-<a name="setup-canvas" href="#" onClick="return toggleMember('setup-canvas', false);"><tt><b>setup</b>(canvas)</tt></a>
-</div>
-<div id="setup-canvas-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="setup-canvas" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('setup-canvas', false);"><tt><b>setup</b>(canvas)</tt></a>
+<a name="setup-canvas" href="#setup-canvas"><tt><b>setup</b>(canvas)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('setup-canvas', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Sets up an empty project for us. If a canvas is provided, it also creates
 a <a href="/reference/view"><tt>View</tt></a> for it, both linked to this scope.</p>
@@ -343,20 +266,11 @@ associated with.
 	<div class="reference-members"><h2>Static Methods</h2>
 		
 			
-<div id="get-id-member" class="member">
-<div id="get-id-link" class="member-link">
-<a name="get-id" href="#" onClick="return toggleMember('get-id', false);"><tt><b>PaperScope.get</b>(id)</tt></a>
-</div>
-<div id="get-id-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="get-id" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('get-id', false);"><tt><b>PaperScope.get</b>(id)</tt></a>
+<a name="get-id" href="#get-id"><tt><b>PaperScope.get</b>(id)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('get-id', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	<p>Retrieves a PaperScope object with the given id or associated with
 the passed canvas element.</p>

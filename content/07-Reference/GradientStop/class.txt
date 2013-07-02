@@ -9,20 +9,11 @@
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="gradientstop-member" class="member">
-<div id="gradientstop-link" class="member-link">
-<a name="gradientstop" href="#" onClick="return toggleMember('gradientstop', false);"><tt><b>GradientStop</b>([color[, rampPoint]])</tt></a>
-</div>
-<div id="gradientstop-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="gradientstop" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('gradientstop', false);"><tt><b>GradientStop</b>([color[, rampPoint]])</tt></a>
+<a name="gradientstop" href="#gradientstop"><tt><b>GradientStop</b>([color[, rampPoint]])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('gradientstop', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a GradientStop object.</p>
 
@@ -61,20 +52,11 @@
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="ramppoint-member" class="member">
-<div id="ramppoint-link" class="member-link">
-<a name="ramppoint" href="#" onClick="return toggleMember('ramppoint', false);"><tt><b>rampPoint</b></tt></a>
-</div>
-<div id="ramppoint-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="ramppoint" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('ramppoint', false);"><tt><b>rampPoint</b></tt></a>
+<a name="ramppoint" href="#ramppoint"><tt><b>rampPoint</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('ramppoint', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The ramp-point of the gradient stop as a value between <tt>0</tt> and
@@ -134,20 +116,11 @@ function onFrame(event) {
 </div>
 		
 			
-<div id="color-member" class="member">
-<div id="color-link" class="member-link">
-<a name="color" href="#" onClick="return toggleMember('color', false);"><tt><b>color</b></tt></a>
-</div>
-<div id="color-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="color" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('color', false);"><tt><b>color</b></tt></a>
+<a name="color" href="#color"><tt><b>color</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('color', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The color of the gradient stop.</p>
@@ -212,20 +185,11 @@ function onFrame(event) {
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="clone-member" class="member">
-<div id="clone-link" class="member-link">
-<a name="clone" href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
-</div>
-<div id="clone-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="clone" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('clone', false);"><tt><b>clone</b>()</tt></a>
+<a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('clone', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	

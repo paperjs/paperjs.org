@@ -9,20 +9,11 @@
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="line-point1-point2-arg3-arg4-member" class="member">
-<div id="line-point1-point2-arg3-arg4-link" class="member-link">
-<a name="line-point1-point2-arg3-arg4" href="#" onClick="return toggleMember('line-point1-point2-arg3-arg4', false);"><tt><b>Line</b>(point1, point2[, asVector, arg3, arg4])</tt></a>
-</div>
-<div id="line-point1-point2-arg3-arg4-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="line-point1-point2-arg3-arg4" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('line-point1-point2-arg3-arg4', false);"><tt><b>Line</b>(point1, point2[, asVector, arg3, arg4])</tt></a>
+<a name="line-point1-point2-arg3-arg4" href="#line-point1-point2-arg3-arg4"><tt><b>Line</b>(point1, point2[, asVector, arg3, arg4])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('line-point1-point2-arg3-arg4', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 <p>Creates a Line object.</p>
 
@@ -81,20 +72,11 @@
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="point-member" class="member">
-<div id="point-link" class="member-link">
-<a name="point" href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
-</div>
-<div id="point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('point', false);"><tt><b>point</b></tt></a>
+<a name="point" href="#point"><tt><b>point</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The starting point of the line</p>
@@ -113,20 +95,11 @@
 </div>
 		
 			
-<div id="vector-member" class="member">
-<div id="vector-link" class="member-link">
-<a name="vector" href="#" onClick="return toggleMember('vector', false);"><tt><b>vector</b></tt></a>
-</div>
-<div id="vector-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="vector" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('vector', false);"><tt><b>vector</b></tt></a>
+<a name="vector" href="#vector"><tt><b>vector</b></tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('vector', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 
 <div class="member-text">
 	<p>The vector of the line</p>
@@ -144,6 +117,29 @@
 </div>
 </div>
 		
+			
+<div id="length" class="member">
+<div class="member-link">
+<a name="length" href="#length"><tt><b>length</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The length of the line</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
 	</div>
 
 
@@ -152,20 +148,11 @@
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
-<div id="intersect-line-member" class="member">
-<div id="intersect-line-link" class="member-link">
-<a name="intersect-line" href="#" onClick="return toggleMember('intersect-line', false);"><tt><b>intersect</b>(line[, isInfinite])</tt></a>
-</div>
-<div id="intersect-line-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="intersect-line" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('intersect-line', false);"><tt><b>intersect</b>(line[, isInfinite])</tt></a>
+<a name="intersect-line" href="#intersect-line"><tt><b>intersect</b>(line[, isInfinite])</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('intersect-line', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -204,20 +191,11 @@ if the two lines are colinear, or <tt>null</tt> if they don't intersect.
 </div>
 		
 			
-<div id="getside-point-member" class="member">
-<div id="getside-point-link" class="member-link">
-<a name="getside-point" href="#" onClick="return toggleMember('getside-point', false);"><tt><b>getSide</b>(point)</tt></a>
-</div>
-<div id="getside-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getside-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getside-point', false);"><tt><b>getSide</b>(point)</tt></a>
+<a name="getside-point" href="#getside-point"><tt><b>getSide</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getside-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
@@ -248,20 +226,11 @@ if the two lines are colinear, or <tt>null</tt> if they don't intersect.
 </div>
 		
 			
-<div id="getdistance-point-member" class="member">
-<div id="getdistance-point-link" class="member-link">
-<a name="getdistance-point" href="#" onClick="return toggleMember('getdistance-point', false);"><tt><b>getDistance</b>(point)</tt></a>
-</div>
-<div id="getdistance-point-description" class="member-description hidden">
-<div class="member-header">
-<div class="member-title">
+<div id="getdistance-point" class="member">
 <div class="member-link">
-<a href="#" onClick="return toggleMember('getdistance-point', false);"><tt><b>getDistance</b>(point)</tt></a>
+<a name="getdistance-point" href="#getdistance-point"><tt><b>getDistance</b>(point)</tt></a>
 </div>
-</div>
-<div class="member-close"><input type="button" value="Close" onClick="toggleMember('getdistance-point', false);"></div>
-<div class="clear"></div>
-</div>
+<div class="member-description hidden">
 <div class="member-text">
 	
 	
