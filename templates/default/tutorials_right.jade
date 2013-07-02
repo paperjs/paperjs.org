@@ -1,9 +1,9 @@
 tutorials = root.get('tutorials')
 if tutorials && (tutorials == page || tutorials.isAncestor(page))
-  div.right
+  .right
     h1 Index
     !{ template('tutorials_index', tutorials) }
 if param.titles
-  div.right.index.sticky
+  .right.index.sticky
     h1 Content
     ul.menu.toc

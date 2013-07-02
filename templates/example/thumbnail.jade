@@ -1,11 +1,11 @@
 id = 'thumb-' + page.index
-div.thumbnail
-  div.resource
+.thumbnail
+  .resource
     a.hover(href=page.url)
       thumb = page.files[0]
       if thumb
         monoThumb = thumb.exportThumb({grayscale: true})
         img.normal(src=monoThumb.url, width=monoThumb.width, height=monoThumb.height)
         img.over.hidden(src=thumb.url, width=thumb.width, height=thumb.height)
-  div.caption
+  .caption
      #{page.title}
