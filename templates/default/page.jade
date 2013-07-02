@@ -1,10 +1,10 @@
-//- Render main before, so we can access param.titles
-main = template('main')
+//- Render content template before, to get access to param.titles
+content = template('content')
 #main
   #content(class=page.type)
     if !param.titles || !param.titles.length || !param.titles[0].isFirst
       h1 !{page.title}
-    !{main}
+    !{content}
   .content-end
 #right
   !{template('right', page)}
