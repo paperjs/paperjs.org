@@ -1,7 +1,7 @@
 //- Render content template before, to get access to param.titles
 content = template('content')
 #main
-  #content(class=page.type)
+  #content(class=inPath(root.get('tutorials')) && 'tutorial')
     if !param.titles || !param.titles.length || !param.titles[0].isFirst
       h1 !{page.title}
     !{content}
