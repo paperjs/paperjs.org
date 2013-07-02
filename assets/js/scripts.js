@@ -170,6 +170,13 @@ behaviors.referenceClass = function() {
 	}
 };
 
+behaviors.hover = function() {
+	$('.hover').hover(function() {
+		$('.normal', this).toggleClass('hidden');
+		$('.over', this).toggleClass('hidden');
+	});
+};
+
 behaviors.code = function() {
 	$('.code:visible').each(function() {
 		createCode($(this));
@@ -447,9 +454,4 @@ function toggleMember(id, dontScroll) {
 		desc.data('initialized', true);
 	}
 	return false;
-}
-
-function toggleThumbnail(id, over) {
-	$('#' + id).toggleClass('hidden', over);
-	$('#' + id + '-over').toggleClass('hidden', !over);
 }
