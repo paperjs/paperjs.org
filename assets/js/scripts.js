@@ -183,7 +183,7 @@ behaviors.paperscript = function() {
 };
 
 function createCodeMirror(place, options, source) {
-	return new CodeMirror(place, Hash.create({}, {
+	return new CodeMirror(place, $.extend({}, {
 		mode: 'javascript',
 		lineNumbers: true,
 		matchBrackets: true,
@@ -415,10 +415,6 @@ $(function() {
 		behaviors[i]();
 });
 
-var _$ = DomElement.get,
-	_$$ = DomElement.getAll;
-
-
 var lastMemberId = null;
 function toggleMember(id, dontScroll) {
 	var link = $('#' + id + '-link');
@@ -454,6 +450,6 @@ function toggleMember(id, dontScroll) {
 }
 
 function toggleThumbnail(id, over) {
-	_$('#' + id).toggleClass('hidden', over);
-	_$('#' + id + '-over').toggleClass('hidden', !over);
+	$('#' + id).toggleClass('hidden', over);
+	$('#' + id + '-over').toggleClass('hidden', !over);
 }
