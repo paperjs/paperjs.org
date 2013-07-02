@@ -168,7 +168,7 @@ The mouse handler  <api ToolEvent>event</api> object includes a reference to thi
 
 Here is our updated tool script that now also creates the skeleton paths. The new lines of code are highlighted:
 
-<code highlight="16-25">
+<code highlight="15-24">
 tool.minDistance = 10;
 
 var path;
@@ -344,7 +344,7 @@ function onMouseUp(event) {
 
 Here is the updated script, with the new lines of code highlighted:
 
-<code highlight="2,8,22,28">
+<code highlight="2,8-12,26,32">
 tool.minDistance = 10;
 tool.maxDistance = 45;
 
@@ -396,12 +396,12 @@ You can found out more about the <api Path#smooth() /> function in the <node "/t
 </note>
 
 We smooth our <code path /> in the onMouseDrag event handler function:
-<code start=22 >
+<code start=26>
 	path.smooth();
 </code>
 
 And also in the onMouseUp function:
-<code start=28 >
+<code start=32>
 	path.smooth();
 </code>
 
@@ -468,7 +468,7 @@ function addStrokes(point, delta) {
 }
 </paperscript>
 
-<code highlight="1,4,11,13-17,26,29,33-35,40-54">
+<code highlight="1,4,15,17-21,30,33,37-39,44-58">
 tool.fixedDistance = 30;
 
 var path;
