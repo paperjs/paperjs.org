@@ -265,6 +265,12 @@ body.fullscreen {
   clear: left;
   min-height: 32px; }
 
+.donation {
+  padding-bottom: 20px; }
+  .donation input,
+  .donation select {
+    margin-right: 0.35em; }
+
 /* Resources */
 .resource-block {
   display: table;
@@ -313,6 +319,94 @@ body.fullscreen {
 .download .image a {
   border: 0 !important;
   background: none !important; }
+
+.reference h1,
+.reference h2,
+.reference h3 {
+  font-size: 13px;
+  font-weight: normal;
+  height: 18px;
+  border-bottom: 1px solid;
+  margin-top: 0;
+  margin-bottom: 16px; }
+.reference h2 a {
+  font-weight: bold; }
+.reference h3 {
+  margin-top: 16px;
+  border-bottom-style: dotted; }
+.reference a tt {
+  line-height: 18px; }
+.reference p {
+  margin: 0 0 16px 0; }
+.reference hr {
+  border: none;
+  border-bottom: 1px dotted; }
+.reference ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.reference ul > li {
+  text-indent: 0;
+  margin-left: 0; }
+.reference ul > li:before {
+  display: none; }
+.reference .reference-list ul,
+.reference .reference-inherited ul {
+  margin-left: 16px; }
+.reference .reference-inherited ul li {
+  text-indent: -30px;
+  padding-left: 30px; }
+.reference .reference-classes {
+  padding-bottom: 4px; }
+  .reference .reference-classes h2,
+  .reference .reference-classes h3,
+  .reference .reference-classes hr {
+    margin: 10px 0 10px 0; }
+  .reference .reference-classes .first h2 {
+    margin-top: 0; }
+  * html .reference .reference-classes img {
+    margin-top: 5px; }
+  .reference .reference-classes li {
+    list-style: none;
+    list-style-image: none; }
+  .reference .reference-classes ul {
+    margin-left: 10px;
+    margin-bottom: 10px; }
+.reference .reference-members {
+  margin-bottom: 16px; }
+.reference .member-group-text {
+  margin-bottom: 16px; }
+.reference .member-description {
+  border: 1px solid #999;
+  border-top: 0;
+  margin: 16px 0 16px 0; }
+.reference .member-header {
+  border-top: 1px solid #999;
+  padding: 10px;
+  *zoom: 1; }
+  .reference .member-header .member-link {
+    float: left; }
+  .reference .member-header:before, .reference .member-header:after {
+    content: " ";
+    display: table; }
+  .reference .member-header:after {
+    clear: both; }
+.reference .member-close {
+  float: right; }
+.reference .member-text {
+  border-top: 1px dashed #999;
+  padding: 10px 10px 0 10px;
+  margin-bottom: -6px; }
+.reference .member-link {
+  text-indent: -30px;
+  padding-left: 30px; }
+.reference ul,
+.reference .paperscript,
+.reference .CodeMirror {
+  margin-top: -8px;
+  margin-bottom: 16px; }
+.reference ul {
+  margin-top: 0; }
 
 .CodeMirror {
   overflow: auto;
@@ -479,84 +573,6 @@ ul.tutorial-index {
 #main ul.tutorial-index {
   margin-bottom: 29px; }
 
-.reference h1,
-.reference h2,
-.reference h3 {
-  font-size: 13px;
-  font-weight: normal;
-  height: 18px;
-  border-bottom: 1px solid;
-  margin-top: 0;
-  margin-bottom: 16px; }
-.reference h2 a {
-  font-weight: bold; }
-.reference h3 {
-  margin-top: 16px;
-  border-bottom-style: dotted; }
-.reference a tt {
-  line-height: 18px; }
-.reference p {
-  margin: 0 0 16px 0; }
-.reference hr {
-  border: none;
-  border-bottom: 1px dotted; }
-.reference ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-.reference .reference-list ul,
-.reference .reference-inherited ul {
-  margin-left: 16px; }
-.reference .reference-inherited ul li {
-  text-indent: -30px;
-  padding-left: 30px; }
-.reference .reference-classes {
-  padding-bottom: 4px; }
-  .reference .reference-classes h2,
-  .reference .reference-classes h3,
-  .reference .reference-classes hr {
-    margin: 10px 0 10px 0; }
-  .reference .reference-classes .first h2 {
-    margin-top: 0; }
-  * html .reference .reference-classes img {
-    margin-top: 5px; }
-  .reference .reference-classes li {
-    list-style: none;
-    list-style-image: none; }
-  .reference .reference-classes ul {
-    margin-left: 10px;
-    margin-bottom: 10px; }
-.reference .reference-members {
-  margin-bottom: 16px; }
-.reference .member-group-text {
-  margin-bottom: 16px; }
-.reference .member-description {
-  border: 1px solid #999;
-  border-top: 0;
-  margin: 16px 0 16px 0; }
-.reference .member-header {
-  border-top: 1px solid #999;
-  padding: 10px; }
-.reference .member-title {
-  float: left;
-  width: 400px; }
-.reference .member-close {
-  float: right; }
-.reference .member-text {
-  border-top: 1px dashed #999;
-  padding: 10px 10px 0 10px;
-  margin-bottom: -6px; }
-.reference .member-link {
-  text-indent: -30px;
-  padding-left: 30px; }
-.reference ul,
-.reference .paperscript,
-.reference .CodeMirror {
-  margin-top: -8px;
-  margin-bottom: 16px; }
-.reference ul {
-  margin-top: 0; }
-
 /* Helpers */
 .clear {
   clear: both; }
@@ -579,9 +595,3 @@ ul.tutorial-index {
 .small {
   font-size: 11px;
   line-height: 16px; }
-
-.donation {
-  padding-bottom: 20px; }
-  .donation input,
-  .donation select {
-    margin-right: 0.35em; }

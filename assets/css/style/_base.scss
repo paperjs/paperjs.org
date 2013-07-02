@@ -1,44 +1,44 @@
 body {
-    background: #fff;
-    margin: 0;
-    font-size: 13px;
-    width: $content-width + 3 * $page-margin + $menu-width + $right-width;
+	background: #fff;
+	margin: 0;
+	font-size: 13px;
+	width: $content-width + 3 * $page-margin + $menu-width + $right-width;
 }
 
 select,
 input,
 textarea {
-    font-size: 11px;
-    margin: 0;
-    color: #000;
+	font-size: 11px;
+	margin: 0;
+	color: #000;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a:focus {
-    outline: none
+	outline: none
 }
 
 form,
 img {
-    margin: 0;
+	margin: 0;
 }
 
 div {
-    line-height: $line-height;
+	line-height: $line-height;
 }
 
 /* Tables */
 
 table {
-    border-spacing: 0;
-    margin: 0;
-    border: 0;
+	border-spacing: 0;
+	margin: 0;
+	border: 0;
 }
 
 td {
-    padding: 0;
-    vertical-align: top;
+	padding: 0;
+	vertical-align: top;
 }

@@ -42,6 +42,16 @@
 		list-style: none;
 	}
 
+	ul > li {
+		text-indent: 0;
+		margin-left: 0;
+	}
+
+	ul > li:before {
+		display: none;
+	}
+
+
 	.reference-list ul,
 	.reference-inherited ul {
 		margin-left: 16px;
@@ -99,11 +109,12 @@
 	.member-header {
 		border-top: 1px solid #999;
 		padding: 10px;
-	}
 
-	.member-title {
-		float: left;
-		width: 400px;
+		.member-link {
+			float: left;
+		}
+
+		@include clearfix;
 	}
 
 	.member-close {

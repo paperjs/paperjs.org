@@ -4,46 +4,46 @@
 
 h1,
 h2 {
-    font-family: "SuperstudioBold";
-    font-weight: normal;
-    font-size: 27px;
-    line-height: 32px;
-    padding-top: $page-margin; // Padding instead of margin, so anchor trick works here too
-    padding-bottom: 8px;
+	font-family: "SuperstudioBold";
+	font-weight: normal;
+	font-size: 27px;
+	line-height: 32px;
+	padding-top: $page-margin; // Padding instead of margin, so anchor trick works here too
+	padding-bottom: 8px;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    border-bottom: 1px solid;
-    margin: 0 0 $line-height 0;
+	border-bottom: 1px solid;
+	margin: 0 0 $line-height 0;
 }
 
 h3 {
-    border-bottom: 1px dotted;
-    margin-bottom: $line-height / 2;
-    padding-bottom: $line-height / 2 - 1;
+	border-bottom: 1px dotted;
+	margin-bottom: $line-height / 2;
+	padding-bottom: $line-height / 2 - 1;
 }
 
 h3,
 h4,
 h5 {
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 16px;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 16px;
 }
 
 h4 {
-    display: inline;
+	display: inline;
 
-    & + p {
-        margin-top: $line-height;
-    }
+	& + p {
+		margin-top: $line-height;
+	}
 }
 
 h5 {
-    @include inline-block;
+	@include inline-block;
 }
 
 body,
@@ -52,25 +52,25 @@ input,
 textarea,
 .tutorial h2,
 .reference h2 {
-    font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+	font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
 }
 
 .tutorial h2,
 .reference h2 {
-    font-size: 13px;
-    line-height: 20px;
-    padding: 0;
+	font-size: 13px;
+	line-height: 20px;
+	padding: 0;
 }
 
 .tutorial h2 {
-    font-weight: bold;
-    border: 0;
-    margin-top: 0;
-    margin-bottom: 10px;
+	font-weight: bold;
+	border: 0;
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 
 tt,
 pre {
-    font-family: Menlo, Consolas, "Vera Mono", monospace;
-    font-size: 12px;
+	font-family: Menlo, Consolas, "Vera Mono", monospace;
+	font-size: 12px;
 }

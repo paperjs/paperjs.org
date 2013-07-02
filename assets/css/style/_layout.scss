@@ -3,107 +3,107 @@
 #menu,
 #main,
 #right {
-    float: left;
-    margin-left: $page-margin;
+	float: left;
+	margin-left: $page-margin;
 }
 
 #menu {
-    width: $menu-width;
-    position: fixed;
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding-right: 21px; // Position scrollbar in a good distance
-    top: 0;
-    bottom: 0;
+	width: $menu-width;
+	position: fixed;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-right: 21px; // Position scrollbar in a good distance
+	top: 0;
+	bottom: 0;
 }
 
 #main {
-    width: $content-width;
-    // We need relative position so scrollbars on document work
-    position: relative;
-    margin-left: $menu-width + 2 * $page-margin;
+	width: $content-width;
+	// We need relative position so scrollbars on document work
+	position: relative;
+	margin-left: $menu-width + 2 * $page-margin;
 
-    &.full {
-        width: $content-width + $page-margin + $menu-width;
-    }
+	&.full {
+		width: $content-width + $page-margin + $menu-width;
+	}
 }
 
 #right {
-    &,
-    h1,
-    .right {
-        width: $right-width;
-    }
+	&,
+	h1,
+	.right {
+		width: $right-width;
+	}
 }
 
 /* Fullscreen */
 
 body.fullscreen {
-    overflow: hidden;
+	overflow: hidden;
 
-    #main {
-        // Clear relative position for fullscreen examples
-        position: absolute;
-        width: auto;
-        overflow: hidden;
+	#main {
+		// Clear relative position for fullscreen examples
+		position: absolute;
+		width: auto;
+		overflow: hidden;
 
-        #content {
-            width: auto;
-            padding: 0;
-        }
-    }
+		#content {
+			width: auto;
+			padding: 0;
+		}
+	}
 }
 
 /* Menu */
 
 .menu {
-    padding: 0;
-    list-style: none;
-    margin: 0;
+	padding: 0;
+	list-style: none;
+	margin: 0;
 
-    .entry {
-        padding: 0;
-        margin: 0 0 0 13px;
-        text-indent: -13px;
-    }
+	.entry {
+		padding: 0;
+		margin: 0 0 0 13px;
+		text-indent: -13px;
+	}
 
-    .spacer {
-        margin-top: 10px;
-    }
+	.spacer {
+		margin-top: 10px;
+	}
 
-    & > .entry {
-        // Don't indent the first level of entries
-        padding: 0;
-    }
+	& > .entry {
+		// Don't indent the first level of entries
+		padding: 0;
+	}
 }
 
 /* Colours and Links */
 
 #menu {
-    &,
-    a {
-        color: #009dec;
-        border-bottom-color: #009dec;
-    }
+	&,
+	a {
+		color: $color-menu;
+		border-bottom-color: $color-menu;
+	}
 
-    .menu {
-        a:hover,
-        .active > a {
-            background: #e3f4fc;
-        }
-    }
+	.menu {
+		a:hover,
+		.active > a {
+			background: $color-menu-hover;
+		}
+	}
 }
 
 .right {
-    &,
-    a {
-        color: #e4141b;
-        border-bottom-color: #e4141b;
-    }
+	&,
+	a {
+		color: $color-right;
+		border-bottom-color: $color-right;
+	}
 
-    a:hover,
-    .active > * {
-        background: #fce6e6;
-    }
+	a:hover,
+	.active > * {
+		background: $color-right-hover;
+	}
 }

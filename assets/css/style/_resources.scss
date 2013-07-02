@@ -1,64 +1,64 @@
 /* Resources */
 
 .resource-block {
-    display: table;
-    margin-bottom: 20px;
+	display: table;
+	margin-bottom: 20px;
 }
 
 .resource-block + .resource-block {
-    border-top: 1px dotted #000;
-    padding-top: 20px;
+	border-top: 1px dotted #000;
+	padding-top: 20px;
 }
 
 .resource-text,
 .resource-block .resource {
-    float: none;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0;
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0;
 }
 
 .resource-text {
-    vertical-align: top;
+	vertical-align: top;
 }
 
 .resource-block .resource img {
-    margin-right: 20px;
+	margin-right: 20px;
 }
 
 .resource-text .note {
-    margin: 0 10px 0 0;
+	margin: 0 10px 0 0;
 }
 
 .resource-text .CodeMirror {
-    // Having height at 100% in resource-blocks breaks table layout
-    height: auto;
-    margin-bottom: 20px;
+	// Having height at 100% in resource-blocks breaks table layout
+	height: auto;
+	margin-bottom: 20px;
 }
 
 /* Thumbnails */
 
 .thumbnails {
-    margin-right: -24px;
+	margin-right: -24px;
 }
 
 .thumbnail {
-    float: left;
-    width: 258px;
-    margin: 0 24px 24px 0;
+	float: left;
+	width: 258px;
+	margin: 0 24px 24px 0;
 }
 
 .download {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 
-    .image {
-        float: left;
-        margin-right: 8px;
-    }
+	.image {
+		float: left;
+		margin-right: 8px;
+	}
 }
 
 .thumbnail .resource a,
 .download .image a {
-    border: 0 !important;
-    background: none !important;
+	border: 0 !important;
+	background: none !important;
 }
