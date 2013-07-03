@@ -2,7 +2,8 @@
 body {
   background: #fff;
   margin: 0;
-  font-size: 13px; }
+  font-size: 13px;
+  line-height: 20px; }
 
 select,
 input,
@@ -20,9 +21,6 @@ a:focus {
 form,
 img {
   margin: 0; }
-
-div {
-  line-height: 20px; }
 
 /* Tables */
 table {
@@ -108,13 +106,13 @@ pre {
   font-size: 12px; }
 
 /* Column Layout */
-#menu,
+nav,
 #main,
-#right {
+aside {
   float: left;
   margin-left: 32px; }
 
-#menu {
+nav {
   width: 160px;
   position: fixed;
   overflow-x: hidden;
@@ -134,9 +132,8 @@ pre {
   #content.examples {
     width: 772px; }
 
-#right,
-#right h1,
-#right .right {
+aside,
+aside h1 {
   width: 200px; }
 
 /* Fullscreen */
@@ -150,34 +147,38 @@ body.fullscreen {
       padding: 0; }
 
 /* Menu */
-.menu {
+nav ul,
+aside ul {
   padding: 0;
   list-style: none;
   margin: 0; }
-  .menu .entry {
+  nav ul li,
+  aside ul li {
     padding: 0;
     margin: 0 0 0 13px;
     text-indent: -13px; }
-  .menu .spacer {
-    margin-top: 10px; }
-  .menu > .entry {
+    nav ul li.spacer,
+    aside ul li.spacer {
+      margin-top: 10px; }
+  nav ul > li,
+  aside ul > li {
     padding: 0; }
 
 /* Colours and Links */
-#menu,
-#menu a {
+nav,
+nav a {
   color: #009dec;
   border-bottom-color: #009dec; }
-#menu .menu a:hover,
-#menu .menu .active > a {
+nav ul a:hover,
+nav ul .active > a {
   background: #e3f4fc; }
 
-.right,
-.right a {
+aside,
+aside a {
   color: #e4141b;
   border-bottom-color: #e4141b; }
-.right a:hover,
-.right .active > * {
+aside a:hover,
+aside .active > * {
   background: #fce6e6; }
 
 /* Content Styles */

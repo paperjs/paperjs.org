@@ -37,7 +37,7 @@ function smoothScrollTo(el, callback) {
 var behaviors = {};
 
 behaviors.sections = function() {
-	var toc = $('.menu.toc');
+	var toc = $('.toc');
 	var checks = [];
 	var active;
 

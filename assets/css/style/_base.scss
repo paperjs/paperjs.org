@@ -2,6 +2,7 @@ body {
 	background: #fff;
 	margin: 0;
 	font-size: 13px;
+	line-height: $line-height;
 }
 
 select,
@@ -23,10 +24,6 @@ a:focus {
 form,
 img {
 	margin: 0;
-}
-
-div {
-	line-height: $line-height;
 }
 
 /* Tables */

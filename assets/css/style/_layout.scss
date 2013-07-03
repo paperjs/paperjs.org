@@ -1,13 +1,13 @@
 /* Column Layout */
 
-#menu,
+nav,
 #main,
-#right {
+aside {
 	float: left;
 	margin-left: $page-margin;
 }
 
-#menu {
+nav {
 	width: $menu-width;
 	position: fixed;
 	overflow-x: hidden;
@@ -33,10 +33,9 @@
 	}
 }
 
-#right {
+aside {
 	&,
-	h1,
-	.right {
+	h1 {
 		width: $right-width;
 	}
 }
@@ -60,22 +59,23 @@ body.fullscreen {
 
 /* Menu */
 
-.menu {
+nav ul,
+aside ul {
 	padding: 0;
 	list-style: none;
 	margin: 0;
 
-	.entry {
+	li {
 		padding: 0;
 		margin: 0 0 0 13px;
 		text-indent: -13px;
+
+		&.spacer {
+			margin-top: 10px;
+		}
 	}
 
-	.spacer {
-		margin-top: 10px;
-	}
-
-	& > .entry {
+	& > li {
 		// Don't indent the first level of entries
 		padding: 0;
 	}
@@ -83,14 +83,14 @@ body.fullscreen {
 
 /* Colours and Links */
 
-#menu {
+nav {
 	&,
 	a {
 		color: $color-menu;
 		border-bottom-color: $color-menu;
 	}
 
-	.menu {
+	ul {
 		a:hover,
 		.active > a {
 			background: $color-menu-hover;
@@ -98,7 +98,7 @@ body.fullscreen {
 	}
 }
 
-.right {
+aside {
 	&,
 	a {
 		color: $color-right;
