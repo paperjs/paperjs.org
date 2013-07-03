@@ -15,13 +15,11 @@ module.exports = {
 			var source = attrs.source;
 			var split = attrs.split === 'true';
 			var explain = attrs.explain === 'true';
-			var inspector = attrs.inspector === 'true';
 			var background = attrs.background;
 			var border = attrs.border;
 			delete attrs.source;
 			delete attrs.split;
 			delete attrs.explain;
-			delete attrs.inspector;
 			delete attrs.background;
 			delete attrs.border;
 			if (!attrs.resize) {
@@ -35,7 +33,6 @@ module.exports = {
 					attrs.height -= 2;
 				}
 			}
-			var inspectorButton = inspector ? '<div class="tools"><div class="button inspector"></div></div>' : '';
 			var parts = [];
 			parts.push(
 				'<div class="paperscript'
@@ -45,12 +42,10 @@ module.exports = {
 			);
 			if (source !== 'false') {
 				parts.push(
-					'<div class="buttons-context">',
-						'<div class="buttons">',
-							inspector && !split ? inspectorButton : '',
-							'<div class="button run">Source</div>',
-							explain ? '<div class="explain"></div>' : '',
-						'</div>'
+					'<div class="buttons">',
+						'<div class="button run">Source</div>',
+						explain ? '<div class="explain"></div>' : '',
+					'</div>'
 				);
 			}
 			parts.push(
@@ -60,27 +55,16 @@ module.exports = {
 			);
 			parts.push(
 				'<div class="canvas'
-					+ (inspector && split ? ' buttons-context' : '')
 					+ (border ? ' border' : '')
 					+ '">'
 			);
 
-			if (inspector && split) {
-				parts.push(
-					'<div class="buttons">',
-						inspectorButton,
-					'</div>'
-				);
-			}
 			parts.push(
 					'<canvas ' + this.renderAttributes()
 						+ (background ? ' style="background:' + background + '"' : '')
 						+ '></canvas>',
 				'</div>'
 			);
-			if (source !== 'false') {
-				parts.push('</div>');
-			}
 			parts.push('</div>');
 			return parts.join('');
 		}

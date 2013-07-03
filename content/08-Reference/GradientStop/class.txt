@@ -74,7 +74,11 @@
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 // Create a circle shaped path at the center of the view,
 // using 40% of the height of the view as its radius
@@ -137,7 +141,11 @@ function onFrame(event) {
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 // Create a circle shaped path at the center of the view,
 // using 40% of the height of the view as its radius

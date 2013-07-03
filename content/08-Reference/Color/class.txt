@@ -10,7 +10,11 @@ strings which are then converted to instances of
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30.
@@ -29,7 +33,11 @@ circle.fillColor = 'green';
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30.
@@ -99,7 +107,11 @@ between <tt>0</tt> and <tt>1</tt>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-2">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30:
@@ -152,7 +164,11 @@ between <tt>0</tt> and <tt>1</tt>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-3">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30:
@@ -225,7 +241,11 @@ an alternative to providing a gradient object<br></p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-4">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30:
@@ -244,7 +264,11 @@ circle.fillColor = { hue: 90, saturation: 1, brightness: 1 };
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-5">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30:
@@ -263,7 +287,11 @@ circle.fillColor = { hue: 90, saturation: 1, lightness: 0.5 };
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-6">
 // Define two points which we will be using to construct
 // the path and to position the gradient color:
@@ -338,7 +366,11 @@ var path = new Path.Rectangle({
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-7">
 // Define two points which we will be using to construct
 // the path and to position the gradient color:
@@ -369,7 +401,11 @@ path.fillColor = gradientColor;
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-8">
 // Create a circle shaped path at the center of the view
 // with a radius of 80:
@@ -737,7 +773,11 @@ console.log(color.type); // 'rgb'</pre>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-9">
 var circle = new Path.Circle(new Point(80, 50), 30);
 
@@ -783,7 +823,11 @@ circle.strokeColor.alpha = 0.5;
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-10">
 var circle = new Path.Circle(new Point(80, 50), 30);
 
@@ -853,7 +897,11 @@ circle.fillColor.blue = 1;
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-11">
 var circle = new Path.Circle(new Point(80, 50), 30);
 circle.fillColor = 'red';
@@ -868,7 +916,11 @@ circle.fillColor.hue += 30;
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-12">
 // Create a rectangle shaped path, using the dimensions
 // of the view:
@@ -1006,7 +1058,11 @@ function onFrame(event) {
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-13">
 var path = new Path.Circle({
 	center: view.center,
@@ -1062,7 +1118,11 @@ function onMouseMove(event) {
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-14">
 var circle = new Path.Circle(new Point(80, 50), 30);
 circle.fillColor = 'blue';
@@ -1102,7 +1162,11 @@ circle.fillColor.red = 1;
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-15">
 var circle = new Path.Circle(new Point(80, 50), 30);
 

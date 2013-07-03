@@ -827,7 +827,11 @@ that of the supplied rectangle.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30.
@@ -891,7 +895,11 @@ rectangle.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 // All newly created paths will inherit these styles:
 project.currentStyle = {
@@ -970,7 +978,11 @@ as non-intersecting.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-2">
 // All newly created paths will inherit these styles:
 project.currentStyle = {
@@ -1051,7 +1063,11 @@ with the specified rectangle.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-3">
 // Create two rectangles that overlap each other
 var size = new Size(50, 50);

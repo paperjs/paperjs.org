@@ -104,7 +104,11 @@ created items will be styled with this style.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 project.currentStyle = {
 	fillColor: 'red',
@@ -126,7 +130,11 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 project.currentStyle.fillColor = 'red';
 

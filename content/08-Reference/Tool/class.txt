@@ -137,7 +137,11 @@ about the mouse event.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 function onMouseDown(event) {
 	// Create a new circle shaped path with a radius of 10
@@ -182,7 +186,11 @@ contains information about the mouse event.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 // Create an empty path:
 var path = new Path({
@@ -227,7 +235,11 @@ about the mouse event.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-2">
 // Create a circle shaped path with a radius of 10 at {x: 0, y: 0}:
 var path = new Path.Circle({
@@ -275,7 +287,11 @@ mouse event.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-3">
 function onMouseUp(event) {
 	// Create a new circle shaped path with a radius of 10
@@ -326,7 +342,11 @@ keys.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-4">
 // Create a circle shaped path:
 	var path = new Path.Circle({

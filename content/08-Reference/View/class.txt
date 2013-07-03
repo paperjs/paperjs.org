@@ -192,7 +192,11 @@ frame event.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 // Create a rectangle shaped path with its top left point at:
 // {x: 50, y: 25} and a size of {width: 50, height: 50}
@@ -393,7 +397,11 @@ occurs
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 var path = new Path.Rectangle(new Point(50, 25), new Size(50, 50));
 path.fillColor = 'black';
@@ -488,7 +496,11 @@ view.on({
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-2">
 var path = new Path.Rectangle(new Point(50, 25), new Size(50, 50));
 path.fillColor = 'black';

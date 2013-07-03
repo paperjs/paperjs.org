@@ -7,7 +7,11 @@
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 // Define two points which we will be using to construct
 // the path and to position the gradient color:
@@ -39,7 +43,11 @@ var path = new Path.Rectangle({
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 var path = new Path.Circle({
 	center: view.center,

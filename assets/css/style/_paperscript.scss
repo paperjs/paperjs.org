@@ -1,4 +1,6 @@
 .paperscript {
+	position: relative;
+
 	.buttons {
 		position: absolute;
 		right: 0;
@@ -27,7 +29,7 @@
 	}
 
 	.explain,
-	.buttons-context:hover .button {
+	&:hover .button {
 		display: inline-block;
 	}
 

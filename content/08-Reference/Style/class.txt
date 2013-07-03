@@ -14,7 +14,11 @@ apply it to a series of items:</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-0">
 var path = new Path.Circle(new Point(80, 50), 30);
 path.style = {
@@ -32,7 +36,11 @@ path.style = {
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-1">
 var text = new PointText(view.center);
 text.content = 'Hello world.';
@@ -51,7 +59,11 @@ text.style = {
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-2">
 var path1 = new Path.Circle({
 	center: [100, 50],
@@ -110,7 +122,11 @@ group.style = {
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-3">
 // Create a circle shaped path at { x: 80, y: 50 }
 // with a radius of 35:
@@ -156,7 +172,11 @@ circle.strokeColor = new Color(1, 0, 0);
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-4">
 // Create a circle shaped path at { x: 80, y: 50 }
 // with a radius of 35:
@@ -206,7 +226,11 @@ have a stroke.</p>
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-5">
 var line = new Path(new Point(80, 50), new Point(420, 50));
 line.strokeColor = 'black';
@@ -265,7 +289,11 @@ line2.strokeCap = 'butt';
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-6">
 var path = new Path();
 path.add(new Point(80, 100));
@@ -351,7 +379,11 @@ path3.strokeJoin = 'bevel';
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-7">
 var path = new Path.Circle(new Point(80, 50), 40);
 path.strokeWidth = 2;
@@ -426,7 +458,11 @@ to the <a href="/reference/style#strokewidth" onclick="return toggleMember('stro
 </p>
 
 <div class="paperscript split">
+
+<div class="buttons">
 <div class="button run">Run</div>
+</div>
+
 <script type="text/paperscript" canvas="canvas-8">
 // Create a circle shaped path at { x: 80, y: 50 }
 // with a radius of 35:
