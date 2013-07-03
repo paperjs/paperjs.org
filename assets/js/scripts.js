@@ -99,10 +99,10 @@ behaviors.sections = function() {
 	});
 };
 
-behaviors.contentEnd = function() {
-	// Expand height of .content-end so that the last anchor aligns
+behaviors.articleEnd = function() {
+	// Expand height of .article-end so that the last anchor aligns
 	// perfectly with the top of the browser window.
-	var end = $('.content-end');
+	var end = $('.article-end');
 	var lastAnchor = $('a[name]:last');
 
 	function resize() {

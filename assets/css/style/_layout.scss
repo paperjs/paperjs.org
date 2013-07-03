@@ -23,9 +23,6 @@ article {
 	position: relative;
 	margin-left: $menu-width + 2 * $page-margin;
 	z-index: 0;
-}
-
-#content {
 	width: $content-width;
 
 	&.examples {
@@ -49,11 +46,8 @@ body.fullscreen {
 		// Clear relative position for fullscreen examples
 		position: absolute;
 		overflow: hidden;
-
-		#content {
-			width: auto;
-			padding: 0;
-		}
+		width: auto;
+		padding: 0;
 	}
 }
 

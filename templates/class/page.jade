@@ -1,8 +1,7 @@
 article
-  #content
-    h1 !{page.title == 'global' ? 'Global Scope' : page.title}
-    .reference
-      !{template('content')}
-  .content-end
+  h1 !{page.title == 'global' ? 'Global Scope' : page.title}
+  .reference
+    !{template('content')}
+  .article-end
 aside
   !{template('right', page)}

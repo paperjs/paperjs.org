@@ -1,7 +1,7 @@
 
 /* Content Styles */
 
-#content {
+article {
 	&,
 	a {
 		color: $color-text;
@@ -135,7 +135,7 @@
 	clear: both;
 }
 
-.content-end {
+.article-end {
 	clear: left;
 	min-height: $page-margin;
 }

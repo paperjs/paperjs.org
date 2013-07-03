@@ -125,11 +125,9 @@ nav {
 article {
   position: relative;
   margin-left: 224px;
-  z-index: 0; }
-
-#content {
+  z-index: 0;
   width: 540px; }
-  #content.examples {
+  article.examples {
     width: 772px; }
 
 aside,
@@ -141,10 +139,9 @@ body.fullscreen {
   overflow: hidden; }
   body.fullscreen article {
     position: absolute;
-    overflow: hidden; }
-    body.fullscreen article #content {
-      width: auto;
-      padding: 0; }
+    overflow: hidden;
+    width: auto;
+    padding: 0; }
 
 /* Menu */
 nav ul,
@@ -182,71 +179,71 @@ aside .active > * {
   background: #fce6e6; }
 
 /* Content Styles */
-#content {
+article {
   /* Text Content */ }
-  #content,
-  #content a {
+  article,
+  article a {
     color: #333333; }
-  #content a {
+  article a {
     border-bottom: 1px solid; }
-  #content a:hover,
-  #content a:hover em {
+  article a:hover,
+  article a:hover em {
     background: #e5e5e5; }
-  #content em {
+  article em {
     font-style: normal;
     background: #efefef; }
-  #content p,
-  #content ul,
-  #content ol {
+  article p,
+  article ul,
+  article ol {
     margin: 0 10px 20px 0; }
-    #content p.small,
-    #content ul.small,
-    #content ol.small {
+    article p.small,
+    article ul.small,
+    article ol.small {
       margin-bottom: 10px; }
-  #content figure,
-  #content .CodeMirror,
-  #content .paperscript {
+  article figure,
+  article .CodeMirror,
+  article .paperscript {
     margin-bottom: 20px; }
-  #content ul,
-  #content ol {
+  article ul,
+  article ol {
     padding: 0;
     list-style: none outside none; }
-  #content ul ul,
-  #content ul ol,
-  #content ol ul,
-  #content ol ol {
+  article ul ul,
+  article ul ol,
+  article ol ul,
+  article ol ol {
     margin-bottom: 0; }
-  #content ul > li {
+  article ul > li {
     text-indent: -1em;
     margin-left: 1em; }
-  #content ul > li:before {
+  article ul > li:before {
     content: "-";
     padding-right: 0.5em; }
-  #content ol {
+  article ol {
     counter-reset: item; }
-  #content ol > li {
+  article ol > li {
     text-indent: -1.5em;
     margin-left: 1.5em; }
-  #content ol > li:before {
+  article ol > li:before {
     text-indent: 0;
     display: inline-block;
     content: counter(item,upper-latin) ") ";
     counter-increment: item;
     width: 1.5em; }
-  #content blockquote {
+  article blockquote {
     margin: 0; }
-    #content blockquote p {
+    article blockquote p {
       padding-left: 0.9em; }
-      #content blockquote p:first-child {
+      article blockquote p:first-child {
         text-indent: -0.9em; }
-        #content blockquote p:first-child:before {
+        article blockquote p:first-child:before {
           content: "“";
           padding-right: 0.5em; }
-      #content blockquote p:last-child:after {
+      article blockquote p:last-child:after {
         content: "”"; }
-  #content cite {
+  article cite {
     font-style: normal; }
-    #content cite:before {
+    article cite:before {
       content: "–";
       padding-right: 0.5em; }
 
@@ -263,7 +260,7 @@ aside .active > * {
 .row {
   clear: both; }
 
-.content-end {
+.article-end {
   clear: left;
   min-height: 32px; }
 
