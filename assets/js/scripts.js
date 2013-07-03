@@ -205,9 +205,9 @@ behaviors.analytics = function() {
 			});
 		} else if (/\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i.test(href)) {
 			link.click(function() {
-				var extension = /[^.]+$/.exec(href);
+				var extension = /[^.]+$/.exec(href)[0];
 				_gaq.push(['_trackEvent', 'Download',
-						'Click - ' + extension.toUpperCase(),
+						'Click - ' + extension.toUpperCase() + ' File',
 						href]);
 				if (/^_blank$/i.test(link.attr('target'))) {
 					window.open(baseHref + href);
