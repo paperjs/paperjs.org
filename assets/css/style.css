@@ -121,16 +121,18 @@ pre {
   overflow-y: auto;
   padding: 0 21px 32px 0;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 1; }
 
 #main {
   position: relative;
-  margin-left: 224px; }
+  margin-left: 224px;
+  z-index: 0; }
 
 #content {
   width: 540px; }
   #content.examples {
-    width: 750px; }
+    width: 772px; }
 
 #right,
 #right h1,
@@ -301,12 +303,12 @@ body.fullscreen {
 
 /* Thumbnails */
 .thumbnails {
-  margin-right: -24px; }
+  margin-right: -23px; }
 
 .thumbnail {
   float: left;
-  width: 234px;
-  margin: 0 24px 24px 0; }
+  width: 242px;
+  margin: 0 23px 23px 0; }
 
 .download {
   margin-bottom: 20px; }

@@ -15,19 +15,21 @@
 	padding: 0 21px $page-margin 0; // 21px: Position scrollbar in a good distance
 	top: 0;
 	bottom: 0;
+	z-index: 1;
 }
 
 #main {
 	// We need relative position so scrollbars on document work
 	position: relative;
 	margin-left: $menu-width + 2 * $page-margin;
+	z-index: 0;
 }
 
 #content {
 	width: $content-width;
 
 	&.examples {
-		width: 750px;
+		width: 772px;
 	}
 }
 

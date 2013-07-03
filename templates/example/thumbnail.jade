@@ -4,8 +4,8 @@ id = 'thumb-' + page.index
     a.hover(href=page.url)
       thumb = page.files[0]
       if thumb
-        monoThumb = thumb.exportThumb({ width: 234, grayscale: true })
-        thumb = thumb.exportThumb({ width: 234 })
+        monoThumb = thumb.exportThumb({ width: 242, grayscale: true })
+        thumb = thumb.exportThumb({ width: 242 })
         img.normal(src=monoThumb.url, width=monoThumb.width, height=monoThumb.height)
         img.over.hidden(src=thumb.url, width=thumb.width, height=thumb.height)
   .caption
