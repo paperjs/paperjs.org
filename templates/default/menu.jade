@@ -1,6 +1,6 @@
 if page.parent && !page.parent.parent && inPath(page) && page.name != 'Reference'
   ul.menu
     for entry in page.children
-      if entry.type != 'example_external'
+      if /^(page|tutorial|example)$/.test(entry.type)
         li.entry(class=inPath(entry) ? 'active' : '')
           a(href=entry.link || entry.url) #{entry.title}
