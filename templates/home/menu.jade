@@ -1,12 +1,12 @@
 ul
   for entry in page.children
     if entry.type == 'spacer'
-      li.entry.spacer
+      li.spacer
     else
-      li.entry(class=isActive(entry) ? 'active' : '')
+      li(class=isActive(entry) ? 'active' : '')
         a(href=entry.url) #{entry.title}
         !{template('menu', entry, param)}
-  li.entry.spacer
+  li.spacer
   for line in marks(root.menu).split(/\r\n|\n|\r/mg)
-    li.entry
+    li
       !{line}
