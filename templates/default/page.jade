@@ -1,10 +1,9 @@
 //- Render content template before, to get access to param.titles
 content = template('content')
-article
-  #content(class=inPath(root.get('tutorials')) ? 'tutorial' : page.type)
-    if !param.titles || !param.titles.length || !param.titles[0].isFirst
-      h1 !{page.title}
-    !{content}
-  .content-end
+article(class=inPath(root.get('tutorials')) ? 'tutorial' : page.type)
+  if !param.titles || !param.titles.length || !param.titles[0].isFirst
+    h1 !{page.title}
+  !{content}
+  .article-end
 aside
-  !{template('right', page)}
+  !{template('aside', page)}
