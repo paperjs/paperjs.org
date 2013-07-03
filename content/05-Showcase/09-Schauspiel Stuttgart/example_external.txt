@@ -1,2 +1,2 @@
 link: http://www.schauspiel-stuttgart.de/vorschau/
-description: The interim page for theater Schauspiel Stuttgart creates beautiful calligraphic lines whenever you move the mouse
+description: The interim page for theater Schauspiel Stuttgart creates beautiful calligraphic lines whenever you move the mouse.
