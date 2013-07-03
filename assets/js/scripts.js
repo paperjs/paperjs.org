@@ -181,6 +181,41 @@ behaviors.hover = function() {
 	});
 };
 
+behaviors.analytics = function() {
+	// http://www.blastam.com/blog/index.php/2011/04/how-to-track-downloads-in-google-analytics/
+	var baseHref = $('base').attr('href') || '';
+	$('a').each(function() {
+		var link = $(this);
+		var href = link.attr('href');
+		if (!href)
+			return;
+		if (/^https?\:/i.test(href) && !href.match(document.domain)) {
+			link.click(function() {
+				_gaq.push(['_trackEvent', 'External', 'Click',
+						href.replace(/^https?\:\/\//i, '')]);
+				if (/^_blank$/i.test(link.attr('target'))) {
+					window.open(href);
+					return false;
+				}
+			});
+		} else if (/^mailto\:/i.test(href)) {
+			link.click(function() {
+				_gaq.push(['_trackEvent', 'Email', 'Click',
+						href.replace(/^mailto\:/i, '')]);
+			});
+		} else if (/\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i.test(href)) {
+			link.click(function() {
+				var extension = /[^.]+$/.exec(href);
+				_gaq.push(['_trackEvent', 'Download', 'Click-' + extension, href]);
+				if (/^_blank$/i.test(link.attr('target'))) {
+					window.open(baseHref + href);
+					return false;
+				}
+			});
+		}
+	});
+};
+
 behaviors.code = function() {
 	$('.code:visible').each(function() {
 		createCode($(this));
