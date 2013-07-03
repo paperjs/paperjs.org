@@ -68,7 +68,7 @@ for (var i = 0; i < 2; i++) {
 onMouseMove({ point: view.center - vector.rotate(-90) });
 </paperscript>
 
-<hide>The tutorial <node DocumentationPage-839 /> explains how to work with segments and curves in more detail.</hide>
+<hide>The tutorial <node "/tutorials/paths/working-with-path-items"/> explains how to work with segments and curves in more detail.</hide>
 
 <title>Adding and Inserting Segments</title>
 
