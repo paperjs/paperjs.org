@@ -1,6 +1,7 @@
-for file in page.files
+for file in page.files.flip()
   name = file.name.split('-')[1]
-  name = name.charAt(0).toUpperCase() + name.slice(1)
+  if !/^v/.test(name)
+    name = name.charAt(0).toUpperCase() + name.slice(1)
   .download
     .image
         a.nohover(href=file.url)
