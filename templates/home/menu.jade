@@ -3,7 +3,7 @@ ul
     if entry.type == 'spacer'
       li.spacer
     else
-      li(class=isActive(entry) ? 'active' : '')
+      li(class=isActive(entry) ? 'active' : undefined)
         a(href=entry.url) #{entry.title}
         !{template('menu', entry, param)}
   li.spacer

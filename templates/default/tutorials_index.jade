@@ -1,7 +1,7 @@
 ul.tutorial-index
   for child in page.children
     if child.children.length > 0
-      li.expandable-list(class=(inPath(child) ? 'expanded' : ''))
+      li.expandable-list(class=(inPath(child) ? 'expanded' : undefined))
         b
           a(href=child.url) #{child.title}
         !{template('tutorials_index', child)}
