@@ -40,8 +40,8 @@ ul.tutorial-index {
 	ul {
 		padding-left: 13px;
 	}
-}
 
-#main ul.tutorial-index {
-	margin-bottom: 29px;
+	article & {
+		margin-bottom: 29px;
+	}
 }

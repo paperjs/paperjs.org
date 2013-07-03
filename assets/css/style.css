@@ -107,7 +107,7 @@ pre {
 
 /* Column Layout */
 nav,
-#main,
+article,
 aside {
   float: left;
   margin-left: 32px; }
@@ -122,7 +122,7 @@ nav {
   bottom: 0;
   z-index: 1; }
 
-#main {
+article {
   position: relative;
   margin-left: 224px;
   z-index: 0; }
@@ -139,10 +139,10 @@ aside h1 {
 /* Fullscreen */
 body.fullscreen {
   overflow: hidden; }
-  body.fullscreen #main {
+  body.fullscreen article {
     position: absolute;
     overflow: hidden; }
-    body.fullscreen #main #content {
+    body.fullscreen article #content {
       width: auto;
       padding: 0; }
 
@@ -572,9 +572,8 @@ ul.tutorial-index {
     display: none; }
   ul.tutorial-index ul {
     padding-left: 13px; }
-
-#main ul.tutorial-index {
-  margin-bottom: 29px; }
+  article ul.tutorial-index {
+    margin-bottom: 29px; }
 
 /* Helpers */
 .clear {

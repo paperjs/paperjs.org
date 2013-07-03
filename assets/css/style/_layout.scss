@@ -1,7 +1,7 @@
 /* Column Layout */
 
 nav,
-#main,
+article,
 aside {
 	float: left;
 	margin-left: $page-margin;
@@ -18,7 +18,7 @@ nav {
 	z-index: 1;
 }
 
-#main {
+article {
 	// We need relative position so scrollbars on document work
 	position: relative;
 	margin-left: $menu-width + 2 * $page-margin;
@@ -45,7 +45,7 @@ aside {
 body.fullscreen {
 	overflow: hidden;
 
-	#main {
+	article {
 		// Clear relative position for fullscreen examples
 		position: absolute;
 		overflow: hidden;
