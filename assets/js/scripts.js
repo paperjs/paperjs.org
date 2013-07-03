@@ -52,11 +52,11 @@ behaviors.sections = function() {
 	$(window).resize(update);
 	setTimeout(update, 0);
 
-	$('.section').each(function() {
+	$('article section').each(function() {
 		var section = $(this);
 		var anchor = $('a', section);
 		// Move content until next section inside section
-		section.append(section.nextUntil('.section'));
+		section.append(section.nextUntil('section'));
 		var title = anchor.attr('title') || $('h1,h2', section).first().text();
 		var id = section.attr('id');
 		if (!id) {
@@ -97,20 +97,18 @@ behaviors.sections = function() {
 			});
 		}
 	});
-};
 
-behaviors.articleEnd = function() {
-	// Expand height of .article-end so that the last anchor aligns
-	// perfectly with the top of the browser window.
-	var end = $('.article-end');
-	var lastAnchor = $('a[name]:last');
+	// Adjust height of last section so that the last anchor aligns perfectly
+	// with the top of the browser window.
+	var lastSection = $('article section:last');
+	var lastAnchor = $('a[name]', lastSection);
 
 	function resize() {
 		var bottom = $(document).height() - lastAnchor.offset().top - $(window).height();
-		end.height(end.height() - bottom);
+		lastSection.height(lastSection.height() - bottom);
 	}
 
-	if (end.length && lastAnchor.length) {
+	if (lastSection.length && lastAnchor.length) {
 		$(window)
 			.load(resize)
 			.resize(resize);

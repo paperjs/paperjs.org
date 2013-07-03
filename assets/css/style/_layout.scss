@@ -21,7 +21,7 @@ nav {
 article {
 	// We need relative position so scrollbars on document work
 	position: relative;
-	margin-left: $menu-width + 2 * $page-margin;
+	margin: 0 0 $page-margin $menu-width + 2 * $page-margin;
 	z-index: 0;
 	width: $content-width;
 

@@ -124,7 +124,7 @@ nav {
 
 article {
   position: relative;
-  margin-left: 224px;
+  margin: 0 0 32px 224px;
   z-index: 0;
   width: 540px; }
   article.examples {
@@ -247,9 +247,10 @@ article {
       content: "–";
       padding-right: 0.5em; }
 
-.section {
+section {
   clear: both;
-  margin-bottom: 20px; }
+  margin: 0 0 20px;
+  padding: 0; }
 
 .column {
   width: 260px;
@@ -259,10 +260,6 @@ article {
 
 .row {
   clear: both; }
-
-.article-end {
-  clear: left;
-  min-height: 32px; }
 
 .donation {
   padding-bottom: 20px; }

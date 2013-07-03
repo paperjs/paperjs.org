@@ -12,14 +12,14 @@ module.exports = {
 			anchor: anchor,
 			isFirst: !before
 		});
-		// Wrap anchor in a <div> so it does not get placed inside a <p>
-		var html = '<div id="' + anchor + '" class="section">'
-				+ '<a name="' + anchor +'" title="' + title
+		// Wrap anchor in a <section> so it does not get placed inside a <p>
+		var html = '<section id="' + anchor + '">'
+				+ '<a name="' + anchor + '" title="' + title
 				+ '" class="anchor">';
 		html += !before
 			? '<h1>' + content + '</h1>'
 			: '<h2>' + content + '</h2>';
-		html += '</a></div>';
+		html += '</a></section>';
 		return html;
 	}
 };

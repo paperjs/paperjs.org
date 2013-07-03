@@ -117,9 +117,10 @@ article {
 	}
 }
 
-.section {
+section {
 	clear: both;
-	margin-bottom: $line-height;
+	margin: 0 0 $line-height;
+	padding: 0;
 }
 
 .column {
@@ -133,11 +134,6 @@ article {
 
 .row {
 	clear: both;
-}
-
-.article-end {
-	clear: left;
-	min-height: $page-margin;
 }
 
 .donation {
