@@ -18,13 +18,16 @@
 }
 
 #main {
-	width: $content-width;
 	// We need relative position so scrollbars on document work
 	position: relative;
 	margin-left: $menu-width + 2 * $page-margin;
+}
 
-	&.full {
-		width: $content-width + $page-margin + $menu-width;
+#content {
+	width: $content-width;
+
+	&.examples {
+		width: 750px;
 	}
 }
 
@@ -44,7 +47,6 @@ body.fullscreen {
 	#main {
 		// Clear relative position for fullscreen examples
 		position: absolute;
-		width: auto;
 		overflow: hidden;
 
 		#content {

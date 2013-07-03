@@ -2,8 +2,7 @@
 body {
   background: #fff;
   margin: 0;
-  font-size: 13px;
-  width: 996px; }
+  font-size: 13px; }
 
 select,
 input,
@@ -125,11 +124,13 @@ pre {
   bottom: 0; }
 
 #main {
-  width: 540px;
   position: relative;
   margin-left: 224px; }
-  #main.full {
-    width: 732px; }
+
+#content {
+  width: 540px; }
+  #content.examples {
+    width: 750px; }
 
 #right,
 #right h1,
@@ -141,7 +142,6 @@ body.fullscreen {
   overflow: hidden; }
   body.fullscreen #main {
     position: absolute;
-    width: auto;
     overflow: hidden; }
     body.fullscreen #main #content {
       width: auto;
@@ -305,7 +305,7 @@ body.fullscreen {
 
 .thumbnail {
   float: left;
-  width: 258px;
+  width: 234px;
   margin: 0 24px 24px 0; }
 
 .download {

@@ -143,6 +143,15 @@ behaviors.hash = function() {
 	}
 };
 
+behaviors.thumbnails = function() {
+	var thumbnails = $('.thumbnail');
+	var height = 0;
+	thumbnails.each(function() {
+		height = Math.max(height, $(this).height());
+	});
+	$('.thumbnail').height(height);
+};
+
 // TODO: Move this to offline reference
 behaviors.expandableLists = function() {
 	$('.expandable-list').each(function() {
