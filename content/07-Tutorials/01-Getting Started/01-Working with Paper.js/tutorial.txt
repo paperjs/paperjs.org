@@ -1,4 +1,4 @@
-Paper.js offers different approaches for its integration in the browser. The simplest way is to use PaperScript, our extension of JavaScript that facilitates a few things along the way. For more advances users or bigger projects it might be preferable to work directly with JavaScript, as described in the tutorial about <node "/tutorials/getting-started/using-javascript-directly/" />.
+Paper.js offers different approaches for its integration in the browser. The simplest way is to use PaperScript, our extension of JavaScript that facilitates a few things along the way. For more advances users or bigger projects it might be preferable to work directly with JavaScript, as described in the tutorial about <page "/tutorials/getting-started/using-javascript-directly/" />.
 
 <title>What is PaperScript?</title>
 
@@ -63,7 +63,7 @@ These attributes are supported in PaperScript <code>\<script\></code> tags:
 <b><code>canvas="ID"</code></b>: Links the PaperScript code to the canvas with the given ID and produces a <api Project /> and <api View /> object for it on the fly. For those concerned with validation, <code>data-paper-canvas="ID"</code> is supported too.
 
 <note>
-When including more than one PaperScript in a page, each script will run in its own scope and will not see the objects and functions declared in the others. For PaperScript to communicate with other PaperScript or JavaScript code, see the tutorial about <node "/tutorials/getting-started/paperscript-interoperability/" />.
+When including more than one PaperScript in a page, each script will run in its own scope and will not see the objects and functions declared in the others. For PaperScript to communicate with other PaperScript or JavaScript code, see the tutorial about <page "/tutorials/getting-started/paperscript-interoperability/" />.
 </note>
 
 <title>Canvas Configuration</title>

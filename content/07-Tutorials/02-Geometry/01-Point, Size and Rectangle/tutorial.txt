@@ -7,7 +7,7 @@ This means that when we create a <api Point /> object in code, we are in fact on
 var myPoint = new Point(10, 20); 
 console.log(myPoint); // { x: 10, y: 20 }
 </code>
-In order to create a path item that contains this point as a segment, we would need to explicitly use the <api Path() /> constructor to create a path and add the point as a first segment to it. The <node "/tutorials/paths/working-with-path-items/" /> tutorial describes paths and segments in more detail.
+In order to create a path item that contains this point as a segment, we would need to explicitly use the <api Path() /> constructor to create a path and add the point as a first segment to it. The <page "/tutorials/paths/working-with-path-items/" /> tutorial describes paths and segments in more detail.
 <code start=3>
 var myPath = new Path();
 myPath.add(myPoint);

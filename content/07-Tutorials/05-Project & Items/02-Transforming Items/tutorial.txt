@@ -53,7 +53,7 @@ When you select an item in a vector graphics application like Illustrator and se
 In Paper.js we can find out the dimensions of this bounding rectangle by looking at the <api Item#bounds /> property of item.
 
 <note>
-The <api Item#bounds /> property is a <api Rectangle />. Rectangles are described in detail in the <node "/tutorials/geometry/point-size-and-rectangle/" /> tutorial.
+The <api Item#bounds /> property is a <api Rectangle />. Rectangles are described in detail in the <page "/tutorials/geometry/point-size-and-rectangle/" /> tutorial.
 </note>
 
 For example if want to know the width and height of an item, we can query the <api Item#bounds /> property for <api Rectangle#width >width</api> and <api Rectangle#height >height</api>:
@@ -242,7 +242,7 @@ function onFrame(event) {
 Lets write a more advanced script that clones an item multiple times in a loop and rotates the clones by different angles.
 
 <note>
-Cloning (copying) items is described at the end of the <node "/tutorials/project-items/working-with-items/" /> tutorial.
+Cloning (copying) items is described at the end of the <page "/tutorials/project-items/working-with-items/" /> tutorial.
 </note>
 
 <paperscript height=150 width=540 split=true>

@@ -19,7 +19,7 @@ myCircle.fillColor = 'black';
 
 To create a rectangular shaped path you can pass a <api Rectangle /> to the <api Path.Rectangle(rect) /> constructor.
 
-<note>A <api Rectangle /> object is an abstract representation of a rectangle. Please read the <node "/tutorials/geometry/point-size-and-rectangle/" /> tutorial to find out how to work with the <code>Rectangle</code> object.</note>
+<note>A <api Rectangle /> object is an abstract representation of a rectangle. Please read the <page "/tutorials/geometry/point-size-and-rectangle/" /> tutorial to find out how to work with the <code>Rectangle</code> object.</note>
 
 For example, let's make a <code>Rectangle</code> between <code>{x: 0, y: 0}</code> and <code>{x: 50, y: 50}</code> and then use the <api Path.Rectangle(rect) /> constructor to create a path with the shape that it describes:
 

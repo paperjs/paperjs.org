@@ -1,6 +1,6 @@
 <nop/>
 <title short="Implement feature X?">Our project needs feature X, could you implement it?</title>
-If we think it is a useful feature to have, we would be open to adding it to our <node "/about/roadmap/">roadmap</node>. If you need it implemented in the short term, contact us to discuss ways to sponsor the development process.
+If we think it is a useful feature to have, we would be open to adding it to our <page "/about/roadmap/">roadmap</page>. If you need it implemented in the short term, contact us to discuss ways to sponsor the development process.
 
 <title>Why not base it on SVG?</title>
 We have decided to use the Canvas object as the main backend for now because it is faster than SVG and allows us to implement and optimize our own Scene Graph / Document Object Model. We will be offering SVG (and hopefully PDF) importing and exporting in the future.

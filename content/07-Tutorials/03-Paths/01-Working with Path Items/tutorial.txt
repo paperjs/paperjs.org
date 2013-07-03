@@ -68,7 +68,7 @@ for (var i = 0; i < 2; i++) {
 onMouseMove({ point: view.center - vector.rotate(-90) });
 </paperscript>
 
-<hide>The tutorial <node "/tutorials/paths/working-with-path-items"/> explains how to work with segments and curves in more detail.</hide>
+<hide>The tutorial <page "/tutorials/paths/working-with-path-items"/> explains how to work with segments and curves in more detail.</hide>
 
 <title>Adding and Inserting Segments</title>
 
@@ -101,7 +101,7 @@ myPath.insert(1, new Point(30, 40));
 </paperscript>
 
 <note>
-The <api Point /> object represents a point in the two dimensional space of the Paper.js project. It does not refer to an anchor point in a path. When a <api Point /> is passed to a function like <code>add</code> or <code>insert</code> it is converted to a <api Segment /> on the fly. To find out more about the <api Point /> object, please read the <node "/tutorials/geometry/point-size-and-rectangle/" /> tutorial.
+The <api Point /> object represents a point in the two dimensional space of the Paper.js project. It does not refer to an anchor point in a path. When a <api Point /> is passed to a function like <code>add</code> or <code>insert</code> it is converted to a <api Segment /> on the fly. To find out more about the <api Point /> object, please read the <page "/tutorials/geometry/point-size-and-rectangle/" /> tutorial.
 </note>
 
 <title>Smoothing Paths</title>
@@ -155,7 +155,7 @@ myPath.closed = true;
 <title>Removing Segments and Paths</title>
 To remove a segment from a path, we use the <api Path#removeSegment(index) /> function and pass it the index of the segment we want to remove.
 
-<note>If you don't know yet how to create paths of predefined shapes, please read the the <node "/tutorials/paths/creating-predefined-shapes/" /> tutorial.</note>
+<note>If you don't know yet how to create paths of predefined shapes, please read the the <page "/tutorials/paths/creating-predefined-shapes/" /> tutorial.</note>
 
 First, lets create a circle shaped path and inspect its segments:
 <paperscript width=540 height=140 split=true>
