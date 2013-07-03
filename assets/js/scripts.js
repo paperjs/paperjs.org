@@ -206,7 +206,9 @@ behaviors.analytics = function() {
 		} else if (/\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i.test(href)) {
 			link.click(function() {
 				var extension = /[^.]+$/.exec(href);
-				_gaq.push(['_trackEvent', 'Download', 'Click-' + extension, href]);
+				_gaq.push(['_trackEvent', 'Download',
+						'Click - ' + extension.toUpperCase(),
+						href]);
 				if (/^_blank$/i.test(link.attr('target'))) {
 					window.open(baseHref + href);
 					return false;
