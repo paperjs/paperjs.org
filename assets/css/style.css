@@ -37,8 +37,8 @@ td {
   font-family: "SuperstudioBold";
   font-weight: normal;
   font-style: normal;
-  src: url("http://paperjs.org/static/css/assets/superstudio.eot");
-  src: url("http://paperjs.org/static/css/assets/superstudio.eot?#iefix") format("embedded-opentype"), url("http://paperjs.org/static/css/assets/superstudio.woff") format("woff"), url("http://paperjs.org/static/css/assets/superstudio.ttf") format("truetype"), url("http://paperjs.org/static/css/assets/superstudio.svg#SuperstudioBold") format("svg"); }
+  src: url("http://assets.paperjs.org/superstudio/superstudio.eot");
+  src: url("http://assets.paperjs.org/superstudio/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/superstudio/superstudio.woff") format("woff"), url("http://assets.paperjs.org/superstudio/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/superstudio/superstudio.svg#SuperstudioBold") format("svg"); }
 
 h1,
 h2 {
