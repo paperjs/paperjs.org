@@ -3,7 +3,8 @@ body {
   background: #fff;
   margin: 0;
   font-size: 13px;
-  line-height: 20px; }
+  line-height: 20px;
+  width: 996px; }
 
 select,
 input,

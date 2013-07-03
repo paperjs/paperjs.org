@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	font-size: 13px;
 	line-height: $line-height;
+	width: $content-width + 3 * $page-margin + $menu-width + $right-width;
 }
 
 select,
