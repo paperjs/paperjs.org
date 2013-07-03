@@ -1,6 +1,5 @@
 .CodeMirror {
 	overflow: auto;
-	height: 100%;
 
 	&,
 	textarea,
@@ -15,6 +14,14 @@
 		padding: 0;
 		background: transparent;
 	}
+
+	body.fullscreen & {
+		height: 100%;
+	}
+}
+
+.CodeMirror-scroll {
+	height: 100%;
 }
 
 .CodeMirror-gutter {

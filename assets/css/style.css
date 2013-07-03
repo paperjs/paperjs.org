@@ -270,31 +270,30 @@ section {
 /* Resources */
 .resource-block {
   display: table;
-  margin-bottom: 20px; }
-
-.resource-block + .resource-block {
-  border-top: 1px dotted #000;
-  padding-top: 20px; }
-
-.resource-text,
-.resource-block .resource {
-  float: none;
-  display: table-cell;
-  vertical-align: middle;
-  margin: 0; }
-
-.resource-text {
-  vertical-align: top; }
-
-.resource-block .resource img {
-  margin-right: 20px; }
-
-.resource-text .note {
-  margin: 0 10px 0 0; }
-
-.resource-text .CodeMirror {
-  height: auto;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  *zoom: 1; }
+  .resource-block:before, .resource-block:after {
+    content: " ";
+    display: table; }
+  .resource-block:after {
+    clear: both; }
+  .resource-block .resource-text,
+  .resource-block .resource {
+    float: none;
+    display: table-cell;
+    vertical-align: middle; }
+  .resource-block .resource {
+    padding-right: 20px; }
+  .resource-block .resource-text {
+    vertical-align: top; }
+    .resource-block .resource-text .note {
+      margin: 0 10px 0 0; }
+    .resource-block .resource-text .CodeMirror {
+      height: auto;
+      margin-bottom: 20px; }
+  .resource-block + .resource-block {
+    border-top: 1px dotted #000;
+    padding-top: 20px; }
 
 /* Thumbnails */
 .thumbnails {
@@ -405,8 +404,7 @@ section {
   margin-top: 0; }
 
 .CodeMirror {
-  overflow: auto;
-  height: 100%; }
+  overflow: auto; }
   .CodeMirror,
   .CodeMirror textarea,
   .CodeMirror pre {
@@ -417,6 +415,11 @@ section {
     margin: 0;
     padding: 0;
     background: transparent; }
+  body.fullscreen .CodeMirror {
+    height: 100%; }
+
+.CodeMirror-scroll {
+  height: 100%; }
 
 .CodeMirror-gutter {
   position: absolute;

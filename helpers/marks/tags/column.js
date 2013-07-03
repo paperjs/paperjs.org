@@ -7,7 +7,7 @@ module.exports = {
 		} else {
 			this.index = 0;
 		}
-		return (this.index == 0 ? '<div class="clear">' : '')
+		return (this.index == 0 ? '<div class="row">' : '')
 		 		+ '<div class="column">' + content + '</div>'
 				+ (this.index == 1 ? '</div>' : '');
 	}

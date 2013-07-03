@@ -688,4 +688,3 @@ console.log(point3); // { x: 30, y: 60 }
 </code>
 
 Read more about this in the <url "http://www.scriptographer.org/tutorials/geometry/mathematical-operations/">Mathematical Operations</url> tutorial.
-</image>
