@@ -1,4 +1,4 @@
-var formatParagraphs = require('paragraphs');
+var paragraphs = require('paragraphs');
 
 var defaultTitles = {
 	note: 'Please note:',
@@ -13,7 +13,7 @@ module.exports = {
 		render: function(content, param, encode) {
 			var title = this.attributes.title || defaultTitles[this.name];
 			return '<div class="note"><b>' + encode(title) + '</b>'
-					+ formatParagraphs(content)
+					+ paragraphs(content)
 					+ '<div class="text-end"></div></div>';
 		}
 	}
