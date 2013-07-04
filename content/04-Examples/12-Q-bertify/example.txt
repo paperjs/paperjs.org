@@ -1,4 +1,4 @@
-<paperscript resize=true explain=true background="black">
+<paperscript resize=true explain=true>
 // Please note: dragging and dropping images only works for
 // certain browsers when serving this script online:
 
@@ -6,7 +6,8 @@ var values = {
 	amount: 30
 };
 
-var raster, group;
+var raster,
+	group;
 var piece = createPiece();
 var count = 0;
 
@@ -56,26 +57,31 @@ function handleImage(image) {
 	if (group)
 		group.remove();
 
-	raster = new Raster(image);
-	raster.remove();
+	raster = null;
+	new Raster(image).on('load', function() {
+		raster = this;
+		this.remove();
 
-	// Transform the raster, so it fills the view:
-	raster.fitBounds(view.bounds, true);
-	group = new Group();
-	for (var y = 0; y < values.amount; y++) {
-		for (var x = 0; x < values.amount; x++) {
-			var copy = piece.clone();
-			copy.position += size * [x + (y % 2 ? 0.5 : 0), y * 0.75];
-			group.addChild(copy);
+		// Transform the raster, so it fills the view:
+		raster.fitBounds(view.bounds, true);
+		group = new Group();
+		for (var y = 0; y < values.amount; y++) {
+			for (var x = 0; x < values.amount; x++) {
+				var copy = piece.clone();
+				copy.position += size * [x + (y % 2 ? 0.5 : 0), y * 0.75];
+				group.addChild(copy);
+			}
 		}
-	}
 
-	// Transform the group so it covers the view:
-	group.fitBounds(view.bounds, true);
-	group.scale(1.1);
+		// Transform the group so it covers the view:
+		group.fitBounds(view.bounds, true);
+		group.scale(1.1);
+	})
 }
 
 function onFrame(event) {
+	if (!raster)
+		return;
 	// Loop through the uncolored hexagons in the group and fill them
 	// with the average color:
 	var length = Math.min(count + values.amount, group.children.length);

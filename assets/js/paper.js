@@ -3895,20 +3895,22 @@ var Raster = Item.extend({
 	setSource: function(src) {
 		var that = this,
 			image = document.getElementById(src) || new Image();
+
 		function loaded() {
 			that.fire('load');
 			if (that._project.view)
 				that._project.view.draw(true);
 		}
-		DomEvent.add(image, {
-			load: function() {
-				that.setImage(image);
-				loaded();
-			}
-		});
+
 		if (image.width && image.height) {
 			setTimeout(loaded, 0);
 		} else if (!image.src) {
+			DomEvent.add(image, {
+				load: function() {
+					that.setImage(image);
+					loaded();
+				}
+			});
 			image.src = src;
 		}
 		this.setImage(image);

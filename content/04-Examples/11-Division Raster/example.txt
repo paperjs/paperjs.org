@@ -6,10 +6,10 @@
 var raster = new Raster('mona.jpg');
 var loaded = false;
 
-raster.onLoad = function() {
+raster.on('load', function() {
 	loaded = true;
 	onResize();
-}
+});
 
 // Make the raster invisible:
 raster.visible = false;
