@@ -1,1 +1,3 @@
-module.exports = require('paragraphs');
+module.exports = {
+	paragraphs: require('paragraphs')
+};
