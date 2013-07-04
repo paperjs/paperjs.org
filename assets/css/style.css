@@ -404,23 +404,22 @@ section {
 .reference ul {
   margin-top: 0; }
 
-.CodeMirror {
-  overflow: auto; }
-  .CodeMirror,
-  .CodeMirror textarea,
-  .CodeMirror pre {
-    font-family: Menlo, Consolas, "Vera Mono", monospace;
-    font-size: 12px; }
-  .CodeMirror pre {
-    line-height: 16px;
-    margin: 0;
-    padding: 0;
-    background: transparent; }
-  body.fullscreen .CodeMirror {
-    height: 100%; }
+.CodeMirror,
+.CodeMirror textarea,
+.CodeMirror pre {
+  font-family: Menlo, Consolas, "Vera Mono", monospace;
+  font-size: 12px; }
+.CodeMirror pre {
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  background: transparent; }
+body.fullscreen .CodeMirror {
+  height: 100%; }
 
 .CodeMirror-scroll {
-  height: 100%; }
+  min-height: 100%;
+  overflow: auto; }
 
 .CodeMirror-gutter {
   position: absolute;
