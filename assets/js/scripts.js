@@ -226,6 +226,8 @@ behaviors.paperscript = function() {
 	$('.paperscript:visible').each(function() {
 		createPaperScript($(this));
 	});
+	// Don't wait until onload
+	paper.PaperScript.load();
 };
 
 function createCodeMirror(place, options, source) {
