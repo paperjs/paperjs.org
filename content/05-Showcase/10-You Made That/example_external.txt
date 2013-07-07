@@ -1,3 +1,3 @@
 title: NY Times: You Made That
-link: http://http://www.nytimes.com/interactive/magazine/you-made-it.html
+link: http://www.nytimes.com/interactive/magazine/you-made-it.html
 description: The New York Times turned to Paper.js for this fun abstract art tool.
