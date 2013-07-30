@@ -27,7 +27,7 @@ module.exports = {
 					attrs.width = 540;
 				if (!attrs.height)
 					attrs.height = 540;
-				if (border) {
+				if (border || split) {
 					// Oh CSS why are you such a pain.
 					attrs.width -= 2;
 					attrs.height -= 2;
