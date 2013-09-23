@@ -6,7 +6,7 @@ Scopes were introduced as a way to have separate PaperScript contexts on a page 
 
 Each scope or context holds a row of objects that describe its state, such as a list of open <api PaperScope#projects>projects</api>, a reference to the active <api PaperScope#project>project</api>, a list of <api PaperScope#views>views</api> that each represent a canvas element, the currently active <api PaperScope#view >view</api>, a list of mouse <api PaperScope#tools>tools</api>, the currently active <api PaperScope#tool>tool</api>, etc.
 
-To explain the relation between scopes, projects, views and tools: Each scope can hold one ore multiple projects, which are displayed through one or multiple views (each representing a Paper.js canvas). Views are not associated with a specific project, but in fact render all visible projects that have items within the visible area. Tools can work on any project within any view, as long as they belong to the same scope.
+To explain the relation between scopes, projects, views and tools: Each scope can hold one or multiple projects, which are displayed through one or multiple views (each representing a Paper.js canvas). Views are not associated with a specific project, but in fact render all visible projects that have items within the visible area. Tools can work on any project within any view, as long as they belong to the same scope.
 
 <title>Setting Up a Scope</title>
 
