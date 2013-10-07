@@ -41,7 +41,7 @@ The easiest way is to use the existing <api global#paper>paper</api> object, and
 		// Draw the view now:
 		paper.view.draw();
 	}
-</paperscript>
+</script>
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
@@ -121,7 +121,7 @@ PaperScript recognises a couple of special event handlers when they are declared
 			path.rotate(3);
 		}
 	}
-</paperscript>
+</script>
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
@@ -163,7 +163,7 @@ In JavaScript we need to create the tool ourselves, and we need to manually inst
 			path.add(event.point);
 		}
 	}
-</paperscript>
+</script>
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
@@ -221,7 +221,7 @@ The next example illustrates how easy it is to create multiple drawing tools and
 			path.arcTo(event.point);
 		}
 	}
-</paperscript>
+</script>
 </head>
 <body>
 	<a href="javascript:tool1.activate();">Lines</a>
