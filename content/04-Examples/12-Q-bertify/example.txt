@@ -58,6 +58,8 @@ function handleImage(image) {
 		group.remove();
 
 	raster = null;
+	// As the web is asynchronous, we need to wait for the raster to
+	// load before we can perform any operation on its pixels.
 	new Raster(image).on('load', function() {
 		raster = this;
 		this.remove();
