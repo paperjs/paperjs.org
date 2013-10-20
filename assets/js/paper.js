@@ -4177,9 +4177,12 @@ var Raster = Item.extend({
 			image = document.getElementById(src) || new Image();
 
 		function loaded() {
+			var view = that._project.view;
+			if (view)
+				paper = view._scope;
 			that.fire('load');
-			if (that._project.view)
-				that._project.view.draw(true);
+			if (view)
+				view.draw(true);
 		}
 
 		if (image.naturalWidth && image.naturalHeight) {
