@@ -1,0 +1,39 @@
+form,
+img,
+ul,
+ol,
+table,
+td,
+article,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  border: 0;
+}
+
+img {
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none outside none;
+}
+
+table {
+  border-spacing: 0;
+}
+
+td {
+  vertical-align: top;
+}
+
+html {
+  // Turn off weird font-resizing on iOS
+  -webkit-text-size-adjust: none;
+}

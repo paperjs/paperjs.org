@@ -1,4 +1,35 @@
-@charset "UTF-8";
+form,
+img,
+ul,
+ol,
+table,
+td,
+article,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0; }
+
+a {
+  outline: none;
+  border: 0; }
+
+img {
+  border: 0; }
+
+ul,
+ol {
+  list-style: none outside none; }
+
+table {
+  border-spacing: 0; }
+
+td {
+  vertical-align: top; }
+
+html {
+  -webkit-text-size-adjust: none; }
+
 body {
   background: #fff;
   margin: 0;
@@ -15,23 +46,6 @@ textarea {
 
 a {
   text-decoration: none; }
-
-a:focus {
-  outline: none; }
-
-form,
-img {
-  margin: 0; }
-
-/* Tables */
-table {
-  border-spacing: 0;
-  margin: 0;
-  border: 0; }
-
-td {
-  padding: 0;
-  vertical-align: top; }
 
 /* Fonts */
 @font-face {

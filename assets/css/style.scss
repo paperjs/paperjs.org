@@ -1,7 +1,9 @@
 @import 'bourbon/bourbon';
+@import 'mixins/breakpoint';
 @import 'mixins/border-radius';
 
 @import 'style/settings';
+@import 'style/reset';
 @import 'style/base';
 @import 'style/fonts';
 @import 'style/layout';

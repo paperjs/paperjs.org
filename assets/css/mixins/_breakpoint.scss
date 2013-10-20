@@ -1,0 +1,38 @@
+// http://ahrengot.com/web-development/sass-breakpoint-mixin/
+
+@mixin breakpoint($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+$mobile: 0px;
+$mobile-landscape: 480px;
+$tablet-small: 640px;
+$tablet: 768px;
+$desktop: 960px;
+$desktop-wide: 1200px;
+
+@mixin mobile {
+  @include breakpoint($mobile) { @content; }
+}
+
+@mixin mobile-landscape {
+  @include breakpoint($mobile-landscape) { @content; }
+}
+
+@mixin tablet-small {
+  @include breakpoint($tablet-small) { @content; }
+}
+
+@mixin tablet {
+  @include breakpoint($tablet) { @content; }
+}
+
+@mixin desktop {
+  @include breakpoint($desktop) { @content; }
+}
+
+@mixin desktop-wide {
+  @include breakpoint($desktop-wide) { @content; }
+}
