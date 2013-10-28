@@ -104,7 +104,7 @@ behaviors.sections = function() {
 	var lastAnchor = $('a[name]', lastSection);
 
 	function resize() {
-		lastSection.height('auto')
+		lastSection.height('auto');
 		var bottom = $(document).height() - lastAnchor.offset().top - $(window).height();
 		if (bottom < 0)
 			lastSection.height(lastSection.height() - bottom);
