@@ -327,8 +327,7 @@ var sperm = new function() {
 };
 </paperscript>
 
-
-<title>SVG Importing & Exporting</title>
+<title>SVG Import and Export</title>
 Paper.js offers very convenient methods to import and export vector graphics as SVG. Even more advanced features such as gradients and clipping are supported.
 
 The original SVG on the left, imported into a Paper.js canvas on the right:
@@ -350,7 +349,7 @@ project.importSVG(document.getElementById('svg-import'));
 <script type="text/javascript" src="/assets/js/rhill-voronoi-core.js"></script>
 <script type="text/javascript" src="/assets/js/base64.js"></script>
 </html>
-Have fun with this interactive Voronoi example, click to add new cells, and once you like the result, press the <em>Export</em> button to download the result as an SVG file:
+Have fun with this interactive Voronoi example, click to add new cells, and once you like the result, press the <em>Export</em> button to download the result as an SVG file that you can open directly in Adobe Illustrator and other vector editing applications:
 <paperscript width=540 height=405 source=false>
 var voronoi =  new Voronoi();
 var sites = generateBeeHivePoints(view.size / 115, true);
@@ -491,6 +490,58 @@ $('#export-button').click(function() {
 
 </paperscript>
 <html><input type="button" value="Export As SVG" id="export-button"></html>
+
+<title>Raster Images and Color Averaging</title>
+
+Place images in your project, work with the colors of their pixels or look at average colors of the pixels that fall within paths placed on top of them.
+
+
+<paperscript height=400>
+// Create a raster item using the image tag with id='mona'
+var raster = new Raster('mona');
+
+// Hide the raster:
+raster.visible = false;
+
+// The size of our grid cells:
+var gridSize = 12;
+
+// Space the cells by 120%:
+var spacing = 1.2;
+
+// As the web is asynchronous, we need to wait for the raster to load
+// before we can perform any operation on its pixels.
+raster.on('load', function() {
+	// Since the example image we're using is much too large,
+	// and therefore has way too many pixels, lets downsize it to
+	// 40 pixels wide and 30 pixels high:
+	raster.size = new Size(40, 30);
+
+	for (var y = 0; y < raster.height; y++) {
+		for(var x = 0; x < raster.width; x++) {
+			// Get the color of the pixel:
+			var color = raster.getPixel(x, y);
+
+			// Create a circle shaped path:
+			var path = new Path.Circle({
+				center: new Point(x, y) * gridSize,
+				radius: gridSize / 2 / spacing,
+				fillColor: 'black'
+			});
+
+			// Scale the path by the amount of gray in the pixel color:
+			path.scale(1 - color.gray);
+		}
+	}
+
+	// Move the active layer to the center of the view, so all 
+	// the created paths in it appear centered.
+	project.activeLayer.position = view.center;
+});
+</paperscript>
+Learn more about working with images in the <page "/tutorials/images/" /> tutorial.
+<image "mona.jpg" id="mona" class="hidden" />
+
 <title>Symbols</title>
 Symbols allow you to place multiple instances of an item in your project. This can save memory, since all instances of a symbol simply refer to the original item and it can speed up moving around complex objects, since internal properties such as segment lists and gradient positions don't need to be updated with every transformation.
 
@@ -570,56 +621,6 @@ function keepInView(item) {
 }
 </paperscript>
 
-<title>Raster Images and Color Averaging</title>
-
-Place images in your project, work with the colors of their pixels or look at average colors of the pixels that fall within paths placed on top of them.
-
-
-<paperscript height=400>
-// Create a raster item using the image tag with id='mona'
-var raster = new Raster('mona');
-
-// Hide the raster:
-raster.visible = false;
-
-// The size of our grid cells:
-var gridSize = 12;
-
-// Space the cells by 120%:
-var spacing = 1.2;
-
-// As the web is asynchronous, we need to wait for the raster to load
-// before we can perform any operation on its pixels.
-raster.on('load', function() {
-	// Since the example image we're using is much too large,
-	// and therefore has way too many pixels, lets downsize it to
-	// 40 pixels wide and 30 pixels high:
-	raster.size = new Size(40, 30);
-
-	for (var y = 0; y < raster.height; y++) {
-		for(var x = 0; x < raster.width; x++) {
-			// Get the color of the pixel:
-			var color = raster.getPixel(x, y);
-
-			// Create a circle shaped path:
-			var path = new Path.Circle({
-				center: new Point(x, y) * gridSize,
-				radius: gridSize / 2 / spacing,
-				fillColor: 'black'
-			});
-
-			// Scale the path by the amount of gray in the pixel color:
-			path.scale(1 - color.gray);
-		}
-	}
-
-	// Move the active layer to the center of the view, so all 
-	// the created paths in it appear centered.
-	project.activeLayer.position = view.center;
-});
-</paperscript>
-Learn more about working with images in the <page "/tutorials/images/" /> tutorial.
-<image "mona.jpg" id="mona" class="hidden" />
 <title>Selection Outlines</title>
 When you select items or path segment points & handles in your code, Paper.js draws the visual outlines of them on top of your project. This is very useful for debugging, as it allows you to see the construction of paths, position of path curves, individual segment points and bounding boxes of symbol and raster items:
 
