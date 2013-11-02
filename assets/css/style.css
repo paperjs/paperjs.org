@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background: #fff;
   margin: 0;
@@ -267,31 +268,33 @@ section {
   .donation select {
     margin-right: 0.35em; }
 
-/* Resources */
-.resource-block {
+/* Blocks */
+.block {
   display: table;
   margin-bottom: 20px;
   *zoom: 1; }
-  .resource-block:before, .resource-block:after {
+  .block:before, .block:after {
     content: " ";
     display: table; }
-  .resource-block:after {
+  .block:after {
     clear: both; }
-  .resource-block .resource-text,
-  .resource-block .resource {
+  .block .note {
+    margin: 0 10px 0 0; }
+  .block .CodeMirror {
+    height: auto;
+    margin-bottom: 20px; }
+  .block .paperscript:last-child {
+    margin-bottom: 0; }
+  .block svg {
+    display: block; }
+  .block .left,
+  .block .right {
     float: none;
     display: table-cell;
     vertical-align: middle; }
-  .resource-block .resource {
+  .block .left {
     padding-right: 20px; }
-  .resource-block .resource-text {
-    vertical-align: top; }
-    .resource-block .resource-text .note {
-      margin: 0 10px 0 0; }
-    .resource-block .resource-text .CodeMirror {
-      height: auto;
-      margin-bottom: 20px; }
-  .resource-block + .resource-block {
+  .block + .block {
     border-top: 1px dotted #000;
     padding-top: 20px; }
 

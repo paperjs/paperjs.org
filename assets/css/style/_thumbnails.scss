@@ -1,0 +1,26 @@
+/* Thumbnails */
+
+.thumbnails {
+	margin-right: -23px;
+}
+
+.thumbnail {
+	float: left;
+	width: 242px;
+	margin: 0 23px 23px 0;
+}
+
+.download {
+	margin-bottom: 20px;
+
+	.image {
+		float: left;
+		margin-right: 8px;
+	}
+}
+
+.thumbnail .resource a,
+.download .image a {
+	border: 0 !important;
+	background: none !important;
+}
