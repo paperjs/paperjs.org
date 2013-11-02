@@ -9,7 +9,7 @@
  *
  * All rights reserved.
  *
- * Date: Sat Nov 2 13:25:03 2013 +0100
+ * Date: Sat Nov 2 20:10:35 2013 +0100
  *
  ***
  *
@@ -9433,18 +9433,10 @@ var DomEvent = {
 };
 
 DomEvent.requestAnimationFrame = new function() {
-	var part = 'equestAnimationFrame',
-		request = window['r' + part] || window['webkitR' + part]
-			|| window['mozR' + part] || window['oR' + part]
-			|| window['msR' + part];
-	if (request) {
-		request(function(time) {
-			if (time == null)
-				request = null;
-		});
-	}
-
-	var callbacks = [],
+	var nativeRequest = DomElement.getPrefixValue(window,
+			'requestAnimationFrame'),
+		requested = false,
+		callbacks = [],
 		focused = true,
 		timer;
 
@@ -9457,24 +9449,36 @@ DomEvent.requestAnimationFrame = new function() {
 		}
 	});
 
-	return function(callback, element) {
-		if (request)
-			return request(callback, element);
-		callbacks.push([callback, element]);
-		if (timer)
-			return;
-		timer = setInterval(function() {
-			for (var i = callbacks.length - 1; i >= 0; i--) {
-				var entry = callbacks[i],
-					func = entry[0],
-					el = entry[1];
-				if (!el || (PaperScope.getAttribute(el, 'keepalive') == 'true'
-						|| focused) && DomElement.isInView(el)) {
-					callbacks.splice(i, 1);
-					func(Date.now());
-				}
+	function handleCallbacks() {
+		for (var i = callbacks.length - 1; i >= 0; i--) {
+			var entry = callbacks[i],
+				func = entry[0],
+				el = entry[1];
+			if (!el || (PaperScope.getAttribute(el, 'keepalive') == 'true'
+					|| focused) && DomElement.isInView(el)) {
+				callbacks.splice(i, 1);
+				func();
 			}
-		}, 1000 / 60);
+		}
+		if (nativeRequest) {
+			if (callbacks.length) {
+				nativeRequest(handleCallbacks);
+			} else {
+				requested = false;
+			}
+		}
+	}
+
+	return function(callback, element) {
+		callbacks.push([callback, element]);
+		if (nativeRequest) {
+			if (!requested) {
+				nativeRequest(handleCallbacks);
+				requested = true;
+			}
+		} else if (!timer) {
+			timer = setInterval(handleCallbacks, 1000 / 60);
+		}
 	};
 };
 
