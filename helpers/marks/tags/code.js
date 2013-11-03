@@ -1,7 +1,6 @@
 module.exports = {
 	code: {
 		nesting: false,
-		encode: false,
 
 		render: function(content, param, encode, before, after) {
 			var code = content || this.values[0];
