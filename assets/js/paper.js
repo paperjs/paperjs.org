@@ -9855,18 +9855,6 @@ var CanvasView = View.extend({
 		}
 		var ctx = this._context = canvas.getContext('2d');
 		this._eventCounters = {};
-		var ratio = (window.devicePixelRatio || 1) / (DomElement.getPrefixValue(
-				ctx, 'backingStorePixelRatio') || 1);
-		if (ratio > 1) {
-			var width = canvas.clientWidth,
-				height = canvas.clientHeight,
-				style = canvas.style;
-			canvas.width = width * ratio;
-			canvas.height = height * ratio;
-			style.width = width + 'px';
-			style.height = height + 'px';
-			ctx.scale(ratio, ratio);
-		}
 		View.call(this, canvas);
 	},
 
