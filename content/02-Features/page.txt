@@ -349,7 +349,7 @@ project.importSVG(document.getElementById('svg-import'));
 <script type="text/javascript" src="/assets/js/rhill-voronoi-core.js"></script>
 <script type="text/javascript" src="/assets/js/base64.js"></script>
 </html>
-Have fun with this interactive Voronoi example, click to add new cells, and once you like the result, press the <em>Export</em> button to download the result as an SVG file that you can open directly in Adobe Illustrator and other vector editing applications:
+Have fun with this interactive Voronoi example, click to add new cells, and once you like the result, press the <em>Download as SVG</em> button to download the result as an SVG file that you can open directly in Adobe Illustrator and other vector editing applications:
 <paperscript width=540 height=405 source=false>
 var voronoi =  new Voronoi();
 var sites = generateBeeHivePoints(view.size / 115, true);
@@ -489,7 +489,7 @@ $('#export-button').click(function() {
 });
 
 </paperscript>
-<html><input type="button" value="Export As SVG" id="export-button"></html>
+<html><input type="button" value="Download as SVG" id="export-button"></html>
 
 <title>Raster Images and Color Averaging</title>
 
