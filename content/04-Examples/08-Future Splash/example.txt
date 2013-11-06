@@ -1,4 +1,4 @@
-<paperscript resize=true explain=true>
+<paperscript resize=true explain=true hidpi=off>
 // Code ported to Paper.js from http://the389.com/9/1/
 // with permission.
 
