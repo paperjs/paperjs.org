@@ -9864,7 +9864,8 @@ var CanvasView = View.extend({
 		this._context = canvas.getContext('2d');
 		this._eventCounters = {};
 		this._ratio = 1;
-		if (PaperScope.getAttribute(canvas, 'hidpi') !== 'off') {
+		if (!('ontouchstart' in window)
+				&& PaperScope.getAttribute(canvas, 'hidpi') !== 'off') {
 			var deviceRatio = window.devicePixelRatio || 1,
 				backingStoreRatio = DomElement.getPrefixValue(this._context,
 						'backingStorePixelRatio') || 1;
