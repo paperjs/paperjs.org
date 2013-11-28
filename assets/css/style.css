@@ -416,7 +416,7 @@ section {
   margin: 0;
   padding: 0;
   background: transparent; }
-body.fullscreen .CodeMirror {
+.paperscript .CodeMirror {
   height: 100%; }
 
 .CodeMirror-scroll {
