@@ -1,5 +1,7 @@
 // Install some useful jQuery extensions that we use a lot
 
+$.support.touch = 'ontouchstart' in window;
+
 $.extend($.fn, {
 	orNull: function() {
 		return this.length > 0 ? this : null;
@@ -35,6 +37,13 @@ function smoothScrollTo(el, callback) {
 }
 
 var behaviors = {};
+
+behaviors.hiDPI = function() {
+	// Turn off hiDPI for all touch devices for now, until the site is built
+	// true to scale.
+	if ($.support.touch)
+		$('canvas').attr('hidpi', 'off');
+};
 
 behaviors.sections = function() {
 	var toc = $('.toc');
