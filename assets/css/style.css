@@ -21,7 +21,8 @@ a:focus {
 
 form,
 img {
-  margin: 0; }
+  margin: 0;
+  border: 0; }
 
 /* Tables */
 table {
