@@ -1,4 +1,4 @@
-<paperscript resize=true background="black" explain=true>
+<paperscript resize=true background="black" explain=true hidpi=off>
 var point = view.center;
 
 var colors = [];
