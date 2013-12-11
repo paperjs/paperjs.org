@@ -9,7 +9,7 @@
  *
  * All rights reserved.
  *
- * Date: Wed Dec 11 00:10:03 2013 +0100
+ * Date: Wed Dec 11 17:10:32 2013 +0100
  *
  ***
  *
@@ -307,7 +307,8 @@ Base.inject({
 				if (!checkKeys(obj1, obj2) || !checkKeys(obj2, obj1))
 					return false;
 				for (var i in obj1) {
-					if (obj1.hasOwnProperty(i) && !Base.equals(obj1[i], obj2[i]))
+					if (obj1.hasOwnProperty(i)
+							&& !Base.equals(obj1[i], obj2[i]))
 						return false;
 				}
 				return true;
@@ -2622,7 +2623,7 @@ var Item = Base.extend(Callback, {
 	_serializeFields: {
 		name: null,
 		matrix: new Matrix(),
-		registration: null,
+		anchor: null,
 		locked: false,
 		visible: true,
 		blendMode: 'normal',
@@ -2936,9 +2937,9 @@ var Item = Base.extend(Callback, {
 		var position = this._position,
 			ctor = arguments[0] ? Point : LinkedPoint;
 		if (!position) {
-			var registration = this._registration;
-			position = this._position = registration
-					? this._matrix._transformPoint(registration)
+			var anchor = this._anchor;
+			position = this._position = anchor
+					? this._matrix._transformPoint(anchor)
 					: this.getBounds().getCenter(true);
 		}
 		return new ctor(position.x, position.y, this, 'setPosition');
@@ -2948,21 +2949,24 @@ var Item = Base.extend(Callback, {
 		this.translate(Point.read(arguments).subtract(this.getPosition(true)));
 	},
 
-	_registration: null,
-
-	getRegistration: function() {
-		var reg = this._registration;
-		if (reg) {
+	getAnchor: function() {
+		var anchor = this._anchor;
+		if (anchor) {
 			var ctor = arguments[0] ? Point : LinkedPoint;
-			reg = new ctor(reg.x, reg.y, this, 'setRegistration');
+			anchor = new ctor(anchor.x, anchor.y, this, 'setAnchor');
 		}
-		return reg;
+		return anchor;
 	},
 
-	setRegistration: function() {
-		this._registration = Point.read(arguments);
+	setAnchor: function() {
+		this._anchor = Point.read(arguments);
 		delete this._position;
-	}
+	},
+
+	_anchor: null,
+
+	getRegistration: '#getAnchor',
+	setRegistration: '#setAnchor'
 }, Base.each(['getBounds', 'getStrokeBounds', 'getHandleBounds',
 		'getRoughBounds', 'getInternalBounds', 'getInternalRoughBounds'],
 	function(key) {
@@ -3312,10 +3316,11 @@ var Item = Base.extend(Callback, {
 
 		var matrix = this._matrix,
 			parentTotalMatrix = options._totalMatrix,
+			view = this._project.view,
 			totalMatrix = options._totalMatrix = parentTotalMatrix
 					? parentTotalMatrix.clone().concatenate(matrix)
-					: this._project.view._matrix.clone().concatenate(
-						this.getGlobalMatrix()),
+					: this.getGlobalMatrix().clone().preConcatenate(
+						view ? view._matrix : new Matrix()),
 			tolerancePadding = options._tolerancePadding = new Size(
 						Path._getPenPadding(1, totalMatrix.inverted())
 					).multiply(
@@ -3681,9 +3686,10 @@ var Item = Base.extend(Callback, {
 		return this.transform(mx.translate.apply(mx, arguments));
 	},
 
-	rotate: function(angle, center) {
+	rotate: function(angle ) {
 		return this.transform(new Matrix().rotate(angle,
-				center || this.getPosition(true)));
+				Point.read(arguments, 1, 0, { readNull: true })
+					|| this.getPosition(true)));
 	}
 }, Base.each(['scale', 'shear', 'skew'], function(name) {
 	this[name] = function() {
@@ -3733,12 +3739,12 @@ var Item = Base.extend(Callback, {
 	applyMatrix: function(_dontNotify) {
 		var matrix = this._matrix;
 		if (this._applyMatrix(matrix, true)) {
-			var registration = this._registration,
+			var anchor = this._anchor,
 				style = this._style,
 				fillColor = style.getFillColor(true),
 				strokeColor = style.getStrokeColor(true);
-			if (registration)
-				registration.transform(matrix);
+			if (anchor)
+				anchor.transform(matrix);
 			if (fillColor)
 				fillColor.transform(matrix);
 			if (strokeColor)
@@ -7028,7 +7034,10 @@ var Path = PathItem.extend({
 		return !loc && hasFill && this._contains(point) || loc && !hasStroke
 				? new HitResult('fill', this)
 				: loc
-					? new HitResult('stroke', this, { location: loc })
+					? new HitResult('stroke', this, {
+						location: loc,
+						point: loc.getPoint()
+					})
 					: null;
 	}
 
@@ -10221,7 +10230,7 @@ var CanvasView = View.extend({
 				dblClick = lastItem == item && (Date.now() - clickTime < 300);
 				downItem = lastItem = item;
 				downPoint = lastPoint = overPoint = point;
-				dragItem = downItem;
+				dragItem = !stopped && item;
 				while (dragItem && !dragItem.responds('mousedrag'))
 					dragItem = dragItem._parent;
 				break;
