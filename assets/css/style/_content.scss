@@ -61,11 +61,10 @@ article {
 	ul > li {
 		text-indent: -1em;
 		margin-left: 1em;
-	}
-
-	ul > li:before {
-		content: "-";
-		padding-right: $list-indent;
+		&:before {
+			content: "-";
+			padding-right: $list-indent;
+		}
 	}
 
 	ol {
@@ -75,14 +74,13 @@ article {
 	ol > li {
 		text-indent: -1.5em;
 		margin-left: 1.5em;
-	}
-
-	ol > li:before {
-		text-indent: 0;
-		display: inline-block;
-		content: counter(item, upper-latin) ") ";
-		counter-increment: item;
-		width: 1.5em;
+		&:before {
+			text-indent: 0;
+			display: inline-block;
+			content: counter(item, upper-latin) ") ";
+			counter-increment: item;
+			width: 1.5em;
+		}
 	}
 
 	$quote-indent: 0.4em;

@@ -2,15 +2,15 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/style\/_base.scss" : {
+    "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style\/_base.scss",
+      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style\/_base.css",
+      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -26,15 +26,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss" : {
+    "\/style\/_base.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss",
+      "inputAbbreviatedPath" : "\/style\/_base.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.css",
+      "outputAbbreviatedPath" : "\/style\/_base.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -122,15 +122,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/bourbon\/addons\/_position.scss" : {
+    "\/style\/_paperscript.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/addons\/_position.scss",
+      "inputAbbreviatedPath" : "\/style\/_paperscript.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/addons\/_position.css",
+      "outputAbbreviatedPath" : "\/style\/_paperscript.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -158,27 +158,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/bourbon\/helpers\/_render-gradients.scss" : {
+    "\/bourbon\/addons\/_position.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_render-gradients.scss",
+      "inputAbbreviatedPath" : "\/bourbon\/addons\/_position.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_render-gradients.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/style\/_paperscript.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style\/_paperscript.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style\/_paperscript.css",
+      "outputAbbreviatedPath" : "\/bourbon\/addons\/_position.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -191,6 +179,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_columns.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/bourbon\/helpers\/_render-gradients.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_render-gradients.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_render-gradients.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -314,18 +314,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/style\/_layout.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style\/_layout.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style\/_layout.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/bourbon\/css3\/_perspective.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -335,6 +323,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_perspective.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/bourbon\/functions\/_tint-shade.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bourbon\/functions\/_tint-shade.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/functions\/_tint-shade.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -350,15 +350,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/bourbon\/functions\/_tint-shade.scss" : {
+    "\/style\/_layout.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/functions\/_tint-shade.scss",
+      "inputAbbreviatedPath" : "\/style\/_layout.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/functions\/_tint-shade.css",
+      "outputAbbreviatedPath" : "\/style\/_layout.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -479,18 +479,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/bourbon\/addons\/_html5-input-types.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/addons\/_html5-input-types.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/addons\/_html5-input-types.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/bourbon\/css3\/_hidpi-media-query.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -500,6 +488,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_hidpi-media-query.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/bourbon\/addons\/_html5-input-types.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bourbon\/addons\/_html5-input-types.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/addons\/_html5-input-types.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -608,30 +608,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/bourbon\/addons\/_font-family.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/addons\/_font-family.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/addons\/_font-family.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/style\/_fonts.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style\/_fonts.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style\/_fonts.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/bourbon\/css3\/_placeholder.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -653,6 +629,30 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_backface-visibility.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/bourbon\/addons\/_font-family.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bourbon\/addons\/_font-family.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/addons\/_font-family.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/style\/_fonts.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/style\/_fonts.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/style\/_fonts.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -728,15 +728,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/style\/_helpers.scss" : {
+    "\/mixins\/_border-radius.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style\/_helpers.scss",
+      "inputAbbreviatedPath" : "\/mixins\/_border-radius.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style\/_helpers.css",
+      "outputAbbreviatedPath" : "\/mixins\/_border-radius.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -776,15 +776,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/mixins\/_border-radius.scss" : {
+    "\/style\/_helpers.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/mixins\/_border-radius.scss",
+      "inputAbbreviatedPath" : "\/style\/_helpers.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/mixins\/_border-radius.css",
+      "outputAbbreviatedPath" : "\/style\/_helpers.css",
       "fileType" : 4,
       "debugStyle" : 0
     },

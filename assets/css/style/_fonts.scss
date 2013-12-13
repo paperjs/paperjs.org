@@ -1,10 +1,11 @@
 /* Fonts */
 
-@include font-face("SuperstudioBold", "http://assets.paperjs.org/superstudio/superstudio");
+@include font-face("Superstudio", "http://assets.paperjs.org/fonts/superstudio");
+@include font-face("AkkuratMono", "http://assets.paperjs.org/fonts/akkurat-mono");
 
 h1,
 h2 {
-	font-family: "SuperstudioBold";
+	font-family: "Superstudio";
 	font-weight: normal;
 	font-size: 27px;
 	line-height: 32px;
@@ -71,6 +72,6 @@ textarea,
 
 tt,
 pre {
-	font-family: Menlo, Consolas, "Vera Mono", monospace;
+	font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
 	font-size: 12px;
 }

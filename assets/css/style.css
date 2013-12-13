@@ -36,15 +36,22 @@ td {
 
 /* Fonts */
 @font-face {
-  font-family: "SuperstudioBold";
+  font-family: "Superstudio";
   font-weight: normal;
   font-style: normal;
-  src: url("http://assets.paperjs.org/superstudio/superstudio.eot");
-  src: url("http://assets.paperjs.org/superstudio/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/superstudio/superstudio.woff") format("woff"), url("http://assets.paperjs.org/superstudio/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/superstudio/superstudio.svg#SuperstudioBold") format("svg"); }
+  src: url("http://assets.paperjs.org/fonts/superstudio.eot");
+  src: url("http://assets.paperjs.org/fonts/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/superstudio.woff") format("woff"), url("http://assets.paperjs.org/fonts/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/superstudio.svg#Superstudio") format("svg"); }
+
+@font-face {
+  font-family: "AkkuratMono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot");
+  src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/akkurat-mono.woff") format("woff"), url("http://assets.paperjs.org/fonts/akkurat-mono.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/akkurat-mono.svg#AkkuratMono") format("svg"); }
 
 h1,
 h2 {
-  font-family: "SuperstudioBold";
+  font-family: "Superstudio";
   font-weight: normal;
   font-size: 27px;
   line-height: 32px;
@@ -104,7 +111,7 @@ textarea,
 
 tt,
 pre {
-  font-family: Menlo, Consolas, "Vera Mono", monospace;
+  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
   font-size: 12px; }
 
 /* Column Layout */
@@ -218,20 +225,20 @@ article {
   article ul > li {
     text-indent: -1em;
     margin-left: 1em; }
-  article ul > li:before {
-    content: "-";
-    padding-right: 0.5em; }
+    article ul > li:before {
+      content: "-";
+      padding-right: 0.5em; }
   article ol {
     counter-reset: item; }
   article ol > li {
     text-indent: -1.5em;
     margin-left: 1.5em; }
-  article ol > li:before {
-    text-indent: 0;
-    display: inline-block;
-    content: counter(item,upper-latin) ") ";
-    counter-increment: item;
-    width: 1.5em; }
+    article ol > li:before {
+      text-indent: 0;
+      display: inline-block;
+      content: counter(item,upper-latin) ") ";
+      counter-increment: item;
+      width: 1.5em; }
   article blockquote {
     margin: 0; }
     article blockquote p {
@@ -410,7 +417,7 @@ section {
 .CodeMirror,
 .CodeMirror textarea,
 .CodeMirror pre {
-  font-family: Menlo, Consolas, "Vera Mono", monospace;
+  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
   font-size: 12px; }
 .CodeMirror pre {
   line-height: 16px;
