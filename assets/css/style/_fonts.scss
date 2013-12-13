@@ -3,6 +3,15 @@
 @include font-face("Superstudio", "http://assets.paperjs.org/fonts/superstudio");
 @include font-face("AkkuratMono", "http://assets.paperjs.org/fonts/akkurat-mono");
 
+.CodeMirror {
+	&,
+	textarea,
+	pre {
+		font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
+		font-size: 12px;
+	}
+}
+
 h1,
 h2 {
 	font-family: "Superstudio";

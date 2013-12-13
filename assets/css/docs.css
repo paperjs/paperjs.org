@@ -92,6 +92,12 @@ input,
 textarea {
   font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif; }
 
+.CodeMirror,
+.CodeMirror textarea,
+.CodeMirror pre {
+  font-family: Menlo, Consolas, "Vera Mono", monospace;
+  font-size: 12px; }
+
 body {
   background: #fff;
   margin: 16px;
@@ -158,11 +164,6 @@ ol {
 .footer {
   margin-top: 20px; }
 
-.CodeMirror,
-.CodeMirror textarea,
-.CodeMirror pre {
-  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
-  font-size: 12px; }
 .CodeMirror pre {
   line-height: 16px;
   margin: 0;

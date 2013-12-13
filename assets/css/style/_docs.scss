@@ -5,6 +5,15 @@ textarea {
 	font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
 }
 
+.CodeMirror {
+	&,
+	textarea,
+	pre {
+		font-family: Menlo, Consolas, "Vera Mono", monospace;
+		font-size: 12px;
+	}
+}
+
 body {
 	background: #fff;
 	margin: 16px;

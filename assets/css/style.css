@@ -49,6 +49,12 @@ td {
   src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot");
   src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/akkurat-mono.woff") format("woff"), url("http://assets.paperjs.org/fonts/akkurat-mono.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/akkurat-mono.svg#AkkuratMono") format("svg"); }
 
+.CodeMirror,
+.CodeMirror textarea,
+.CodeMirror pre {
+  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
+  font-size: 12px; }
+
 h1,
 h2 {
   font-family: "Superstudio";
@@ -414,11 +420,6 @@ section {
 .reference ul {
   margin-top: 0; }
 
-.CodeMirror,
-.CodeMirror textarea,
-.CodeMirror pre {
-  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
-  font-size: 12px; }
 .CodeMirror pre {
   line-height: 16px;
   margin: 0;
