@@ -9,7 +9,7 @@
  *
  * All rights reserved.
  *
- * Date: Wed Dec 11 17:10:32 2013 +0100
+ * Date: Fri Dec 13 20:50:58 2013 +0100
  *
  ***
  *
@@ -2623,7 +2623,7 @@ var Item = Base.extend(Callback, {
 	_serializeFields: {
 		name: null,
 		matrix: new Matrix(),
-		anchor: null,
+		pivot: null,
 		locked: false,
 		visible: true,
 		blendMode: 'normal',
@@ -2937,9 +2937,9 @@ var Item = Base.extend(Callback, {
 		var position = this._position,
 			ctor = arguments[0] ? Point : LinkedPoint;
 		if (!position) {
-			var anchor = this._anchor;
-			position = this._position = anchor
-					? this._matrix._transformPoint(anchor)
+			var pivot = this._pivot;
+			position = this._position = pivot
+					? this._matrix._transformPoint(pivot)
 					: this.getBounds().getCenter(true);
 		}
 		return new ctor(position.x, position.y, this, 'setPosition');
@@ -2949,21 +2949,21 @@ var Item = Base.extend(Callback, {
 		this.translate(Point.read(arguments).subtract(this.getPosition(true)));
 	},
 
-	getAnchor: function() {
-		var anchor = this._anchor;
-		if (anchor) {
+	getPivot: function() {
+		var pivot = this._pivot;
+		if (pivot) {
 			var ctor = arguments[0] ? Point : LinkedPoint;
-			anchor = new ctor(anchor.x, anchor.y, this, 'setAnchor');
+			pivot = new ctor(pivot.x, pivot.y, this, 'setAnchor');
 		}
-		return anchor;
+		return pivot;
 	},
 
-	setAnchor: function() {
-		this._anchor = Point.read(arguments);
+	setPivot: function() {
+		this._pivot = Point.read(arguments);
 		delete this._position;
 	},
 
-	_anchor: null,
+	_pivot: null,
 
 	getRegistration: '#getAnchor',
 	setRegistration: '#setAnchor'
@@ -3739,12 +3739,12 @@ var Item = Base.extend(Callback, {
 	applyMatrix: function(_dontNotify) {
 		var matrix = this._matrix;
 		if (this._applyMatrix(matrix, true)) {
-			var anchor = this._anchor,
+			var pivot = this._pivot,
 				style = this._style,
 				fillColor = style.getFillColor(true),
 				strokeColor = style.getStrokeColor(true);
-			if (anchor)
-				anchor.transform(matrix);
+			if (pivot)
+				pivot.transform(matrix);
 			if (fillColor)
 				fillColor.transform(matrix);
 			if (strokeColor)
