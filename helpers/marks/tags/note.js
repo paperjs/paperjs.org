@@ -12,7 +12,7 @@ module.exports = {
 
 		render: function(content, param, encode) {
 			var title = this.attributes.title || defaultTitles[this.name];
-			return '<div class="note"><b>' + encode(title) + '</b>'
+			return '<div class="note"><h4>' + encode(title) + '</h4>'
 					+ paragraphs(content)
 					+ '<div class="text-end"></div></div>';
 		}

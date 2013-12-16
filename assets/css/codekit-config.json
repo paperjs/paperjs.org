@@ -2,15 +2,15 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss" : {
+    "\/style\/_base.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss",
+      "inputAbbreviatedPath" : "\/style\/_base.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.css",
+      "outputAbbreviatedPath" : "\/style\/_base.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -26,15 +26,26 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+<<<<<<< Updated upstream
     "\/bourbon\/css3\/_border-image.scss" : {
+=======
+    "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss" : {
+>>>>>>> Stashed changes
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
+<<<<<<< Updated upstream
       "inputAbbreviatedPath" : "\/bourbon\/css3\/_border-image.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_border-image.css",
+=======
+      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_deprecated-webkit-gradient.css",
+>>>>>>> Stashed changes
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -122,18 +133,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/style\/_paperscript.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style\/_paperscript.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style\/_paperscript.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/bourbon\/addons\/_position.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -146,15 +145,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/bourbon\/helpers\/_linear-positions-parser.scss" : {
+    "\/bourbon\/addons\/_position.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_linear-positions-parser.scss",
+      "inputAbbreviatedPath" : "\/bourbon\/addons\/_position.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_linear-positions-parser.css",
+      "outputAbbreviatedPath" : "\/bourbon\/addons\/_position.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -182,15 +181,26 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+<<<<<<< Updated upstream
     "\/bourbon\/css3\/_keyframes.scss" : {
+=======
+    "\/bourbon\/helpers\/_linear-positions-parser.scss" : {
+>>>>>>> Stashed changes
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
+<<<<<<< Updated upstream
       "inputAbbreviatedPath" : "\/bourbon\/css3\/_keyframes.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_keyframes.css",
+=======
+      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_linear-positions-parser.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_linear-positions-parser.css",
+>>>>>>> Stashed changes
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -203,6 +213,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/helpers\/_render-gradients.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/style\/_paperscript.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/style\/_paperscript.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/style\/_paperscript.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -314,27 +336,26 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+<<<<<<< Updated upstream
     "\/bourbon\/css3\/_background.scss" : {
+=======
+    "\/bourbon\/css3\/_flex-box.scss" : {
+>>>>>>> Stashed changes
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
+<<<<<<< Updated upstream
       "inputAbbreviatedPath" : "\/bourbon\/css3\/_background.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_background.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/bourbon\/css3\/_flex-box.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
+=======
       "inputAbbreviatedPath" : "\/bourbon\/css3\/_flex-box.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_flex-box.css",
+>>>>>>> Stashed changes
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -350,15 +371,38 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+<<<<<<< Updated upstream
+    "\/bourbon\/helpers\/_radial-arg-parser.scss" : {
+=======
     "\/style\/_layout.scss" : {
+>>>>>>> Stashed changes
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
+<<<<<<< Updated upstream
+      "inputAbbreviatedPath" : "\/bourbon\/helpers\/_radial-arg-parser.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/helpers\/_radial-arg-parser.css",
+=======
       "inputAbbreviatedPath" : "\/style\/_layout.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/style\/_layout.css",
+>>>>>>> Stashed changes
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/bourbon\/functions\/_tint-shade.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bourbon\/functions\/_tint-shade.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/functions\/_tint-shade.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -587,27 +631,39 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/style.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/style.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/bourbon\/addons\/_triangle.scss" : {
+    "\/bourbon\/addons\/_font-family.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bourbon\/addons\/_font-family.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/addons\/_font-family.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+<<<<<<< Updated upstream
+    "\/bourbon\/addons\/_triangle.scss" : {
+=======
+    "\/style.scss" : {
+>>>>>>> Stashed changes
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+<<<<<<< Updated upstream
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bourbon\/addons\/_triangle.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/addons\/_triangle.css",
+=======
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/style.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/style.css",
+>>>>>>> Stashed changes
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -620,18 +676,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/style\/_fonts.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style\/_fonts.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/style\/_fonts.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/bourbon\/css3\/_linear-gradient.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -641,6 +685,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_linear-gradient.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/style\/_fonts.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/style\/_fonts.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/style\/_fonts.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -668,11 +724,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+<<<<<<< Updated upstream
     "\/bourbon\/addons\/_font-family.scss" : {
+=======
+    "\/bourbon\/functions\/_px-to-em.scss" : {
+>>>>>>> Stashed changes
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
+<<<<<<< Updated upstream
       "inputAbbreviatedPath" : "\/bourbon\/addons\/_font-family.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
@@ -681,14 +742,31 @@
       "debugStyle" : 0
     },
     "\/bourbon\/css3\/_backface-visibility.scss" : {
+=======
+      "inputAbbreviatedPath" : "\/bourbon\/functions\/_px-to-em.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/functions\/_px-to-em.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/bourbon\/addons\/_triangle.scss" : {
+>>>>>>> Stashed changes
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
+<<<<<<< Updated upstream
       "inputAbbreviatedPath" : "\/bourbon\/css3\/_backface-visibility.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/css3\/_backface-visibility.css",
+=======
+      "inputAbbreviatedPath" : "\/bourbon\/addons\/_triangle.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/bourbon\/addons\/_triangle.css",
+>>>>>>> Stashed changes
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -788,18 +866,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/docs.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/docs.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/docs.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/bourbon\/functions\/_modular-scale.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -809,6 +875,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/bourbon\/functions\/_modular-scale.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/docs.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/docs.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/docs.css",
       "fileType" : 4,
       "debugStyle" : 0
     },

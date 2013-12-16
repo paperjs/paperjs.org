@@ -4,9 +4,9 @@
 	h1,
 	h2,
 	h3 {
-		font-size: 13px;
+		font-size: $font-size;
 		font-weight: normal;
-		height: 18px; // -2px so border-bottom aligns with contained links
+		height: $line-height - 2; // -2px so border-bottom aligns with contained links
 		border-bottom: 1px solid;
 		margin-top: 0;
 		margin-bottom: 16px;

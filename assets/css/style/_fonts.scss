@@ -1,13 +1,16 @@
 /* Fonts */
 
 @include font-face("Superstudio", "http://assets.paperjs.org/fonts/superstudio");
-@include font-face("AkkuratMono", "http://assets.paperjs.org/fonts/akkurat-mono");
+@include font-face("Akkurat-Mono", "http://assets.paperjs.org/fonts/akkurat-mono", normal, normal);
+@include font-face("Executive", "http://assets.paperjs.org/fonts/executive-regular", normal, normal);
+@include font-face("Executive", "http://assets.paperjs.org/fonts/executive-italic", normal, italic);
+@include font-face("Executive", "http://assets.paperjs.org/fonts/executive-bold", bold, normal);
 
 .CodeMirror {
 	&,
 	textarea,
 	pre {
-		font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
+		font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
 		font-size: 12px;
 	}
 }
@@ -16,24 +19,12 @@ h1,
 h2 {
 	font-family: "Superstudio";
 	font-weight: normal;
-	font-size: 27px;
-	line-height: 32px;
+	font-size: 30px;
+	line-height: 36px;
 	padding-top: $page-margin; // Padding instead of margin, so anchor trick works here too
 	padding-bottom: 8px;
-}
-
-h1,
-h2,
-h3,
-h4 {
-	border-bottom: 1px solid;
-	margin: 0 0 $line-height 0;
-}
-
-h3 {
-	border-bottom: 1px dotted;
-	margin-bottom: $line-height / 2;
-	padding-bottom: $line-height / 2 - 1;
+  border-bottom: 1px solid;
+  margin: 0 0 $line-height 0;
 }
 
 h3,
@@ -41,7 +32,6 @@ h4,
 h5 {
 	font-weight: normal;
 	font-size: 1em;
-	line-height: 16px;
 }
 
 h4 {
@@ -62,18 +52,20 @@ input,
 textarea,
 .tutorial h2,
 .reference h2 {
-	font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+	font-family: "Executive", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
 }
 
 .tutorial h2,
 .reference h2 {
-	font-size: 13px;
-	line-height: 20px;
+	font-size: $font-size;
+	line-height: $line-height;
 	padding: 0;
 }
 
 .tutorial h2 {
-	font-weight: bold;
+	// font-weight: bold;
+	font-size: 20px;
+	line-height: $line-height;
 	border: 0;
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -81,6 +73,6 @@ textarea,
 
 tt,
 pre {
-	font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
+	font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
 	font-size: 12px;
 }

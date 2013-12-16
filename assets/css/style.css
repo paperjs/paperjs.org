@@ -33,9 +33,12 @@ html {
 body {
   background: #fff;
   margin: 0;
-  font-size: 13px;
-  line-height: 20px;
-  width: 996px; }
+  font-size: 15px;
+  line-height: 21px;
+  width: 996px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
 
 select,
 input,
@@ -77,50 +80,60 @@ td {
   src: url("http://assets.paperjs.org/fonts/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/superstudio.woff") format("woff"), url("http://assets.paperjs.org/fonts/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/superstudio.svg#Superstudio") format("svg"); }
 
 @font-face {
-  font-family: "AkkuratMono";
+  font-family: "Akkurat-Mono";
   font-weight: normal;
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot");
-  src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/akkurat-mono.woff") format("woff"), url("http://assets.paperjs.org/fonts/akkurat-mono.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/akkurat-mono.svg#AkkuratMono") format("svg"); }
+  src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/akkurat-mono.woff") format("woff"), url("http://assets.paperjs.org/fonts/akkurat-mono.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/akkurat-mono.svg#Akkurat-Mono") format("svg"); }
+
+@font-face {
+  font-family: "Executive";
+  font-weight: normal;
+  font-style: normal;
+  src: url("http://assets.paperjs.org/fonts/executive-regular.eot");
+  src: url("http://assets.paperjs.org/fonts/executive-regular.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-regular.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-regular.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-regular.svg#Executive") format("svg"); }
+
+@font-face {
+  font-family: "Executive";
+  font-weight: normal;
+  font-style: italic;
+  src: url("http://assets.paperjs.org/fonts/executive-italic.eot");
+  src: url("http://assets.paperjs.org/fonts/executive-italic.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-italic.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-italic.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-italic.svg#Executive") format("svg"); }
+
+@font-face {
+  font-family: "Executive";
+  font-weight: bold;
+  font-style: normal;
+  src: url("http://assets.paperjs.org/fonts/executive-bold.eot");
+  src: url("http://assets.paperjs.org/fonts/executive-bold.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-bold.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-bold.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-bold.svg#Executive") format("svg"); }
 
 .CodeMirror,
 .CodeMirror textarea,
 .CodeMirror pre {
-  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
+  font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
   font-size: 12px; }
 
 h1,
 h2 {
   font-family: "Superstudio";
   font-weight: normal;
-  font-size: 27px;
-  line-height: 32px;
+  font-size: 30px;
+  line-height: 36px;
   padding-top: 32px;
-  padding-bottom: 8px; }
-
-h1,
-h2,
-h3,
-h4 {
+  padding-bottom: 8px;
   border-bottom: 1px solid;
-  margin: 0 0 20px 0; }
-
-h3 {
-  border-bottom: 1px dotted;
-  margin-bottom: 10px;
-  padding-bottom: 9px; }
+  margin: 0 0 21px 0; }
 
 h3,
 h4,
 h5 {
   font-weight: normal;
-  font-size: 1em;
-  line-height: 16px; }
+  font-size: 1em; }
 
 h4 {
   display: inline; }
   h4 + p {
-    margin-top: 20px; }
+    margin-top: 21px; }
 
 h5 {
   display: inline-block;
@@ -135,23 +148,24 @@ input,
 textarea,
 .tutorial h2,
 .reference h2 {
-  font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif; }
+  font-family: "Executive", "Lucida Grande", Geneva, Verdana, Arial, sans-serif; }
 
 .tutorial h2,
 .reference h2 {
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 21px;
   padding: 0; }
 
 .tutorial h2 {
-  font-weight: bold;
+  font-size: 20px;
+  line-height: 21px;
   border: 0;
   margin-top: 0;
   margin-bottom: 10px; }
 
 tt,
 pre {
-  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
+  font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
   font-size: 12px; }
 
 /* Column Layout */
@@ -244,15 +258,15 @@ article {
   article p,
   article ul,
   article ol {
-    margin: 0 10px 20px 0; }
+    margin: 0 10px 21px 0; }
     article p.small,
     article ul.small,
     article ol.small {
-      margin-bottom: 10px; }
+      margin-bottom: 10.5px; }
   article figure,
   article .CodeMirror,
   article .paperscript {
-    margin-bottom: 20px; }
+    margin-bottom: 21px; }
   article ul,
   article ol {
     padding: 0;
@@ -298,14 +312,14 @@ article {
 
 section {
   clear: both;
-  margin: 0 0 20px;
+  margin: 0 0 21px;
   padding: 0; }
 
 .column {
   width: 260px;
   float: left; }
   .column + .column {
-    margin-left: 20px; }
+    margin-left: 21px; }
 
 .row {
   clear: both; }
@@ -324,7 +338,11 @@ section {
   .note .resource {
     margin: 0; }
   .note > :last-child {
+<<<<<<< Updated upstream
     margin-bottom: -20px; }
+=======
+    margin-bottom: -21px; }
+>>>>>>> Stashed changes
 
 /* Blocks */
 .block {
@@ -379,9 +397,9 @@ section {
 .reference h1,
 .reference h2,
 .reference h3 {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
-  height: 18px;
+  height: 19px;
   border-bottom: 1px solid;
   margin-top: 0;
   margin-bottom: 16px; }
@@ -623,7 +641,7 @@ ul.tutorial-index {
   ul.tutorial-index > li:before {
     display: none; }
   ul.tutorial-index ul {
-    padding-left: 13px; }
+    padding-left: 15px; }
   article ul.tutorial-index {
     margin-bottom: 29px; }
 
@@ -647,5 +665,4 @@ ul.tutorial-index {
   bottom: 0; }
 
 .small {
-  font-size: 11px;
-  line-height: 16px; }
+  font-size: 0.9em; }
