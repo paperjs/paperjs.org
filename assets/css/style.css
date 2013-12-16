@@ -1,3 +1,4 @@
+@charset "UTF-8";
 form,
 img,
 ul,
@@ -50,8 +51,6 @@ textarea {
 a {
   text-decoration: none; }
 
-<<<<<<< HEAD
-=======
 a:focus {
   outline: none; }
 
@@ -70,7 +69,6 @@ td {
   padding: 0;
   vertical-align: top; }
 
->>>>>>> origin/master
 /* Fonts */
 @font-face {
   font-family: "Superstudio";
@@ -338,11 +336,7 @@ section {
   .note .resource {
     margin: 0; }
   .note > :last-child {
-<<<<<<< Updated upstream
-    margin-bottom: -20px; }
-=======
     margin-bottom: -21px; }
->>>>>>> Stashed changes
 
 /* Blocks */
 .block {
