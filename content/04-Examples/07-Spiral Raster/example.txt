@@ -6,6 +6,8 @@ var count = 0;
 var grow = false;
 var raster = null;
 
+// As the web is asynchronous, we need to wait for the raster to
+// load before we can perform any operation on its pixels.
 new Raster('mona').on('load', function() {
 	raster = this;
 	this.remove();

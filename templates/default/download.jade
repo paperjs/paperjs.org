@@ -1,4 +1,9 @@
-for file in page.files.flip()
+- files = page.files.toArray().sort(function(file1, file2) {
+-   var name1 = file1.name;
+-   var name2 = file2.name;
+-   return /nightly/.test(name1) ? 1 : parseInt(name1.match(/(\d*)$/)[1]) < parseInt(name2.match(/(\d*)$/)[1]);
+- });
+for file in files
   name = file.name.split('-')[1]
   if !/^v/.test(name)
     name = name.charAt(0).toUpperCase() + name.slice(1)

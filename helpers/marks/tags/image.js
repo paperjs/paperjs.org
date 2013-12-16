@@ -20,9 +20,9 @@ module.exports = {
 						param.imageClass = this.attributes['class'];
 					}
 					if (content) {
-						image = param.page.template('resource_block', {
-							content: content,
-							resource: image.html(param)
+						image = param.page.template('block', {
+							left: image.html(param),
+							right: content
 						});
 					} else {
 						image = image.html(param);

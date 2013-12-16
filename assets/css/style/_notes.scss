@@ -1,0 +1,14 @@
+.note {
+	padding: 8px;
+	margin: 0 10px 19px;
+	background: #f4f4f4;
+	clear: both;
+
+	.resource {
+		margin: 0;
+	}
+
+  > :last-child {
+    margin-bottom: -$line-height;
+  }
+}

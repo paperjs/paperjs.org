@@ -66,7 +66,10 @@ module.exports = {
 				'</div>'
 			);
 			parts.push('</div>');
-			return parts.join('');
+			// For paragraphs() it's important that the tags are on new lines,
+			// as otherwise they are considered suffixes and are followed by
+			// breaks.
+			return parts.join('\n');
 		}
 	}
 };

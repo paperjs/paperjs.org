@@ -20,3 +20,29 @@ textarea {
 a {
 	text-decoration: none;
 }
+<<<<<<< HEAD
+=======
+
+a:focus {
+	outline: none
+}
+
+form,
+img {
+	margin: 0;
+	border: 0;
+}
+
+/* Tables */
+
+table {
+	border-spacing: 0;
+	margin: 0;
+	border: 0;
+}
+
+td {
+	padding: 0;
+	vertical-align: top;
+}
+>>>>>>> origin/master

@@ -309,7 +309,6 @@ The example script below is provided as a help to familiarise yourself with the 
 Play around with it to get a feeling for how vectors work, and try to use it to repeat the principles learned in this tutorial.
 
 <paperscript width=540 height=540 border=true>
-
 var values = {
 	fixLength: false,
 	fixAngle: false,

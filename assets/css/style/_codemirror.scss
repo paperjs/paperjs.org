@@ -1,11 +1,4 @@
 .CodeMirror {
-	&,
-	textarea,
-	pre {
-		font-family: Menlo, Consolas, "Vera Mono", monospace;
-		font-size: 12px;
-	}
-
 	pre {
 		line-height: 16px;
 		margin: 0;
@@ -13,7 +6,7 @@
 		background: transparent;
 	}
 
-	body.fullscreen & {
+	.paperscript & {
 		height: 100%;
 	}
 }

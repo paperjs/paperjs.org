@@ -2,9 +2,9 @@
 Paper.js — The Swiss Army Knife of Vector Graphics Scripting.
 <image "paper-js.gif">
 Paper.js is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas. It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.
-
 </image>
-<image "scriptographer.jpg" >Paper.js is based on and largely compatible with <url "http://scriptographer.org">Scriptographer</url>, a scripting environment for Adobe Illustrator with an active community of scripters and more than 10 years of development.</image>
+<image "scriptographer.jpg" >Paper.js is based on and largely compatible with <url "http://scriptographer.org">Scriptographer</url>, a scripting environment for Adobe Illustrator with an active community of scripters and more than 10 years of development.
+</image>
 
 Paper.js is easy to learn for beginners and has lots to master for intermediate and advanced users.
 

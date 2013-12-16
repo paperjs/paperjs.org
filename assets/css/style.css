@@ -47,17 +47,51 @@ textarea {
 a {
   text-decoration: none; }
 
+<<<<<<< HEAD
+=======
+a:focus {
+  outline: none; }
+
+form,
+img {
+  margin: 0;
+  border: 0; }
+
+/* Tables */
+table {
+  border-spacing: 0;
+  margin: 0;
+  border: 0; }
+
+td {
+  padding: 0;
+  vertical-align: top; }
+
+>>>>>>> origin/master
 /* Fonts */
 @font-face {
-  font-family: "SuperstudioBold";
+  font-family: "Superstudio";
   font-weight: normal;
   font-style: normal;
-  src: url("http://assets.paperjs.org/superstudio/superstudio.eot");
-  src: url("http://assets.paperjs.org/superstudio/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/superstudio/superstudio.woff") format("woff"), url("http://assets.paperjs.org/superstudio/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/superstudio/superstudio.svg#SuperstudioBold") format("svg"); }
+  src: url("http://assets.paperjs.org/fonts/superstudio.eot");
+  src: url("http://assets.paperjs.org/fonts/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/superstudio.woff") format("woff"), url("http://assets.paperjs.org/fonts/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/superstudio.svg#Superstudio") format("svg"); }
+
+@font-face {
+  font-family: "AkkuratMono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot");
+  src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/akkurat-mono.woff") format("woff"), url("http://assets.paperjs.org/fonts/akkurat-mono.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/akkurat-mono.svg#AkkuratMono") format("svg"); }
+
+.CodeMirror,
+.CodeMirror textarea,
+.CodeMirror pre {
+  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
+  font-size: 12px; }
 
 h1,
 h2 {
-  font-family: "SuperstudioBold";
+  font-family: "Superstudio";
   font-weight: normal;
   font-size: 27px;
   line-height: 32px;
@@ -117,7 +151,7 @@ textarea,
 
 tt,
 pre {
-  font-family: Menlo, Consolas, "Vera Mono", monospace;
+  font-family: "AkkuratMono", Menlo, Consolas, "Vera Mono", monospace;
   font-size: 12px; }
 
 /* Column Layout */
@@ -231,20 +265,20 @@ article {
   article ul > li {
     text-indent: -1em;
     margin-left: 1em; }
-  article ul > li:before {
-    content: "-";
-    padding-right: 0.5em; }
+    article ul > li:before {
+      content: "-";
+      padding-right: 0.5em; }
   article ol {
     counter-reset: item; }
   article ol > li {
     text-indent: -1.5em;
     margin-left: 1.5em; }
-  article ol > li:before {
-    text-indent: 0;
-    display: inline-block;
-    content: counter(item,upper-latin) ") ";
-    counter-increment: item;
-    width: 1.5em; }
+    article ol > li:before {
+      text-indent: 0;
+      display: inline-block;
+      content: counter(item,upper-latin) ") ";
+      counter-increment: item;
+      width: 1.5em; }
   article blockquote {
     margin: 0; }
     article blockquote p {
@@ -282,31 +316,43 @@ section {
   .donation select {
     margin-right: 0.35em; }
 
-/* Resources */
-.resource-block {
+.note {
+  padding: 8px;
+  margin: 0 10px 19px;
+  background: #f4f4f4;
+  clear: both; }
+  .note .resource {
+    margin: 0; }
+  .note > :last-child {
+    margin-bottom: -20px; }
+
+/* Blocks */
+.block {
   display: table;
   margin-bottom: 20px;
   *zoom: 1; }
-  .resource-block:before, .resource-block:after {
+  .block:before, .block:after {
     content: " ";
     display: table; }
-  .resource-block:after {
+  .block:after {
     clear: both; }
-  .resource-block .resource-text,
-  .resource-block .resource {
+  .block .note {
+    margin: 0 10px 0 0; }
+  .block .CodeMirror {
+    height: auto;
+    margin-bottom: 20px; }
+  .block .paperscript:last-child {
+    margin-bottom: 0; }
+  .block svg {
+    display: block; }
+  .block .left,
+  .block .right {
     float: none;
     display: table-cell;
     vertical-align: middle; }
-  .resource-block .resource {
+  .block .left {
     padding-right: 20px; }
-  .resource-block .resource-text {
-    vertical-align: top; }
-    .resource-block .resource-text .note {
-      margin: 0 10px 0 0; }
-    .resource-block .resource-text .CodeMirror {
-      height: auto;
-      margin-bottom: 20px; }
-  .resource-block + .resource-block {
+  .block + .block {
     border-top: 1px dotted #000;
     padding-top: 20px; }
 
@@ -418,17 +464,12 @@ section {
 .reference ul {
   margin-top: 0; }
 
-.CodeMirror,
-.CodeMirror textarea,
-.CodeMirror pre {
-  font-family: Menlo, Consolas, "Vera Mono", monospace;
-  font-size: 12px; }
 .CodeMirror pre {
   line-height: 16px;
   margin: 0;
   padding: 0;
   background: transparent; }
-body.fullscreen .CodeMirror {
+.paperscript .CodeMirror {
   height: 100%; }
 
 .CodeMirror-scroll {
