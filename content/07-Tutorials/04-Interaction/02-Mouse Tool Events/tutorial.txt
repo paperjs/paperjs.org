@@ -29,7 +29,7 @@ function onMouseUp(event) {
 
 Try it out by clicking, dragging and releasing in the following example:
 
-<paperscript height=320 width=540 style='background:#e4e1e1'>
+<paperscript height=320 style='background:#e4e1e1'>
 var path;
 function onMouseDown(event) {
 	// Create a path:
@@ -93,7 +93,7 @@ function onMouseDrag(event) {
 
 Try it out by clicking, dragging and releasing in the following example:
 
-<paperscript height=320 width=540 style='background:#e4e1e1'>
+<paperscript height=320 style='background:#e4e1e1'>
 // The mouse has to be moved at least 10 pt
 // before the next onMouseDrag event is called:
 tool.minDistance = 10;
@@ -124,7 +124,7 @@ function onMouseDrag(event) {
 }
 </code>
 
-<paperscript height=320 width=540 style='background:#e4e1e1'>
+<paperscript height=320 style='background:#e4e1e1'>
 function onMouseDrag(event) {
 	var radius = event.delta.length / 2;
 	var circle = new Path.Circle(event.middlePoint, radius);

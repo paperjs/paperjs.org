@@ -4,7 +4,7 @@ In the following tutorial we will be looking at the different ways to go about s
 
 For the examples in this tutorial we will be using a checkmark shaped path which we create using the following code:
 
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]],
 	selected: true
@@ -18,7 +18,7 @@ var myPath = new Path({
 To add a stroke to our path, we need to set its <api Item#strokeColor>strokeColor</api> property.
 
 The following example shows how to set the stroke color of the path we created earlier to the color red, using a hexidecimal string (Also known from HTML CSS Styles):
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]]
 });
@@ -29,7 +29,7 @@ myPath.strokeColor = '#ff0000'; // red
 The hexadecimal color code is automatically converted to a <api Color /> object.
 
 The color can also be set using an <api Color /> object directly. In the following code we set an RGB color with 50% red, 0% green and 50% blue:
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]]
 });
@@ -44,7 +44,7 @@ In Paper.js color component values range from 0 to 1.
 <title>Fill Color</title>
 Fill color works exactly the same way as stroke color. In the following example we will create a path with a red fill color:
 
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]],
 	selected: true
@@ -57,7 +57,7 @@ myPath.fillColor = '#ff0000';
 To change the stroke width of an item, you can change its <api item#strokeWidth>strokeWidth</api> property.
 
 In the following example we give the path a red stroke of 10 pt:
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]]
 });
@@ -70,7 +70,7 @@ myPath.strokeWidth = 10;
 <title>Stroke Cap</title>
 To change the shape of the start and the end of a path, you can change its <api item#strokeCap>strokeCap</api> property to either <code>'round'</code>, <code>'square'</code> or <code>'butt'</code>:
 
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]],
 	selected: true
@@ -85,7 +85,7 @@ myPath.strokeCap = 'round';
 <title>Stroke Join</title>
 To change the shape of the corners in a path, you can change its <api item#strokeJoin>strokeJoin</api> property to either <code>'miter'</code>, <code>'round'</code> or <code>'bevel'</code>:
 
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]],
 	selected: true
@@ -100,7 +100,7 @@ myPath.strokeJoin = 'round';
 <title>Dashed Stroke</title>
 To create a dashed stroke, you can change the <api item#dashArray>dashArray</api> property of an item. The following code produces a dashed stroke with a 10pt dash and a 12pt gap:
 
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myPath = new Path({
 	segments: [[40, 115], [80, 180], [200, 20]],
 	selected: true
@@ -118,7 +118,7 @@ Every item also has an <api item#style /> property which is an object containing
 
 We can use this to copy the style properties of one item to another. The following example first creates a circle shaped path and assigns it a stroke color. Then another circle shaped path is created and we assign it the style of the first path:
 
-<paperscript width=540 height=100 split=true>
+<paperscript height=100 split=true>
 var firstPath = new Path.Circle({
 	center: [80, 50],
 	radius: 35
@@ -141,7 +141,7 @@ The <api item#style /> property also comes in handy for setting multiple style p
 
 In the following example we create an object containing a number of style properties and pass it to the item's style property to set them all in one go:
 
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 var myStyle = {
 	strokeColor: '#00ffff',
 	fillColor: '#000000',
@@ -190,7 +190,7 @@ The following example changes the current style of the project, then creates a p
 
 <image "currentStyle.gif" />
 
-<paperscript width=540 height=200 split=true>
+<paperscript height=200 split=true>
 // Change the current style of the project:
 project.currentStyle = {
 	strokeColor: '#000000',

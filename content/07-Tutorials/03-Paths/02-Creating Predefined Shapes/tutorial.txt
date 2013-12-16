@@ -23,7 +23,7 @@ To create a rectangular shaped path you can pass a <api Rectangle /> to the <api
 
 For example, let's make a <code>Rectangle</code> between <code>{x: 0, y: 0}</code> and <code>{x: 50, y: 50}</code> and then use the <api Path.Rectangle(rect) /> constructor to create a path with the shape that it describes:
 
-<paperscript width=540 height=140 split=true>
+<paperscript height=140 split=true>
 var rectangle = new Rectangle(new Point(50, 50), new Point(150, 100));
 var path = new Path.Rectangle(rectangle);
 path.fillColor = '#e9e9ff';

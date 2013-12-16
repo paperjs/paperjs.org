@@ -34,7 +34,7 @@ circlePath.position += new Point(10, 20);
 
 To make an item follow the mouse, we can simply set its position to the position of the mouse. Move your mouse over the view below, to see how the item follows your mouse.
 
-<paperscript height=200 width=540 split=true>
+<paperscript height=200 split=true>
 var circlePath = new Path.Circle(new Point(50, 50), 25);
 circlePath.fillColor = 'black'
 
@@ -139,7 +139,7 @@ copy.scale(0.5, circlePath.bounds.topRight);
 Items can also be scaled with different horizontal and vertical scales. To do this we pass two numbers to scale using <api Item#scale(sx,sy) />.
 
 For example, we can create a path and scale it horizontally by 500% and vertically by 150%:
-<paperscript height=100 width=540 split=true>
+<paperscript height=100 split=true>
 var circlePath = new Path.Circle(new Point(270, 50), 25);
 circlePath.style = {
 	fillColor: 'white',
@@ -160,7 +160,7 @@ To rotate an item we call the <api Item#rotate(angle) /> function and pass it th
 
 Now, let's create a rectangle shaped path and rotate it by 45 degrees:
 
-<paperscript width=540 height=150 split=true>
+<paperscript height=150 split=true>
 var path = new Path.Rectangle(new Point(50, 50), new Size(100, 50));
 path.style = {
 	fillColor: 'white',
@@ -177,7 +177,7 @@ copy.rotate(45);
 
 To rotate in a counter-clockwise direction we pass a negative angle to the <api Item#rotate(angle) /> function:
 
-<paperscript width=540 height=150 split=true>
+<paperscript height=150 split=true>
 var path = new Path.Rectangle(new Point(50, 50), new Size(100, 50));
 path.style = {
 	fillColor: 'white',
@@ -194,7 +194,7 @@ copy.rotate(-45);
 
 We can repeatedly rotate the path in an <code onFrame /> handler to make an animation:
 
-<paperscript width=540 height=150 split=true>
+<paperscript height=150 split=true>
 var path = new Path.Rectangle(new Point(50, 50), new Size(100, 50));
 path.style = {
 	fillColor: 'white',
@@ -216,7 +216,7 @@ function onFrame(event) {
 In the same way as you can pass a point to the scale function to scale around, you can also pass a point to the rotate function to rotate around.
 
 For example, let's rotate around the bottom left point of the bounding rectangle:
-<paperscript width=540 height=150 split=true>
+<paperscript height=150 split=true>
 var path = new Path.Rectangle(new Point(80, 50), new Size(100, 50));
 path.style = {
 	fillColor: 'white',
@@ -245,7 +245,7 @@ Lets write a more advanced script that clones an item multiple times in a loop a
 Cloning (copying) items is described at the end of the <page "/tutorials/project-items/working-with-items/" /> tutorial.
 </note>
 
-<paperscript height=150 width=540 split=true>
+<paperscript height=150 split=true>
 var circlePath = new Path.Circle(new Point(280, 100), 25);
 circlePath.strokeColor = 'black';
 circlePath.fillColor = 'white';

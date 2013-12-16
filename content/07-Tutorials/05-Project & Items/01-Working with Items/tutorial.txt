@@ -52,7 +52,7 @@ clonedPath.strokeColor = 'red';
 <title>Selecting Items</title>
 When you select items or path segment points & handles in your code, Paper.js draws the visual outlines of them on top of your project. This is very useful for debugging, as it allows you to see the construction of paths, position of path curves, individual segment points and bounding boxes of symbol and raster items:
 
-<paperscript split=true width=540 height=160>
+<paperscript split=true height=160>
 var center = new Point(160, 80);
 var circle = new Path.Circle(center, 50);
 

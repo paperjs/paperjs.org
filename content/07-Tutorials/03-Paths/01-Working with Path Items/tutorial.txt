@@ -4,7 +4,7 @@ In this tutorial we are going to look at paths and the different ways to create 
 
 In Paper.js, paths are represented by a sequence of segments that are connected by curves. A segment consists of a <api Segment#point>point</api> and two handles, defining the location and direction of the curves.
 
-<paperscript width=540 height=250>
+<paperscript height=250>
 var y = view.size.height / 2;
 var width = view.size.width;
 var vector = new Point({
@@ -133,7 +133,7 @@ copy.smooth();
 <title>Closing Paths</title>
 By default paths created through the <api Path() /> constructor are open:
 
-<paperscript width=540 height=140 split=true>
+<paperscript height=140 split=true>
 var myPath = new Path();
 myPath.strokeColor = 'black';
 myPath.add(new Point(40, 90));
@@ -142,7 +142,7 @@ myPath.add(new Point(140, 90));
 </paperscript>
 
 To close the path we set its <api Path#closed /> property to <code>true</code>. Paper.js will then connect the first and last segments of the path:
-<paperscript width=540 height=140 highlight="7" split=true>
+<paperscript height=140 highlight="7" split=true>
 var myPath = new Path();
 myPath.strokeColor = 'black';
 myPath.add(new Point(40, 90));
@@ -158,7 +158,7 @@ To remove a segment from a path, we use the <api Path#removeSegment(index) /> fu
 <note>If you don't know yet how to create paths of predefined shapes, please read the the <page "/tutorials/paths/creating-predefined-shapes/" /> tutorial.</note>
 
 First, lets create a circle shaped path and inspect its segments:
-<paperscript width=540 height=140 split=true>
+<paperscript height=140 split=true>
 var myCircle = new Path.Circle(new Point(100, 70), 50);
 myCircle.strokeColor = 'black';
 myCircle.selected = true;
@@ -168,7 +168,7 @@ As you can see, the path has 4 segments.
 
 Now, lets remove the first segment of the path after creating it:
 
-<paperscript width=540 height=140 split=true>
+<paperscript height=140 split=true>
 var myCircle = new Path.Circle(new Point(100, 70), 50);
 myCircle.strokeColor = 'black';
 myCircle.selected = true;

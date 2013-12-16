@@ -5,7 +5,7 @@ While building <url "http://scriptographer.org">Scriptographer</url> we found ve
 As an example of the elegance of vector geometry, here is an interactive example of a brush tool. With only 24 lines of code, it produces a mouse tool that acts like a brush, with a variable thickness depending on speed and a sense of a natural expression.
 
 Click and drag in the view below:
-<paperscript height=420 width=540 background=black>
+<paperscript height=420 background=black>
 tool.minDistance = 10;
 tool.maxDistance = 45;
 
@@ -308,7 +308,7 @@ The example script below is provided as a help to familiarise yourself with the 
 
 Play around with it to get a feeling for how vectors work, and try to use it to repeat the principles learned in this tutorial.
 
-<paperscript width=540 height=540 border=true>
+<paperscript height=540 border=true>
 var values = {
 	fixLength: false,
 	fixAngle: false,

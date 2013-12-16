@@ -4,7 +4,7 @@ This tutorial explains the different ways to create Paper.js tools that the user
 We start with an example of a very simple tool that creates an empty path on execution and adds segments to it whenever you click the mouse:
 </code>
 
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 // Create a new path once, when the script is executed:
 var myPath = new Path();
 myPath.strokeColor = 'black';
@@ -54,7 +54,7 @@ The properties of the event object are explained in detail in the <page "/tutori
 Here is a simple tool that draws lines. The starting point of the line is where you click and the last point is where you release the mouse.
 
 Click, drag and release below to try it out:
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 // We start by defining an empty variable that is visible by both
 // mouse handlers.
 var myPath;
@@ -82,7 +82,7 @@ The difference between this tool and the first example is that a new path is cre
 The same tool can be written more simply, by using only the <api Tool#onMouseUp>onMouseUp(event)</api> handler, and accessing the <api ToolEvent#downPoint>event.downPoint</api> property:
 
 Click, drag and release below to try it out:
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 function onMouseUp(event) {
 	var myPath = new Path();
 	myPath.strokeColor = 'black';
@@ -120,7 +120,7 @@ When you drag the mouse it will add segments to the path.
 When you release the mouse it will add a circle shaped path at that position with a radius of 10.
 
 Click and drag below to try it out:
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 var myPath;
 
 function onMouseDown(event) {
@@ -182,7 +182,7 @@ Another handy property in the event object is <api ToolEvent#delta>event.delta</
 
 For example, if we would want to make a tool that creates circles through mouse interaction, we could write something like:
 
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 function onMouseUp(event) {
 	var circle = new Path.Circle({
 		center: event.middlePoint,
@@ -203,7 +203,7 @@ For example, in the following tool script the <code>onMouseDrag</code> function 
 
 So when you click and drag in the following example, you will see that the radius of the circles is always 20pt or higher.
 
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 tool.minDistance = 20;
 
 function onMouseDrag(event) {
@@ -223,7 +223,7 @@ In the following code we set <api Tool#maxDistance>tool.maxDistance</api> to be 
 
 When you click and drag in the following example, you will see that when you drag fast enough the radiuses of the circles max out at 5pt. When you drag slower, the circles will be smaller.
 
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 tool.maxDistance = 10;
 
 function onMouseDrag(event) {
@@ -242,7 +242,7 @@ To set both the minimum and maximum distances we can set the <api Tool#fixedDist
 The following example creates circle shaped paths while you drag. By setting <api Tool#fixedDistance>tool.fixedDistance</api> to <code 30 />, the circles are created at strict 30pt intervals.
 
 Click and drag below to try it out:
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 project.currentStyle.fillColor = 'black';
 
 tool.fixedDistance = 30;
@@ -265,7 +265,7 @@ Since the path will contains way too many points, we simplify it using <api Path
 
 Try it out by clicking and dragging below:
 
-<paperscript height=320 width=540 style='background:#e4e1e1' split=true>
+<paperscript height=320 style='background:#e4e1e1' split=true>
 // Call the onMouseDrag function every 30 ms:
 tool.eventInterval = 30;
 

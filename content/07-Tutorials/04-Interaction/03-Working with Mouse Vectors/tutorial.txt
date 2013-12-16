@@ -2,7 +2,7 @@ In this tutorial we will make a mouse tool that acts like a brush, with a variab
 
 Click and drag below to try it out:
 
-<paperscript height=420 width=540 style='background:#e4e1e1'>
+<paperscript height=420 style='background:#e4e1e1'>
 tool.minDistance = 10;
 tool.maxDistance = 45;
 
@@ -44,7 +44,7 @@ We'll start by making a simple mouse tool that creates a new path when you click
 
 Click and drag below to try it out:
 
-<paperscript height=420 width=540 style='background:#e4e1e1'>
+<paperscript height=420 style='background:#e4e1e1'>
 // The minimum distance the mouse has to drag
 // before firing the next onMouseDrag event:
 tool.minDistance = 10;
@@ -129,7 +129,7 @@ Next we will change our earlier script to express the speed of the mouse while d
 
 Click and drag below to try it out:
 
-<paperscript height=420 width=540 style='background:#e4e1e1'>
+<paperscript height=420 style='background:#e4e1e1'>
 tool.minDistance = 10;
 
 var path;
@@ -223,7 +223,7 @@ line.add(bottom);
 
 Next we will make another path which we add the skeleton points to each time the <api Tool#onMouseDrag /> handler function is called. 
 
-<paperscript height=420 width=540 style='background:#e4e1e1'>
+<paperscript height=420 style='background:#e4e1e1'>
 tool.minDistance = 10;
 tool.maxDistance = 45;
 
@@ -306,7 +306,7 @@ Now we will smooth the path and fill it with a random color.
 
 Click and drag below to try it out:
 
-<paperscript height=420 width=540 style='background:#e4e1e1'>
+<paperscript height=420 style='background:#e4e1e1'>
 tool.minDistance = 10;
 tool.maxDistance = 45;
 
@@ -407,7 +407,7 @@ And also in the onMouseUp function:
 
 <title>Adding Brush Stroke Ends</title>
 
-<paperscript height=420 width=540 style='background:#e4e1e1'>
+<paperscript height=420 style='background:#e4e1e1'>
 tool.fixedDistance = 30;
 
 var path;
