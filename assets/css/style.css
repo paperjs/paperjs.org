@@ -282,6 +282,16 @@ section {
   .donation select {
     margin-right: 0.35em; }
 
+.note {
+  padding: 8px;
+  margin: 0 10px 19px;
+  background: #f4f4f4;
+  clear: both; }
+  .note .resource {
+    margin: 0; }
+  .note > :last-child {
+    margin-bottom: -20px; }
+
 /* Blocks */
 .block {
   display: table;
