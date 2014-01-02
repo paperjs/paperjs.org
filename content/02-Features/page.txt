@@ -34,7 +34,7 @@ Learn more about the Document Object Model in the <url "http://www.scriptographe
 <title>Paths & Segments</title>
 
 Paper.js makes is very easy to create paths and add segments to them. After adding, the segments can be easily inspected, manipulated, moved around, removed etc.
-<paperscript width=540 height=250>
+<paperscript height=250>
 var y = view.size.height / 2;
 var width = view.size.width;
 var vector = new Point({
@@ -130,7 +130,7 @@ function onMouseUp(event) {
 
 The event object that is passed to the event handler includes many handy properties that describe the movement and position of the mouse. Learn more about mouse events in the <url "http://scriptographer.org/tutorials/interaction/mouse-tool-events/">Mouse Events</url> tutorial.
 
-<paperscript width=540 height=320 style='background-color:#000'>
+<paperscript height=320 style='background-color:#000'>
 tool.fixedDistance = 20;
 
 var layer = project.activeLayer;
@@ -183,7 +183,7 @@ function onMouseDrag(event) {
 
 The following example shows some keyboard interaction. Click on the canvas to get keyboard focus and steer with your arrow keys:
 
-<paperscript width=540 height=320 style='background-color:#000'>
+<paperscript height=320 style='background-color:#000'>
 function onFrame() {
 	if (Key.isDown('left'))
 		sperm.left();
@@ -350,7 +350,7 @@ project.importSVG(document.getElementById('svg-import'));
 <script type="text/javascript" src="/assets/js/base64.js"></script>
 </html>
 Have fun with this interactive Voronoi example, click to add new cells, and once you like the result, press the <em>Download as SVG</em> button to download the result as an SVG file that you can open directly in Adobe Illustrator and other vector editing applications:
-<paperscript width=540 height=405 source=false>
+<paperscript height=405 source=false>
 var voronoi =  new Voronoi();
 var sites = generateBeeHivePoints(view.size / 115, true);
 var bbox, diagram;
@@ -545,7 +545,7 @@ Learn more about working with images in the <page "/tutorials/images/" /> tutori
 <title>Symbols</title>
 Symbols allow you to place multiple instances of an item in your project. This can save memory, since all instances of a symbol simply refer to the original item and it can speed up moving around complex objects, since internal properties such as segment lists and gradient positions don't need to be updated with every transformation.
 
-<paperscript width=540 height=320 style="background:black">
+<paperscript height=320 style="background:black">
 // The amount of symbol we want to place;
 var count = 50;
 
@@ -624,7 +624,7 @@ function keepInView(item) {
 <title>Selection Outlines</title>
 When you select items or path segment points & handles in your code, Paper.js draws the visual outlines of them on top of your project. This is very useful for debugging, as it allows you to see the construction of paths, position of path curves, individual segment points and bounding boxes of symbol and raster items:
 
-<paperscript split=true width=540 height=160>
+<paperscript split=true height=160>
 var circle = new Path.Circle({
 	center: [160, 80],
 	radius: 50

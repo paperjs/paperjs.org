@@ -42,7 +42,6 @@ article {
 	}
 
 	// Lists
-	$list-indent: 0.5em;
 
 	ul,
 	ol {
@@ -59,11 +58,13 @@ article {
 	}
 
 	ul > li {
-		text-indent: -1em;
-		margin-left: 1em;
+		$list-indent: 1em;
+
+		text-indent: -$list-indent;
+		margin-left: $list-indent;
 		&:before {
-			content: "-";
-			padding-right: $list-indent;
+			content: "–";
+			padding-right: $list-indent - 0.7em;
 		}
 	}
 
@@ -80,37 +81,6 @@ article {
 			content: counter(item, upper-latin) ") ";
 			counter-increment: item;
 			width: 1.5em;
-		}
-	}
-
-	$quote-indent: 0.4em;
-	$paragraph-indent: $quote-indent + $list-indent;
-
-	blockquote {
-		margin: 0;
-
-		p {
-			padding-left: $paragraph-indent;
-
-			&:first-child {
-				text-indent: -$paragraph-indent;
-				&:before {
-					content: "“";
-					padding-right: $list-indent;
-				}
-			}
-
-			&:last-child:after {
-				content: "”";
-			}
-		}
-	}
-
-	cite {
-		font-style: normal;
-		&:before {
-			content: "–";
-			padding-right: $list-indent;
 		}
 	}
 }

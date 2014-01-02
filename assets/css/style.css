@@ -9,13 +9,11 @@ article,
 figure,
 figcaption {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0; }
 
 a {
   outline: none;
-  border: 0; }
-
-img {
   border: 0; }
 
 ul,
@@ -50,24 +48,6 @@ textarea {
 
 a {
   text-decoration: none; }
-
-a:focus {
-  outline: none; }
-
-form,
-img {
-  margin: 0;
-  border: 0; }
-
-/* Tables */
-table {
-  border-spacing: 0;
-  margin: 0;
-  border: 0; }
-
-td {
-  padding: 0;
-  vertical-align: top; }
 
 /* Fonts */
 @font-face {
@@ -278,8 +258,8 @@ article {
     text-indent: -1em;
     margin-left: 1em; }
     article ul > li:before {
-      content: "-";
-      padding-right: 0.5em; }
+      content: "–";
+      padding-right: 0.3em; }
   article ol {
     counter-reset: item; }
   article ol > li {
@@ -291,22 +271,6 @@ article {
       content: counter(item,upper-latin) ") ";
       counter-increment: item;
       width: 1.5em; }
-  article blockquote {
-    margin: 0; }
-    article blockquote p {
-      padding-left: 0.9em; }
-      article blockquote p:first-child {
-        text-indent: -0.9em; }
-        article blockquote p:first-child:before {
-          content: "“";
-          padding-right: 0.5em; }
-      article blockquote p:last-child:after {
-        content: "”"; }
-  article cite {
-    font-style: normal; }
-    article cite:before {
-      content: "–";
-      padding-right: 0.5em; }
 
 section {
   clear: both;
