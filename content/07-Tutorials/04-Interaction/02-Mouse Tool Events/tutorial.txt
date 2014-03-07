@@ -77,7 +77,7 @@ tool.minDistance = 10;
 
 function onMouseDrag(event) {
 	var path = new Path();
-	path.fillColor = 'black';
+	path.strokeColor = 'black';
 	var vector = event.delta;
 
 	// rotate the vector by 90 degrees:
