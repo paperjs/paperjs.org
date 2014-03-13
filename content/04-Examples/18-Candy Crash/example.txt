@@ -1,4 +1,4 @@
-<paperscript resize=true background=black explain=true>
+<paperscript resize=true background=black explain='This example was brought to you by http://kynd.info, 2014'>
 // kynd.info 2014
 
 function Ball(r, p, v) {

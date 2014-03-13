@@ -311,11 +311,15 @@ function createPaperScript(element) {
 
 	if (explain) {
 		explain.addClass('hidden');
+		var text = explain.html().replace(/http:\/\/([\w.]+)/g, function(url, domain) {
+			return '<a href="' + url + '">' + domain + '</a>';
+		}).trim();
 		// Add explanation bubbles to tickle the visitor's fancy
 		var explanations = [{
 			index: 0,
 			list: [
-				[4, ''],
+				[text ? 4 : 3, text || ''],
+				[1, ''],
 				[4, '<b>Note:</b> You can view and even edit<br>the source right here in the browser'],
 				[1, ''],
 				[3, 'To do so, simply press the <b>Source</b> button &rarr;']
