@@ -399,7 +399,7 @@ function createPaperScript(element) {
 			scope.clear();
 			scope.initialize(script[0]);
 			scope.setup(element);
-			scope.evaluate(code);
+			scope.execute(code);
 		}
 	}
 
