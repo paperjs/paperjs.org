@@ -14,7 +14,7 @@ module.exports = {
 			}
 			var source = attrs.source;
 			var split = attrs.split === 'true';
-			var explain = attrs.explain === 'true';
+			var explain = attrs.explain;
 			var background = attrs.background;
 			var border = attrs.border;
 			delete attrs.source;
@@ -43,8 +43,16 @@ module.exports = {
 			if (source !== 'false') {
 				parts.push(
 					'<div class="buttons">',
-						'<div class="button run">Source</div>',
-						explain ? '<div class="explain"></div>' : '',
+						'<div class="button run">Source</div>'
+				);
+				if (explain && explain !== 'false') {
+					parts.push(
+						'<div class="explain">',
+							explain !== 'true' ? explain : '',
+						'</div>'
+					);
+				}
+				parts.push(
 					'</div>'
 				);
 			}
