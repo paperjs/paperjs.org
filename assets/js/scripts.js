@@ -441,7 +441,10 @@ function createPaperScript(element) {
 		// which happens on the load event. This is needed because we rely
 		// on paper.js performing the actual resize magic.
 		$(window).load(function() {
-			$(window).resize(resize);
+			// We need to use the same event mechanism as paper.js to receive
+			// the resize event after the internal paper.js one.
+			// TODO: Use view.on('resize') instead?
+			paper.DomEvent.add(window, { resize: resize });
 		});
 		hasBorders = false;
 		source.css('border-width', '0 0 0 1px');
