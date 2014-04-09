@@ -224,8 +224,8 @@ The next example illustrates how easy it is to create multiple drawing tools and
 </script>
 </head>
 <body>
-	<a href="javascript:tool1.activate();">Lines</a>
-	<a href="javascript:tool2.activate();">Clouds</a>
+    <a href="#" onclick="tool1.activate();">Lines</a>
+    <a href="#" onclick="tool2.activate();">Clouds</a>
 	<canvas id="myCanvas" resize></canvas>
 </body>
 </html>
