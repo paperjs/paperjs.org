@@ -4,9 +4,9 @@
 -   return /nightly/.test(name1) ? 1 : parseInt(name1.match(/(\d*)$/)[1]) < parseInt(name2.match(/(\d*)$/)[1]);
 - });
 for file in files
-  version = file.name.split('-')[1]
+  - version = file.name.split('-')[1]
   if !/^v/.test(version)
-    version = version.charAt(0).toUpperCase() + version.slice(1)
+    - version = version.charAt(0).toUpperCase() + version.slice(1)
   .download
     .image
         a.nohover(href=file.url)
