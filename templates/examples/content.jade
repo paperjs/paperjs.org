@@ -1,4 +1,4 @@
 .thumbnails
-  list = page.children
+  - list = page.children
   for child in page.flip == 'true' ? list.flip() : list
     !{template('thumbnail', child)}
