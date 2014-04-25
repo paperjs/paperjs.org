@@ -1,4 +1,4 @@
-<title>Project Hierachy</title>
+<title>Project Hierarchy</title>
 The structure of a Paper.js project is based on the same stacking order principle that graphic design applications such as Adobe Illustrator and Adobe Photoshop use.
 
 In exactly the same way that these applications have a layer palette, Paper.js has a list of layers: <api Project#layers />. Whenever the view is redrawn, Paper.js runs through the items in these layers and draws them in order of appearance.
