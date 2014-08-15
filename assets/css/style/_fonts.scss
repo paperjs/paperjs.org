@@ -4,7 +4,7 @@
 @include font-face("Akkurat-Mono", "http://assets.paperjs.org/fonts/akkurat-mono", normal, normal);
 @include font-face("Executive", "http://assets.paperjs.org/fonts/executive-regular", normal, normal);
 @include font-face("Executive", "http://assets.paperjs.org/fonts/executive-italic", normal, italic);
-@include font-face("Executive", "http://assets.paperjs.org/fonts/executive-bold", bold, normal);
+@include font-face("Executive", "http://assets.paperjs.org/fonts/executive-medium", bold, normal);
 
 .CodeMirror {
 	&,
@@ -62,13 +62,21 @@ textarea,
 	padding: 0;
 }
 
-.tutorial h2 {
-	// font-weight: bold;
-	font-size: 20px;
-	line-height: 28px; // x 1.4
-	border: 0;
-	margin-top: 0;
-	margin-bottom: 10px;
+.tutorial {
+	h2 {
+		// FAQ, etc.
+		// font-weight: bold;
+		font-size: 20px;
+		line-height: 28px; // x 1.4
+		border: 0;
+		// Some offsets fo scroll targets
+		padding-top: 30px;
+		margin-top: -30px;
+	}
+
+	section {
+		margin-bottom: 30px;
+	}
 }
 
 tt,

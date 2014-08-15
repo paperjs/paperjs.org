@@ -32,7 +32,8 @@ article {
 
 aside {
 	&,
-	h1 {
+	h1,
+	.fixed {
 		width: $right-width;
 	}
 }

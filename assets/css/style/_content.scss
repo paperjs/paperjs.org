@@ -96,7 +96,7 @@ section {
 	float: left;
 
 	& + & {
-		margin-left: $line-height;
+		margin-left: 20px;
 	}
 }
 
