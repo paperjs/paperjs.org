@@ -2,7 +2,7 @@
 - content = template("content")
 article(class=inPath(root.get('tutorials')) ? 'tutorial' : page.type)
   if !param.titles || !param.titles.length || !param.titles[0].isFirst
-    h1 !{page.title}
-  !{content}
+    h1!= page.title
+  != content
 aside
-  !{template('aside', page)}
+  != template('aside', page)
