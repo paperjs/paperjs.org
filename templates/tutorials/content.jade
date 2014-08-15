@@ -2,9 +2,9 @@ each group in page.children.inGroupsOf(2)
   .row
     each category in group
       .column
-        h2 #{category.name}
-        p.tutorial-overview.small #{category.content}
+        h2= category.name
+        p.tutorial-overview.small= category.content
         ul.tutorial-index
           each tutorial in category.children
             li
-              a(href=tutorial.url) #{tutorial.title}
+              a(href=tutorial.url)= tutorial.title

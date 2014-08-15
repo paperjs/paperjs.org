@@ -3,4 +3,4 @@ if page.parent && !page.parent.parent && inPath(page) && page.name != 'Reference
     for entry in (page.flip == 'true' ? page.children.flip() : page.children)
       if /^(page|tutorial|example)$/.test(entry.type)
         li(class=inPath(entry) ? 'active' : undefined)
-          a(href=entry.link || entry.url) #{entry.title}
+          a(href=entry.link || entry.url)= entry.title
