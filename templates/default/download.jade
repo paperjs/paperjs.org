@@ -16,6 +16,6 @@ for file in files
         br
         | Release Date: #{formatDate(versionDate(version, file))}
         br
-        a(href=file.url) #{file.filename}
+        a(href=file.url)= file.filename
         |  (#{file.humanSize})
       .clear

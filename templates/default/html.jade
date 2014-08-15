@@ -4,6 +4,6 @@ html
   body
     nav
       h1
-        a(href=root.url) #{root.title}
+        a(href=root.url)= root.title
       != template('menu', root, param)
     != template('page', page, param)
