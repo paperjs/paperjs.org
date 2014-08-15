@@ -1,3 +1,0 @@
-title: Google Chrome Racer
-link: http://www.chrome.com/racer
-description: Google Creative Lab: “Rendering our custom tracks and fluid car movements required a solid JavaScript vector library. Paper.js can handle the path math without getting lapped.”

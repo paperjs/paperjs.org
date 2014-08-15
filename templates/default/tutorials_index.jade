@@ -4,7 +4,7 @@ ul.tutorial-index
       li.expandable-list(class=(inPath(child) ? 'expanded' : undefined))
         b
           a(href=child.url) #{child.title}
-        !{template('tutorials_index', child)}
+        != template('tutorials_index', child)
     else if inPath(child)
       li.active
         span #{child.title}

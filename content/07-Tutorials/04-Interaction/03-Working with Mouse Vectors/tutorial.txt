@@ -344,7 +344,7 @@ function onMouseUp(event) {
 
 Here is the updated script, with the new lines of code highlighted:
 
-<code highlight="2,8-12,26,32">
+<code highlight="8-12,26,32">
 tool.minDistance = 10;
 tool.maxDistance = 45;
 

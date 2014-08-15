@@ -3,8 +3,6 @@ Paper.js allows you to create path items with predefined shapes of variable dime
 In the same way that the <api Path() /> constructor creates an empty path with no points, we have constructors such as <api Path.Circle(center,radius) /> and <api Path.Rectangle(point,size) /> that create paths and automatically add segments to them to create predefined shapes.
 Paper.js allows you to create path items with predefined shapes of variable dimensions.
 
-In the same way that the <api Path() /> constructor creates an empty path with no points, we have constructors such as <api Path.Circle(center,radius) /> and <api Path.Rectangle(point,size) /> that create paths and automatically add segments to them to create predefined shapes.
-
 <title>Circle Shaped Paths</title>
 
 Using the <api Path.Circle(center,radius) /> constructor, we can produces circle shaped paths.

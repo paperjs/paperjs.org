@@ -1,9 +1,9 @@
-!!! 5
+doctype html
 html
-  !{template('head', root, param)}
+  != template('head', page, param)
   body
     nav
       h1
         a(href=root.url) #{root.title}
-      !{template('menu', root, param)}
-    !{template('page', page, param)}
+      != template('menu', root, param)
+    != template('page', page, param)

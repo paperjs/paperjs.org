@@ -311,11 +311,15 @@ function createPaperScript(element) {
 
 	if (explain) {
 		explain.addClass('hidden');
+		var text = explain.html().replace(/http:\/\/([\w.]+)/g, function(url, domain) {
+			return '<a href="' + url + '">' + domain + '</a>';
+		}).trim();
 		// Add explanation bubbles to tickle the visitor's fancy
 		var explanations = [{
 			index: 0,
 			list: [
-				[4, ''],
+				[text ? 4 : 3, text || ''],
+				[1, ''],
 				[4, '<b>Note:</b> You can view and even edit<br>the source right here in the browser'],
 				[1, ''],
 				[3, 'To do so, simply press the <b>Source</b> button &rarr;']
@@ -399,7 +403,7 @@ function createPaperScript(element) {
 			scope.clear();
 			scope.initialize(script[0]);
 			scope.setup(element);
-			scope.evaluate(code);
+			scope.execute(code);
 		}
 	}
 
@@ -441,7 +445,10 @@ function createPaperScript(element) {
 		// which happens on the load event. This is needed because we rely
 		// on paper.js performing the actual resize magic.
 		$(window).load(function() {
-			$(window).resize(resize);
+			// We need to use the same event mechanism as paper.js to receive
+			// the resize event after the internal paper.js one.
+			// TODO: Use view.on('resize') instead?
+			paper.DomEvent.add(window, { resize: resize });
 		});
 		hasBorders = false;
 		source.css('border-width', '0 0 0 1px');
