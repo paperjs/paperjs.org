@@ -11,7 +11,7 @@
 	textarea,
 	pre {
 		font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
-		font-size: 12px;
+		font-size: 13px;
 	}
 }
 
@@ -65,7 +65,7 @@ textarea,
 .tutorial h2 {
 	// font-weight: bold;
 	font-size: 20px;
-	line-height: $line-height;
+	line-height: 28px; // x 1.4
 	border: 0;
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -74,5 +74,5 @@ textarea,
 tt,
 pre {
 	font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
-	font-size: 12px;
+	font-size: 13px;
 }

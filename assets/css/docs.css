@@ -1,9 +1,9 @@
 .reference h1,
 .reference h2,
 .reference h3 {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
-  height: 18px;
+  height: 19px;
   border-bottom: 1px solid;
   margin-top: 0;
   margin-bottom: 16px; }
@@ -23,6 +23,11 @@
   margin: 0;
   padding: 0;
   list-style: none; }
+.reference ul > li {
+  text-indent: 0;
+  margin-left: 0; }
+.reference ul > li:before {
+  display: none; }
 .reference .reference-list ul,
 .reference .reference-inherited ul {
   margin-left: 16px; }
@@ -59,13 +64,13 @@
   *zoom: 1; }
   .reference .member-header .member-link {
     float: left; }
+  .reference .member-header .member-close {
+    float: right; }
   .reference .member-header:before, .reference .member-header:after {
     content: " ";
     display: table; }
   .reference .member-header:after {
     clear: both; }
-.reference .member-close {
-  float: right; }
 .reference .member-text {
   border-top: 1px dashed #999;
   padding: 10px 10px 0 10px;
@@ -87,11 +92,17 @@ input,
 textarea {
   font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif; }
 
+.CodeMirror,
+.CodeMirror textarea,
+.CodeMirror pre {
+  font-family: Menlo, Consolas, "Vera Mono", monospace;
+  font-size: 13px; }
+
 body {
   background: #fff;
   margin: 16px;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 21px;
   color: #333333;
   max-width: 540px; }
 
@@ -105,8 +116,8 @@ textarea {
 tt,
 pre {
   font-family: Menlo, Consolas, "Vera Mono", monospace;
-  font-size: 12px;
-  line-height: 20px; }
+  font-size: 13px;
+  line-height: 21px; }
 
 a {
   color: #333333;
@@ -119,7 +130,7 @@ img {
   border: 0; }
 
 p {
-  margin: 0 0 20px 0; }
+  margin: 0 0 21px 0; }
 
 ul,
 ol {
@@ -151,21 +162,19 @@ ol {
   border: none; }
 
 .footer {
-  margin-top: 20px; }
+  margin-top: 21px; }
 
-.CodeMirror {
-  overflow: auto;
+.CodeMirror pre {
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  background: transparent; }
+.paperscript .CodeMirror {
   height: 100%; }
-  .CodeMirror,
-  .CodeMirror textarea,
-  .CodeMirror pre {
-    font-family: Menlo, Consolas, "Vera Mono", monospace;
-    font-size: 12px; }
-  .CodeMirror pre {
-    line-height: 16px;
-    margin: 0;
-    padding: 0;
-    background: transparent; }
+
+.CodeMirror-scroll {
+  min-height: 100%;
+  overflow: auto; }
 
 .CodeMirror-gutter {
   position: absolute;
@@ -246,46 +255,47 @@ span.cm-attribute {
   font-style: italic;
   color: #3b5bb5; }
 
-.paperscript .buttons {
-  position: absolute;
-  right: 0;
-  z-index: 1; }
-.paperscript .button,
-.paperscript .explain {
-  float: right;
-  display: none;
-  font-size: 11px;
-  line-height: 16px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 8px 8px 0 0; }
-.paperscript .button {
-  background: #eee; }
-.paperscript .explain {
-  background: #e3f4fc; }
-.paperscript .explain,
-.paperscript .buttons-context:hover .button {
-  display: inline-block; }
-.paperscript .button:hover {
-  background: #ddd;
-  cursor: pointer; }
-.paperscript .tools {
-  display: inline; }
-.paperscript .source {
-  overflow: auto;
-  border: 1px solid #999; }
-.paperscript .CodeMirror {
-  margin: 0 !important; }
-.paperscript .CodeMirror-gutter-text,
-.paperscript .CodeMirror-lines {
-  padding-top: 10px;
-  padding-bottom: 10px; }
-.paperscript .canvas {
-  line-height: 0; }
-.paperscript .canvas.border canvas {
-  border: 1px solid #999; }
-.paperscript.split .canvas {
-  border: 1px solid #999;
-  border-top: 0; }
+.paperscript {
+  position: relative; }
+  .paperscript .buttons {
+    position: absolute;
+    right: 0;
+    z-index: 1; }
+  .paperscript .button,
+  .paperscript .explain {
+    float: right;
+    display: none;
+    font-size: 11px;
+    line-height: 16px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin: 8px 8px 0 0; }
+  .paperscript .button {
+    background: #eee; }
+  .paperscript .explain {
+    background: #e3f4fc; }
+  .paperscript .explain, .paperscript:hover .button {
+    display: inline-block; }
+  .paperscript .button:hover {
+    background: #ddd;
+    cursor: pointer; }
+  .paperscript .tools {
+    display: inline; }
+  .paperscript .source {
+    overflow: auto;
+    border: 1px solid #999; }
+  .paperscript .CodeMirror {
+    margin: 0 !important; }
+  .paperscript .CodeMirror-gutter-text,
+  .paperscript .CodeMirror-lines {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .paperscript .canvas {
+    line-height: 0; }
+  .paperscript .canvas.border canvas {
+    border: 1px solid #999; }
+  .paperscript.split .canvas {
+    border: 1px solid #999;
+    border-top: 0; }
