@@ -1,12 +1,13 @@
 <paperscript resize=true explain=true>
 var words = project.importSVG(document.getElementById('svg'));
+words.visible = true; // Turn off the effect of display:none;
 words.fillColor = null;
 words.strokeColor = 'black';
 
 var yesGroup = words.children.yes;
 var noGroup = words.children.no;
-yesGroup.transformContent = true;
-noGroup.transformContent = true;
+yesGroup.applyMatrix = true;
+noGroup.applyMatrix = true;
 
 // Resize the words to fit snugly inside the view:
 project.activeLayer.fitBounds(view.bounds);
