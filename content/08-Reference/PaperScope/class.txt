@@ -70,6 +70,32 @@ since they are not updated in the injected scope if scopes are switched.</p>
 </div>
 		
 			
+<div id="settings" class="member">
+<div class="member-link">
+<a name="settings" href="#settings"><tt><b>settings</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>Gives access to paper's configurable settings.</p>
+<p><b>settings.applyMatrix:</b></p>
+<p><b>settings.handleSize:</b></p>
+<p><b>settings.hitTolerance:</b></p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Object</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
 <div id="project" class="member">
 <div class="member-link">
 <a name="project" href="#project"><tt><b>project</b></tt></a>
@@ -150,8 +176,6 @@ since they are not updated in the injected scope if scopes are switched.</p>
 <div class="member-text">
 	<p>The reference to the active tool.</p>
 	
-		<p>Read only.</p>
-	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -205,7 +229,11 @@ since they are not updated in the injected scope if scopes are switched.</p>
 	<p>Injects the paper scope into any other given scope. Can be used for
 examle to inject the currently active PaperScope into the window's global
 scope, to emulate PaperScript-style globally accessible Paper classes and
-objects:</p>
+objects.</p>
+<p><b>Please note:</b> Using this method may override native constructors
+(e.g. Path, RGBColor). This may cause problems when using Paper.js in
+conjunction with other libraries that rely on these constructors. Keep
+the library scoped if you encounter issues caused by this.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -232,9 +260,9 @@ objects:</p>
 </div>
 		
 			
-<div id="setup-canvas" class="member">
+<div id="setup-element" class="member">
 <div class="member-link">
-<a name="setup-canvas" href="#setup-canvas"><tt><b>setup</b>(canvas)</tt></a>
+<a name="setup-element" href="#setup-element"><tt><b>setup</b>(element)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -244,15 +272,33 @@ a <a href="/reference/view"><tt>View</tt></a> for it, both linked to this scope.
 <ul><b>Parameters:</b>
 
 <li>
-<tt>canvas:</tt> 
-<tt>HTMLCanvasElement</tt>
-&mdash;&nbsp;The canvas this scope should be
-associated with.
+<tt>element:</tt> 
+<tt>HTMLCanvasElement</tt> / <tt>String</tt>
+&mdash;&nbsp;the HTML canvas element this
+scope should be associated with, or an ID string by which to find the
+element.
 
 </li>
 
 </ul>
 
+	
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="activate" class="member">
+<div class="member-link">
+<a name="activate" href="#activate"><tt><b>activate</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Activates this PaperScope, so all newly created items will be placed
+in its active project.</p>
+	
 	
 	
 	
@@ -272,8 +318,7 @@ associated with.
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Retrieves a PaperScope object with the given id or associated with
-the passed canvas element.</p>
+	<p>Retrieves a PaperScope object with the given scope id.</p>
 	
 <ul><b>Parameters:</b>
 

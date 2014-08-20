@@ -64,13 +64,13 @@ fired.</p>
 
 
 <pre class="code">function onMouseDrag(event) {
-	// the position of the mouse when it is dragged
-	console.log(event.point);
+    // the position of the mouse when it is dragged
+    console.log(event.point);
 }
 
 function onMouseUp(event) {
-	// the position of the mouse when it is released
-	console.log(event.point);
+    // the position of the mouse when it is released
+    console.log(event.point);
 }</pre>
 
 </div>
@@ -246,7 +246,7 @@ that it is contained within is returned.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;A string representation of the tool event.
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the tool event
 </li>
 	
 	</ul>

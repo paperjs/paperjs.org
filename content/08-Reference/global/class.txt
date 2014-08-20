@@ -1,7 +1,12 @@
 <div class="reference-class">
 
 
-
+<p>When code is executed as PaperScript, the script's scope is populated with
+all fields of the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object, which within
+the script appear to be global.</p>
+<p>In a JavaScript context, only the <a href="/reference/global#paper"><tt>paper</tt></a> variable is added to the
+global scope, referencing the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object,
+through which all properties and Paper.js classes can be accessed.</p>
 
 </div>
 
@@ -35,7 +40,7 @@
 </div>
 		
 			
-	<h3>Global PaperScope Properties (for PaperScript)</h3>
+	<h3>Global PaperScript Properties</h3>
 
 <div id="project" class="member">
 <div class="member-link">
@@ -44,7 +49,10 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The currently active project.</p>
+	<p>The project for which the PaperScript is executed.</p>
+<p>Note that when working with mulitple projects, this does not necessarily
+reflect the currently active project. For this, use
+<a href="/reference/paperscope#project"><tt>paperScope.project</tt></a> instead.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -90,7 +98,10 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The reference to the active project's view.</p>
+	<p>The reference to the project's view.</p>
+<p>Note that when working with mulitple projects, this does not necessarily
+reflect the view of the currently active project. For this, use
+<a href="/reference/paperscope#view"><tt>paperScope.view</tt></a> instead.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -113,7 +124,11 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The reference to the active tool.</p>
+	<p>The reference to the tool object which is automatically created when global
+tool event handlers are defined.</p>
+<p>Note that when working with mulitple tools, this does not necessarily
+reflect the currently active tool. For this, use <a href="/reference/paperscope#tool"><tt>paperScope.tool</tt></a>
+instead.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -152,7 +167,7 @@
 </div>
 		
 			
-	<h3>View Event Handlers (for PaperScript)</h3>
+	<h3>PaperScript View Event Handlers</h3>
 
 <div id="onframe" class="member">
 <div class="member-link">
@@ -161,7 +176,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>A reference to the <a href="/reference/view#onframe"><tt>view.onFrame</tt></a> handler function.</p>
+	<p>A global reference to the <a href="/reference/view#onframe"><tt>view.onFrame</tt></a> handler function.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -200,7 +215,7 @@
 </div>
 		
 			
-	<h3>Mouse Event Handlers (for PaperScript)</h3>
+	<h3>PaperScript Tool Event Handlers</h3>
 
 <div id="onmousedown" class="member">
 <div class="member-link">
@@ -344,66 +359,6 @@
 	</div>
 
 
-
-<!-- ============================== methods ================================ -->
-	<div class="reference-members"><h2>Methods</h2>
-		
-			
-<div id="initialize" class="member">
-<div class="member-link">
-<a name="initialize" href="#initialize"><tt><b>initialize</b>([precision])</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>precision:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the amount of fractional digits.
-&mdash;&nbsp;optional, default: <tt>5</tt>
-</li>
-
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="number-num" class="member">
-<div class="member-link">
-<a name="number-num" href="#number-num"><tt><b>number</b>(num)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Utility function for rendering numbers as strings at a precision of
-up to the amount of fractional digits.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>num:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the number to be converted to a string
-
-</li>
-
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
-		
-	</div>
 
 
 

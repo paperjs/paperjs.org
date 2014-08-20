@@ -358,7 +358,7 @@ belongs to.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>Specifies whether the handles of the curve are selected.</p>
+	<p>Specifies whether the points and handles of the curve are selected.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -494,32 +494,7 @@ handle.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> the curve is linear, <tt>false</tt> otherwise
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="reverse" class="member">
-<div class="member-link">
-<a name="reverse" href="#reverse"><tt><b>reverse</b>()</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Returns a reversed version of the curve, without modifying the curve
-itself.</p>
-	
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;a reversed version of the curve
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve is linear, <tt>false</tt> otherwise
 </li>
 	
 	</ul>
@@ -612,7 +587,7 @@ will result in two paths.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created path after splitting, if any
+<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path after splitting, if any
 </li>
 	
 	</ul>
@@ -622,6 +597,56 @@ will result in two paths.</p>
 	<tt><a href="/reference/path#split-index-parameter"><tt>path.split(index, parameter)</tt></a></tt>
 	</p>
 
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="reverse" class="member">
+<div class="member-link">
+<a name="reverse" href="#reverse"><tt><b>reverse</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns a reversed version of the curve, without modifying the curve
+itself.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;a reversed version of the curve
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="remove" class="member">
+<div class="member-link">
+<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Removes the curve from the path that it belongs to, by merging its two
+path segments.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve was removed, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
 	
 </div>
 </div>
@@ -664,7 +689,7 @@ will result in two paths.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;A string representation of the curve.
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the curve
 </li>
 	
 	</ul>
@@ -828,6 +853,42 @@ curve, <tt>null</tt> otherwise.</p>
 	
 		<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location of the specified point.
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="getoffsetof-point" class="member">
+<div class="member-link">
+<a name="getoffsetof-point" href="#getoffsetof-point"><tt><b>getOffsetOf</b>(point)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the length of the path from its beginning up to up to the
+specified point if it lies on the path, <tt>null</tt> otherwise.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point on the path.
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the length of the path up to the specified point.
 </li>
 	
 	</ul>

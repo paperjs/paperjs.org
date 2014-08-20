@@ -21,15 +21,15 @@ function (<a href="/reference/tool#onkeydown" onclick="return toggleMember('onke
 tool.distanceThreshold = 10;
 
 function onMouseDown(event) {
-	// Create a new path every time the mouse is clicked
-	path = new Path();
-	path.add(event.point);
-	path.strokeColor = 'black';
+    // Create a new path every time the mouse is clicked
+    path = new Path();
+    path.add(event.point);
+    path.strokeColor = 'black';
 }
 
 function onMouseDrag(event) {
-	// Add a point to the path every time the mouse is dragged
-	path.add(event.point);
+    // Add a point to the path every time the mouse is dragged
+    path.add(event.point);
 }</pre>
 
 </div>
@@ -144,13 +144,13 @@ about the mouse event.</p>
 
 <script type="text/paperscript" canvas="canvas-0">
 function onMouseDown(event) {
-	// Create a new circle shaped path with a radius of 10
-	// at the position of the mouse (event.point):
-	var path = new Path.Circle({
-		center: event.point,
-		radius: 10,
-		fillColor: 'black'
-	});
+    // Create a new circle shaped path with a radius of 10
+    // at the position of the mouse (event.point):
+    var path = new Path.Circle({
+        center: event.point,
+        radius: 10,
+        fillColor: 'black'
+    });
 }
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-0"></canvas></div>
@@ -194,12 +194,12 @@ contains information about the mouse event.</p>
 <script type="text/paperscript" canvas="canvas-1">
 // Create an empty path:
 var path = new Path({
-	strokeColor: 'black'
+    strokeColor: 'black'
 });
 
 function onMouseDrag(event) {
-	// Add a segment to the path at the position of the mouse:
-	path.add(event.point);
+    // Add a segment to the path at the position of the mouse:
+    path.add(event.point);
 }
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
@@ -243,15 +243,15 @@ about the mouse event.</p>
 <script type="text/paperscript" canvas="canvas-2">
 // Create a circle shaped path with a radius of 10 at {x: 0, y: 0}:
 var path = new Path.Circle({
-	center: [0, 0],
-	radius: 10,
-	fillColor: 'black'
+    center: [0, 0],
+    radius: 10,
+    fillColor: 'black'
 });
 
 function onMouseMove(event) {
-	// Whenever the user moves the mouse, move the path
-	// to that position:
-	path.position = event.point;
+    // Whenever the user moves the mouse, move the path
+    // to that position:
+    path.position = event.point;
 }
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
@@ -294,13 +294,13 @@ mouse event.</p>
 
 <script type="text/paperscript" canvas="canvas-3">
 function onMouseUp(event) {
-	// Create a new circle shaped path with a radius of 10
-	// at the position of the mouse (event.point):
-	var path = new Path.Circle({
-		center: event.point,
-		radius: 10,
-		fillColor: 'black'
-	});
+    // Create a new circle shaped path with a radius of 10
+    // at the position of the mouse (event.point):
+    var path = new Path.Circle({
+        center: event.point,
+        radius: 10,
+        fillColor: 'black'
+    });
 }
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-3"></canvas></div>
@@ -349,20 +349,20 @@ keys.</p>
 
 <script type="text/paperscript" canvas="canvas-4">
 // Create a circle shaped path:
-	var path = new Path.Circle({
-		center: new Point(50, 50),
-		radius: 30,
-		fillColor: 'red'
-	});
+    var path = new Path.Circle({
+        center: new Point(50, 50),
+        radius: 30,
+        fillColor: 'red'
+    });
 
 function onKeyDown(event) {
-	if (event.key == 'space') {
-		// Scale the path by 110%:
-		path.scale(1.1);
+    if (event.key == 'space') {
+        // Scale the path by 110%:
+        path.scale(1.1);
 
-		// Prevent the key event from bubbling
-		return false;
-	}
+        // Prevent the key event from bubbling
+        return false;
+    }
 }
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
@@ -403,9 +403,9 @@ keys.</p>
 
 
 <pre class="code">function onKeyUp(event) {
-	if (event.key == 'space') {
-		console.log('The spacebar was released!');
-	}
+    if (event.key == 'space') {
+        console.log('The spacebar was released!');
+    }
 }</pre>
 
 </div>
@@ -456,9 +456,9 @@ point to it and it will be the one that recieves mouse events.</p>
 			
 <h3>Event Handling</h3>
 
-<div id="on-type-function" class="member">
+<div id="attach-type-function" class="member">
 <div class="member-link">
-<a name="on-type-function" href="#on-type-function"><tt><b>on</b>(type, function)</tt></a>
+<a name="attach-type-function" href="#attach-type-function"><tt><b>attach</b>(type, function)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -491,9 +491,9 @@ occurs
 </div>
 		
 			
-<div id="on-param" class="member">
+<div id="attach-param" class="member">
 <div class="member-link">
-<a name="on-param" href="#on-param"><tt><b>on</b>(param)</tt></a>
+<a name="attach-param" href="#attach-param"><tt><b>attach</b>(param)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -504,7 +504,7 @@ occurs
 <li>
 <tt>param:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;An object literal containing one or more of the
+&mdash;&nbsp;an object literal containing one or more of the
 following properties: <tt>mousedown, mouseup, mousedrag, mousemove,
 keydown, keyup</tt>.
 
@@ -567,7 +567,7 @@ keydown, keyup</tt>.
 <li>
 <tt>param:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;An object literal containing one or more of the
+&mdash;&nbsp;an object literal containing one or more of the
 following properties: <tt>mousedown, mouseup, mousedrag, mousemove,
 keydown, keyup</tt>
 
@@ -603,7 +603,7 @@ keydown, keyup</tt>
 <li>
 <tt>event:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;An object literal containing properties describing
+&mdash;&nbsp;an object literal containing properties describing
 the event.
 
 </li>

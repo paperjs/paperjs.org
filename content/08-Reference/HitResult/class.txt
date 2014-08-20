@@ -27,8 +27,8 @@ point, the type would be 'segment'.</p>
 	
 	<ul><b>Type:</b>
 	<li>
-		<tt>String('segment', 'handle-in', 'handle-out', 'stroke', 'fill',
-'bounds', 'center', 'pixel')</tt>
+		<tt>String('segment', 'handle-in', 'handle-out', 'curve', 'stroke',
+'fill', 'bounds', 'center', 'pixel')</tt>
 	</li>
 	</ul>
 	
@@ -94,8 +94,8 @@ describes which corner of the bounding rectangle was hit.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>If the HitResult has a type of 'stroke', this property gives more
-information about the exact position that was hit on the path.</p>
+	<p>If the HitResult has a type of 'curve' or 'stroke', this property gives
+more information about the exact position that was hit on the path.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -143,7 +143,7 @@ of the pixel on the <a href="/reference/raster"><tt>Raster</tt></a> that was hit
 
 <div class="member-text">
 	<p>If the HitResult has a type of 'stroke', 'segment', 'handle-in' or
-'handle-out', this property refers to the Segment that was hit or that
+'handle-out', this property refers to the segment that was hit or that
 is closest to the hitResult.location on the curve.</p>
 	
 	

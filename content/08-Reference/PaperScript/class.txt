@@ -15,9 +15,9 @@
 	<div class="reference-members"><h2>Static Methods</h2>
 		
 			
-<div id="compile-code" class="member">
+<div id="compile-code-url" class="member">
 <div class="member-link">
-<a name="compile-code" href="#compile-code"><tt><b>PaperScript.compile</b>(code)</tt></a>
+<a name="compile-code-url" href="#compile-code-url"><tt><b>PaperScript.compile</b>(code, url)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -29,6 +29,13 @@
 <tt>code:</tt> 
 <tt>String</tt>
 &mdash;&nbsp;The PaperScript code.
+
+</li>
+
+<li>
+<tt>url:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;The url of the source, for source-map debugging.
 
 </li>
 
@@ -50,14 +57,16 @@
 </div>
 		
 			
-<div id="evaluate-code-scope" class="member">
+<div id="execute-code-scope-url" class="member">
 <div class="member-link">
-<a name="evaluate-code-scope" href="#evaluate-code-scope"><tt><b>PaperScript.evaluate</b>(code, scope)</tt></a>
+<a name="execute-code-scope-url" href="#execute-code-scope-url"><tt><b>PaperScript.execute</b>(code, scope, url)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Evaluates parsed PaperScript code in the passed <a href="/reference/paperscope"><tt>PaperScope</tt></a>
-object. It also installs handlers automatically for us.</p>
+	<p>Executes the parsed PaperScript code in a compiled function that receives
+all properties of the passed <a href="/reference/paperscope"><tt>PaperScope</tt></a> as arguments, to emulate
+a global scope with unaffected performance. It also installs global view
+and tool handlers automatically for you.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -71,21 +80,20 @@ object. It also installs handlers automatically for us.</p>
 <li>
 <tt>scope:</tt> 
 <a href="/reference/paperscript"><tt>PaperScript</tt></a>
-&mdash;&nbsp;The scope in which the code is executed.
+&mdash;&nbsp;The scope for which the code is executed.
+
+</li>
+
+<li>
+<tt>url:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;The url of the source, for source-map debugging.
 
 </li>
 
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Object</tt></tt>&nbsp;&mdash;&nbsp;The result of the code evaluation.
-</li>
-	
-	</ul>
-
 	
 	
 </div>

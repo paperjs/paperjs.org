@@ -105,7 +105,7 @@ the keyboard event.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;A string representation of the key event.
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the key event
 </li>
 	
 	</ul>

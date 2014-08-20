@@ -99,7 +99,7 @@ path.strokeColor = 'black';
 <li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;An object literal containing properties to
+&mdash;&nbsp;an object literal containing properties to
 be set on the segment.
 
 </li>
@@ -119,18 +119,18 @@ be set on the segment.
 
 <script type="text/paperscript" canvas="canvas-1">
 var firstSegment = new Segment({
-	point: [100, 50],
-	handleOut: [80, 100]
+    point: [100, 50],
+    handleOut: [80, 100]
 });
 
 var secondSegment = new Segment({
-	point: [300, 50],
-	handleIn: [-80, -100]
+    point: [300, 50],
+    handleIn: [-80, -100]
 });
 
 var path = new Path({
-	segments: [firstSegment, secondSegment],
-	strokeColor: 'black'
+    segments: [firstSegment, secondSegment],
+    strokeColor: 'black'
 });
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
@@ -235,7 +235,7 @@ two straight lines.</p>
 	
 	<ul><b>Type:</b>
 	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
+		<tt>Boolean</tt>
 	</li>
 	</ul>
 	
@@ -246,9 +246,9 @@ two straight lines.</p>
 </div>
 		
 			
-<div id="selected" class="member">
+<div id="selected-_point" class="member">
 <div class="member-link">
-<a name="selected" href="#selected"><tt><b>selected</b></tt></a>
+<a name="selected-_point" href="#selected-_point"><tt><b>selected</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -274,8 +274,8 @@ two straight lines.</p>
 
 <script type="text/paperscript" canvas="canvas-2">
 var path = new Path.Circle({
-	center: [80, 50],
-	radius: 40
+    center: [80, 50],
+    radius: 40
 });
 
 // Select the third segment point:
@@ -351,7 +351,8 @@ segment belongs to.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The curve that the segment belongs to.</p>
+	<p>The curve that the segment belongs to. For the last segment of an open
+path, the previous segment is returned.</p>
 	
 		<p>Read only.</p>
 	
@@ -457,6 +458,53 @@ segment is returned for the first segment of the path.</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
+<div id="iscolinear-segment" class="member">
+<div class="member-link">
+<a name="iscolinear-segment" href="#iscolinear-segment"><tt><b>isColinear</b>(segment)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns true if the the two segments are the beginning of two lines and
+if these two lines are running parallel.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>segment:</tt> 
+
+
+
+</li>
+
+</ul>
+
+	
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="isarc" class="member">
+<div class="member-link">
+<a name="isarc" href="#isarc"><tt><b>isArc</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns true if the segment at the given index is the beginning of an
+orthogonal arc segment. The code looks at the length of the handles and
+their relation to the distance to the imaginary corner point. If the
+relation is kappa, then it's an arc.</p>
+	
+	
+	
+	
+</div>
+</div>
+</div>
+		
+			
 <div id="reverse" class="member">
 <div class="member-link">
 <a name="reverse" href="#reverse"><tt><b>reverse</b>()</tt></a>
@@ -490,6 +538,14 @@ segment is returned for the first segment of the path.</p>
 	<p>Removes the segment from the path that it belongs to.</p>
 	
 	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the segment was removed, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
 	
 	
 </div>
@@ -509,11 +565,38 @@ segment is returned for the first segment of the path.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;A string representation of the segment.
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the segment
 </li>
 	
 	</ul>
 
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="transform-matrix" class="member">
+<div class="member-link">
+<a name="transform-matrix" href="#transform-matrix"><tt><b>transform</b>(matrix)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Transform the segment by the specified matrix.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>matrix:</tt> 
+<a href="/reference/matrix"><tt>Matrix</tt></a>
+&mdash;&nbsp;the matrix to transform the segment by
+
+</li>
+
+</ul>
+
+	
 	
 	
 </div>

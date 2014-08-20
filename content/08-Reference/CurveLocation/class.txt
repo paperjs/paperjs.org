@@ -68,9 +68,9 @@ etc.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="segment" class="member">
+<div id="segment-_preferFirst" class="member">
 <div class="member-link">
-<a name="segment" href="#segment"><tt><b>segment</b></tt></a>
+<a name="segment-_preferFirst" href="#segment-_preferFirst"><tt><b>segment</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -93,14 +93,14 @@ etc.</p>
 </div>
 		
 			
-<div id="curve" class="member">
+<div id="curve-_uncached" class="member">
 <div class="member-link">
-<a name="curve" href="#curve"><tt><b>curve</b></tt></a>
+<a name="curve-_uncached" href="#curve-_uncached"><tt><b>curve</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The curve by which the location is defined.</p>
+	<p>The curve that this location belongs to.</p>
 	
 		<p>Read only.</p>
 	
@@ -204,7 +204,8 @@ curve is part of a <a href="/reference/path"><tt>Path</tt></a> item.</p>
 
 <div class="member-text">
 	<p>The length of the path from its beginning up to the location described
-by this object.</p>
+by this object. If the curve is not part of a path, then the length
+within the curve is returned instead.</p>
 	
 		<p>Read only.</p>
 	
@@ -248,9 +249,9 @@ by this object.</p>
 </div>
 		
 			
-<div id="parameter" class="member">
+<div id="parameter-_uncached" class="member">
 <div class="member-link">
-<a name="parameter" href="#parameter"><tt><b>parameter</b></tt></a>
+<a name="parameter-_uncached" href="#parameter-_uncached"><tt><b>parameter</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -275,65 +276,15 @@ the curve).</p>
 </div>
 		
 			
-<div id="point" class="member">
+<div id="point-_uncached" class="member">
 <div class="member-link">
-<a name="point" href="#point"><tt><b>point</b></tt></a>
+<a name="point-_uncached" href="#point-_uncached"><tt><b>point</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
 	<p>The point which is defined by the <a href="/reference/curvelocation#curve" onclick="return toggleMember('curve', true);"><tt>curve</tt></a> and
 <a href="/reference/curvelocation#parameter" onclick="return toggleMember('parameter', true);"><tt>parameter</tt></a>.</p>
-	
-		<p>Read only.</p>
-	
-	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
-	</ul>
-	
-	
-</div>
-
-</div>
-</div>
-		
-			
-<div id="tangent" class="member">
-<div class="member-link">
-<a name="tangent" href="#tangent"><tt><b>tangent</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-<div class="member-text">
-	<p>The tangential vector to the <a href="/reference/curvelocation#curve" onclick="return toggleMember('curve', true);"><tt>curve</tt></a> at the given location.</p>
-	
-		<p>Read only.</p>
-	
-	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
-	</ul>
-	
-	
-</div>
-
-</div>
-</div>
-		
-			
-<div id="normal" class="member">
-<div class="member-link">
-<a name="normal" href="#normal"><tt><b>normal</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-<div class="member-text">
-	<p>The normal vector to the <a href="/reference/curvelocation#curve" onclick="return toggleMember('curve', true);"><tt>curve</tt></a> at the given location.</p>
 	
 		<p>Read only.</p>
 	
@@ -383,6 +334,43 @@ the curve).</p>
 	<div class="reference-members"><h2>Methods</h2>
 		
 			
+<div id="equals-location" class="member">
+<div class="member-link">
+<a name="equals-location" href="#equals-location"><tt><b>equals</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks whether tow CurveLocation objects are describing the same location
+on a path, by applying the same tolerances as elsewhere when dealing with
+curve time parameters.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>location:</tt> 
+<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the locations are equal, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
 <div id="tostring" class="member">
 <div class="member-link">
 <a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
@@ -395,7 +383,7 @@ the curve).</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;A string representation of the curve location.
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the curve location
 </li>
 	
 	</ul>

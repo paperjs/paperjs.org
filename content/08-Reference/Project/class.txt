@@ -5,7 +5,7 @@
 document: The top level object that holds all the items contained in the
 scene graph. As the term document is already taken in the browser context,
 it is called Project.</p>
-<p>Projects allow the manipluation of the styles that are applied to all newly
+<p>Projects allow the manipulation of the styles that are applied to all newly
 created items, give access to the selected items, and will in future versions
 offer ways to query for items in the scene graph defining specific
 requirements, and means to persist and load from different formats, such as
@@ -21,23 +21,25 @@ SVG and PDF.</p>
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="project-view" class="member">
+<div id="project-element" class="member">
 <div class="member-link">
-<a name="project-view" href="#project-view"><tt><b>Project</b>(view)</tt></a>
+<a name="project-element" href="#project-element"><tt><b>Project</b>(element)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Paper.js project.</p>
-<p>When working with PaperScript, a project is automatically created for us
-and the <a href="/reference/paperscope#project"><tt>paperScope.project</tt></a> variable points to it.</p>
+<p>Creates a Paper.js project containing one empty <a href="/reference/layer"><tt>Layer</tt></a>, referenced
+by <a href="/reference/project#activelayer"><tt>project.activeLayer</tt></a>.</p>
+<p>Note that when working with PaperScript, a project is automatically
+created for us and the <a href="/reference/paperscope#project"><tt>paperScope.project</tt></a> variable points to it.</p>
 
 <ul><b>Parameters:</b>
 
 <li>
-<tt>view:</tt> 
-<a href="/reference/view"><tt>View</tt></a> / <tt>HTMLCanvasElement</tt>
-&mdash;&nbsp;Either a view object or an HTML
-Canvas element that should be wrapped in a newly created view.
+<tt>element:</tt> 
+<tt>HTMLCanvasElement</tt> / <tt>String</tt>
+&mdash;&nbsp;the HTML canvas element that
+should be used as the element for the view, or an ID string by which to
+find the element.
 
 </li>
 
@@ -67,6 +69,8 @@ Canvas element that should be wrapped in a newly created view.
 
 <div class="member-text">
 	<p>The reference to the project's view.</p>
+	
+		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -111,9 +115,9 @@ created items will be styled with this style.</p>
 
 <script type="text/paperscript" canvas="canvas-0">
 project.currentStyle = {
-	fillColor: 'red',
-	strokeColor: 'black',
-	strokeWidth: 5
+    fillColor: 'red',
+    strokeColor: 'black',
+    strokeWidth: 5
 }
 
 // The following paths will take over all style properties of
@@ -192,30 +196,6 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 	<ul><b>Type:</b>
 	<li>
 		Array of <a href="/reference/item"><tt>Item</tt></a> objects
-	</li>
-	</ul>
-	
-	
-</div>
-
-</div>
-</div>
-		
-			
-<div id="options" class="member">
-<div class="member-link">
-<a name="options" href="#options"><tt><b>options</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-<div class="member-text">
-	<p><b>options.handleSize:</b> 
-<b>options.hitTolerance:</b></p>
-	
-	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Object</tt>
 	</li>
 	</ul>
 	
@@ -322,6 +302,49 @@ in it.</p>
 </div>
 		
 			
+<div id="clear" class="member">
+<div class="member-link">
+<a name="clear" href="#clear"><tt><b>clear</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Clears the project by removing all <a href="/reference/project#layers"><tt>project.layers</tt></a> and
+<a href="/reference/project#symbols"><tt>project.symbols</tt></a>.</p>
+	
+	
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="isempty" class="member">
+<div class="member-link">
+<a name="isempty" href="#isempty"><tt><b>isEmpty</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks whether the project has any content or not. Note that since
+projects by default are created with one empty layer, this returns also
+<tt>true</tt> if that layer exists but is itself empty.</p>
+	
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt></tt>&nbsp;&mdash;&nbsp;Boolean
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
 <div id="remove" class="member">
 <div class="member-link">
 <a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
@@ -379,29 +402,33 @@ removes its view, if one was defined.</p>
 <div class="member-text">
 	<p>Perform a hit test on the items contained within the project at the
 location of the specified point.</p>
-<p>The optional options object allows you to control the specifics of the
-hit test and may contain a combination of the following values:</p>
-<p><b>options.tolerance:</b> <tt>Number</tt> - The tolerance of the hit test
-in points.</p>
-<p><b>options.type:</b> Only hit test again a certain item
-type: <a href="/reference/pathitem"><tt>PathItem</tt></a>, <a href="/reference/raster"><tt>Raster</tt></a>, <a href="/reference/textitem"><tt>TextItem</tt></a>, etc.</p>
-<p><b>options.fill:</b> <tt>Boolean</tt> - Hit test the fill of items.</p>
-<p><b>options.stroke:</b> <tt>Boolean</tt> - Hit test the curves of path
-items, taking into account stroke width.</p>
-<p><b>options.segments:</b> <tt>Boolean</tt> - Hit test for
+<p>The options object allows you to control the specifics of the hit test
+and may contain a combination of the following values:</p>
+<p><b>options.tolerance:</b> <tt>Number</tt> – the tolerance of the hit test
+in points, can also be controlled through
+<a href="/reference/project#options"><tt>project.options</tt></a><tt>.hitTolerance</tt>.</p>
+<p><b>options.class:</b> Only hit test again a certain item class and its
+sub-classes: <tt>Group, Layer, Path, CompoundPath, Shape, Raster,
+PlacedSymbol, PointText</tt>, etc.</p>
+<p><b>options.fill:</b> <tt>Boolean</tt> – hit test the fill of items.</p>
+<p><b>options.stroke:</b> <tt>Boolean</tt> – hit test the stroke of path
+items, taking into account the setting of stroke color and width.</p>
+<p><b>options.segments:</b> <tt>Boolean</tt> – hit test for
 <a href="/reference/segment#point"><tt>segment.point</tt></a> of <a href="/reference/path"><tt>Path</tt></a> items.</p>
-<p><b>options.handles:</b> <tt>Boolean</tt> - Hit test for the handles
+<p><b>options.curves:</b> <tt>Boolean</tt> – hit test the curves of path
+items, without taking the stroke color or width into account.</p>
+<p><b>options.handles:</b> <tt>Boolean</tt> – hit test for the handles
 (<a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a> / <a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a>) of path segments.</p>
-<p><b>options.ends:</b> <tt>Boolean</tt> - Only hit test for the first or
+<p><b>options.ends:</b> <tt>Boolean</tt> – only hit test for the first or
 last segment points of open path items.</p>
-<p><b>options.bounds:</b> <tt>Boolean</tt> - Hit test the corners and
+<p><b>options.bounds:</b> <tt>Boolean</tt> – hit test the corners and
 side-centers of the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>).</p>
-<p><b>options.center:</b> <tt>Boolean</tt> - Hit test the
+<p><b>options.center:</b> <tt>Boolean</tt> – hit test the
 <a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of the bounding rectangle of items
 (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>).</p>
-<p><b>options.guides:</b> <tt>Boolean</tt> - Hit test items that have
+<p><b>options.guides:</b> <tt>Boolean</tt> – hit test items that have
 <tt>Item#guide</tt> set to <tt>true</tt>.</p>
-<p><b>options.selected:</b> <tt>Boolean</tt> - Only hit selected items.</p>
+<p><b>options.selected:</b> <tt>Boolean</tt> – only hit selected items.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -426,9 +453,9 @@ tolerance: true }</tt>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/hitresult"><tt>HitResult</tt></a></tt>&nbsp;&mdash;&nbsp;A hit result object that contains more
+<tt><a href="/reference/hitresult"><tt>HitResult</tt></a></tt>&nbsp;&mdash;&nbsp;a hit result object that contains more
 information about what exactly was hit or <tt>null</tt> if nothing was
-hit.
+hit
 </li>
 	
 	</ul>
@@ -440,7 +467,671 @@ hit.
 </div>
 		
 			
-<h3>Import / Export to JSON & SVG</h3>
+<div id="getitems-match" class="member">
+<div class="member-link">
+<a name="getitems-match" href="#getitems-match"><tt><b>getItems</b>(match)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Fetch items contained within the project whose properties match the
+criteria in the specified object.</p>
+<p>Extended matching is possible by providing a compare function or
+regular expression. Matching points, colors only work as a comparison
+of the full object, not partial matching (e.g. only providing the x-
+coordinate to match all points with that x-value). Partial matching
+does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>match:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;The criteria to match against.
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>
+</li>
+	
+	</ul>
+
+	
+	<p>
+<b>Example</b> &mdash; Fetch all selected path items:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-2">
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+// Select path2:
+path2.selected = true;
+
+// Fetch all selected path items:
+var items = project.getItems({
+    selected: true,
+    class: Path
+});
+
+// Change the fill color of the selected path to red:
+items[0].fillColor = 'red';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch all items with a specific fill color:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-3">
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'purple'
+});
+
+// Fetch all items with a purple fill color:
+var items = project.getItems({
+    fillColor: 'purple'
+});
+
+// Select the fetched item:
+items[0].selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-3"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch items at a specific position:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-4">
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+// Fetch all path items positioned at {x: 150, y: 150}:
+var items = project.getItems({
+    position: [150, 50]
+});
+
+// Select the fetched path:
+items[0].selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch items using a comparing function:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-5">
+// Create a circle shaped path:
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+// Create a circle shaped path with 50% opacity:
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black',
+    opacity: 0.5
+});
+
+// Fetch all items whose opacity is smaller than 1
+var items = paper.project.getItems({
+    opacity: function(value) {
+        return value < 1;
+    }
+});
+
+// Select the fetched item:
+items[0].selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-5"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch items using a comparing function (2):
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-6">
+// Create a rectangle shaped path (4 segments):
+var path1 = new Path.Rectangle({
+    from: [25, 25],
+    to: [75, 75],
+    strokeColor: 'black',
+    strokeWidth: 10
+});
+
+// Create a line shaped path (2 segments):
+var path2 = new Path.Line({
+    from: [125, 50],
+    to: [175, 50],
+    strokeColor: 'black',
+    strokeWidth: 10
+});
+
+// Fetch all paths with 2 segments:
+var items = project.getItems({
+    class: Path,
+ segments: function(segments) {
+        return segments.length == 2;
+ }
+});
+
+// Select the fetched path:
+items[0].selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-6"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Match (nested) properties of the data property:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-7">
+// Create a black circle shaped path:
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black',
+    data: {
+        person: {
+            name: 'john',
+            length: 200,
+            hair: true
+        }
+    }
+});
+
+// Create a red circle shaped path:
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'red',
+    data: {
+        person: {
+            name: 'john',
+            length: 180,
+            hair: false
+        }
+    }
+});
+
+// Fetch all items whose data object contains a person
+// object whose name is john and length is 180:
+var items = paper.project.getItems({
+    data: {
+        person: {
+            name: 'john',
+            length: 180
+        }
+    }
+});
+
+// Select the fetched item:
+items[0].selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-7"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Match strings using regular expressions:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-8">
+// Create a path named 'aardvark':
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black',
+    name: 'aardvark'
+});
+
+// Create a path named 'apple':
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black',
+    name: 'apple'
+});
+
+// Create a path named 'banana':
+var path2 = new Path.Circle({
+    center: [250, 50],
+    radius: 25,
+    fillColor: 'black',
+    name: 'banana'
+});
+
+// Fetch all items that have a name starting with 'a':
+var items = project.getItems({
+    name: /^a/
+});
+
+// Change the fill color of the matched items:
+for (var i = 0; i < items.length; i++) {
+ items[i].fillColor = 'red';
+}
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-8"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+		
+			
+<div id="getitem-match" class="member">
+<div class="member-link">
+<a name="getitem-match" href="#getitem-match"><tt><b>getItem</b>(match)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Fetch the first item contained within the project whose properties
+match the criteria in the specified object.</p>
+<p>Extended matching is possible by providing a compare function or
+regular expression. Matching points, colors only work as a comparison
+of the full object, not partial matching (e.g. only providing the x-
+coordinate to match all points with that x-value). Partial matching
+does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>match:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;The criteria to match against.
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>
+</li>
+	
+	</ul>
+
+	
+	<p>
+<b>Example</b> &mdash; Fetch all selected path items:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-9">
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+// Select path2:
+path2.selected = true;
+
+// Fetch first select path items:
+var item = project.getItem({
+    selected: true,
+    class: Path
+});
+
+// Change the fill color of the selected path to red:
+item.fillColor = 'red';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-9"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch item with a specific fill color:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-10">
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'purple'
+});
+
+// Fetch first item with a purple fill color:
+var item = project.getItem({
+    fillColor: 'purple'
+});
+
+// Select the fetched item:
+item.selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-10"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch item at a specific position:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-11">
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+// Fetch path item positioned at {x: 150, y: 150}:
+var item = project.getItem({
+    position: [150, 50]
+});
+
+// Select the fetched path:
+item.selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-11"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch item using a comparing function:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-12">
+// Create a circle shaped path:
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black'
+});
+
+// Create a circle shaped path with 50% opacity:
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black',
+    opacity: 0.5
+});
+
+// Fetch first item whose opacity is smaller than 1
+var item = paper.project.getItem({
+    opacity: function(value) {
+        return value < 1;
+    }
+});
+
+// Select the fetched item:
+item.selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-12"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Fetch item using a comparing function (2):
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-13">
+// Create a rectangle shaped path (4 segments):
+var path1 = new Path.Rectangle({
+    from: [25, 25],
+    to: [75, 75],
+    strokeColor: 'black',
+    strokeWidth: 10
+});
+
+// Create a line shaped path (2 segments):
+var path2 = new Path.Line({
+    from: [125, 50],
+    to: [175, 50],
+    strokeColor: 'black',
+    strokeWidth: 10
+});
+
+// Fetch first path with 2 segments:
+var item = project.getItem({
+    class: Path,
+ segments: function(segments) {
+        return segments.length == 2;
+ }
+});
+
+// Select the fetched path:
+item.selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-13"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Match (nested) properties of the data property:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-14">
+// Create a black circle shaped path:
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black',
+    data: {
+        person: {
+            name: 'john',
+            length: 200,
+            hair: true
+        }
+    }
+});
+
+// Create a red circle shaped path:
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'red',
+    data: {
+        person: {
+            name: 'john',
+            length: 180,
+            hair: false
+        }
+    }
+});
+
+// Fetch item whose data object contains a person
+// object whose name is john and length is 180:
+var item = paper.project.getItem({
+    data: {
+        person: {
+            name: 'john',
+            length: 180
+        }
+    }
+});
+
+// Select the fetched item:
+item.selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-14"></canvas></div>
+</div>
+
+
+<p>
+<b>Example</b> &mdash; Match strings using regular expressions:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-15">
+// Create a path named 'aardvark':
+var path1 = new Path.Circle({
+    center: [50, 50],
+    radius: 25,
+    fillColor: 'black',
+    name: 'aardvark'
+});
+
+// Create a path named 'apple':
+var path2 = new Path.Circle({
+    center: [150, 50],
+    radius: 25,
+    fillColor: 'black',
+    name: 'apple'
+});
+
+// Fetch the first item that has a name starting with 'a':
+var item = project.getItem({
+    name: /^a/
+});
+
+// Change the fill color of the matched item:
+item.fillColor = 'red';
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-15"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+		
+			
+<h3>Importing / Exporting JSON and SVG</h3>
 
 <div id="exportjson" class="member">
 <div class="member-link">
@@ -450,14 +1141,20 @@ hit.
 <div class="member-text">
 	<p>Exports (serializes) the project with all its layers and child items to
 a JSON data string.</p>
+<p>The options object offers control over some aspects of the SVG export:</p>
+<p><b>options.asString:</b> <tt>Boolean</tt> – whether the JSON is returned
+as a <tt>Object</tt> or a <tt>String</tt>.</p>
+<p><b>options.precision:</b> <tt>Number</tt> – the amount of fractional
+digits in numbers used in JSON data.</p>
 	
 <ul><b>Parameters:</b>
 
 <li>
 <tt>options:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;the serialization options
-&mdash;&nbsp;optional, default: <tt>{ precision: 5 }</tt>
+&mdash;&nbsp;the
+serialization options
+&mdash;&nbsp;optional, default: <tt>{ asString: true, precision: 5 }</tt>
 </li>
 
 </ul>
@@ -484,9 +1181,9 @@ a JSON data string.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Imports (deserializes) the stored JSON data into the project. Note that
-the project is not cleared first. You can call <tt>Project#clear</tt>() to
-do so.</p>
+	<p>Imports (deserializes) the stored JSON data into the project.</p>
+<p>Note that the project is not cleared first. You can call
+<a href="/reference/project#clear"><tt>project.clear</tt></a>() to do so.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -515,15 +1212,23 @@ do so.</p>
 <div class="member-text">
 	<p>Exports the project with all its layers and child items as an SVG DOM,
 all contained in one top level SVG group node.</p>
+<p>The options object offers control over some aspects of the SVG export:</p>
+<p><b>options.asString:</b> <tt>Boolean</tt> – whether a SVG node or a
+<tt>String</tt> is to be returned.</p>
+<p><b>options.precision:</b> <tt>Number</tt> – the amount of fractional
+digits in numbers used in SVG data.</p>
+<p><b>options.matchShapes:</b> <tt>Boolean</tt> – whether imported path
+items should tried to be converted to shape items, if their geometries
+match.</p>
 	
 <ul><b>Parameters:</b>
 
 <li>
 <tt>options:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;the export
-       options.
-&mdash;&nbsp;optional, default: <tt>{ asString: false, precision: 5 }</tt>
+&mdash;&nbsp;the export options.
+&mdash;&nbsp;optional, default: <tt>{ asString: false, precision: 5,
+matchShapes: false }</tt>
 </li>
 
 </ul>
@@ -532,7 +1237,7 @@ all contained in one top level SVG group node.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>SVGSVGElement</tt></tt>&nbsp;&mdash;&nbsp;the project converted to an SVG node
+<tt><tt>SVGElement</tt></tt>&nbsp;&mdash;&nbsp;the project converted to an SVG node
 </li>
 	
 	</ul>
@@ -544,22 +1249,34 @@ all contained in one top level SVG group node.</p>
 </div>
 		
 			
-<div id="importsvg-node" class="member">
+<div id="importsvg-svg" class="member">
 <div class="member-link">
-<a name="importsvg-node" href="#importsvg-node"><tt><b>importSVG</b>(node)</tt></a>
+<a name="importsvg-svg" href="#importsvg-svg"><tt><b>importSVG</b>(svg[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Converts the SVG node and all its child nodes into Paper.js items and
-adds them to the active layer of this project.</p>
+	<p>Converts the provided SVG content into Paper.js items and adds them to
+the active layer of this project.</p>
+<p>Note that the project is not cleared first. You can call
+<a href="/reference/project#clear"><tt>project.clear</tt></a>() to do so.</p>
+<p>The options object offers control over some aspects of the SVG import:</p>
+<p><b>options.expandShapes:</b> <tt>Boolean</tt> – whether imported shape
+items should be expanded to path items.</p>
 	
 <ul><b>Parameters:</b>
 
 <li>
-<tt>node:</tt> 
-<tt>SVGSVGElement</tt>
-&mdash;&nbsp;the SVG node to import
+<tt>svg:</tt> 
+<tt>SVGElement</tt> / <tt>String</tt>
+&mdash;&nbsp;the SVG content to import
 
+</li>
+
+<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the import options
+&mdash;&nbsp;optional, default: <tt>{ expandShapes: false }</tt>
 </li>
 
 </ul>

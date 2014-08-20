@@ -138,8 +138,8 @@ path.fillColor = 'red';</pre>
 
 
 <pre class="code">var point = new Point({
-	length: 10,
-	angle: 90
+    length: 10,
+    angle: 90
 });
 console.log(point.length); // 10
 console.log(point.angle); // 90</pre>
@@ -150,8 +150,8 @@ console.log(point.angle); // 90</pre>
 
 
 <pre class="code">var point = new Point({
-	x: 10,
-	y: 20
+    x: 10,
+    y: 20
 });
 console.log(point.x); // 10
 console.log(point.y); // 20</pre>
@@ -162,8 +162,8 @@ console.log(point.y); // 20</pre>
 
 
 <pre class="code">var center = {
-	x: 50,
-	y: 50
+    x: 50,
+    y: 50
 };
 
 // Creates a circle shaped path at x: 50, y: 50
@@ -657,8 +657,6 @@ console.log(point % new Point(5, 2)); // {x: 2, y: 0}</pre>
 
 <div class="member-text">
 	<p>The vector's angle in degrees, measured from the x-axis to the vector.</p>
-<p>The angle is unsigned, no information about rotational direction is
-given.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -682,10 +680,6 @@ given.</p>
 
 <div class="member-text">
 	<p>The vector's angle in radians, measured from the x-axis to the vector.</p>
-<p>The angle is unsigned, no information about rotational direction is
-given.</p>
-	
-		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -729,8 +723,8 @@ are in quadrant <tt>4</tt>.</p>
 
 
 <pre class="code">var point = new Point({
-	angle: 10,
-	length: 20
+    angle: 10,
+    length: 20
 });
 console.log(point.quadrant); // 1
 
@@ -873,7 +867,7 @@ point2.x = 1; // doesn't change point1.x</pre>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;A string representation of the point.
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the point
 </li>
 	
 	</ul>
@@ -885,128 +879,6 @@ point2.x = 1; // doesn't change point1.x</pre>
 </div>
 		
 			
-<div id="transform-matrix" class="member">
-<div class="member-link">
-<a name="transform-matrix" href="#transform-matrix"><tt><b>transform</b>(matrix)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Transforms the point by the matrix as a new point. The object itself
-is not modified!</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>matrix:</tt> 
-<a href="/reference/matrix"><tt>Matrix</tt></a>
-
-
-</li>
-
-</ul>
-
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;The transformed point
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<h3>Distance & Length</h3>
-
-<div id="getdistance-point" class="member">
-<div class="member-link">
-<a name="getdistance-point" href="#getdistance-point"><tt><b>getDistance</b>(point[, squared])</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Returns the distance between the point and another point.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>point:</tt> 
-<a href="/reference/point"><tt>Point</tt></a>
-
-
-</li>
-
-<li>
-<tt>squared:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;Controls whether the distance should
-       remain squared, or its square root should be calculated.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
-</ul>
-
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Number</tt></tt>
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="normalize" class="member">
-<div class="member-link">
-<a name="normalize" href="#normalize"><tt><b>normalize</b>([length])</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Normalize modifies the <a href="/reference/point#length" onclick="return toggleMember('length', true);"><tt>length</tt></a> of the vector to <tt>1</tt> without
-changing its angle and returns it as a new point. The optional
-<tt>length</tt> parameter defines the length to normalize to.</p>
-<p>The object itself is not modified!</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>length:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;The length of the normalized vector
-&mdash;&nbsp;optional, default: <tt>1</tt>
-</li>
-
-</ul>
-
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;The normalized vector of the vector that is represented
-                by this point's coordinates.
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<h3>Angle & Rotation</h3>
-
 <div id="getangle-point" class="member">
 <div class="member-link">
 <a name="getangle-point" href="#getangle-point"><tt><b>getAngle</b>(point)</tt></a>
@@ -1117,6 +989,88 @@ signed, giving information about the rotational direction.</p>
 </div>
 		
 			
+<div id="getdistance-point" class="member">
+<div class="member-link">
+<a name="getdistance-point" href="#getdistance-point"><tt><b>getDistance</b>(point[, squared])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the distance between the point and another point.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+
+
+</li>
+
+<li>
+<tt>squared:</tt> 
+<tt>Boolean</tt>
+&mdash;&nbsp;Controls whether the distance should
+       remain squared, or its square root should be calculated.
+&mdash;&nbsp;optional, default: <tt>false</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Number</tt></tt>
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="normalize" class="member">
+<div class="member-link">
+<a name="normalize" href="#normalize"><tt><b>normalize</b>([length])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Normalize modifies the <a href="/reference/point#length" onclick="return toggleMember('length', true);"><tt>length</tt></a> of the vector to <tt>1</tt> without
+changing its angle and returns it as a new point. The optional
+<tt>length</tt> parameter defines the length to normalize to.</p>
+<p>The object itself is not modified!</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>length:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;The length of the normalized vector
+&mdash;&nbsp;optional, default: <tt>1</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normalized vector of the vector that is represented
+                by this point's coordinates
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
 <div id="rotate-angle-center" class="member">
 <div class="member-link">
 <a name="rotate-angle-center" href="#rotate-angle-center"><tt><b>rotate</b>(angle, center)</tt></a>
@@ -1151,6 +1105,42 @@ signed, giving information about the rotational direction.</p>
 	
 		<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the rotated point
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="transform-matrix" class="member">
+<div class="member-link">
+<a name="transform-matrix" href="#transform-matrix"><tt><b>transform</b>(matrix)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Transforms the point by the matrix as a new point. The object itself is
+not modified!</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>matrix:</tt> 
+<a href="/reference/matrix"><tt>Matrix</tt></a>
+
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point
 </li>
 	
 	</ul>
@@ -1325,7 +1315,7 @@ another vector.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> both x and y are 0, <tt>false</tt> otherwise
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if both x and y are 0, <tt>false</tt> otherwise
 </li>
 	
 	</ul>
@@ -1642,7 +1632,7 @@ console.log(absPoint); // {x: 5, y: 10}</pre>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created point object
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created point object
 </li>
 	
 	</ul>
@@ -1694,7 +1684,7 @@ console.log(minPoint); // {x: 10, y: 5}</pre>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created point object
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created point object
 </li>
 	
 	</ul>
@@ -1728,7 +1718,7 @@ between <tt>0</tt> and <tt>1</tt>.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;The newly created point object
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created point object
 </li>
 	
 	</ul>

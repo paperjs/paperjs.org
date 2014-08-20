@@ -22,9 +22,9 @@ apply it to a series of items:</p>
 <script type="text/paperscript" canvas="canvas-0">
 var path = new Path.Circle(new Point(80, 50), 30);
 path.style = {
-	fillColor: new Color(1, 0, 0),
-	strokeColor: 'black',
-	strokeWidth: 5
+    fillColor: new Color(1, 0, 0),
+    strokeColor: 'black',
+    strokeWidth: 5
 };
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-0"></canvas></div>
@@ -45,9 +45,11 @@ path.style = {
 var text = new PointText(view.center);
 text.content = 'Hello world.';
 text.style = {
-	fontSize: 20,
-	fillColor: 'red',
-	justification: 'center'
+    fontFamily: 'Courier New',
+    fontWeight: 'bold',
+    fontSize: 20,
+    fillColor: 'red',
+    justification: 'center'
 };
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
@@ -66,13 +68,13 @@ text.style = {
 
 <script type="text/paperscript" canvas="canvas-2">
 var path1 = new Path.Circle({
-	center: [100, 50],
-	radius: 30
+    center: [100, 50],
+    radius: 30
 });
 
 var path2 = new Path.Rectangle({
-	from: [170, 20],
-	to: [230, 80]
+    from: [170, 20],
+    to: [230, 80]
 });
 
 var group = new Group(path1, path2);
@@ -80,10 +82,10 @@ var group = new Group(path1, path2);
 // All styles set on a group are automatically
 // set on the children of the group:
 group.style = {
-	strokeColor: 'black',
-	dashArray: [4, 10],
-	strokeWidth: 4,
-	strokeCap: 'round'
+    strokeColor: 'black',
+    dashArray: [4, 10],
+    strokeWidth: 4,
+    strokeCap: 'round'
 };
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
@@ -97,6 +99,31 @@ group.style = {
 
 
 	<div class="reference-members"><h2>Properties</h2>
+		
+			
+<div id="view" class="member">
+<div class="member-link">
+<a name="view" href="#view"><tt><b>view</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The view that this style belongs to.</p>
+	
+		<p>Read only.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/view"><tt>View</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
 		
 			
 	<h3>Stroke Style</h3>
@@ -205,8 +232,8 @@ circle.strokeWidth = 10;
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The shape to be used at the end of open <a href="/reference/path"><tt>Path</tt></a> items, when they
-have a stroke.</p>
+	<p>The shape to be used at the beginning and end of open <a href="/reference/path"><tt>Path</tt></a> items,
+when they have a stroke.</p>
 	
 	
 		<ul><b>Default:</b>
@@ -269,7 +296,8 @@ line2.strokeCap = 'butt';
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The shape to be used at the corners of paths when they have a stroke.</p>
+	<p>The shape to be used at the segments and corners of <a href="/reference/path"><tt>Path</tt></a> items
+when they have a stroke.</p>
 	
 	
 		<ul><b>Default:</b>
@@ -317,6 +345,37 @@ path3.strokeJoin = 'bevel';
 </div>
 
 
+</div>
+
+</div>
+</div>
+		
+			
+<div id="strokescaling" class="member">
+<div class="member-link">
+<a name="strokescaling" href="#strokescaling"><tt><b>strokeScaling</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>Specifies whether the stroke is to be drawn taking the current affine
+transformation into account (the default behavior), or whether it should
+appear as a non-scaling stroke.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>true</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Boolean</tt>
+	</li>
+	</ul>
+	
+	
 </div>
 
 </div>
@@ -481,6 +540,115 @@ circle.fillColor = new Color(1, 0, 0);
 </div>
 		
 			
+	<h3>Shadow Style</h3>
+
+<div id="shadowcolor" class="member">
+<div class="member-link">
+<a name="shadowcolor" href="#shadowcolor"><tt><b>shadowColor</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The shadow color.</p>
+	
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/color"><tt>Color</tt></a>
+	</li>
+	</ul>
+	
+	<p>
+<b>Example</b> &mdash; Creating a circle with a black shadow:
+</p>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-9">
+var circle = new Path.Circle({
+    center: [80, 50],
+    radius: 35,
+    fillColor: 'white',
+    // Set the shadow color of the circle to RGB black:
+    shadowColor: new Color(0, 0, 0),
+    // Set the shadow blur radius to 12:
+    shadowBlur: 12,
+    // Offset the shadow by { x: 5, y: 5 }
+    shadowOffset: new Point(5, 5)
+});
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-9"></canvas></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+		
+			
+<div id="shadowblur" class="member">
+<div class="member-link">
+<a name="shadowblur" href="#shadowblur"><tt><b>shadowBlur</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The shadow's blur radius.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>0</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>Number</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="shadowoffset" class="member">
+<div class="member-link">
+<a name="shadowoffset" href="#shadowoffset"><tt><b>shadowOffset</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The shadow's offset.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>0</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<a href="/reference/point"><tt>Point</tt></a>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
 	<h3>Selection Style</h3>
 
 <div id="selectedcolor" class="member">
@@ -509,14 +677,14 @@ not specify its own color, the color defined by its layer is used instead.</p>
 			
 	<h3>Character Style</h3>
 
-<div id="font" class="member">
+<div id="fontfamily" class="member">
 <div class="member-link">
-<a name="font" href="#font"><tt><b>font</b></tt></a>
+<a name="fontfamily" href="#fontfamily"><tt><b>fontFamily</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The font to be used in text content.</p>
+	<p>The font-family to be used in text content.</p>
 	
 	
 		<ul><b>Default:</b>
@@ -528,6 +696,35 @@ not specify its own color, the color defined by its layer is used instead.</p>
 	<ul><b>Type:</b>
 	<li>
 		<tt>String</tt>
+	</li>
+	</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="fontweight" class="member">
+<div class="member-link">
+<a name="fontweight" href="#fontweight"><tt><b>fontWeight</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The font-weight to be used in text content.</p>
+	
+	
+		<ul><b>Default:</b>
+		<li>
+		<tt>'normal'</tt>
+		</li>
+		</ul>
+	
+	<ul><b>Type:</b>
+	<li>
+		<tt>String</tt> / <tt>Number</tt>
 	</li>
 	</ul>
 	
