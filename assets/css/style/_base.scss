@@ -11,13 +11,10 @@ body {
 	font-smoothing: antialiased;
 }
 
-@include tablet {
-}
-
 select,
 input,
 textarea {
-	font-size: 11px;
+	font-size: 12px;
 	margin: 0;
 	color: #000;
 }
