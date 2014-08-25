@@ -1,7 +1,9 @@
 - files = page.files.toArray().sort(function(file1, file2) {
 -   var name1 = file1.name;
 -   var name2 = file2.name;
--   return /nightly/.test(name1) ? 1 : parseInt(name1.match(/(\d*)$/)[1]) < parseInt(name2.match(/(\d*)$/)[1]);
+-   var ver1 = parseFloat((name1.match(/(\d*\.\d*)$/) || [,'0'])[1]);
+-   var ver2 = parseFloat((name2.match(/(\d*\.\d*)$/) || [,'0'])[1]);
+-   return ver2 - ver1;
 - });
 for file in files
   - version = file.name.split('-')[1]
