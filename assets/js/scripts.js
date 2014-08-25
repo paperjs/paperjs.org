@@ -234,11 +234,12 @@ behaviors.code = function() {
 };
 
 behaviors.paperscript = function() {
+	// Ignore all paperscripts in the automatic load event, and load them
+	// separately in createPaperScript() when needed.
+	$('script[type="text/paperscript"]').attr('ignore', 'true');
 	$('.paperscript:visible').each(function() {
 		createPaperScript($(this));
 	});
-	// Don't wait until onload
-	paper.PaperScript.load();
 };
 
 function createCodeMirror(place, options, source) {
@@ -296,6 +297,10 @@ function createPaperScript(element) {
 		runButton = $('.button.run', element).orNull();
 	if (!script || !runButton)
 		return;
+
+	// Now load / parse / execute the script
+	script.removeAttr('ignore');
+	paper.PaperScript.load(script[0]);
 
 	var canvas = $('canvas', element),
 		hasResize = canvas.attr('resize'),
@@ -398,7 +403,7 @@ function createPaperScript(element) {
 			// Keep a reference to the used canvas, since we're going to
 			// fully clear the scope and initialize again with this canvas.
 			// Support both old and new versions of paper.js for now:
-			var element = scope.view.element || scope.view.canvas;
+			var element = scope.view.element;
 			// Clear scope first, then evaluate a new script.
 			scope.clear();
 			scope.initialize(script[0]);
