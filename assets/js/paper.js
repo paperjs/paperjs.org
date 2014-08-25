@@ -9,7 +9,7 @@
  *
  * All rights reserved.
  *
- * Date: Mon Aug 25 12:53:13 2014 +0200
+ * Date: Mon Aug 25 13:04:35 2014 +0200
  *
  ***
  *
@@ -13099,6 +13099,7 @@ Base.exports.PaperScript = (function() {
 				execute(script.innerHTML, scope, script.baseURI);
 			}
 			script.setAttribute('data-paper-ignore', 'true');
+			return scope;
 		}
 	}
 
@@ -13107,11 +13108,7 @@ Base.exports.PaperScript = (function() {
 	}
 
 	function load(script) {
-		if (script) {
-			loadScript(script);
-		} else {
-			loadAll();
-		}
+		return script ? loadScript(script) : loadAll();
 	}
 
 	if (document.readyState === 'complete') {
