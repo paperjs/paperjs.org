@@ -295,12 +295,13 @@ function createPaperScript(element) {
 
 	var script = $('script', element).orNull(),
 		runButton = $('.button.run', element).orNull();
-	if (!script || !runButton)
+	if (!script)
 		return;
-
 	// Now load / parse / execute the script
 	script.removeAttr('ignore');
 	var scope = paper.PaperScript.load(script[0]);
+	if (!runButton)
+		return;
 
 	var canvas = $('canvas', element),
 		hasResize = canvas.attr('resize'),
