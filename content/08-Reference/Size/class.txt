@@ -2,7 +2,7 @@
 
 
 <p>The Size object is used to describe the size or dimensions of
-somethign, through its <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> properties.</p>
+something, through its <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> properties.</p>
 <p>
 <b>Example</b> &mdash; Create a size that is 10pt wide and 5pt high, and use it to define a rectangle:
 </p>
