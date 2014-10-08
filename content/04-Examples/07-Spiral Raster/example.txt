@@ -104,7 +104,8 @@ function onDocumentDrop(event) {
 	reader.readAsDataURL(file);
 }
 
-DomEvent.add(document, {
+$.event.props.push('dataTransfer');
+$(document).on({
 	drop: onDocumentDrop,
 	dragover: onDocumentDrag,
 	dragleave: onDocumentDrag
