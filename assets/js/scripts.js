@@ -120,9 +120,10 @@ behaviors.sections = function() {
 	}
 
 	if (lastSection.length && lastAnchor.length) {
-		$(window)
-			.load(resize)
-			.resize(resize);
+		$(window).on({
+			load: resize,
+			resize: resize
+		});
 		resize();
 	}
 };
@@ -446,15 +447,7 @@ function createPaperScript(element) {
 	}
 
 	if (hasResize) {
-		// Install the resize event only after paper.js installs its own,
-		// which happens on the load event. This is needed because we rely
-		// on paper.js performing the actual resize magic.
-		$(window).load(function() {
-			// We need to use the same event mechanism as paper.js to receive
-			// the resize event after the internal paper.js one.
-			// TODO: Use view.on('resize') instead?
-			paper.DomEvent.add(window, { resize: resize });
-		});
+		paper.view.on('resize', resize);
 		hasBorders = false;
 		source.css('border-width', '0 0 0 1px');
 	}
