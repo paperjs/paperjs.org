@@ -561,16 +561,16 @@ console.log(path.data.pets.length); // 1</pre>
 			
 	<h3>Position and Bounding Boxes</h3>
 
-<div id="position-_dontLink" class="member">
+<div id="position" class="member">
 <div class="member-link">
-<a name="position-_dontLink" href="#position-_dontLink"><tt><b>position</b></tt></a>
+<a name="position" href="#position"><tt><b>position</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
 	<p>The item's position within the parent item's coordinate system. By
 default, this is the <a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of the item's
-<a href="/reference/item#bounds" onclick="return toggleMember('bounds', true);"><tt>bounds</tt></a> rectangle.</p>
+<a href="/reference/item#bounds"><tt>bounds</tt></a> rectangle.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -638,18 +638,18 @@ circle.position.x += 100;
 </div>
 		
 			
-<div id="pivot-_dontLink" class="member">
+<div id="pivot" class="member">
 <div class="member-link">
-<a name="pivot-_dontLink" href="#pivot-_dontLink"><tt><b>pivot</b></tt></a>
+<a name="pivot" href="#pivot"><tt><b>pivot</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
 	<p>The item's pivot point specified in the item coordinate system, defining
 the point around which all transformations are hinging. This is also the
-reference point for <a href="/reference/item#position" onclick="return toggleMember('position', true);"><tt>position</tt></a>. By default, it is set to
+reference point for <a href="/reference/item#position"><tt>position</tt></a>. By default, it is set to
 <tt>null</tt>, meaning the <a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of the item's
-<a href="/reference/item#bounds" onclick="return toggleMember('bounds', true);"><tt>bounds</tt></a> rectangle is used as pivot.</p>
+<a href="/reference/item#bounds"><tt>bounds</tt></a> rectangle is used as pivot.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -674,8 +674,6 @@ reference point for <a href="/reference/item#position" onclick="return toggleMem
 <div class="member-text">
 	<p>The bounding rectangle of the item excluding stroke width.</p>
 	
-		<p>Read only.</p>
-	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -698,8 +696,6 @@ reference point for <a href="/reference/item#position" onclick="return toggleMem
 
 <div class="member-text">
 	<p>The bounding rectangle of the item including stroke width.</p>
-	
-		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -724,8 +720,6 @@ reference point for <a href="/reference/item#position" onclick="return toggleMem
 <div class="member-text">
 	<p>The bounding rectangle of the item including handles.</p>
 	
-		<p>Read only.</p>
-	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -748,7 +742,7 @@ reference point for <a href="/reference/item#position" onclick="return toggleMem
 
 <div class="member-text">
 	<p>The current rotation angle of the item, as described by its
-<a href="/reference/item#matrix" onclick="return toggleMember('matrix', true);"><tt>matrix</tt></a>.</p>
+<a href="/reference/item#matrix"><tt>matrix</tt></a>.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -772,7 +766,7 @@ reference point for <a href="/reference/item#position" onclick="return toggleMem
 
 <div class="member-text">
 	<p>The current scale factor of the item, as described by its
-<a href="/reference/item#matrix" onclick="return toggleMember('matrix', true);"><tt>matrix</tt></a>.</p>
+<a href="/reference/item#matrix"><tt>matrix</tt></a>.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -812,9 +806,9 @@ relation to its parent item in which it is contained.</p>
 </div>
 		
 			
-<div id="globalmatrix-_dontClone" class="member">
+<div id="globalmatrix" class="member">
 <div class="member-link">
-<a name="globalmatrix-_dontClone" href="#globalmatrix-_dontClone"><tt><b>globalMatrix</b></tt></a>
+<a name="globalmatrix" href="#globalmatrix"><tt><b>globalMatrix</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -847,7 +841,7 @@ zooming and panning are not factored in.</p>
 
 <div class="member-text">
 	<p>Specifies whether the group applies transformations directly to its
-children, or whether they are to be stored in its <a href="/reference/item#matrix" onclick="return toggleMember('matrix', true);"><tt>matrix</tt></a></p>
+children, or whether they are to be stored in its <a href="/reference/item#matrix"><tt>matrix</tt></a></p>
 	
 	
 	<ul><b>Type:</b>
@@ -1022,7 +1016,7 @@ console.log(group.children[0] == path); // true</pre>
 
 <div class="member-text">
 	<p>The children items contained within this item. Items that define a
-<a href="/reference/item#name" onclick="return toggleMember('name', true);"><tt>name</tt></a> can also be accessed by name.</p>
+<a href="/reference/item#name"><tt>name</tt></a> can also be accessed by name.</p>
 <p><b>Please note:</b> The children array should not be modified directly
 using array functions. To remove single items from the children list, use
 <a href="/reference/item#remove"><tt>item.remove</tt></a>(), to remove all items from the children list, use
@@ -2294,8 +2288,6 @@ path.onMouseLeave = function(event) {
 <div class="member-text">
 	<p>The tangential vector to the <tt>#curve</tt> at the given location.</p>
 	
-		<p>Read only.</p>
-	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -2319,8 +2311,6 @@ path.onMouseLeave = function(event) {
 <div class="member-text">
 	<p>The normal vector to the <tt>#curve</tt> at the given location.</p>
 	
-		<p>Read only.</p>
-	
 	
 	<ul><b>Type:</b>
 	<li>
@@ -2343,8 +2333,6 @@ path.onMouseLeave = function(event) {
 
 <div class="member-text">
 	<p>The curvature of the <tt>#curve</tt> at the given location.</p>
-	
-		<p>Read only.</p>
 	
 	
 	<ul><b>Type:</b>
@@ -2663,6 +2651,76 @@ function onMouseDown(event) {
 </div>
 		
 			
+<div id="isinside-rect" class="member">
+<div class="member-link">
+<a name="isinside-rect" href="#isinside-rect"><tt><b>isInside</b>(rect)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>rect:</tt> 
+<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+&mdash;&nbsp;the rectangle to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="intersects-item" class="member">
+<div class="member-link">
+<a name="intersects-item" href="#intersects-item"><tt><b>intersects</b>(item)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+<a href="/reference/item"><tt>Item</tt></a>
+&mdash;&nbsp;the item to check against
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
 <div id="hittest-point" class="member">
 <div class="member-link">
 <a name="hittest-point" href="#hittest-point"><tt><b>hitTest</b>(point[, options])</tt></a>
@@ -2744,19 +2802,16 @@ hit
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Check whether the item matches the properties in the specified object.</p>
-<p>Extended matching is possible by providing a compare function or
-regular expression. Matching points, colors only work as a comparison
-of the full object, not partial matching (e.g. only providing the x-
-coordinate to match all points with that x-value). Partial matching
-does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
+	<p>Checks whether the item matches the criteria described by the given
+object, by iterating over all of its properties and matching against
+their values through <a href="/reference/item#matches-name-compare"><tt>matches(name, compare)</tt></a>.</p>
 	
 <ul><b>Parameters:</b>
 
 <li>
 <tt>match:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;The criteria to match against.
+&mdash;&nbsp;the criteria to match against.
 
 </li>
 
@@ -2766,14 +2821,66 @@ does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item matches the criteria, <tt>false</tt> otherwise
+<tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item matches all the criteria, <tt>false</tt> otherwise
 </li>
 	
 	</ul>
 
 	
 	<p><b>See also:</b>
-	<tt><a href="/reference/project#getitems-match"><tt>project.getItems(match)</tt></a></tt>
+	<tt><a href="/reference/item#getitems-match"><tt>getItems(match)</tt></a></tt>
+	</p>
+
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="matches-name-compare" class="member">
+<div class="member-link">
+<a name="matches-name-compare" href="#matches-name-compare"><tt><b>matches</b>(name, compare)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks whether the item matches the given criteria. Extended matching is
+possible by providing a compare function or a regular expression.</p>
+<p>Matching points, colors only work as a comparison of the full object, not
+partial matching (e.g. only providing the x-coordinate to match all
+points with that x-value). Partial matching does work for
+<a href="/reference/item#data"><tt>item.data</tt></a>.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>name:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;the name of the state to match against.
+
+</li>
+
+<li>
+<tt>compare:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the value, function or regular expression to
+compare against.
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item matches the state, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	<p><b>See also:</b>
+	<tt><a href="/reference/item#getitems-match"><tt>getItems(match)</tt></a></tt>
 	</p>
 
 	
@@ -2801,7 +2908,7 @@ does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
 <li>
 <tt>match:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;The criteria to match against.
+&mdash;&nbsp;the criteria to match against.
 
 </li>
 
@@ -2811,14 +2918,14 @@ does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>
+<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the list of matching descendant items.
 </li>
 	
 	</ul>
 
 	
 	<p><b>See also:</b>
-	<tt><a href="/reference/project#getitems-match"><tt>project.getItems(match)</tt></a></tt>
+	<tt><a href="/reference/item#matches-match"><tt>matches(match)</tt></a></tt>
 	</p>
 
 	
@@ -2846,7 +2953,7 @@ does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
 <li>
 <tt>match:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;The criteria to match against.
+&mdash;&nbsp;the criteria to match against.
 
 </li>
 
@@ -2856,14 +2963,14 @@ does work for <a href="/reference/item#data"><tt>item.data</tt></a>.</p>
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><a href="/reference/item"><tt>Item</tt></a></tt>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the first descendant item  matching the given criteria.
 </li>
 	
 	</ul>
 
 	
 	<p><b>See also:</b>
-	<tt><a href="/reference/project#getitem-match"><tt>project.getItem(match)</tt></a></tt>
+	<tt><a href="/reference/item#getitems-match"><tt>getItems(match)</tt></a></tt>
 	</p>
 
 	
@@ -3041,9 +3148,9 @@ items should be expanded to path items.</p>
 			
 <h3>Hierarchy Operations</h3>
 
-<div id="addchild-item-_preserve" class="member">
+<div id="addchild-item" class="member">
 <div class="member-link">
-<a name="addchild-item-_preserve" href="#addchild-item-_preserve"><tt><b>addChild</b>(item)</tt></a>
+<a name="addchild-item" href="#addchild-item"><tt><b>addChild</b>(item)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -3079,14 +3186,14 @@ possible.
 </div>
 		
 			
-<div id="insertchild-index-item-_preserve" class="member">
+<div id="insertchild-index-item" class="member">
 <div class="member-link">
-<a name="insertchild-index-item-_preserve" href="#insertchild-index-item-_preserve"><tt><b>insertChild</b>(index, item)</tt></a>
+<a name="insertchild-index-item" href="#insertchild-index-item"><tt><b>insertChild</b>(index, item)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts the specified item as a child of this item at the specified
-index in its <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> list. You can use this function for
+index in its <a href="/reference/item#children"><tt>children</tt></a> list. You can use this function for
 groups, compound paths and layers.</p>
 	
 <ul><b>Parameters:</b>
@@ -3124,9 +3231,9 @@ possible.
 </div>
 		
 			
-<div id="addchildren-items-_preserve" class="member">
+<div id="addchildren-items" class="member">
 <div class="member-link">
-<a name="addchildren-items-_preserve" href="#addchildren-items-_preserve"><tt><b>addChildren</b>(items)</tt></a>
+<a name="addchildren-items" href="#addchildren-items"><tt><b>addChildren</b>(items)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -3162,14 +3269,14 @@ possible.
 </div>
 		
 			
-<div id="insertchildren-index-items-_preserve-_proto" class="member">
+<div id="insertchildren-index-items" class="member">
 <div class="member-link">
-<a name="insertchildren-index-items-_preserve-_proto" href="#insertchildren-index-items-_preserve-_proto"><tt><b>insertChildren</b>(index, items)</tt></a>
+<a name="insertchildren-index-items" href="#insertchildren-index-items"><tt><b>insertChildren</b>(index, items)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Inserts the specified items as children of this item at the specified
-index in its <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> list. You can use this function for
+index in its <a href="/reference/item#children"><tt>children</tt></a> list. You can use this function for
 groups, compound paths and layers.</p>
 	
 <ul><b>Parameters:</b>
@@ -3207,9 +3314,9 @@ possible.
 </div>
 		
 			
-<div id="insertabove-item-_preserve" class="member">
+<div id="insertabove-item" class="member">
 <div class="member-link">
-<a name="insertabove-item-_preserve" href="#insertabove-item-_preserve"><tt><b>insertAbove</b>(item)</tt></a>
+<a name="insertabove-item" href="#insertabove-item"><tt><b>insertAbove</b>(item)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -3243,9 +3350,9 @@ possible.
 </div>
 		
 			
-<div id="insertbelow-item-_preserve" class="member">
+<div id="insertbelow-item" class="member">
 <div class="member-link">
-<a name="insertbelow-item-_preserve" href="#insertbelow-item-_preserve"><tt><b>insertBelow</b>(item)</tt></a>
+<a name="insertbelow-item" href="#insertbelow-item"><tt><b>insertBelow</b>(item)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -3343,8 +3450,8 @@ item itself is returned unmodified.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Removes the item from the project. If the item has children, they are also
-removed.</p>
+	<p>Removes the item and all its children from the project. The item is not
+destroyed and can be inserted again after removal.</p>
 	
 	
 	<ul><b>Returns:</b>
@@ -3362,13 +3469,49 @@ removed.</p>
 </div>
 		
 			
+<div id="replacewith-item" class="member">
+<div class="member-link">
+<a name="replacewith-item" href="#replacewith-item"><tt><b>replaceWith</b>(item)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Replaces this item with the provided new item which will takes its place
+in the project hierarchy instead.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>item:</tt> 
+
+
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item was replaced, <tt>false</tt> otherwise
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
 <div id="removechildren" class="member">
 <div class="member-link">
 <a name="removechildren" href="#removechildren"><tt><b>removeChildren</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Removes all of the item's <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> (if any).</p>
+	<p>Removes all of the item's <a href="/reference/item#children"><tt>children</tt></a> (if any).</p>
 	
 	
 	<ul><b>Returns:</b>
@@ -3393,7 +3536,7 @@ removed.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Removes the children from the specified <tt>from</tt> index to the
-<tt>to</tt> index from the parent's <a href="/reference/item#children" onclick="return toggleMember('children', true);"><tt>children</tt></a> array.</p>
+<tt>to</tt> index from the parent's <a href="/reference/item#children"><tt>children</tt></a> array.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -4296,9 +4439,9 @@ by a supplied point.</p>
 </div>
 		
 			
-<div id="transform-matrix-_applyMatrix" class="member">
+<div id="transform-matrix" class="member">
 <div class="member-link">
-<a name="transform-matrix-_applyMatrix" href="#transform-matrix-_applyMatrix"><tt><b>transform</b>(matrix)</tt></a>
+<a name="transform-matrix" href="#transform-matrix"><tt><b>transform</b>(matrix)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -4329,8 +4472,8 @@ by a supplied point.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Converts the specified point from global project coordinates to local
-coordinates in relation to the the item's own coordinate space.</p>
+	<p>Converts the specified point from global project coordinate space to the
+item's own local coordinate space.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -4365,8 +4508,80 @@ coordinates in relation to the the item's own coordinate space.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Converts the specified point from local coordinates to global coordinates
-in relation to the the project coordinate space.</p>
+	<p>Converts the specified point from the item's own local coordinate space
+to the global project coordinate space.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point to be transformed
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point as a new instance
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="parenttolocal-point" class="member">
+<div class="member-link">
+<a name="parenttolocal-point" href="#parenttolocal-point"><tt><b>parentToLocal</b>(point)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Converts the specified point from the parent's coordinate space to
+item's own local coordinate space.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point to be transformed
+
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point as a new instance
+</li>
+	
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="localtoparent-point" class="member">
+<div class="member-link">
+<a name="localtoparent-point" href="#localtoparent-point"><tt><b>localToParent</b>(point)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Converts the specified point from the item's own local coordinate space
+to the parent's coordinate space.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -4401,7 +4616,7 @@ in relation to the the project coordinate space.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Transform the item so that its <a href="/reference/item#bounds" onclick="return toggleMember('bounds', true);"><tt>bounds</tt></a> fit within the specified
+	<p>Transform the item so that its <a href="/reference/item#bounds"><tt>bounds</tt></a> fit within the specified
 rectangle, without changing its aspect ratio.</p>
 	
 <ul><b>Parameters:</b>
@@ -4525,9 +4740,9 @@ path.fitBounds(view.bounds);
 			
 <h3>Event Handling</h3>
 
-<div id="attach-type-function" class="member">
+<div id="on-type-function" class="member">
 <div class="member-link">
-<a name="attach-type-function" href="#attach-type-function"><tt><b>attach</b>(type, function)</tt></a>
+<a name="on-type-function" href="#on-type-function"><tt><b>on</b>(type, function)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -4592,9 +4807,9 @@ path.on('mouseleave', function() {
 </div>
 		
 			
-<div id="attach-object" class="member">
+<div id="on-object" class="member">
 <div class="member-link">
-<a name="attach-object" href="#attach-object"><tt><b>attach</b>(object)</tt></a>
+<a name="on-object" href="#on-object"><tt><b>on</b>(object)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -4689,9 +4904,9 @@ function onMouseDown(event) {
 </div>
 		
 			
-<div id="detach-type-function" class="member">
+<div id="off-type-function" class="member">
 <div class="member-link">
-<a name="detach-type-function" href="#detach-type-function"><tt><b>detach</b>(type, function)</tt></a>
+<a name="off-type-function" href="#off-type-function"><tt><b>off</b>(type, function)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -4724,9 +4939,9 @@ type
 </div>
 		
 			
-<div id="detach-object" class="member">
+<div id="off-object" class="member">
 <div class="member-link">
-<a name="detach-object" href="#detach-object"><tt><b>detach</b>(object)</tt></a>
+<a name="off-object" href="#off-object"><tt><b>off</b>(object)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -4753,13 +4968,13 @@ doubleclick, mousemove, mouseenter, mouseleave</tt>
 </div>
 		
 			
-<div id="fire-type-event" class="member">
+<div id="emit-type-event" class="member">
 <div class="member-link">
-<a name="fire-type-event" href="#fire-type-event"><tt><b>fire</b>(type, event)</tt></a>
+<a name="emit-type-event" href="#emit-type-event"><tt><b>emit</b>(type, event)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Fire an event on the item.</p>
+	<p>Emit an event on the item.</p>
 	
 <ul><b>Parameters:</b>
 

@@ -134,10 +134,10 @@ was last clicked.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The point in the middle between <a href="/reference/toolevent#lastpoint" onclick="return toggleMember('lastpoint', true);"><tt>lastPoint</tt></a> and
-<a href="/reference/toolevent#point" onclick="return toggleMember('point', true);"><tt>point</tt></a>. This is a useful position to use when creating
+	<p>The point in the middle between <a href="/reference/toolevent#lastpoint"><tt>lastPoint</tt></a> and
+<a href="/reference/toolevent#point"><tt>point</tt></a>. This is a useful position to use when creating
 artwork based on the moving direction of the mouse, as returned by
-<a href="/reference/toolevent#delta" onclick="return toggleMember('delta', true);"><tt>delta</tt></a>.</p>
+<a href="/reference/toolevent#delta"><tt>delta</tt></a>.</p>
 	
 	
 	<ul><b>Type:</b>

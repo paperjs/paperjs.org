@@ -702,7 +702,7 @@ console.log(point % new Point(5, 2)); // {x: 2, y: 0}</pre>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The quadrant of the <a href="/reference/point#angle" onclick="return toggleMember('angle', true);"><tt>angle</tt></a> of the point.</p>
+	<p>The quadrant of the <a href="/reference/point#angle"><tt>angle</tt></a> of the point.</p>
 <p>Angles between 0 and 90 degrees are in quadrant <tt>1</tt>. Angles between
 90 and 180 degrees are in quadrant <tt>2</tt>, angles between 180 and 270
 degrees are in quadrant <tt>3</tt> and angles between 270 and 360 degrees
@@ -960,7 +960,7 @@ unsigned, no information about rotational direction is given.</p>
 	<p>Returns the angle between two vectors. The angle is directional and
 signed, giving information about the rotational direction.</p>
 <p>Read more about angle units and orientation in the description of the
-<a href="/reference/point#angle" onclick="return toggleMember('angle', true);"><tt>angle</tt></a> property.</p>
+<a href="/reference/point#angle"><tt>angle</tt></a> property.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -1038,7 +1038,7 @@ signed, giving information about the rotational direction.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Normalize modifies the <a href="/reference/point#length" onclick="return toggleMember('length', true);"><tt>length</tt></a> of the vector to <tt>1</tt> without
+	<p>Normalize modifies the <a href="/reference/point#length"><tt>length</tt></a> of the vector to <tt>1</tt> without
 changing its angle and returns it as a new point. The optional
 <tt>length</tt> parameter defines the length to normalize to.</p>
 <p>The object itself is not modified!</p>
@@ -1080,7 +1080,7 @@ changing its angle and returns it as a new point. The optional
 	<p>Rotates the point by the given angle around an optional center point.</p>
 <p>The object itself is not modified.</p>
 <p>Read more about angle units and orientation in the description of the
-<a href="/reference/point#angle" onclick="return toggleMember('angle', true);"><tt>angle</tt></a> property.</p>
+<a href="/reference/point#angle"><tt>angle</tt></a> property.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -1468,7 +1468,7 @@ coordinates.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new point with rounded <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The
+	<p>Returns a new point with rounded <a href="/reference/point#x"><tt>x</tt></a> and <a href="/reference/point#y"><tt>y</tt></a> values. The
 object itself is not modified!</p>
 	
 	
@@ -1502,7 +1502,7 @@ console.log(roundPoint); // {x: 10, y: 11}</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point with the nearest greater non-fractional values to the
-specified <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The object itself is not
+specified <a href="/reference/point#x"><tt>x</tt></a> and <a href="/reference/point#y"><tt>y</tt></a> values. The object itself is not
 modified!</p>
 	
 	
@@ -1536,7 +1536,7 @@ console.log(ceilPoint); // {x: 11, y: 11}</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new point with the nearest smaller non-fractional values to the
-specified <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The object itself is not
+specified <a href="/reference/point#x"><tt>x</tt></a> and <a href="/reference/point#y"><tt>y</tt></a> values. The object itself is not
 modified!</p>
 	
 	
@@ -1569,8 +1569,8 @@ console.log(floorPoint); // {x: 10, y: 10}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new point with the absolute values of the specified <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a>
-and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values. The object itself is not modified!</p>
+	<p>Returns a new point with the absolute values of the specified <a href="/reference/point#x"><tt>x</tt></a>
+and <a href="/reference/point#y"><tt>y</tt></a> values. The object itself is not modified!</p>
 	
 	
 	<ul><b>Returns:</b>
@@ -1607,8 +1607,8 @@ console.log(absPoint); // {x: 5, y: 10}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new point object with the smallest <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and
-<a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> of the supplied points.</p>
+	<p>Returns a new point object with the smallest <a href="/reference/point#x"><tt>x</tt></a> and
+<a href="/reference/point#y"><tt>y</tt></a> of the supplied points.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -1659,8 +1659,8 @@ console.log(minPoint); // {x: 10, y: 5}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new point object with the largest <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and
-<a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> of the supplied points.</p>
+	<p>Returns a new point object with the largest <a href="/reference/point#x"><tt>x</tt></a> and
+<a href="/reference/point#y"><tt>y</tt></a> of the supplied points.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -1711,7 +1711,7 @@ console.log(maxPoint); // {x: 200, y: 100}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a point object with random <a href="/reference/point#x" onclick="return toggleMember('x', true);"><tt>x</tt></a> and <a href="/reference/point#y" onclick="return toggleMember('y', true);"><tt>y</tt></a> values
+	<p>Returns a point object with random <a href="/reference/point#x"><tt>x</tt></a> and <a href="/reference/point#y"><tt>y</tt></a> values
 between <tt>0</tt> and <tt>1</tt>.</p>
 	
 	

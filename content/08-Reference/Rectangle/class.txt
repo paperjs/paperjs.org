@@ -303,9 +303,9 @@ constructor figures out how to fit a rectangle between them.</p>
 </div>
 		
 			
-<div id="point-_dontLink" class="member">
+<div id="point" class="member">
 <div class="member-link">
-<a name="point-_dontLink" href="#point-_dontLink"><tt><b>point</b></tt></a>
+<a name="point" href="#point"><tt><b>point</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -326,9 +326,9 @@ constructor figures out how to fit a rectangle between them.</p>
 </div>
 		
 			
-<div id="size-_dontLink" class="member">
+<div id="size" class="member">
 <div class="member-link">
-<a name="size-_dontLink" href="#size-_dontLink"><tt><b>size</b></tt></a>
+<a name="size" href="#size"><tt><b>size</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -449,9 +449,9 @@ whole rectangle: the top won't move.</p>
 			
 	<h3>Corner and Center Point Positions</h3>
 
-<div id="center-_dontLink" class="member">
+<div id="center" class="member">
 <div class="member-link">
-<a name="center-_dontLink" href="#center-_dontLink"><tt><b>center</b></tt></a>
+<a name="center" href="#center"><tt><b>center</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -1175,7 +1175,7 @@ specified rectangle.</p>
 	<p>Adds a point to this rectangle. The resulting rectangle is the
 smallest rectangle that contains both the original rectangle and the
 specified point.</p>
-<p>After adding a point, a call to <a href="/reference/rectangle#contains-point" onclick="return toggleMember('contains-point', true);"><tt>contains(point)</tt></a> with the added
+<p>After adding a point, a call to <a href="/reference/rectangle#contains-point"><tt>contains(point)</tt></a> with the added
 point as an argument does not necessarily return <tt>true</tt>.</p>
 <p>The <a href="/reference/rectangle#contains-point"><tt>rectangle.contains(point)</tt></a> method does not return <tt>true</tt>
 for points on the right or bottom edges of a rectangle. Therefore, if the

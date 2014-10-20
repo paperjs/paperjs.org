@@ -246,14 +246,14 @@ two straight lines.</p>
 </div>
 		
 			
-<div id="selected-_point" class="member">
+<div id="selected" class="member">
 <div class="member-link">
-<a name="selected-_point" href="#selected-_point"><tt><b>selected</b></tt></a>
+<a name="selected" href="#selected"><tt><b>selected</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>Specifies whether the <a href="/reference/segment#point" onclick="return toggleMember('point', true);"><tt>point</tt></a> of the segment is selected.</p>
+	<p>Specifies whether the <a href="/reference/segment#point"><tt>point</tt></a> of the segment is selected.</p>
 	
 	
 	<ul><b>Type:</b>

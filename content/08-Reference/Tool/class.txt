@@ -6,9 +6,9 @@ by using the mouse and keyboard and can be accessed through the global
 <tt>tool</tt> variable. All its properties are also available in the paper
 scope.</p>
 <p>The global <tt>tool</tt> variable only exists in scripts that contain mouse
-handler functions (<a href="/reference/tool#onmousemove" onclick="return toggleMember('onmousemove', true);"><tt>onMouseMove</tt></a>, <a href="/reference/tool#onmousedown" onclick="return toggleMember('onmousedown', true);"><tt>onMouseDown</tt></a>,
-<a href="/reference/tool#onmousedrag" onclick="return toggleMember('onmousedrag', true);"><tt>onMouseDrag</tt></a>, <a href="/reference/tool#onmouseup" onclick="return toggleMember('onmouseup', true);"><tt>onMouseUp</tt></a>) or a keyboard handler
-function (<a href="/reference/tool#onkeydown" onclick="return toggleMember('onkeydown', true);"><tt>onKeyDown</tt></a>, <a href="/reference/tool#onkeyup" onclick="return toggleMember('onkeyup', true);"><tt>onKeyUp</tt></a>).</p>
+handler functions (<a href="/reference/tool#onmousemove"><tt>onMouseMove</tt></a>, <a href="/reference/tool#onmousedown"><tt>onMouseDown</tt></a>,
+<a href="/reference/tool#onmousedrag"><tt>onMouseDrag</tt></a>, <a href="/reference/tool#onmouseup"><tt>onMouseUp</tt></a>) or a keyboard handler
+function (<a href="/reference/tool#onkeydown"><tt>onKeyDown</tt></a>, <a href="/reference/tool#onkeyup"><tt>onKeyUp</tt></a>).</p>
 <p>
 <b>Example</b> 
 </p>
@@ -456,9 +456,9 @@ point to it and it will be the one that recieves mouse events.</p>
 			
 <h3>Event Handling</h3>
 
-<div id="attach-type-function" class="member">
+<div id="on-type-function" class="member">
 <div class="member-link">
-<a name="attach-type-function" href="#attach-type-function"><tt><b>attach</b>(type, function)</tt></a>
+<a name="on-type-function" href="#on-type-function"><tt><b>on</b>(type, function)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -491,9 +491,9 @@ occurs
 </div>
 		
 			
-<div id="attach-param" class="member">
+<div id="on-param" class="member">
 <div class="member-link">
-<a name="attach-param" href="#attach-param"><tt><b>attach</b>(param)</tt></a>
+<a name="on-param" href="#on-param"><tt><b>on</b>(param)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -520,9 +520,9 @@ keydown, keyup</tt>.
 </div>
 		
 			
-<div id="detach-type-function" class="member">
+<div id="off-type-function" class="member">
 <div class="member-link">
-<a name="detach-type-function" href="#detach-type-function"><tt><b>detach</b>(type, function)</tt></a>
+<a name="off-type-function" href="#off-type-function"><tt><b>off</b>(type, function)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -554,9 +554,9 @@ keydown, keyup</tt>.
 </div>
 		
 			
-<div id="detach-param" class="member">
+<div id="off-param" class="member">
 <div class="member-link">
-<a name="detach-param" href="#detach-param"><tt><b>detach</b>(param)</tt></a>
+<a name="off-param" href="#off-param"><tt><b>off</b>(param)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -583,13 +583,13 @@ keydown, keyup</tt>
 </div>
 		
 			
-<div id="fire-type-event" class="member">
+<div id="emit-type-event" class="member">
 <div class="member-link">
-<a name="fire-type-event" href="#fire-type-event"><tt><b>fire</b>(type, event)</tt></a>
+<a name="emit-type-event" href="#emit-type-event"><tt><b>emit</b>(type, event)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Fire an event on the tool.</p>
+	<p>Emit an event on the tool.</p>
 	
 <ul><b>Parameters:</b>
 

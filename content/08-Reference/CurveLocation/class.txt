@@ -2,15 +2,14 @@
 
 
 <p>CurveLocation objects describe a location on <a href="/reference/curve"><tt>Curve</tt></a>
-objects, as defined by the curve <a href="/reference/curvelocation#parameter" onclick="return toggleMember('parameter', true);"><tt>parameter</tt></a>, a value between
+objects, as defined by the curve <a href="/reference/curvelocation#parameter"><tt>parameter</tt></a>, a value between
 <tt>0</tt> (beginning of the curve) and <tt>1</tt> (end of the curve). If
-the curve is part of a <a href="/reference/path"><tt>Path</tt></a> item, its <a href="/reference/curvelocation#index" onclick="return toggleMember('index', true);"><tt>index</tt></a> inside the
+the curve is part of a <a href="/reference/path"><tt>Path</tt></a> item, its <a href="/reference/curvelocation#index"><tt>index</tt></a> inside the
 <a href="/reference/path#curves"><tt>path.curves</tt></a> array is also provided.</p>
 <p>The class is in use in many places, such as
-{@link Path#getLocationAt(offset, isParameter)},
+<a href="/reference/path#getlocationat-offset-isparameter"><tt>path.getLocationAt(offset, isParameter)</tt></a>,
 <a href="/reference/path#getlocationof-point"><tt>path.getLocationOf(point)</tt></a>,
-{@link Path#getNearestLocation(point),
-<a href="/reference/pathitem#getintersections-path"><tt>pathItem.getIntersections(path)</tt></a>,
+<tt>Path#getNearestLocation(point)</tt>,{@linkPathItem#getIntersections(path),
 etc.</p>
 
 </div>
@@ -19,9 +18,9 @@ etc.</p>
 <div class="reference-members"><h2>Constructors</h2>
 	
 		
-<div id="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance" class="member">
+<div id="curvelocation-curve-parameter-point" class="member">
 <div class="member-link">
-<a name="curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance" href="#curvelocation-curve-parameter-point-_curve2-_parameter2-_point2-_distance"><tt><b>CurveLocation</b>(curve, parameter, point)</tt></a>
+<a name="curvelocation-curve-parameter-point" href="#curvelocation-curve-parameter-point"><tt><b>CurveLocation</b>(curve, parameter, point)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -68,9 +67,9 @@ etc.</p>
 	<div class="reference-members"><h2>Properties</h2>
 		
 			
-<div id="segment-_preferFirst" class="member">
+<div id="segment" class="member">
 <div class="member-link">
-<a name="segment-_preferFirst" href="#segment-_preferFirst"><tt><b>segment</b></tt></a>
+<a name="segment" href="#segment"><tt><b>segment</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -93,9 +92,9 @@ etc.</p>
 </div>
 		
 			
-<div id="curve-_uncached" class="member">
+<div id="curve" class="member">
 <div class="member-link">
-<a name="curve-_uncached" href="#curve-_uncached"><tt><b>curve</b></tt></a>
+<a name="curve" href="#curve"><tt><b>curve</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -249,9 +248,9 @@ by this object.</p>
 </div>
 		
 			
-<div id="parameter-_uncached" class="member">
+<div id="parameter" class="member">
 <div class="member-link">
-<a name="parameter-_uncached" href="#parameter-_uncached"><tt><b>parameter</b></tt></a>
+<a name="parameter" href="#parameter"><tt><b>parameter</b></tt></a>
 </div>
 <div class="member-description hidden">
 
@@ -276,15 +275,15 @@ the curve).</p>
 </div>
 		
 			
-<div id="point-_uncached" class="member">
+<div id="point" class="member">
 <div class="member-link">
-<a name="point-_uncached" href="#point-_uncached"><tt><b>point</b></tt></a>
+<a name="point" href="#point"><tt><b>point</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The point which is defined by the <a href="/reference/curvelocation#curve" onclick="return toggleMember('curve', true);"><tt>curve</tt></a> and
-<a href="/reference/curvelocation#parameter" onclick="return toggleMember('parameter', true);"><tt>parameter</tt></a>.</p>
+	<p>The point which is defined by the <a href="/reference/curvelocation#curve"><tt>curve</tt></a> and
+<a href="/reference/curvelocation#parameter"><tt>parameter</tt></a>.</p>
 	
 		<p>Read only.</p>
 	

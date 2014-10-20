@@ -28,14 +28,14 @@
 <li>
 <tt>code:</tt> 
 <tt>String</tt>
-&mdash;&nbsp;The PaperScript code.
+&mdash;&nbsp;the PaperScript code.
 
 </li>
 
 <li>
 <tt>url:</tt> 
 <tt>String</tt>
-&mdash;&nbsp;The url of the source, for source-map debugging.
+&mdash;&nbsp;the url of the source, for source-map debugging.
 
 </li>
 
@@ -45,7 +45,7 @@
 	<ul><b>Returns:</b>
 	
 		<li>
-<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;The compiled PaperScript as JavaScript code.
+<tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;the compiled PaperScript as JavaScript code.
 </li>
 	
 	</ul>
@@ -73,27 +73,71 @@ and tool handlers automatically for you.</p>
 <li>
 <tt>code:</tt> 
 <tt>String</tt>
-&mdash;&nbsp;The PaperScript code.
+&mdash;&nbsp;the PaperScript code.
 
 </li>
 
 <li>
 <tt>scope:</tt> 
 <a href="/reference/paperscript"><tt>PaperScript</tt></a>
-&mdash;&nbsp;The scope for which the code is executed.
+&mdash;&nbsp;the scope for which the code is executed.
 
 </li>
 
 <li>
 <tt>url:</tt> 
 <tt>String</tt>
-&mdash;&nbsp;The url of the source, for source-map debugging.
+&mdash;&nbsp;the url of the source, for source-map debugging.
 
 </li>
 
 </ul>
 
 	
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="load" class="member">
+<div class="member-link">
+<a name="load" href="#load"><tt><b>PaperScript.load</b>([script])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Loads, compiles and executes PaperScript code in the HTML document.</p>
+<p>Note that this method is executed automatically for all scripts in the
+document through a window load event. You can optionally call it earlier
+(e.g. from a DOM ready event), or you can mark scripts to be ignored by
+setting the attribute <tt>ignore="true"</tt> or
+<tt>data-paper-ignore="true"</tt>, and call the
+<tt>PaperScript.load(script)</tt> method for each script separately when
+needed.</p>
+	
+<ul><b>Parameters:</b>
+
+<li>
+<tt>script:</tt> 
+<tt>HTMLScriptElement</tt>
+&mdash;&nbsp;the script to load. If none is
+provided, all scripts of the HTML document are iterated over and loaded.
+&mdash;&nbsp;optional, default: <tt>null</tt>
+</li>
+
+</ul>
+
+	
+	<ul><b>Returns:</b>
+	
+		<li>
+<tt><a href="/reference/paperscope"><tt>PaperScope</tt></a></tt>&nbsp;&mdash;&nbsp;the scope produced for the passed <tt>script</tt>, or
+<tt>undefined</tt> of multiple scripts area loaded.
+</li>
+	
+	</ul>
+
 	
 	
 </div>

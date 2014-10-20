@@ -2,7 +2,7 @@
 
 
 <p>The Size object is used to describe the size or dimensions of
-something, through its <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> properties.</p>
+something, through its <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> properties.</p>
 <p>
 <b>Example</b> &mdash; Create a size that is 10pt wide and 5pt high, and use it to define a rectangle:
 </p>
@@ -725,7 +725,7 @@ console.log(size != new Size(1, 1)); // true</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size with rounded <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a>
+	<p>Returns a new size with rounded <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a>
 values. The object itself is not modified!</p>
 	
 	
@@ -759,7 +759,7 @@ console.log(roundSize); // {x: 10, y: 11}</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new size with the nearest greater non-fractional values to the
-specified <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> values. The object itself is
+specified <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is
 not modified!</p>
 	
 	
@@ -793,7 +793,7 @@ console.log(ceilSize); // {x: 11, y: 11}</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new size with the nearest smaller non-fractional values to the
-specified <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> values. The object itself is
+specified <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is
 not modified!</p>
 	
 	
@@ -827,7 +827,7 @@ console.log(floorSize); // {x: 10, y: 10}</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a new size with the absolute values of the specified
-<a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> values. The object itself is not
+<a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is not
 modified!</p>
 	
 	
@@ -865,8 +865,8 @@ console.log(absSize); // {x: 5, y: 10}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size object with the smallest <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and
-<a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> of the supplied sizes.</p>
+	<p>Returns a new size object with the smallest <a href="/reference/size#width"><tt>width</tt></a> and
+<a href="/reference/size#height"><tt>height</tt></a> of the supplied sizes.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -917,8 +917,8 @@ console.log(minSize); // {width: 10, height: 5}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size object with the largest <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and
-<a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a> of the supplied sizes.</p>
+	<p>Returns a new size object with the largest <a href="/reference/size#width"><tt>width</tt></a> and
+<a href="/reference/size#height"><tt>height</tt></a> of the supplied sizes.</p>
 	
 <ul><b>Parameters:</b>
 
@@ -969,7 +969,7 @@ console.log(maxSize); // {width: 200, height: 100}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a size object with random <a href="/reference/size#width" onclick="return toggleMember('width', true);"><tt>width</tt></a> and <a href="/reference/size#height" onclick="return toggleMember('height', true);"><tt>height</tt></a>
+	<p>Returns a size object with random <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a>
 values between <tt>0</tt> and <tt>1</tt>.</p>
 	
 	

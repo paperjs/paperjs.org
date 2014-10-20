@@ -469,10 +469,10 @@ path.dashArray = [10, 4];
 
 <div class="member-text">
 	<p>The miter limit of the stroke. When two line segments meet at a sharp
-angle and miter joins have been specified for <a href="/reference/style#strokejoin" onclick="return toggleMember('strokejoin', true);"><tt>strokeJoin</tt></a>, it is
-possible for the miter to extend far beyond the <a href="/reference/style#strokewidth" onclick="return toggleMember('strokewidth', true);"><tt>strokeWidth</tt></a> of
+angle and miter joins have been specified for <a href="/reference/style#strokejoin"><tt>strokeJoin</tt></a>, it is
+possible for the miter to extend far beyond the <a href="/reference/style#strokewidth"><tt>strokeWidth</tt></a> of
 the path. The miterLimit imposes a limit on the ratio of the miter length
-to the <a href="/reference/style#strokewidth" onclick="return toggleMember('strokewidth', true);"><tt>strokeWidth</tt></a>.</p>
+to the <a href="/reference/style#strokewidth"><tt>strokeWidth</tt></a>.</p>
 	
 	
 		<ul><b>Default:</b>
