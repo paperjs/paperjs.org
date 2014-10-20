@@ -532,7 +532,7 @@ $(function() {
 			return toggleMember($(this).parents('.member'));
 		})
 		.on('click', '.member-text a', function() {
-			if (this.href.match(/^([^#]*)/)[1] === document.location.href.match(/^([^#]*)/)[1]) {
+			if (this.href.match(/^(.*?)\/?#|$/)[1] === document.location.href.match(/^(.*?)\/?(?:#|$)/)[1]) {
 				toggleMember($(this.href.match(/(#.*)$/)[1]), false, $(this));
 				return false;
 			}
