@@ -1,5 +1,0 @@
----
-title: snsreaalfonds.nl
-link: http://snsreaalfonds.nl
-description: Vector metaball map that visualizes grants awarded to cultural institutions.
----
