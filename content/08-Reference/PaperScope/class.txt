@@ -227,7 +227,7 @@ since they are not updated in the injected scope if scopes are switched.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Injects the paper scope into any other given scope. Can be used for
-examle to inject the currently active PaperScope into the window's global
+example to inject the currently active PaperScope into the window's global
 scope, to emulate PaperScript-style globally accessible Paper classes and
 objects.</p>
 <p><b>Please note:</b> Using this method may override native constructors
