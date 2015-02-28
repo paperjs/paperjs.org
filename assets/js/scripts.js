@@ -424,12 +424,14 @@ function createPaperScript(element) {
 		}
 		// Resize the main element as well, so that the float:right button
 		// is always positioned correctly.
+		/*
 		element
 			.width(width)
 			.height(height);
 		source
 			.width(width - (hasBorders ? 2 : 1))
 			.height(height - (hasBorders ? 2 : 0));
+		*/
 		if (editor)
 			editor.refresh();
 	}

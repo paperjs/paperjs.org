@@ -1,4 +1,5 @@
 .DS_Store
 node_modules
 assets/thumbnails
-/assets/css/.sass-cache/
+*.map
+/.sass-cache/

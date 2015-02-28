@@ -4,7 +4,6 @@
   "dependencies": {
     "ent": "0.0.5",
     "marks": "~1.1.1",
-    "paragraphs": "~1.0.0",
-    "execSync": "1.0.1-pre"
+    "paragraphs": "~1.0.0"
   }
 }
