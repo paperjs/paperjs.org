@@ -29,6 +29,11 @@ td {
 html {
   -webkit-text-size-adjust: none; }
 
+html,
+body {
+  margin: 0;
+  height: 100%; }
+
 body {
   background: #fff;
   margin: 0;
@@ -56,35 +61,30 @@ a {
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/superstudio.eot");
   src: url("http://assets.paperjs.org/fonts/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/superstudio.woff") format("woff"), url("http://assets.paperjs.org/fonts/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/superstudio.svg#Superstudio") format("svg"); }
-
 @font-face {
   font-family: "Akkurat-Mono";
   font-weight: normal;
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot");
   src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/akkurat-mono.woff") format("woff"), url("http://assets.paperjs.org/fonts/akkurat-mono.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/akkurat-mono.svg#Akkurat-Mono") format("svg"); }
-
 @font-face {
   font-family: "Executive";
   font-weight: normal;
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/executive-regular.eot");
   src: url("http://assets.paperjs.org/fonts/executive-regular.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-regular.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-regular.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-regular.svg#Executive") format("svg"); }
-
 @font-face {
   font-family: "Executive";
   font-weight: normal;
   font-style: italic;
   src: url("http://assets.paperjs.org/fonts/executive-italic.eot");
   src: url("http://assets.paperjs.org/fonts/executive-italic.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-italic.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-italic.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-italic.svg#Executive") format("svg"); }
-
 @font-face {
   font-family: "Executive";
   font-weight: bold;
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/executive-medium.eot");
   src: url("http://assets.paperjs.org/fonts/executive-medium.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-medium.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-medium.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-medium.svg#Executive") format("svg"); }
-
 .CodeMirror,
 .CodeMirror textarea,
 .CodeMirror pre {
@@ -185,7 +185,19 @@ body.fullscreen {
     position: absolute;
     overflow: hidden;
     width: auto;
-    padding: 0; }
+    padding: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0; }
+    body.fullscreen article .paperscript {
+      height: 100%;
+      margin-bottom: 0; }
+    body.fullscreen article .canvas,
+    body.fullscreen article canvas[resize] {
+      width: 100%;
+      height: 100%; }
 
 /* Menu */
 nav ul,
@@ -227,7 +239,7 @@ article {
   /* Text Content */ }
   article,
   article a {
-    color: #333333; }
+    color: #333; }
   article a {
     border-bottom: 1px solid; }
   article a:hover,
@@ -627,3 +639,5 @@ ul.tutorial-index {
 
 .small {
   font-size: 0.9em; }
+
+/*# sourceMappingURL=style.css.map */

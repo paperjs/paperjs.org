@@ -308,7 +308,6 @@ function createPaperScript(element) {
 		hasResize = canvas.attr('resize'),
 		showSplit = element.hasClass('split'),
 		sourceFirst = element.hasClass('source'),
-		width, height,
 		editor = null,
 		hasBorders = true,
 		edited = false,
@@ -412,24 +411,9 @@ function createPaperScript(element) {
 	}
 
 	function resize() {
-		if (!canvas.hasClass('hidden')) {
-			width = canvas.width();
-			height = canvas.height();
-		} else if (hasResize) {
-			// Can't get correct dimensions from hidden canvas,
-			// so calculate again.
-			var offset = source.offset();
-			width = $(window).width() - offset.left;
-			height = $(window).height() - offset.top;
-		}
-		// Resize the main element as well, so that the float:right button
-		// is always positioned correctly.
-		element
-			.width(width)
-			.height(height);
 		source
-			.width(width - (hasBorders ? 2 : 1))
-			.height(height - (hasBorders ? 2 : 0));
+			.width(element.width() - (hasBorders ? 2 : 1))
+			.height(element.height() - (hasBorders ? 2 : 0));
 		if (editor)
 			editor.refresh();
 	}
