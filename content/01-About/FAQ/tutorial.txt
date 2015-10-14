@@ -18,4 +18,4 @@ We are aware of the many Canvas wrappers out there, but we see Paper.js as much 
 See the previous question for a list of added benefits of working with Paper.js
 
 <title short="Use without PaperScript?">Can you use Paper.js without writing PaperScript?</title>
-Yes you can, but you loose some advantages such as auto-scoping and operator overloading, while winning others, e.g. easier debugging and slightly higher performance. The tutorial about <page "/tutorials/getting-started/using-javascript-directly/" /> describes the process. Both can also be mixed, as described in the tutorial about <page "/tutorials/getting-started/paperscript-interoperability/" />.
+Yes you can, but you lose some advantages such as auto-scoping and operator overloading, while winning others, e.g. easier debugging and slightly higher performance. The tutorial about <page "/tutorials/getting-started/using-javascript-directly/" /> describes the process. Both can also be mixed, as described in the tutorial about <page "/tutorials/getting-started/paperscript-interoperability/" />.
