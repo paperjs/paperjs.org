@@ -184,7 +184,7 @@ var bigVector = 3 * smallVector;
 So we learned that multiplying or dividing a vector changes its length without modifying its angle. But we can also change the <code length /> property on vector objects directly:
 
 <image Vector-Length-01.gif>
-First we create a vector by directly use the Point constructor, since vectors and points are actually the same type of objects:
+First we create a vector by directly using the Point constructor, since vectors and points are actually the same type of objects:
 <code start=1>
 var vector = new Point(24, 60);
 console.log(vector.length);
