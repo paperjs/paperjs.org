@@ -52,7 +52,7 @@ myPoint.x = myPoint.x * 2;
 console.log(myPoint); // { x: 40, y: 40 }
 </code>
 
-Another way of creating a point object is by passing its constructor an existing point, of which the new point the becomes a copy. Changing the new point will not modify the original point:
+Another way of creating a point object is by passing its constructor an existing point, of which the new point becomes a copy. Changing the new point will not modify the original point:
 
 <code>
 var firstPoint = new Point(20, 40);
