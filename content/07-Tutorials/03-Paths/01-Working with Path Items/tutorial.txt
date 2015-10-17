@@ -74,7 +74,7 @@ onMouseMove({ point: view.center - vector.rotate(-90) });
 
 In order to start with paths here, we will use segments that do not define handles for now and therefore are connected by lines instead of curves.
 
-Lets create a new path item by using the <api Path() /> constructor and added segments to it using the <api Path#add(segment) /> function:
+Lets create a new path item by using the <api Path() /> constructor and add segments to it using the <api Path#add(segment) /> function:
 <paperscript split=true height=100>
 var myPath = new Path();
 myPath.strokeColor = 'black';
