@@ -186,7 +186,7 @@ As I mentioned earlier, all newly created items automatically receive the curren
 
 <api project.currentStyle /> is the <api PathStyle /> object of the project and contains the currently active style properties such as <code>fillColor</code> and <code>strokeColor</code>.
 
-The following example changes the current style of the project, then creates a path which inherits that style. Then it changes only the <code>strokeWidth</code> and creates another path.
+The following example changes the current style of the project, then creates a path which inherits that style. Then it changes the <code>strokeWidth</code> and <code>fillColor</code> and creates another path.
 
 <image "currentStyle.gif" />
 
