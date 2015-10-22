@@ -41,7 +41,7 @@ This script is developed step by step in the <page "/tutorials/interaction/worki
 
 <title>Points and Vectors</title>
 
-In many ways, vectors are very similar to points. Both are represented by x and a y coordinates. But while points describe absolute positions, vectors represent a relative information; a way to get from one point to another. Here a step-by-step example that explains the relation between vectors and points.
+In many ways, vectors are very similar to points. Both are represented by x and y coordinates. But while points describe absolute positions, vectors represent a relative information; a way to get from one point to another. Here a step-by-step example that explains the relation between vectors and points.
 
 <image "Points-And-Vectors-01.gif">
 We start by creating two <page "/tutorials/geometry/point-size-and-rectangle/" anchor="point">Point</page> objects to describe two absolute locations in the document, defined by their coordinate values:
