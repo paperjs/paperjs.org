@@ -63,7 +63,7 @@ In other words, by adding these two values to the coordinates of <code point1 />
 </image>
 
 <image "Points-And-Vectors-03.gif" >
-Instead of using these two separate values, it is much easier to use a vector as a container for the them. To calculate this vector, we can simply subtract <code point1 /> from <code point2 /> instead of the two separate subtractions in the previous step:
+Instead of using these two separate values, it is much easier to use a vector as a container for them. To calculate this vector, we can simply subtract <code point1 /> from <code point2 /> instead of the two separate subtractions in the previous step:
 
 <code>
 var vector = point2 - point1;
