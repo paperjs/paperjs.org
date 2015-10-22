@@ -105,7 +105,7 @@ The easiest use of such a vector is to add it to an absolute position of a point
 
 <title>Calculating with Vectors</title>
 
-As shown by the simple examples above, the power of vectors really comes into play when we use them in mathematical calculations, treating them as if they were simple values. Here an overview of the different possible operations.
+As shown by the simple examples above, the power of vectors really comes into play when we use them in mathematical calculations, treating them as if they were simple values. Here is an overview of the different possible operations.
 
 <title short="Addition and Subtraction">Vector Addition and Subtraction</title>
 
