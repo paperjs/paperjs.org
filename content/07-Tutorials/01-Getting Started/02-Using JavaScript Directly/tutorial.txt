@@ -65,7 +65,7 @@ In the code above we use <code>window.onload = handler</code> to get a callback 
 
 <title>Making the Scope Global</title>
 
-It might not seem so practical to access all classes and objects through the <code paper /> object, so here two strategies for circumventing that.
+It might not seem so practical to access all classes and objects through the <code paper /> object, so here are two strategies for circumventing that.
 
 The most straight forward approach is to copy over all fields from the <code paper /> object into the global scope. This could be done manually, which would work well as long as there is only one project, view and tool. But with multiples of these, the global references to the active ones (<api PaperScope#project>project</api>, <api PaperScope#view>view</api> and <api PaperScope#tool>tool</api>) would not be kept up to date. Luckily there is a method for us that internally performs some JavaScript trickery so these references are kept in sync: <api PaperScope#install(scope)>paper.install(window)</api>. Equipped with this we can rewrite the code of the above example:
 
