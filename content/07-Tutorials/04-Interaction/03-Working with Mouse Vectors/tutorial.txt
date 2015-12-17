@@ -392,7 +392,7 @@ path.fillColor = {
 To smooth the path, we call <api Path#smooth() /> every time we add one or more points to the path.
 
 <note>
-You can found out more about the <api Path#smooth() /> function in the <page "/tutorials/paths/smoothing-simplifying-flattening/" anchor=smoothing-paths>Smoothing Paths</page> section of the <page "/tutorials/paths/smoothing-simplifying-flattening/" /> tutorial.
+You can find out more about the <api Path#smooth() /> function in the <page "/tutorials/paths/smoothing-simplifying-flattening/" anchor=smoothing-paths>Smoothing Paths</page> section of the <page "/tutorials/paths/smoothing-simplifying-flattening/" /> tutorial.
 </note>
 
 We smooth our <code path /> in the onMouseDrag event handler function:
