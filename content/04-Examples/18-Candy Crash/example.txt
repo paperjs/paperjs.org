@@ -16,7 +16,7 @@ function Ball(r, p, v) {
 			saturation: 1,
 			brightness: 1
 		},
-		blendMode: 'screen'
+		blendMode: 'lighter'
 	});
 
 	for (var i = 0; i < this.numSegment; i ++) {
