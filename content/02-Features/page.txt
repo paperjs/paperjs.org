@@ -70,6 +70,7 @@ function onMouseMove(event) {
 		handleTexts[i * 2 + 1].point = firstPoint -
 				(firstPoint.y < y ? [0, 10] : [0, -18]);
 	}
+	return false; // Prevent touch scrolling
 }
 
 project.currentStyle.fillColor = 'black';
@@ -159,6 +160,7 @@ function onMouseMove(event) {
 	// path in the layer.
 	if (layer.children.length > 8)
 		layer.firstChild.remove();
+	return false; // Prevent touch scrolling
 }
 </paperscript>
 
@@ -580,6 +582,7 @@ var mouseVector = vector.clone();
 
 function onMouseMove(event) {
 	mouseVector = view.center - event.point;
+	return false; // Prevent touch scrolling
 }
 
 // The onFrame function is called up to 60 times a second:
