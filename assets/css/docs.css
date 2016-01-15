@@ -160,6 +160,7 @@ section {
     margin-top: 5px; }
 .reference ul.member-list li {
   margin-left: 2em;
+  margin-bottom: 8px;
   text-indent: -2em; }
   .reference ul.member-list li:before {
     display: none; }
@@ -191,8 +192,10 @@ section {
   .reference .member-text ul ul,
   .reference .member-text ul ol,
   .reference .member-text ol ul,
-  .reference .member-text ol ol {
-    margin-bottom: 16px; }
+  .reference .member-text ol ol,
+  .reference .member-text ul p,
+  .reference .member-text ol p {
+    margin-bottom: 8px; }
 .reference .member-link {
   text-indent: -30px;
   padding-left: 30px; }

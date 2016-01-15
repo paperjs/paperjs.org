@@ -101,6 +101,7 @@
 	ul.member-list {
 		li {
 			margin-left: 2em;
+			margin-bottom: $page-margin / 2;
 			text-indent: -2em;
 
 			&:before {
@@ -147,8 +148,10 @@
 		ul ul,
 		ul ol,
 		ol ul,
-		ol ol {
-			margin-bottom: $content-margin;
+		ol ol,
+		ul p,
+		ol p {
+			margin-bottom: $content-margin / 2;
 		}
 	}
 
