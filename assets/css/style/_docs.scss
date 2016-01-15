@@ -5,18 +5,17 @@ textarea {
 	font-family: "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
 }
 
+tt,
+pre,
 .CodeMirror {
-	&,
-	textarea,
-	pre {
-		font-family: Menlo, Consolas, "Vera Mono", monospace;
-		font-size: 13px;
-	}
+	font-family: Menlo, Consolas, "Vera Mono", monospace;
+	font-size: $font-size-code;
+	line-height: $line-height-code;
 }
 
 body {
 	background: #fff;
-	margin: 16px;
+	margin: $page-margin;
 	font-size: $font-size;
 	line-height: $line-height;
 	color: $color-text;
@@ -29,13 +28,6 @@ textarea {
 	font-size: 11px;
 	margin: 0;
 	color: #000;
-}
-
-tt,
-pre {
-	font-family: Menlo, Consolas, "Vera Mono", monospace;
-	font-size: 13px;
-	line-height: $line-height;
 }
 
 a {
@@ -52,13 +44,13 @@ img {
 }
 
 p {
-	margin: 0 0 $line-height 0;
+	margin: 0 0 $content-margin 0;
 }
 
 ul,
 ol {
 	padding: 0;
-	margin: 0 0 20px 0;
+	margin: 0 0 $content-margin 0;
 	list-style: none;
 }
 
@@ -96,5 +88,5 @@ ol {
 }
 
 .footer {
-	margin-top: $line-height;
+	margin-top: $content-margin;
 }

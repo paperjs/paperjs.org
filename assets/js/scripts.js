@@ -162,7 +162,6 @@ behaviors.thumbnails = function() {
 	$('.thumbnail').height(height);
 };
 
-// TODO: Move this to offline reference
 behaviors.expandableLists = function() {
 	$('.expandable-list').each(function() {
 		var list = $(this);
@@ -229,7 +228,7 @@ behaviors.analytics = function() {
 };
 
 behaviors.code = function() {
-	$('.code:visible').each(function() {
+	$('.code:visible, pre:visible code').each(function() {
 		createCode($(this));
 	});
 };

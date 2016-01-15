@@ -28,17 +28,17 @@ article {
 	p,
 	ul,
 	ol {
-		margin: 0 10px $line-height 0;
+		margin: 0 $content-margin / 2 $content-margin 0;
 
 		&.small {
-			margin-bottom: $line-height / 2;
+			margin-bottom: $content-margin / 2;
 		}
 	}
 
 	figure,
 	.CodeMirror,
 	.paperscript {
-		margin-bottom: $line-height;
+		margin-bottom: $content-margin;
 	}
 
 	// Lists
@@ -59,12 +59,13 @@ article {
 
 	ul > li {
 		$list-indent: 1em;
-
-		text-indent: -$list-indent;
 		margin-left: $list-indent;
+		position: relative;
+
 		&:before {
-			content: "–";
-			padding-right: $list-indent - 0.7em;
+			content: '–';
+	    position: absolute;
+	    left: -$list-indent;
 		}
 	}
 
@@ -73,21 +74,22 @@ article {
 	}
 
 	ol > li {
-		text-indent: -1.5em;
-		margin-left: 1.5em;
+		$list-indent: 1.5em;
+		margin-left: $list-indent;
+		position: relative;
+
 		&:before {
-			text-indent: 0;
-			display: inline-block;
-			content: counter(item, upper-latin) ") ";
+	    position: absolute;
+	    left: -$list-indent;
+			content: counter(item, upper-latin) ') ';
 			counter-increment: item;
-			width: 1.5em;
 		}
 	}
 }
 
 section {
 	clear: both;
-	margin: 0 0 $line-height;
+	margin: 0 0 $content-margin;
 	padding: 0;
 }
 
@@ -96,7 +98,7 @@ section {
 	float: left;
 
 	& + & {
-		margin-left: 20px;
+		margin-left: $content-margin;
 	}
 }
 
@@ -105,7 +107,7 @@ section {
 }
 
 .donation {
-	padding-bottom: 20px;
+	padding-bottom: $content-margin;
 
 	input,
 	select {

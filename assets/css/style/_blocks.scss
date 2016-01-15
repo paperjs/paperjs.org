@@ -2,7 +2,7 @@
 
 .block {
 	display: table;
-	margin-bottom: 20px;
+	margin-bottom: $content-margin;
 	@include clearfix;
 
 	.note {
@@ -12,7 +12,7 @@
 	.CodeMirror {
 		// Having height at 100% in resource-blocks breaks table layout
 		height: auto;
-		margin-bottom: 20px;
+		margin-bottom: $content-margin;
 	}
 
 	.paperscript:last-child {
@@ -31,11 +31,11 @@
 	}
 
 	.left {
-		padding-right: 20px;
+		padding-right: $content-margin;
 	}
 
 	& + & {
 		border-top: 1px dotted #000;
-		padding-top: 20px;
+		padding-top: $content-margin;
 	}
 }

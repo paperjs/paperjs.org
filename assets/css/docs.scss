@@ -3,7 +3,9 @@
 
 @import 'bourbon/bourbon';
 
-@import 'style/settings';
+@import 'style/settings_docs';
+@import 'style/reset';
+@import 'style/content';
 @import 'style/reference';
 @import 'style/docs';
 @import 'style/codemirror';

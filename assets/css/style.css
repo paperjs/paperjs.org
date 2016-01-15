@@ -61,35 +61,49 @@ a {
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/superstudio.eot");
   src: url("http://assets.paperjs.org/fonts/superstudio.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/superstudio.woff") format("woff"), url("http://assets.paperjs.org/fonts/superstudio.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/superstudio.svg#Superstudio") format("svg"); }
+
 @font-face {
   font-family: "Akkurat-Mono";
   font-weight: normal;
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot");
   src: url("http://assets.paperjs.org/fonts/akkurat-mono.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/akkurat-mono.woff") format("woff"), url("http://assets.paperjs.org/fonts/akkurat-mono.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/akkurat-mono.svg#Akkurat-Mono") format("svg"); }
+
 @font-face {
   font-family: "Executive";
   font-weight: normal;
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/executive-regular.eot");
   src: url("http://assets.paperjs.org/fonts/executive-regular.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-regular.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-regular.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-regular.svg#Executive") format("svg"); }
+
 @font-face {
   font-family: "Executive";
   font-weight: normal;
   font-style: italic;
   src: url("http://assets.paperjs.org/fonts/executive-italic.eot");
   src: url("http://assets.paperjs.org/fonts/executive-italic.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-italic.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-italic.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-italic.svg#Executive") format("svg"); }
+
 @font-face {
   font-family: "Executive";
   font-weight: bold;
   font-style: normal;
   src: url("http://assets.paperjs.org/fonts/executive-medium.eot");
   src: url("http://assets.paperjs.org/fonts/executive-medium.eot?#iefix") format("embedded-opentype"), url("http://assets.paperjs.org/fonts/executive-medium.woff") format("woff"), url("http://assets.paperjs.org/fonts/executive-medium.ttf") format("truetype"), url("http://assets.paperjs.org/fonts/executive-medium.svg#Executive") format("svg"); }
-.CodeMirror,
-.CodeMirror textarea,
-.CodeMirror pre {
+
+body,
+select,
+input,
+textarea,
+.tutorial h2,
+.reference h2 {
+  font-family: "Executive", "Lucida Grande", Geneva, Verdana, Arial, sans-serif; }
+
+tt,
+pre,
+.CodeMirror {
   font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
-  font-size: 13px; }
+  font-size: 13px;
+  line-height: 18px; }
 
 h1,
 h2 {
@@ -100,7 +114,7 @@ h2 {
   padding-top: 32px;
   padding-bottom: 8px;
   border-bottom: 1px solid;
-  margin: 0 0 21px 0; }
+  margin: 0 0 20px 0; }
 
 h3,
 h4,
@@ -111,7 +125,7 @@ h5 {
 h4 {
   display: inline; }
   h4 + p {
-    margin-top: 21px; }
+    margin-top: 20px; }
 
 h5 {
   display: inline-block;
@@ -119,14 +133,6 @@ h5 {
   zoom: 1;
   *display: inline;
   *vertical-align: auto; }
-
-body,
-select,
-input,
-textarea,
-.tutorial h2,
-.reference h2 {
-  font-family: "Executive", "Lucida Grande", Geneva, Verdana, Arial, sans-serif; }
 
 .tutorial h2,
 .reference h2 {
@@ -142,11 +148,6 @@ textarea,
   margin-top: -30px; }
 .tutorial section {
   margin-bottom: 30px; }
-
-tt,
-pre {
-  font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
-  font-size: 13px; }
 
 /* Column Layout */
 nav,
@@ -208,14 +209,11 @@ aside ul {
   nav ul li,
   aside ul li {
     padding: 0;
-    margin: 0 0 0 13px;
-    text-indent: -13px; }
+    margin: 0 0 0 1em;
+    text-indent: -1em; }
     nav ul li.spacer,
     aside ul li.spacer {
       margin-top: 10px; }
-  nav ul > li,
-  aside ul > li {
-    padding: 0; }
 
 /* Colours and Links */
 nav,
@@ -239,7 +237,7 @@ article {
   /* Text Content */ }
   article,
   article a {
-    color: #333; }
+    color: #333333; }
   article a {
     border-bottom: 1px solid; }
   article a:hover,
@@ -251,15 +249,15 @@ article {
   article p,
   article ul,
   article ol {
-    margin: 0 10px 21px 0; }
+    margin: 0 10px 20px 0; }
     article p.small,
     article ul.small,
     article ol.small {
-      margin-bottom: 10.5px; }
+      margin-bottom: 10px; }
   article figure,
   article .CodeMirror,
   article .paperscript {
-    margin-bottom: 21px; }
+    margin-bottom: 20px; }
   article ul,
   article ol {
     padding: 0;
@@ -270,26 +268,26 @@ article {
   article ol ol {
     margin-bottom: 0; }
   article ul > li {
-    text-indent: -1em;
-    margin-left: 1em; }
+    margin-left: 1em;
+    position: relative; }
     article ul > li:before {
-      content: "–";
-      padding-right: 0.3em; }
+      content: '–';
+      position: absolute;
+      left: -1em; }
   article ol {
     counter-reset: item; }
   article ol > li {
-    text-indent: -1.5em;
-    margin-left: 1.5em; }
+    margin-left: 1.5em;
+    position: relative; }
     article ol > li:before {
-      text-indent: 0;
-      display: inline-block;
+      position: absolute;
+      left: -1.5em;
       content: counter(item,upper-latin) ") ";
-      counter-increment: item;
-      width: 1.5em; }
+      counter-increment: item; }
 
 section {
   clear: both;
-  margin: 0 0 21px;
+  margin: 0 0 20px;
   padding: 0; }
 
 .column {
@@ -369,64 +367,73 @@ section {
 
 .reference h1,
 .reference h2,
-.reference h3 {
+.reference h3,
+.reference h4 {
   font-size: 15px;
   font-weight: normal;
+  margin: 0; }
+.reference h1,
+.reference h2,
+.reference h3 {
   height: 19px;
   border-bottom: 1px solid;
-  margin-top: 0;
-  margin-bottom: 16px; }
+  margin-bottom: 20px; }
 .reference h2 a {
   font-weight: bold; }
 .reference h3 {
-  margin-top: 16px;
+  margin-top: 20px;
   border-bottom-style: dotted; }
+.reference h4 {
+  font-weight: bold; }
+  .reference h4 .description {
+    font-weight: normal; }
+    .reference h4 .description:before {
+      content: ' — '; }
+  .reference h4 + ul, .reference h4 + pre {
+    margin-top: 10px;
+    margin-bottom: 20px; }
 .reference a tt {
   line-height: 18px; }
+.reference ul,
 .reference p {
-  margin: 0 0 16px 0; }
+  margin-bottom: 20px; }
 .reference hr {
   border: none;
   border-bottom: 1px dotted; }
-.reference ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-.reference ul > li {
-  text-indent: 0;
-  margin-left: 0; }
-.reference ul > li:before {
-  display: none; }
 .reference .reference-list ul,
 .reference .reference-inherited ul {
-  margin-left: 16px; }
+  margin-left: 20px; }
 .reference .reference-inherited ul li {
   text-indent: -30px;
   padding-left: 30px; }
-.reference .reference-classes {
+.reference ul.reference-classes {
   padding-bottom: 4px; }
-  .reference .reference-classes h2,
-  .reference .reference-classes h3,
-  .reference .reference-classes hr {
+  .reference ul.reference-classes li {
+    margin: 0;
+    text-indent: 0; }
+  .reference ul.reference-classes ul {
+    margin: 0 0 10px 10px; }
+  .reference ul.reference-classes h2,
+  .reference ul.reference-classes h3,
+  .reference ul.reference-classes hr {
     margin: 10px 0 10px 0; }
-  .reference .reference-classes .first h2 {
+  .reference ul.reference-classes .first h2 {
     margin-top: 0; }
-  * html .reference .reference-classes img {
+  * html .reference ul.reference-classes img {
     margin-top: 5px; }
-  .reference .reference-classes li {
-    list-style: none;
-    list-style-image: none; }
-  .reference .reference-classes ul {
-    margin-left: 10px;
-    margin-bottom: 10px; }
+.reference ul.member-list li {
+  margin-left: 2em;
+  text-indent: -2em; }
+  .reference ul.member-list li:before {
+    display: none; }
 .reference .reference-members {
-  margin-bottom: 16px; }
+  margin-bottom: 20px; }
 .reference .member-group-text {
-  margin-bottom: 16px; }
+  margin-bottom: 20px; }
 .reference .member-description {
   border: 1px solid #999;
   border-top: 0;
-  margin: 16px 0 16px 0; }
+  margin: 20px 0 20px 0; }
 .reference .member-header {
   border-top: 1px solid #999;
   padding: 10px;
@@ -444,19 +451,16 @@ section {
   border-top: 1px dashed #999;
   padding: 10px 10px 0 10px;
   margin-bottom: -6px; }
+  .reference .member-text ul ul,
+  .reference .member-text ul ol,
+  .reference .member-text ol ul,
+  .reference .member-text ol ol {
+    margin-bottom: 20px; }
 .reference .member-link {
   text-indent: -30px;
   padding-left: 30px; }
-.reference ul,
-.reference .paperscript,
-.reference .CodeMirror {
-  margin-top: -8px;
-  margin-bottom: 16px; }
-.reference ul {
-  margin-top: 0; }
 
 .CodeMirror pre {
-  line-height: 18px;
   margin: 0;
   padding: 0;
   background: transparent; }
@@ -494,7 +498,7 @@ section {
   position: absolute;
   visibility: hidden;
   border-left: 1px solid #7c7c7c !important;
-  height: 16px; }
+  height: 18px; }
 
 .CodeMirror-selected {
   background: #ccc !important;
@@ -609,12 +613,9 @@ li.expandable-list a.arrow {
 /* Tutorials */
 ul.tutorial-index {
   margin: 0;
-  padding-left: 0;
-  list-style: none; }
+  padding-left: 0; }
   ul.tutorial-index > li:before {
     display: none; }
-  ul.tutorial-index ul {
-    padding-left: 15px; }
   article ul.tutorial-index {
     margin-bottom: 29px; }
 

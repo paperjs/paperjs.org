@@ -79,17 +79,12 @@ aside ul {
 
 	li {
 		padding: 0;
-		margin: 0 0 0 13px;
-		text-indent: -13px;
+		margin: 0 0 0 1em;
+		text-indent: -1em;
 
 		&.spacer {
 			margin-top: 10px;
 		}
-	}
-
-	& > li {
-		// Don't indent the first level of entries
-		padding: 0;
 	}
 }
 

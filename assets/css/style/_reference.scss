@@ -3,13 +3,19 @@
 .reference {
 	h1,
 	h2,
-	h3 {
+	h3,
+	h4 {
 		font-size: $font-size;
 		font-weight: normal;
+		margin: 0;
+	}
+
+	h1,
+	h2,
+	h3 {
 		height: $line-height - 2; // -2px so border-bottom aligns with contained links
 		border-bottom: 1px solid;
-		margin-top: 0;
-		margin-bottom: 16px;
+		margin-bottom: $content-margin;
 	}
 
 	h2 {
@@ -19,16 +25,34 @@
 	}
 
 	h3 {
-		margin-top: 16px;
+		margin-top: $content-margin;
 		border-bottom-style: dotted;
 	}
 
-	a tt {
-		line-height: 18px;
+	h4 {
+		font-weight: bold;
+
+	  .description {
+			font-weight: normal;
+			&:before {
+				content: ' — ';
+			}
+		}
+
+		& + ul,
+		& + pre {
+			margin-top: $content-margin / 2; // Move half way down from h4
+			margin-bottom: $content-margin;
+		}
 	}
 
+	a tt {
+		line-height: $line-height-code;
+	}
+
+	ul,
 	p {
-		margin: 0 0 16px 0;
+		margin-bottom: $content-margin;
 	}
 
 	hr {
@@ -36,25 +60,9 @@
 		border-bottom: 1px dotted;
 	}
 
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	ul > li {
-		text-indent: 0;
-		margin-left: 0;
-	}
-
-	ul > li:before {
-		display: none;
-	}
-
-
 	.reference-list ul,
 	.reference-inherited ul {
-		margin-left: 16px;
+		margin-left: $content-margin;
 	}
 
 	.reference-inherited ul li {
@@ -62,8 +70,17 @@
 		padding-left: 30px;
 	}
 
-	.reference-classes {
+	ul.reference-classes {
 		padding-bottom: 4px;
+
+		li {
+			margin: 0;
+			text-indent: 0;
+		}
+
+		ul { // nested
+			margin: 0 0 10px 10px;
+		}
 
 		h2,
 		h3,
@@ -79,31 +96,32 @@
 		* html & img {
 			margin-top: 5px;
 		}
+	}
 
+	ul.member-list {
 		li {
-			list-style: none;
-			list-style-image: none; // Needed for IE 6
-		}
+			margin-left: 2em;
+			text-indent: -2em;
 
-		ul {
-			margin-left: 10px;
-			margin-bottom: 10px;
+			&:before {
+				display: none;
+			}
 		}
 	}
 
 	.reference-members {
-		margin-bottom: 16px;
+		margin-bottom: $content-margin;
 	}
 
 	.member-group-text {
-		margin-bottom: 16px;
+		margin-bottom: $content-margin;
 	}
 
 	.member-description {
 		border: 1px solid #999;
 		// .member-header defines border-top for operator lists
 		border-top: 0;
-		margin: 16px 0 16px 0;
+		margin: $content-margin 0 $content-margin 0;
 	}
 
 	.member-header {
@@ -125,21 +143,17 @@
 		border-top: 1px dashed #999;
 		padding: 10px 10px 0 10px;
 		margin-bottom: -6px; // Compensate margins of p and ul to end up with 10px
+
+		ul ul,
+		ul ol,
+		ol ul,
+		ol ol {
+			margin-bottom: $content-margin;
+		}
 	}
 
 	.member-link {
 		text-indent: -30px;
 		padding-left: 30px;
-	}
-
-	ul,
-	.paperscript,
-	.CodeMirror {
-		margin-top: -8px; // Move half way up close to previous paragraph
-		margin-bottom: 16px;
-	}
-
-	ul {
-		margin-top: 0; // Clear the above -8px for ul again
 	}
 }

@@ -2,3 +2,4 @@
 node_modules
 assets/thumbnails
 /.sass-cache/
+assets/css/codekit-config.json

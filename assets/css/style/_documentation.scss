@@ -31,14 +31,9 @@ li.expandable-list {
 ul.tutorial-index {
 	margin: 0;
 	padding-left: 0;
-	list-style: none;
 
 	> li:before {
 		display: none;
-	}
-
-	ul {
-		padding-left: $font-size;
 	}
 
 	article & {

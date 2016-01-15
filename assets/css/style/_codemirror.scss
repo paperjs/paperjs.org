@@ -1,6 +1,5 @@
 .CodeMirror {
 	pre {
-		line-height: 18px;
 		margin: 0;
 		padding: 0;
 		background: transparent;
@@ -60,7 +59,7 @@
 	position: absolute;
 	visibility: hidden;
 	border-left: 1px solid #7c7c7c !important;
-	height: 16px;
+	height: $line-height-code;
 }
 
 .CodeMirror-selected {

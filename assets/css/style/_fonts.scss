@@ -6,13 +6,21 @@
 @include font-face("Executive", "http://assets.paperjs.org/fonts/executive-italic", normal, italic);
 @include font-face("Executive", "http://assets.paperjs.org/fonts/executive-medium", bold, normal);
 
+body,
+select,
+input,
+textarea,
+.tutorial h2,
+.reference h2 {
+	font-family: "Executive", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+}
+
+tt,
+pre,
 .CodeMirror {
-	&,
-	textarea,
-	pre {
-		font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
-		font-size: 13px;
-	}
+	font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
+	font-size: $font-size-code;
+	line-height: $line-height-code;
 }
 
 h1,
@@ -24,7 +32,7 @@ h2 {
 	padding-top: $page-margin; // Padding instead of margin, so anchor trick works here too
 	padding-bottom: 8px;
   border-bottom: 1px solid;
-  margin: 0 0 $line-height 0;
+  margin: 0 0 $content-margin 0;
 }
 
 h3,
@@ -38,21 +46,12 @@ h4 {
 	display: inline;
 
 	& + p {
-		margin-top: $line-height;
+		margin-top: $content-margin;
 	}
 }
 
 h5 {
 	@include inline-block;
-}
-
-body,
-select,
-input,
-textarea,
-.tutorial h2,
-.reference h2 {
-	font-family: "Executive", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
 }
 
 .tutorial h2,
@@ -77,10 +76,4 @@ textarea,
 	section {
 		margin-bottom: 30px;
 	}
-}
-
-tt,
-pre {
-	font-family: "Akkurat-Mono", Menlo, Consolas, "Vera Mono", monospace;
-	font-size: 13px;
 }

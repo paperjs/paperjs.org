@@ -53,8 +53,8 @@
 
 	.CodeMirror-gutter-text,
 	.CodeMirror-lines {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: $content-margin / 2;
+		padding-bottom: $content-margin / 2;
 	}
 
 	.canvas {
