@@ -126,7 +126,7 @@ section {
     font-weight: normal; }
     .reference h4 .description:before {
       content: ' — '; }
-  .reference h4 + ul, .reference h4 + pre {
+  .reference h4 + ul, .reference h4 + pre, .reference h4 + .paperscript {
     margin-top: 8px;
     margin-bottom: 16px; }
 .reference a tt {

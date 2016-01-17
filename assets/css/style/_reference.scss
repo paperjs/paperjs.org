@@ -40,7 +40,8 @@
 		}
 
 		& + ul,
-		& + pre {
+		& + pre,
+		& + .paperscript {
 			margin-top: $content-margin / 2; // Move half way down from h4
 			margin-bottom: $content-margin;
 		}
