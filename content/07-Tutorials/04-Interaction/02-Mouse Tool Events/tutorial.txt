@@ -145,7 +145,8 @@ function onMouseDown(event) {
 }
 
 function onMouseDrag(event) {
-	// The amount of drag events fired since the mouse was pressed:
+	// The amount of drag events fired since the mouse
+	// was pressed:
 	console.log(event.count);
 }
 
