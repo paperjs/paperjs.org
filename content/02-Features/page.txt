@@ -33,7 +33,7 @@ Learn more about the Document Object Model in the <url "http://www.scriptographe
 
 <title>Paths & Segments</title>
 
-Paper.js makes is very easy to create paths and add segments to them. After adding, the segments can be easily inspected, manipulated, moved around, removed etc.
+Paper.js makes it very easy to create paths and add segments to them. After adding, the segments can be easily inspected, manipulated, moved around, removed etc.
 <paperscript height=250>
 var y = view.size.height / 2;
 var width = view.size.width;
