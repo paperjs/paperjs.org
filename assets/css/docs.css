@@ -269,6 +269,11 @@ ol {
   font-weight: normal;
   line-height: 24px;
   border: none; }
+  .reference h1 .version {
+    font-size: 10px;
+    line-height: 16px;
+    vertical-align: top;
+    margin-left: 0.35em; }
 
 .footer {
   margin-top: 16px; }

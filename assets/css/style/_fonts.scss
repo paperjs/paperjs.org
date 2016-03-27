@@ -11,8 +11,20 @@ select,
 input,
 textarea,
 .tutorial h2,
-.reference h2 {
+.reference h2,
+.text {
 	font-family: "Executive", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+}
+
+body,
+.text {
+	font-size: $font-size;
+	line-height: $line-height;
+	// Turn on ligatures and better typography
+	text-rendering: optimizeLegibility;
+	// Use normal aliasing to make it appear less heavy
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 tt,
@@ -52,6 +64,13 @@ h4 {
 
 h5 {
 	@include inline-block;
+}
+
+h1 {
+	.version {
+		vertical-align: top;
+		float: right;
+	}
 }
 
 .tutorial h2,

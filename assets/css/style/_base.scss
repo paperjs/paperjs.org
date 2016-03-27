@@ -1,20 +1,13 @@
 html,
 body {
-    margin: 0;
-    height: 100%;
+	margin: 0;
+	height: 100%;
 }
 
 body {
 	background: #fff;
 	margin: 0;
-	font-size: $font-size;
-	line-height: $line-height;
 	width: $content-width + 3 * $page-margin + $menu-width + $right-width;
-	// Turn on ligatures and better typography
-	text-rendering: optimizeLegibility;
-	// Use normal aliasing to make it appear less heavy
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 }
 
 select,
