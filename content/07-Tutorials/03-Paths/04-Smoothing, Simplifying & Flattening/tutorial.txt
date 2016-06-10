@@ -95,7 +95,7 @@ function onMouseUp(event) {
 	path.simplify();
 	
 	// Select the path, so we can see its segments:
-	path.selected = true;
+	path.fullySelected = true;
 	
 	var newSegmentCount = path.segments.length;
 	var difference = segmentCount - newSegmentCount;
@@ -109,9 +109,9 @@ The <api Path#simplify() /> function has an optional <code>tolerance</code> para
 
 <title>Flattening Paths</title>
 
-<api Path#flatten(maxDistance) /> converts the curves in a path to straight lines with an even distribution of points. The distance between the produced segments is as close as possible to the value specified by the <code>maxDistance</code> parameter.
+<api Path#flatten(error) /> converts the curves in a path to straight lines with a maximum specified error. The resulting lines are guaranteed to not be further waway than the amount specified by the <code>error</code> parameter.
 
-In the following example, we create a circle shaped path and straighten it using <api Path#flatten(maxDistance) >path.flatten(20)</api>:
+In the following example, we create a circle shaped path and straighten it using <api Path#flatten(error)>path.flatten(20)</api>:
 
 <paperscript height=100 split=true>
 // Create a circle shaped path at { x: 80, y: 50 }
@@ -124,10 +124,10 @@ var path = new Path.Circle({
 // Select the path, so we can inspect its segments:
 path.selected = true;
 
-// Create a copy of the path and move it 150 points to the right:
+// Create a copy of the path and move it by 150 points:
 var copy = path.clone();
 copy.position.x += 150;
 
-// Flatten the path, with a max distance of 20:
-copy.flatten(20);
+// Flatten the copied path, with a maximum error of 4 points:
+copy.flatten(4);
 </paperscript>
