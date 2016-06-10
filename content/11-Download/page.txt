@@ -1,5 +1,16 @@
-Download a prebuilt version:
+The recommended way to install and maintain Paper.js as a dependency in your project is through <url https://www.npmjs.com/>NPM</url> or <url http://bower.io/>Bower</url> for browsers, and through <url https://www.npmjs.com/>NPM</url> for <url https://nodejs.org/>Node.js</url>.
+
+<url #release-versions>Release versions</url> are also offered as packaged ZIP files below.
+Alternatively, you can download the latest <url #development-builds>prebuilt development versions</url>.
+
+<title>Release Versions</title>
 
 <template name="download" />
 
-Or check out the latest version from our <url "http://github.com/paperjs/paper.js">Github Repository</url>.
+<title>Development Builds</title>
+
+There are three ways to work with the latest development version in the <url https://github.com/paperjs/paper.js/tree/develop><code>develop</code></url> branch, the first two relying on automatic prebuilding after each commit:
+
+- Point NPM or Bower to specific commits in the <url https://github.com/paperjs/paper.js/tree/prebuilt/module><code>prebuilt/module</code></url> branch
+- Download the latest packaged ZIP file from the <url https://github.com/paperjs/paper.js/tree/prebuilt/dist><code>prebuilt/dist</code></url> branch
+- Check out the latest version from the <url https://github.com/paperjs/paper.js/tree/develop><code>develop</code></url> branch and build it yourself, following the instructions in the <url https://github.com/paperjs/paper.js/blob/develop/README.md><code>README</code></url> file.

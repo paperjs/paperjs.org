@@ -1,6 +1,6 @@
 <nop/>
 <title>Paper.js Architecture</title>
-To understand how to work with Paper.js directly from JavaScript, without the use of the PaperScript automatisms, we first need to explain a little about the architecture of Paper.js. When working with PaperScript, each script is run in its own scope, a <api PaperScope /> object. The global <api global#paper>paper</api> object through which the library is exposed is also such a <api PaperScope /> object. It helps to think of these scopes as execution contexts.
+In order to understand how to work with Paper.js directly from JavaScript, without the use of the PaperScript automatisms, we first need to explain a little about the architecture of Paper.js. When working with PaperScript, each script is run in its own scope, a <api PaperScope /> object. The global <api global#paper>paper</api> object through which the library is exposed is also such a <api PaperScope /> object. It helps to think of these scopes as execution contexts.
 
 Scopes were introduced as a way to have separate PaperScript contexts on a page with many examples, each having its own view and project, without seeing each other but still sharing the library code. They could be seen as sandboxed 'plugins' with shared code.
 
