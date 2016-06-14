@@ -56,13 +56,11 @@ function handleImage(image) {
 	if (group)
 		group.remove();
 
-	raster = null;
 	// As the web is asynchronous, we need to wait for the raster to
 	// load before we can perform any operation on its pixels.
-	new Raster(image).on('load', function() {
-		raster = this;
-		this.remove();
-
+	raster = new Raster(image);
+	raster.visible = false;
+	raster.on('load', function() {
 		// Transform the raster, so it fills the view:
 		raster.fitBounds(view.bounds, true);
 		group = new Group();
@@ -81,7 +79,7 @@ function handleImage(image) {
 }
 
 function onFrame(event) {
-	if (!raster)
+	if (!group)
 		return;
 	// Loop through the uncolored hexagons in the group and fill them
 	// with the average color:
