@@ -86,7 +86,7 @@ function onDocumentDrag(event) {
 function onDocumentDrop(event) {
 	event.preventDefault();
 
-	var file = event.originalEvent.dataTransfer.files[0];
+	var file = event.dataTransfer.files[0];
 	var reader = new FileReader();
 
 	reader.onload = function (event) {
@@ -101,10 +101,8 @@ function onDocumentDrop(event) {
 	reader.readAsDataURL(file);
 }
 
-$(document).on({
-	drop: onDocumentDrop,
-	dragover: onDocumentDrag,
-	dragleave: onDocumentDrag
-});
+document.addEventListener('drop', onDocumentDrop, false);
+document.addEventListener('dragover', onDocumentDrag, false);
+document.addEventListener('dragleave', onDocumentDrag, false);
 </paperscript>
 <image "mona.jpg" id="mona" class="hidden" />
