@@ -116,7 +116,7 @@ function onDocumentDrop(event) {
 	var file = event.dataTransfer.files[0];
 	var reader = new FileReader();
 
-	reader.onload = function ( event ) {
+	reader.onload = function(event) {
 		var image = document.createElement('img');
 		image.onload = function () {
 			handleImage(image);
