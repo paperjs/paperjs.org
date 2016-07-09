@@ -130,12 +130,12 @@ behaviors.sections = function() {
 
 behaviors.sticky = function() {
 	$('.sticky').each(function() {
-		me = $(this);
-		container = $('<div/>').append(me.contents()).appendTo(me);
+		var that = $(this);
+		var container = $('<div/>').append(that.contents()).appendTo(that);
 		// Insert a div wrapper of which the fixed class is modified depending on position
 		$(window).scroll(function() {
 			if (container.is(':visible'))
-			  container.toggleClass('fixed', me.offset().top - $(this).scrollTop() <= 0);
+			  container.toggleClass('fixed', that.offset().top - $(this).scrollTop() <= 0);
 		});
 	});
 };
