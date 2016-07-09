@@ -1,14 +1,13 @@
 <div class="reference-class">
 
 
-<p>A Rectangle specifies an area that is enclosed by it's top-left
-point (x, y), its width, and its height. It should not be confused with a
-rectangular path, it is not an item.</p>
+<p>A Rectangle specifies an area that is enclosed by it&rsquo;s top-left point (x, y), its width, and its height. It should not be confused with a rectangular path, it is not an item.</p>
 
 </div>
 
-<!-- ============================== constructors ========================= -->
-<div class="reference-members"><h2>Constructors</h2>
+<!-- =============================== constructors ========================== -->
+<div class="reference-members">
+	<h2>Constructors</h2>
 	
 		
 <div id="rectangle-point-size" class="member">
@@ -17,29 +16,40 @@ rectangular path, it is not an item.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Rectangle object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a Rectangle object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>point:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 &mdash;&nbsp;the top-left point of the rectangle
 
 </li>
-
-<li>
+	
+	<li>
 <tt>size:</tt> 
 <a href="/reference/size"><tt>Size</tt></a>
 &mdash;&nbsp;the size of the rectangle
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -51,41 +61,47 @@ rectangular path, it is not an item.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Rectangle object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a Rectangle object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object containing properties to be set on the
-       rectangle.
+&mdash;&nbsp;an object containing properties to be set on the rectangle
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>
+</li>
+		
+	</ul>
 
-<p>
-<b>Example</b> &mdash; Create a rectangle between {x: 20, y: 20} and {x: 80, y:80}
-</p>
+    
+    <h4>Example:<span class="description">Create a rectangle between {x: 20, y: 20} and {x: 80, y:80}</span></h4>
 
 
-<pre class="code">var rectangle = new Rectangle({
+<pre><code>var rectangle = new Rectangle({
     point: [20, 20],
     size: [60, 60]
-});</pre>
+});</code></pre>
 
-<p>
-<b>Example</b> &mdash; Create a rectangle between {x: 20, y: 20} and {x: 80, y:80}
-</p>
+<h4>Example:<span class="description">Create a rectangle between {x: 20, y: 20} and {x: 80, y:80}</span></h4>
 
 
-<pre class="code">var rectangle = new Rectangle({
+<pre><code>var rectangle = new Rectangle({
     from: [20, 20],
     to: [80, 80]
-});</pre>
-
+});</code></pre>
 
 </div>
 </div>
@@ -98,43 +114,54 @@ rectangular path, it is not an item.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a rectangle object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a rectangle object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>x:</tt> 
 <tt>Number</tt>
 &mdash;&nbsp;the left coordinate
 
 </li>
-
-<li>
+	
+	<li>
 <tt>y:</tt> 
 <tt>Number</tt>
 &mdash;&nbsp;the top coordinate
 
 </li>
-
-<li>
+	
+	<li>
 <tt>width:</tt> 
 <tt>Number</tt>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>height:</tt> 
 <tt>Number</tt>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -146,31 +173,40 @@ rectangular path, it is not an item.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a rectangle object from the passed points. These do not
-necessarily need to be the top left and bottom right corners, the
-constructor figures out how to fit a rectangle between them.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a rectangle object from the passed points. These do not necessarily need to be the top left and bottom right corners, the constructor figures out how to fit a rectangle between them.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>from:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;The first point defining the rectangle
+&mdash;&nbsp;the first point defining the rectangle
 
 </li>
-
-<li>
+	
+	<li>
 <tt>to:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;The second point defining the rectangle
+&mdash;&nbsp;the second point defining the rectangle
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -182,22 +218,33 @@ constructor figures out how to fit a rectangle between them.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a new rectangle object from the passed rectangle object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a new rectangle object from the passed rectangle object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>rt:</tt> 
 <a href="/reference/rectangle"><tt>Rectangle</tt></a>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -208,7 +255,9 @@ constructor figures out how to fit a rectangle between them.</p>
 
 
 
-	<div class="reference-members"><h2>Properties</h2>
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
 		
 			
 <div id="x" class="member">
@@ -221,11 +270,14 @@ constructor figures out how to fit a rectangle between them.</p>
 	<p>The x position of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -244,11 +296,14 @@ constructor figures out how to fit a rectangle between them.</p>
 	<p>The y position of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -267,11 +322,14 @@ constructor figures out how to fit a rectangle between them.</p>
 	<p>The width of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -290,11 +348,14 @@ constructor figures out how to fit a rectangle between them.</p>
 	<p>The height of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -313,11 +374,14 @@ constructor figures out how to fit a rectangle between them.</p>
 	<p>The top-left point of the rectangle</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -336,11 +400,14 @@ constructor figures out how to fit a rectangle between them.</p>
 	<p>The size of the rectangle</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/size"><tt>Size</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/size"><tt>Size</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -358,15 +425,17 @@ constructor figures out how to fit a rectangle between them.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The position of the left hand side of the rectangle. Note that this
-doesn't move the whole rectangle; the right hand side stays where it was.</p>
+	<p>The position of the left hand side of the rectangle. Note that this doesn&rsquo;t move the whole rectangle; the right hand side stays where it was.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -382,15 +451,17 @@ doesn't move the whole rectangle; the right hand side stays where it was.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The top coordinate of the rectangle. Note that this doesn't move the
-whole rectangle: the bottom won't move.</p>
+	<p>The top coordinate of the rectangle. Note that this doesn&rsquo;t move the whole rectangle: the bottom won&rsquo;t move.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -406,15 +477,17 @@ whole rectangle: the bottom won't move.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The position of the right hand side of the rectangle. Note that this
-doesn't move the whole rectangle; the left hand side stays where it was.</p>
+	<p>The position of the right hand side of the rectangle. Note that this doesn&rsquo;t move the whole rectangle; the left hand side stays where it was.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -430,15 +503,17 @@ doesn't move the whole rectangle; the left hand side stays where it was.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The bottom coordinate of the rectangle. Note that this doesn't move the
-whole rectangle: the top won't move.</p>
+	<p>The bottom coordinate of the rectangle. Note that this doesn&rsquo;t move the whole rectangle: the top won&rsquo;t move.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -459,11 +534,14 @@ whole rectangle: the top won't move.</p>
 	<p>The center point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -482,11 +560,14 @@ whole rectangle: the top won't move.</p>
 	<p>The top-left point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -505,11 +586,14 @@ whole rectangle: the top won't move.</p>
 	<p>The top-right point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -528,11 +612,14 @@ whole rectangle: the top won't move.</p>
 	<p>The bottom-left point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -551,11 +638,14 @@ whole rectangle: the top won't move.</p>
 	<p>The bottom-right point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -574,11 +664,14 @@ whole rectangle: the top won't move.</p>
 	<p>The left-center point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -597,11 +690,14 @@ whole rectangle: the top won't move.</p>
 	<p>The top-center point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -620,11 +716,14 @@ whole rectangle: the top won't move.</p>
 	<p>The right-center point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -643,11 +742,14 @@ whole rectangle: the top won't move.</p>
 	<p>The bottom-center point of the rectangle.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -663,16 +765,19 @@ whole rectangle: the top won't move.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The area of the rectangle in square points.</p>
+	<p>The area of the rectangle.</p>
 	
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -690,19 +795,40 @@ whole rectangle: the top won't move.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>Specifies whether an item's bounds are selected and will also
-mark the item as selected.</p>
-<p>Paper.js draws the visual bounds of selected items on top of your
-project. This can be useful for debugging.</p>
+	<p>Specifies whether an item&rsquo;s bounds are to appear as selected.</p>
+<p>Paper.js draws the bounds of items with selected bounds on top of your project. This is very useful when debugging.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Boolean</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Boolean</tt>
+		</li>
 	</ul>
+    
 	
-	
+	<h4>Example:</h4>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-0">
+var path = new Path.Circle({
+    center: [80, 50],
+    radius: 40,
+    selected: true
+});
+
+path.bounds.selected = true;
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-0"></canvas></div>
+</div>
+
+
 </div>
 
 </div>
@@ -712,10 +838,13 @@ project. This can be useful for debugging.</p>
 
 
 
+
+
 <!-- ============================== methods ================================ -->
-	<div class="reference-members"><h2>Methods</h2>
+	<div class="reference-members">
+		<h2>Methods</h2>
 		
-			
+	
 <div id="clone" class="member">
 <div class="member-link">
 <a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
@@ -723,6 +852,7 @@ project. This can be useful for debugging.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a copy of the rectangle.</p>
+    
 	
 	
 	
@@ -730,35 +860,37 @@ project. This can be useful for debugging.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="equals-rect" class="member">
 <div class="member-link">
 <a name="equals-rect" href="#equals-rect"><tt><b>equals</b>(rect)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Checks whether the coordinates and size of the rectangle are equal to
-that of the supplied rectangle.</p>
+	<p>Checks whether the coordinates and size of the rectangle are equal to that of the supplied rectangle.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>rect:</tt> 
 <a href="/reference/rectangle"><tt>Rectangle</tt></a>
 
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the rectangles are equal, <tt>false</tt> otherwise
 </li>
-	
+		
 	</ul>
 
 	
@@ -766,8 +898,8 @@ that of the supplied rectangle.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="tostring" class="member">
 <div class="member-link">
 <a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
@@ -775,14 +907,16 @@ that of the supplied rectangle.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of this rectangle
 </li>
-	
+		
 	</ul>
 
 	
@@ -790,8 +924,8 @@ that of the supplied rectangle.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="isempty" class="member">
 <div class="member-link">
 <a name="isempty" href="#isempty"><tt><b>isEmpty</b>()</tt></a>
@@ -799,14 +933,16 @@ that of the supplied rectangle.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the rectangle is empty, <tt>false</tt> otherwise
 </li>
-	
+		
 	</ul>
 
 	
@@ -814,8 +950,8 @@ that of the supplied rectangle.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <h3>Geometric Tests</h3>
 
 <div id="contains-point" class="member">
@@ -825,31 +961,32 @@ that of the supplied rectangle.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Tests if the specified point is inside the boundary of the rectangle.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>point:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 &mdash;&nbsp;the specified point
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the point is inside the rectangle's boundary, <tt>false</tt> otherwise
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the point is inside the rectangle&rsquo;s boundary, <tt>false</tt> otherwise
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> &mdash; Checking whether the mouse position falls within the bounding rectangle of an item:
-</p>
+	<h4>Example:<span class="description">Checking whether the mouse position falls within the bounding rectangle of an item:</span></h4>
 
 <div class="paperscript split">
 
@@ -857,7 +994,7 @@ that of the supplied rectangle.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-0">
+<script type="text/paperscript" canvas="canvas-1">
 // Create a circle shaped path at {x: 80, y: 50}
 // with a radius of 30.
 var circle = new Path.Circle(new Point(80, 50), 30);
@@ -875,49 +1012,48 @@ function onMouseMove(event) {
     }
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-0"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
 </div>
 
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="contains-rect" class="member">
 <div class="member-link">
 <a name="contains-rect" href="#contains-rect"><tt><b>contains</b>(rect)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Tests if the interior of the rectangle entirely contains the specified
-rectangle.</p>
+	<p>Tests if the interior of the rectangle entirely contains the specified rectangle.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>rect:</tt> 
 <a href="/reference/rectangle"><tt>Rectangle</tt></a>
-&mdash;&nbsp;The specified rectangle
+&mdash;&nbsp;the specified rectangle
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the rectangle entirely contains the specified
-                  rectangle, <tt>false</tt> otherwise
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the rectangle entirely contains the specified rectangle, <tt>false</tt> otherwise
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> &mdash; Checking whether the bounding box of one item is contained within that of another item:
-</p>
+	<h4>Example:<span class="description">Checking whether the bounding box of one item is contained within that of another item:</span></h4>
 
 <div class="paperscript split">
 
@@ -925,7 +1061,7 @@ rectangle.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-1">
+<script type="text/paperscript" canvas="canvas-2">
 // All newly created paths will inherit these styles:
 project.currentStyle = {
     fillColor: 'green',
@@ -957,50 +1093,48 @@ function onMouseMove(event) {
     }
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
 </div>
 
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="intersects-rect" class="member">
 <div class="member-link">
 <a name="intersects-rect" href="#intersects-rect"><tt><b>intersects</b>(rect)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Tests if the interior of this rectangle intersects the interior of
-another rectangle. Rectangles just touching each other are considered
-as non-intersecting.</p>
+	<p>Tests if the interior of this rectangle intersects the interior of another rectangle. Rectangles just touching each other are considered as non-intersecting.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>rect:</tt> 
 <a href="/reference/rectangle"><tt>Rectangle</tt></a>
 &mdash;&nbsp;the specified rectangle
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the rectangle and the specified rectangle
-                  intersect each other, <tt>false</tt> otherwise
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the rectangle and the specified rectangle intersect each other, <tt>false</tt> otherwise
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> &mdash; Checking whether the bounding box of one item intersects with that of another item:
-</p>
+	<h4>Example:<span class="description">Checking whether the bounding box of one item intersects with that of another item:</span></h4>
 
 <div class="paperscript split">
 
@@ -1008,7 +1142,7 @@ as non-intersecting.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-2">
+<script type="text/paperscript" canvas="canvas-3">
 // All newly created paths will inherit these styles:
 project.currentStyle = {
     fillColor: 'green',
@@ -1040,15 +1174,15 @@ function onMouseMove(event) {
     }
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-3"></canvas></div>
 </div>
 
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <h3>Boolean Operations</h3>
 
 <div id="intersect-rect" class="member">
@@ -1057,35 +1191,33 @@ function onMouseMove(event) {
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new rectangle representing the intersection of this rectangle
-with the specified rectangle.</p>
+	<p>Returns a new rectangle representing the intersection of this rectangle with the specified rectangle.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>rect:</tt> 
 <a href="/reference/rectangle"><tt>Rectangle</tt></a>
-&mdash;&nbsp;The rectangle to be intersected with this
-                        rectangle
+&mdash;&nbsp;the rectangle to be intersected with this rectangle
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>&nbsp;&mdash;&nbsp;the largest rectangle contained in both the specified
-                    rectangle and in this rectangle
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>&nbsp;&mdash;&nbsp;the largest rectangle contained in both the specified rectangle and in this rectangle
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> &mdash; Intersecting two rectangles and visualizing the result using rectangle shaped paths:
-</p>
+	<h4>Example:<span class="description">Intersecting two rectangles and visualizing the result using rectangle shaped paths:</span></h4>
 
 <div class="paperscript split">
 
@@ -1093,7 +1225,7 @@ with the specified rectangle.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-3">
+<script type="text/paperscript" canvas="canvas-4">
 // Create two rectangles that overlap each other
 var size = new Size(50, 50);
 var rectangle1 = new Rectangle(new Point(25, 15), size);
@@ -1120,43 +1252,44 @@ new Path.Rectangle(rectangle2);
 var intersectionPath = new Path.Rectangle(intersected);
 intersectionPath.fillColor = 'red';
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-3"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
 </div>
 
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="unite-rect" class="member">
 <div class="member-link">
 <a name="unite-rect" href="#unite-rect"><tt><b>unite</b>(rect)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new rectangle representing the union of this rectangle with the
-specified rectangle.</p>
+	<p>Returns a new rectangle representing the union of this rectangle with the specified rectangle.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>rect:</tt> 
 <a href="/reference/rectangle"><tt>Rectangle</tt></a>
 &mdash;&nbsp;the rectangle to be combined with this rectangle
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>&nbsp;&mdash;&nbsp;the smallest rectangle containing both the specified
-                    rectangle and this rectangle.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/rectangle"><tt>Rectangle</tt></a></tt>&nbsp;&mdash;&nbsp;the smallest rectangle containing both the specified rectangle and this rectangle
 </li>
-	
+		
 	</ul>
 
 	
@@ -1164,33 +1297,28 @@ specified rectangle.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="include-point" class="member">
 <div class="member-link">
 <a name="include-point" href="#include-point"><tt><b>include</b>(point)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Adds a point to this rectangle. The resulting rectangle is the
-smallest rectangle that contains both the original rectangle and the
-specified point.</p>
-<p>After adding a point, a call to <a href="/reference/rectangle#contains-point"><tt>contains(point)</tt></a> with the added
-point as an argument does not necessarily return <tt>true</tt>.</p>
-<p>The <a href="/reference/rectangle#contains-point"><tt>rectangle.contains(point)</tt></a> method does not return <tt>true</tt>
-for points on the right or bottom edges of a rectangle. Therefore, if the
-added point falls on the left or bottom edge of the enlarged rectangle,
-<a href="/reference/rectangle#contains-point"><tt>rectangle.contains(point)</tt></a> returns <tt>false</tt> for that point.</p>
+	<p>Adds a point to this rectangle. The resulting rectangle is the smallest rectangle that contains both the original rectangle and the specified point.</p>
+<p>After adding a point, a call to <a href="/reference/rectangle#contains-point"><tt>contains(point)</tt></a> with the added point as an argument does not necessarily return <code>true</code>. The <a href="/reference/rectangle#contains-point"><tt>rectangle.contains(point)</tt></a> method does not return <code>true</code> for points on the right or bottom edges of a rectangle. Therefore, if the added point falls on the left or bottom edge of the enlarged rectangle, <a href="/reference/rectangle#contains-point"><tt>rectangle.contains(point)</tt></a> returns <code>false</code> for that point.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>point:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 
 
 </li>
-
+	
 </ul>
 
 	
@@ -1199,27 +1327,27 @@ added point falls on the left or bottom edge of the enlarged rectangle,
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="expand-amount" class="member">
 <div class="member-link">
 <a name="expand-amount" href="#expand-amount"><tt><b>expand</b>(amount)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Expands the rectangle by the specified amount in horizontal and
-vertical directions.</p>
+	<p>Expands the rectangle by the specified amount in horizontal and vertical directions.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>amount:</tt> 
-<tt>Number</tt> / <a href="/reference/size"><tt>Size</tt></a> / <a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;the amount to expand the rectangle in
-both directions
+<tt>Number</tt>⟋<a href="/reference/size"><tt>Size</tt></a>⟋<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the amount to expand the rectangle in both directions
 
 </li>
-
+	
 </ul>
 
 	
@@ -1228,35 +1356,34 @@ both directions
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="expand-hor-ver" class="member">
 <div class="member-link">
 <a name="expand-hor-ver" href="#expand-hor-ver"><tt><b>expand</b>(hor, ver)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Expands the rectangle by the specified amounts in horizontal and
-vertical directions.</p>
+	<p>Expands the rectangle by the specified amounts in horizontal and vertical directions.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>hor:</tt> 
 <tt>Number</tt>
-&mdash;&nbsp;the amount to expand the rectangle in horizontal
-direction
+&mdash;&nbsp;the amount to expand the rectangle in horizontal direction
 
 </li>
-
-<li>
+	
+	<li>
 <tt>ver:</tt> 
 <tt>Number</tt>
-&mdash;&nbsp;the amount to expand the rectangle in horizontal
-direction
+&mdash;&nbsp;the amount to expand the rectangle in vertical direction
 
 </li>
-
+	
 </ul>
 
 	
@@ -1265,8 +1392,8 @@ direction
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="scale-amount" class="member">
 <div class="member-link">
 <a name="scale-amount" href="#scale-amount"><tt><b>scale</b>(amount)</tt></a>
@@ -1274,16 +1401,18 @@ direction
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Scales the rectangle by the specified amount from its center.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>amount:</tt> 
 <tt>Number</tt>
 
 
 </li>
-
+	
 </ul>
 
 	
@@ -1292,34 +1421,34 @@ direction
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="scale-hor-ver" class="member">
 <div class="member-link">
 <a name="scale-hor-ver" href="#scale-hor-ver"><tt><b>scale</b>(hor, ver)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Scales the rectangle in horizontal direction by the specified
-<tt>hor</tt> amount and in vertical direction by the specified <tt>ver</tt>
-amount from its center.</p>
+	<p>Scales the rectangle in horizontal direction by the specified <code>hor</code> amount and in vertical direction by the specified <code>ver</code> amount from its center.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>hor:</tt> 
 <tt>Number</tt>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>ver:</tt> 
 <tt>Number</tt>
 
 
 </li>
-
+	
 </ul>
 
 	
@@ -1328,8 +1457,11 @@ amount from its center.</p>
 </div>
 </div>
 </div>
+
+
 		
 	</div>
+
 
 
 

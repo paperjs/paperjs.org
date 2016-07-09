@@ -1,23 +1,21 @@
 <div class="reference-class">
 
 
-<p>The Size object is used to describe the size or dimensions of
-something, through its <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> properties.</p>
-<p>
-<b>Example</b> &mdash; Create a size that is 10pt wide and 5pt high, and use it to define a rectangle:
-</p>
+<p>The Size object is used to describe the size or dimensions of something, through its <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> properties.</p>
+<h4>Example:<span class="description">Create a size that is 10pt wide and 5pt high, and use it to define a rectangle:</span></h4>
 
 
-<pre class="code">var size = new Size(10, 5);
+<pre><code>var size = new Size(10, 5);
 console.log(size.width); // 10
 console.log(size.height); // 5
 var rect = new Rectangle(new Point(20, 15), size);
-console.log(rect); // { x: 20, y: 15, width: 10, height: 5 }</pre>
+console.log(rect); // { x: 20, y: 15, width: 10, height: 5 }</code></pre>
 
 </div>
 
-<!-- ============================== constructors ========================= -->
-<div class="reference-members"><h2>Constructors</h2>
+<!-- =============================== constructors ========================== -->
+<div class="reference-members">
+	<h2>Constructors</h2>
 	
 		
 <div id="size-width-height" class="member">
@@ -26,36 +24,45 @@ console.log(rect); // { x: 20, y: 15, width: 10, height: 5 }</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Size object with the given width and height values.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a Size object with the given width and height values.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>width:</tt> 
 <tt>Number</tt>
 &mdash;&nbsp;the width
 
 </li>
-
-<li>
+	
+	<li>
 <tt>height:</tt> 
 <tt>Number</tt>
 &mdash;&nbsp;the height
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>
+</li>
+		
+	</ul>
 
-<p>
-<b>Example</b> &mdash; Create a size that is 10pt wide and 5pt high
-</p>
+    
+    <h4>Example:<span class="description">Create a size that is 10pt wide and 5pt high</span></h4>
 
 
-<pre class="code">var size = new Size(10, 5);
+<pre><code>var size = new Size(10, 5);
 console.log(size.width); // 10
-console.log(size.height); // 5</pre>
-
+console.log(size.height); // 5</code></pre>
 
 </div>
 </div>
@@ -68,31 +75,39 @@ console.log(size.height); // 5</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Size object using the numbers in the given array as
-dimensions.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a Size object using the numbers in the given array as dimensions.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>array:</tt> 
 <tt>Array</tt>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>
+</li>
+		
+	</ul>
 
-<p>
-<b>Example</b> &mdash; Creating a size of width: 320, height: 240 using an array of numbers:
-</p>
+    
+    <h4>Example:<span class="description">Creating a size of width: 320, height: 240 using an array of numbers:</span></h4>
 
 
-<pre class="code">var array = [320, 240];
+<pre><code>var array = [320, 240];
 var size = new Size(array);
 console.log(size.width); // 320
-console.log(size.height); // 240</pre>
-
+console.log(size.height); // 240</code></pre>
 
 </div>
 </div>
@@ -105,32 +120,41 @@ console.log(size.height); // 240</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Size object using the properties in the given object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a Size object using the properties in the given object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>
+</li>
+		
+	</ul>
 
-<p>
-<b>Example</b> &mdash; Creating a size of width: 10, height: 20 using an object literal:
-</p>
+    
+    <h4>Example:<span class="description">Creating a size of width: 10, height: 20 using an object literal:</span></h4>
 
 
-<pre class="code">var size = new Size({
+<pre><code>var size = new Size({
     width: 10,
     height: 20
 });
 console.log(size.width); // 10
-console.log(size.height); // 20</pre>
-
+console.log(size.height); // 20</code></pre>
 
 </div>
 </div>
@@ -143,22 +167,33 @@ console.log(size.height); // 20</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Size object using the coordinates of the given Size object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a Size object using the coordinates of the given Size object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>size:</tt> 
 <a href="/reference/size"><tt>Size</tt></a>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -170,31 +205,39 @@ console.log(size.height); // 20</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a Size object using the <a href="/reference/point#x"><tt>point.x</tt></a> and <a href="/reference/point#y"><tt>point.y</tt></a>
-values of the given Point object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a Size object using the <a href="/reference/point#x"><tt>point.x</tt></a> and <a href="/reference/point#y"><tt>point.y</tt></a> values of the given Point object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>point:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>
+</li>
+		
+	</ul>
 
-<p>
-<b>Example</b> 
-</p>
+    
+    <h4>Example:</h4>
 
 
-<pre class="code">var point = new Point(50, 50);
+<pre><code>var point = new Point(50, 50);
 var size = new Size(point);
 console.log(size.width); // 50
-console.log(size.height); // 50</pre>
-
+console.log(size.height); // 50</code></pre>
 
 </div>
 </div>
@@ -204,64 +247,87 @@ console.log(size.height); // 50</pre>
 
 
 
-<!-- ============================== properties ========================= -->
-	<div class="reference-members"><h2>Operators</h2>
+<!-- ================================ operators ============================ -->
+	<div class="reference-members">
+		<h2>Operators</h2>
 		
 			<div id="add" class="member">
 <div class="member-link">
-<a name="add" href="#add"><tt><tt><b>+</b> Number</tt>, <tt><b>+</b> Size</tt></tt></a>
+<a name="add" href="#add"><tt><tt><b>+</b>number</tt>, <tt><b>+</b>size</tt></tt></a>
 </div>
 <div class="member-description hidden">
 
 
 	<div class="member-text">
-		<p>Returns the addition of the supplied value to the width and height of the
-size as a new size. The object itself is not modified!</p>
+		<p>Returns the addition of the supplied value to the width and height of the size as a new size. The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the size and the value as a new size
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to add
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the size and the value as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(5, 10);
+<pre><code>var size = new Size(5, 10);
 var result = size + 20;
-console.log(result); // {width: 25, height: 30}</pre>
+console.log(result); // {width: 25, height: 30}</code></pre>
 
 	</div>
 
 
 
 	<div class="member-text">
-		<p>Returns the addition of the width and height of the supplied size to the
-size as a new size. The object itself is not modified!</p>
+		<p>Returns the addition of the width and height of the supplied size to the size as a new size. The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the two sizes as a new size
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to add
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the two sizes as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var size1 = new Size(5, 10);
+<pre><code>var size1 = new Size(5, 10);
 var size2 = new Size(10, 20);
 var result = size1 + size2;
-console.log(result); // {width: 15, height: 30}</pre>
+console.log(result); // {width: 15, height: 30}</code></pre>
 
 	</div>
 
@@ -272,60 +338,81 @@ console.log(result); // {width: 15, height: 30}</pre>
 		
 			<div id="subtract" class="member">
 <div class="member-link">
-<a name="subtract" href="#subtract"><tt><tt><b>-</b> Number</tt>, <tt><b>-</b> Size</tt></tt></a>
+<a name="subtract" href="#subtract"><tt><tt><b>-</b>number</tt>, <tt><b>-</b>size</tt></tt></a>
 </div>
 <div class="member-description hidden">
 
 
 	<div class="member-text">
-		<p>Returns the subtraction of the supplied value from the width and height
-of the size as a new size. The object itself is not modified!</p>
-<p>The object itself is not modified!</p>
+		<p>Returns the subtraction of the supplied value from the width and height of the size as a new size. The object itself is not modified! The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the size and the value as a new size
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to subtract
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the size and the value as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(10, 20);
+<pre><code>var size = new Size(10, 20);
 var result = size - 5;
-console.log(result); // {width: 5, height: 15}</pre>
+console.log(result); // {width: 5, height: 15}</code></pre>
 
 	</div>
 
 
 
 	<div class="member-text">
-		<p>Returns the subtraction of the width and height of the supplied size from
-the size as a new size. The object itself is not modified!</p>
+		<p>Returns the subtraction of the width and height of the supplied size from the size as a new size. The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the two sizes as a new size
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to subtract
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the two sizes as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var firstSize = new Size(10, 20);
+<pre><code>var firstSize = new Size(10, 20);
 var secondSize = new Size(5, 5);
 var result = firstSize - secondSize;
-console.log(result); // {width: 5, height: 15}</pre>
+console.log(result); // {width: 5, height: 15}</code></pre>
 
 	</div>
 
@@ -336,59 +423,81 @@ console.log(result); // {width: 5, height: 15}</pre>
 		
 			<div id="multiply" class="member">
 <div class="member-link">
-<a name="multiply" href="#multiply"><tt><tt><b>*</b> Number</tt>, <tt><b>*</b> Size</tt></tt></a>
+<a name="multiply" href="#multiply"><tt><tt><b>*</b>number</tt>, <tt><b>*</b>size</tt></tt></a>
 </div>
 <div class="member-description hidden">
 
 
 	<div class="member-text">
-		<p>Returns the multiplication of the supplied value with the width and
-height of the size as a new size. The object itself is not modified!</p>
+		<p>Returns the multiplication of the supplied value with the width and height of the size as a new size. The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the size and the value as a new size
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to multiply by
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the size and the value as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(10, 20);
+<pre><code>var size = new Size(10, 20);
 var result = size * 2;
-console.log(result); // {width: 20, height: 40}</pre>
+console.log(result); // {width: 20, height: 40}</code></pre>
 
 	</div>
 
 
 
 	<div class="member-text">
-		<p>Returns the multiplication of the width and height of the supplied size
-with the size as a new size. The object itself is not modified!</p>
+		<p>Returns the multiplication of the width and height of the supplied size with the size as a new size. The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the two sizes as a new size
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to multiply by
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the two sizes as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var firstSize = new Size(5, 10);
+<pre><code>var firstSize = new Size(5, 10);
 var secondSize = new Size(4, 2);
 var result = firstSize * secondSize;
-console.log(result); // {width: 20, height: 20}</pre>
+console.log(result); // {width: 20, height: 20}</code></pre>
 
 	</div>
 
@@ -399,59 +508,81 @@ console.log(result); // {width: 20, height: 20}</pre>
 		
 			<div id="divide" class="member">
 <div class="member-link">
-<a name="divide" href="#divide"><tt><tt><b>/</b> Number</tt>, <tt><b>/</b> Size</tt></tt></a>
+<a name="divide" href="#divide"><tt><tt><b>/</b>number</tt>, <tt><b>/</b>size</tt></tt></a>
 </div>
 <div class="member-description hidden">
 
 
 	<div class="member-text">
-		<p>Returns the division of the supplied value by the width and height of the
-size as a new size. The object itself is not modified!</p>
+		<p>Returns the division of the supplied value by the width and height of the size as a new size. The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the size and the value as a new size
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to divide by
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the size and the value as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(10, 20);
+<pre><code>var size = new Size(10, 20);
 var result = size / 2;
-console.log(result); // {width: 5, height: 10}</pre>
+console.log(result); // {width: 5, height: 10}</code></pre>
 
 	</div>
 
 
 
 	<div class="member-text">
-		<p>Returns the division of the width and height of the supplied size by the
-size as a new size. The object itself is not modified!</p>
+		<p>Returns the division of the width and height of the supplied size by the size as a new size. The object itself is not modified!</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the two sizes as a new size
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to divide by
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the two sizes as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var firstSize = new Size(8, 10);
+<pre><code>var firstSize = new Size(8, 10);
 var secondSize = new Size(2, 5);
 var result = firstSize / secondSize;
-console.log(result); // {width: 4, height: 2}</pre>
+console.log(result); // {width: 4, height: 2}</code></pre>
 
 	</div>
 
@@ -462,58 +593,78 @@ console.log(result); // {width: 4, height: 2}</pre>
 		
 			<div id="modulo" class="member">
 <div class="member-link">
-<a name="modulo" href="#modulo"><tt><tt><b>%</b> Number</tt>, <tt><b>%</b> Size</tt></tt></a>
+<a name="modulo" href="#modulo"><tt><tt><b>%</b>number</tt>, <tt><b>%</b>size</tt></tt></a>
 </div>
 <div class="member-description hidden">
 
 
 	<div class="member-text">
-		<p>The modulo operator returns the integer remainders of dividing the size
-by the supplied value as a new size.</p>
+		<p>The modulo operator returns the integer remainders of dividing the size by the supplied value as a new size.</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the size by the value
-                as a new size
+	<li>
+<tt>value:</tt> 
+<tt>Number</tt>
+
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the size by the value as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(12, 6);
-console.log(size % 5); // {width: 2, height: 1}</pre>
+<pre><code>var size = new Size(12, 6);
+console.log(size % 5); // {width: 2, height: 1}</code></pre>
 
 	</div>
 
 
 
 	<div class="member-text">
-		<p>The modulo operator returns the integer remainders of dividing the size
-by the supplied size as a new size.</p>
+		<p>The modulo operator returns the integer remainders of dividing the size by the supplied size as a new size.</p>
 		
-	<ul><b>Returns:</b>
+<ul class="member-list">
+	<h4>Parameters:</h4>
 	
-		<li>
-<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the sizes by each
-                other as a new size
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+
+
 </li>
 	
+</ul>
+
+		
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the sizes by each other as a new size
+</li>
+		
 	</ul>
 
 		
-		<p>
-<b>Example</b> 
-</p>
+		<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(12, 6);
-console.log(size % new Size(5, 2)); // {width: 2, height: 0}</pre>
+<pre><code>var size = new Size(12, 6);
+console.log(size % new Size(5, 2)); // {width: 2, height: 0}</code></pre>
 
 	</div>
 
@@ -526,7 +677,9 @@ console.log(size % new Size(5, 2)); // {width: 2, height: 0}</pre>
 
 
 
-	<div class="reference-members"><h2>Properties</h2>
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
 		
 			
 <div id="width" class="member">
@@ -539,11 +692,14 @@ console.log(size % new Size(5, 2)); // {width: 2, height: 0}</pre>
 	<p>The width of the size</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -562,11 +718,14 @@ console.log(size % new Size(5, 2)); // {width: 2, height: 0}</pre>
 	<p>The height of the size</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -578,55 +737,58 @@ console.log(size % new Size(5, 2)); // {width: 2, height: 0}</pre>
 
 
 
+
+
 <!-- ============================== methods ================================ -->
-	<div class="reference-members"><h2>Methods</h2>
+	<div class="reference-members">
+		<h2>Methods</h2>
 		
-			
+	
 <div id="equals-" class="member">
 <div class="member-link">
 <a name="equals-" href="#equals-"><tt><b>equals</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Checks whether the width and height of the size are equal to those of the
-supplied size.</p>
+	<p>Checks whether the width and height of the size are equal to those of the supplied size.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>:</tt> 
 <a href="/reference/size"><tt>Size</tt></a>
 
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>Boolean</tt></tt>
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(5, 10);
+<pre><code>var size = new Size(5, 10);
 console.log(size == new Size(5, 10)); // true
 console.log(size == new Size(1, 1)); // false
-console.log(size != new Size(1, 1)); // true</pre>
+console.log(size != new Size(1, 1)); // true</code></pre>
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="clone" class="member">
 <div class="member-link">
 <a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
@@ -634,6 +796,7 @@ console.log(size != new Size(1, 1)); // true</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a copy of the size.</p>
+    
 	
 	
 	
@@ -641,8 +804,8 @@ console.log(size != new Size(1, 1)); // true</pre>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="tostring" class="member">
 <div class="member-link">
 <a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
@@ -650,14 +813,16 @@ console.log(size != new Size(1, 1)); // true</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the size
 </li>
-	
+		
 	</ul>
 
 	
@@ -665,8 +830,8 @@ console.log(size != new Size(1, 1)); // true</pre>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <h3>Tests</h3>
 
 <div id="iszero" class="member">
@@ -676,14 +841,16 @@ console.log(size != new Size(1, 1)); // true</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if this size has both the width and height set to 0.</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if both width and height are 0, <tt>false</tt> otherwise
 </li>
-	
+		
 	</ul>
 
 	
@@ -691,8 +858,8 @@ console.log(size != new Size(1, 1)); // true</pre>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="isnan" class="member">
 <div class="member-link">
 <a name="isnan" href="#isnan"><tt><b>isNaN</b>()</tt></a>
@@ -700,14 +867,16 @@ console.log(size != new Size(1, 1)); // true</pre>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Checks if the width or the height of the size are NaN.</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the width or height of the size are NaN, <tt>false</tt> otherwise
 </li>
-	
+		
 	</ul>
 
 	
@@ -715,8 +884,8 @@ console.log(size != new Size(1, 1)); // true</pre>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <h3>Math Functions</h3>
 
 <div id="round" class="member">
@@ -725,138 +894,594 @@ console.log(size != new Size(1, 1)); // true</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size with rounded <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a>
-values. The object itself is not modified!</p>
+	<p>Returns a new size with rounded <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is not modified!</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/size"><tt>Size</tt></a></tt>
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(10.2, 10.9);
+<pre><code>var size = new Size(10.2, 10.9);
 var roundSize = size.round();
-console.log(roundSize); // {x: 10, y: 11}</pre>
+console.log(roundSize); // {x: 10, y: 11}</code></pre>
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="ceil" class="member">
 <div class="member-link">
 <a name="ceil" href="#ceil"><tt><b>ceil</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size with the nearest greater non-fractional values to the
-specified <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is
-not modified!</p>
+	<p>Returns a new size with the nearest greater non-fractional values to the specified <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is not modified!</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/size"><tt>Size</tt></a></tt>
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(10.2, 10.9);
+<pre><code>var size = new Size(10.2, 10.9);
 var ceilSize = size.ceil();
-console.log(ceilSize); // {x: 11, y: 11}</pre>
+console.log(ceilSize); // {x: 11, y: 11}</code></pre>
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="floor" class="member">
 <div class="member-link">
 <a name="floor" href="#floor"><tt><b>floor</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size with the nearest smaller non-fractional values to the
-specified <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is
-not modified!</p>
+	<p>Returns a new size with the nearest smaller non-fractional values to the specified <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is not modified!</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/size"><tt>Size</tt></a></tt>
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(10.2, 10.9);
+<pre><code>var size = new Size(10.2, 10.9);
 var floorSize = size.floor();
-console.log(floorSize); // {x: 10, y: 10}</pre>
+console.log(floorSize); // {x: 10, y: 10}</code></pre>
 
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="abs" class="member">
 <div class="member-link">
 <a name="abs" href="#abs"><tt><b>abs</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size with the absolute values of the specified
-<a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is not
-modified!</p>
+	<p>Returns a new size with the absolute values of the specified <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values. The object itself is not modified!</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/size"><tt>Size</tt></a></tt>
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var size = new Size(-5, 10);
+<pre><code>var size = new Size(-5, 10);
 var absSize = size.abs();
-console.log(absSize); // {x: 5, y: 10}</pre>
+console.log(absSize); // {x: 5, y: 10}</code></pre>
 
 </div>
 </div>
 </div>
+
+
+		
+			<h3>Math Operator Functions</h3>
+			
+				
+	
+<div id="add-number" class="member">
+<div class="member-link">
+<a name="add-number" href="#add-number"><tt><b>add</b>(number)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the addition of the supplied value to the width and height of the size as a new size. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to add
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the size and the value as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var size = new Size(5, 10);
+var result = size + 20;
+console.log(result); // {width: 25, height: 30}</code></pre>
+
+</div>
+</div>
+</div>
+
+	
+<div id="add-size" class="member">
+<div class="member-link">
+<a name="add-size" href="#add-size"><tt><b>add</b>(size)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the addition of the width and height of the supplied size to the size as a new size. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to add
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the two sizes as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var size1 = new Size(5, 10);
+var size2 = new Size(10, 20);
+var result = size1 + size2;
+console.log(result); // {width: 15, height: 30}</code></pre>
+
+</div>
+</div>
+</div>
+
+
+			
+				
+	
+<div id="subtract-number" class="member">
+<div class="member-link">
+<a name="subtract-number" href="#subtract-number"><tt><b>subtract</b>(number)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the subtraction of the supplied value from the width and height of the size as a new size. The object itself is not modified! The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to subtract
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the size and the value as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var size = new Size(10, 20);
+var result = size - 5;
+console.log(result); // {width: 5, height: 15}</code></pre>
+
+</div>
+</div>
+</div>
+
+	
+<div id="subtract-size" class="member">
+<div class="member-link">
+<a name="subtract-size" href="#subtract-size"><tt><b>subtract</b>(size)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the subtraction of the width and height of the supplied size from the size as a new size. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to subtract
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the two sizes as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var firstSize = new Size(10, 20);
+var secondSize = new Size(5, 5);
+var result = firstSize - secondSize;
+console.log(result); // {width: 5, height: 15}</code></pre>
+
+</div>
+</div>
+</div>
+
+
+			
+				
+	
+<div id="multiply-number" class="member">
+<div class="member-link">
+<a name="multiply-number" href="#multiply-number"><tt><b>multiply</b>(number)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the multiplication of the supplied value with the width and height of the size as a new size. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to multiply by
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the size and the value as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var size = new Size(10, 20);
+var result = size * 2;
+console.log(result); // {width: 20, height: 40}</code></pre>
+
+</div>
+</div>
+</div>
+
+	
+<div id="multiply-size" class="member">
+<div class="member-link">
+<a name="multiply-size" href="#multiply-size"><tt><b>multiply</b>(size)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the multiplication of the width and height of the supplied size with the size as a new size. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to multiply by
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the two sizes as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var firstSize = new Size(5, 10);
+var secondSize = new Size(4, 2);
+var result = firstSize * secondSize;
+console.log(result); // {width: 20, height: 20}</code></pre>
+
+</div>
+</div>
+</div>
+
+
+			
+				
+	
+<div id="divide-number" class="member">
+<div class="member-link">
+<a name="divide-number" href="#divide-number"><tt><b>divide</b>(number)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the division of the supplied value by the width and height of the size as a new size. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>number:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the number to divide by
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the size and the value as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var size = new Size(10, 20);
+var result = size / 2;
+console.log(result); // {width: 5, height: 10}</code></pre>
+
+</div>
+</div>
+</div>
+
+	
+<div id="divide-size" class="member">
+<div class="member-link">
+<a name="divide-size" href="#divide-size"><tt><b>divide</b>(size)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the division of the width and height of the supplied size by the size as a new size. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+&mdash;&nbsp;the size to divide by
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the two sizes as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var firstSize = new Size(8, 10);
+var secondSize = new Size(2, 5);
+var result = firstSize / secondSize;
+console.log(result); // {width: 4, height: 2}</code></pre>
+
+</div>
+</div>
+</div>
+
+
+			
+				
+	
+<div id="modulo-value" class="member">
+<div class="member-link">
+<a name="modulo-value" href="#modulo-value"><tt><b>modulo</b>(value)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>The modulo operator returns the integer remainders of dividing the size by the supplied value as a new size.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>value:</tt> 
+<tt>Number</tt>
+
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the size by the value as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var size = new Size(12, 6);
+console.log(size % 5); // {width: 2, height: 1}</code></pre>
+
+</div>
+</div>
+</div>
+
+	
+<div id="modulo-size" class="member">
+<div class="member-link">
+<a name="modulo-size" href="#modulo-size"><tt><b>modulo</b>(size)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>The modulo operator returns the integer remainders of dividing the size by the supplied size as a new size.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>size:</tt> 
+<a href="/reference/size"><tt>Size</tt></a>
+
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the sizes by each other as a new size
+</li>
+		
+	</ul>
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var size = new Size(12, 6);
+console.log(size % new Size(5, 2)); // {width: 2, height: 0}</code></pre>
+
+</div>
+</div>
+</div>
+
+
+			
 		
 	</div>
 
 
-	<div class="reference-members"><h2>Static Methods</h2>
+	<div class="reference-members">
+		<h2>Static Methods</h2>
 		
 			
 <div id="min-size1-size2" class="member">
@@ -865,46 +1490,54 @@ console.log(absSize); // {x: 5, y: 10}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size object with the smallest <a href="/reference/size#width"><tt>width</tt></a> and
-<a href="/reference/size#height"><tt>height</tt></a> of the supplied sizes.</p>
+	<p>Returns a new size object with the smallest <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> of the supplied sizes.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>size1:</tt> 
 <a href="/reference/size"><tt>Size</tt></a>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>size2:</tt> 
 <a href="/reference/size"><tt>Size</tt></a>
 
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created size object
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var size1 = new Size(10, 100);
+<pre><code>var size1 = new Size(10, 100);
 var size2 = new Size(200, 5);
 var minSize = Size.min(size1, size2);
-console.log(minSize); // {width: 10, height: 5}</pre>
+console.log(minSize); // {width: 10, height: 5}</code></pre>
+
+<h4>Example:<span class="description">Find the minimum of multiple sizes:</span></h4>
+
+
+<pre><code>var size1 = new Size(60, 100);
+var size2 = new Size(200, 5);
+var size3 = new Size(250, 35);
+[size1, size2, size3].reduce(Size.min) // {width: 60, height: 5}</code></pre>
 
 </div>
 </div>
@@ -917,46 +1550,54 @@ console.log(minSize); // {width: 10, height: 5}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new size object with the largest <a href="/reference/size#width"><tt>width</tt></a> and
-<a href="/reference/size#height"><tt>height</tt></a> of the supplied sizes.</p>
+	<p>Returns a new size object with the largest <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> of the supplied sizes.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>size1:</tt> 
 <a href="/reference/size"><tt>Size</tt></a>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>size2:</tt> 
 <a href="/reference/size"><tt>Size</tt></a>
 
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created size object
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var size1 = new Size(10, 100);
+<pre><code>var size1 = new Size(10, 100);
 var size2 = new Size(200, 5);
 var maxSize = Size.max(size1, size2);
-console.log(maxSize); // {width: 200, height: 100}</pre>
+console.log(maxSize); // {width: 200, height: 100}</code></pre>
+
+<h4>Example:<span class="description">Find the maximum of multiple sizes:</span></h4>
+
+
+<pre><code>var size1 = new Size(60, 100);
+var size2 = new Size(200, 5);
+var size3 = new Size(250, 35);
+[size1, size2, size3].reduce(Size.max) // {width: 250, height: 100}</code></pre>
 
 </div>
 </div>
@@ -969,32 +1610,32 @@ console.log(maxSize); // {width: 200, height: 100}</pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a size object with random <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a>
-values between <tt>0</tt> and <tt>1</tt>.</p>
+	<p>Returns a size object with random <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> values between <code>0</code> and <code>1</code>.</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/size"><tt>Size</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created size object
 </li>
-	
+		
 	</ul>
 
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">var maxSize = new Size(100, 100);
+<pre><code>var maxSize = new Size(100, 100);
 var randomSize = Size.random();
-var size = maxSize * randomSize;</pre>
+var size = maxSize * randomSize;</code></pre>
 
 </div>
 </div>
 </div>
 		
 	</div>
+
 
 

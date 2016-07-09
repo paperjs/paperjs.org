@@ -1,20 +1,14 @@
 <div class="reference-class">
 
 
-<p>The Curve object represents the parts of a path that are connected by
-two following <a href="/reference/segment"><tt>Segment</tt></a> objects. The curves of a path can be accessed
-through its <a href="/reference/path#curves"><tt>path.curves</tt></a> array.</p>
-<p>While a segment describe the anchor point and its incoming and outgoing
-handles, a Curve object describes the curve passing between two such
-segments. Curves and segments represent two different ways of looking at the
-same thing, but focusing on different aspects. Curves for example offer many
-convenient ways to work with parts of the path, finding lengths, positions or
-tangents at given offsets.</p>
+<p>The Curve object represents the parts of a path that are connected by two following <a href="/reference/segment"><tt>Segment</tt></a> objects. The curves of a path can be accessed through its <a href="/reference/path#curves"><tt>path.curves</tt></a> array.</p>
+<p>While a segment describe the anchor point and its incoming and outgoing handles, a Curve object describes the curve passing between two such segments. Curves and segments represent two different ways of looking at the same thing, but focusing on different aspects. Curves for example offer many convenient ways to work with parts of the path, finding lengths, positions or tangents at given offsets.</p>
 
 </div>
 
-<!-- ============================== constructors ========================= -->
-<div class="reference-members"><h2>Constructors</h2>
+<!-- =============================== constructors ========================== -->
+<div class="reference-members">
+	<h2>Constructors</h2>
 	
 		
 <div id="curve-segment1-segment2" class="member">
@@ -23,29 +17,40 @@ tangents at given offsets.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a new curve object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a new curve object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>segment1:</tt> 
 <a href="/reference/segment"><tt>Segment</tt></a>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>segment2:</tt> 
 <a href="/reference/segment"><tt>Segment</tt></a>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -57,43 +62,54 @@ tangents at given offsets.</p>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a new curve object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a new curve object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>point1:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>handle1:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>handle2:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 
 
 </li>
-
-<li>
+	
+	<li>
 <tt>point2:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
 
 
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -104,7 +120,9 @@ tangents at given offsets.</p>
 
 
 
-	<div class="reference-members"><h2>Properties</h2>
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
 		
 			
 <div id="point1" class="member">
@@ -117,11 +135,14 @@ tangents at given offsets.</p>
 	<p>The first anchor point of the curve.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -140,11 +161,14 @@ tangents at given offsets.</p>
 	<p>The second anchor point of the curve.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -163,11 +187,14 @@ tangents at given offsets.</p>
 	<p>The handle point that describes the tangent in the first anchor point.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -186,11 +213,14 @@ tangents at given offsets.</p>
 	<p>The handle point that describes the tangent in the second anchor point.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/point"><tt>Point</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -211,11 +241,14 @@ tangents at given offsets.</p>
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/segment"><tt>Segment</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/segment"><tt>Segment</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -236,11 +269,14 @@ tangents at given offsets.</p>
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/segment"><tt>Segment</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/segment"><tt>Segment</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -261,11 +297,14 @@ tangents at given offsets.</p>
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/path"><tt>Path</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/path"><tt>Path</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -286,11 +325,14 @@ tangents at given offsets.</p>
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -306,17 +348,19 @@ tangents at given offsets.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The next curve in the <a href="/reference/path#curves"><tt>path.curves</tt></a> array that the curve
-belongs to.</p>
+	<p>The next curve in the <a href="/reference/path#curves"><tt>path.curves</tt></a> array that the curve belongs to.</p>
 	
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/curve"><tt>Curve</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/curve"><tt>Curve</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -332,17 +376,19 @@ belongs to.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The previous curve in the <a href="/reference/path#curves"><tt>path.curves</tt></a> array that the curve
-belongs to.</p>
+	<p>The previous curve in the <a href="/reference/path#curves"><tt>path.curves</tt></a> array that the curve belongs to.</p>
 	
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/curve"><tt>Curve</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/curve"><tt>Curve</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -361,11 +407,72 @@ belongs to.</p>
 	<p>Specifies whether the points and handles of the curve are selected.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Boolean</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Boolean</tt>
+		</li>
 	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="values-matrix" class="member">
+<div class="member-link">
+<a name="values-matrix" href="#values-matrix"><tt><b>values</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>An array of 8 float values, describing this curve&rsquo;s geometry in four absolute x/y pairs (point1, handle1, handle2, point2). This format is used internally for efficient processing of curve geometries, e.g. when calculating intersections or bounds.</p>
+<p>Note that the handles are converted to absolute coordinates.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="points" class="member">
+<div class="member-link">
+<a name="points" href="#points"><tt><b>points</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>An array of 4 point objects, describing this curve&rsquo;s geometry in absolute coordinates (point1, handle1, handle2, point2).</p>
+<p>Note that the handles are converted to absolute coordinates.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			Array of <a href="/reference/point"><tt>Point</tt></a> objects
+		</li>
+	</ul>
+    
 	
 	
 </div>
@@ -381,16 +488,19 @@ belongs to.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The approximated length of the curve in points.</p>
+	<p>The approximated length of the curve.</p>
 	
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -399,6 +509,36 @@ belongs to.</p>
 </div>
 		
 			
+<div id="area" class="member">
+<div class="member-link">
+<a name="area" href="#area"><tt><b>area</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The area that the curve&rsquo;s geometry is covering.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+	<h3>Bounding Boxes</h3>
+
 <div id="bounds" class="member">
 <div class="member-link">
 <a name="bounds" href="#bounds"><tt><b>bounds</b></tt></a>
@@ -409,11 +549,14 @@ belongs to.</p>
 	<p>The bounding rectangle of the curve excluding stroke width.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/rectangle"><tt>Rectangle</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -432,11 +575,14 @@ belongs to.</p>
 	<p>The bounding rectangle of the curve including stroke width.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/rectangle"><tt>Rectangle</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -455,14 +601,37 @@ belongs to.</p>
 	<p>The bounding rectangle of the curve including handles.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/rectangle"><tt>Rectangle</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/rectangle"><tt>Rectangle</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
+
+</div>
+</div>
+		
+			
+<div id="getparameterat" class="member">
+<div class="member-link">
+<a name="getparameterat" href="#getparameterat"><tt><b>getParameterAt</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+</div>
+</div>
+		
+			
+<div id="getparameterof" class="member">
+<div class="member-link">
+<a name="getparameterof" href="#getparameterof"><tt><b>getParameterOf</b></tt></a>
+</div>
+<div class="member-description hidden">
 
 </div>
 </div>
@@ -471,182 +640,13 @@ belongs to.</p>
 
 
 
+
+
 <!-- ============================== methods ================================ -->
-	<div class="reference-members"><h2>Methods</h2>
+	<div class="reference-members">
+		<h2>Methods</h2>
 		
-			
-<div id="islinear" class="member">
-<div class="member-link">
-<a name="islinear" href="#islinear"><tt><b>isLinear</b>()</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Checks if this curve is linear, meaning it does not define any curve
-handle.</p>
 	
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve is linear, <tt>false</tt> otherwise
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="divide" class="member">
-<div class="member-link">
-<a name="divide" href="#divide"><tt><b>divide</b>([offset[, isParameter]])</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Divides the curve into two curves at the given offset. The curve itself
-is modified and becomes the first part, the second part is returned as a
-new curve. If the modified curve belongs to a path item, the second part
-is also added to the path.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>offset:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the offset on the curve at which to split,
-       or the curve time parameter if <tt>isParameter</tt> is <tt>true</tt>
-&mdash;&nbsp;optional, default: <tt>0.5</tt>
-</li>
-
-<li>
-<tt>isParameter:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;pass <tt>true</tt> if <tt>offset</tt>
-       is a curve time parameter.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
-</ul>
-
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the second part of the divided curve
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="split" class="member">
-<div class="member-link">
-<a name="split" href="#split"><tt><b>split</b>([offset[, isParameter]])</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Splits the path this curve belongs to at the given offset. After
-splitting, the path will be open. If the path was open already, splitting
-will result in two paths.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>offset:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the offset on the curve at which to split,
-       or the curve time parameter if <tt>isParameter</tt> is <tt>true</tt>
-&mdash;&nbsp;optional, default: <tt>0.5</tt>
-</li>
-
-<li>
-<tt>isParameter:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;pass <tt>true</tt> if <tt>offset</tt>
-       is a curve time parameter.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
-</ul>
-
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path after splitting, if any
-</li>
-	
-	</ul>
-
-	
-	<p><b>See also:</b>
-	<tt><a href="/reference/path#split-index-parameter"><tt>path.split(index, parameter)</tt></a></tt>
-	</p>
-
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="reverse" class="member">
-<div class="member-link">
-<a name="reverse" href="#reverse"><tt><b>reverse</b>()</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Returns a reversed version of the curve, without modifying the curve
-itself.</p>
-	
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;a reversed version of the curve
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="remove" class="member">
-<div class="member-link">
-<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Removes the curve from the path that it belongs to, by merging its two
-path segments.</p>
-	
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve was removed, <tt>false</tt> otherwise
-</li>
-	
-	</ul>
-
-	
-	
-</div>
-</div>
-</div>
-		
-			
 <div id="clone" class="member">
 <div class="member-link">
 <a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
@@ -654,14 +654,16 @@ path segments.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Returns a copy of the curve.</p>
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/curve"><tt>Curve</tt></a></tt>
 </li>
-	
+		
 	</ul>
 
 	
@@ -669,8 +671,8 @@ path segments.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="tostring" class="member">
 <div class="member-link">
 <a name="tostring" href="#tostring"><tt><b>toString</b>()</tt></a>
@@ -678,14 +680,16 @@ path segments.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the curve
 </li>
-	
+		
 	</ul>
 
 	
@@ -693,81 +697,438 @@ path segments.</p>
 </div>
 </div>
 </div>
-		
-			
-<div id="getparameterat-offset" class="member">
+
+	
+<div id="remove" class="member">
 <div class="member-link">
-<a name="getparameterat-offset" href="#getparameterat-offset"><tt><b>getParameterAt</b>(offset[, start])</tt></a>
+<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Calculates the curve time parameter of the specified offset on the path,
-relative to the provided start parameter. If offset is a negative value,
-the parameter is searched to the left of the start parameter. If no start
-parameter is provided, a default of <tt>0</tt> for positive values of
-<tt>offset</tt> and <tt>1</tt> for negative values of <tt>offset</tt>.</p>
+	<p>Removes the curve from the path that it belongs to, by removing its second segment and merging its handle with the first segment.</p>
+    
 	
-<ul><b>Parameters:</b>
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve was removed, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
 
-<li>
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isfirst" class="member">
+<div class="member-link">
+<a name="isfirst" href="#isfirst"><tt><b>isFirst</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if the this is the first curve in the <a href="/reference/path#curves"><tt>path.curves</tt></a> array.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if this is the first curve, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="islast" class="member">
+<div class="member-link">
+<a name="islast" href="#islast"><tt><b>isLast</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if the this is the last curve in the <a href="/reference/path#curves"><tt>path.curves</tt></a> array.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if this is the last curve, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getpart-from-to" class="member">
+<div class="member-link">
+<a name="getpart-from-to" href="#getpart-from-to"><tt><b>getPart</b>(from, to)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Creates a new curve as a sub-curve from this curve, its range defined by the given curve-time parameters. If <code>from</code> is larger than <code>to</code>, then the resulting curve will have its direction reversed.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>from:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter at which the sub-curve starts
+
+</li>
+	
+	<li>
+<tt>to:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter at which the sub-curve ends
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the newly create sub-curve
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getintersections-curve" class="member">
+<div class="member-link">
+<a name="getintersections-curve" href="#getintersections-curve"><tt><b>getIntersections</b>(curve)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns all intersections between two <a href="/reference/curve"><tt>Curve</tt></a> objects as an array of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>curve:</tt> 
+<a href="/reference/curve"><tt>Curve</tt></a>
+&mdash;&nbsp;the other curve to find the intersections with (if  the curve itself or <code>null</code> is passed, the self intersection of the  curve is returned, if it exists)
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt>Array of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the locations of all intersections between the  curves
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="divideat-location" class="member">
+<div class="member-link">
+<a name="divideat-location" href="#divideat-location"><tt><b>divideAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Divides the curve into two curves at the given offset. The curve itself is modified and becomes the first part, the second part is returned as a new curve. If the modified curve belongs to a path item, the second part is also added to the path.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve at which to divide
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the second part of the divided curve, if the offset is  within the valid range, {code null} otherwise.
+</li>
+		
+	</ul>
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/curve#divideattime-time"><tt>divideAtTime(time)</tt></a></tt></li>
+		
+	</ul>
+
+	
+</div>
+</div>
+</div>
+
+	
+<div id="divideattime-time" class="member">
+<div class="member-link">
+<a name="divideattime-time" href="#divideattime-time"><tt><b>divideAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Divides the curve into two curves at the given curve-time parameter. The curve itself is modified and becomes the first part, the second part is returned as a new curve. If the modified curve belongs to a path item, the second part is also added to the path.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve at which to  divide
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the second part of the divided curve, if the offset is  within the valid range, {code null} otherwise.
+</li>
+		
+	</ul>
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/curve#divideat-offset"><tt>divideAt(offset)</tt></a></tt></li>
+		
+	</ul>
+
+	
+</div>
+</div>
+</div>
+
+	
+<div id="splitat-location" class="member">
+<div class="member-link">
+<a name="splitat-location" href="#splitat-location"><tt><b>splitAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Splits the path this curve belongs to at the given offset. After splitting, the path will be open. If the path was open already, splitting will result in two paths.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve at which to split
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path after splitting, if any
+</li>
+		
+	</ul>
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/path#splitat-offset"><tt>path.splitAt(offset)</tt></a></tt></li>
+		
+	</ul>
+
+	
+</div>
+</div>
+</div>
+
+	
+<div id="splitattime-time" class="member">
+<div class="member-link">
+<a name="splitattime-time" href="#splitattime-time"><tt><b>splitAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Splits the path this curve belongs to at the given offset. After splitting, the path will be open. If the path was open already, splitting will result in two paths.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve at which to  split
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path after splitting, if any
+</li>
+		
+	</ul>
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/path#splitat-offset"><tt>path.splitAt(offset)</tt></a></tt></li>
+		
+	</ul>
+
+	
+</div>
+</div>
+</div>
+
+	
+<div id="divide-offset-isTime" class="member">
+<div class="member-link">
+<a name="divide-offset-isTime" href="#divide-offset-isTime"><tt><b>divide</b>(offset, isTime)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>offset:</tt> 
-<tt>Number</tt>
+
 
 
 </li>
+	
+	<li>
+<tt>isTime:</tt> 
 
-<li>
-<tt>start:</tt> 
-<tt>Number</tt>
 
-&mdash;&nbsp;optional
+
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
 	
-		<li>
-<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve time parameter at the specified offset.
-</li>
 	
-	</ul>
+</div>
+</div>
+</div>
 
 	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="getparameterof-point" class="member">
+<div id="split-offset-isTime" class="member">
 <div class="member-link">
-<a name="getparameterof-point" href="#getparameterof-point"><tt><b>getParameterOf</b>(point)</tt></a>
+<a name="split-offset-isTime" href="#split-offset-isTime"><tt><b>split</b>(offset, isTime)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns the curve time parameter of the specified point if it lies on the
-curve, <tt>null</tt> otherwise.</p>
 	
-<ul><b>Parameters:</b>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>offset:</tt> 
 
-<li>
-<tt>point:</tt> 
-<a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;the point on the curve.
+
 
 </li>
+	
+	<li>
+<tt>isTime:</tt> 
 
+
+
+</li>
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
 	
-		<li>
-<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve time parameter of the specified point.
+	
+</div>
+</div>
+</div>
+
+	
+<div id="reversed" class="member">
+<div class="member-link">
+<a name="reversed" href="#reversed"><tt><b>reversed</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns a reversed version of the curve, without modifying the curve itself.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;a reversed version of the curve
 </li>
-	
+		
 	</ul>
 
 	
@@ -775,44 +1136,239 @@ curve, <tt>null</tt> otherwise.</p>
 </div>
 </div>
 </div>
+
+	
+<div id="clearhandles" class="member">
+<div class="member-link">
+<a name="clearhandles" href="#clearhandles"><tt><b>clearHandles</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Clears the curve&rsquo;s handles by setting their coordinates to zero, turning the curve into a straight line.</p>
+    
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<h3>Curve Tests</h3>
+
+<div id="hashandles" class="member">
+<div class="member-link">
+<a name="hashandles" href="#hashandles"><tt><b>hasHandles</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if this curve has any curve handles set.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
 		
-			
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve has handles set, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/curve#handle1"><tt>curve.handle1</tt></a></tt></li>
+		
+			<li><tt><a href="/reference/curve#handle2"><tt>curve.handle2</tt></a></tt></li>
+		
+			<li><tt><a href="/reference/segment#hashandles"><tt>segment.hasHandles</tt></a>()</tt></li>
+		
+			<li><tt><a href="/reference/path#hashandles"><tt>path.hasHandles</tt></a>()</tt></li>
+		
+	</ul>
+
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isstraight" class="member">
+<div class="member-link">
+<a name="isstraight" href="#isstraight"><tt><b>isStraight</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if this curve appears as a straight line. This can mean that it has no handles defined, or that the handles run collinear with the line that connects the curve&rsquo;s start and end point, not falling outside of the line.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve is straight, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="islinear" class="member">
+<div class="member-link">
+<a name="islinear" href="#islinear"><tt><b>isLinear</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if this curve is parametrically linear, meaning that it is straight and its handles are positioned at 1/3 and 2/3 of the total length of the curve.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve is parametrically linear, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="iscollinear-curve" class="member">
+<div class="member-link">
+<a name="iscollinear-curve" href="#iscollinear-curve"><tt><b>isCollinear</b>(curve)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if the the two curves describe straight lines that are collinear, meaning they run in parallel.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>curve:</tt> 
+<a href="/reference/curve"><tt>Curve</tt></a>
+&mdash;&nbsp;the other curve to check against
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the two lines are collinear, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="ishorizontal" class="member">
+<div class="member-link">
+<a name="ishorizontal" href="#ishorizontal"><tt><b>isHorizontal</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if the curve is a straight horizontal line.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the line is horizontal, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isvertical" class="member">
+<div class="member-link">
+<a name="isvertical" href="#isvertical"><tt><b>isVertical</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if the curve is a straight vertical line.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the line is vertical, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<h3>Positions on Curves</h3>
+
 <div id="getlocationat-offset" class="member">
 <div class="member-link">
-<a name="getlocationat-offset" href="#getlocationat-offset"><tt><b>getLocationAt</b>(offset[, isParameter])</tt></a>
+<a name="getlocationat-offset" href="#getlocationat-offset"><tt><b>getLocationAt</b>(offset)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Calculates the curve location at the specified offset or curve time
-parameter.</p>
+	<p>Calculates the curve location at the specified offset on the curve.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>offset:</tt> 
 <tt>Number</tt>
-&mdash;&nbsp;the offset on the curve, or the curve time
-       parameter if <tt>isParameter</tt> is <tt>true</tt>
+&mdash;&nbsp;the offset on the curve
 
 </li>
-
-<li>
-<tt>isParameter:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;pass <tt>true</tt> if <tt>offset</tt>
-       is a curve time parameter.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location at the specified the offset.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location at the specified the offset
 </li>
-	
+		
 	</ul>
 
 	
@@ -820,35 +1376,158 @@ parameter.</p>
 </div>
 </div>
 </div>
+
+	
+<div id="getlocationattime-time" class="member">
+<div class="member-link">
+<a name="getlocationattime-time" href="#getlocationattime-time"><tt><b>getLocationAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the curve location at the specified curve-time parameter on the curve.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
 		
-			
+			<li>
+<tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location at the specified the location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="gettimeat-offset" class="member">
+<div class="member-link">
+<a name="gettimeat-offset" href="#gettimeat-offset"><tt><b>getTimeAt</b>(offset[, start])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the curve-time parameter of the specified offset on the path, relative to the provided start parameter. If offset is a negative value, the parameter is searched to the left of the start parameter. If no start parameter is provided, a default of <code>0</code> for positive values of <code>offset</code> and <code>1</code> for negative values of <code>offset</code>.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>offset:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the offset at which to find the curve-time, in  curve length units
+
+</li>
+	
+	<li>
+<tt>start:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time in relation to which the offset is  determined
+&mdash;&nbsp;optional
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve-time parameter at the specified location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getoffsetattime-time" class="member">
+<div class="member-link">
+<a name="getoffsetattime-time" href="#getoffsetattime-time"><tt><b>getOffsetAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the curve offset at the specified curve-time parameter on the curve.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve offset at the specified the location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
 <div id="getlocationof-point" class="member">
 <div class="member-link">
 <a name="getlocationof-point" href="#getlocationof-point"><tt><b>getLocationOf</b>(point)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns the curve location of the specified point if it lies on the
-curve, <tt>null</tt> otherwise.</p>
+	<p>Returns the curve location of the specified point if it lies on the curve, <code>null</code> otherwise.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>point:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;the point on the curve.
+&mdash;&nbsp;the point on the curve
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location of the specified point.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location of the specified point
 </li>
-	
+		
 	</ul>
 
 	
@@ -856,35 +1535,37 @@ curve, <tt>null</tt> otherwise.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="getoffsetof-point" class="member">
 <div class="member-link">
 <a name="getoffsetof-point" href="#getoffsetof-point"><tt><b>getOffsetOf</b>(point)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns the length of the path from its beginning up to up to the
-specified point if it lies on the path, <tt>null</tt> otherwise.</p>
+	<p>Returns the length of the path from its beginning up to up to the specified point if it lies on the path, <code>null</code> otherwise.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>point:</tt> 
 <a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;the point on the path.
+&mdash;&nbsp;the point on the path
 
 </li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the length of the path up to the specified point.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the length of the path up to the specified point
 </li>
-	
+		
 	</ul>
 
 	
@@ -892,43 +1573,37 @@ specified point if it lies on the path, <tt>null</tt> otherwise.</p>
 </div>
 </div>
 </div>
-		
-			
-<div id="getpointat-offset" class="member">
+
+	
+<div id="gettimeof-point" class="member">
 <div class="member-link">
-<a name="getpointat-offset" href="#getpointat-offset"><tt><b>getPointAt</b>(offset[, isParameter])</tt></a>
+<a name="gettimeof-point" href="#gettimeof-point"><tt><b>getTimeOf</b>(point)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Calculates the point on the curve at the given offset.</p>
+	<p>Returns the curve-time parameter of the specified point if it lies on the curve, <code>null</code> otherwise. Note that if there is more than one possible solution in a self-intersecting curve, the first found result is returned.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>offset:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the offset on the curve, or the curve time
-       parameter if <tt>isParameter</tt> is <tt>true</tt>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point on the curve
 
 </li>
-
-<li>
-<tt>isParameter:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;pass <tt>true</tt> if <tt>offset</tt>
-       is a curve time parameter.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the curve at the specified offset.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve-time parameter of the specified point
 </li>
-	
+		
 	</ul>
 
 	
@@ -936,43 +1611,37 @@ specified point if it lies on the path, <tt>null</tt> otherwise.</p>
 </div>
 </div>
 </div>
-		
-			
-<div id="gettangentat-offset" class="member">
+
+	
+<div id="getnearestlocation-point" class="member">
 <div class="member-link">
-<a name="gettangentat-offset" href="#gettangentat-offset"><tt><b>getTangentAt</b>(offset[, isParameter])</tt></a>
+<a name="getnearestlocation-point" href="#getnearestlocation-point"><tt><b>getNearestLocation</b>(point)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Calculates the tangent vector of the curve at the given offset.</p>
+	<p>Returns the nearest location on the curve to the specified point.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>offset:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the offset on the curve, or the curve time
-       parameter if <tt>isParameter</tt> is <tt>true</tt>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point for which we search the nearest location
 
 </li>
-
-<li>
-<tt>isParameter:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;pass <tt>true</tt> if <tt>offset</tt>
-       is a curve time parameter.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the tangent of the curve at the specified offset.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the location on the curve that&rsquo;s the closest to the specified point
 </li>
-	
+		
 	</ul>
 
 	
@@ -980,43 +1649,37 @@ specified point if it lies on the path, <tt>null</tt> otherwise.</p>
 </div>
 </div>
 </div>
-		
-			
-<div id="getnormalat-offset" class="member">
+
+	
+<div id="getnearestpoint-point" class="member">
 <div class="member-link">
-<a name="getnormalat-offset" href="#getnormalat-offset"><tt><b>getNormalAt</b>(offset[, isParameter])</tt></a>
+<a name="getnearestpoint-point" href="#getnearestpoint-point"><tt><b>getNearestPoint</b>(point)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Calculates the normal vector of the curve at the given offset.</p>
+	<p>Returns the nearest point on the curve to the specified point.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>offset:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the offset on the curve, or the curve time
-       parameter if <tt>isParameter</tt> is <tt>true</tt>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>point:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point for which we search the nearest point
 
 </li>
-
-<li>
-<tt>isParameter:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;pass <tt>true</tt> if <tt>offset</tt>
-       is a curve time parameter.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normal of the curve at the specified offset.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the curve that&rsquo;s the closest to the specified point
 </li>
-	
+		
 	</ul>
 
 	
@@ -1024,48 +1687,501 @@ specified point if it lies on the path, <tt>null</tt> otherwise.</p>
 </div>
 </div>
 </div>
-		
-			
-<div id="getcurvatureat-offset" class="member">
+
+	
+<div id="getpointat-location" class="member">
 <div class="member-link">
-<a name="getcurvatureat-offset" href="#getcurvatureat-offset"><tt><b>getCurvatureAt</b>(offset[, isParameter])</tt></a>
+<a name="getpointat-location" href="#getpointat-location"><tt><b>getPointAt</b>(location)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Calculates the curvature of the curve at the given offset. Curvatures
-indicate how sharply a curve changes direction. A straight line has zero
-curvature, where as a circle has a constant curvature. The curve's radius
-at the given offset is the reciprocal value of its curvature.</p>
+	<p>Calculates the point on the curve at the given location.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>offset:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the offset on the curve, or the curve time
-       parameter if <tt>isParameter</tt> is <tt>true</tt>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve
 
 </li>
-
-<li>
-<tt>isParameter:</tt> 
-<tt>Boolean</tt>
-&mdash;&nbsp;pass <tt>true</tt> if <tt>offset</tt>
-       is a curve time parameter.
-&mdash;&nbsp;optional, default: <tt>false</tt>
-</li>
-
+	
 </ul>
 
 	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curvature of the curve at the specified offset.
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the curve at the given location
 </li>
-	
+		
 	</ul>
 
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="gettangentat-location" class="member">
+<div class="member-link">
+<a name="gettangentat-location" href="#gettangentat-location"><tt><b>getTangentAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the normalized tangent vector of the curve at the given location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normalized tangent of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getnormalat-location" class="member">
+<div class="member-link">
+<a name="getnormalat-location" href="#getnormalat-location"><tt><b>getNormalAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the normal vector of the curve at the given location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normal of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getweightedtangentat-location" class="member">
+<div class="member-link">
+<a name="getweightedtangentat-location" href="#getweightedtangentat-location"><tt><b>getWeightedTangentAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the weighted tangent vector of the curve at the given location, its length reflecting the curve velocity at that location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted tangent of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getweightednormalat-location" class="member">
+<div class="member-link">
+<a name="getweightednormalat-location" href="#getweightednormalat-location"><tt><b>getWeightedNormalAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the weighted normal vector of the curve at the given location, its length reflecting the curve velocity at that location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted normal of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getcurvatureat-location" class="member">
+<div class="member-link">
+<a name="getcurvatureat-location" href="#getcurvatureat-location"><tt><b>getCurvatureAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the curvature of the curve at the given location. Curvatures indicate how sharply a curve changes direction. A straight line has zero curvature, where as a circle has a constant curvature. The curve&rsquo;s radius at the given location is the reciprocal value of its curvature.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curvature of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getpointattime-time" class="member">
+<div class="member-link">
+<a name="getpointattime-time" href="#getpointattime-time"><tt><b>getPointAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the point on the curve at the given location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="gettangentattime-time" class="member">
+<div class="member-link">
+<a name="gettangentattime-time" href="#gettangentattime-time"><tt><b>getTangentAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the normalized tangent vector of the curve at the given location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normalized tangent of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getnormalattime-time" class="member">
+<div class="member-link">
+<a name="getnormalattime-time" href="#getnormalattime-time"><tt><b>getNormalAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the normal vector of the curve at the given location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normal of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getweightedtangentattime-time" class="member">
+<div class="member-link">
+<a name="getweightedtangentattime-time" href="#getweightedtangentattime-time"><tt><b>getWeightedTangentAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the weighted tangent vector of the curve at the given location, its length reflecting the curve velocity at that location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted tangent of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getweightednormalattime-time" class="member">
+<div class="member-link">
+<a name="getweightednormalattime-time" href="#getweightednormalattime-time"><tt><b>getWeightedNormalAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the weighted normal vector of the curve at the given location, its length reflecting the curve velocity at that location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted normal of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="getcurvatureattime-time" class="member">
+<div class="member-link">
+<a name="getcurvatureattime-time" href="#getcurvatureattime-time"><tt><b>getCurvatureAtTime</b>(time)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Calculates the curvature of the curve at the given location. Curvatures indicate how sharply a curve changes direction. A straight line has zero curvature, where as a circle has a constant curvature. The curve&rsquo;s radius at the given location is the reciprocal value of its curvature.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>time:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the curve-time parameter on the curve
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curvature of the curve at the given location
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+
+		
+	</div>
+
+
+	<div class="reference-members">
+		<h2>Static Methods</h2>
+		
+			
+<div id="getoverlaps-v1-v2" class="member">
+<div class="member-link">
+<a name="getoverlaps-v1-v2" href="#getoverlaps-v1-v2"><tt><b>Curve.getOverlaps</b>(v1, v2)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Code to detect overlaps of intersecting based on work by</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>v1:</tt> 
+
+
+
+</li>
+	
+	<li>
+<tt>v2:</tt> 
+
+
+
+</li>
+	
+</ul>
+
+	
 	
 	
 </div>

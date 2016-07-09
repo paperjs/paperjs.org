@@ -1,36 +1,38 @@
 <div class="reference-class">
 
 
-<p>The Tool object refers to a script that the user can interact with
-by using the mouse and keyboard and can be accessed through the global
-<tt>tool</tt> variable. All its properties are also available in the paper
-scope.</p>
-<p>The global <tt>tool</tt> variable only exists in scripts that contain mouse
-handler functions (<a href="/reference/tool#onmousemove"><tt>onMouseMove</tt></a>, <a href="/reference/tool#onmousedown"><tt>onMouseDown</tt></a>,
-<a href="/reference/tool#onmousedrag"><tt>onMouseDrag</tt></a>, <a href="/reference/tool#onmouseup"><tt>onMouseUp</tt></a>) or a keyboard handler
-function (<a href="/reference/tool#onkeydown"><tt>onKeyDown</tt></a>, <a href="/reference/tool#onkeyup"><tt>onKeyUp</tt></a>).</p>
-<p>
-<b>Example</b> 
-</p>
+<p>The Tool object refers to a script that the user can interact with by  using the mouse and keyboard and can be accessed through the global  <code>tool</code> variable. All its properties are also available in the paper  scope.</p>
+<p>The global <code>tool</code> variable only exists in scripts that contain mouse handler functions (<a href="/reference/tool#onmousemove"><tt>onMouseMove</tt></a>, <a href="/reference/tool#onmousedown"><tt>onMouseDown</tt></a>, <a href="/reference/tool#onmousedrag"><tt>onMouseDrag</tt></a>, <a href="/reference/tool#onmouseup"><tt>onMouseUp</tt></a>) or a keyboard handler function (<a href="/reference/tool#onkeydown"><tt>onKeyDown</tt></a>, <a href="/reference/tool#onkeyup"><tt>onKeyUp</tt></a>).</p>
+<h4>Example:</h4>
 
+<div class="paperscript split">
 
-<pre class="code">var path;
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-0">
+var path;
 
 // Only execute onMouseDrag when the mouse
 // has moved at least 10 points:
 tool.distanceThreshold = 10;
 
-function onMouseDown(event) {
+tool.onMouseDown = function(event) {
     // Create a new path every time the mouse is clicked
     path = new Path();
     path.add(event.point);
     path.strokeColor = 'black';
 }
 
-function onMouseDrag(event) {
+tool.onMouseDrag = function(event) {
     // Add a point to the path every time the mouse is dragged
     path.add(event.point);
-}</pre>
+}
+</script>
+<div class="canvas"><canvas width="516" height="300" id="canvas-0"></canvas></div>
+</div>
+
 
 </div>
 
@@ -38,7 +40,9 @@ function onMouseDrag(event) {
 
 
 
-	<div class="reference-members"><h2>Properties</h2>
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
 		
 			
 <div id="mindistance" class="member">
@@ -48,15 +52,17 @@ function onMouseDrag(event) {
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The minimum distance the mouse has to drag before firing the onMouseDrag
-event, since the last onMouseDrag event.</p>
+	<p>The minimum distance the mouse has to drag before firing the onMouseDrag event, since the last onMouseDrag event.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -72,15 +78,17 @@ event, since the last onMouseDrag event.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The maximum distance the mouse has to drag before firing the onMouseDrag
-event, since the last onMouseDrag event.</p>
+	<p>The maximum distance the mouse has to drag before firing the onMouseDrag event, since the last onMouseDrag event.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -99,11 +107,14 @@ event, since the last onMouseDrag event.</p>
 	
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -121,20 +132,19 @@ event, since the last onMouseDrag event.</p>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The function to be called when the mouse button is pushed down. The
-function receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which contains information
-about the mouse event.</p>
+	<p>The function to be called when the mouse button is pushed down. The function receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which contains information about the tool event.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
-	<p>
-<b>Example</b> &mdash; Creating circle shaped paths where the user presses the mouse button:
-</p>
+	<h4>Example:<span class="description">Creating circle shaped paths where the user presses the mouse button:</span></h4>
 
 <div class="paperscript split">
 
@@ -142,8 +152,8 @@ about the mouse event.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-0">
-function onMouseDown(event) {
+<script type="text/paperscript" canvas="canvas-1">
+tool.onMouseDown = function(event) {
     // Create a new circle shaped path with a radius of 10
     // at the position of the mouse (event.point):
     var path = new Path.Circle({
@@ -153,7 +163,7 @@ function onMouseDown(event) {
     });
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-0"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
 </div>
 
 
@@ -170,20 +180,19 @@ function onMouseDown(event) {
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The function to be called when the mouse position changes while the mouse
-is being dragged. The function receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which
-contains information about the mouse event.</p>
+	<p>The function to be called when the mouse position changes while the mouse is being dragged. The function receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which contains information about the tool event.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
-	<p>
-<b>Example</b> &mdash; Draw a line by adding a segment to a path on every mouse drag event:
-</p>
+	<h4>Example:<span class="description">Draw a line by adding a segment to a path on every mouse drag event:</span></h4>
 
 <div class="paperscript split">
 
@@ -191,18 +200,18 @@ contains information about the mouse event.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-1">
+<script type="text/paperscript" canvas="canvas-2">
 // Create an empty path:
 var path = new Path({
     strokeColor: 'black'
 });
 
-function onMouseDrag(event) {
+tool.onMouseDrag = function(event) {
     // Add a segment to the path at the position of the mouse:
     path.add(event.point);
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
 </div>
 
 
@@ -219,20 +228,19 @@ function onMouseDrag(event) {
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The function to be called the mouse moves within the project view. The
-function receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which contains information
-about the mouse event.</p>
+	<p>The function to be called the mouse moves within the project view. The function receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which contains information about the tool event.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
-	<p>
-<b>Example</b> &mdash; Moving a path to the position of the mouse:
-</p>
+	<h4>Example:<span class="description">Moving a path to the position of the mouse:</span></h4>
 
 <div class="paperscript split">
 
@@ -240,7 +248,7 @@ about the mouse event.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-2">
+<script type="text/paperscript" canvas="canvas-3">
 // Create a circle shaped path with a radius of 10 at {x: 0, y: 0}:
 var path = new Path.Circle({
     center: [0, 0],
@@ -248,13 +256,13 @@ var path = new Path.Circle({
     fillColor: 'black'
 });
 
-function onMouseMove(event) {
+tool.onMouseMove = function(event) {
     // Whenever the user moves the mouse, move the path
     // to that position:
     path.position = event.point;
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-2"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-3"></canvas></div>
 </div>
 
 
@@ -271,20 +279,19 @@ function onMouseMove(event) {
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The function to be called when the mouse button is released. The function
-receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which contains information about the
-mouse event.</p>
+	<p>The function to be called when the mouse button is released. The function receives a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object which contains information about the tool event.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
-	<p>
-<b>Example</b> &mdash; Creating circle shaped paths where the user releases the mouse:
-</p>
+	<h4>Example:<span class="description">Creating circle shaped paths where the user releases the mouse:</span></h4>
 
 <div class="paperscript split">
 
@@ -292,8 +299,8 @@ mouse event.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-3">
-function onMouseUp(event) {
+<script type="text/paperscript" canvas="canvas-4">
+tool.onMouseUp = function(event) {
     // Create a new circle shaped path with a radius of 10
     // at the position of the mouse (event.point):
     var path = new Path.Circle({
@@ -303,7 +310,7 @@ function onMouseUp(event) {
     });
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-3"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
 </div>
 
 
@@ -322,24 +329,20 @@ function onMouseUp(event) {
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The function to be called when the user presses a key on the keyboard.</p>
-<p>The function receives a <a href="/reference/keyevent"><tt>KeyEvent</tt></a> object which contains
-information about the keyboard event.</p>
-<p>If the function returns <tt>false</tt>, the keyboard event will be
-prevented from bubbling up. This can be used for example to stop the
-window from scrolling, when you need the user to interact with arrow
-keys.</p>
+	<p>The function to be called when the user presses a key on the keyboard. The function receives a <a href="/reference/keyevent"><tt>KeyEvent</tt></a> object which contains information about the keyboard event.</p>
+<p>If the function returns <code>false</code>, the keyboard event will be prevented from bubbling up. This can be used for example to stop the window from scrolling, when you need the user to interact with arrow keys.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
-	<p>
-<b>Example</b> &mdash; Scaling a path whenever the user presses the space bar:
-</p>
+	<h4>Example:<span class="description">Scaling a path whenever the user presses the space bar:</span></h4>
 
 <div class="paperscript split">
 
@@ -347,7 +350,7 @@ keys.</p>
 <div class="button run">Run</div>
 </div>
 
-<script type="text/paperscript" canvas="canvas-4">
+<script type="text/paperscript" canvas="canvas-5">
 // Create a circle shaped path:
     var path = new Path.Circle({
         center: new Point(50, 50),
@@ -355,7 +358,7 @@ keys.</p>
         fillColor: 'red'
     });
 
-function onKeyDown(event) {
+tool.onKeyDown = function(event) {
     if (event.key == 'space') {
         // Scale the path by 110%:
         path.scale(1.1);
@@ -365,7 +368,7 @@ function onKeyDown(event) {
     }
 }
 </script>
-<div class="canvas"><canvas width="516" height="100" id="canvas-4"></canvas></div>
+<div class="canvas"><canvas width="516" height="100" id="canvas-5"></canvas></div>
 </div>
 
 
@@ -382,31 +385,27 @@ function onKeyDown(event) {
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The function to be called when the user releases a key on the keyboard.</p>
-<p>The function receives a <a href="/reference/keyevent"><tt>KeyEvent</tt></a> object which contains
-information about the keyboard event.</p>
-<p>If the function returns <tt>false</tt>, the keyboard event will be
-prevented from bubbling up. This can be used for example to stop the
-window from scrolling, when you need the user to interact with arrow
-keys.</p>
+	<p>The function to be called when the user releases a key on the keyboard. The function receives a <a href="/reference/keyevent"><tt>KeyEvent</tt></a> object which contains information about the keyboard event.</p>
+<p>If the function returns <code>false</code>, the keyboard event will be prevented from bubbling up. This can be used for example to stop the window from scrolling, when you need the user to interact with arrow keys.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
-	<p>
-<b>Example</b> 
-</p>
+	<h4>Example:</h4>
 
 
-<pre class="code">function onKeyUp(event) {
+<pre><code>tool.onKeyUp = function(event) {
     if (event.key == 'space') {
         console.log('The spacebar was released!');
     }
-}</pre>
+}</code></pre>
 
 </div>
 
@@ -417,18 +416,21 @@ keys.</p>
 
 
 
+
+
 <!-- ============================== methods ================================ -->
-	<div class="reference-members"><h2>Methods</h2>
+	<div class="reference-members">
+		<h2>Methods</h2>
 		
-			
+	
 <div id="activate" class="member">
 <div class="member-link">
 <a name="activate" href="#activate"><tt><b>activate</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Activates this tool, meaning <a href="/reference/paperscope#tool"><tt>paperScope.tool</tt></a> will
-point to it and it will be the one that recieves mouse events.</p>
+	<p>Activates this tool, meaning <a href="/reference/paperscope#tool"><tt>paperScope.tool</tt></a> will point to it and it will be the one that receives tool events.</p>
+    
 	
 	
 	
@@ -436,8 +438,8 @@ point to it and it will be the one that recieves mouse events.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <div id="remove" class="member">
 <div class="member-link">
 <a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
@@ -445,6 +447,7 @@ point to it and it will be the one that recieves mouse events.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Removes this tool from the <a href="/reference/paperscope#tools"><tt>paperScope.tools</tt></a> list.</p>
+    
 	
 	
 	
@@ -452,8 +455,8 @@ point to it and it will be the one that recieves mouse events.</p>
 </div>
 </div>
 </div>
-		
-			
+
+	
 <h3>Event Handling</h3>
 
 <div id="on-type-function" class="member">
@@ -463,188 +466,35 @@ point to it and it will be the one that recieves mouse events.</p>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Attach an event handler to the tool.</p>
+    
 	
-<ul><b>Parameters:</b>
-
-<li>
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>type:</tt> 
-<tt>String('mousedown'|'mouseup'|'mousedrag'|'mousemove'|'keydown'|'keyup')</tt>
-&mdash;&nbsp;the event type
+<tt>String</tt>
+&mdash;&nbsp;the event type: <tt>&lsquo;mousedown&rsquo;</tt>, <tt>&lsquo;mouseup&rsquo;</tt>, <tt>&lsquo;mousedrag&rsquo;</tt>, <tt>&lsquo;mousemove&rsquo;</tt>, <tt>&lsquo;keydown&rsquo;</tt>, <tt>&lsquo;keyup&rsquo;</tt>
 
 </li>
-
-<li>
+	
+	<li>
 <tt>function:</tt> 
 <tt>Function</tt>
-&mdash;&nbsp;The function to be called when the event
-occurs
+&mdash;&nbsp;the function to be called when the event  occurs, receiving a <a href="/reference/toolevent"><tt>ToolEvent</tt></a> object as its sole argument
 
 </li>
-
+	
 </ul>
 
 	
-	
-	
-</div>
-</div>
-</div>
+	<ul class="member-list">
+		<h4>Returns:</h4>
 		
-			
-<div id="on-param" class="member">
-<div class="member-link">
-<a name="on-param" href="#on-param"><tt><b>on</b>(param)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Attach one or more event handlers to the tool.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>param:</tt> 
-<tt>Object</tt>
-&mdash;&nbsp;an object literal containing one or more of the
-following properties: <tt>mousedown, mouseup, mousedrag, mousemove,
-keydown, keyup</tt>.
-
+			<li>
+<tt><a href="/reference/tool"><tt>Tool</tt></a></tt>&nbsp;&mdash;&nbsp;this tool itself, so calls can be chained
 </li>
-
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
 		
-			
-<div id="off-type-function" class="member">
-<div class="member-link">
-<a name="off-type-function" href="#off-type-function"><tt><b>off</b>(type, function)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Detach an event handler from the tool.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>type:</tt> 
-<tt>String('mousedown'|'mouseup'|'mousedrag'|'mousemove'|'keydown'|'keyup')</tt>
-&mdash;&nbsp;the event type
-
-</li>
-
-<li>
-<tt>function:</tt> 
-<tt>Function</tt>
-&mdash;&nbsp;The function to be detached
-
-</li>
-
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="off-param" class="member">
-<div class="member-link">
-<a name="off-param" href="#off-param"><tt><b>off</b>(param)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Detach one or more event handlers from the tool.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>param:</tt> 
-<tt>Object</tt>
-&mdash;&nbsp;an object literal containing one or more of the
-following properties: <tt>mousedown, mouseup, mousedrag, mousemove,
-keydown, keyup</tt>
-
-</li>
-
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="emit-type-event" class="member">
-<div class="member-link">
-<a name="emit-type-event" href="#emit-type-event"><tt><b>emit</b>(type, event)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Emit an event on the tool.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>type:</tt> 
-<tt>String('mousedown'|'mouseup'|'mousedrag'|'mousemove'|'keydown'|'keyup')</tt>
-&mdash;&nbsp;the event type
-
-</li>
-
-<li>
-<tt>event:</tt> 
-<tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing
-the event.
-
-</li>
-
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
-		
-			
-<div id="responds-type" class="member">
-<div class="member-link">
-<a name="responds-type" href="#responds-type"><tt><b>responds</b>(type)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Check if the tool has one or more event handlers of the specified type.</p>
-	
-<ul><b>Parameters:</b>
-
-<li>
-<tt>type:</tt> 
-<tt>String('mousedown'|'mouseup'|'mousedrag'|'mousemove'|'keydown'|'keyup')</tt>
-&mdash;&nbsp;the event type
-
-</li>
-
-</ul>
-
-	
-	<ul><b>Returns:</b>
-	
-		<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the tool has one or more event handlers of
-the specified type, <tt>false</tt> otherwise
-</li>
-	
 	</ul>
 
 	
@@ -652,8 +502,215 @@ the specified type, <tt>false</tt> otherwise
 </div>
 </div>
 </div>
+
+	
+<div id="on-param" class="member">
+<div class="member-link">
+<a name="on-param" href="#on-param"><tt><b>on</b>(param)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Attach one or more event handlers to the tool.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>param:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;an object literal containing one or more of the  following properties: <tt>mousedown</tt>, <tt>mouseup</tt>, <tt>mousedrag</tt>, <tt>mousemove</tt>, <tt>keydown</tt>, <tt>keyup</tt>
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/tool"><tt>Tool</tt></a></tt>&nbsp;&mdash;&nbsp;this tool itself, so calls can be chained
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="off-type-function" class="member">
+<div class="member-link">
+<a name="off-type-function" href="#off-type-function"><tt><b>off</b>(type, function)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Detach an event handler from the tool.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>type:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;the event type: <tt>&lsquo;mousedown&rsquo;</tt>, <tt>&lsquo;mouseup&rsquo;</tt>, <tt>&lsquo;mousedrag&rsquo;</tt>, <tt>&lsquo;mousemove&rsquo;</tt>, <tt>&lsquo;keydown&rsquo;</tt>, <tt>&lsquo;keyup&rsquo;</tt>
+
+</li>
+	
+	<li>
+<tt>function:</tt> 
+<tt>Function</tt>
+&mdash;&nbsp;the function to be detached
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/tool"><tt>Tool</tt></a></tt>&nbsp;&mdash;&nbsp;this tool itself, so calls can be chained
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="off-param" class="member">
+<div class="member-link">
+<a name="off-param" href="#off-param"><tt><b>off</b>(param)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Detach one or more event handlers from the tool.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>param:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;an object literal containing one or more of the  following properties: <tt>mousedown</tt>, <tt>mouseup</tt>, <tt>mousedrag</tt>, <tt>mousemove</tt>, <tt>keydown</tt>, <tt>keyup</tt>
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/tool"><tt>Tool</tt></a></tt>&nbsp;&mdash;&nbsp;this tool itself, so calls can be chained
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="emit-type-event" class="member">
+<div class="member-link">
+<a name="emit-type-event" href="#emit-type-event"><tt><b>emit</b>(type, event)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Emit an event on the tool.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>type:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;the event type: <tt>&lsquo;mousedown&rsquo;</tt>, <tt>&lsquo;mouseup&rsquo;</tt>, <tt>&lsquo;mousedrag&rsquo;</tt>, <tt>&lsquo;mousemove&rsquo;</tt>, <tt>&lsquo;keydown&rsquo;</tt>, <tt>&lsquo;keyup&rsquo;</tt>
+
+</li>
+	
+	<li>
+<tt>event:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;an object literal containing properties describing the event
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the event had listeners, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="responds-type" class="member">
+<div class="member-link">
+<a name="responds-type" href="#responds-type"><tt><b>responds</b>(type)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Check if the tool has one or more event handlers of the specified type.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>type:</tt> 
+<tt>String</tt>
+&mdash;&nbsp;the event type: <tt>&lsquo;mousedown&rsquo;</tt>, <tt>&lsquo;mouseup&rsquo;</tt>, <tt>&lsquo;mousedrag&rsquo;</tt>, <tt>&lsquo;mousemove&rsquo;</tt>, <tt>&lsquo;keydown&rsquo;</tt>, <tt>&lsquo;keyup&rsquo;</tt>
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the tool has one or more event handlers of the specified type, <tt>false</tt> otherwise
+</li>
+		
+	</ul>
+
+	
+	
+</div>
+</div>
+</div>
+
+
 		
 	</div>
+
 
 
 

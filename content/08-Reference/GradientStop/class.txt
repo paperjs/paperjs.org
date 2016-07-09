@@ -5,40 +5,51 @@
 
 </div>
 
-<!-- ============================== constructors ========================= -->
-<div class="reference-members"><h2>Constructors</h2>
+<!-- =============================== constructors ========================== -->
+<div class="reference-members">
+	<h2>Constructors</h2>
 	
 		
 <div id="gradientstop" class="member">
 <div class="member-link">
-<a name="gradientstop" href="#gradientstop"><tt><b>GradientStop</b>([color[, rampPoint]])</tt></a>
+<a name="gradientstop" href="#gradientstop"><tt><b>GradientStop</b>([color[, offset]])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-<p>Creates a GradientStop object.</p>
-
-<ul><b>Parameters:</b>
-
-<li>
+    <p>Creates a GradientStop object.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
 <tt>color:</tt> 
 <a href="/reference/color"><tt>Color</tt></a>
 &mdash;&nbsp;the color of the stop
 &mdash;&nbsp;optional, default: <tt>new Color(0, 0, 0)</tt>
 </li>
-
-<li>
-<tt>rampPoint:</tt> 
+	
+	<li>
+<tt>offset:</tt> 
 <tt>Number</tt>
-&mdash;&nbsp;the position of the stop on the gradient
-                              ramp as a value between 0 and 1.
-&mdash;&nbsp;optional, default: <tt>0</tt>
+&mdash;&nbsp;the position of the stop on the gradient ramp as a value between <code>0</code> and <code>1</code>; <code>null</code> or <code>undefined</code> for automatic assignment.
+&mdash;&nbsp;optional, default: <tt>null</tt>
 </li>
-
+	
 </ul>
 
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/gradientstop"><tt>GradientStop</tt></a></tt>
+</li>
+		
+	</ul>
 
-
-
+    
+    
 </div>
 </div>
 </div>
@@ -49,29 +60,31 @@
 
 
 
-	<div class="reference-members"><h2>Properties</h2>
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
 		
 			
-<div id="ramppoint" class="member">
+<div id="offset" class="member">
 <div class="member-link">
-<a name="ramppoint" href="#ramppoint"><tt><b>rampPoint</b></tt></a>
+<a name="offset" href="#offset"><tt><b>offset</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The ramp-point of the gradient stop as a value between <tt>0</tt> and
-<tt>1</tt>.</p>
+	<p>The ramp-point of the gradient stop as a value between <code>0</code> and <code>1</code>.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Number</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
 	</ul>
+    
 	
-	<p>
-<b>Example</b> &mdash; Animating a gradient's ramp points:
-</p>
+	<h4>Example:<span class="description">Animating a gradient's ramp points:</span></h4>
 
 <div class="paperscript split">
 
@@ -102,12 +115,12 @@ var gradient = path.fillColor.gradient;
 // This function is called each frame of the animation:
 function onFrame(event) {
     var blackStop = gradient.stops[2];
-    // Animate the rampPoint between 0.7 and 0.9:
-    blackStop.rampPoint = Math.sin(event.time * 5) * 0.1 + 0.8;
+    // Animate the offset between 0.7 and 0.9:
+    blackStop.offset = Math.sin(event.time * 5) * 0.1 + 0.8;
 
-    // Animate the rampPoint between 0.2 and 0.4
+    // Animate the offset between 0.2 and 0.4
     var redStop = gradient.stops[1];
-    redStop.rampPoint = Math.sin(event.time * 3) * 0.1 + 0.3;
+    redStop.offset = Math.sin(event.time * 3) * 0.1 + 0.3;
 }
 </script>
 <div class="canvas"><canvas width="516" height="300" id="canvas-0"></canvas></div>
@@ -130,15 +143,16 @@ function onFrame(event) {
 	<p>The color of the gradient stop.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/color"><tt>Color</tt></a>
-	</li>
-	</ul>
 	
-	<p>
-<b>Example</b> &mdash; Animating a gradient's ramp points:
-</p>
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/color"><tt>Color</tt></a>
+		</li>
+	</ul>
+    
+	
+	<h4>Example:<span class="description">Animating a gradient's ramp points:</span></h4>
 
 <div class="paperscript split">
 
@@ -169,11 +183,11 @@ var blackStop = path.fillColor.gradient.stops[2];
 
 // This function is called each frame of the animation:
 function onFrame(event) {
-    // Animate the rampPoint between 0.7 and 0.9:
-    blackStop.rampPoint = Math.sin(event.time * 5) * 0.1 + 0.8;
+    // Animate the offset between 0.7 and 0.9:
+    blackStop.offset = Math.sin(event.time * 5) * 0.1 + 0.8;
 
-    // Animate the rampPoint between 0.2 and 0.4
-    redStop.rampPoint = Math.sin(event.time * 3) * 0.1 + 0.3;
+    // Animate the offset between 0.2 and 0.4
+    redStop.offset = Math.sin(event.time * 3) * 0.1 + 0.3;
 }
 </script>
 <div class="canvas"><canvas width="516" height="300" id="canvas-1"></canvas></div>
@@ -189,10 +203,13 @@ function onFrame(event) {
 
 
 
+
+
 <!-- ============================== methods ================================ -->
-	<div class="reference-members"><h2>Methods</h2>
+	<div class="reference-members">
+		<h2>Methods</h2>
 		
-			
+	
 <div id="clone" class="member">
 <div class="member-link">
 <a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
@@ -200,14 +217,16 @@ function onFrame(event) {
 <div class="member-description hidden">
 <div class="member-text">
 	
+    
 	
 	
-	<ul><b>Returns:</b>
-	
-		<li>
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
 <tt><a href="/reference/gradientstop"><tt>GradientStop</tt></a></tt>&nbsp;&mdash;&nbsp;a copy of the gradient-stop
 </li>
-	
+		
 	</ul>
 
 	
@@ -215,8 +234,11 @@ function onFrame(event) {
 </div>
 </div>
 </div>
+
+
 		
 	</div>
+
 
 
 

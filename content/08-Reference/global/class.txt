@@ -1,12 +1,8 @@
 <div class="reference-class">
 
 
-<p>When code is executed as PaperScript, the script's scope is populated with
-all fields of the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object, which within
-the script appear to be global.</p>
-<p>In a JavaScript context, only the <a href="/reference/global#paper"><tt>paper</tt></a> variable is added to the
-global scope, referencing the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object,
-through which all properties and Paper.js classes can be accessed.</p>
+<p>When code is executed as PaperScript, the script&rsquo;s scope is populated with all fields of the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object, which within the script appear to be global.</p>
+<p>In a JavaScript context, only the <a href="/reference/global#paper"><tt>paper</tt></a> variable is added to the global scope, referencing the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object, through which all properties and Paper.js classes can be accessed.</p>
 
 </div>
 
@@ -14,7 +10,9 @@ through which all properties and Paper.js classes can be accessed.</p>
 
 
 
-	<div class="reference-members"><h2>Properties</h2>
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
 		
 			
 <div id="paper" class="member">
@@ -27,11 +25,14 @@ through which all properties and Paper.js classes can be accessed.</p>
 	<p>A reference to the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/paperscope"><tt>PaperScope</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/paperscope"><tt>PaperScope</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -50,16 +51,17 @@ through which all properties and Paper.js classes can be accessed.</p>
 
 <div class="member-text">
 	<p>The project for which the PaperScript is executed.</p>
-<p>Note that when working with mulitple projects, this does not necessarily
-reflect the currently active project. For this, use
-<a href="/reference/paperscope#project"><tt>paperScope.project</tt></a> instead.</p>
+<p>Note that when working with mulitple projects, this does not necessarily reflect the currently active project. For this, use <a href="/reference/paperscope#project"><tt>paperScope.project</tt></a> instead.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/project"><tt>Project</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/project"><tt>Project</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -78,11 +80,14 @@ reflect the currently active project. For this, use
 	<p>The list of all open projects within the current Paper.js context.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		Array of <a href="/reference/project"><tt>Project</tt></a> objects
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			Array of <a href="/reference/project"><tt>Project</tt></a> objects
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -98,17 +103,18 @@ reflect the currently active project. For this, use
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The reference to the project's view.</p>
-<p>Note that when working with mulitple projects, this does not necessarily
-reflect the view of the currently active project. For this, use
-<a href="/reference/paperscope#view"><tt>paperScope.view</tt></a> instead.</p>
+	<p>The reference to the project&rsquo;s view.</p>
+<p>Note that when working with mulitple projects, this does not necessarily reflect the view of the currently active project. For this, use <a href="/reference/paperscope#view"><tt>paperScope.view</tt></a> instead.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/view"><tt>View</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/view"><tt>View</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -124,18 +130,18 @@ reflect the view of the currently active project. For this, use
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The reference to the tool object which is automatically created when global
-tool event handlers are defined.</p>
-<p>Note that when working with mulitple tools, this does not necessarily
-reflect the currently active tool. For this, use <a href="/reference/paperscope#tool"><tt>paperScope.tool</tt></a>
-instead.</p>
+	<p>The reference to the tool object which is automatically created when global tool event handlers are defined.</p>
+<p>Note that when working with mulitple tools, this does not necessarily reflect the currently active tool. For this, use <a href="/reference/paperscope#tool"><tt>paperScope.tool</tt></a> instead.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<a href="/reference/tool"><tt>Tool</tt></a>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/tool"><tt>Tool</tt></a>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -154,11 +160,14 @@ instead.</p>
 	<p>The list of available tools.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		Array of <a href="/reference/tool"><tt>Tool</tt></a> objects
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			Array of <a href="/reference/tool"><tt>Tool</tt></a> objects
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -179,11 +188,14 @@ instead.</p>
 	<p>A global reference to the <a href="/reference/view#onframe"><tt>view.onFrame</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -202,11 +214,14 @@ instead.</p>
 	<p>A reference to the <a href="/reference/view#onresize"><tt>view.onResize</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -227,11 +242,14 @@ instead.</p>
 	<p>A reference to the <a href="/reference/tool#onmousedown"><tt>tool.onMouseDown</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -250,11 +268,14 @@ instead.</p>
 	<p>A reference to the <a href="/reference/tool#onmousedrag"><tt>tool.onMouseDrag</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -273,11 +294,14 @@ instead.</p>
 	<p>A reference to the <a href="/reference/tool#onmousemove"><tt>tool.onMouseMove</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -296,11 +320,14 @@ instead.</p>
 	<p>A reference to the <a href="/reference/tool#onmouseup"><tt>tool.onMouseUp</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -321,11 +348,14 @@ instead.</p>
 	<p>A reference to the <a href="/reference/tool#onkeydown"><tt>tool.onKeyDown</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -344,11 +374,14 @@ instead.</p>
 	<p>A reference to the <a href="/reference/tool#onkeyup"><tt>tool.onKeyUp</tt></a> handler function.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>Function</tt>
-	</li>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>
+		</li>
 	</ul>
+    
 	
 	
 </div>
@@ -357,6 +390,9 @@ instead.</p>
 </div>
 		
 	</div>
+
+
+
 
 
 

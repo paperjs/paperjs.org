@@ -1,7 +1,7 @@
 <div class="reference-class">
 
 
-
+<p>The Event object is the base class for any of the other event types, such as <a href="/reference/mouseevent"><tt>MouseEvent</tt></a>, <a href="/reference/toolevent"><tt>ToolEvent</tt></a> and <a href="/reference/keyevent"><tt>KeyEvent</tt></a>.</p>
 
 </div>
 
@@ -9,7 +9,37 @@
 
 
 
-	<div class="reference-members"><h2>Properties</h2>
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
+		
+			
+<div id="timestamp" class="member">
+<div class="member-link">
+<a name="timestamp" href="#timestamp"><tt><b>timeStamp</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The time at which the event was created, in milliseconds since the epoch.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
 		
 			
 <div id="modifiers" class="member">
@@ -19,17 +49,27 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	
+	<p>The current state of the keyboard modifiers.</p>
 	
 		<p>Read only.</p>
 	
 	
-	<ul><b>Type:</b>
-	<li>
-		<tt>object</tt>
-	</li>
-	</ul>
 	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>object</tt>
+		</li>
+	</ul>
+    
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/key#modifiers"><tt>Key.modifiers</tt></a></tt></li>
+		
+	</ul>
+
 	
 </div>
 
@@ -38,6 +78,69 @@
 		
 	</div>
 
+
+
+
+
+<!-- ============================== methods ================================ -->
+	<div class="reference-members">
+		<h2>Methods</h2>
+		
+	
+<div id="preventdefault" class="member">
+<div class="member-link">
+<a name="preventdefault" href="#preventdefault"><tt><b>preventDefault</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Cancels the event if it is cancelable, without stopping further propagation of the event.</p>
+    
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="stoppropagation" class="member">
+<div class="member-link">
+<a name="stoppropagation" href="#stoppropagation"><tt><b>stopPropagation</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Prevents further propagation of the current event.</p>
+    
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="stop" class="member">
+<div class="member-link">
+<a name="stop" href="#stop"><tt><b>stop</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Cancels the event if it is cancelable, and stops stopping further propagation of the event. This is has the same effect as calling both <a href="/reference/event#stoppropagation"><tt>stopPropagation</tt></a>() and <a href="/reference/event#preventdefault"><tt>preventDefault</tt></a>().</p>
+<p>Any handler can also return <code>false</code> to indicate that <code>stop()</code> should be called right after.</p>
+    
+	
+	
+	
+	
+</div>
+</div>
+</div>
+
+
+		
+	</div>
 
 
 
