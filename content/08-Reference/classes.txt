@@ -1,4 +1,4 @@
-<h1>Index<span class="version text">0.10.1</span></h1>
+<h1>Index<span class="version text">0.10.2</span></h1>
 <div class="reference"><ul class="reference-classes"><li><a href="/reference/global">Global Scope</a></li>
 <li>
 <h2>Basic Types</h2>
@@ -21,12 +21,6 @@
 <li><a href="/reference/hitresult">HitResult</a></li>
 </ul>
 <li>
-<h2>Symbols</h2>
-<ul>
-<li><a href="/reference/symboldefinition">SymbolDefinition</a></li>
-<li><a href="/reference/symbolitem">SymbolItem</a></li>
-</ul>
-<li>
 <h2>Paths</h2>
 <ul>
 <li><a href="/reference/pathitem">PathItem</a></li>
@@ -36,6 +30,12 @@
 <li><a href="/reference/curve">Curve</a></li>
 <li><hr /></li>
 <li><a href="/reference/curvelocation">CurveLocation</a></li>
+</ul>
+<li>
+<h2>Symbols</h2>
+<ul>
+<li><a href="/reference/symboldefinition">SymbolDefinition</a></li>
+<li><a href="/reference/symbolitem">SymbolItem</a></li>
 </ul>
 <li>
 <h2>Styling</h2>
