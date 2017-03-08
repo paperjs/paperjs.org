@@ -57,8 +57,11 @@
 			<li>
 <tt><tt>Object</tt></tt>&nbsp;&mdash;&nbsp;an object holding the compiled PaperScript translated  into JavaScript code along with source-maps and other information.
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -113,8 +116,11 @@
 			<li>
 <tt><tt>Object</tt></tt>&nbsp;&mdash;&nbsp;an object holding the compiled PaperScript translated  into JavaScript code along with source-maps and other information.
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -151,8 +157,11 @@
 			<li>
 <tt><a href="/reference/paperscope"><tt>PaperScope</tt></a></tt>&nbsp;&mdash;&nbsp;the scope produced for the passed <code>script</code>, or  <code>undefined</code> of multiple scripts area loaded
 </li>
+
 		
 	</ul>
+
+
 
 	
 	

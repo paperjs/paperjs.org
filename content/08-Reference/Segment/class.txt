@@ -53,8 +53,11 @@
 			<li>
 <tt><a href="/reference/segment"><tt>Segment</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -102,7 +105,7 @@ path.strokeColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties to be set on the segment
+&mdash;&nbsp;an object containing properties to be set on the  segment
 
 </li>
 	
@@ -115,8 +118,11 @@ path.strokeColor = 'black';
 			<li>
 <tt><a href="/reference/segment"><tt>Segment</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:<span class="description">Creating segments using object notation:</span></h4>
@@ -484,8 +490,11 @@ path.segments[2].selected = true;
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the segment has handles set, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -507,6 +516,42 @@ path.segments[2].selected = true;
 </div>
 
 	
+<div id="issmooth" class="member">
+<div class="member-link">
+<a name="issmooth" href="#issmooth"><tt><b>isSmooth</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if the segment connects two curves smoothly, meaning that its two handles are collinear and segment does not form a corner.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the segment is smooth, <tt>false</tt> otherwise
+</li>
+
+		
+	</ul>
+
+
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/point#iscollinear"><tt>point.isCollinear</tt></a>()</tt></li>
+		
+	</ul>
+
+	
+</div>
+</div>
+</div>
+
+	
 <div id="clearhandles" class="member">
 <div class="member-link">
 <a name="clearhandles" href="#clearhandles"><tt><b>clearHandles</b>()</tt></a>
@@ -517,6 +562,8 @@ path.segments[2].selected = true;
     
 	
 	
+
+
 	
 	
 </div>
@@ -566,6 +613,8 @@ path.segments[2].selected = true;
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -596,8 +645,11 @@ path.segments[2].selected = true;
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if this is the first segment, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -622,8 +674,11 @@ path.segments[2].selected = true;
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if this is the last segment, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -648,8 +703,11 @@ path.segments[2].selected = true;
 			<li>
 <tt><a href="/reference/segment"><tt>Segment</tt></a></tt>&nbsp;&mdash;&nbsp;the reversed segment
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -674,8 +732,11 @@ path.segments[2].selected = true;
 			<li>
 <tt><a href="/reference/segment"><tt>Segment</tt></a></tt>&nbsp;&mdash;&nbsp;the reversed segment
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -700,8 +761,11 @@ path.segments[2].selected = true;
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the segment was removed, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -726,8 +790,11 @@ path.segments[2].selected = true;
 			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the segment
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -758,6 +825,8 @@ path.segments[2].selected = true;
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -801,6 +870,8 @@ path.segments[2].selected = true;
 </ul>
 
 	
+
+
 	
 	
 </div>

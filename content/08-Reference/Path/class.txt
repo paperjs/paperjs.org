@@ -40,8 +40,11 @@ Array of <a href="/reference/segment"><tt>Segment</tt></a> objects
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:<span class="description">Create an empty path and add segments to it:</span></h4>
@@ -79,7 +82,7 @@ path.strokeColor = 'black';</code></pre>
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties to be set on the path
+&mdash;&nbsp;an object containing properties to be set on the  path
 
 </li>
 	
@@ -92,8 +95,11 @@ path.strokeColor = 'black';</code></pre>
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -176,8 +182,11 @@ var path = new Path({
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -237,8 +246,11 @@ path.fillColor = 'red';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -279,7 +291,7 @@ path.strokeColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing the path&rsquo;s attributes
+&mdash;&nbsp;an object containing properties describing the  path&rsquo;s attributes
 
 </li>
 	
@@ -292,8 +304,11 @@ path.strokeColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -355,8 +370,11 @@ var path = new Path.Line({
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -395,7 +413,7 @@ path.strokeColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing the path&rsquo;s attributes
+&mdash;&nbsp;an object containing properties describing the  path&rsquo;s attributes
 
 </li>
 	
@@ -408,8 +426,11 @@ path.strokeColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -471,8 +492,11 @@ var path = new Path.Circle({
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -550,8 +574,11 @@ path.strokeColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -612,8 +639,11 @@ path.strokeColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -654,7 +684,7 @@ path.strokeColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing the path&rsquo;s attributes
+&mdash;&nbsp;an object containing properties describing the  path&rsquo;s attributes
 
 </li>
 	
@@ -667,8 +697,11 @@ path.strokeColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -783,8 +816,11 @@ var path = new Path.Rectangle({
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -824,7 +860,7 @@ path.fillColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing the path&rsquo;s attributes
+&mdash;&nbsp;an object containing properties describing the  path&rsquo;s attributes
 
 </li>
 	
@@ -837,8 +873,11 @@ path.fillColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -926,8 +965,11 @@ var shape = new Path.Ellipse({
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -969,7 +1011,7 @@ path.strokeColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing the path&rsquo;s attributes
+&mdash;&nbsp;an object containing properties describing the  path&rsquo;s attributes
 
 </li>
 	
@@ -982,8 +1024,11 @@ path.strokeColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -1053,8 +1098,11 @@ var path = new Path.Arc({
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -1096,7 +1144,7 @@ triangle.fillColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing the path&rsquo;s attributes
+&mdash;&nbsp;an object containing properties describing the  path&rsquo;s attributes
 
 </li>
 	
@@ -1109,8 +1157,11 @@ triangle.fillColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -1188,8 +1239,11 @@ var triangle = new Path.RegularPolygon({
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -1232,7 +1286,7 @@ path.fillColor = 'black';
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing properties describing the path&rsquo;s attributes
+&mdash;&nbsp;an object containing properties describing the  path&rsquo;s attributes
 
 </li>
 	
@@ -1245,8 +1299,11 @@ path.fillColor = 'black';
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:</h4>
@@ -1554,32 +1611,6 @@ myPath.closed = true;
 </div>
 		
 			
-<div id="clockwise" class="member">
-<div class="member-link">
-<a name="clockwise" href="#clockwise"><tt><b>clockwise</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-<div class="member-text">
-	<p>Specifies whether the path is oriented clock-wise.</p>
-	
-	
-	
-	<ul class="member-list">
-		<h4>Type:</h4>
-		<li>
-			<tt>Boolean</tt>
-		</li>
-	</ul>
-    
-	
-	
-</div>
-
-</div>
-</div>
-		
-			
 <div id="fullyselected" class="member">
 <div class="member-link">
 <a name="fullyselected" href="#fullyselected"><tt><b>fullySelected</b></tt></a>
@@ -1644,34 +1675,6 @@ if (path2.fullySelected) {
 </div>
 </div>
 		
-			
-<div id="interiorpoint" class="member">
-<div class="member-link">
-<a name="interiorpoint" href="#interiorpoint"><tt><b>interiorPoint</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-<div class="member-text">
-	<p>Returns a point that is guaranteed to be inside the path.</p>
-	
-		<p>Read only.</p>
-	
-	
-	
-	<ul class="member-list">
-		<h4>Type:</h4>
-		<li>
-			<a href="/reference/point"><tt>Point</tt></a>
-		</li>
-	</ul>
-    
-	
-	
-</div>
-
-</div>
-</div>
-		
 	</div>
 
 
@@ -1711,8 +1714,11 @@ if (path2.fullySelected) {
 			<li>
 <tt><a href="/reference/segment"><tt>Segment</tt></a></tt>&nbsp;&mdash;&nbsp;the added segment. This is not necessarily the same object, e.g. if the segment to be added already belongs to another path
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Adding segments to a path using point objects:</span></h4>
@@ -1857,8 +1863,11 @@ path.add(new Point(170, 75));
 			<li>
 <tt><a href="/reference/segment"><tt>Segment</tt></a></tt>&nbsp;&mdash;&nbsp;the added segment. This is not necessarily the same object, e.g. if the segment to be added already belongs to another path
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Inserting a segment:</span></h4>
@@ -1943,8 +1952,11 @@ Array of <a href="/reference/segment"><tt>Segment</tt></a> objects
 			<li>
 <tt>Array of <a href="/reference/segment"><tt>Segment</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array of the added segments. These segments are not necessarily the same objects, e.g. if the segment to be added already belongs to another path
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Adding an array of Point objects:</span></h4>
@@ -2052,8 +2064,11 @@ Array of <a href="/reference/segment"><tt>Segment</tt></a> objects
 			<li>
 <tt>Array of <a href="/reference/segment"><tt>Segment</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array of the added segments. These segments are not necessarily the same objects, e.g. if the segment to be added already belongs to another path
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2090,8 +2105,11 @@ Array of <a href="/reference/segment"><tt>Segment</tt></a> objects
 			<li>
 <tt><a href="/reference/segment"><tt>Segment</tt></a></tt>&nbsp;&mdash;&nbsp;the removed segment
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Removing a segment from a path:</span></h4>
@@ -2142,8 +2160,11 @@ path.selected = true;
 			<li>
 <tt>Array of <a href="/reference/segment"><tt>Segment</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array containing the removed segments
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2187,8 +2208,11 @@ path.selected = true;
 			<li>
 <tt>Array of <a href="/reference/segment"><tt>Segment</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array containing the removed segments
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Removing segments from a path:</span></h4>
@@ -2239,8 +2263,11 @@ path.selected = true;
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the path has curve handles set, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -2268,7 +2295,57 @@ path.selected = true;
     
 	
 	
+
+
 	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="divideat-location" class="member">
+<div class="member-link">
+<a name="divideat-location" href="#divideat-location"><tt><b>divideAt</b>(location)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Divides the path on the curve at the given offset or location into two curves, by inserting a new segment at the given location.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>location:</tt> 
+<tt>Number</tt>⟋<a href="/reference/curvelocation"><tt>CurveLocation</tt></a>
+&mdash;&nbsp;the offset or location on the  path at which to divide the existing curve by inserting a new segment
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/segment"><tt>Segment</tt></a></tt>&nbsp;&mdash;&nbsp;the newly inserted segment if the location is valid,  {code null} otherwise
+</li>
+
+		
+	</ul>
+
+
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><a href="/reference/curve#divideat-location"><tt>curve.divideAt(location)</tt></a></tt></li>
+		
+	</ul>
+
 	
 </div>
 </div>
@@ -2303,8 +2380,11 @@ path.selected = true;
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path after splitting, if any
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2394,42 +2474,6 @@ path.firstSegment.selected = true;
 </div>
 
 	
-<div id="split-index-time" class="member">
-<div class="member-link">
-<a name="split-index-time" href="#split-index-time"><tt><b>split</b>(index, time)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	
-    
-	
-<ul class="member-list">
-	<h4>Parameters:</h4>
-	
-	<li>
-<tt>index:</tt> 
-
-
-
-</li>
-	
-	<li>
-<tt>time:</tt> 
-
-
-
-</li>
-	
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
-
-	
 <div id="join-path" class="member">
 <div class="member-link">
 <a name="join-path" href="#join-path"><tt><b>join</b>(path[, tolerance])</tt></a>
@@ -2460,6 +2504,8 @@ path.firstSegment.selected = true;
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Joining two paths:</span></h4>
 
@@ -2579,6 +2625,8 @@ path.selected = true;
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -2614,8 +2662,11 @@ path.selected = true;
 			<li>
 <tt><a href="/reference/shape"><tt>Shape</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created shape item with the same geometry as this path item if it can be matched, <code>null</code> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -2661,8 +2712,11 @@ path.selected = true;
 			<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location of the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2699,8 +2753,11 @@ path.selected = true;
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the length of the path up to the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2737,8 +2794,11 @@ path.selected = true;
 			<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location at the specified offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2775,8 +2835,11 @@ path.selected = true;
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point at the given offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Finding the point on a path at a given offset:</span></h4>
@@ -2884,8 +2947,11 @@ for (var i = 0; i < amount + 1; i++) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normalized tangent vector at the given offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Working with the tangent vector at a given offset:</span></h4>
@@ -2997,8 +3063,11 @@ for (var i = 0; i < amount + 1; i++) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normal vector at the given offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Working with the normal vector at a given offset:</span></h4>
@@ -3110,8 +3179,11 @@ for (var i = 0; i < amount + 1; i++) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted tangent vector at the given offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -3148,8 +3220,11 @@ for (var i = 0; i < amount + 1; i++) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted normal vector at the given offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -3186,8 +3261,11 @@ for (var i = 0; i < amount + 1; i++) {
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the normal vector at the given offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -3936,7 +4014,7 @@ circle.position.x += 100;
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The current rotation angle of the item, as described by its <a href="/reference/item#matrix"><tt>matrix</tt></a>.</p>
+	<p>The current rotation angle of the item, as described by its <a href="/reference/item#matrix"><tt>matrix</tt></a>. Please note that this only returns meaningful values for items with <a href="/reference/item#applymatrix"><tt>applyMatrix</tt></a> set to <code>false</code>, meaning they do not directly bake transformations into their content.</p>
 	
 	
 	
@@ -3962,7 +4040,7 @@ circle.position.x += 100;
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The current scale factor of the item, as described by its <a href="/reference/item#matrix"><tt>matrix</tt></a>.</p>
+	<p>The current scale factor of the item, as described by its <a href="/reference/item#matrix"><tt>matrix</tt></a>. Please note that this only returns meaningful values for items with <a href="/reference/item#applymatrix"><tt>applyMatrix</tt></a> set to <code>false</code>, meaning they do not directly bake transformations into their content.</p>
 	
 	
 	
@@ -4227,7 +4305,7 @@ console.log(path.parent == group); // true</code></pre>
 console.log(path.parent == project.activeLayer); // true
 
 var group = new Group();
-group.parent = path;
+path.parent = group;
 
 // Now the parent of the path has become the group:
 console.log(path.parent == group); // true
@@ -5767,7 +5845,7 @@ path.onMouseLeave = function(event) {
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Sets those properties of the passed object literal on this item to the values defined in the object literal, if the item has property of the given name (or a setter defined for it).</p>
+	<p>Sets the properties of the passed object literal on this item to the values defined in the object literal, if the item has property of the given name (or a setter defined for it).</p>
     
 	
 <ul class="member-list">
@@ -5789,8 +5867,11 @@ path.onMouseLeave = function(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the item itself
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Setting properties through an object literal</span></h4>
@@ -5855,8 +5936,11 @@ circle.set({
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the newly cloned item
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Cloning items:</span></h4>
@@ -5913,6 +5997,8 @@ for (var i = 0; i < 20; i++) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -5949,6 +6035,8 @@ for (var i = 0; i < 20; i++) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -5991,8 +6079,11 @@ for (var i = 0; i < 20; i++) {
 			<li>
 <tt><a href="/reference/raster"><tt>Raster</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created raster item
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Rasterizing an item:</span></h4>
@@ -6053,6 +6144,8 @@ raster.scale(5);
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Click within and outside the star below Create a star shaped path:</span></h4>
 
@@ -6120,8 +6213,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6158,8 +6254,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6181,7 +6280,7 @@ function onMouseDown(event) {
     <ul class="member-list">
 <h4>Options:</h4>
 <li><tt>options.tolerance: <tt>Number</tt></tt> &mdash; the tolerance of the hit-test &mdash;&nbsp;default: <tt><a href="/reference/paperscope#settings"><tt>paperScope.settings</tt></a>.hitTolerance</tt></li>
-<li><tt>options.class: <tt>Function</tt></tt> &mdash; only hit-test again a certain item  class and its sub-classes: <tt>Group</tt>, <tt>Layer</tt>, <tt>Path</tt>, <tt>CompoundPath</tt>, <tt>Shape</tt>, <tt>Raster</tt>, <tt>SymbolItem</tt>, <tt>PointText</tt>, &hellip;</li>
+<li><tt>options.class: <tt>Function</tt></tt> &mdash; only hit-test against a specific item  class, or any of its sub-classes, by providing the constructor  function against which an <code>instanceof</code> check is performed:  <tt>Group</tt>, <tt>Layer</tt>, <tt>Path</tt>, <tt>CompoundPath</tt>, <tt>Shape</tt>, <tt>Raster</tt>, <tt>SymbolItem</tt>, <tt>PointText</tt>, &hellip;</li>
 <li><tt>options.match: <tt>Function</tt></tt> &mdash; a match function to be called for each  found hit result: Return <code>true</code> to return the result, <code>false</code> to keep  searching</li>
 <li><tt>options.fill: <tt>Boolean</tt></tt> &mdash; hit-test the fill of items &mdash;&nbsp;default: <tt>true</tt></li>
 <li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; hit-test the stroke of path  items, taking into account the setting of stroke color and width &mdash;&nbsp;default: <tt>true</tt></li>
@@ -6221,8 +6320,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/hitresult"><tt>HitResult</tt></a></tt>&nbsp;&mdash;&nbsp;a hit result object describing what exactly was hit  or <code>null</code> if nothing was hit
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6267,8 +6369,11 @@ function onMouseDown(event) {
 			<li>
 <tt>Array of <a href="/reference/hitresult"><tt>HitResult</tt></a> objects</tt>&nbsp;&mdash;&nbsp;hit result objects for all hits, describing what  exactly was hit or <code>null</code> if nothing was hit
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -6313,8 +6418,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item matches all the criteria, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -6366,8 +6474,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item matches the state, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -6420,8 +6531,11 @@ function onMouseDown(event) {
 			<li>
 <tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the list of matching descendant items
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -6465,8 +6579,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the first descendant item matching the given criteria
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -6516,8 +6633,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;the exported JSON data
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6548,6 +6668,8 @@ function onMouseDown(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -6589,8 +6711,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>SVGElement</tt></tt>&nbsp;&mdash;&nbsp;the item converted to an SVG node
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6641,8 +6766,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created Paper.js item containing the converted  SVG content
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6686,8 +6814,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created Paper.js item containing the converted  SVG content
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6726,8 +6857,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the added item, or <code>null</code> if adding was not possible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6771,8 +6905,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the inserted item, or <code>null</code> if inserting was not possible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6809,8 +6946,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the added items, or <code>null</code> if adding was not possible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6854,8 +6994,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the inserted items, or <code>null</code> if inserted was not  possible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6892,8 +7035,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the inserted item, or <code>null</code> if inserting was not possible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6930,8 +7076,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the inserted item, or <code>null</code> if inserting was not possible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -6950,6 +7099,8 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
     
 	
 	
+
+
 	
 	
 </div>
@@ -6967,6 +7118,8 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
     
 	
 	
+
+
 	
 	
 </div>
@@ -6996,6 +7149,8 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -7025,6 +7180,8 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -7060,8 +7217,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it was moved, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7098,8 +7258,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it was moved, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7136,8 +7299,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the new copy of the item
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7162,8 +7328,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item was removed, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7200,8 +7369,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item was replaced, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7226,8 +7398,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array containing the removed items
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7271,8 +7446,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;an array containing the removed items
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7291,6 +7469,8 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
     
 	
 	
+
+
 	
 	
 </div>
@@ -7316,8 +7496,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt></tt>&nbsp;&mdash;&nbsp;Boolean
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7344,8 +7527,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item has a fill, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7370,8 +7556,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item has a stroke, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7396,8 +7585,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item has a shadow, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7424,8 +7616,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it has one or more children, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7450,8 +7645,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item is inserted into the scene graph, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7488,8 +7686,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is above the specified item, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7526,8 +7727,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is below the specified item, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7564,8 +7768,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is the parent of the item, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7602,8 +7809,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it is a child of the item, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7640,8 +7850,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is inside the specified item, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7678,8 +7891,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item is an ancestor of the specified item, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7716,8 +7932,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item is aa sibling of the specified item, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7754,8 +7973,11 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the items are grouped together, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -7788,6 +8010,8 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -7825,6 +8049,8 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -7922,6 +8148,8 @@ function onFrame(event) {
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Scaling an item from its center point:</span></h4>
 
@@ -8012,6 +8240,8 @@ circle.scale(1.5, circle.bounds.bottomLeft);
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Scaling an item horizontally by 300%:</span></h4>
 
@@ -8071,6 +8301,8 @@ circle.scale(3, 1);
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -8121,6 +8353,8 @@ circle.scale(3, 1);
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -8164,6 +8398,8 @@ circle.scale(3, 1);
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -8214,6 +8450,8 @@ circle.scale(3, 1);
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -8250,6 +8488,8 @@ circle.scale(3, 1);
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -8285,8 +8525,11 @@ circle.scale(3, 1);
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point as a new instance
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8323,8 +8566,11 @@ circle.scale(3, 1);
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point as a new instance
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8361,8 +8607,11 @@ circle.scale(3, 1);
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point as a new instance
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8399,8 +8648,11 @@ circle.scale(3, 1);
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point as a new instance
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8438,6 +8690,8 @@ circle.scale(3, 1);
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Fitting an item to the bounding rectangle of another item's bounding rectangle:</span></h4>
 
@@ -8569,8 +8823,11 @@ path.fitBounds(view.bounds);
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;this item itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Change the fill color of the path to red when the mouse enters its shape and back to black again, when it leaves its shape.</span></h4>
@@ -8623,7 +8880,7 @@ path.on('mouseleave', function() {
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing one or more of the  following properties: <tt>frame</tt>, <tt>mousedown</tt>, <tt>mouseup</tt>, <tt>mousedrag</tt>, <tt>click</tt>, <tt>doubleclick</tt>, <tt>mousemove</tt>, <tt>mouseenter</tt>, <tt>mouseleave</tt>
+&mdash;&nbsp;an object containing one or more of the following  properties: <tt>frame</tt>, <tt>mousedown</tt>, <tt>mouseup</tt>, <tt>mousedrag</tt>, <tt>click</tt>, <tt>doubleclick</tt>, <tt>mousemove</tt>, <tt>mouseenter</tt>, <tt>mouseleave</tt>
 
 </li>
 	
@@ -8636,8 +8893,11 @@ path.on('mouseleave', function() {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;this item itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Change the fill color of the path to red when the mouse enters its shape and back to black again, when it leaves its shape.</span></h4>
@@ -8745,8 +9005,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;this item itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8770,7 +9033,7 @@ function onMouseDown(event) {
 	<li>
 <tt>object:</tt> 
 <tt>Object</tt>
-&mdash;&nbsp;an object literal containing one or more of the  following properties: <tt>frame</tt>, <tt>mousedown</tt>, <tt>mouseup</tt>, <tt>mousedrag</tt>, <tt>click</tt>, <tt>doubleclick</tt>, <tt>mousemove</tt>, <tt>mouseenter</tt>, <tt>mouseleave</tt>
+&mdash;&nbsp;an object containing one or more of the following  properties: <tt>frame</tt>, <tt>mousedown</tt>, <tt>mouseup</tt>, <tt>mousedrag</tt>, <tt>click</tt>, <tt>doubleclick</tt>, <tt>mousemove</tt>, <tt>mouseenter</tt>, <tt>mouseleave</tt>
 
 </li>
 	
@@ -8783,8 +9046,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;this item itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8828,8 +9094,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the event had listeners, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8866,8 +9135,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the item has one or more event handlers of the specified type, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -8906,6 +9178,8 @@ function onMouseDown(event) {
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Click and drag below:</span></h4>
 
@@ -8951,6 +9225,8 @@ function onMouseDrag(event) {
     
 	
 	
+
+
 	
 	<h4>Example:<span class="description">Move your mouse below:</span></h4>
 
@@ -8993,6 +9269,8 @@ function onMouseMove(event) {
     
 	
 	
+
+
 	
 	<h4>Example:<span class="description">Click a few times below:</span></h4>
 
@@ -9035,6 +9313,8 @@ function onMouseDown(event) {
     
 	
 	
+
+
 	
 	<h4>Example:<span class="description">Click and drag below:</span></h4>
 
@@ -9077,6 +9357,8 @@ function onMouseDrag(event) {
     
 	
 	
+
+
 	
 	<h4>Example:<span class="description">Click a few times below:</span></h4>
 
@@ -9108,65 +9390,75 @@ function onMouseDown(event) {
 </div>
 </div>
 
-	
-<div id="hittestall-point" class="member">
-<div class="member-link">
-<a name="hittestall-point" href="#hittestall-point"><tt><b>hitTestAll</b>(point[, options])</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Performs a hit-test on the item and its children (if it is a <a href="/reference/group"><tt>Group</tt></a> or <a href="/reference/layer"><tt>Layer</tt></a>) at the location of the specified point, returning all found hits.</p>
-<p>The options object allows you to control the specifics of the hit- test. See <a href="/reference/item#hittest-point"><tt>hitTest(point[, options])</tt></a> for a list of all options.</p>
-    
-	
-<ul class="member-list">
-	<h4>Parameters:</h4>
-	
-	<li>
-<tt>point:</tt> 
-<a href="/reference/point"><tt>Point</tt></a>
-&mdash;&nbsp;the point where the hit-test should be performed
-
-</li>
-	
-	<li>
-<tt>options:</tt> 
-<tt>Object</tt>
-
-&mdash;&nbsp;optional, default: <tt>{ fill: true, stroke: true, segments: true,  tolerance: settings.hitTolerance }</tt>
-</li>
-	
-</ul>
-
-	
-	<ul class="member-list">
-		<h4>Returns:</h4>
-		
-			<li>
-<tt>Array of <a href="/reference/hitresult"><tt>HitResult</tt></a> objects</tt>&nbsp;&mdash;&nbsp;hit result objects for all hits, describing what  exactly was hit or <code>null</code> if nothing was hit
-</li>
-		
-	</ul>
-
-	
-	<ul class="member-list">
-		<h4>See also:</h4>
-		
-			<li><tt><a href="/reference/item#hittest-point"><tt>hitTest(point[, options])</tt></a>;</tt></li>
-		
-	</ul>
-
-	
-</div>
-</div>
-</div>
-
 </div>
 
 
 
 <!-- =========================== inherited properties ====================== -->
 <div class="reference-members"><h2>Properties inherited from <a href="/reference/pathitem"><tt>PathItem</tt></a></h2>
+
+	
+<div id="interiorpoint" class="member">
+<div class="member-link">
+<a name="interiorpoint" href="#interiorpoint"><tt><b>interiorPoint</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>Returns a point that is guaranteed to be inside the path.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+
+	
+<div id="clockwise" class="member">
+<div class="member-link">
+<a name="clockwise" href="#clockwise"><tt><b>clockwise</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>Specifies whether the path as a whole is oriented clock-wise, by looking at the path&rsquo;s area. Note that self-intersecting paths and sub-paths of different orientation can result in areas that cancel each other out.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Boolean</tt>
+		</li>
+	</ul>
+    
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><tt>Path#getArea</tt>()</tt></li>
+		
+			<li><tt><tt>CompoundPath#getArea</tt>()</tt></li>
+		
+	</ul>
+
+	
+</div>
+
+</div>
+</div>
 
 	
 <div id="pathdata" class="member">
@@ -9205,12 +9497,15 @@ function onMouseDown(event) {
 
 <div id="unite-path" class="member">
 <div class="member-link">
-<a name="unite-path" href="#unite-path"><tt><b>unite</b>(path)</tt></a>
+<a name="unite-path" href="#unite-path"><tt><b>unite</b>(path[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Merges the geometry of the specified path with this path&rsquo;s geometry and returns the result as a new path item.</p>
-    
+	<p>Unites the geometry of the specified path with this path&rsquo;s geometry and returns the result as a new path item.</p>
+    <ul class="member-list">
+<h4>Options:</h4>
+<li><tt>options.insert: <tt>Boolean</tt></tt> &mdash; whether the resulting item  should be inserted back into the scene graph, above both paths  involved in the operation &mdash;&nbsp;default: <tt>true</tt></li>
+</ul>
 	
 <ul class="member-list">
 	<h4>Parameters:</h4>
@@ -9222,6 +9517,13 @@ function onMouseDown(event) {
 
 </li>
 	
+	<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the boolean operation options
+&mdash;&nbsp;optional
+</li>
+	
 </ul>
 
 	
@@ -9231,8 +9533,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/pathitem"><tt>PathItem</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting path item
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -9243,12 +9548,16 @@ function onMouseDown(event) {
 	
 <div id="intersect-path" class="member">
 <div class="member-link">
-<a name="intersect-path" href="#intersect-path"><tt><b>intersect</b>(path)</tt></a>
+<a name="intersect-path" href="#intersect-path"><tt><b>intersect</b>(path[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Intersects the geometry of the specified path with this path&rsquo;s geometry and returns the result as a new path item.</p>
-    
+    <ul class="member-list">
+<h4>Options:</h4>
+<li><tt>options.insert: <tt>Boolean</tt></tt> &mdash; whether the resulting item  should be inserted back into the scene graph, above both paths  involved in the operation &mdash;&nbsp;default: <tt>true</tt></li>
+<li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; whether the operation should  be performed on the stroke or on the fill of the first path &mdash;&nbsp;default: <tt>false</tt></li>
+</ul>
 	
 <ul class="member-list">
 	<h4>Parameters:</h4>
@@ -9260,6 +9569,13 @@ function onMouseDown(event) {
 
 </li>
 	
+	<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the boolean operation options
+&mdash;&nbsp;optional
+</li>
+	
 </ul>
 
 	
@@ -9269,8 +9585,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/pathitem"><tt>PathItem</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting path item
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -9281,12 +9600,16 @@ function onMouseDown(event) {
 	
 <div id="subtract-path" class="member">
 <div class="member-link">
-<a name="subtract-path" href="#subtract-path"><tt><b>subtract</b>(path)</tt></a>
+<a name="subtract-path" href="#subtract-path"><tt><b>subtract</b>(path[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Subtracts the geometry of the specified path from this path&rsquo;s geometry and returns the result as a new path item.</p>
-    
+    <ul class="member-list">
+<h4>Options:</h4>
+<li><tt>options.insert: <tt>Boolean</tt></tt> &mdash; whether the resulting item  should be inserted back into the scene graph, above both paths  involved in the operation &mdash;&nbsp;default: <tt>true</tt></li>
+<li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; whether the operation should  be performed on the stroke or on the fill of the first path &mdash;&nbsp;default: <tt>false</tt></li>
+</ul>
 	
 <ul class="member-list">
 	<h4>Parameters:</h4>
@@ -9298,6 +9621,13 @@ function onMouseDown(event) {
 
 </li>
 	
+	<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the boolean operation options
+&mdash;&nbsp;optional
+</li>
+	
 </ul>
 
 	
@@ -9307,8 +9637,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/pathitem"><tt>PathItem</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting path item
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -9319,12 +9652,15 @@ function onMouseDown(event) {
 	
 <div id="exclude-path" class="member">
 <div class="member-link">
-<a name="exclude-path" href="#exclude-path"><tt><b>exclude</b>(path)</tt></a>
+<a name="exclude-path" href="#exclude-path"><tt><b>exclude</b>(path[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Excludes the intersection of the geometry of the specified path with this path&rsquo;s geometry and returns the result as a new path item.</p>
-    
+    <ul class="member-list">
+<h4>Options:</h4>
+<li><tt>options.insert: <tt>Boolean</tt></tt> &mdash; whether the resulting item  should be inserted back into the scene graph, above both paths  involved in the operation &mdash;&nbsp;default: <tt>true</tt></li>
+</ul>
 	
 <ul class="member-list">
 	<h4>Parameters:</h4>
@@ -9336,6 +9672,13 @@ function onMouseDown(event) {
 
 </li>
 	
+	<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the boolean operation options
+&mdash;&nbsp;optional
+</li>
+	
 </ul>
 
 	
@@ -9345,8 +9688,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/pathitem"><tt>PathItem</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting group item
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -9357,12 +9703,16 @@ function onMouseDown(event) {
 	
 <div id="divide-path" class="member">
 <div class="member-link">
-<a name="divide-path" href="#divide-path"><tt><b>divide</b>(path)</tt></a>
+<a name="divide-path" href="#divide-path"><tt><b>divide</b>(path[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Splits the geometry of this path along the geometry of the specified path returns the result as a new group item. This is equivalent to calling <a href="/reference/pathitem#subtract-path"><tt>subtract(path)</tt></a> and <a href="/reference/pathitem#subtract-path"><tt>subtract(path)</tt></a> and putting the results into a new group.</p>
-    
+    <ul class="member-list">
+<h4>Options:</h4>
+<li><tt>options.insert: <tt>Boolean</tt></tt> &mdash; whether the resulting item  should be inserted back into the scene graph, above both paths  involved in the operation &mdash;&nbsp;default: <tt>true</tt></li>
+<li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; whether the operation should  be performed on the stroke or on the fill of the first path &mdash;&nbsp;default: <tt>false</tt></li>
+</ul>
 	
 <ul class="member-list">
 	<h4>Parameters:</h4>
@@ -9374,6 +9724,13 @@ function onMouseDown(event) {
 
 </li>
 	
+	<li>
+<tt>options:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the boolean operation options
+&mdash;&nbsp;optional
+</li>
+	
 </ul>
 
 	
@@ -9383,8 +9740,59 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/group"><tt>Group</tt></a></tt>&nbsp;&mdash;&nbsp;the resulting group item
 </li>
+
 		
 	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="reorient" class="member">
+<div class="member-link">
+<a name="reorient" href="#reorient"><tt><b>reorient</b>([nonZero[, clockwise]])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Fixes the orientation of the sub-paths of a compound-path, assuming that non of its sub-paths intersect, by reorienting them so that they are of different winding direction than their containing paths, except for disjoint sub-paths, i.e. islands, which are oriented so that they have the same winding direction as the the biggest path.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>nonZero:</tt> 
+<tt>Boolean</tt>
+&mdash;&nbsp;controls if the non-zero fill-rule  is to be applied, by counting the winding of each nested path and  discarding sub-paths that do not contribute to the final result
+&mdash;&nbsp;optional, default: <tt>false</tt>
+</li>
+	
+	<li>
+<tt>clockwise:</tt> 
+<tt>Boolean</tt>
+&mdash;&nbsp;if provided, the orientation of the root  paths will be set to the orientation specified by <code>clockwise</code>,  otherwise the orientation of the largest root child is used.
+&mdash;&nbsp;optional
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>PahtItem</tt></tt>&nbsp;&mdash;&nbsp;a reference to the item itself, reoriented
+</li>
+
+		
+	</ul>
+
+
 
 	
 	
@@ -9430,8 +9838,11 @@ function onMouseDown(event) {
 			<li>
 <tt>Array of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the locations of all intersection between the  paths
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -9503,6 +9914,8 @@ function onFrame(event) {
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -9545,8 +9958,11 @@ function onFrame(event) {
 			<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the location on the path that&rsquo;s the closest to the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -9583,8 +9999,11 @@ function onFrame(event) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the path that&rsquo;s the closest to the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -9640,6 +10059,8 @@ function onMouseMove(event) {
     
 	
 	
+
+
 	
 	
 </div>
@@ -9669,6 +10090,8 @@ function onMouseMove(event) {
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Flattening a circle shaped path:</span></h4>
 
@@ -9756,6 +10179,8 @@ copy.flatten(4);
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -9908,8 +10333,11 @@ paths[4].smooth({ type: 'continuous', from: -1, to: 1 });
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the method was capable of fitting curves  through the path&rsquo;s segment points, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Click and drag below to draw to draw a line, when you release the mouse, the is made smooth using path.simplify():</span></h4>
@@ -9995,6 +10423,49 @@ function onMouseUp(event) {
 </ul>
 
 	
+
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="compare-path" class="member">
+<div class="member-link">
+<a name="compare-path" href="#compare-path"><tt><b>compare</b>(path)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Compares the geometry of two paths to see if they describe the same shape, detecting cases where paths start in different segments or even use different amounts of curves to describe the same shape, as long as their orientation is the same, and their segments and handles really result in the same visual appearance of curves.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>path:</tt> 
+<a href="/reference/pathitem"><tt>PathItem</tt></a>
+&mdash;&nbsp;the path to compare this path&rsquo;s geometry with
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if two paths describe the same shape, <tt>false</tt> otherwise
+</li>
+
+		
+	</ul>
+
+
+
 	
 	
 </div>
@@ -10026,6 +10497,8 @@ function onMouseUp(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10055,6 +10528,8 @@ function onMouseUp(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10091,6 +10566,8 @@ function onMouseUp(event) {
 </ul>
 
 	
+
+
 	
 	<h4>Example:</h4>
 
@@ -10198,6 +10675,8 @@ function onMouseUp(event) {
 </ul>
 
 	
+
+
 	
 	<h4>Example:</h4>
 
@@ -10300,6 +10779,8 @@ function onMouseDrag(event) {
 </ul>
 
 	
+
+
 	
 	<h4>Example:<span class="description">Interactive example. Move your mouse around the view below:</span></h4>
 
@@ -10375,6 +10856,8 @@ function onMouseMove(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10412,6 +10895,8 @@ function onMouseMove(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10429,6 +10914,8 @@ function onMouseMove(event) {
     
 	
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -10467,6 +10954,8 @@ function onMouseMove(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10496,6 +10985,8 @@ function onMouseMove(event) {
 </ul>
 
 	
+
+
 	
 	<h4>Example:</h4>
 
@@ -10595,6 +11086,8 @@ path.smooth();
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10631,6 +11124,8 @@ path.smooth();
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10674,6 +11169,8 @@ path.smooth();
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10717,6 +11214,8 @@ path.smooth();
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -10754,6 +11253,8 @@ path.smooth();
 </ul>
 
 	
+
+
 	
 	
 </div>

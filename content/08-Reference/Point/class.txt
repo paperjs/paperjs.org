@@ -51,8 +51,11 @@ console.log(point.y); // 5</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:<span class="description">Create a point at x: 10, y: 5</span></h4>
@@ -95,8 +98,11 @@ console.log(point.y); // 5</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:<span class="description">Creating a point at x: 10, y: 5 using an array of numbers:</span></h4>
@@ -152,8 +158,11 @@ path.fillColor = 'red';</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:<span class="description">Creating a point using an object literal with length and angle properties:</span></h4>
@@ -222,8 +231,11 @@ path.fillColor = 'red';</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:<span class="description">Creating a point using a size object.</span></h4>
@@ -268,8 +280,11 @@ console.log(point); // { x: 100, y: 50 }</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     
@@ -314,8 +329,11 @@ console.log(point); // { x: 100, y: 50 }</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the point and the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -351,8 +369,11 @@ console.log(result); // {x: 25, y: 30}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -399,8 +420,11 @@ console.log(result); // {x: 15, y: 30}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the point and the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -436,8 +460,11 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -484,8 +511,11 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the point and the value as a new  point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -521,8 +551,11 @@ console.log(result); // {x: 20, y: 40}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -569,8 +602,11 @@ console.log(result); // {x: 20, y: 20}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the point and the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -606,8 +642,11 @@ console.log(result); // {x: 5, y: 10}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -654,8 +693,11 @@ console.log(result); // {x: 4, y: 2}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the point by the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -690,8 +732,11 @@ console.log(point % 5); // {x: 2, y: 1}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the points by each other as a new point
 </li>
+
 		
 	</ul>
+
+
 
 		
 		<h4>Example:</h4>
@@ -960,6 +1005,25 @@ path.position.selected = true;
 		<h2>Methods</h2>
 		
 	
+<div id="set" class="member">
+<div class="member-link">
+<a name="set" href="#set"><tt><b>set</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Sets the point to the passed values. Note that any sequence of parameters that is supported by the various <a href="/reference/point"><tt>Point</tt></a>() constructors also work for calls of <code>set()</code>.</p>
+    
+	
+	
+
+
+	
+	
+</div>
+</div>
+</div>
+
+	
 <div id="equals-point" class="member">
 <div class="member-link">
 <a name="equals-point" href="#equals-point"><tt><b>equals</b>(point)</tt></a>
@@ -988,8 +1052,11 @@ path.position.selected = true;
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the points are equal, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1021,8 +1088,11 @@ console.log(point != new Point(1, 1)); // true</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the cloned point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1056,8 +1126,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1094,8 +1167,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the angle in degrees
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1132,8 +1208,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the angle in radians
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1171,8 +1250,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the angle between the two vectors
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1216,8 +1298,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Number</tt></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1254,8 +1339,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normalized vector of the vector that is represented  by this point&rsquo;s coordinates
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1300,8 +1388,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the rotated point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1338,8 +1429,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1378,8 +1472,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the point is inside the rectangle, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1423,8 +1520,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if it is within the given distance, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1461,8 +1561,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it is collinear, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1499,8 +1602,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> it is orthogonal, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1525,8 +1631,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if both x and y are 0, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1551,10 +1660,61 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if either x or y are not a number, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
 
+
+
 	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="isinquadrant-quadrant" class="member">
+<div class="member-link">
+<a name="isinquadrant-quadrant" href="#isinquadrant-quadrant"><tt><b>isInQuadrant</b>(quadrant)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if the vector is within the specified quadrant. Note that if the vector lies on the boundary between two quadrants, <code>true</code> will be returned for both quadrants.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>quadrant:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the quadrant to check against
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if either x or y are not a number, <tt>false</tt> otherwise
+</li>
+
+		
+	</ul>
+
+
+
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><tt>#getQuadrant</tt>()</tt></li>
+		
+	</ul>
+
 	
 </div>
 </div>
@@ -1591,8 +1751,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the dot product of the two points
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1629,8 +1792,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the cross product of the two points
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1667,8 +1833,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the projection of the point onto another point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1695,8 +1864,11 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1727,8 +1899,11 @@ console.log(roundPoint); // {x: 10, y: 11}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1759,8 +1934,11 @@ console.log(ceilPoint); // {x: 11, y: 11}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1791,8 +1969,11 @@ console.log(floorPoint); // {x: 10, y: 10}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1840,8 +2021,11 @@ console.log(absPoint); // {x: 5, y: 10}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the point and the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1884,8 +2068,11 @@ console.log(result); // {x: 25, y: 30}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the addition of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1932,8 +2119,11 @@ console.log(result); // {x: 15, y: 30}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the point and the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -1976,8 +2166,11 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the subtraction of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2024,8 +2217,11 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the point and the value as a new  point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2068,8 +2264,11 @@ console.log(result); // {x: 20, y: 40}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the multiplication of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2116,8 +2315,11 @@ console.log(result); // {x: 20, y: 20}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the point and the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2160,8 +2362,11 @@ console.log(result); // {x: 5, y: 10}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the division of the two points as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2208,8 +2413,11 @@ console.log(result); // {x: 4, y: 2}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the point by the value as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2251,8 +2459,11 @@ console.log(point % 5); // {x: 2, y: 1}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the integer remainders of dividing the points by each other as a new point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2310,8 +2521,11 @@ console.log(point % new Point(5, 2)); // {x: 2, y: 0}</code></pre>
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created point object
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2370,8 +2584,11 @@ var point3 = new Point(250, 35);
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created point object
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>
@@ -2411,8 +2628,11 @@ var point3 = new Point(250, 35);
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created point object
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:</h4>

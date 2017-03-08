@@ -1,7 +1,7 @@
 <div class="reference-class">
 
 
-<p>An affine transform performs a linear mapping from 2D coordinates to other 2D coordinates that preserves the &ldquo;straightness&rdquo; and &ldquo;parallelness&rdquo; of lines.</p>
+<p>An affine transformation matrix performs a linear mapping from 2D  coordinates to other 2D coordinates that preserves the &ldquo;straightness&rdquo; and  &ldquo;parallelness&rdquo; of lines.</p>
 <p>Such a coordinate transformation can be represented by a 3 row by 3 column matrix with an implied last row of <code>[ 0 0 1 ]</code>. This matrix transforms source coordinates <code>(x, y)</code> into destination coordinates <code>(x&#39;,y&#39;)</code> by considering them to be a column vector and multiplying the coordinate vector by the matrix according to the following process:</p>
 <pre><code>[ x ]   [ a  c  tx ] [ x ]   [ a * x + c * y + tx ]
 [ y ] = [ b  d  ty ] [ y ] = [ b * x + d * y + ty ]
@@ -17,13 +17,42 @@
 	<h2>Constructors</h2>
 	
 		
+<div id="matrix" class="member">
+<div class="member-link">
+<a name="matrix" href="#matrix"><tt><b>Matrix</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+    <p>Creates a 2D affine transformation matrix that describes the identity transformation.</p>
+    
+    
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>
+</li>
+
+		
+	</ul>
+
+
+
+    
+    
+</div>
+</div>
+</div>
+	
+		
 <div id="matrix-a-c-b-d-tx-ty" class="member">
 <div class="member-link">
 <a name="matrix-a-c-b-d-tx-ty" href="#matrix-a-c-b-d-tx-ty"><tt><b>Matrix</b>(a, c, b, d, tx, ty)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-    <p>Creates a 2D affine transform.</p>
+    <p>Creates a 2D affine transformation matrix.</p>
     
     
 <ul class="member-list">
@@ -80,8 +109,93 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
+
+    
+    
+</div>
+</div>
+</div>
+	
+		
+<div id="matrix-values" class="member">
+<div class="member-link">
+<a name="matrix-values" href="#matrix-values"><tt><b>Matrix</b>(values)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+    <p>Creates a 2D affine transformation matrix.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>values:</tt> 
+Array of <tt>Number</tt>s
+&mdash;&nbsp;the matrix values to initialize this matrix with
+
+</li>
+	
+</ul>
+
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>
+</li>
+
+		
+	</ul>
+
+
+
+    
+    
+</div>
+</div>
+</div>
+	
+		
+<div id="matrix-matrix" class="member">
+<div class="member-link">
+<a name="matrix-matrix" href="#matrix-matrix"><tt><b>Matrix</b>(matrix)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+    <p>Creates a 2D affine transformation matrix.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>matrix:</tt> 
+<a href="/reference/matrix"><tt>Matrix</tt></a>
+&mdash;&nbsp;the matrix to copy the values from
+
+</li>
+	
+</ul>
+
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>
+</li>
+
+		
+	</ul>
+
+
 
     
     
@@ -98,36 +212,6 @@
 <!-- ================================ properties =========================== -->
 	<div class="reference-members">
 		<h2>Properties</h2>
-		
-			
-<div id="concatenate" class="member">
-<div class="member-link">
-<a name="concatenate" href="#concatenate"><tt><b>concatenate</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-</div>
-</div>
-		
-			
-<div id="preconcatenate" class="member">
-<div class="member-link">
-<a name="preconcatenate" href="#preconcatenate"><tt><b>preConcatenate</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-</div>
-</div>
-		
-			
-<div id="chain" class="member">
-<div class="member-link">
-<a name="chain" href="#chain"><tt><b>chain</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-</div>
-</div>
 		
 			
 <div id="a" class="member">
@@ -293,7 +377,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The transform values as an array, in the same sequence as they are passed to <a href="/reference/matrix#initialize-a-b-c-d-tx-ty"><tt>initialize(a, b, c, d, tx, ty)</tt></a>.</p>
+	<p>The matrix values as an array, in the same sequence as they are passed to <a href="/reference/matrix#initialize-a-b-c-d-tx-ty"><tt>initialize(a, b, c, d, tx, ty)</tt></a>.</p>
 	
 		<p>Read only.</p>
 	
@@ -302,7 +386,7 @@
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<tt>Number</tt>
+			Array of <tt>Number</tt>s
 		</li>
 	</ul>
     
@@ -422,71 +506,17 @@
 		<h2>Methods</h2>
 		
 	
-<div id="set-a-b-c-d-tx-ty" class="member">
+<div id="set" class="member">
 <div class="member-link">
-<a name="set-a-b-c-d-tx-ty" href="#set-a-b-c-d-tx-ty"><tt><b>set</b>(a, b, c, d, tx, ty)</tt></a>
+<a name="set" href="#set"><tt><b>set</b>()</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Sets this transform to the matrix specified by the 6 values.</p>
+	<p>Sets the matrix to the passed values. Note that any sequence of parameters that is supported by the various <a href="/reference/matrix"><tt>Matrix</tt></a>() constructors also work for calls of <code>set()</code>.</p>
     
 	
-<ul class="member-list">
-	<h4>Parameters:</h4>
 	
-	<li>
-<tt>a:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the a property of the transform
 
-</li>
-	
-	<li>
-<tt>b:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the b property of the transform
-
-</li>
-	
-	<li>
-<tt>c:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the c property of the transform
-
-</li>
-	
-	<li>
-<tt>d:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the d property of the transform
-
-</li>
-	
-	<li>
-<tt>tx:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the tx property of the transform
-
-</li>
-	
-	<li>
-<tt>ty:</tt> 
-<tt>Number</tt>
-&mdash;&nbsp;the ty property of the transform
-
-</li>
-	
-</ul>
-
-	
-	<ul class="member-list">
-		<h4>Returns:</h4>
-		
-			<li>
-<tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
-</li>
-		
-	</ul>
 
 	
 	
@@ -511,8 +541,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;a copy of this transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -549,8 +582,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the matrices are equal, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -575,8 +611,11 @@
 			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of this transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -595,6 +634,8 @@
     
 	
 	
+
+
 	
 	
 </div>
@@ -630,8 +671,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the matrix was applied, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -646,7 +690,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a translate transformation.</p>
+	<p>Concatenates this matrix with a translate transformation.</p>
     
 	
 <ul class="member-list">
@@ -668,8 +712,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -684,7 +731,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a translate transformation.</p>
+	<p>Concatenates this matrix with a translate transformation.</p>
     
 	
 <ul class="member-list">
@@ -713,8 +760,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -729,7 +779,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a scaling transformation.</p>
+	<p>Concatenates this matrix with a scaling transformation.</p>
     
 	
 <ul class="member-list">
@@ -758,8 +808,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -774,7 +827,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a scaling transformation.</p>
+	<p>Concatenates this matrix with a scaling transformation.</p>
     
 	
 <ul class="member-list">
@@ -810,8 +863,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -826,7 +882,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a rotation transformation around an anchor point.</p>
+	<p>Concatenates this matrix with a rotation transformation around an anchor point.</p>
     
 	
 <ul class="member-list">
@@ -855,8 +911,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -871,7 +930,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a rotation transformation around an anchor point.</p>
+	<p>Concatenates this matrix with a rotation transformation around an anchor point.</p>
     
 	
 <ul class="member-list">
@@ -907,8 +966,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -923,7 +985,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a shear transformation.</p>
+	<p>Concatenates this matrix with a shear transformation.</p>
     
 	
 <ul class="member-list">
@@ -952,8 +1014,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -968,7 +1033,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a shear transformation.</p>
+	<p>Concatenates this matrix with a shear transformation.</p>
     
 	
 <ul class="member-list">
@@ -1004,8 +1069,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1020,7 +1088,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a skew transformation.</p>
+	<p>Concatenates this matrix with a skew transformation.</p>
     
 	
 <ul class="member-list">
@@ -1049,8 +1117,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1065,7 +1136,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Concatenates this transform with a skew transformation.</p>
+	<p>Concatenates this matrix with a skew transformation.</p>
     
 	
 <ul class="member-list">
@@ -1101,8 +1172,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this affine transform
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1139,8 +1213,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this matrix, modified
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1177,8 +1254,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this matrix, modified
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1215,8 +1295,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created matrix
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1253,8 +1336,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created matrix
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1279,8 +1365,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this matrix, or <code>null</code>, if the matrix is singular.
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1305,8 +1394,11 @@
 			<li>
 <tt><a href="/reference/matrix"><tt>Matrix</tt></a></tt>&nbsp;&mdash;&nbsp;this matrix, or <code>null</code>, if the matrix is singular.
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1329,10 +1421,13 @@
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;whether this transform is the identity transform
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;whether this matrix is the identity matrix
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1347,7 +1442,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns whether the transform is invertible. A transform is not invertible if the determinant is 0 or any value is non-finite or NaN.</p>
+	<p>Checks whether the matrix is invertible. A matrix is not invertible if the determinant is 0 or any value is infinite or NaN.</p>
     
 	
 	
@@ -1355,10 +1450,13 @@
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;whether the transform is invertible
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;whether the matrix is invertible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1383,8 +1481,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;whether the matrix is singular
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1421,8 +1522,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the transformed point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1445,14 +1549,14 @@
 	
 	<li>
 <tt>src:</tt> 
-<tt>Number</tt>
+Array of <tt>Number</tt>s
 &mdash;&nbsp;the array containing the source points as x, y value pairs
 
 </li>
 	
 	<li>
 <tt>dst:</tt> 
-<tt>Number</tt>
+Array of <tt>Number</tt>s
 &mdash;&nbsp;the array into which to store the transformed point pairs
 
 </li>
@@ -1471,10 +1575,13 @@
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the dst array, containing the transformed coordinates
+<tt>Array of <tt>Number</tt>s</tt>&nbsp;&mdash;&nbsp;the dst array, containing the transformed coordinates
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1505,6 +1612,8 @@
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -1528,8 +1637,11 @@
 			<li>
 <tt><tt>Object</tt></tt>&nbsp;&mdash;&nbsp;the decomposed matrix, or <code>null</code> if decomposition is not  possible
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1560,6 +1672,8 @@
 </ul>
 
 	
+
+
 	
 	
 </div>

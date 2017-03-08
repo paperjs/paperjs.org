@@ -46,8 +46,11 @@
 			<li>
 <tt><a href="/reference/curve"><tt>Curve</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     
@@ -105,8 +108,11 @@
 			<li>
 <tt><a href="/reference/curve"><tt>Curve</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     
@@ -440,7 +446,7 @@
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<tt>Number</tt>
+			Array of <tt>Number</tt>s
 		</li>
 	</ul>
     
@@ -616,26 +622,6 @@
 </div>
 </div>
 		
-			
-<div id="getparameterat" class="member">
-<div class="member-link">
-<a name="getparameterat" href="#getparameterat"><tt><b>getParameterAt</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-</div>
-</div>
-		
-			
-<div id="getparameterof" class="member">
-<div class="member-link">
-<a name="getparameterof" href="#getparameterof"><tt><b>getParameterOf</b></tt></a>
-</div>
-<div class="member-description hidden">
-
-</div>
-</div>
-		
 	</div>
 
 
@@ -663,8 +649,11 @@
 			<li>
 <tt><a href="/reference/curve"><tt>Curve</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -689,8 +678,43 @@
 			<li>
 <tt><tt>String</tt></tt>&nbsp;&mdash;&nbsp;a string representation of the curve
 </li>
+
 		
 	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="classify" class="member">
+<div class="member-link">
+<a name="classify" href="#classify"><tt><b>classify</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Determines the type of cubic Bézier curve via discriminant classification, as well as the curve-time parameters of the associated points of inflection, loops, cusps, etc.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Object</tt></tt>&nbsp;&mdash;&nbsp;the curve classification information as an object, see  options
+</li>
+
+		
+	</ul>
+
+<ul class="member-list">
+<li><tt>info.type: <tt>String</tt></tt> &mdash; the type of Bézier curve, possible values are:  <tt>&lsquo;line&rsquo;</tt>, <tt>&lsquo;quadratic&rsquo;</tt>, <tt>&lsquo;serpentine&rsquo;</tt>, <tt>&lsquo;cusp&rsquo;</tt>, <tt>&lsquo;loop&rsquo;</tt>, <tt>&lsquo;arch&rsquo;</tt></li>
+<li><tt>info.roots: Array of <tt>Number</tt>s</tt> &mdash; the curve-time parameters of the  associated points of inflection for serpentine curves, loops, cusps,  etc</li>
+</ul>
 
 	
 	
@@ -715,8 +739,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve was removed, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -741,8 +768,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if this is the first curve, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -767,8 +797,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if this is the last curve, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -812,46 +845,11 @@
 			<li>
 <tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the newly create sub-curve
 </li>
+
 		
 	</ul>
 
-	
-	
-</div>
-</div>
-</div>
 
-	
-<div id="getintersections-curve" class="member">
-<div class="member-link">
-<a name="getintersections-curve" href="#getintersections-curve"><tt><b>getIntersections</b>(curve)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	<p>Returns all intersections between two <a href="/reference/curve"><tt>Curve</tt></a> objects as an array of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects.</p>
-    
-	
-<ul class="member-list">
-	<h4>Parameters:</h4>
-	
-	<li>
-<tt>curve:</tt> 
-<a href="/reference/curve"><tt>Curve</tt></a>
-&mdash;&nbsp;the other curve to find the intersections with (if  the curve itself or <code>null</code> is passed, the self intersection of the  curve is returned, if it exists)
-
-</li>
-	
-</ul>
-
-	
-	<ul class="member-list">
-		<h4>Returns:</h4>
-		
-			<li>
-<tt>Array of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the locations of all intersections between the  curves
-</li>
-		
-	</ul>
 
 	
 	
@@ -866,7 +864,7 @@
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Divides the curve into two curves at the given offset. The curve itself is modified and becomes the first part, the second part is returned as a new curve. If the modified curve belongs to a path item, the second part is also added to the path.</p>
+	<p>Divides the curve into two curves at the given offset or location. The curve itself is modified and becomes the first part, the second part is returned as a new curve. If the curve belongs to a path item, a new segment is inserted into the path at the given location, and the second part becomes a part of the path as well.</p>
     
 	
 <ul class="member-list">
@@ -886,10 +884,13 @@
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the second part of the divided curve, if the offset is  within the valid range, {code null} otherwise.
+<tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the second part of the divided curve if the location is  valid, {code null} otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -933,8 +934,11 @@
 			<li>
 <tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;the second part of the divided curve, if the offset is  within the valid range, {code null} otherwise.
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -978,8 +982,11 @@
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path after splitting, if any
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -1023,8 +1030,11 @@
 			<li>
 <tt><a href="/reference/path"><tt>Path</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created path after splitting, if any
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -1034,78 +1044,6 @@
 		
 	</ul>
 
-	
-</div>
-</div>
-</div>
-
-	
-<div id="divide-offset-isTime" class="member">
-<div class="member-link">
-<a name="divide-offset-isTime" href="#divide-offset-isTime"><tt><b>divide</b>(offset, isTime)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	
-    
-	
-<ul class="member-list">
-	<h4>Parameters:</h4>
-	
-	<li>
-<tt>offset:</tt> 
-
-
-
-</li>
-	
-	<li>
-<tt>isTime:</tt> 
-
-
-
-</li>
-	
-</ul>
-
-	
-	
-	
-</div>
-</div>
-</div>
-
-	
-<div id="split-offset-isTime" class="member">
-<div class="member-link">
-<a name="split-offset-isTime" href="#split-offset-isTime"><tt><b>split</b>(offset, isTime)</tt></a>
-</div>
-<div class="member-description hidden">
-<div class="member-text">
-	
-    
-	
-<ul class="member-list">
-	<h4>Parameters:</h4>
-	
-	<li>
-<tt>offset:</tt> 
-
-
-
-</li>
-	
-	<li>
-<tt>isTime:</tt> 
-
-
-
-</li>
-	
-</ul>
-
-	
-	
 	
 </div>
 </div>
@@ -1128,8 +1066,11 @@
 			<li>
 <tt><a href="/reference/curve"><tt>Curve</tt></a></tt>&nbsp;&mdash;&nbsp;a reversed version of the curve
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1148,6 +1089,8 @@
     
 	
 	
+
+
 	
 	
 </div>
@@ -1173,8 +1116,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve has handles set, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<ul class="member-list">
@@ -1190,6 +1136,47 @@
 		
 	</ul>
 
+	
+</div>
+</div>
+</div>
+
+	
+<div id="haslength" class="member">
+<div class="member-link">
+<a name="haslength" href="#haslength"><tt><b>hasLength</b>([epsilon])</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks if this curve has any length.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>epsilon:</tt> 
+<tt>Number</tt>
+&mdash;&nbsp;the epsilon against which to compare the  curve&rsquo;s length
+&mdash;&nbsp;optional, default: <tt>0</tt>
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve is longer than the given epsilon, <tt>false</tt> otherwise
+</li>
+
+		
+	</ul>
+
+
+
+	
 	
 </div>
 </div>
@@ -1212,8 +1199,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve is straight, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1238,8 +1228,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the curve is parametrically linear, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1276,8 +1269,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the two lines are collinear, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1302,8 +1298,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the line is horizontal, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1328,8 +1327,11 @@
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the line is vertical, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1368,8 +1370,11 @@
 			<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location at the specified the offset
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1406,8 +1411,11 @@
 			<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location at the specified the location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1451,8 +1459,11 @@
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve-time parameter at the specified location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1489,8 +1500,11 @@
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve offset at the specified the location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1527,8 +1541,11 @@
 			<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the curve location of the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1565,8 +1582,11 @@
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the length of the path up to the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1603,8 +1623,11 @@
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curve-time parameter of the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1641,8 +1664,11 @@
 			<li>
 <tt><a href="/reference/curvelocation"><tt>CurveLocation</tt></a></tt>&nbsp;&mdash;&nbsp;the location on the curve that&rsquo;s the closest to the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1679,8 +1705,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the curve that&rsquo;s the closest to the specified point
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1717,8 +1746,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1755,8 +1787,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normalized tangent of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1793,8 +1828,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normal of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1831,8 +1869,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted tangent of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1869,8 +1910,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted normal of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1907,8 +1951,11 @@
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curvature of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1945,8 +1992,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point on the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1983,8 +2033,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normalized tangent of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2021,8 +2074,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the normal of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2059,8 +2115,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted tangent of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2097,8 +2156,11 @@
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the weighted normal of the curve at the given location
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -2135,60 +2197,63 @@
 			<li>
 <tt><tt>Number</tt></tt>&nbsp;&mdash;&nbsp;the curvature of the curve at the given location
 </li>
+
 		
 	</ul>
 
+
+
 	
 	
 </div>
 </div>
 </div>
 
-
-		
-	</div>
-
-
-	<div class="reference-members">
-		<h2>Static Methods</h2>
-		
-			
-<div id="getoverlaps-v1-v2" class="member">
+	
+<div id="getintersections-curve" class="member">
 <div class="member-link">
-<a name="getoverlaps-v1-v2" href="#getoverlaps-v1-v2"><tt><b>Curve.getOverlaps</b>(v1, v2)</tt></a>
+<a name="getintersections-curve" href="#getintersections-curve"><tt><b>getIntersections</b>(curve)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Code to detect overlaps of intersecting based on work by</p>
+	<p>Returns all intersections between two <a href="/reference/curve"><tt>Curve</tt></a> objects as an array of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects.</p>
     
 	
 <ul class="member-list">
 	<h4>Parameters:</h4>
 	
 	<li>
-<tt>v1:</tt> 
-
-
-
-</li>
-	
-	<li>
-<tt>v2:</tt> 
-
-
+<tt>curve:</tt> 
+<a href="/reference/curve"><tt>Curve</tt></a>
+&mdash;&nbsp;the other curve to find the intersections with  (if the curve itself or <code>null</code> is passed, the self intersection  of the curve is returned, if it exists)
 
 </li>
 	
 </ul>
 
 	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt>Array of <a href="/reference/curvelocation"><tt>CurveLocation</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the locations of all intersections between  the curves
+</li>
+
+		
+	</ul>
+
+
+
 	
 	
 </div>
 </div>
 </div>
+
+
 		
 	</div>
+
 
 
 

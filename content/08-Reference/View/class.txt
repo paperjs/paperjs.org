@@ -239,7 +239,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The zoom factor by which the project coordinates are magnified.</p>
+	<p>The view&rsquo;s zoom factor by which the project coordinates are magnified.</p>
 	
 	
 	
@@ -251,6 +251,72 @@
 	</ul>
     
 	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><tt>#getScaling</tt>()</tt></li>
+		
+	</ul>
+
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="rotation" class="member">
+<div class="member-link">
+<a name="rotation" href="#rotation"><tt><b>rotation</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The current rotation angle of the view, as described by its <a href="/reference/view#matrix"><tt>matrix</tt></a>.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="scaling" class="member">
+<div class="member-link">
+<a name="scaling" href="#scaling"><tt><b>scaling</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The current scale factor of the view, as described by its <a href="/reference/view#matrix"><tt>matrix</tt></a>.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<a href="/reference/point"><tt>Point</tt></a>
+		</li>
+	</ul>
+    
+	
+	<ul class="member-list">
+		<h4>See also:</h4>
+		
+			<li><tt><tt>#getZoom</tt>()</tt></li>
+		
+	</ul>
+
 	
 </div>
 
@@ -667,6 +733,8 @@ view.onResize = function(event) {
     
 	
 	
+
+
 	
 	
 </div>
@@ -690,8 +758,11 @@ view.onResize = function(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the view was updated, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -710,6 +781,8 @@ view.onResize = function(event) {
     
 	
 	
+
+
 	
 	
 </div>
@@ -727,6 +800,8 @@ view.onResize = function(event) {
     
 	
 	
+
+
 	
 	
 </div>
@@ -744,6 +819,8 @@ view.onResize = function(event) {
     
 	
 	
+
+
 	
 	
 </div>
@@ -767,8 +844,11 @@ view.onResize = function(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the view is visible, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -793,8 +873,11 @@ view.onResize = function(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the view is inserted, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -827,6 +910,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -864,6 +949,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -907,6 +994,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -950,6 +1039,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -986,6 +1077,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -1036,6 +1129,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -1079,6 +1174,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -1129,6 +1226,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	<ul class="member-list">
 		<h4>See also:</h4>
@@ -1165,6 +1264,8 @@ view.onResize = function(event) {
 </ul>
 
 	
+
+
 	
 	
 </div>
@@ -1200,8 +1301,11 @@ view.onResize = function(event) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point converted into view coordinates
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1238,8 +1342,11 @@ view.onResize = function(event) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the point converted into project coordinates
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1276,8 +1383,11 @@ view.onResize = function(event) {
 			<li>
 <tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the event point in project coordinates.
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1323,8 +1433,11 @@ view.onResize = function(event) {
 			<li>
 <tt><a href="/reference/view"><tt>View</tt></a></tt>&nbsp;&mdash;&nbsp;this view itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Create a rectangle shaped path with its top left point at: {x: 50, y: 25} and a size of {width: 50, height: 50}</span></h4>
@@ -1383,8 +1496,11 @@ view.on('frame', frameHandler);
 			<li>
 <tt><a href="/reference/view"><tt>View</tt></a></tt>&nbsp;&mdash;&nbsp;this view itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Create a rectangle shaped path with its top left point at: {x: 50, y: 25} and a size of {width: 50, height: 50}</span></h4>
@@ -1452,8 +1568,11 @@ view.on({
 			<li>
 <tt><a href="/reference/view"><tt>View</tt></a></tt>&nbsp;&mdash;&nbsp;this view itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	<h4>Example:<span class="description">Create a rectangle shaped path with its top left point at: {x: 50, y: 25} and a size of {width: 50, height: 50}</span></h4>
@@ -1520,8 +1639,11 @@ function onMouseDown(event) {
 			<li>
 <tt><a href="/reference/view"><tt>View</tt></a></tt>&nbsp;&mdash;&nbsp;this view itself, so calls can be chained
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1565,8 +1687,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the event had listeners, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -1603,8 +1728,11 @@ function onMouseDown(event) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the view has one or more event handlers of the specified type, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	

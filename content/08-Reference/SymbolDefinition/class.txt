@@ -45,8 +45,11 @@
 			<li>
 <tt><a href="/reference/symboldefinition"><tt>SymbolDefinition</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
     
     <h4>Example:<span class="description">Placing 100 instances of a symbol:</span></h4>
@@ -194,8 +197,11 @@ for (var i = 0; i < 100; i++) {
 			<li>
 <tt><a href="/reference/symbolitem"><tt>SymbolItem</tt></a></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -220,8 +226,11 @@ for (var i = 0; i < 100; i++) {
 			<li>
 <tt><tt>Symbol</tt></tt>
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
@@ -258,8 +267,11 @@ for (var i = 0; i < 100; i++) {
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if they are equal, <tt>false</tt> otherwise
 </li>
+
 		
 	</ul>
+
+
 
 	
 	
