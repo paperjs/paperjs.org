@@ -1,4 +1,4 @@
-Paper.js offers different approaches for its integration in the browser. The simplest way is to use PaperScript, our extension of JavaScript that facilitates a few things along the way. For more advances users or bigger projects it might be preferable to work directly with JavaScript, as described in the tutorial about <page "/tutorials/getting-started/using-javascript-directly/" />.
+Paper.js offers different approaches for its integration in the browser. The simplest way is to use PaperScript, our extension of JavaScript that facilitates a few things along the way. For more advanced users or bigger projects it might be preferable to work directly with JavaScript, as described in the tutorial about <page "/tutorials/getting-started/using-javascript-directly/" />.
 
 <title>What is PaperScript?</title>
 
@@ -38,7 +38,7 @@ PaperScript code is loaded just like any other JavaScript using the <code>\<scri
 </html>
 </code>
 
-If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead. 
+If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewrite the above example to load the external file instead.
 
 <code mode="text/html">
 <!DOCTYPE html>
