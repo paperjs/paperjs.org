@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+- 7
+sudo: false
+env:
+  global:
+  - secure: tI71yEPHbeBgBBAyE14i9rashGbaidv8UdiRV74tomcLs3q1nQSje51lVYpkHItoTG0S0Npsm+HqTUz4ax1geRi7u8UaaXP4iLP2aNHFjUmCs66xu+LEqNdTyuDcxLNDUn6Yo2KRMSwIwpGYsXejuRDUkkpYUUnGTx1dqIEdq71jZa9c77XRJZphH55k02lcnWDmO1JnMn6PG9o0Lf0GyMeKOLTrM5YpGp5OVn9Y5KFWfL+clKGA0jgzQdy4jQkiBf5CDy4Y91DgWnkQ8l3TpAaKYt7fbavm86Q3DaAIsPtDLsOiwP9jJCIMWepdeG6paPHd4vxqDBEFXxqseubw6CNKR+uZgKolRX+SA7UVyV4P+ro9CtU61lu0llw5Xd4xi+0xx1ntP5+8rO1ND92Yb99d/W57/r8FuhvWsaHWUX86HPifJmRQI3BV3U8QNx9vWv8K8ZSKknz8FL/782wpJt0lniEenNsebiLpqTbup5CgpHLZVVSA9nP4pzshg2EgsTLkzLzCCyDizu9TlfQrMeq+JXLKNGJV4zx5T5ELkR7ZWwndzc0Qt3U0Ty0rPwWIZh1cv7I2uw0qUIDF5MHCa3dUSnF93ez1RMmxOqjkaSxfrpOd283f1LjCdP4oY9agT6/MY7yCX2lIPjJtDY0rHglW/IEN93jAfCuYC3stIMg=
+addons:
+  apt:
+    packages:
+    - imagemagick
+    - graphicsmagick
+cache:
+  directories:
+  - "~/.nvm"
+  - node_modules
+  - "~/build/paperjs/paper.js"
+  - "~/build/paperjs/paperjs.github.io"
+before_install:
+- travis/setup-git.sh
+install:
+- travis/install-git.sh
+before_script:
+- npm set progress=false
+- npm install
+script:
+- npm run build
+- '[ "${TRAVIS_BRANCH}" = "master" ] && travis/deploy.sh'
