@@ -3266,8 +3266,9 @@ function onMouseDown(event) {
 <li><tt>options.curves: <tt>Boolean</tt></tt> &mdash; hit-test the curves of path items,  without taking the stroke color or width into account</li>
 <li><tt>options.handles: <tt>Boolean</tt></tt> &mdash; hit-test for the handles (<a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a> / <a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a>) of path segments.</li>
 <li><tt>options.ends: <tt>Boolean</tt></tt> &mdash; only hit-test for the first or last  segment points of open path items</li>
-<li><tt>options.bounds: <tt>Boolean</tt></tt> &mdash; hit-test the corners and side-centers of  the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>)</li>
+<li><tt>options.position: <tt>Boolean</tt></tt> &mdash; hit-test the <a href="/reference/item#position"><tt>item.position</tt></a> of  of items, which depends on the setting of <a href="/reference/item#pivot"><tt>item.pivot</tt></a></li>
 <li><tt>options.center: <tt>Boolean</tt></tt> &mdash; hit-test the <a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of  the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>)</li>
+<li><tt>options.bounds: <tt>Boolean</tt></tt> &mdash; hit-test the corners and side-centers of  the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>)</li>
 <li><tt>options.guides: <tt>Boolean</tt></tt> &mdash; hit-test items that have <tt>Item#guide</tt> set to <code>true</code></li>
 <li><tt>options.selected: <tt>Boolean</tt></tt> &mdash; only hit selected items</li>
 </ul>
@@ -3664,6 +3665,8 @@ function onMouseDown(event) {
 	<p>Exports the item with its content and child items as an SVG DOM.</p>
     <ul class="member-list">
 <h4>Options:</h4>
+<li><tt>options.bounds: <tt>String</tt>⟋<a href="/reference/rectangle"><tt>Rectangle</tt></a></tt> &mdash; the bounds of the area  to export, either as a string (<tt>&lsquo;view&rsquo;</tt>, <tt>content&rsquo;</tt>), or a  <a href="/reference/rectangle"><tt>Rectangle</tt></a> object: <code>&#39;view&#39;</code> uses the view bounds,  <code>&#39;content&#39;</code> uses the stroke bounds of all content &mdash;&nbsp;default: <tt>&lsquo;view&rsquo;</tt></li>
+<li><tt>options.matrix: <a href="/reference/matrix"><tt>Matrix</tt></a></tt> &mdash; the matrix with which  to transform the exported content: If <code>options.bounds</code> is set to  <code>&#39;view&#39;</code>, <code>paper.view.matrix</code> is used, for all other settings of  <code>options.bounds</code> the identity matrix is used. &mdash;&nbsp;default: <tt>paper.view.matrix</tt></li>
 <li><tt>options.asString: <tt>Boolean</tt></tt> &mdash; whether a SVG node or a  <code>String</code> is to be returned &mdash;&nbsp;default: <tt>false</tt></li>
 <li><tt>options.precision: <tt>Number</tt></tt> &mdash; the amount of fractional digits in  numbers used in SVG data &mdash;&nbsp;default: <tt>5</tt></li>
 <li><tt>options.matchShapes: <tt>Boolean</tt></tt> &mdash; whether path items should  tried to be converted to SVG shape items (rect, circle, ellipse,  line, polyline, polygon), if their geometries match &mdash;&nbsp;default: <tt>false</tt></li>
@@ -4249,13 +4252,54 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
+<div id="addto-owner" class="member">
+<div class="member-link">
+<a name="addto-owner" href="#addto-owner"><tt><b>addTo</b>(owner)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Adds it to the specified owner, which can be either a <a href="/reference/item"><tt>Item</tt></a> or a <a href="/reference/project"><tt>Project</tt></a>.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>owner:</tt> 
+<a href="/reference/project"><tt>Project</tt></a>⟋<a href="/reference/layer"><tt>Layer</tt></a>⟋<a href="/reference/group"><tt>Group</tt></a>⟋<a href="/reference/compoundpath"><tt>CompoundPath</tt></a>
+&mdash;&nbsp;the item or project to add the item to
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the item itself, if it was successfully added
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+
+	
 <div id="copyto-owner" class="member">
 <div class="member-link">
 <a name="copyto-owner" href="#copyto-owner"><tt><b>copyTo</b>(owner)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>When passed a project, copies the item to the project, or duplicates it within the same project. When passed an item, copies the item into the specified item.</p>
+	<p>Clones the item and adds it to the specified owner, which can be either a <a href="/reference/item"><tt>Item</tt></a> or a <a href="/reference/project"><tt>Project</tt></a>.</p>
     
 	
 <ul class="member-list">
@@ -4275,7 +4319,7 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the new copy of the item
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the new copy of the item, if it was successfully added
 </li>
 
 		
