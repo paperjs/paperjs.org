@@ -10,10 +10,12 @@ function setup_git()
 		git fetch --all
 		git reset --hard origin/master
 		git clean -f -d
-		cd ..
 	else
 		git clone "https://github.com/paperjs/$1"
+		cd $1
+		git checkout master
 	fi
+	cd ..
 }
 
 cd $BASE_DIR
