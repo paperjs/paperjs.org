@@ -1,4 +1,4 @@
-var ent = require('ent');
+var he = require('he');
 
 var utils = {
 	urlize: function(string) {
@@ -10,12 +10,11 @@ var utils = {
 		return string.replace(new RegExp('^' + exp + '+|' + exp + '+$', 'g'), '');
 	},
 	unaccent: function(string) {
-		// Use encodeEntities instead of encode, so no <br /> are produced
-		string = ent.encode(string);
+		string = he.encode(string);
 		// Convert to html entities, replace them by the normal unnaccented chars and convert back
 		string = string.replace(/&(.)(?:uml);/gi, '$1e'); // replace ö with oe, ä with ae, etc.
 		string = string.replace(/&(.)(?:acute|grave|cedil|circ|ring|tilde);/gi, '$1'); // replace é with e, à with a, etc.
-		return ent.decode(string);
+		return he.decode(string);
 	}
 };
 

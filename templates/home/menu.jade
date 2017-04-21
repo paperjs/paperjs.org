@@ -7,6 +7,7 @@ ul
         a(href=entry.link || entry.url)= entry.title
         != template('menu', entry, param)
   li.spacer
+  != marks(root.menu)
   for line in marks(root.menu).split(/\r\n|\n|\r/mg)
     li
       != line

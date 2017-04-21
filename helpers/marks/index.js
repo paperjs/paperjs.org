@@ -1,6 +1,6 @@
 var path = require('path'),
 	fs = require('fs'),
-	ent = require('ent'),
+	he = require('he'),
 	marks = require('marks');
 
 // Register all tags contained in tags folder:
@@ -16,7 +16,7 @@ module.exports = {
 	marks: function(content, param) {
 		if (!content) return '';
 		if (!param) param = {};
-		param.encode = ent.encode;
+		param.encode = he.encode;
 		return marks.parse(content).render(param);
 	}
 };

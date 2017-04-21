@@ -1,6 +1,6 @@
 {
   "name": "paperjs.org",
-  "version": "0.11.0",
+  "version": "0.11.2",
   "description": "The source of the Paper.js website http://paperjs.org, translated to the static pages in https://github.com/paperjs/paperjs.github.io by running it through https://github.com/studiomoniker/woods",
   "license": "MIT",
   "homepage": "http://paperjs.org",
@@ -18,9 +18,9 @@
     "build": "woods . --export ../paperjs.github.io"
   },
   "dependencies": {
-    "ent": "^0.0.5",
+    "he": "^1.1.1",
     "marks": "^1.1.1",
     "paragraphs": "^1.0.0",
-    "woods": "^0.1.0"
+    "woods": "^0.1.2"
   }
 }
