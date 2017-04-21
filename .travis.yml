@@ -25,4 +25,4 @@ before_script:
 - npm install
 script:
 - npm run build
-- '[ "${TRAVIS_BRANCH}" = "master" ] && travis/deploy.sh'
+- '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_NODE_VERSION}" = "stable" ] && travis/deploy.sh || true'
