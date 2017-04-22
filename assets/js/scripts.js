@@ -25,9 +25,9 @@ function isVisible(el) {
 	var viewBottom = viewTop + $(window).height();
 	var top = el.offset().top;
 	var bottom = top + el.height();
-	return top >= viewTop && bottom <= viewBottom 
-			|| top <= viewTop && bottom >= viewTop 
-			|| top <= viewBottom && bottom >= viewBottom; 
+	return top > viewTop && bottom <= viewBottom 
+			|| top <= viewTop && bottom > viewTop 
+			|| top <= viewBottom && bottom > viewBottom; 
 }
 
 function smoothScrollTo(el, callback) {
@@ -148,7 +148,9 @@ behaviors.hash = function() {
 		if (target.length) {
 			if (target.hasClass('member'))
 				toggleMember(target);
-			smoothScrollTo(target);
+			setTimeout(function() {
+				smoothScrollTo(target);
+			}, 0);
 		}
 	}
 };
