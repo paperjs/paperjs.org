@@ -135,7 +135,7 @@ You can read more about animations in the tutorial <page "/tutorials/animation/c
 
 <title>Working with Tools</title>
 
-Just like with the view handlers, PaperScript simplifies and hides the dealing with <api Tool /> objects by making the tool handlers seem global and by creation a tool for us on the fly if any of these handlers are present: <api Tool#onMouseDown>onMouseDown</api>, <api Tool#onMouseUp>onMouseUp</api>, <api Tool#onMouseUp>onMouseDrag</api>, <api Tool#onMouseUp>onMouseMove</api>, etc.
+Just like with the view handlers, PaperScript simplifies and hides the dealing with <api Tool /> objects by making the tool handlers seem global and by creating a tool for us on the fly if any of these handlers are present: <api Tool#onMouseDown>onMouseDown</api>, <api Tool#onMouseUp>onMouseUp</api>, <api Tool#onMouseUp>onMouseDrag</api>, <api Tool#onMouseUp>onMouseMove</api>, etc.
 
 In JavaScript we need to create the tool ourselves, and we need to manually install handlers on it. The advantage of this approach is that things are more transparent, and the handling of multiple tools will be less of a surprise.
 
