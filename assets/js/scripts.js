@@ -432,7 +432,7 @@ function createPaperScript(element) {
 	}
 
 	if (hasResize) {
-		paper.view.on('resize', resize);
+		scope.view.on('resize', resize);
 		hasBorders = false;
 		source.css('border-width', '0 0 0 1px');
 	}
