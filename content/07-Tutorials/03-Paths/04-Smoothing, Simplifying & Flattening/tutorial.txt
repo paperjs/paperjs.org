@@ -109,7 +109,7 @@ The <api Path#simplify() /> function has an optional <code>tolerance</code> para
 
 <title>Flattening Paths</title>
 
-<api Path#flatten(error) /> converts the curves in a path to straight lines with a maximum specified error. The resulting lines are guaranteed to not be further waway than the amount specified by the <code>error</code> parameter.
+<api Path#flatten(error) /> converts the curves in a path to straight lines with a maximum specified error. The resulting lines are guaranteed to not be further away than the amount specified by the <code>error</code> parameter.
 
 In the following example, we create a circle shaped path and straighten it using <api Path#flatten(error)>path.flatten(20)</api>:
 
