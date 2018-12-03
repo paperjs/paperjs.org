@@ -1438,6 +1438,16 @@ function onMouseMove(event) {
     
 	
 	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/color"><tt>Color</tt></a></tt>
+</li>
+
+		
+	</ul>
+
 
 
 	
@@ -1453,7 +1463,7 @@ function onMouseMove(event) {
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Converts the color another type.</p>
+	<p>Converts the color to another type.</p>
     
 	
 <ul class="member-list">
@@ -2088,6 +2098,56 @@ console.log(result); // { red: 0, blue: 0, green: 1 }</code></pre>
 		
 	</div>
 
+
+	<div class="reference-members">
+		<h2>Static Methods</h2>
+		
+			
+<div id="random" class="member">
+<div class="member-link">
+<a name="random" href="#random"><tt><b>Color.random</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Creates a random color.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/color"><tt>Color</tt></a></tt>&nbsp;&mdash;&nbsp;the randomly created color
+</li>
+
+		
+	</ul>
+
+
+
+	
+	<h4>Example:</h4>
+
+<div class="paperscript split">
+
+<div class="buttons">
+<div class="button run">Run</div>
+</div>
+
+<script type="text/paperscript" canvas="canvas-17">
+var circle = new Path.Circle(view.center, 50);
+// Set a random color as circle fill color.
+circle.fillColor = Color.random();
+</script>
+<div class="canvas"><canvas width="516" height="100" id="canvas-17"></canvas></div>
+</div>
+
+
+</div>
+</div>
+</div>
+		
+	</div>
 
 
 

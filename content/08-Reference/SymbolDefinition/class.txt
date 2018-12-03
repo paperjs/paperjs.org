@@ -224,7 +224,7 @@ for (var i = 0; i < 100; i++) {
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><tt>Symbol</tt></tt>
+<tt><a href="/reference/symboldefinition"><tt>SymbolDefinition</tt></a></tt>
 </li>
 
 		
@@ -253,7 +253,7 @@ for (var i = 0; i < 100; i++) {
 	
 	<li>
 <tt>symbol:</tt> 
-<tt>Symbol</tt>
+<a href="/reference/symboldefinition"><tt>SymbolDefinition</tt></a>
 
 
 </li>

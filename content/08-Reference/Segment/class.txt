@@ -500,9 +500,9 @@ path.segments[2].selected = true;
 	<ul class="member-list">
 		<h4>See also:</h4>
 		
-			<li><tt><tt>Segment#getHandleIn</tt>()</tt></li>
+			<li><tt><a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a></tt></li>
 		
-			<li><tt><tt>Segment#getHandleOut</tt>()</tt></li>
+			<li><tt><a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a></tt></li>
 		
 			<li><tt><a href="/reference/curve#hashandles"><tt>curve.hasHandles</tt></a>()</tt></li>
 		
@@ -760,6 +760,35 @@ path.segments[2].selected = true;
 		
 			<li>
 <tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the segment was removed, <tt>false</tt> otherwise
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="clone" class="member">
+<div class="member-link">
+<a name="clone" href="#clone"><tt><b>clone</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/segment"><tt>Segment</tt></a></tt>
 </li>
 
 		
