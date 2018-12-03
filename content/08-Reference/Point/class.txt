@@ -1015,6 +1015,16 @@ path.position.selected = true;
     
 	
 	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>
+</li>
+
+		
+	</ul>
+
 
 
 	
@@ -1711,7 +1721,7 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 	<ul class="member-list">
 		<h4>See also:</h4>
 		
-			<li><tt><tt>#getQuadrant</tt>()</tt></li>
+			<li><tt><a href="/reference/point#quadrant"><tt>quadrant</tt></a></tt></li>
 		
 	</ul>
 

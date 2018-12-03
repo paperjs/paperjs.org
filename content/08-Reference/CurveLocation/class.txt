@@ -148,7 +148,7 @@
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<a href="/reference/item"><tt>Item</tt></a>
+			<a href="/reference/path"><tt>Path</tt></a>
 		</li>
 	</ul>
     
@@ -176,7 +176,7 @@
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<tt>Index</tt>
+			<tt>Number</tt>
 		</li>
 	</ul>
     
@@ -438,7 +438,7 @@
 		
 			<li><tt><a href="/reference/curve#getnearestlocation-point"><tt>curve.getNearestLocation(point)</tt></a></tt></li>
 		
-			<li><tt><tt>Path#getNearestLocation(point)</tt></tt></li>
+			<li><tt><a href="/reference/pathitem#getnearestlocation-point"><tt>pathItem.getNearestLocation(point)</tt></a></tt></li>
 		
 	</ul>
 
