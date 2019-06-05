@@ -1428,15 +1428,27 @@ function onMouseMove(event) {
 		<h2>Methods</h2>
 		
 	
-<div id="set" class="member">
+<div id="set-value" class="member">
 <div class="member-link">
-<a name="set" href="#set"><tt><b>set</b>()</tt></a>
+<a name="set-value" href="#set-value"><tt><b>set</b>(...value)</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Sets the color to the passed values. Note that any sequence of parameters that is supported by the various <a href="/reference/color"><tt>Color</tt></a>() constructors also work for calls of <code>set()</code>.</p>
     
 	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>value:</tt> 
+*
+
+
+</li>
+	
+</ul>
+
 	
 	<ul class="member-list">
 		<h4>Returns:</h4>
@@ -2109,7 +2121,7 @@ console.log(result); // { red: 0, blue: 0, green: 1 }</code></pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Creates a random color.</p>
+	<p>Returns a color object with random <a href="/reference/color#red"><tt>red</tt></a>, <a href="/reference/color#green"><tt>green</tt></a> and <a href="/reference/color#blue"><tt>blue</tt></a> values between <code>0</code> and <code>1</code>.</p>
     
 	
 	
@@ -2117,7 +2129,7 @@ console.log(result); // { red: 0, blue: 0, green: 1 }</code></pre>
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><a href="/reference/color"><tt>Color</tt></a></tt>&nbsp;&mdash;&nbsp;the randomly created color
+<tt><a href="/reference/color"><tt>Color</tt></a></tt>&nbsp;&mdash;&nbsp;the newly created color object
 </li>
 
 		

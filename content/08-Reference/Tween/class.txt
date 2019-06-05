@@ -206,7 +206,7 @@ tween.on('update', function(event) {
 
 
 	
-	<h4>Example:<span class="description">Tweens chaining: var circle = new</span></h4>
+	<h4>Example:<span class="description">Tweens chaining:</span></h4>
 
 <div class="paperscript split">
 
@@ -215,14 +215,17 @@ tween.on('update', function(event) {
 </div>
 
 <script type="text/paperscript" canvas="canvas-1">
-Path.Circle({center: view.center, radius: 40, fillColor: 'blue'
+var circle = new Path.Circle({
+    center: view.center,
+    radius: 40,
+    fillColor: 'blue'
 });
 // Tween color from blue to red.
-var tween = item.tweenTo({ fillColor: 'red' }, 2000);
+var tween = circle.tweenTo({ fillColor: 'red' }, 2000);
 // When the first tween completes...
 tween.then(function() {
     // ...tween color back to blue.
-    item.tweenTo({ fillColor: 'blue' }, 2000);
+    circle.tweenTo({ fillColor: 'blue' }, 2000);
 });
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-1"></canvas></div>
