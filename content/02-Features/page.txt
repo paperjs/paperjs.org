@@ -29,7 +29,7 @@ var secondPath = new Path.Circle({
 	fillColor: '#00FF00'
 });
 </paperscript>
-Learn more about the Document Object Model in the <url "http://www.scriptographer.org/tutorials/document-items/document-hierarchy/">Document Hierarchy</url> tutorial. 
+Learn more about the Document Object Model in the <url "http://paperjs.org/tutorials/project-items/project-hierarchy/">Project Hierarchy</url> tutorial. 
 
 <title>Paths & Segments</title>
 
@@ -107,13 +107,13 @@ onMouseMove({
 </paperscript>
 In Paper.js, paths are represented by a sequence of segments that are connected by curves. A segment consists of a point and two handles, defining the location and direction of the curves.
 
-Learn more about paths and segments in the <url "http://www.scriptographer.org/tutorials/paths/working-with-path-items/">Working with Path Items</url> tutorial.
+Learn more about paths and segments in the <url "http://paperjs.org/tutorials/paths/working-with-path-items/">Working with Path Items</url> tutorial.
 
 <title>Mouse Interaction</title>
 
 Paper.js offers mouse handlers for the different actions you can perform with a mouse (or touch screen). You can use these handlers to produce different types of tools that have different ways of reacting to mouse interaction and movement. Just define the handler functions in your Paperscript code and they will be called by Paper.js whenever the user interacts with the canvas.
 
-Read more about mouse handlers in the <url "http://scriptographer.org/tutorials/interaction/creating-mouse-tools/">Creating Mouse Tools</url> tutorial.
+Read more about mouse handlers in the <url "http://paperjs.org/tutorials/interaction/creating-mouse-tools/">Creating Mouse Tools</url> tutorial.
 
 <code>
 function onMouseDown(event) {
@@ -129,7 +129,7 @@ function onMouseUp(event) {
 }
 </code>
 
-The event object that is passed to the event handler includes many handy properties that describe the movement and position of the mouse. Learn more about mouse events in the <url "http://scriptographer.org/tutorials/interaction/mouse-tool-events/">Mouse Events</url> tutorial.
+The event object that is passed to the event handler includes many handy properties that describe the movement and position of the mouse. Learn more about mouse events in the <url "http://paperjs.org/tutorials/interaction/mouse-tool-events/">Mouse Events</url> tutorial.
 
 <paperscript height=320 style='background-color:#000'>
 tool.fixedDistance = 20;
@@ -847,7 +847,7 @@ Vector geometry is a first class citizen in Paper.js. It is a great advantage to
 
 While building <url "http://scriptographer.org">Scriptographer</url> we found vector geometry to be a powerful way of working with positions, movement and paths. Once understood, it proves to be a lot more intuitive and flexible than working with the x- and y- values of the coordinate system directly, as most other visually oriented programming environments do.
 
-Read more about Vector Geometry in the <url "http://www.scriptographer.org/tutorials/geometry/vector-geometry/">Vector Geometry</url> tutorial.
+Read more about Vector Geometry in the <url "http://paperjs.org/tutorials/geometry/vector-geometry/">Vector Geometry</url> tutorial.
 </block>
 
 <title>Mathematical Operations</title>
@@ -869,7 +869,7 @@ var point3 = point2 - point1;
 console.log(point3); // { x: 30, y: 60 }
 </code>
 
-Read more about this in the <url "http://www.scriptographer.org/tutorials/geometry/mathematical-operations/">Mathematical Operations</url> tutorial.
+Read more about this in the <url "http://paperjs.org/tutorials/geometry/mathematical-operations/">Mathematical Operations</url> tutorial.
 
 <title>Object Conversion</title>
 
