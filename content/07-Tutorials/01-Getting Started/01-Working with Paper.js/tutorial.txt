@@ -70,7 +70,19 @@ When including more than one PaperScript in a page, each script will run in its 
 
 Paper.js can be configured in a few different ways by adding attributes to the canvas tag:
 
-<b><code>resize="true"</code></b>: Makes the canvas object as high and wide as the Browser window and resizes it whenever the user resizes the window. When the window is resized, the size of your <api Global#view /> is also automatically adjusted. If validation is a concern, <code>data-paper-resize="true"</code> is supported too.
+<b><code>resize="true"</code></b>: Makes the canvas object as high and wide as the Browser window and resizes it whenever the user resizes the window. When the window is resized, the size of your <api Global#view /> is also automatically adjusted. If validation is a concern, <code>data-paper-resize="true"</code> is supported too. You need to make sure to include the following CSS declarations for the automatic resizing to work correctly:
+<code>
+html,
+body {
+    height: 100%;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+</code>
 
 Your code can respond to any resizing of the window by creating a <api View#onResize>onResize</api> function handler. For example, let's say you create a circle shaped path at the center of the view, and you want it to be centered after resizing:
 <code>
