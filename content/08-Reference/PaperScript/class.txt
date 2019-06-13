@@ -20,7 +20,7 @@
 			
 <div id="compile-code" class="member">
 <div class="member-link">
-<a name="compile-code" href="#compile-code"><tt><b>PaperScript.compile</b>(code[, option])</tt></a>
+<a name="compile-code" href="#compile-code"><tt><b>PaperScript.compile</b>(code[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -42,7 +42,7 @@
 </li>
 	
 	<li>
-<tt>option:</tt> 
+<tt>options:</tt> 
 <tt>Object</tt>
 &mdash;&nbsp;the compilation options
 &mdash;&nbsp;optional
@@ -72,7 +72,7 @@
 			
 <div id="execute-code-scope" class="member">
 <div class="member-link">
-<a name="execute-code-scope" href="#execute-code-scope"><tt><b>PaperScript.execute</b>(code, scope[, option])</tt></a>
+<a name="execute-code-scope" href="#execute-code-scope"><tt><b>PaperScript.execute</b>(code, scope[, options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -101,7 +101,7 @@
 </li>
 	
 	<li>
-<tt>option:</tt> 
+<tt>options:</tt> 
 <tt>Object</tt>
 &mdash;&nbsp;the compilation options
 &mdash;&nbsp;optional
