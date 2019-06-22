@@ -61,6 +61,8 @@
 <div class="member-text">
 	<p>The version of Paper.js, as a string.</p>
 	
+		<p>Read only.</p>
+	
 	
 	
 	<ul class="member-list">
