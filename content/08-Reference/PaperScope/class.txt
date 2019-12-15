@@ -412,6 +412,16 @@
 </ul>
 
 	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/paperscope"><tt>PaperScope</tt></a></tt>
+</li>
+
+		
+	</ul>
+
 
 
 	

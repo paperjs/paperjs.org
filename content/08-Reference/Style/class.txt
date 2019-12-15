@@ -136,7 +136,7 @@ group.style = {
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<a href="/reference/color"><tt>Color</tt></a>
+			<a href="/reference/color"><tt>Color</tt></a>⟋<tt>null</tt>
 		</li>
 	</ul>
     
@@ -513,7 +513,7 @@ path.dashArray = [10, 4];
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<a href="/reference/color"><tt>Color</tt></a>
+			<a href="/reference/color"><tt>Color</tt></a>⟋<tt>null</tt>
 		</li>
 	</ul>
     
@@ -596,7 +596,7 @@ circle.fillColor = new Color(1, 0, 0);
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<a href="/reference/color"><tt>Color</tt></a>
+			<a href="/reference/color"><tt>Color</tt></a>⟋<tt>null</tt>
 		</li>
 	</ul>
     
@@ -710,7 +710,7 @@ var circle = new Path.Circle({
 	<ul class="member-list">
 		<h4>Type:</h4>
 		<li>
-			<a href="/reference/color"><tt>Color</tt></a>
+			<a href="/reference/color"><tt>Color</tt></a>⟋<tt>null</tt>
 		</li>
 	</ul>
     
