@@ -1,9 +1,7 @@
-The recommended way to install and maintain Paper.js as a dependency in your project is through <url https://www.npmjs.com/>NPM</url> or <url http://bower.io/>Bower</url>:
+The recommended way to install and maintain Paper.js as a dependency in your project is through <url https://www.npmjs.com/>NPM</url>:
 
 <code>
 npm install paper
-# Or:
-bower install paper
 </code>
 
 Read more detailed installation instructions in our <url https://github.com/paperjs/paper.js/blob/develop/README.md>README file</url> on Github.
