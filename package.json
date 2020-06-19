@@ -1,6 +1,6 @@
 {
   "name": "paperjs.org",
-  "version": "0.12.8",
+  "version": "0.12.9",
   "description": "The source of the Paper.js website http://paperjs.org, translated to the static pages in https://github.com/paperjs/paperjs.github.io by running it through https://github.com/studiomoniker/woods",
   "license": "MIT",
   "homepage": "http://paperjs.org",
