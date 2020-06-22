@@ -1,9 +1,12 @@
 - files = page.files.toArray().sort(function(file1, file2) {
--   var name1 = file1.name;
--   var name2 = file2.name;
--   var ver1 = parseFloat((name1.match(/(\d*\.\d*)$/) || [,'0'])[1]);
--   var ver2 = parseFloat((name2.match(/(\d*\.\d*)$/) || [,'0'])[1]);
--   return ver2 - ver1;
+-   function getVersion(file) {
+-      var parts = (file.name.match(/v(\d+\.\d+.\d+)$/) || [,'0.0.0'])[1].split('.');
+-      var major = +parts[0];
+-      var minor = +parts[1];
+-      var patch = +parts[2];
+-      return major << 16 | minor << 8 | patch;
+-   }
+-   return getVersion(file2) - getVersion(file1);
 - });
 for file in files
   - version = file.name.split('-')[1]

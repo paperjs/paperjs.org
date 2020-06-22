@@ -13,7 +13,6 @@ Alternatively, you can download the latest <url #development-builds>prebuilt dev
 
 Read about the version history and latest changes in the detailed <url https://github.com/paperjs/paper.js/blob/develop/CHANGELOG.md>CHANGELOG</url> on Github.
 
-
 <title>Release Versions</title>
 
 <template name="download" />

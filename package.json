@@ -9,7 +9,10 @@
     "url": "git://github.com/paperjs/paperjs.org"
   },
   "bugs": "https://github.com/paperjs/paperjs.org/issues",
-  "contributors": ["Jürg Lehni <juerg@scratchdisk.com> (http://scratchdisk.com)", "Jonathan Puckey <jonathan@studiomoniker.com> (http://studiomoniker.com)"],
+  "contributors": [
+    "Jürg Lehni <juerg@scratchdisk.com> (http://scratchdisk.com)",
+    "Jonathan Puckey <jonathan@studiomoniker.com> (http://studiomoniker.com)"
+  ],
   "scripts": {
     "dev": "woods .",
     "build": "woods . --export ../paperjs.github.io"
