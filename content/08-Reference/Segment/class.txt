@@ -2,7 +2,7 @@
 
 
 <p>The Segment object represents the points of a path through which its <a href="/reference/curve"><tt>Curve</tt></a> objects pass. The segments of a path can be accessed through its <a href="/reference/path#segments"><tt>path.segments</tt></a> array.</p>
-<p>Each segment consists of an anchor point (<a href="/reference/segment#point"><tt>segment.point</tt></a>) and optionaly an incoming and an outgoing handle (<a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a> and <a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a>), describing the tangents of the two <a href="/reference/curve"><tt>Curve</tt></a> objects that are connected by this segment.</p>
+<p>Each segment consists of an anchor point (<a href="/reference/segment#point"><tt>segment.point</tt></a>) and optionally an incoming and an outgoing handle (<a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a> and <a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a>), describing the tangents of the two <a href="/reference/curve"><tt>Curve</tt></a> objects that are connected by this segment.</p>
 
 </div>
 
