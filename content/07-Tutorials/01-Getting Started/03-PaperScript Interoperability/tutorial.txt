@@ -1,4 +1,4 @@
-Both PaperScript and JavaScript have access to the Window scope, therefore you can use <code>window.globals<code> from the JavaScript and <code>globals<code> from PaperScript to pass information back and forth.
+Both PaperScript and JavaScript have access to the Window scope, therefore you can use <code>window.globals</code> from the JavaScript and <code>globals</code> from PaperScript to pass information back and forth.
 
 <title>JavaScript <=> PaperScript example</title>
 
