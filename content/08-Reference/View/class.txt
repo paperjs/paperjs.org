@@ -103,7 +103,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The resoltuion of the underlying canvas / device in pixel per inch (DPI). It is <code>72</code> for normal displays, and <code>144</code> for high-resolution displays with a pixel-ratio of <code>2</code>.</p>
+	<p>The resolution of the underlying canvas / device in pixel per inch (DPI). It is <code>72</code> for normal displays, and <code>144</code> for high-resolution displays with a pixel-ratio of <code>2</code>.</p>
 	
 		<p>Read only.</p>
 	
