@@ -1,4 +1,4 @@
 ---
-link: http://www.harmogram.com/
+link: https://harmogram.com/
 description: This beautiful sound visualizer combines Paper.js with the HTML5 Audio API.
 ---
