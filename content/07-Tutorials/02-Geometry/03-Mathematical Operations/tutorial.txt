@@ -1,4 +1,6 @@
-Paper.js allows you to write normal algebraic operators in connection with basic type objects. Points and Sizes can be added to, subtracted from, multiplied with or divided by numeric values or other points and sizes:
+<note>Operators only work in PaperScript. When working with Paper.js directly from JavaScript, as explained in the <page "/tutorials/getting-started/using-javascript-directly/" /> tutorial, use the methods <api point#add>add()</api>, <api point#subtract>subtract()</api>, <api point#multiply>multiply()</api>, <api point#divide>divide()</api> and <api point#modulo>modulo()</api> instead.</note>
+
+In PaperScript, you can write normal algebraic operators in connection with basic type objects. Points and Sizes can be added to, subtracted from, multiplied with or divided by numeric values or other points and sizes:
 <code>
 // Define a point to start with
 var point1 = new Point(10, 20);
