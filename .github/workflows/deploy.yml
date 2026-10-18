@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 # Deploys push to paperjs.github.io, so run them one after the other:
 concurrency: deploy
