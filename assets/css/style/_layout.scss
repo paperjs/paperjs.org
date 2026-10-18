@@ -117,3 +117,185 @@ aside {
 		background: $color-right-hover;
 	}
 }
+
+/* Narrow Screens */
+
+// Below the width of the three columns, fold the menu and the right column
+// behind a toggle button, above the content:
+
+nav .toggle {
+	display: none;
+}
+
+@media screen and (max-width: $page-width - 1px) {
+	body,
+	article.examples {
+		width: auto;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	nav,
+	article,
+	aside {
+		float: none;
+		width: auto;
+		margin: 0 $content-margin;
+	}
+
+	nav {
+		// Relative, to position the toggle button:
+		position: relative;
+		overflow: visible;
+		padding: 0;
+
+		h1 {
+			padding-top: $content-margin;
+		}
+
+		ul {
+			display: none;
+		}
+
+		// Its lines are inset by 8px, so let them end with the title's line:
+		.toggle {
+			display: block;
+			position: absolute;
+			top: $content-margin;
+			right: -8px;
+			width: 36px;
+			height: 36px;
+			padding: 6px;
+			border: 0;
+			background: none;
+			color: inherit;
+			cursor: pointer;
+
+			svg {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	article {
+		order: 2;
+		margin-bottom: $page-margin;
+
+		h1,
+		h2 {
+			padding-top: $content-margin;
+		}
+
+		// Start the page's first heading right below the title's margin:
+		> h1:first-child,
+		> section:first-child > .anchor:first-child > h1 {
+			padding-top: 0;
+		}
+	}
+
+	aside {
+		order: 1;
+		display: none;
+
+		h1,
+		.fixed {
+			width: auto;
+		}
+
+		.fixed {
+			position: static;
+		}
+	}
+
+	.menu-open {
+		nav {
+			padding-bottom: $content-margin;
+			background: #fff;
+
+			ul {
+				display: block;
+			}
+		}
+
+		aside {
+			display: block;
+		}
+	}
+
+	// Fullscreen pages fill the space below the title, and the open menu lies
+	// over them:
+	body.fullscreen {
+		article {
+			position: relative;
+			flex: 1;
+			min-height: 0;
+			margin: 0;
+
+			// Place the buttons as far from the title's line as from the right.
+			// Scrollbars lie over the content on phones, so drop the margin that
+			// makes room for them when the code scrolls:
+			.paperscript {
+				.buttons {
+					right: $content-margin;
+				}
+
+				.button {
+					margin: $content-margin 0 0 !important;
+				}
+			}
+		}
+
+		// Span the full width, so the title's line can when the source is open,
+		// and start the page right below the line:
+		nav {
+			margin: 0;
+
+			h1,
+			ul {
+				margin-left: $content-margin;
+				margin-right: $content-margin;
+			}
+
+			h1 {
+				margin-bottom: 0;
+			}
+
+			.toggle {
+				right: $content-margin - 8px;
+			}
+		}
+
+		&.menu-open nav {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			max-height: 100%;
+			overflow-y: auto;
+
+			h1 {
+				margin-bottom: $content-margin;
+			}
+		}
+
+		// With the source open, run the title's line across:
+		&:has(.source:not(.hidden)) nav h1 {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: $content-margin;
+			padding-right: $content-margin;
+		}
+	}
+
+	// Let wide code and examples scroll instead of overflowing:
+	pre,
+	.paperscript {
+		max-width: 100%;
+		overflow-x: auto;
+	}
+}

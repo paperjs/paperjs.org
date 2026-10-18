@@ -33,6 +33,7 @@ td {
 
 html {
   -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -278,6 +279,138 @@ aside .active > * {
   background: #fce6e6;
 }
 
+/* Narrow Screens */
+nav .toggle {
+  display: none;
+}
+
+@media screen and (max-width: 995px) {
+  body,
+  article.examples {
+    width: auto;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  nav,
+  article,
+  aside {
+    float: none;
+    width: auto;
+    margin: 0 20px;
+  }
+  nav {
+    position: relative;
+    overflow: visible;
+    padding: 0;
+  }
+  nav h1 {
+    padding-top: 20px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  nav .toggle svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  article {
+    order: 2;
+    margin-bottom: 32px;
+  }
+  article h1,
+  article h2 {
+    padding-top: 20px;
+  }
+  article > h1:first-child,
+  article > section:first-child > .anchor:first-child > h1 {
+    padding-top: 0;
+  }
+  aside {
+    order: 1;
+    display: none;
+  }
+  aside h1,
+  aside .fixed {
+    width: auto;
+  }
+  aside .fixed {
+    position: static;
+  }
+  .menu-open nav {
+    padding-bottom: 20px;
+    background: #fff;
+  }
+  .menu-open nav ul {
+    display: block;
+  }
+  .menu-open aside {
+    display: block;
+  }
+  body.fullscreen article {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    margin: 0;
+  }
+  body.fullscreen article .paperscript .buttons {
+    right: 20px;
+  }
+  body.fullscreen article .paperscript .button {
+    margin: 20px 0 0 !important;
+  }
+  body.fullscreen nav {
+    margin: 0;
+  }
+  body.fullscreen nav h1,
+  body.fullscreen nav ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  body.fullscreen nav h1 {
+    margin-bottom: 0;
+  }
+  body.fullscreen nav .toggle {
+    right: 12px;
+  }
+  body.fullscreen.menu-open nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  body.fullscreen.menu-open nav h1 {
+    margin-bottom: 20px;
+  }
+  body.fullscreen:has(.source:not(.hidden)) nav h1 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  pre,
+  .paperscript {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
 /* Content Styles */
 article,
 article a {
@@ -425,17 +558,40 @@ section {
   padding-top: 20px;
 }
 
+@media screen and (max-width: 995px) {
+  .block,
+  .block .left,
+  .block .right {
+    display: block;
+  }
+  .block .left {
+    padding: 0 0 20px;
+  }
+}
 /* Thumbnails */
 .thumbnails {
-  margin-right: -23px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 242px);
+  gap: 0 23px;
 }
 
 .thumbnail {
-  float: left;
-  width: 242px;
-  margin: 0 23px 23px 0;
+  margin-bottom: 23px;
 }
 
+@media screen and (max-width: 995px) {
+  .thumbnails {
+    grid-template-columns: repeat(auto-fill, minmax(max(242px, (100% - 40px) / 3), 1fr));
+    gap: 0 20px;
+  }
+  .thumbnail {
+    margin-bottom: 20px;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: auto;
+  }
+}
 .download {
   margin-bottom: 20px;
 }
@@ -729,6 +885,11 @@ span.cm-attribute {
 }
 .paperscript .explain, .paperscript:hover .button {
   display: inline-block;
+}
+@media (hover: none) {
+  .paperscript .button {
+    display: inline-block;
+  }
 }
 .paperscript .button:hover {
   background: #ddd;

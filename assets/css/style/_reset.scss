@@ -33,4 +33,6 @@ td {
 html {
   // Turn off weird font-resizing on iOS
   -webkit-text-size-adjust: none;
+  // Turn off the tap highlight on touch devices
+  -webkit-tap-highlight-color: transparent;
 }

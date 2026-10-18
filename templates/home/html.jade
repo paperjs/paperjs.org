@@ -5,5 +5,8 @@ html
     nav
       h1
         a(href=root.url)= root.title
+      button.toggle(aria-label="Menu")
+        svg(viewBox="0 0 24 24", stroke="currentColor", stroke-width="2")
+          path(d="M2 5h20M2 12h20M2 19h20")
       != template('menu', root, param)
     != template('page', page, param)

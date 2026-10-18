@@ -39,3 +39,18 @@
 		padding-top: $content-margin;
 	}
 }
+
+// On narrow screens, stack the columns:
+@media screen and (max-width: $page-width - 1px) {
+	.block {
+		&,
+		.left,
+		.right {
+			display: block;
+		}
+
+		.left {
+			padding: 0 0 $content-margin;
+		}
+	}
+}

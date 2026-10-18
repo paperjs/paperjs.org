@@ -45,6 +45,34 @@ behaviors.hiDPI = function() {
 		$('canvas').attr('hidpi', 'off');
 };
 
+behaviors.menu = function() {
+	// On narrow screens, the toggle button and the title open the menu, and
+	// the title in the open menu leads to the home page:
+	var body = $('body');
+	var toggle = $('nav .toggle');
+	toggle.click(function() {
+		body.toggleClass('menu-open');
+	});
+	$('nav h1 a').click(function() {
+		if (toggle.is(':visible') && !body.hasClass('menu-open')) {
+			body.addClass('menu-open');
+			return false;
+		}
+	});
+	// Close the menu before links in it to sections of this page are followed,
+	// in the capturing phase so that the index scrolls with the menu closed.
+	// Links to other pages keep it open until the new page replaces it:
+	document.addEventListener('click', function(event) {
+		var link = $(event.target).closest('nav ul a, aside a')[0];
+		if (link && link.hash && link.pathname === location.pathname)
+			body.removeClass('menu-open');
+	}, true);
+	// Pages restored from the back-forward cache come back with it open:
+	$(window).on('pageshow', function() {
+		body.removeClass('menu-open');
+	});
+};
+
 behaviors.sections = function() {
 	var toc = $('.toc');
 	var checks = [];
@@ -153,15 +181,6 @@ behaviors.hash = function() {
 			}, 0);
 		}
 	}
-};
-
-behaviors.thumbnails = function() {
-	var thumbnails = $('.thumbnail');
-	var height = 0;
-	thumbnails.each(function() {
-		height = Math.max(height, $(this).height());
-	});
-	$('.thumbnail').height(height);
 };
 
 behaviors.expandableLists = function() {
