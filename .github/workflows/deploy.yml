@@ -36,6 +36,10 @@ jobs:
       - name: Install dependencies
         working-directory: paperjs.org
         run: npm ci
+      # Empty the site's checkout, so that what the export no longer contains
+      # is deleted from the site as well:
+      - name: Clear site
+        run: find paperjs.github.io -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
       - name: Build
         working-directory: paperjs.org
         run: npm run build
