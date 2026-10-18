@@ -56,6 +56,38 @@ If we copy the inlined code to a file called <em>js/myScript.js</em> we can rewr
 </html>
 </code>
 
+Depending on your installation method of paper.js, ES6 syntax might not work correctly. To fix this, you need to load a version of acorn.js that supports ES6 syntax:
+
+<code mode="text/html">
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="js/paper.js"></script>
+<!-- Override the acorn.js being used -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/acorn/8.8.2/acorn.js'></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	// Create a Paper.js Path to draw a line into it:
+	const path = new Path();
+	// Give the stroke a color
+	path.strokeColor = 'black';
+	const start = new Point(100, 100);
+	// Move to start and draw a line from there
+	path.moveTo(start);
+	// Note the plus operator on Point objects.
+	// PaperScript does that for us, and much more!
+	path.lineTo(start + [ 100, -50 ]);
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
+</code>
+
+The above example fetches acorn.js from the internet. You may also install acorn.js locally and import it from a file.
+
 These attributes are supported in PaperScript <code>\<script\></code> tags:
 
 <b><code>src="URL"</code></b>: The URL to load the PaperScript code from.
