@@ -33,6 +33,13 @@
 		display: inline-block;
 	}
 
+	// Without hover, always show the buttons:
+	@media (hover: none) {
+		.button {
+			display: inline-block;
+		}
+	}
+
 	.button:hover {
 		background: #ddd;
 		cursor: pointer;
