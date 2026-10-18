@@ -8,19 +8,25 @@
 -   }
 -   return getVersion(file2) - getVersion(file1);
 - });
+//- Of several releases on the same day, only list the last one:
+- var lastDay
 for file in files
   - version = file.name.split('-')[1]
   if !/^v/.test(version)
     - version = version.charAt(0).toUpperCase() + version.slice(1)
-  .download
-    .image
-        a.nohover(href=file.url)
-          img(src="/assets/zip.jpg", width='64', height='64', alt='')
-      .float-left
-        | Paper.js #{version}
-        br
-        | Release Date: #{formatDate(versionDate(version, file))}
-        br
-        a(href=file.url)= file.filename
-        |  (#{file.humanSize})
-      .clear
+  - date = versionDate(version, file)
+  - day = date.toDateString()
+  if day !== lastDay
+    - lastDay = day
+    .download
+      .image
+          a.nohover(href=file.url)
+            img(src="/assets/zip.jpg", width='64', height='64', alt='')
+        .float-left
+          | Paper.js #{version}
+          br
+          | Release Date: #{formatDate(date)}
+          br
+          a(href=file.url)= file.filename
+          |  (#{file.humanSize})
+        .clear
