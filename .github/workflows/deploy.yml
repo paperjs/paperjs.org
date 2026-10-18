@@ -1,0 +1,44 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+
+# Deploys push to paperjs.github.io, so run them one after the other:
+concurrency: deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: paperjs.org
+      # The download page reads the release dates from the paper.js tags, in a
+      # sibling checkout:
+      - uses: actions/checkout@v4
+        with:
+          repository: paperjs/paper.js
+          path: paper.js
+          fetch-depth: 0
+          filter: blob:none
+      - uses: actions/checkout@v4
+        with:
+          repository: paperjs/paperjs.github.io
+          path: paperjs.github.io
+          ssh-key: ${{ secrets.PAPERJS_GITHUB_IO_DEPLOY_KEY }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # Woods renders the thumbnails with GraphicsMagick:
+      - name: Install GraphicsMagick
+        run: sudo apt-get update && sudo apt-get install -y graphicsmagick
+      - name: Install dependencies
+        working-directory: paperjs.org
+        run: npm ci
+      - name: Build
+        working-directory: paperjs.org
+        run: npm run build
+      - name: Deploy
+        working-directory: paperjs.org
+        run: .github/deploy.sh
