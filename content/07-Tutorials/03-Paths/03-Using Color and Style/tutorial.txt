@@ -113,7 +113,7 @@ myPath.strokeCap = 'round';
 myPath.dashArray = [10, 12];
 </paperscript>
 
-<title>The PathStyle Object</title>
+<title>The Style Object</title>
 Every item also has an <api item#style /> property which is an object containing only style properties.
 
 We can use this to copy the style properties of one item to another. The following example first creates a circle shaped path and assigns it a stroke color. Then another circle shaped path is created and we assign it the style of the first path:
@@ -184,7 +184,7 @@ path.style = null;
 
 As I mentioned earlier, all newly created items automatically receive the currently active path style properties as defined in the Illustrator interface. We can also change these through code by using <api project.currentStyle />.
 
-<api project.currentStyle /> is the <api PathStyle /> object of the project and contains the currently active style properties such as <code>fillColor</code> and <code>strokeColor</code>.
+<api project.currentStyle /> is the <api Style /> object of the project and contains the currently active style properties such as <code>fillColor</code> and <code>strokeColor</code>.
 
 The following example changes the current style of the project, then creates a path which inherits that style. Then it changes the <code>strokeWidth</code> and <code>fillColor</code> and creates another path.
 
