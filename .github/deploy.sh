@@ -30,7 +30,7 @@ git add --all
 if ! git diff --cached --quiet; then
 	git commit -m "$MESSAGE"
 fi
-git push origin master
+git push origin main
 
 # Tag the release, unless a previous run already did:
 if [ -n "$TAG" ] && ! git ls-remote --exit-code --tags origin "refs/tags/$TAG" > /dev/null; then
