@@ -229,8 +229,8 @@ var sperm = new function() {
 		strokeColor: null
 	});
 	headPath.scale(1.3);
-	var headSymbol = new Symbol(headPath);
-	var head = new PlacedSymbol(headSymbol);
+	var headSymbol = new SymbolDefinition(headPath);
+	var head = new SymbolItem(headSymbol);
 	var vector = new Point({
 		angle: 0,
 		length: 20
@@ -555,7 +555,7 @@ var path = new Path.Circle({
 	strokeColor: 'black'
 });
 
-var symbol = new Symbol(path);
+var symbol = new SymbolDefinition(path);
 
 // Place the instances of the symbol:
 for (var i = 0; i < count; i++) {
