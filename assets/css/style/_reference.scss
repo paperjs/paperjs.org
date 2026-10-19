@@ -97,6 +97,18 @@
 		* html & img {
 			margin-top: 5px;
 		}
+
+		// On narrow screens, the index ends with the space of the open menu:
+		aside & {
+			@media screen and (max-width: $page-width - 1px) {
+				margin-bottom: 0;
+				padding-bottom: 0;
+
+				> li:last-child > ul {
+					margin-bottom: 0;
+				}
+			}
+		}
 	}
 
 	ul.member-list {

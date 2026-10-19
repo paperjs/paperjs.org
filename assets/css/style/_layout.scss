@@ -182,25 +182,31 @@ nav .toggle {
 		}
 	}
 
-	article {
-		order: 2;
-		margin-bottom: $page-margin;
-
+	article,
+	aside {
 		h1,
 		h2 {
 			padding-top: $content-margin;
 		}
 
-		// Start the page's first heading right below the title's margin:
+		// Start the first heading of the page and of the open index right
+		// below the space before them:
 		> h1:first-child,
-		> section:first-child > .anchor:first-child > h1 {
+		> section:first-child > .anchor:first-child > h1,
+		> .fixed:first-child > h1:first-child {
 			padding-top: 0;
 		}
+	}
+
+	article {
+		order: 2;
+		margin-bottom: $page-margin;
 	}
 
 	aside {
 		order: 1;
 		display: none;
+		padding-bottom: 40px;
 
 		h1,
 		.fixed {
@@ -212,9 +218,10 @@ nav .toggle {
 		}
 	}
 
+	// Space the menu and the index evenly, and leave out empty indices:
 	.menu-open {
 		nav {
-			padding-bottom: $content-margin;
+			padding-bottom: 40px;
 			background: #fff;
 
 			ul {
@@ -222,7 +229,7 @@ nav .toggle {
 			}
 		}
 
-		aside {
+		aside:has(h1) {
 			display: block;
 		}
 	}

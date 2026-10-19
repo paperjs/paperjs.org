@@ -329,21 +329,28 @@ nav .toggle {
     width: 100%;
     height: 100%;
   }
+  article h1,
+  article h2,
+  aside h1,
+  aside h2 {
+    padding-top: 20px;
+  }
+  article > h1:first-child,
+  article > section:first-child > .anchor:first-child > h1,
+  article > .fixed:first-child > h1:first-child,
+  aside > h1:first-child,
+  aside > section:first-child > .anchor:first-child > h1,
+  aside > .fixed:first-child > h1:first-child {
+    padding-top: 0;
+  }
   article {
     order: 2;
     margin-bottom: 32px;
   }
-  article h1,
-  article h2 {
-    padding-top: 20px;
-  }
-  article > h1:first-child,
-  article > section:first-child > .anchor:first-child > h1 {
-    padding-top: 0;
-  }
   aside {
     order: 1;
     display: none;
+    padding-bottom: 40px;
   }
   aside h1,
   aside .fixed {
@@ -353,13 +360,13 @@ nav .toggle {
     position: static;
   }
   .menu-open nav {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     background: #fff;
   }
   .menu-open nav ul {
     display: block;
   }
-  .menu-open aside {
+  .menu-open aside:has(h1) {
     display: block;
   }
   body.fullscreen article {
@@ -680,6 +687,15 @@ section {
 }
 * html .reference ul.reference-classes img {
   margin-top: 5px;
+}
+@media screen and (max-width: 995px) {
+  aside .reference ul.reference-classes {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  aside .reference ul.reference-classes > li:last-child > ul {
+    margin-bottom: 0;
+  }
 }
 .reference ul.member-list li {
   margin-left: 2em;
