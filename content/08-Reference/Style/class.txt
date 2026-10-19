@@ -3,6 +3,7 @@
 
 <p>Style is used for changing the visual styles of items contained within a Paper.js project and is returned by <a href="/reference/item#style"><tt>item.style</tt></a> and <a href="/reference/project#currentstyle"><tt>project.currentStyle</tt></a>.</p>
 <p>All properties of Style are also reflected directly in <a href="/reference/item"><tt>Item</tt></a>, i.e.: <a href="/reference/item#fillcolor"><tt>item.fillColor</tt></a>.</p>
+<p>Styles set on a <a href="/reference/group"><tt>Group</tt></a> or <a href="/reference/layer"><tt>Layer</tt></a> are applied to the children that it contains at that moment. Items added to it later do not receive them.</p>
 <p>To set multiple style properties in one go, you can pass an object to <a href="/reference/item#style"><tt>item.style</tt></a>. This is a convenient way to define a style once and apply it to a series of items:</p>
 <h4>Example:<span class="description">Styling paths</span></h4>
 
@@ -69,7 +70,7 @@ var path2 = new Path.Rectangle({
 var group = new Group(path1, path2);
 
 // All styles set on a group are automatically
-// set on the children of the group:
+// set on the current children of the group:
 group.style = {
     strokeColor: 'black',
     dashArray: [4, 10],
@@ -837,6 +838,37 @@ var circle = new Path.Circle({
 		<h4>Type:</h4>
 		<li>
 			<tt>Number</tt>⟋<tt>String</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="tracking" class="member">
+<div class="member-link">
+<a name="tracking" href="#tracking"><tt><b>tracking</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The tracking of text content: the space added after each character, in thousandths of an em, as in Adobe Illustrator and InDesign. A tracking of 100 adds a tenth of the font size.</p>
+	
+	
+	
+		<ul class="member-list">
+			<h4>Default:</h4>
+			<li><tt>0</tt></li>
+		</ul>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Number</tt>
 		</li>
 	</ul>
     

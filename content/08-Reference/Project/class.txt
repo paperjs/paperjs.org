@@ -537,22 +537,22 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Performs a hit-test on the items contained within the project at the location of the specified point.</p>
-<p>The options object allows you to control the specifics of the hit-test and may contain a combination of the following values:</p>
+<p>The options object allows you to control the specifics of the hit-test. Without options, <code>fill</code>, <code>stroke</code> and <code>segments</code> are hit-tested. As soon as an options object is passed, only the hit-tests that it sets to <code>true</code> are performed. It may contain a combination of the following values:</p>
     <ul class="member-list">
 <h4>Options:</h4>
-<li><tt>options.tolerance: <tt>Number</tt></tt> &mdash; the tolerance of the hit-test &mdash;&nbsp;default: <tt><a href="/reference/paperscope#settings"><tt>paperScope.settings</tt></a>.hitTolerance</tt></li>
+<li><tt>options.tolerance: <tt>Number</tt></tt> &mdash; the tolerance of the hit-test, in project coordinates &mdash;&nbsp;default: <tt><a href="/reference/paperscope#settings"><tt>paperScope.settings</tt></a>.hitTolerance</tt></li>
 <li><tt>options.class: <tt>Function</tt></tt> &mdash; only hit-test against a specific item  class, or any of its sub-classes, by providing the constructor  function against which an <code>instanceof</code> check is performed:  <tt>Group</tt>, <tt>Layer</tt>, <tt>Path</tt>, <tt>CompoundPath</tt>, <tt>Shape</tt>, <tt>Raster</tt>, <tt>SymbolItem</tt>, <tt>PointText</tt>, &hellip;</li>
 <li><tt>options.match: <tt>Function</tt></tt> &mdash; a match function to be called for each  found hit result: Return <code>true</code> to return the result, <code>false</code> to keep  searching</li>
-<li><tt>options.fill: <tt>Boolean</tt></tt> &mdash; hit-test the fill of items &mdash;&nbsp;default: <tt>true</tt></li>
-<li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; hit-test the stroke of path  items, taking into account the setting of stroke color and width &mdash;&nbsp;default: <tt>true</tt></li>
-<li><tt>options.segments: <tt>Boolean</tt></tt> &mdash; hit-test for <a href="/reference/segment#point"><tt>segment.point</tt></a> of <a href="/reference/path"><tt>Path</tt></a> items &mdash;&nbsp;default: <tt>true</tt></li>
+<li><tt>options.fill: <tt>Boolean</tt></tt> &mdash; hit-test the fill of items</li>
+<li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; hit-test the stroke of path items,  taking into account the setting of stroke color and width</li>
+<li><tt>options.segments: <tt>Boolean</tt></tt> &mdash; hit-test for <a href="/reference/segment#point"><tt>segment.point</tt></a> of  <a href="/reference/path"><tt>Path</tt></a> items</li>
 <li><tt>options.curves: <tt>Boolean</tt></tt> &mdash; hit-test the curves of path items,  without taking the stroke color or width into account</li>
 <li><tt>options.handles: <tt>Boolean</tt></tt> &mdash; hit-test for the handles (<a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a> / <a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a>) of path segments.</li>
 <li><tt>options.ends: <tt>Boolean</tt></tt> &mdash; only hit-test for the first or last  segment points of open path items</li>
 <li><tt>options.position: <tt>Boolean</tt></tt> &mdash; hit-test the <a href="/reference/item#position"><tt>item.position</tt></a> of  of items, which depends on the setting of <a href="/reference/item#pivot"><tt>item.pivot</tt></a></li>
 <li><tt>options.center: <tt>Boolean</tt></tt> &mdash; hit-test the <a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of  the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>)</li>
 <li><tt>options.bounds: <tt>Boolean</tt></tt> &mdash; hit-test the corners and side-centers of  the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>)</li>
-<li><tt>options.guides: <tt>Boolean</tt></tt> &mdash; hit-test items that have <tt>Item#guide</tt> set to <code>true</code></li>
+<li><tt>options.guides: <tt>Boolean</tt></tt> &mdash; only hit-test items that have <a href="/reference/item#guide"><tt>item.guide</tt></a> set to <code>true</code></li>
 <li><tt>options.selected: <tt>Boolean</tt></tt> &mdash; only hit selected items</li>
 </ul>
 	
@@ -686,7 +686,7 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 		<h4>Returns:</h4>
 		
 			<li>
-<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the list of matching items contained in the project
+<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the list of matching items contained in the project, in  their stacking order from bottom to top, with each item listed  before its own descendants
 </li>
 
 		
@@ -1137,6 +1137,8 @@ for (var i = 0; i < items.length; i++) {
 <li><tt>options.precision: <tt>Number</tt></tt> &mdash; the amount of fractional digits in  numbers used in SVG data &mdash;&nbsp;default: <tt>5</tt></li>
 <li><tt>options.matchShapes: <tt>Boolean</tt></tt> &mdash; whether path items should  tried to be converted to SVG shape items (rect, circle, ellipse,  line, polyline, polygon), if their geometries match &mdash;&nbsp;default: <tt>false</tt></li>
 <li><tt>options.embedImages: <tt>Boolean</tt></tt> &mdash; whether raster images should  be embedded as base64 data inlined in the xlink:href attribute, or  kept as a link to their external URL. &mdash;&nbsp;default: <tt>true</tt></li>
+<li><tt>options.reuseImages: <tt>Boolean</tt></tt> &mdash; whether raster images with  the same content should only be exported once into the <code>&lt;defs&gt;</code>  element, and placed through <code>&lt;use&gt;</code> elements referencing it &mdash;&nbsp;default: <tt>false</tt></li>
+<li><tt>options.idPrefix: <tt>String</tt></tt> &mdash; a prefix for the ids generated  for definitions such as gradients, clip paths and symbols, to keep  them unique when several exported SVGs are placed in one document &mdash;&nbsp;default: <tt>&rsquo;&rsquo;</tt></li>
 <li><tt>options.reduceAttributes: <tt>Boolean</tt></tt> &mdash; wether to only include  style attributes in the SVG output that differ from their parents,  or to always include them (much faster but leading to redundancies). &mdash;&nbsp;default: <tt>true</tt></li>
 </ul>
 	
@@ -1179,9 +1181,13 @@ for (var i = 0; i < items.length; i++) {
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Converts the provided SVG content into Paper.js items and adds them to the active layer of this project. Note that the project is not cleared first. You can call <a href="/reference/project#clear"><tt>project.clear</tt></a>() to do so.</p>
+<p><code>&lt;symbol&gt;</code> elements are imported as <a href="/reference/symboldefinition"><tt>SymbolDefinition</tt></a> items, and the <code>&lt;use&gt;</code> elements that place them as <a href="/reference/symbolitem"><tt>SymbolItem</tt></a> items. The styles that <code>&lt;use&gt;</code> elements inherit don&rsquo;t reach the symbols&rsquo; content.</p>
     <ul class="member-list">
 <h4>Options:</h4>
 <li><tt>options.expandShapes: <tt>Boolean</tt></tt> &mdash; whether imported shape  items should be expanded to path items &mdash;&nbsp;default: <tt>false</tt></li>
+<li>[options.crossOrigin] {String} the {@link Raster#crossOrigin}
+    value of the rasters created for `<image>` elements, to load their
+    images with CORS</li>
 <li><tt>options.onLoad: <tt>Function</tt></tt> &mdash; the callback function to call once the  SVG content is loaded from the given URL receiving two arguments: the  converted <code>item</code> and the original <code>svg</code> data as a string. Only  required when loading from external resources.</li>
 <li><tt>options.onError: <tt>Function</tt></tt> &mdash; the callback function to call if an  error occurs during loading. Only required when loading from external  resources.</li>
 <li><tt>options.insert: <tt>Boolean</tt></tt> &mdash; whether the imported items should  be added to the project that <code>importSVG()</code> is called on &mdash;&nbsp;default: <tt>true</tt></li>

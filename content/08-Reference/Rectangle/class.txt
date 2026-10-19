@@ -386,7 +386,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The top-left point of the rectangle</p>
+	<p>The top-left point of the rectangle. Setting it moves the whole rectangle, unlike <a href="/reference/rectangle#topleft"><tt>topLeft</tt></a>.</p>
 	
 	
 	
@@ -546,7 +546,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The center point of the rectangle.</p>
+	<p>The center point of the rectangle. Setting it moves the whole rectangle.</p>
 	
 	
 	
@@ -572,7 +572,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The top-left point of the rectangle.</p>
+	<p>The top-left point of the rectangle. Note that this doesn&rsquo;t move the whole rectangle; the bottom-right corner stays where it was.</p>
 	
 	
 	
@@ -598,7 +598,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The top-right point of the rectangle.</p>
+	<p>The top-right point of the rectangle. Note that this doesn&rsquo;t move the whole rectangle; the bottom-left corner stays where it was.</p>
 	
 	
 	
@@ -624,7 +624,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The bottom-left point of the rectangle.</p>
+	<p>The bottom-left point of the rectangle. Note that this doesn&rsquo;t move the whole rectangle; the top-right corner stays where it was.</p>
 	
 	
 	
@@ -650,7 +650,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The bottom-right point of the rectangle.</p>
+	<p>The bottom-right point of the rectangle. Note that this doesn&rsquo;t move the whole rectangle; the top-left corner stays where it was.</p>
 	
 	
 	
@@ -676,7 +676,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The left-center point of the rectangle.</p>
+	<p>The left-center point of the rectangle. Setting it moves the left hand side while the right hand side stays where it was, and moves the whole rectangle vertically.</p>
 	
 	
 	
@@ -702,7 +702,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The top-center point of the rectangle.</p>
+	<p>The top-center point of the rectangle. Setting it moves the top while the bottom stays where it was, and moves the whole rectangle horizontally.</p>
 	
 	
 	
@@ -728,7 +728,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The right-center point of the rectangle.</p>
+	<p>The right-center point of the rectangle. Setting it moves the right hand side while the left hand side stays where it was, and moves the whole rectangle vertically.</p>
 	
 	
 	
@@ -754,7 +754,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The bottom-center point of the rectangle.</p>
+	<p>The bottom-center point of the rectangle. Setting it moves the bottom while the top stays where it was, and moves the whole rectangle horizontally.</p>
 	
 	
 	
@@ -812,6 +812,7 @@
 <div class="member-text">
 	<p>Specifies whether an item&rsquo;s bounds are to appear as selected.</p>
 <p>Paper.js draws the bounds of items with selected bounds on top of your project. This is very useful when debugging.</p>
+<p>This property is only available on the rectangle returned by <a href="/reference/item#bounds"><tt>item.bounds</tt></a>, and the selection always shows these bounds. Rectangles returned by other getters such as <a href="/reference/item#strokebounds"><tt>item.strokeBounds</tt></a> don&rsquo;t have it.</p>
 	
 	
 	

@@ -340,7 +340,8 @@ console.log(point); // { x: 100, y: 50 }</code></pre>
 
 
 <pre><code>var point = new Point(5, 10);
-var result = point + 20;
+var result = point + 20; // PaperScript
+var result = point.add(20); // JavaScript
 console.log(result); // {x: 25, y: 30}</code></pre>
 
 	</div>
@@ -381,7 +382,8 @@ console.log(result); // {x: 25, y: 30}</code></pre>
 
 <pre><code>var point1 = new Point(5, 10);
 var point2 = new Point(10, 20);
-var result = point1 + point2;
+var result = point1 + point2; // PaperScript
+var result = point1.add(point2); // JavaScript
 console.log(result); // {x: 15, y: 30}</code></pre>
 
 	</div>
@@ -431,7 +433,8 @@ console.log(result); // {x: 15, y: 30}</code></pre>
 
 
 <pre><code>var point = new Point(10, 20);
-var result = point - 5;
+var result = point - 5; // PaperScript
+var result = point.subtract(5); // JavaScript
 console.log(result); // {x: 5, y: 15}</code></pre>
 
 	</div>
@@ -472,7 +475,8 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 
 <pre><code>var firstPoint = new Point(10, 20);
 var secondPoint = new Point(5, 5);
-var result = firstPoint - secondPoint;
+var result = firstPoint - secondPoint; // PaperScript
+var result = firstPoint.subtract(secondPoint); // JavaScript
 console.log(result); // {x: 5, y: 15}</code></pre>
 
 	</div>
@@ -522,7 +526,8 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 
 
 <pre><code>var point = new Point(10, 20);
-var result = point * 2;
+var result = point * 2; // PaperScript
+var result = point.multiply(2); // JavaScript
 console.log(result); // {x: 20, y: 40}</code></pre>
 
 	</div>
@@ -563,7 +568,8 @@ console.log(result); // {x: 20, y: 40}</code></pre>
 
 <pre><code>var firstPoint = new Point(5, 10);
 var secondPoint = new Point(4, 2);
-var result = firstPoint * secondPoint;
+var result = firstPoint * secondPoint; // PaperScript
+var result = firstPoint.multiply(secondPoint); // JavaScript
 console.log(result); // {x: 20, y: 20}</code></pre>
 
 	</div>
@@ -613,7 +619,8 @@ console.log(result); // {x: 20, y: 20}</code></pre>
 
 
 <pre><code>var point = new Point(10, 20);
-var result = point / 2;
+var result = point / 2; // PaperScript
+var result = point.divide(2); // JavaScript
 console.log(result); // {x: 5, y: 10}</code></pre>
 
 	</div>
@@ -654,7 +661,8 @@ console.log(result); // {x: 5, y: 10}</code></pre>
 
 <pre><code>var firstPoint = new Point(8, 10);
 var secondPoint = new Point(2, 5);
-var result = firstPoint / secondPoint;
+var result = firstPoint / secondPoint; // PaperScript
+var result = firstPoint.divide(secondPoint); // JavaScript
 console.log(result); // {x: 4, y: 2}</code></pre>
 
 	</div>
@@ -704,7 +712,9 @@ console.log(result); // {x: 4, y: 2}</code></pre>
 
 
 <pre><code>var point = new Point(12, 6);
-console.log(point % 5); // {x: 2, y: 1}</code></pre>
+var result = point % 5; // PaperScript
+var result = point.modulo(5); // JavaScript
+console.log(result); // {x: 2, y: 1}</code></pre>
 
 	</div>
 
@@ -743,7 +753,9 @@ console.log(point % 5); // {x: 2, y: 1}</code></pre>
 
 
 <pre><code>var point = new Point(12, 6);
-console.log(point % new Point(5, 2)); // {x: 2, y: 0}</code></pre>
+var result = point % new Point(5, 2); // PaperScript
+var result = point.modulo(new Point(5, 2)); // JavaScript
+console.log(result); // {x: 2, y: 0}</code></pre>
 
 	</div>
 
@@ -1464,6 +1476,42 @@ point2.x = 1; // doesn't change point1.x</code></pre>
 </div>
 
 	
+<div id="negate" class="member">
+<div class="member-link">
+<a name="negate" href="#negate"><tt><b>negate</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns a new point with both coordinates negated. PaperScript uses it for the unary minus operator. The object itself is not modified!</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the negation of the point as a new point
+</li>
+
+		
+	</ul>
+
+
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var point = new Point(12, -6);
+var result = -point; // PaperScript
+var result = point.negate(); // JavaScript
+console.log(result); // {x: -12, y: 6}</code></pre>
+
+</div>
+</div>
+</div>
+
+	
 <h3>Tests</h3>
 
 <div id="isinside-rect" class="member">
@@ -2009,6 +2057,68 @@ console.log(absPoint); // {x: 5, y: 10}</code></pre>
 </div>
 </div>
 
+	
+<div id="clamp-min-max" class="member">
+<div class="member-link">
+<a name="clamp-min-max" href="#clamp-min-max"><tt><b>clamp</b>(min, max)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns a new point with the <a href="/reference/point#x"><tt>x</tt></a> and <a href="/reference/point#y"><tt>y</tt></a> values clamped to the range between the given minimum and maximum points. The object itself is not modified!</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>min:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point with the smallest values
+
+</li>
+	
+	<li>
+<tt>max:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
+&mdash;&nbsp;the point with the largest values
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/point"><tt>Point</tt></a></tt>&nbsp;&mdash;&nbsp;the clamped point as a new point
+</li>
+
+		
+	</ul>
+
+
+
+	
+	<h4>Example:</h4>
+
+
+<pre><code>var point = new Point(-5, 150);
+var clampPoint = point.clamp(new Point(0, 0), new Point(100, 100));
+console.log(clampPoint); // {x: 0, y: 100}</code></pre>
+
+<h4>Example:<span class="description">Keep a point inside a rectangle:</span></h4>
+
+
+<pre><code>var rect = new Rectangle(10, 20, 100, 50);
+var point = new Point(200, 40);
+var clampPoint = point.clamp(rect.topLeft, rect.bottomRight);
+console.log(clampPoint); // {x: 110, y: 40}</code></pre>
+
+</div>
+</div>
+</div>
+
 
 		
 			<h3>Math Operator Functions</h3>
@@ -2054,7 +2164,8 @@ console.log(absPoint); // {x: 5, y: 10}</code></pre>
 
 
 <pre><code>var point = new Point(5, 10);
-var result = point + 20;
+var result = point + 20; // PaperScript
+var result = point.add(20); // JavaScript
 console.log(result); // {x: 25, y: 30}</code></pre>
 
 </div>
@@ -2102,7 +2213,8 @@ console.log(result); // {x: 25, y: 30}</code></pre>
 
 <pre><code>var point1 = new Point(5, 10);
 var point2 = new Point(10, 20);
-var result = point1 + point2;
+var result = point1 + point2; // PaperScript
+var result = point1.add(point2); // JavaScript
 console.log(result); // {x: 15, y: 30}</code></pre>
 
 </div>
@@ -2152,7 +2264,8 @@ console.log(result); // {x: 15, y: 30}</code></pre>
 
 
 <pre><code>var point = new Point(10, 20);
-var result = point - 5;
+var result = point - 5; // PaperScript
+var result = point.subtract(5); // JavaScript
 console.log(result); // {x: 5, y: 15}</code></pre>
 
 </div>
@@ -2200,7 +2313,8 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 
 <pre><code>var firstPoint = new Point(10, 20);
 var secondPoint = new Point(5, 5);
-var result = firstPoint - secondPoint;
+var result = firstPoint - secondPoint; // PaperScript
+var result = firstPoint.subtract(secondPoint); // JavaScript
 console.log(result); // {x: 5, y: 15}</code></pre>
 
 </div>
@@ -2250,7 +2364,8 @@ console.log(result); // {x: 5, y: 15}</code></pre>
 
 
 <pre><code>var point = new Point(10, 20);
-var result = point * 2;
+var result = point * 2; // PaperScript
+var result = point.multiply(2); // JavaScript
 console.log(result); // {x: 20, y: 40}</code></pre>
 
 </div>
@@ -2298,7 +2413,8 @@ console.log(result); // {x: 20, y: 40}</code></pre>
 
 <pre><code>var firstPoint = new Point(5, 10);
 var secondPoint = new Point(4, 2);
-var result = firstPoint * secondPoint;
+var result = firstPoint * secondPoint; // PaperScript
+var result = firstPoint.multiply(secondPoint); // JavaScript
 console.log(result); // {x: 20, y: 20}</code></pre>
 
 </div>
@@ -2348,7 +2464,8 @@ console.log(result); // {x: 20, y: 20}</code></pre>
 
 
 <pre><code>var point = new Point(10, 20);
-var result = point / 2;
+var result = point / 2; // PaperScript
+var result = point.divide(2); // JavaScript
 console.log(result); // {x: 5, y: 10}</code></pre>
 
 </div>
@@ -2396,7 +2513,8 @@ console.log(result); // {x: 5, y: 10}</code></pre>
 
 <pre><code>var firstPoint = new Point(8, 10);
 var secondPoint = new Point(2, 5);
-var result = firstPoint / secondPoint;
+var result = firstPoint / secondPoint; // PaperScript
+var result = firstPoint.divide(secondPoint); // JavaScript
 console.log(result); // {x: 4, y: 2}</code></pre>
 
 </div>
@@ -2446,7 +2564,9 @@ console.log(result); // {x: 4, y: 2}</code></pre>
 
 
 <pre><code>var point = new Point(12, 6);
-console.log(point % 5); // {x: 2, y: 1}</code></pre>
+var result = point % 5; // PaperScript
+var result = point.modulo(5); // JavaScript
+console.log(result); // {x: 2, y: 1}</code></pre>
 
 </div>
 </div>
@@ -2492,7 +2612,9 @@ console.log(point % 5); // {x: 2, y: 1}</code></pre>
 
 
 <pre><code>var point = new Point(12, 6);
-console.log(point % new Point(5, 2)); // {x: 2, y: 0}</code></pre>
+var result = point % new Point(5, 2); // PaperScript
+var result = point.modulo(new Point(5, 2)); // JavaScript
+console.log(result); // {x: 2, y: 0}</code></pre>
 
 </div>
 </div>

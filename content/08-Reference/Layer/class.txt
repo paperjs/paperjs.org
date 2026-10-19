@@ -292,6 +292,7 @@ group.children['example'].fillColor = 'red';
 
 <div class="member-text">
 	<p>The path style of the item.</p>
+<p>Styles set on a <a href="/reference/group"><tt>Group</tt></a> or <a href="/reference/layer"><tt>Layer</tt></a> are applied to the children that it contains at that moment. Items added to it later do not receive them.</p>
 	
 	
 	
@@ -634,6 +635,37 @@ circle2.opacity = 0.5;
 </div>
 
 
+</div>
+
+</div>
+</div>
+
+	
+<div id="guide" class="member">
+<div class="member-link">
+<a name="guide" href="#guide"><tt><b>guide</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>Specifies whether the item functions as a guide. When set to <code>true</code>, the item is drawn as usual, but left out of hit-tests and mouse interactions. Hit-tests only find guides when <code>options.guides</code> is set, and then only them, see <a href="/reference/item#hittest-point"><tt>hitTest(point[, options])</tt></a>.</p>
+	
+	
+	
+		<ul class="member-list">
+			<h4>Default:</h4>
+			<li><tt>false</tt></li>
+		</ul>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Boolean</tt>
+		</li>
+	</ul>
+    
+	
+	
 </div>
 
 </div>
@@ -1337,6 +1369,7 @@ console.log(group.children[0] == path); // true</code></pre>
 
 <div class="member-text">
 	<p>The children items contained within this item. Items that define a <a href="/reference/item#name"><tt>name</tt></a> can also be accessed by name.</p>
+<p>Only <a href="/reference/group"><tt>Group</tt></a>, <a href="/reference/layer"><tt>Layer</tt></a> and <a href="/reference/compoundpath"><tt>CompoundPath</tt></a> items can have children. On all other items, such as <a href="/reference/path"><tt>Path</tt></a>, <a href="/reference/shape"><tt>Shape</tt></a>, <a href="/reference/raster"><tt>Raster</tt></a>, <a href="/reference/symbolitem"><tt>SymbolItem</tt></a> and <a href="/reference/pointtext"><tt>PointText</tt></a>, <code>children</code> is <code>undefined</code>.</p>
 <p><b>Please note:</b> The children array should not be modified directly using array functions. To remove single items from the children list, use <a href="/reference/item#remove"><tt>item.remove</tt></a>(), to remove all items from the children list, use <a href="/reference/item#removechildren"><tt>item.removeChildren</tt></a>(). To add items to the children list, use <a href="/reference/item#addchild-item"><tt>item.addChild(item)</tt></a> or <a href="/reference/item#insertchild-index-item"><tt>item.insertChild(index, item)</tt></a>.</p>
 	
 	
@@ -3277,22 +3310,22 @@ function onMouseDown(event) {
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Performs a hit-test on the item and its children (if it is a <a href="/reference/group"><tt>Group</tt></a> or <a href="/reference/layer"><tt>Layer</tt></a>) at the location of the specified point, returning the first found hit.</p>
-<p>The options object allows you to control the specifics of the hit- test and may contain a combination of the following values:</p>
+<p>The options object allows you to control the specifics of the hit-test. Without options, <code>fill</code>, <code>stroke</code> and <code>segments</code> are hit-tested. As soon as an options object is passed, only the hit-tests that it sets to <code>true</code> are performed. It may contain a combination of the following values:</p>
     <ul class="member-list">
 <h4>Options:</h4>
-<li><tt>options.tolerance: <tt>Number</tt></tt> &mdash; the tolerance of the hit-test &mdash;&nbsp;default: <tt><a href="/reference/paperscope#settings"><tt>paperScope.settings</tt></a>.hitTolerance</tt></li>
+<li><tt>options.tolerance: <tt>Number</tt></tt> &mdash; the tolerance of the hit-test, in project coordinates &mdash;&nbsp;default: <tt><a href="/reference/paperscope#settings"><tt>paperScope.settings</tt></a>.hitTolerance</tt></li>
 <li><tt>options.class: <tt>Function</tt></tt> &mdash; only hit-test against a specific item  class, or any of its sub-classes, by providing the constructor  function against which an <code>instanceof</code> check is performed:  <tt>Group</tt>, <tt>Layer</tt>, <tt>Path</tt>, <tt>CompoundPath</tt>, <tt>Shape</tt>, <tt>Raster</tt>, <tt>SymbolItem</tt>, <tt>PointText</tt>, &hellip;</li>
 <li><tt>options.match: <tt>Function</tt></tt> &mdash; a match function to be called for each  found hit result: Return <code>true</code> to return the result, <code>false</code> to keep  searching</li>
-<li><tt>options.fill: <tt>Boolean</tt></tt> &mdash; hit-test the fill of items &mdash;&nbsp;default: <tt>true</tt></li>
-<li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; hit-test the stroke of path  items, taking into account the setting of stroke color and width &mdash;&nbsp;default: <tt>true</tt></li>
-<li><tt>options.segments: <tt>Boolean</tt></tt> &mdash; hit-test for <a href="/reference/segment#point"><tt>segment.point</tt></a> of <a href="/reference/path"><tt>Path</tt></a> items &mdash;&nbsp;default: <tt>true</tt></li>
+<li><tt>options.fill: <tt>Boolean</tt></tt> &mdash; hit-test the fill of items</li>
+<li><tt>options.stroke: <tt>Boolean</tt></tt> &mdash; hit-test the stroke of path items,  taking into account the setting of stroke color and width</li>
+<li><tt>options.segments: <tt>Boolean</tt></tt> &mdash; hit-test for <a href="/reference/segment#point"><tt>segment.point</tt></a> of  <a href="/reference/path"><tt>Path</tt></a> items</li>
 <li><tt>options.curves: <tt>Boolean</tt></tt> &mdash; hit-test the curves of path items,  without taking the stroke color or width into account</li>
 <li><tt>options.handles: <tt>Boolean</tt></tt> &mdash; hit-test for the handles (<a href="/reference/segment#handlein"><tt>segment.handleIn</tt></a> / <a href="/reference/segment#handleout"><tt>segment.handleOut</tt></a>) of path segments.</li>
 <li><tt>options.ends: <tt>Boolean</tt></tt> &mdash; only hit-test for the first or last  segment points of open path items</li>
 <li><tt>options.position: <tt>Boolean</tt></tt> &mdash; hit-test the <a href="/reference/item#position"><tt>item.position</tt></a> of  of items, which depends on the setting of <a href="/reference/item#pivot"><tt>item.pivot</tt></a></li>
 <li><tt>options.center: <tt>Boolean</tt></tt> &mdash; hit-test the <a href="/reference/rectangle#center"><tt>rectangle.center</tt></a> of  the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>)</li>
 <li><tt>options.bounds: <tt>Boolean</tt></tt> &mdash; hit-test the corners and side-centers of  the bounding rectangle of items (<a href="/reference/item#bounds"><tt>item.bounds</tt></a>)</li>
-<li><tt>options.guides: <tt>Boolean</tt></tt> &mdash; hit-test items that have <tt>Item#guide</tt> set to <code>true</code></li>
+<li><tt>options.guides: <tt>Boolean</tt></tt> &mdash; only hit-test items that have <a href="/reference/item#guide"><tt>item.guide</tt></a> set to <code>true</code></li>
 <li><tt>options.selected: <tt>Boolean</tt></tt> &mdash; only hit selected items</li>
 </ul>
 	
@@ -3531,7 +3564,7 @@ function onMouseDown(event) {
 		<h4>Returns:</h4>
 		
 			<li>
-<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the list of matching descendant items
+<tt>Array of <a href="/reference/item"><tt>Item</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the list of matching descendant items, in their  stacking order from bottom to top, with each item listed before its  own descendants
 </li>
 
 		
@@ -3704,6 +3737,8 @@ function onMouseDown(event) {
 <li><tt>options.precision: <tt>Number</tt></tt> &mdash; the amount of fractional digits in  numbers used in SVG data &mdash;&nbsp;default: <tt>5</tt></li>
 <li><tt>options.matchShapes: <tt>Boolean</tt></tt> &mdash; whether path items should  tried to be converted to SVG shape items (rect, circle, ellipse,  line, polyline, polygon), if their geometries match &mdash;&nbsp;default: <tt>false</tt></li>
 <li><tt>options.embedImages: <tt>Boolean</tt></tt> &mdash; whether raster images should  be embedded as base64 data inlined in the xlink:href attribute, or  kept as a link to their external URL. &mdash;&nbsp;default: <tt>true</tt></li>
+<li><tt>options.reuseImages: <tt>Boolean</tt></tt> &mdash; whether raster images with  the same content should only be exported once into the <code>&lt;defs&gt;</code>  element, and placed through <code>&lt;use&gt;</code> elements referencing it &mdash;&nbsp;default: <tt>false</tt></li>
+<li><tt>options.idPrefix: <tt>String</tt></tt> &mdash; a prefix for the ids generated  for definitions such as gradients, clip paths and symbols, to keep  them unique when several exported SVGs are placed in one document &mdash;&nbsp;default: <tt>&rsquo;&rsquo;</tt></li>
 <li><tt>options.reduceAttributes: <tt>Boolean</tt></tt> &mdash; wether to only include  style attributes in the SVG output that differ from their parents,  or to always include them (much faster but leading to redundancies). &mdash;&nbsp;default: <tt>true</tt></li>
 </ul>
 	
@@ -3746,9 +3781,13 @@ function onMouseDown(event) {
 <div class="member-description hidden">
 <div class="member-text">
 	<p>Converts the provided SVG content into Paper.js items and adds them to the this item&rsquo;s children list. Note that the item is not cleared first. You can call <a href="/reference/item#removechildren"><tt>item.removeChildren</tt></a>() to do so.</p>
+<p><code>&lt;symbol&gt;</code> elements are imported as <a href="/reference/symboldefinition"><tt>SymbolDefinition</tt></a> items, and the <code>&lt;use&gt;</code> elements that place them as <a href="/reference/symbolitem"><tt>SymbolItem</tt></a> items. The styles that <code>&lt;use&gt;</code> elements inherit don&rsquo;t reach the symbols&rsquo; content.</p>
     <ul class="member-list">
 <h4>Options:</h4>
 <li><tt>options.expandShapes: <tt>Boolean</tt></tt> &mdash; whether imported shape  items should be expanded to path items &mdash;&nbsp;default: <tt>false</tt></li>
+<li>[options.crossOrigin] {String} the {@link Raster#crossOrigin}
+    value of the rasters created for `<image>` elements, to load their
+    images with CORS</li>
 <li><tt>options.onLoad: <tt>Function</tt></tt> &mdash; the callback function to call once the  SVG content is loaded from the given URL receiving two arguments: the  converted <code>item</code> and the original <code>svg</code> data as a string. Only  required when loading from external resources.</li>
 <li><tt>options.onError: <tt>Function</tt></tt> &mdash; the callback function to call if an  error occurs during loading. Only required when loading from external  resources.</li>
 <li><tt>options.insert: <tt>Boolean</tt></tt> &mdash; whether the imported items should  be added to the item that <code>importSVG()</code> is called on &mdash;&nbsp;default: <tt>true</tt></li>
@@ -4224,9 +4263,9 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 
 	
-<div id="reduce-options" class="member">
+<div id="reduce" class="member">
 <div class="member-link">
-<a name="reduce-options" href="#reduce-options"><tt><b>reduce</b>(options)</tt></a>
+<a name="reduce" href="#reduce"><tt><b>reduce</b>([options])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
@@ -4238,9 +4277,9 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 	
 	<li>
 <tt>options:</tt> 
-
-
-
+<tt>Object</tt>
+&mdash;&nbsp;the options passed on to <a href="/reference/path#reduce-options"><tt>path.reduce(options)</tt></a>
+&mdash;&nbsp;optional
 </li>
 	
 </ul>
@@ -4629,7 +4668,7 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Checks if this item is above the specified item in the stacking order of the project.</p>
+	<p>Checks if this item is above the specified item in the stacking order of the project. If one item is a descendant of the other, neither is above the other and <code>false</code> is returned.</p>
     
 	
 <ul class="member-list">
@@ -4670,7 +4709,7 @@ Array of <a href="/reference/item"><tt>Item</tt></a> objects
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Checks if the item is below the specified item in the stacking order of the project.</p>
+	<p>Checks if the item is below the specified item in the stacking order of the project. If one item is a descendant of the other, neither is below the other and <code>false</code> is returned.</p>
     
 	
 <ul class="member-list">
@@ -5628,11 +5667,11 @@ circle.scale(3, 1);
 	
 <div id="fitbounds-rectangle" class="member">
 <div class="member-link">
-<a name="fitbounds-rectangle" href="#fitbounds-rectangle"><tt><b>fitBounds</b>(rectangle[, fill])</tt></a>
+<a name="fitbounds-rectangle" href="#fitbounds-rectangle"><tt><b>fitBounds</b>(rectangle[, fit])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Transform the item so that its <a href="/reference/item#bounds"><tt>bounds</tt></a> fit within the specified rectangle, without changing its aspect ratio.</p>
+	<p>Transform the item so that its <a href="/reference/item#bounds"><tt>bounds</tt></a> are centered in the specified rectangle and fitted to it as described by <code>fit</code>.</p>
     
 	
 <ul class="member-list">
@@ -5646,10 +5685,10 @@ circle.scale(3, 1);
 </li>
 	
 	<li>
-<tt>fill:</tt> 
-<tt>Boolean</tt>
-
-&mdash;&nbsp;optional, default: <tt>false</tt>
+<tt>fit:</tt> 
+<tt>String</tt>⟋<tt>Boolean</tt>
+&mdash;&nbsp;how to fit the item, as in CSS&rsquo;s <code>object-fit</code>: <code>&#39;contain&#39;</code> fits all of it within the rectangle, <code>&#39;cover&#39;</code> makes it cover the whole rectangle, and <code>&#39;fill&#39;</code> stretches it to the rectangle, changing its aspect ratio. The deprecated <code>true</code> and <code>false</code> stand for <code>&#39;cover&#39;</code> and <code>&#39;contain&#39;</code>.
+&mdash;&nbsp;optional, default: <tt>&lsquo;contain&rsquo;</tt>
 </li>
 	
 </ul>
@@ -5691,7 +5730,7 @@ circlePath.fitBounds(path.bounds);
 </div>
 
 
-<h4>Example:<span class="description">Fitting an item to the bounding rectangle of another item's bounding rectangle with the fill parameter set to true:</span></h4>
+<h4>Example:<span class="description">Fitting an item to the bounding rectangle of another item's bounding rectangle, covering all of it:</span></h4>
 
 <div class="paperscript split">
 
@@ -5718,7 +5757,7 @@ var circlePath = new Path.Circle({
 
 // Fit the circlePath to the bounding rectangle of
 // the rectangular path:
-circlePath.fitBounds(path.bounds, true);
+circlePath.fitBounds(path.bounds, 'cover');
 </script>
 <div class="canvas"><canvas width="516" height="100" id="canvas-45"></canvas></div>
 </div>
@@ -6368,7 +6407,7 @@ function onMouseDown(event) {
     <ul class="member-list">
 <h4>Options:</h4>
 <li><tt>options.duration: <tt>Number</tt></tt> &mdash; the duration of the tweening</li>
-<li><tt>options.easing: <tt>Function</tt>⟋<tt>String</tt></tt> &mdash; an easing function or the type of the easing: <tt>&lsquo;linear&rsquo; &lsquo;easeInQuad&rsquo; &lsquo;easeOutQuad&rsquo; &lsquo;easeInOutQuad&rsquo; &lsquo;easeInCubic&rsquo; &lsquo;easeOutCubic&rsquo; &lsquo;easeInOutCubic&rsquo; &lsquo;easeInQuart&rsquo; &lsquo;easeOutQuart&rsquo; &lsquo;easeInOutQuart&rsquo; &lsquo;easeInQuint&rsquo; &lsquo;easeOutQuint&rsquo; &lsquo;easeInOutQuint&rsquo;</tt> &mdash;&nbsp;default: <tt>&lsquo;linear&rsquo;</tt></li>
+<li><tt>options.easing: <tt>Function</tt>⟋<tt>String</tt></tt> &mdash; an easing function or the type of the easing: <tt>&lsquo;linear&rsquo; &lsquo;easeInQuad&rsquo; &lsquo;easeOutQuad&rsquo; &lsquo;easeInOutQuad&rsquo; &lsquo;easeInCubic&rsquo; &lsquo;easeOutCubic&rsquo; &lsquo;easeInOutCubic&rsquo; &lsquo;easeInQuart&rsquo; &lsquo;easeOutQuart&rsquo; &lsquo;easeInOutQuart&rsquo; &lsquo;easeInQuint&rsquo; &lsquo;easeOutQuint&rsquo; &lsquo;easeInOutQuint&rsquo; &lsquo;easeInSine&rsquo; &lsquo;easeOutSine&rsquo; &lsquo;easeInOutSine&rsquo; &lsquo;easeInExpo&rsquo; &lsquo;easeOutExpo&rsquo; &lsquo;easeInOutExpo&rsquo; &lsquo;easeInCirc&rsquo; &lsquo;easeOutCirc&rsquo; &lsquo;easeInOutCirc&rsquo;</tt> &mdash;&nbsp;default: <tt>&lsquo;linear&rsquo;</tt></li>
 <li><tt>options.start: <tt>Boolean</tt></tt> &mdash; whether to start tweening automatically &mdash;&nbsp;default: <tt>true</tt></li>
 </ul>
 	
