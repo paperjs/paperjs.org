@@ -836,6 +836,34 @@ console.log(result); // {x: 2, y: 0}</code></pre>
 </div>
 		
 			
+<div id="values" class="member">
+<div class="member-link">
+<a name="values" href="#values"><tt><b>values</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The point&rsquo;s coordinates as an array, <code>[x, y]</code>, as <a href="/reference/matrix#values"><tt>matrix.values</tt></a> gives those of a matrix.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			Array of <tt>Numbers</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
 <div id="length" class="member">
 <div class="member-link">
 <a name="length" href="#length"><tt><b>length</b></tt></a>
@@ -1620,7 +1648,7 @@ console.log(result); // {x: -12, y: 6}</code></pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Checks if the vector represented by this point is collinear (parallel) to another vector.</p>
+	<p>Checks if the vector represented by this point is collinear (parallel) to another vector, within a tolerance of 1e-8 for the sine of the angle between them.</p>
     
 	
 <ul class="member-list">
@@ -1661,7 +1689,7 @@ console.log(result); // {x: -12, y: 6}</code></pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Checks if the vector represented by this point is orthogonal (perpendicular) to another vector.</p>
+	<p>Checks if the vector represented by this point is orthogonal (perpendicular) to another vector, within a tolerance of 1e-8 for the cosine of the angle between them.</p>
     
 	
 <ul class="member-list">
@@ -1702,7 +1730,7 @@ console.log(result); // {x: -12, y: 6}</code></pre>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Checks if this point has both the x and y coordinate set to 0.</p>
+	<p>Checks if this point has both the x and y coordinate set to 0, within a tolerance of 1e-12, unlike <a href="/reference/point#equals-point"><tt>equals(point)</tt></a>, which compares exactly.</p>
     
 	
 	
@@ -1710,7 +1738,7 @@ console.log(result); // {x: -12, y: 6}</code></pre>
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if both x and y are 0, <tt>false</tt> otherwise
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if both x and y are 0, within the tolerance, <tt>false</tt> otherwise
 </li>
 
 		

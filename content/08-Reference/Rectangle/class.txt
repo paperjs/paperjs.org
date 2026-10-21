@@ -380,6 +380,34 @@
 </div>
 		
 			
+<div id="values" class="member">
+<div class="member-link">
+<a name="values" href="#values"><tt><b>values</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The rectangle&rsquo;s position and size as an array, <code>[x, y, width, height]</code>, as <a href="/reference/matrix#values"><tt>matrix.values</tt></a> gives those of a matrix.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			Array of <tt>Numbers</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
 <div id="point" class="member">
 <div class="member-link">
 <a name="point" href="#point"><tt><b>point</b></tt></a>
@@ -1536,23 +1564,30 @@ intersectionPath.fillColor = 'red';
 </div>
 
 	
-<div id="scale-amount" class="member">
+<div id="scale-scale" class="member">
 <div class="member-link">
-<a name="scale-amount" href="#scale-amount"><tt><b>scale</b>(amount)</tt></a>
+<a name="scale-scale" href="#scale-scale"><tt><b>scale</b>(scale[, center])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new rectangle scaled by the specified amount from its center.</p>
+	<p>Returns a new rectangle scaled by the specified factor from its center, or from the given center point.</p>
     
 	
 <ul class="member-list">
 	<h4>Parameters:</h4>
 	
 	<li>
-<tt>amount:</tt> 
+<tt>scale:</tt> 
 <tt>Number</tt>
+&mdash;&nbsp;the scale factor
 
+</li>
+	
+	<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
 
+&mdash;&nbsp;optional, default: <tt><a href="/reference/rectangle#center"><tt>rectangle.center</tt></a></tt>
 </li>
 	
 </ul>
@@ -1579,11 +1614,11 @@ intersectionPath.fillColor = 'red';
 	
 <div id="scale-hor-ver" class="member">
 <div class="member-link">
-<a name="scale-hor-ver" href="#scale-hor-ver"><tt><b>scale</b>(hor, ver)</tt></a>
+<a name="scale-hor-ver" href="#scale-hor-ver"><tt><b>scale</b>(hor, ver[, center])</tt></a>
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Returns a new rectangle scaled in horizontal direction by the specified <code>hor</code> amount and in vertical direction by the specified <code>ver</code> amount from its center.</p>
+	<p>Returns a new rectangle scaled in horizontal direction by the specified <code>hor</code> factor and in vertical direction by the specified <code>ver</code> factor from its center, or from the given center point.</p>
     
 	
 <ul class="member-list">
@@ -1592,15 +1627,22 @@ intersectionPath.fillColor = 'red';
 	<li>
 <tt>hor:</tt> 
 <tt>Number</tt>
-
+&mdash;&nbsp;the horizontal scale factor
 
 </li>
 	
 	<li>
 <tt>ver:</tt> 
 <tt>Number</tt>
+&mdash;&nbsp;the vertical scale factor
 
+</li>
+	
+	<li>
+<tt>center:</tt> 
+<a href="/reference/point"><tt>Point</tt></a>
 
+&mdash;&nbsp;optional, default: <tt><a href="/reference/rectangle#center"><tt>rectangle.center</tt></a></tt>
 </li>
 	
 </ul>
