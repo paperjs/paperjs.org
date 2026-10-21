@@ -4,6 +4,7 @@
 <p>When code is executed as PaperScript, the script&rsquo;s scope is populated with all fields of the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object, which within the script appear to be global.</p>
 <p>In a JavaScript context, only the <a href="/reference/global#paper"><tt>paper</tt></a> variable is added to the global scope, referencing the currently active <a href="/reference/paperscope"><tt>PaperScope</tt></a> object, through which all properties and Paper.js classes can be accessed.</p>
 
+
 </div>
 
 

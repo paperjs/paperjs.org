@@ -2,6 +2,7 @@
 
 
 <p>The Size object is used to describe the size or dimensions of something, through its <a href="/reference/size#width"><tt>width</tt></a> and <a href="/reference/size#height"><tt>height</tt></a> properties.</p>
+<p>Wherever a size is the only argument of a function, it can also be passed as two numbers, e.g. <code>size.multiply(2, 3)</code>.</p>
 <h4>Example:<span class="description">Create a size that is 10pt wide and 5pt high, and use it to define a rectangle:</span></h4>
 
 
@@ -10,6 +11,7 @@ console.log(size.width); // 10
 console.log(size.height); // 5
 var rect = new Rectangle(new Point(20, 15), size);
 console.log(rect); // { x: 20, y: 15, width: 10, height: 5 }</code></pre>
+
 
 </div>
 
@@ -856,7 +858,7 @@ console.log(result); // {width: 2, height: 0}</code></pre>
 	
 	<li>
 <tt>size:</tt> 
-<a href="/reference/size"><tt>Size</tt></a>
+<a href="/reference/size"><tt>Size</tt></a>⟋Array of <tt>Numbers</tt>
 &mdash;&nbsp;the size to compare to
 
 </li>

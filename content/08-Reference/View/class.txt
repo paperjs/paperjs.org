@@ -5,6 +5,7 @@
 <p>If the canvas element has a <code>resize</code> or <code>data-paper-resize</code> attribute, the view adjusts its size to the size of the element whenever the window is resized. The element itself needs to be sized through CSS, e.g. with <code>html, body { height: 100%; }</code> and <code>canvas[resize] { width: 100%; height:
 100%; }</code> for a canvas that fills the window. Without such CSS, the view does not follow the window, and on HiDPI screens it grows with each resize. Without the attribute, the view sets the element&rsquo;s CSS width and height to its own size, see <a href="/reference/view#viewsize"><tt>viewSize</tt></a>.</p>
 
+
 </div>
 
 
@@ -215,9 +216,7 @@
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The bounds of the currently visible area in project coordinates.</p>
-	
-		<p>Read only.</p>
+	<p>The bounds of the currently visible area in project coordinates. Setting them fits the view to the given rectangle, as <a href="/reference/view#fitbounds-rectangle"><tt>fitBounds(rectangle)</tt></a> does. Since the view keeps its aspect ratio, the bounds read back can be larger than the rectangle in one direction.</p>
 	
 	
 	
@@ -1968,13 +1967,13 @@ function onMouseDown(event) {
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Handles a mouse event that the host provides, for hosts without a DOM, such as workers, or with their own event source. It runs the same handling as the DOM&rsquo;s mouse events: the active tool&rsquo;s handlers, with <a href="/reference/tool#mindistance"><tt>tool.minDistance</tt></a> and the like, then those of the items under the point and of the view, including the events that Paper.js derives itself: <code>&#39;mousedrag&#39;</code>, <code>&#39;click&#39;</code>, <code>&#39;doubleclick&#39;</code>, <code>&#39;mouseenter&#39;</code> and <code>&#39;mouseleave&#39;</code>.</p>
+	<p>Handles a mouse event that the host provides, for hosts without a DOM, such as workers, or with their own event source. It runs the same handling as the DOM&rsquo;s mouse events: the active tool&rsquo;s handlers, with <a href="/reference/tool#mindistance"><tt>tool.minDistance</tt></a> and the like, then those of the items under the point and of the view, including the events that Paper.js derives itself: <code>&#39;mousedrag&#39;</code>, <code>&#39;click&#39;</code>, <code>&#39;doubleclick&#39;</code>, <code>&#39;mouseenter&#39;</code> and <code>&#39;mouseleave&#39;</code>. Points outside the view&rsquo;s bounds are handled too, since the host decides which events belong to its drawing surface.</p>
     <ul class="member-list">
 <h4>Options:</h4>
 <li>[options.modifiers] {Object} the state of the modifier keys,
     see {@link Key#modifiers}</li>
 <li><tt>options.button: <tt>Number</tt></tt> &mdash; the mouse button &mdash;&nbsp;default: <tt>0</tt></li>
-<li><tt>options.timeStamp: <tt>Number</tt></tt> &mdash; the time stamp &mdash;&nbsp;default: <tt>Date.now()</tt></li>
+<li><tt>options.time: <tt>Number</tt></tt> &mdash; the time of the  event in seconds, see <a href="/reference/event#time"><tt>event.time</tt></a> &mdash;&nbsp;default: <tt>Date.now() / 1000</tt></li>
 </ul>
 	
 <ul class="member-list">
@@ -2034,10 +2033,12 @@ function onMouseDown(event) {
 <h4>Options:</h4>
 <li>[options.character] {String} the character that the key
     produces. By default, keydown takes the key itself if it is a
-    single character, and keyup the character of its keydown</li>
+    single character, the space, carriage return and tab characters
+    for 'space', 'enter' and 'tab', and keyup the character of its
+    keydown</li>
 <li>[options.modifiers] {Object} the state of the modifier keys,
     see {@link Key#modifiers}</li>
-<li><tt>options.timeStamp: <tt>Number</tt></tt> &mdash; the time stamp &mdash;&nbsp;default: <tt>Date.now()</tt></li>
+<li><tt>options.time: <tt>Number</tt></tt> &mdash; the time of the  event in seconds, see <a href="/reference/event#time"><tt>event.time</tt></a> &mdash;&nbsp;default: <tt>Date.now() / 1000</tt></li>
 </ul>
 	
 <ul class="member-list">

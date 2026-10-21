@@ -3,6 +3,7 @@
 
 <p>A HitResult object contains information about the results of a hit test. It is returned by <a href="/reference/item#hittest-point"><tt>item.hitTest(point)</tt></a> and <a href="/reference/project#hittest-point"><tt>project.hitTest(point)</tt></a>.</p>
 
+
 </div>
 
 

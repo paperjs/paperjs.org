@@ -6,6 +6,7 @@
 <p>The currently active project can be accessed through the <a href="/reference/paperscope#project"><tt>paperScope.project</tt></a> variable.</p>
 <p>An array of all open projects is accessible through the <a href="/reference/paperscope#projects"><tt>paperScope.projects</tt></a> variable.</p>
 
+
 </div>
 
 <!-- =============================== constructors ========================== -->
@@ -65,15 +66,17 @@
 		<h2>Properties</h2>
 		
 			
-<div id="source" class="member">
+<div id="host" class="member">
 <div class="member-link">
-<a name="source" href="#source"><tt><b>source</b></tt></a>
+<a name="host" href="#host"><tt><b>host</b></tt></a>
 </div>
 <div class="member-description hidden">
 
 <div class="member-text">
-	<p>The host document that the project&rsquo;s items come from. Setting it creates the project&rsquo;s layers from the source&rsquo;s records. All items are created as shells that load their content and children from the source on first access.</p>
-<p>The source provides: - <code>getChildren(key)</code>, which returns the records of the children of  the node with the given key, or of the top level for <code>null</code>, as  columns: <code>keys</code>, <code>types</code> (indices into <code>typeNames</code>), <code>typeNames</code>,  <code>flags</code> (selected: 1, visible: 2, locked: 4, strokeScaling: 8,  clipMask: 64, guide: 128, empty: 256), <code>boxes</code> (bounds,  strokeBounds and roughBounds in the item&rsquo;s coordinates, 12 numbers  per item), and the sparse objects <code>names</code> and <code>matrices</code>. - <code>getItem(key)</code>, which returns the node&rsquo;s own content in the form  of <a href="/reference/item#importjson-json"><tt>item.importJSON(json)</tt></a>, without children. - <code>getAncestorKeys(key)</code>, which returns the keys from the top level  down to the node&rsquo;s parent.</p>
+	<p>The host document that the project&rsquo;s items come from. Setting it creates the project&rsquo;s layers from the host&rsquo;s records. All items are created as shells that load their content and children from the host on first access.</p>
+<p>The host provides: - <code>getChildren(key)</code>, which returns the records of the children of  the node with the given key, or of the top level for <code>null</code>, as  columns: <code>keys</code>, <code>types</code> (indices into <code>typeNames</code>), <code>typeNames</code>,  <code>flags</code> (selected: 1, visible: 2, locked: 4, strokeScaling: 8,  clipMask: 64, guide: 128, empty: 256), <code>boxes</code> (bounds,  strokeBounds and roughBounds in the item&rsquo;s coordinates, 12 numbers  per item), and the sparse objects <code>names</code> and <code>matrices</code>. - <code>getItem(key)</code>, which returns the node&rsquo;s own content in the form  of <a href="/reference/item#importjson-json"><tt>item.importJSON(json)</tt></a>, without children. Linked text  gives <code>linked</code>, the keys of its story&rsquo;s text items in order, and  leaves out its story. - <code>getStory(key)</code>, for linked text, which returns its story with the  key of any of its text items: <code>content</code> or <code>runs</code>, <code>paragraphs</code>,  and the character and paragraph styles, as  <a href="/reference/item#exportjson-options"><tt>item.exportJSON(options)</tt></a> writes them in the JSON of a  text item. - <code>getAncestorKeys(key)</code>, which returns the keys from the top level  down to the node&rsquo;s parent. - Optionally <code>layOut(json, start, key)</code>, which lays out a text item  from <code>start</code> in its story, given as the JSON string that  <a href="/reference/item#exportjson-options"><tt>item.exportJSON(options)</tt></a> writes of it as the script holds  it, or as <code>null</code> where the script didn&rsquo;t change it since it  loaded or the host took its changes with  <a href="/reference/project#takechanges"><tt>project.takeChanges</tt></a>(), for the host to lay out its own  node, and returns  <code>{ end, lines }</code>: where its visible text ends, and  its lines, each <code>{ start, end, x, y, width, lineHeight, ascent,
+  descent, pieces }</code>, with pieces <code>{ start, end, x, y, dx, width,
+  rotation, size, ascent, descent, lineHeight }</code> and an optional  <code>content</code>, as for a hyphen, all in the item&rsquo;s coordinates. <code>key</code>  is null for text that the host doesn&rsquo;t know yet. Without it,  Paper.js lays out text itself.</p>
 	
 	
 	
@@ -425,7 +428,7 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 		<h4>Returns:</h4>
 		
 			<li>
-<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the item, or <code>null</code> if the source has no such node
+<tt><a href="/reference/item"><tt>Item</tt></a></tt>&nbsp;&mdash;&nbsp;the item, or <code>null</code> if the host has no such node
 </li>
 
 		
@@ -446,7 +449,7 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 </div>
 <div class="member-description hidden">
 <div class="member-text">
-	<p>Updates the items of changed host nodes, given in the column format of the source&rsquo;s <code>getChildren()</code>, with two more flags: 16 when the node&rsquo;s own content changed, so the item loads it again on next access, and 32 when its list of children changed, so it loads them again right away if it had loaded them, keeping the items of nodes that remain. Nodes without items are skipped.</p>
+	<p>Updates the items of changed host nodes, given in the column format of the host&rsquo;s <code>getChildren()</code>, with two more flags: 16 when the node&rsquo;s own content changed, so the item loads it again on next access, and 32 when its list of children changed, so it loads them again right away if it had loaded them, keeping the items of nodes that remain. Nodes without items are skipped.</p>
     
 	
 <ul class="member-list">
@@ -486,6 +489,35 @@ var path2 = new Path.Circle(new Point(175, 50), 20);
 		
 			<li>
 <tt>Array of <tt>Object</tt> objects</tt>&nbsp;&mdash;&nbsp;the changes as <code>{ item, flags }</code> objects, or <code>null</code>  if <a href="/reference/project#trackchanges"><tt>trackChanges</tt></a> is off
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+
+	
+<div id="haschanges" class="member">
+<div class="member-link">
+<a name="haschanges" href="#haschanges"><tt><b>hasChanges</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Checks whether changes were logged since tracking was activated or since the last call of <a href="/reference/project#takechanges"><tt>takeChanges</tt></a>(), without taking them.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if changes were logged, <tt>false</tt> otherwise
 </li>
 
 		
@@ -1369,6 +1401,7 @@ for (var i = 0; i < items.length; i++) {
 <div class="member-text">
 	<p>Converts the provided SVG content into Paper.js items and adds them to the active layer of this project. Note that the project is not cleared first. You can call <a href="/reference/project#clear"><tt>project.clear</tt></a>() to do so.</p>
 <p><code>&lt;symbol&gt;</code> elements are imported as <a href="/reference/symboldefinition"><tt>SymbolDefinition</tt></a> items, and the <code>&lt;use&gt;</code> elements that place them as <a href="/reference/symbolitem"><tt>SymbolItem</tt></a> items. The styles that <code>&lt;use&gt;</code> elements inherit don&rsquo;t reach the symbols&rsquo; content.</p>
+<p>URLs are fetched as they are, so validate URLs that come from untrusted sources first, especially on servers, where they could reach internal addresses.</p>
     <ul class="member-list">
 <h4>Options:</h4>
 <li><tt>options.expandShapes: <tt>Boolean</tt></tt> &mdash; whether imported shape  items should be expanded to path items &mdash;&nbsp;default: <tt>false</tt></li>

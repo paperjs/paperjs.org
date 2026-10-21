@@ -4,6 +4,7 @@
 <p>CurveLocation objects describe a location on <a href="/reference/curve"><tt>Curve</tt></a> objects, as  defined by the curve-time <a href="/reference/curvelocation#time"><tt>time</tt></a>, a value between <code>0</code> (beginning  of the curve) and <code>1</code> (end of the curve). If the curve is part of a  <a href="/reference/path"><tt>Path</tt></a> item, its <a href="/reference/curvelocation#index"><tt>index</tt></a> inside the <a href="/reference/path#curves"><tt>path.curves</tt></a>  array is also provided.</p>
 <p>The class is in use in many places, such as <a href="/reference/path#getlocationat-offset"><tt>path.getLocationAt(offset)</tt></a>, <a href="/reference/path#getlocationof-point"><tt>path.getLocationOf(point)</tt></a>, <a href="/reference/pathitem#getnearestlocation-point"><tt>pathItem.getNearestLocation(point)</tt></a>, <a href="/reference/pathitem#getintersections-path"><tt>pathItem.getIntersections(path)</tt></a>, etc.</p>
 
+
 </div>
 
 <!-- =============================== constructors ========================== -->
