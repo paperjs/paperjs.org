@@ -1,0 +1,411 @@
+<div class="reference-class">
+
+
+<p>A live effect, which derives what is drawn from an item without changing the item itself, as the effects in Illustrator do. Creating one registers it under its type, replacing any effect registered there before, and items use it by that type, see <a href="/reference/item#effects"><tt>item.effects</tt></a>, each through an <a href="/reference/effectinstance"><tt>EffectInstance</tt></a> with its own parameters.</p>
+
+
+</div>
+
+<!-- =============================== constructors ========================== -->
+<div class="reference-members">
+	<h2>Constructors</h2>
+	
+		
+<div id="effect-props" class="member">
+<div class="member-link">
+<a name="effect-props" href="#effect-props"><tt><b>Effect</b>(props)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+    <p>Creates an effect and registers it under its type.</p>
+    
+    
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>props:</tt> 
+<tt>Object</tt>
+&mdash;&nbsp;the <a href="/reference/effect#type"><tt>type</tt></a> of the effect, its  <a href="/reference/effect#label"><tt>label</tt></a> and <a href="/reference/effect#parameters"><tt>parameters</tt></a>, and <a href="/reference/effect#onapply"><tt>onApply</tt></a>  and <a href="/reference/effect#oneditparameters"><tt>onEditParameters</tt></a>
+
+</li>
+	
+</ul>
+
+    
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/effect"><tt>Effect</tt></a></tt>
+</li>
+
+		
+	</ul>
+
+
+
+    
+    
+</div>
+</div>
+</div>
+	
+</div>
+
+
+
+
+
+<!-- ================================ properties =========================== -->
+	<div class="reference-members">
+		<h2>Properties</h2>
+		
+			
+<div id="type" class="member">
+<div class="member-link">
+<a name="type" href="#type"><tt><b>type</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The type that the effect is registered under, and that items use it by.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>String</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="label" class="member">
+<div class="member-link">
+<a name="label" href="#label"><tt><b>label</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The label of the effect, for hosts to show to users.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+		<ul class="member-list">
+			<h4>Default:</h4>
+			<li><tt>the type</tt></li>
+		</ul>
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>String</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="parameters" class="member">
+<div class="member-link">
+<a name="parameters" href="#parameters"><tt><b>parameters</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The declared parameters of the effect by their names, as objects that describe them for hosts to build their settings from, with the default as their <code>value</code>, e.g. <code>{ label: &#39;Amount&#39;, type: &#39;number&#39;, range: [0, 100], value: 10 }</code>. The instances of the effect have them as properties.</p>
+	
+		<p>Read only.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Object</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="onapply" class="member">
+<div class="member-link">
+<a name="onapply" href="#onapply"><tt><b>onApply</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The function that applies the effect, called with the instance as <code>this</code>, and returning what the effect makes of the art that it gets, which it doesn&rsquo;t change.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>⟋<tt>null</tt>
+		</li>
+	</ul>
+    <ul class="member-list">
+<h4>Options:</h4>
+<li><tt>event.art: <a href="/reference/item"><tt>Item</tt></a></tt> &mdash; the item to apply the effect to, or what  the effect before it returned</li>
+<li><tt>event.item: <a href="/reference/item"><tt>Item</tt></a></tt> &mdash; the item that the instance is part of</li>
+</ul>
+	
+	
+</div>
+
+</div>
+</div>
+		
+			
+<div id="oneditparameters" class="member">
+<div class="member-link">
+<a name="oneditparameters" href="#oneditparameters"><tt><b>onEditParameters</b></tt></a>
+</div>
+<div class="member-description hidden">
+
+<div class="member-text">
+	<p>The function that hosts call when the user edits the parameters of an instance, with the instance as <code>this</code>, to set its properties. Paper.js itself doesn&rsquo;t call it.</p>
+	
+	
+	
+	<ul class="member-list">
+		<h4>Type:</h4>
+		<li>
+			<tt>Function</tt>⟋<tt>null</tt>
+		</li>
+	</ul>
+    
+	
+	
+</div>
+
+</div>
+</div>
+		
+	</div>
+
+
+
+
+
+<!-- ============================== methods ================================ -->
+	<div class="reference-members">
+		<h2>Methods</h2>
+		
+	
+<div id="remove" class="member">
+<div class="member-link">
+<a name="remove" href="#remove"><tt><b>remove</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Removes the effect from the registered effects.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the effect was registered, <tt>false</tt> otherwise
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+
+
+		
+	</div>
+
+
+	<div class="reference-members">
+		<h2>Static Methods</h2>
+		
+			
+<div id="add-effect" class="member">
+<div class="member-link">
+<a name="add-effect" href="#add-effect"><tt><b>Effect.add</b>(effect)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Registers the effect under its type, replacing any effect registered there before. Effects register themselves when they are created.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>effect:</tt> 
+<a href="/reference/effect"><tt>Effect</tt></a>
+
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/effect"><tt>Effect</tt></a></tt>&nbsp;&mdash;&nbsp;the effect
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="get-type" class="member">
+<div class="member-link">
+<a name="get-type" href="#get-type"><tt><b>Effect.get</b>(type)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns the effect registered under the type.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>type:</tt> 
+<tt>String</tt>
+
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><a href="/reference/effect"><tt>Effect</tt></a>⟋<tt>null</tt></tt>&nbsp;&mdash;&nbsp;the effect, or <code>null</code>
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="getall" class="member">
+<div class="member-link">
+<a name="getall" href="#getall"><tt><b>Effect.getAll</b>()</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Returns all registered effects.</p>
+    
+	
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt>Array of <a href="/reference/effect"><tt>Effect</tt></a> objects</tt>&nbsp;&mdash;&nbsp;the effects
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+		
+			
+<div id="remove-effect" class="member">
+<div class="member-link">
+<a name="remove-effect" href="#remove-effect"><tt><b>Effect.remove</b>(effect)</tt></a>
+</div>
+<div class="member-description hidden">
+<div class="member-text">
+	<p>Removes the effect from the registered effects.</p>
+    
+	
+<ul class="member-list">
+	<h4>Parameters:</h4>
+	
+	<li>
+<tt>effect:</tt> 
+<a href="/reference/effect"><tt>Effect</tt></a>
+
+
+</li>
+	
+</ul>
+
+	
+	<ul class="member-list">
+		<h4>Returns:</h4>
+		
+			<li>
+<tt><tt>Boolean</tt></tt>&nbsp;&mdash;&nbsp;<tt>true</tt> if the effect was registered, <tt>false</tt> otherwise
+</li>
+
+		
+	</ul>
+
+
+
+	
+	
+</div>
+</div>
+</div>
+		
+	</div>
+
+
+
