@@ -222,7 +222,7 @@ var sperm = new function() {
 	}
 	path.strokeColor = 'white';
 
-	var headPath = new Path.Oval({
+	var headPath = new Path.Ellipse({
 		from: [0, 0],
 		to: [13, 8],
 		fillColor: 'white',
